@@ -10,6 +10,7 @@
 			</section>
 			<section class="social">
 				<ul>
+					<li><a href="https://github.com/manikrathee" target="_blank"><img class="tooltip" title="GitHub" src="images/home/github.png"></a></li>
 					<li><a href="http://www.twitter.com/manikrathee" target="_blank"><img class="tooltip" title="Twitter" src="images/home/twitter.png"></a></li>
 					<li><a href="http://www.dribbble.com/manikrathee" target="_blank"><img class="tooltip" title="Dribbble" src="images/home/dribbble.png"></a></li>
 					<li><a href="http://manikrathee.tumblr.com" target="_blank"><img class="tooltip" title="Tumblr" src="images/home/tumblr.png"></a></li>
