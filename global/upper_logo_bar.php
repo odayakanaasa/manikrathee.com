@@ -1,10 +1,10 @@
 	<div class="row">
 		<div class="upper_logo_bar">
 			<?php if ($upper=='white') { echo '
-				<a href="http://manikrathee.com/_dev/portfolio/" title=""><img class="logo tooltip" title="Click to go home." src="images/logo_white.png" alt=""></a>
+				<a href="http://manikrathee.com/" class="logo tooltip logo-light" title="Click to go home."></a>
 			'; } ?>
 			<?php if ($upper=='dark') { echo '
-				<a href="http://manikrathee.com/_dev/portfolio/" title=""><img class="logo tooltip" title="Click to go home." src="images/logo_dark.png" alt=""></a>
+				<a href="http://manikrathee.com/" class="logo tooltip logo-dark" title="Click to go home."></a>
 			'; } ?>
 
 			<ul id="nav" class="full_nav <!-- <?php if ($upper=='white') { echo 'white'; } ?><?php if ($upper=='dark') { echo 'dark'; } ?>  --> ">

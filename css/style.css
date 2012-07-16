@@ -82,25 +82,33 @@ a{text-decoration:none;}
 .desktop{display:block;}
 .mobile{display: none;}
 
-.home{text-align:left;color:#fff;text-transform: lowercase;}
-#home_container{background: transparent url('../images/home/background_box.png') repeat top left;width:43%;height:100%;font-weight:300;text-transform:lowercase;text-shadow: 1px 1px 0 #000;}
+.home{text-align:left;color:#333;text-transform: uppercase;font-family: "proxima-nova",sans-serif;padding:35px 0 0 35px;}
 
-.main{width:55%;margin:0 auto;padding:12% 0 0 0;font-family:"futura-pt",sans-serif;font-size:15px;font-weight:100;}
-	.main .title {max-width:550px;}
-	.main .title h1{font-family:"freight-sans-pro",sans-serif;font-size:90px;font-weight:100;}
-	.main .title a{color:#a1c8e1;text-decoration:none;}
-	.main .title a:hover{color:#fff;}
-	.main .social{}
-		.main .social ul{list-style-type:none;/* width:155px;margin:0 auto; */padding:75px 0;}
-		.main .social li{float: left;padding:0 10px 0 0;}
-	.main .projects{padding: 20px 0;font-size:11px;font-family: helvetica,sans-serif;}
-	.main .projects ul{padding: 0 0 0 10px;list-style-type:none;}
-	.main .projects li{color:#999;font-style:italic;padding:0 0 3px 0;}
-	.main .projects h2{font-family:"freight-sans-pro",sans-serif;font-size:17px !important;text-transform:lowercase;}
-	.main .projects a{font-style:normal;font-family:"futura-pt",sans-serif;font-size:13px;color:#a1c8e1;}
-	.main .projects a:hover{color:#fff;}
-	
+.home header{margin-bottom:100px;}
+.home header h1{font-size:32px;font-weight:100;color:#4C4C4C;float:left;margin-right: 8px;}
+.home header p{font-size:18px;font-weight:100;color:#ACACAC;float:left;margin-top: 13px;}
+.home header p a{font-size:18px;font-weight:100;color:#ACACAC;text-decoration:none;float:left;margin-left:3px;}
+
+.home aside{width:35%;float:left;}
+.home aside h2{font-size:14px;font-weight:700;color:#4C4C4C;}
+.home aside ul{margin:0;padding:0;}
+.home aside ul li{padding-left:20px;list-style-type:none;}
+.home aside ul li a{color:#333;text-decoration:none;}
+
+.home section.about{width:65%;float:left;}
+.home section.about p{font-size:12px;}
+
+.home section.title{text-transform: none;font-weight:300;color:666;font-size:12px;}
+
+.home section.social{width:100%;height:50px;background:red;}
+
+
+
+
 /* ///  END HOME  //// */
+
+
+
 
 /* /// NAV BAR /// */
 #nav{height:25px;border-bottom:1px solid #ddd;position:fixed;top:0px;left:0px;right:0px;background:#fff url(../images/nav.png) repeat-x center left;}
@@ -141,7 +149,10 @@ a{text-decoration:none;}
 .article{padding-bottom: 40px;}
 
 .upper_logo_bar{float:left;height:100px;padding:12px;font-size:17px;color:#fff;text-shadow:1px 1px 0 #000;}
-.upper_logo_bar .logo{float: left;margin: 30px 0 0 0;}
+.upper_logo_bar .logo{float: left;margin: 30px 0 0 0;display:block;height:69px;width:68px;}
+.upper_logo_bar .logo-dark{background: transparent url('../images/logo_dark.png') no-repeat 50% 50%;}
+.upper_logo_bar .logo-light{background: transparent url('../images/logo_white.png') no-repeat 50% 50%;}
+
 .upper_logo_bar ul{}
 .upper_logo_bar li{float: left;list-style: none;padding-left: 5px;}
 .upper_logo_bar .mobile_nav{display:none;}
@@ -211,19 +222,7 @@ a{text-decoration:none;}
 .fourohfour a:hover;{color:#000;}
 
 
-/* QUERIES */
-				
-@media screen and (min-width: 1200px) {
-	
-	
-	
-}
-				
-@media screen and (max-width: 1200px) {
-	
-	
-	
-}
+
 
 @media screen and (max-width: 1024px) { 
 	
@@ -252,12 +251,6 @@ a{text-decoration:none;}
 	.desktop{display:none;}
 	.mobile{display:block}
 	
-
-	.home{text-align:center;}
-	#home_container{width:100%;}
-	.main{width:100%%;padding:12% 0 0 0;font-family:"futura-pt",sans-serif;font-size:15px;}
-		.main .title {max-width:70%;margin:0 auto;}
-		.main .social ul{width:155px;margin:0 auto;}
 	
 	.mobile_hidden{display:none;}
 	.mobile_display{display:block;}
@@ -329,6 +322,9 @@ a{text-decoration:none;}
 	.wrapskins_slider_inner{width:170px;margin:-147px auto 0 auto;}
 	
 	.shanti_title{width:300px;margin:50px auto;}
-	
-	
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+	.upper_logo_bar .logo-dark{background: transparent url('../images/logo@2x.png') no-repeat 50% 50%;-webkit-background-size:69px 69px;}
+	.upper_logo_bar .logo-light{background: transparent url('../images/white-logo@2x.png') no-repeat 50% 50%;-webkit-background-size:69px 69px;}
 }

@@ -21,11 +21,6 @@
 		   $('.flexslider').flexslider();
 		 });
 	</script>
-	<?php if ($section=='home') { echo '
-		<script>
-      	  $.backstretch("images/home/background.jpg");
-   	 	</script>
-	'; } ?>
 	<script>
 	   	window.addEventListener("load",function() {
 	   	  setTimeout(function(){
