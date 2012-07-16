@@ -8,6 +8,11 @@ set :branch, "master"
 set :deploy_via, :remote_cache
 
 set :application, "manikrathee.com"
+
+server "s85195.gridserver.com", :app, :web, :db, :primary => true
+set :deploy_to, "/nfs/c04/h03/mnt/85195/domains/manikrathee.com/_dev/deploy"
+
+
 #set :repository,  "set your repository location here"
 
 #set :scm, :subversion
