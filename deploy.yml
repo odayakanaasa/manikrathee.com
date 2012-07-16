@@ -1,7 +1,0 @@
-'sftp://s85195.gridserver.com/nfs/c04/h03/mnt/85195/domains/manikrathee.com/html/_dev/deploy':
-  skip: false
-  scheme: sftp
-  user: manikrathee.com
-  password: vectorone1
-  port: 22
-  overwrite_if_same_revision: true
