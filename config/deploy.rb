@@ -7,7 +7,7 @@ set :scm_passphrase, "vectorone1"  # The deploy user's password
 set :branch, "master"
 set :deploy_via, :remote_cache
 
-#set :application, "set your application name here"
+set :application, "manikrathee.com"
 #set :repository,  "set your repository location here"
 
 #set :scm, :subversion
