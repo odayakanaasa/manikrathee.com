@@ -3,7 +3,7 @@ default_run_options[:pty] = true  # Must be set for the password prompt
 set :repository, "git@github.com:manikrathee/manikrathee.com.git"  # Your clone URL
 set :scm, "git"
 set :user, "manikrathee.com"  # The server's user for deploys
-set :use_sudo, true
+set :use_sudo, false
 set :scm_passphrase, "vectorone1"  # The deploy user's password
 set :branch, "master"
 set :deploy_via, :remote_cache
@@ -11,7 +11,8 @@ set :deploy_via, :remote_cache
 set :application, "manikrathee.com"
 
 server "s85195.gridserver.com", :app, :web, :db, :primary => true
-set :deploy_to, "/nfs/c04/h03/mnt/85195/domains/manikrathee.com/_dev/deploy"
+#set :deploy_to, "/nfs/c04/h03/mnt/85195/domains/manikrathee.com/_dev/deploy"
+set :deploy_to, "domains/manikrathee.com/html/_dev/deploy"
 
 
 #set :repository,  "set your repository location here"
