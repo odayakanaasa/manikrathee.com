@@ -3,7 +3,7 @@ default_run_options[:pty] = true  # Must be set for the password prompt
 set :repository, "git@github.com:manikrathee/manikrathee.com.git"  # Your clone URL
 set :scm, "git"
 set :user, "manikrathee.com"  # The server's user for deploys
-set :use_sudo, false
+set :use_sudo, false   
 set :branch, "master"
 set :deploy_via, :remote_cache
 
