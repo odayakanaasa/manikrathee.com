@@ -4,7 +4,6 @@ set :repository, "git@github.com:manikrathee/manikrathee.com.git"  # Your clone 
 set :scm, "git"
 set :user, "manikrathee.com"  # The server's user for deploys
 set :use_sudo, false
-set :scm_passphrase, "vectorone1"  # The deploy user's password
 set :branch, "master"
 set :deploy_via, :remote_cache
 
