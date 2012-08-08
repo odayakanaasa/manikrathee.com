@@ -25,7 +25,7 @@
 				<div class="fourcol left-section">
 					<div class="right_col_inner">
 						<div class="headline">
-							<h3  id="fit" class="glance">Quick View</h2>
+							<h3 id="fit" class="glance">Project Details</h2>
 						</div>
 						<p class="glance_heading">Client</p>
 						<p class="glance_description">WrapSkins</p>
