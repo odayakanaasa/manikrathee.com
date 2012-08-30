@@ -1,16 +1,17 @@
 <?php $section='about'; $upper='white'; ?>
 <?php include('global/header.php'); ?>
 	
-<body class="blog">
+<body class="about">
 	<div class="interior">
-		<div class="upper blog_upper">
+		<div class="upper about_upper">
 			<?php include('global/upper_logo_bar.php'); ?>
 			<div class="container">
 				<div class="row">
 					<div class="onecol"></div>
 					<div class="fourcol">
 					<div class="blog_title">
-						<img src="images/blog_heading.png">
+						<h1>About</h1>
+						<h2>Ideas, Resources &amp; Workflows</h2>
 					</div>
 					</div>
 					<div class="sevencol last"></div>
@@ -37,218 +38,187 @@
 				<div class="onecol"></div>
 				<div class="sixcol main-section">
 					<div class="left_col_inner">
-							<div class="article">
-								<div class="headline">
-									<h2 id="fit">About Me</h2>
-								</div>
-								<p>Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.</p>
-								
-								<p>Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.</p>
+						<div class="article">
+							<div class="headline">
+								<h2 id="fit">About Me</h2>
 							</div>
-							<div class="article resource-block">
-								<h2 id="fit">What I Use</h2>
-								<ul>
-									<li class="title">Hardware</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-								</ul>
-								
-								<ul>
-									<li class="title">Design</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-								</ul>
-								
-								<ul>
-									<li class="title">Development</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-								</ul>
-								
-								<ul>
-									<li class="title">Daily</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-								</ul>
-								
-								<ul>
-									<li class="title">iOS</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-								</ul>
-								
-								<ul>
-									<li class="title">Photography</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-									<li>
-										<p class="item-name"><a href="" title="">Something</a></p>
-										<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-									</li>
-								</ul>
-							</div> <!-- /article -->
+							<p>Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.</p>
 							
-					</div>
-				</div>
-				
-			</div><!-- END row -->
-			<div class="row">
-				<div class="twelvecol last">
-					<div class="row">
-						<div class="onecol"></div>
-						<div class="tencol no_pad">
-								<div id="slider" class="blog_slides">
-									<div class="flexslider">
-									    <ul class="slides">
-									    	<li>
-									    		<img src="images/blog_slides_1.jpg">
-									    	</li>
-									    	<li>
-									    		<img src="images/blog_slides_2.jpg">
-									    	</li>
-									    	<li>
-									    		<img src="images/blog_slides_3.jpg">
-									    	</li>
-									    	<li>
-									    		<img src="images/blog_slides_4.jpg">
-									    	</li>
-									    </ul>
-								    </div>
-								</div>
-								
+							<p>Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.</p>
 						</div>
-						<div class="onecol last"></div>
+						<div class="article resource-block">
+							<h2 id="fit">What I Use</h2>
+							<ul>
+								<li class="title">Hardware</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+							</ul>
+							
+							<ul>
+								<li class="title">Design</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+							</ul>
+							
+							<ul>
+								<li class="title">Development</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+							</ul>
+							
+							<ul>
+								<li class="title">Daily</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+							</ul>
+							
+							<ul>
+								<li class="title">iOS</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+							</ul>
+							
+							<ul>
+								<li class="title">Photography</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+								<li>
+									<p class="item-name"><a href="" title="">Something</a></p>
+									<p class="item-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+								</li>
+							</ul>
+						</div> <!-- /article -->
 					</div>
 				</div>
-			</div>
+			</div><!-- END row -->
 		</div><!-- END container -->	
 	</div>
 		

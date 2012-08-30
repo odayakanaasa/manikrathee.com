@@ -170,15 +170,6 @@ p{font-size:12px;line-height:1.6;}
 .wrapskins_slider_outer{width:200px;margin:0 auto;height:250px;}
 .wrapskins_slider_inner{width:170px;margin:-147px auto 0 auto;}
 .shanti_title{width:300px;margin:50px auto;}
-#nav{height:25px;border-bottom:1px solid #ddd;position:fixed;top:0px;left:0px;right:0px;background:#ffffff url(../images/nav.png) repeat-x center left;}
-.nav_bar_center{width:670px;margin:0 auto;}
-.nav_bar_center ul{height:25px;list-style:none;}
-.nav_bar_center li{text-align:center;margin:0px 2px;}
-#nav a{font-size:11px;font-weight:bold;float:left;padding:2px 4px;color:#999 !important;text-shadow:none !important;text-decoration:none;border:1px solid #ccc;cursor:pointer;background:transparent url(../images/overlay.png) repeat-x center left;height:16px;line-height:16px;}
-#nav a:hover{background:fff none;color:#333 !important;}
-#nav a.top span,#nav a.bottom span{float:left;width:16px;height:16px;}
-#nav a.top span{background:transparent url(../images/top.png) no-repeat center center;}
-#nav a.bottom span{background:transparent url(../images/bottom.png) no-repeat center center;}
 .button{display:block;background:#000000 url(../images/button_bg.jpg) repeat-x;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;width:155px;text-align:center;color:#fff !important;text-shadow:1px 1px 0 #000;font-weight:500;text-transform:uppercase;padding:5px 0;font-size:12px;}
 .button:hover{background:#000000 url(../images/button_bg_hover.jpg) repeat-x;}
 .button a{text-decoration:none;}
@@ -244,6 +235,11 @@ p{font-size:12px;line-height:1.6;}
 .blog_upper{background:#000000 url(../images/interior_upper_blog_768.jpg) no-repeat top left;color:#fff;text-shadow:1px 1px 0 #000;height:300px;}
 .blog_title{margin-top:100px;}
 .blog_slides{width:98%;margin:0 auto 75px auto;}
+.about{background:#fbfbfb url(../images/interior_lower_mrphoto.jpg) repeat top center;}
+.about_upper{background:#000000 url(../images/interior_upper_about.png) no-repeat top left;color:#fff;text-shadow:1px 1px 0 #000;height:530px;}
+.about_title{margin-top:100px;}
+.about_title h1{display:block;width:100%;margin:0 auto 10px auto;border-bottom:2px solid #fff;font-size:30px;}
+.about_title h2{display:block;width:100%;margin:0 auto 10px auto;font-size:14px;}
 .fourohfour{text-align:center;text-shadow:1px 1px 0 #fff;padding:12% 0 0 0;}
 .fourohfour h1{font-family:"freight-sans-pro",sans-serif;font-size:60px;font-weight:100;padding-bottom:40px;}
 .fourohfour a{color:red;}
