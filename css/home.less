@@ -1,11 +1,10 @@
 @import "animation";
 @import "tiptip";
+@import "modal";
 
-/* ///  GLOBAL  //// */
 ::-moz-selection{ background: #4C4C4C; color:#fff; text-shadow: none; }
 ::selection { background:#4C4C4C; color:#fff; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #333;}
-/*html,body{height:100%;}*/
 body{font-family: proxima-nova,Helvetica,"Helvetica Neue",Arial,sans-serif;}
 
 .transition{
@@ -15,10 +14,49 @@ body{font-family: proxima-nova,Helvetica,"Helvetica Neue",Arial,sans-serif;}
 transition:color .35s ease-in-out;
 }
 
+@blue: #0071bc;
 
 #home{
 	background: #222;
 	color:#f3f3f3;
+	margin: 0;
+	#voter-registration{
+		.animate;
+		.fadeInDown;
+		position: absolute;
+		top: 0;
+		z-index: 200;
+		width: 100%;
+		text-align:center;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 11px;
+		font-weight: bold;
+		padding: 10px 0;
+		background: lighten(@blue, 10%);
+		color: #f9f9f9;
+		text-shadow: 1px 1px 0 #0071bc;
+		-webkit-transition: background-color 0.25s linear, padding 0.25s linear;
+		-moz-transition: background-color 0.25s linear, padding 0.25s linear;
+		transition: background-color 0.25s linear, padding 0.25s linear;
+		&:hover{
+			background: @blue;
+			padding: 20px 0;
+		}
+	}
+	#gottaregister{
+		
+	}
+	#lean_overlay {
+	    position: fixed;
+	    z-index:100;
+	    top: 0px;
+	    left: 0px;
+	    height:100%;
+	    width:100%;
+	    background: #000;
+	    display: none;
+	}
 	#logo{
 		.animate;
 		.fadeInDown;
@@ -85,6 +123,9 @@ transition:color .35s ease-in-out;
 		margin-top:20px;
 		font-size:13px;
 		line-height:1.6;
+		a{
+			color: lighten(@blue, 50%);
+		}
 	}
 	section.projects{
 		text-transform: uppercase;
@@ -106,6 +147,11 @@ transition:color .35s ease-in-out;
 				&:last-child{
 					padding:0;
 				}
+				a{
+					&:hover{
+						color: lighten(@blue, 50%);
+					}
+				}
 			}
 		}
 	}
@@ -123,6 +169,11 @@ transition:color .35s ease-in-out;
 				vertical-align: top;
 				zoom: 1;
 				*display: inline;
+				a{
+					&:hover{
+						color: lighten(@blue, 50%);
+					}
+				}
 			}
 		}
 	}
@@ -143,6 +194,18 @@ transition:color .35s ease-in-out;
 			height:100px;
 			width:450px;
 		}
+		#gottaregister{
+			position: absolute;
+			top: 200px;
+			left: 50%;
+			margin-left: -150px;
+			-webkit-transition: height 0.25s linear, width 0.25s linear, opacity 0.25s linear;
+			-moz-transition: height 0.25s linear, width 0.25s linear, opacity 0.25s linear;
+			transition: height 0.25s linear, width 0.25s linear, opacity 0.25s linear;
+			&.show{
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -153,9 +216,9 @@ transition:color .35s ease-in-out;
 		#logo{
 			background: transparent url('../images/home/logo.png') no-repeat 50% 50%;
 			position:absolute;
-			top:10px;
-			left:10px;
-			width:100px;
+			top: 10px;
+			left: 10px;
+			width: 100px;
 		}
 		section.copy{
 			position:absolute;

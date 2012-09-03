@@ -29,6 +29,7 @@
 /_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/ 
 -->
 <body id="home">
+	<!-- <a id="voter-registration" href="#" title="Register To Vote">Have you registered to vote? It only takes a minute.</a> -->
 	<div id="logo"></div>
 	<!-- <div id="css-award"></div> -->
 	<div id="awwwards"><a href="http://www.awwwards.com/" target="_blank">Best CSS websites</a></div>		
@@ -67,23 +68,34 @@
 		</section>
 		
 	</section>
-
-
-	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
-	<script src="js/plugins.js"></script>
-	<script src="js/script.js"></script>
+	<script src="js/jquery.modal.js"></script>
 	<!--[if lt IE 7 ]>
 	<script src="js/libs/dd_belatedpng.js"></script>
 	<script> DD_belatedPNG.fix('img, .png_bg');</script>
 	<![endif]-->
 	<script src="js/jquery.tipTip.js"></script>
 	<script type="text/javascript">
-		$(function() {
+		$(document).ready(function() {
 			$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
+			
+			$('#voter-registration').click(function(){
+				e.stopPropagation();
+				$('#gottaregister').addClass('show');
+			});
+			
+			$('#gottaregister').click(function(e){
+				e.stopPropagation();
+			});
+			
+			$(document).click(function() {
+			   if ($('#gottaregister').hasClass('show')){
+				   $('#gottaregister').removeClass('show');
+			   }
+			});
 		});
-		
+
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-19400273-3']);
 	  _gaq.push(['_trackPageview']);
@@ -93,7 +105,6 @@
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-		
 	</script>
 	
 </body>
