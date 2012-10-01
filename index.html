@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="css/home.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="http://assets.manikrathee.com/global/fonts/symbolset/ss-social.css" type="text/css" media="screen" />
 	<!-- TYPEKIT -->
-	<script type="text/javascript" src="http://use.typekit.com/qyf3isq.js"></script>
+	<script type="text/javascript" src="//use.typekit.net/zqq7yli.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 </head>
@@ -36,11 +36,15 @@
 			<li><a href="" title="">About</a></li>
 			<li><a id="portfolio" href="" title="">Portfolio</a>
 				<ul id="projects">
-					<li><a href="" title="">project tile</a></li>
-					<li><a href="" title="">project tile</a></li>
-					<li><a href="" title="">project tile</a></li>
-					<li><a href="" title="">project tile</a></li>
-					<li><a href="" title="">project tile</a></li>
+					<li><a href="#">BarackObama.com</a></li>
+					<li><a href="#">Contribute.BarackObama.com</a></li>
+					<li><a href="#">Barack Obama Call Tool</a></li>
+					<li><a href="interior_hope.php">Hope Will See Us Through</a></li>
+					<li><a href="interior_mrphoto.php">Manik Rathee Photography</a></li>
+					<li><a href="interior_wrap.php">Wrapskins</a></li>
+					<li><a href="interior_livescribe.php">Livescribe</a></li>
+					<li><a href="interior_universalshanti.php">Universal Shanti</a></li>
+					<li><a href="interior_blog.php">Blog</a></li>
 				</ul>
 			</li>
 			<li><a href="" title="">Blog</a></li>
@@ -50,12 +54,12 @@
 	<section class="copy">
 		<header>
 			<h1 class="name">Manik Rathee</h1>
-			<h1 class="title">User Experience Engineer,
-			<a href="http://www.barackobama.com" title="Obama For America" target="_blank">Obama For America</a></h1>
+			<h1 class="title">Co-Founder &amp; Lead Designer,
+			<a href="" title="" target="_blank">Boombox</a></h1>
 		</header>
 
 		<section class="title">	
-				<p>I'm a user interface designer, frontend developer and user experience engineer. I am currently working to help re-elect <a href="http://www.barackobama.com" title="Obama For America" target="_blank">The President of the United States</a> with some of the most talented individuals I have ever met. In my spare time, <a href="http://www.manikratheephotography.com" target="_blank">I photograph weddings</a> and <a href="http://blog.manikrathee.com/" target="_blank">I write about design and development</a>. I also love <a href="http://www.rdio.com/#/people/manikrathee/" target="_blank">listening to music</a>.</p>
+				<p>I'm a user interface designer, frontend developer and user experience engineer. Formerly a UX Engineer for <a href="http://www.barackobama.com" title="Obama For America" target="_blank">President Barack Obama</a>, I am now the Lead Designer for BoomBox. In my spare time, <a href="http://www.manikratheephotography.com" target="_blank">I photograph weddings</a> and <a href="http://blog.manikrathee.com/" target="_blank">I write about design and development</a>.</p>
 		</section>
 		
 		<section class="social">
@@ -70,29 +74,12 @@
 		</section>
 	</section>
 	
-
-	<section class="projects">
-		<h2>Portfolio</h2>
-		<ul>
-			<li><a href="interior_catalyst.php">Catalyst</a></li>
-			<li><a href="interior_hope.php">Hope Will See Us Through</a></li>
-			<li><a href="interior_mrphoto.php">Manik Rathee Photography</a></li>
-			<li><a href="interior_wrap.php">Wrapskins</a></li>
-			<li><a href="interior_livescribe.php">Livescribe</a></li>
-			<li><a href="interior_universalshanti.php">Universal Shanti</a></li>
-			<li><a href="interior_blog.php">Blog</a></li>
-		</ul>
-	</section>
+	<div id="twitter" class="social-api twitter ss-social"></div>
+	<div id="instagram" class="social-api instagram ss-social"></div>
+	<div id="rdio" class="social-api rdio ss-social">rdio icon</div>
+	<div id="readmill" class="social-api readmill ss-social">readmill icon</p></div>
+		
 	
-		
-	<div id="twitter" class="social-api twitter"></div>
-	<div id="instagram" class="social-api instagram"></p></div>
-	<div id="rdio" class="social-api rdio">rdio icon</div>
-	<div id="readmill" class="social-api readmill">readmill icon</p></div>
-		
-	<!-- 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-	 -->
 	<script src="js/scripts-ck.js"></script>
 	<!--[if lt IE 7 ]>
 	<script src="js/libs/dd_belatedpng.js"></script>
@@ -105,16 +92,17 @@
 			
 		});
 
-instagramFeed.embed({
-  username: 'manikrathee',
-  count: 1,
-  container: 'instagram'
-});
+		instagramFeed.embed({
+			username: 'manikrathee',
+			count: 1,
+			container: 'instagram'
+		});
 
-$(".social-api").delay(4500).queue(function(next){
-    $(this).addClass('inactive');
-    next();
-});
+		$(".social-api").delay(4500).queue(function(next){
+			$(this).addClass('inactive');
+			next();
+		});
+		 
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-19400273-3']);
 	  _gaq.push(['_trackPageview']);

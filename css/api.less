@@ -5,7 +5,21 @@
 @instagram: #3f729d;
 @rdio: 	#008fd6;
 @readmill: #81ce2c; /*  #71b427;  */
-	
+
+.gradient{
+	background-image: linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgba(0,0,0,0.3)),
+		color-stop(1, rgba(255,255,255,0.1))
+	);
+}
 
 .social-api{
 	width: 	100%;
@@ -24,10 +38,10 @@
 	&:before{
 		display: block;
 		float: left;
-		background: red;
 		height: 100%;
 		width: 40px;
-		margin-right: 10px;
+		font-size: 18px;
+		margin: 0 10px;
 		content: '';
 	}
 	ul, ul li{
@@ -57,9 +71,6 @@
 		}
 		&:hover{
 			color: #fff;
-			height: 40px;
-			border-top-left-radius: 8px;
-			border-top-right-radius: 8px;
 			-webkit-transition:height 0.4s linear, background-color 0.4s linear, padding 0.4s linear, color 0.4s linear, border-radius 0.4s linear;
 			-moz-transition:height 0.4s linear, background-color 0.4s linear, padding 0.4s linear, color 0.4s linear, border-radius 0.4s linear;
 			transition:height 0.4s linear, background-color 0.4s linear, padding 0.4s linear, color 0.4s linear, border-radius 0.4s linear;
@@ -76,19 +87,27 @@
 
 
 .twitter{
+	margin-top: 100px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	&:before{
+		content: 'Twitter';
+	}
 	&:hover{
 		overflow: visible;
 		white-space: normal;
 	}
 }
 .twitter, .twitter.inactive:hover{
-	background: @twitter;
+	background-color: @twitter;
+	.gradient;
 }
 
 .instagram{
+	&:before{
+		content: 'Instagram';
+	}
 	#instagram-link{
 		display: none;
 	}
@@ -99,30 +118,50 @@
 	}
 }
 .instagram, .instagram.inactive:hover{
-	background: @instagram;
+	background-color: @instagram;
+	.gradient;
 }
 
-
+.rdio{
+	&:before{
+		content: 'Rdio';
+	}
+}
 .rdio, .rdio.inactive:hover{
-	background: @rdio;
+	background-color: @rdio;
+	.gradient;
 }
 
+.readmill{
+	&:before{
+		content: 'Readmill';
+	}
+}
 
 .readmill, .readmill.inactive:hover{
-	background: @readmill;
+	background-color: @readmill;
+	.gradient;
 }
 
 
 
 @media screen and (min-width: 767px) {
 	.social-api{
-		position:			absolute;
-		bottom:				0;
-		width: 				20%;
-		padding: 			20px 2.5%;
+		position: absolute;
+		bottom: 0;
+		width: 20%;
+		padding: 20px 2.5%;
+		&.inactive{
+			&:hover{
+				height: 40px;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+			}
+		}
 	}
 	.twitter{
 		left: 0;
+		margin-top: 0;
 	}
 	.instagram{
 		left: 25%;
