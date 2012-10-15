@@ -1,19 +1,15 @@
-@import "animation";
-@import "tiptip";
-@import "modal";
-@import "api";
+@import "import/mixins";
+@import "import/animation";
+@import "import/tiptip";
+@import "import/api";
 
 ::-moz-selection{ background: #4C4C4C; color:#fff; text-shadow: none; }
 ::selection { background:#4C4C4C; color:#fff; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #333;}
-body{font-family: proxima-nova,Helvetica,"Helvetica Neue",Arial,sans-serif;}
+body{
+	font-family: proxima-nova,Helvetica,"Helvetica Neue",Arial,sans-serif;}
 
-.transition{
-	-webkit-transition:color .25s ease-in-out;
-	-moz-transition:color .25s ease-in-out;
-	-o-transition:color .25s ease-in-out;
-	transition:color .25s ease-in-out;
-}
+
 
 @blue: #0071bc;
 
@@ -57,15 +53,28 @@ a{
 				-webkit-transition: height 0.25s linear;
 				-moz-transition: height 0.25s linear;
 				transition: height 0.25s linear;
+				&:hover{
+					#projects{
+						opacity: 1;
+						height: auto;
+						-webkit-transition: opacity 0.25s linear, height 0.25s linear;
+						-moz-transition: opacity 0.25s linear, height 0.25s linear;
+						transition: opacity 0.25s linear, height 0.25s linear;
+					}
+				}
 			}
 		}
 		#projects{
 			position: absolute;
 			top: 0;
 			left: 0;
-			-webkit-transition: opacity 0.25s linear;
-			-moz-transition: opacity 0.25s linear;
-			transition: opacity 0.25s linear;
+			opacity: 0;
+			height: 0;
+			overflow: hidden;
+			zoom: 1;
+			-webkit-transition: opacity 0.25s linear, height 0.25s linear;
+			-moz-transition: opacity 0.25s linear, height 0.25s linear;
+			transition: opacity 0.25s linear, height 0.25s linear;
 			li{
 				float: none;
 				display: block;
@@ -138,7 +147,7 @@ a{
 
 @media screen and (min-width: 768px){
 	#home{
-		background: #000 url('../images/home/background.jpg') no-repeat 70% 0;
+		// background: #000 url('../images/home/background.jpg') no-repeat 70% 0;
 		background-size: 100%;
 		nav{
 			margin-left: 30px;
@@ -156,10 +165,30 @@ a{
 	}
 }
 
+.oldie{
+	@import "import/ie"; 
+	#home{
+		// background: #000 url('../images/home/background.jpg') no-repeat 70% 0;
+		background-size: 100%;
+		nav{
+			margin-left: 30px;
+			ul{
+				padding: 20px 0 0 19px;
+			}
+		}
+		nav ul, nav #logo{
+			float: left;
+		}
+		.copy{
+			width: 425px;
+			margin: 50px 0 0 120px;
+		}
+	}
+}
 
 @media only screen and (-webkit-min-device-pixel-ratio:2){
 	#logo{
 		background: transparent url('../images/white-logo@2x.png') no-repeat 50% 50%;
-     	-webkit-background-size:100px 100px;}
+     	-webkit-background-size:100px 100px;
 	}
 }

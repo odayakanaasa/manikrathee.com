@@ -34,7 +34,7 @@
 		<ul>
 			<li><a href="" title="">Home</a></li>
 			<li><a href="" title="">About</a></li>
-			<li><a id="portfolio" href="" title="">Portfolio</a>
+			<li id="portfolio"><a href="" title="">Portfolio</a>
 				<ul id="projects">
 					<li><a href="#">BarackObama.com</a></li>
 					<li><a href="#">Contribute.BarackObama.com</a></li>
@@ -52,6 +52,7 @@
 		</ul>	
 	</nav>
 	<section class="copy">
+		<!-- 
 		<header>
 			<h1 class="name">Manik Rathee</h1>
 			<h1 class="title">Co-Founder &amp; Lead Designer,
@@ -71,7 +72,16 @@
 				<li><a class="ss-icon ss-social-circle tooltip" href="http://instagrid.me/manikrathee/" target="_blank" title="Instagram">Instagram</a></li>
 				<li><a class="ss-icon ss-social-circle tooltip" href="www.flickr.com/photos/manikrathee/" target="_blank" title="Flickr">Flickr</a></li>
 			</ul>
+			
+			add these to show on hover? 
+			
+			<iframe src="http://ghbtns.com/github-btn.html?user=manikrathee&type=follow"
+			  allowtransparency="true" frameborder="0" scrolling="0" width="132px" height="20px"></iframe>
+  
+			<a href="https://twitter.com/manikrathee" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @ManikRathee</a>
 		</section>
+			 -->
+		
 	</section>
 	
 	<div id="twitter" class="social-api twitter ss-social"></div>
@@ -81,37 +91,7 @@
 		
 	
 	<script src="js/scripts-ck.js"></script>
-	<!--[if lt IE 7 ]>
-	<script src="js/libs/dd_belatedpng.js"></script>
-	<script> DD_belatedPNG.fix('img, .png_bg');</script>
-	<![endif]-->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
-
-			
-		});
-
-		instagramFeed.embed({
-			username: 'manikrathee',
-			count: 1,
-			container: 'instagram'
-		});
-
-		$(".social-api").delay(4500).queue(function(next){
-			$(this).addClass('inactive');
-			next();
-		});
-		 
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-19400273-3']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
+	<!-- twitter follow -->
+	 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>
