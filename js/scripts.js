@@ -2,6 +2,16 @@
 
 // "libs/ss-social.js", "libs/ss-standard.js"
 
+// Nav Hover
+if ($(window).width() > 768){
+	$('#portfolio').hover(function(){
+		$('.copy').addClass('fade');
+	}, function(){
+		$('.copy').removeClass('fade');
+	});
+}
+
+
 // TipTip
 $(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
 
@@ -20,6 +30,8 @@ $(".social-api").delay(4500).queue(function(next){
 	next();
 });
 
+// Twitter Button
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
  
  // Google Analytics
 var _gaq = _gaq || [];
