@@ -1,4 +1,6 @@
-//@codekit-prepend "libs/jquery-1.8.2.min.js","libs/jquery.backstretch.js","libs/jquery.fittext.js","libs/jquery.flexslider.js","libs/jquery.api.instagram.js","libs/jquery.api.twitter.js","libs/jquery.twitter.js","libs/jquery.lettering.js","libs/jquery.prettyForms.js","libs/jquery.tipTip.js", "libs/ss-social.js";
+//@codekit-prepend "libs/jquery-1.8.2.min.js","libs/jquery.backstretch.js","libs/jquery.fittext.js","libs/jquery.flexslider.js","libs/jquery.api.instagram.js","libs/jquery.api.twitter.js","libs/jquery.twitter.js","libs/jquery.lettering.js","libs/jquery.prettyForms.js","libs/jquery.tipTip.js";
+
+// "libs/ss-social.js", "libs/ss-standard.js"
 
 // TipTip
 $(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
