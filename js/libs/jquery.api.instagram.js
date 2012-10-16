@@ -20,7 +20,7 @@ var instagramFeed = new function() {
   this.render = function(container, data) {
     var obj = document.getElementById(container);
     var buffer = this.render_html(data);
-    console.log(data);
+    // console.log(data);
     obj.innerHTML = buffer;
   }
 

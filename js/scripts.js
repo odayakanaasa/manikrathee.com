@@ -3,13 +3,22 @@
 // "libs/ss-social.js", "libs/ss-standard.js"
 
 // Nav Hover
-if ($(window).width() > 768){
-	$('#portfolio').hover(function(){
-		$('.copy').addClass('fade');
-	}, function(){
-		$('.copy').removeClass('fade');
-	});
-}
+function checkWidth() {
+	if ($(window).width() > 769){
+		$('#portfolio').hover(function(){
+			$('.copy').addClass('fade');
+		}, function(){
+			$('.copy').removeClass('fade');
+		});
+	}
+};
+$(window).resize(function() {
+	checkWidth();
+})
+checkWidth();
+
+
+
 
 
 // TipTip
