@@ -10,19 +10,25 @@ function checkWidth() {
 		}, function(){
 			$('.copy').removeClass('fade');
 		});
+		if ($('body').attr('id','home')){
+			$.backstretch("http://www.manikrathee.com/images/home/background.jpg");
+		}
+		// TipTip
+		$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
+	}
+	else{
+		$.backstretch("");
+		$('.copy').removeClass('fade');
 	}
 };
 $(window).resize(function() {
 	checkWidth();
-})
+});
 checkWidth();
 
 
 
 
-
-// TipTip
-$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
 
 
 // Instagram

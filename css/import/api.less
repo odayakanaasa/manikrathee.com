@@ -6,6 +6,8 @@
 @rdio: 	#008fd6;
 @readmill: #81ce2c; /*  #71b427;  */
 
+
+
 .gradient{
 	background-image: linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
 	background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
@@ -35,14 +37,24 @@
 	.animate;
 	.fadeInUp;
 	.delay;
+	& > div, & > ul{
+		-webkit-transition: opacity 0.25s linear;
+		-moz-transition: opacity 0.25s linear;
+		transition: opacity 0.25s linear;
+	}
 	&:before{
 		display: block;
-		float: left;
+		position: absolute;
+		// top: ;
+		left: 15%;
+		margin-left: 0;
 		height: 100%;
 		width: 40px;
 		font-size: 18px;
-		margin: 0 10px;
 		content: '';
+		-webkit-transition: top 0.25s linear, left 0.25s linear, margin 0.25s linear;
+		-moz-transition: top 0.25s linear, left 0.25s linear, margin 0.25s linear;
+		transition: top 0.25s linear, left 0.25s linear, margin 0.25s linear;
 	}
 	ul, ul li{
 		margin: 0;
@@ -57,12 +69,20 @@
 	}
 	&.inactive{
 		background-color:  #e3e3e3;
+		background-image: none;
 		height: 20px;
 		overflow: hidden;
 		color: #999;
 		-webkit-transition: height 0.4s linear, border-radius 0.4s linear, background-color 0.4s linear;
 		-moz-transition: height 0.4s linear, border-radius 0.4s linear, background-color 0.4s linear;
 		transition: height 0.4s linear, border-radius 0.4s linear, background-color 0.4s linear;
+		&:before{
+			left: 50%;
+			margin-left: -20px;
+		}
+		& > div, & > ul{
+			opacity: 0;
+		}
 		a{
 			color:  #999;
 			-webkit-transition:height 0.4s linear, background-color 0.4s linear, padding 0.4s linear, color 1s linear;
@@ -74,12 +94,21 @@
 			-webkit-transition:height 0.4s linear, background-color 0.4s linear, padding 0.4s linear, color 0.4s linear, border-radius 0.4s linear;
 			-moz-transition:height 0.4s linear, background-color 0.4s linear, padding 0.4s linear, color 0.4s linear, border-radius 0.4s linear;
 			transition:height 0.4s linear, background-color 0.4s linear, padding 0.4s linear, color 0.4s linear, border-radius 0.4s linear;
+			&:before{
+				top: 35px;
+				left: 20px;
+				margin-left: 0;
+			}
 			a{
 				color: #fff;
 				text-decoration: underline;
 				-webkit-transition: color 0.4s linear;
 				-moz-transition: color 0.4s linear;
 				transition: color 0.4s linear;
+			}
+			& > div, & > ul{
+				opacity: 1;
+				margin-left: 15px;
 			}
 		}
 	}
@@ -142,7 +171,6 @@
 	background-color: @readmill;
 	.gradient;
 }
-
 
 
 @media screen and (min-width: 767px) {
