@@ -1,6 +1,6 @@
 //@codekit-prepend "libs/jquery-1.8.2.min.js","libs/jquery.backstretch.js","libs/jquery.fittext.js","libs/jquery.flexslider.js","libs/jquery.api.instagram.js","libs/jquery.api.twitter.js","libs/jquery.twitter.js","libs/jquery.prettyForms.js","libs/jquery.tipTip.js";
 
-// "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js"
+// "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js", "libs/jquery.api.rdio.js"
 
 // Nav Hover
 function checkWidth() {
@@ -11,7 +11,7 @@ function checkWidth() {
 			$('.copy').removeClass('fade');
 		});
 		if ($('body').attr('id','home')){
-			$.backstretch("http://www.manikrathee.com/images/home/background.jpg");
+			// $.backstretch("http://www.manikrathee.com/images/home/background.jpg");
 		}
 		// TipTip
 		$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
@@ -28,10 +28,39 @@ checkWidth();
 
 
 
+// Rdio API
+R.ready(function() {
+	R.request({
+		method: "getTopCharts",
+		content: {
+		type: "Track", 
+		start: 0, 
+		count: 1
+		},
+		success: function(response) {
+			var top = response.result[0];
+			console.log(top.name + " by " + top.artist);
+		},
+		error: function(response) {
+			console.log("error");
+		}
+	});
+});
 
 
 
-// Instagram
+// $.ajax({
+// 	"type": "GET",
+// 	"url": 'http://boomingsystem.com/api/v1/feed/',
+// 	"cache": false,
+// 	"dataType": "text",
+// 	"complete": function(r) {
+// 		console.log(JSON.parse(r.responseText));
+// 	}
+// });
+
+
+// Instagram API
 instagramFeed.embed({
 	username: 'manikrathee',
 	count: 1,

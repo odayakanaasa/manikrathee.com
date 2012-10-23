@@ -25,7 +25,7 @@
 
 .social-api{
 	width: 	100%;
-	height: 40px;
+	height: 80px;
 	padding: 20px 0;
 	font-size: 14px;
 	color: #fff;	
@@ -45,7 +45,6 @@
 	&:before{
 		display: block;
 		position: absolute;
-		// top: ;
 		left: 15%;
 		margin-left: 0;
 		height: 100%;
@@ -70,7 +69,7 @@
 	&.inactive{
 		background-color:  #e3e3e3;
 		background-image: none;
-		height: 20px;
+		height: 50px;
 		overflow: hidden;
 		color: #999;
 		-webkit-transition: height 0.4s linear, border-radius 0.4s linear, background-color 0.4s linear;
@@ -79,6 +78,9 @@
 		&:before{
 			left: 50%;
 			margin-left: -20px;
+			-webkit-transition: top 0.25s linear, left 0.25s linear, margin 0.25s linear, margin-left 0.25s linear
+			-moz-transition: top 0.25s linear, left 0.25s linear, margin 0.25s linear, margin-left 0.25s linear;
+			transition: top 0.25s linear, left 0.25s linear, margin 0.25s linear, margin-left 0.25s linear;
 		}
 		& > div, & > ul{
 			opacity: 0;
@@ -177,11 +179,11 @@
 	.social-api{
 		position: absolute;
 		bottom: 0;
-		width: 20%;
+		width: 25%;
 		padding: 20px 2.5%;
 		&.inactive{
 			&:hover{
-				height: 40px;
+				height: 80px;
 				border-top-left-radius: 8px;
 				border-top-right-radius: 8px;
 			}
@@ -205,14 +207,14 @@
 
 @media screen and (max-height: 600px) {
 	.social-api{
-		position:		relative;
+		position: relative;
 		top: 50px;
 		left: 0;
-		width: 			100%;
-		float: 			none;
-		margin: 		0;
-		padding-left: 	0;
-		padding-right: 	0;
+		width: 100%;
+		float: none;
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
 		-webkit-transition: position 0.25s linear, top 0.25s linear, left 0.25s linear, float 0.25s linear;
 		-moz-transition: position 0.25s linear, top 0.25s linear, left 0.25s linear, float 0.25s linear;
 		transition: position 0.25s linear, top 0.25s linear, left 0.25s linear, float 0.25s linear;
