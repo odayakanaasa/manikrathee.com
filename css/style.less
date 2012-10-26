@@ -7,6 +7,8 @@
 @import "import/prettyforms";
 @import "import/tiptip";
 @import "import/ss-standard";
+@import "import/nav";
+
 
 .link-transition{
 	-webkit-transition: color 0.35s linear;
@@ -18,34 +20,44 @@
 ::-moz-selection{ background: #4C4C4C; color:#fff; text-shadow: none; }
 ::selection { background:#4C4C4C; color:#fff; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #333;}
-html,body{height:100%;}
-body{background: url(../images/bg.jpg) repeat;font-family: proxima-nova;color: #4C4C4C;}
 
-.outer_container{width: 100%;}
-.inner_container{max-width: 960px;margin: 0 auto;}
-.clear{clear: both;}
-.dark{color:#333;text-shadow:#fff !important;}
-.dark a{color:#333 !important;text-shadow: 1px 1px 0 #fff !important;}
-.white{color:#fff;text-shadow:#000 !important;}
-.white a{color:#fff !important;text-shadow: 1px 1px 0 #000 !important;}
+html,body{height:100%;}
+
+body{
+	background: url(../images/bg.jpg) repeat;
+	font-family: "proxima-nova", helvetica, verdana, sans-serif;
+	color: #4C4C4C;
+}
+
+.upper{
+	font-family: "proxima-nova", helvetica, verdana, sans-serif;
+	position: relative;
+	&:after{
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		background: url(../images/interior_shadow.png) repeat-x bottom center;
+		width: 100%;
+		height: 50px;
+		z-index: 999;
+		margin-top: 0;
+		content: '';
+	}
+}
+
+.dark{color:#333;text-shadow:#fff;}
+.dark a{color:#333;text-shadow: 1px 1px 0 #fff;}
+.white{color:#fff;text-shadow:#000;}
+.white a{color:#fff;text-shadow: 1px 1px 0 #000;}
 
 a{text-decoration:none;}
-
 p{font-size: 12px;line-height: 1.6;}
-.right_col_inner{padding-bottom:15px;border-top:1px solid #fff;border-bottom:1px solid #fff;}
-.no_pad{padding-left:0px !important;padding-right:0px !important;}
-#top{display: block;width: 100%;text-align:center;padding:30px 0;color: #999;.link-transition;}
-#top span{display: block;font-size: 12px;}
-#top:hover{color: #333;}
 
 .main{background: transparent url('../images/home/background_box.png') repeat top left;}
 
-.upper_logo_bar .logo{margin:10px 0 0 0 !important;}
-.upper_logo_bar .mobile_nav{display:block;float:left;margin:10px 0 0 10px;}
-.upper_logo_bar .full_nav{display:none;}
 
 .catalyst_title{margin:40px auto 0;}
-.catalyst_icon_row .catalyst_iconset{float:none;width:300px;margin:0 auto;padding:0 !important;}
+.catalyst_icon_row .catalyst_iconset{float:none;width:300px;margin:0 auto;padding:0;}
 .catalyst_icon_row .catalyst_iconset_copy{float:none;width:100%;padding:20px 0 10px 0;border-bottom:1px solid #999;margin:0 0 10px 0;}
 .catalyst_icon_row .catalyst_iconset_copy h4{padding: 0 0 10px 0;}
 .catalyst_icon_row .catalyst_iconset_copy p{line-height:1.8;}  
@@ -72,25 +84,6 @@ p{font-size: 12px;line-height: 1.6;}
 .interior a:hover{color:#777;text-decoration:none;}	
 .interior p{font-size: 14px;line-height: 1.8;text-shadow:1px 1px 0 #fff;margin-bottom:20px;}
 
-.left_col_inner{}
-.right_col_inner{padding-bottom:55px;}
-.shadow{width: 100%;height: 50px;position: relative;z-index: 999;background: url(../images/interior_shadow.png) repeat-x bottom center;margin-top: -50px;}
-.section_spacer{margin-top:40px;}
-.headline{width:100%;}
-.glance{padding-bottom: 8px;}
-.glance_container{}
-.glance_heading{font-size:17px;font-weight:700;text-transform:uppercase;margin-bottom: 0px !important;}
-.glance_description{font-size:13px;padding-bottom:20px;margin-bottom: 0px !important;}
-.article{padding-bottom: 40px;}
-
-.upper_logo_bar{float:left;height:100px;padding:12px;font-size:17px;color:#fff;text-shadow:1px 1px 0 #000;}
-.upper_logo_bar .logo{float: left;margin: 30px 0 0 0;display:block;height:69px;width:68px;}
-.upper_logo_bar .logo-dark{background: transparent url('../images/logo_dark.png') no-repeat 50% 50%;}
-.upper_logo_bar .logo-light{background: transparent url('../images/logo_white.png') no-repeat 50% 50%;}
-
-.upper_logo_bar ul{}
-.upper_logo_bar li{float: left;list-style: none;padding-left: 5px;}
-.upper_logo_bar .full_nav{text-align:center;}
 
 /* HOPE WILL SEE US THROUGH - INTERIOR */
 .hope{background:#FBFBFB url(../images/interior_lower_hope.jpg) repeat top center;}
@@ -155,18 +148,91 @@ p{font-size: 12px;line-height: 1.6;}
 .blog_slides{width:98%;margin:0 auto 75px auto;}
 
 
-/* BLOG - INTERIOR */
-.about{background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;}
-.about_upper{background:#000 url(../images/interior_upper_about.png) no-repeat top left;color:#fff;text-shadow:1px 1px 0 #000;height:530px;}
-.about_title{margin-top:100px;}
-.about_title h1{display: block;width: 100%;margin:0 auto 10px auto;border-bottom:2px solid #fff;font-size:30px;}
-.about_title h2{display: block;width: 100%;margin:0 auto 10px auto;font-size:14px;}
+/* ABOUT */
+.about{
+	background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;
+	.upper{
+		background:#000 url(../images/about-heading.jpg) no-repeat 50% 50%;
+		color:#fff;
+		text-shadow:1px 1px 0 #000;
+		height:530px;
+		display: block;
+		position: relative;
+	}
+	.title{
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		h1, h2{
+			text-transform: uppercase;
+		}
+	}
+	.title h1{
+		font-size:20px;
+		line-height: 1;
+		margin: 0;
+	}
+	.title h2{
+		font-size:12px;
+		line-height: 1;
+		margin: 0;
+	}
+}
+
+
+
+/* RESOURCES */
+.resources{
+	background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;
+	.upper{
+		background:#000 url(../images/resources-heading.jpg) no-repeat 50% 50%;
+		color:#fff;
+		text-shadow:1px 1px 0 #000;
+		height:530px;
+		display: block;
+	}
+	.title{
+		width: 100%;
+		text-align: center;
+		margin: 230px 0 0 0;
+		h1, h2{
+			text-transform: uppercase;
+		}
+	}
+	.title h1{
+		font-size:46px;
+		line-height: 1;
+		margin: 0;
+	}
+	.title h2{
+		font-size:14px;
+		line-height: 1;
+		margin: 0;
+	}
+}
+
+
+
 
 /*  404  */
 .fourohfour{text-align:center;text-shadow:1px 1px 0 #fff;padding:12% 0 0 0;}
 .fourohfour h1{font-family:"freight-sans-pro",sans-serif;font-size:60px;font-weight:100;padding-bottom:40px;}
 .fourohfour a{color:red;}
 .fourohfour a:hover{color:#000;}
+
+#top{
+	width: 85px;
+	display: block;
+	text-align: center;
+	margin: 20px auto;
+	-webkit-transition: color 0.25s linear;
+	-moz-transition: color 0.25s linear;
+	transition: color 0.25s linear;
+	span{
+		display: block;
+		margin-top: 8px;
+	}
+}
 
 
 @media screen and (min-width: 768px){

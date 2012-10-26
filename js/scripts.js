@@ -7,8 +7,10 @@ function checkWidth() {
 	if ($(window).width() > 769){
 		$('#portfolio').hover(function(){
 			$('.copy').addClass('fade');
+			$('#current').addClass('fade');
 		}, function(){
 			$('.copy').removeClass('fade');
+			$('#current').removeClass('fade');
 		});
 		if ($('body').attr('id','home')){
 			// $.backstretch("http://www.manikrathee.com/images/home/background.jpg");
@@ -29,25 +31,36 @@ checkWidth();
 
 
 // Rdio API
-R.ready(function() {
-	R.request({
-		method: "getTopCharts",
-		content: {
-		type: "Track", 
-		start: 0, 
-		count: 1
-		},
-		success: function(response) {
-			var top = response.result[0];
-			console.log(top.name + " by " + top.artist);
-		},
-		error: function(response) {
-			console.log("error");
-		}
-	});
-});
+// R.ready(function() {
+// 	R.request({
+// 		method: "getTopCharts",
+// 		content: {
+// 		type: "Track", 
+// 		start: 0, 
+// 		count: 1
+// 		},
+// 		success: function(response) {
+// 			var top = response.result[0];
+// 			console.log(top.name + " by " + top.artist);
+// 		},
+// 		error: function(response) {
+// 			console.log("error");
+// 		}
+// 	});
+// });
 
+$('.flexslider').flexslider();
 
+$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
+var toTop = $('#top');
+toTop.click(function(e) {
+	e.preventDefault();
+	$('body,html').animate({scrollTop:0},800);
+});	
+
+$(".interior h2").fitText(1.2);
+$(".interior h3").fitText(0.75);
+$(".interior h3#fit").fitText(0.9);
 
 // $.ajax({
 // 	"type": "GET",

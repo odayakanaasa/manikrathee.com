@@ -24,20 +24,5 @@
 				</li>
 				<li><a href="/contact.php" title="Contact Manik Rathee">Contact</a></li>
 			</ul>
-			<!-- <div class="mobile_nav">
-				<form id="page-changer" action="" method="post">
-				    <select name="nav">
-				        <option value="">Choose Project:</option>
-				        <option value="interior_catalyst.php">Catalyst iOS</option>
-				        <option value="interior_mrphoto.php">Manik Rathee Photography</option>
-				        <option value="interior_hope.php">Hope Will See Us Through</option>
-						<option value="interior_wrap.php">Wrapskins</option>
-						<option value="interior_livescribe.php">Livescribe</option>
-						<option value="interior_universalshanti.php">Universal Shanti</option>
-						<option value="interior_blog.php">Manik Rathee's Blog</option>
-				    </select>
-				    <input type="submit" value="Go" id="submit" />
-				</form>
-			</div> -->
 		</div>
 	</div>

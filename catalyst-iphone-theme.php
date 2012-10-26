@@ -1,9 +1,8 @@
-<?php $section='interior_catalyst'; $upper='white'; ?>
+<?php $section='catalyst'; $upper='white'; $project='true';?>
 <?php include('global/header.php'); ?>
-<body class="catalyst" onload="prettyForms()">
-	<div class="interior">
+<body class="interior catalyst">
 		<div class="upper catalyst_upper">
-		<?php include('global/upper_logo_bar.php'); ?>
+		<?php include('global/nav.php'); ?>
 		<div class="container">
 			<div class="row">
 				<div class="fivecol">
@@ -14,8 +13,6 @@
 				</div>
 			</div><!-- END row -->
 		</div>
-	</div>
-		<div class="shadow">&nbsp;</div>
 		<div class="container">
 		<div class="row">
 			<div class="section_spacer"></div>
@@ -95,9 +92,5 @@
 			</div>
 		</div>
 	</div><!-- END container -->	
-	</div>
-
-	
-	
 	
 	<?php include('global/footer.php'); ?>

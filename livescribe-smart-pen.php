@@ -1,9 +1,8 @@
-<?php $section='interior_livescribe';  $upper='dark'; ?>
+<?php $section='livescribe';  $upper='dark'; $project='true'; ?>
 <?php include('global/header.php'); ?>
-<body class="livescribe">
-<div class="interior">
+<body class="interior livescribe">
 	<div class="upper livescribe_upper">
-		<?php include('global/upper_logo_bar.php'); ?>
+	<?php include('global/nav.php'); ?>
 		<div class="container">
 			<div class="row">
 				<div class="sevencol"></div>
@@ -86,8 +85,4 @@
 		</div>
 	</div><!-- END container -->	
 
-
-	
-	
-	
 	<?php include('global/footer.php'); ?>
