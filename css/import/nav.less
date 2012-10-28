@@ -1,3 +1,7 @@
+nav.global-nav{
+	position: relative;
+	z-index: 200;
+}
 #logo{
 	&.white{
 		background: transparent url('../images/home/white-logo.png') no-repeat top left;
@@ -62,6 +66,12 @@ nav#light{
 		}
 	}
 }
+#navigation{
+	height: 0;
+	&.show{
+		height: 300px;
+	}
+}
 
 
 @media screen and (max-width: 767px) {
@@ -83,7 +93,6 @@ nav#light{
 @media screen and (min-width: 768px){
 	nav{
 		margin-left: 30px;
-		position: relative;
 		#nav{
 			display: none;
 		}
@@ -132,6 +141,9 @@ nav#light{
 	}
 	nav ul, nav #logo{
 		float: left;
+	}
+	#navigation{
+		height: auto
 	}
 	.interior nav{
 		position: absolute;

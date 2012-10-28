@@ -4,6 +4,7 @@
 @import "import/tiptip";
 @import "import/api";
 @import "import/ss-social";
+@import "import/nav";
 
 ::-moz-selection{ background: #4C4C4C; color:#fff; text-shadow: none; }
 ::selection { background:#4C4C4C; color:#fff; text-shadow: none; }
@@ -31,9 +32,13 @@ a{
 	color:#f3f3f3;
 	margin: 0;
 	padding-top: 50px;
+	nav.global-nav{
+		position: relative;
+		z-index: 200;
+	}
 	.copy{
-		// .animate;
-		// .fadeInDown;
+		.animate;
+		.fadeInDown;
 		width: 90%;
 		opacity: 1;
 		margin: 20px auto 0;
@@ -90,6 +95,14 @@ a{
 			}
 		}
 	}
+	#github-button{
+		width: 150px;
+		margin: 0 auto;
+	}
+	#twitter-button{
+		width: 130px;
+		margin: 0 auto;
+	}
 }
 
 @media screen and (max-width: 599px) {
@@ -141,6 +154,7 @@ a{
 		.copy{
 			position: absolute;
 			top: 110px;
+			z-index: 10;
 			width: 420px;
 			margin: 50px 0 0 120px;
 		}

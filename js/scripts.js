@@ -29,6 +29,26 @@ $(window).resize(function() {
 checkWidth();
 
 
+// Mobile Nav
+var navHook = $('#nav');
+var navMenu = $('#navigation');
+
+navHook.click(function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	navMenu.addClass('show');
+});
+
+navMenu.click(function(e){
+	e.stopPropagation();
+});
+
+$(document).click(function() {
+   if (navMenu.hasClass('show')){
+	   navMenu.removeClass('show');
+   }
+});
+
 
 // Rdio API
 // R.ready(function() {
@@ -82,6 +102,8 @@ instagramFeed.embed({
 
 
 // Social API
+
+$(".social-api").prepend('<span class="logo"></span>');
 $(".social-api").delay(4500).queue(function(next){
 	$(this).addClass('inactive');
 	next();

@@ -1,4 +1,4 @@
-<nav id="<?php if ($upper=='dark') { echo 'dark'; } ?><?php if ($upper=='white') { echo 'light'; } ?>">
+<nav id="<?php if ($upper=='dark') { echo 'dark'; } ?><?php if ($upper=='white') { echo 'light'; } ?>" class="global-nav">
 	<div id="logo"<?php if ($upper=='white') { echo ' class="white"'; } ?><?php if ($upper=='dark') { echo ' class="dark"'; } ?>"></div>
 	<a id="nav" href="#"><span class="ss-icon">Rows</span> Navigation</a>
 	<ul id="navigation">
