@@ -1,4 +1,6 @@
 var instagramFeed = new function() {
+  var instagramActive = false;
+    
   this.endpoint = 'instagram.me';
 
   this.render_html = function(data, options) {
@@ -7,8 +9,8 @@ var instagramFeed = new function() {
     for(i in data) {
       var photo = data[i];
       str += "<div class='photo' data='" + photo.id + "'>";
-      str += "<p>Latest Photo:" + photo.created_time + "</p>";
-      str += "<a id='instagram-link' href='" + photo.link + "' title='View latest Instagram Photo'>View On Instagram"
+      // str += "<p>Latest Photo:" + photo.created_time + "</p>";
+      str += "<a id='instagram-link' href='" + photo.link + "' title='View my latest Instagram Shot'>View On Instagram"
       // str += "<img src='" + photo.images.thumbnail.url + "' />";
       str += "</a>";
       str += "</div>";
@@ -38,5 +40,18 @@ var instagramFeed = new function() {
     var script = "<script type='text/javascript' src='" + url + "'></script>";
 
     document.write(script);
+    
+    
+  // Set instagramActive to true so logofyAPI and activate API can fire
+  // instagramActive = true;
+  
   }
+  
 }
+
+// Instagram API
+instagramFeed.embed({
+  username: 'manikrathee',
+  count: 1,
+  container: 'instagram'
+});

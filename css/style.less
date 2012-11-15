@@ -152,30 +152,74 @@ p{font-size: 12px;line-height: 1.6;}
 .about{
 	background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;
 	.upper{
-		background:#000 url(../images/about-heading.jpg) no-repeat 50% 50%;
-		color:#fff;
+		background: rgb(98,102,107); /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(98,102,107,1) 0%, rgba(80,87,93,1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(98,102,107,1)), color-stop(100%,rgba(80,87,93,1)));
+		background: -webkit-linear-gradient(top, rgba(98,102,107,1) 0%,rgba(80,87,93,1) 100%);
+		background: -o-linear-gradient(top, rgba(98,102,107,1) 0%,rgba(80,87,93,1) 100%);
+		background: linear-gradient(to bottom, rgba(98,102,107,1) 0%,rgba(80,87,93,1) 100%);
 		text-shadow:1px 1px 0 #000;
 		height:530px;
 		display: block;
 		position: relative;
 	}
 	.title{
-		position: absolute;
-		bottom: 20px;
-		left: 20px;
+		margin-top: 400px;
+		margin-left: 115px;
 		h1, h2{
 			text-transform: uppercase;
+			line-height: 1;
+			margin: 0;
+			color: #fff;
+			text-shadow: none;
+		}
+		h1{
+			font-size: 34px;
+		}
+		h2{
+			font-size:14px;
 		}
 	}
-	.title h1{
-		font-size:20px;
-		line-height: 1;
-		margin: 0;
+	.social-links{
+		margin: 0 0 10px 0 ;
+		padding: 0;
+		font-size: 14px;
+		li{
+			list-style-type: none;
+			margin: 4px 0;
+		}
 	}
-	.title h2{
-		font-size:12px;
-		line-height: 1;
-		margin: 0;
+	ul#follows{
+		li{
+			width: 200px;
+			margin: 10px auto;
+			list-style-type: none;
+		}
+	}
+	#about-data{
+		overflow: hidden;
+		zoom: 1;
+		li{
+			padding: 20px;
+		}
+	}
+	#map{
+		margin: 10px 0;
+		p{
+			text-transform: uppercase;
+			font-size: 12px;
+			span.location{
+				display: block;
+				font-size: 14px;
+			}
+		}
+		ul{
+			li{
+				margin: 10px 0;
+				background: #f9f9f9;
+				text-align: center;
+			}
+		}
 	}
 }
 
@@ -196,13 +240,15 @@ p{font-size: 12px;line-height: 1.6;}
 		text-align: center;
 		margin: 230px 0 0 0;
 		h1, h2{
+			color: #fff;
+			text-shadow: none;
 			text-transform: uppercase;
 		}
 	}
 	.title h1{
 		font-size:46px;
 		line-height: 1;
-		margin: 0;
+		margin: 0 0 4px 0;
 	}
 	.title h2{
 		font-size:14px;
@@ -224,7 +270,8 @@ p{font-size: 12px;line-height: 1.6;}
 	width: 85px;
 	display: block;
 	text-align: center;
-	margin: 20px auto;
+	padding: 20px 0;
+	margin: 0 auto;
 	-webkit-transition: color 0.25s linear;
 	-moz-transition: color 0.25s linear;
 	transition: color 0.25s linear;
@@ -234,6 +281,13 @@ p{font-size: 12px;line-height: 1.6;}
 	}
 }
 
+@media screen and (min-width: 500px){
+	.about{
+		.upper{
+			background: #35383D url(../images/about-heading-small.jpg) no-repeat 50% 50%;
+		}
+	}
+}
 
 @media screen and (min-width: 768px){
 	.left-section{
@@ -245,6 +299,9 @@ p{font-size: 12px;line-height: 1.6;}
 	.interior{
 		.fivecol, .sixcol{
 			padding: 0 20px;
+		}
+		.container.body{
+			padding-top: 20px;
 		}
 	}
 	.upper_logo_bar .mobile_nav{display:none;}
@@ -273,6 +330,72 @@ p{font-size: 12px;line-height: 1.6;}
 
 	.blog_upper{background:#000 url(../images/interior_upper_blog.jpg) no-repeat top center;color:#fff;text-shadow:1px 1px 0 #000;height:420px;}
 	.blog_title{margin-top:200px;}
+	
+		
+	/* ABOUT */
+	.about{
+		.upper{
+			background: #35383D url(../images/about-heading-medium.jpg) no-repeat 50% 50%;
+		}
+		.title{
+		}
+		.social-links{
+			max-width: 245px;
+			-moz-column-count: 2;
+			-moz-column-gap: 20px;
+			-webkit-column-count: 2;
+			-webkit-column-gap: 20px;
+			column-count: 2;
+			column-gap: 20px;
+		}
+		#about-data{
+			li{
+				width: 30%;
+				float: left;
+			}
+		}
+		#map{
+			background: #DCDCDC url('../images/about-map.jpg') no-repeat 50% 50%;
+			height: 420px;
+			margin: 30px 0;
+			-webkit-box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.3);
+	        box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.3);
+			p{
+				margin: 0;
+				line-height: 1;
+				span.location{
+					display: block;
+					font-size: 14px;
+				}
+			}
+			ul{
+				position: relative;
+				li{
+					position: absolute;
+					width: 320px;
+					padding: 10px;
+					text-align: left;
+					border-radius: 4px;
+					-webkit-box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+					box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+					&.san-francisco{
+						top: 20px;
+						left: 40px;
+					}
+					&.chicago{
+						top: 30px;
+						left: 500px;
+					}
+					&.montclair{
+						top: 100px;
+						right: 40px;
+					}
+				}
+			}
+		}
+	}
+	
+	
 }
 
 @media screen and (min-width: 940px){
@@ -280,6 +403,16 @@ p{font-size: 12px;line-height: 1.6;}
 
 	.catalyst_title_right{background:transparent url(../images/interior_upper_catalyst_phones.png) no-repeat bottom center;width:563px;height:365px;float:right;padding:0 0 0 0;}
 }
+
+
+@media screen and (min-width: 1420px){
+	.about{
+		.upper{
+			background: #35383D url(../images/about-heading-large.jpg) no-repeat 50% 50%;
+		}
+	}
+}
+
 
 @media only screen and (-webkit-min-device-pixel-ratio:2){
 	.upper_logo_bar .logo-dark{background: transparent url('../images/logo@2x.png') no-repeat 50% 50%;-webkit-background-size:69px 69px;}

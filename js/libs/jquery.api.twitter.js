@@ -1,5 +1,5 @@
 //Twitter Call
-$(document).ready(function() {
+// $(document).ready(function() {
 	$.getJSON('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=manikrathee&count=1&callback=?', function(data) {
 		
 		var html = "<ul>";
@@ -54,5 +54,6 @@ $(document).ready(function() {
 		
 		// Spit out the final product
     	twitter.html(html);
+    	logofyAPI();
 	});
-});
+// });

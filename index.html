@@ -1,4 +1,4 @@
-<?php $section='home'; ?>
+<?php $section='home'; $upper='white'; $project='false'; ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
@@ -26,41 +26,47 @@
 /_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/ 
 -->
 <body id="home">
-	<nav class="global-nav">
-		<div id="logo"></div>
+	<nav id="light" class="global-nav">
+		<div id="logo" class="white"></div>
 		<a id="nav" href="#"><span class="ss-icon">Rows</span> Navigation</a>
 		<ul id="navigation">
-			<li><a href="index.html" title="">Home</a></li>
-			<li><a href="about.php" title="">About</a></li>
+			<li><a href="index.html" class="current" title="Home">Home</a></li>
+			<li><a href="about.php" title="About">About</a></li>
 			<li id="portfolio"><p>Portfolio</p>
 				<ul id="projects">
-					<li><a href="#">BarackObama.com</a></li>
-					<li><a href="#">Contribute.BarackObama.com</a></li>
-					<li><a href="#">Barack Obama Call Tool</a></li>
-					<li><a href="interior_hope.php">Hope Will See Us Through</a></li>
-					<li><a href="interior_mrphoto.php">Manik Rathee Photography</a></li>
-					<li><a href="interior_wrap.php">Wrapskins</a></li>
-					<li><a href="interior_livescribe.php">Livescribe</a></li>
-					<li><a href="interior_universalshanti.php">Universal Shanti</a></li>
-					<li><a href="interior_blog.php">Blog</a></li>
+					<li><a href="barack-obama.php">BarackObama.com</a></li>
+					<li><a href="barack-obama-contribute.php">Contribute.BarackObama.com</a></li>
+					<li><a href="barack-obama-call-tool.php">Barack Obama Call Tool</a></li>
+					<li><a href="catalyst-iphone-theme.php" title="CATALYST - Minimal iPhone Theme">Catalyst iOS Theme</a></li>
+					<li><a href="hope-will-see-us-through.php" title="Hope Will See Us Through">Hope Will See Us Through</a></li>
+					<li><a ref="manik-rathee-photography.php" title="Manik Rathee Photography">Manik Rathee Photography</a></li>
+					<li><a href="wrapskins.php" title="Wrapskins">Wrapskins</a></li>
+					<li><a  href="livescribe.php" title="Livescribe">Livescribe</a></li>
+					<li><a href="universal-shanti.php" title="Universal Shanti">Universal Shanti</a></li>
+					<li><a href="manik-rathee-blog.php" title="Blog.ManikRathee">Blog</a></li>
 				</ul>
 			</li>
 			<li><a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">Blog</a></li>
-			<li><a href="" title="">Contact</a></li>
-			<li><a href="resources.php" title="">Resources</a></li>
+			<li><a href="contact.php" title="Contact Me">Contact</a></li>
+			<li><a href="resources.php" title="Resources">Resources</a></li>
 		</ul>	
 	</nav>
 	<section class="copy">
 		<header>
 			<h1 class="name">Manik Rathee</h1>
-			<h1 class="title">Co-Founder &amp; Lead Designer,
-			<a href="" title="" target="_blank">Boombox</a></h1>
+			<h1 class="title">User Experience Engineer,
+			<a href="" title="" target="_blank">President Barack Obama</a></h1>
+			<!-- <h1 class="title">Lead Designer,
+			<a href="" title="" target="_blank">Boombox</a></h1> -->
 		</header>
 		<section class="title">	
-				<p>I'm a user interface designer, frontend developer and user experience engineer. Formerly a UX Engineer for <a href="http://www.barackobama.com" title="Obama For America">President Barack Obama</a>, I am now the Lead Designer for BoomBox. In my spare time, I <a href="http://www.manikratheephotography.com" title="Manik Rathee Photography">photograph weddings</a> and <a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">I write about design and development</a>.</p>
+				<p>I'm a user interface designer, frontend developer and photographer, currently working as a User Experience Engineer for <a href="http://www.barackobama.com" title="Obama For America">President Barack Obama</a>. In my spare time, I <a href="http://www.manikratheephotography.com" title="Manik Rathee Photography">photograph weddings</a> and <a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">I write about design and development</a>.</p>
 		</section><!-- /title -->
+		<!-- <section class="title">	
+				<p>I'm a user interface designer, frontend developer and user experience engineer. Formerly a UX Engineer for <a href="http://www.barackobama.com" title="Obama For America">President Barack Obama</a>, I am now the Lead Designer for BoomBox. In my spare time, I <a href="http://www.manikratheephotography.com" title="Manik Rathee Photography">photograph weddings</a> and <a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">I write about design and development</a>.</p>
+		</section> --><!-- /title -->
 		<section class="social">
-			<ul>
+			<ul class="social-icons">
 				<li><a class="ss-icon ss-social-circle tooltip" href="https://github.com/manikrathee" title="GitHub">Github</a></li>
 				<li><a class="ss-icon ss-social-circle tooltip" href="http://www.dribbble.com/manikrathee" title="Dribbble">Dribbble</a></li>
 				<li><a class="ss-icon ss-social-circle tooltip" href="http://www.twitter.com/manikrathee" title="Twitter">Twitter</a></li>
@@ -69,22 +75,15 @@
 				<li><a class="ss-icon ss-social-circle tooltip" href="http://instagrid.me/manikrathee/" title="Instagram">Instagram</a></li>
 				<li><a class="ss-icon ss-social-circle tooltip" href="www.flickr.com/photos/manikrathee/" title="Flickr">Flickr</a></li>
 			</ul>
-			
-			<iframe id="github-button" src="http://ghbtns.com/github-btn.html?user=manikrathee&type=follow"
-			  allowtransparency="true" frameborder="0" scrolling="0" width="150px" height="20px"></iframe>
-  
-			<a id="twitter-button" href="https://twitter.com/manikrathee" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @ManikRathee</a>
-			
 		</section><!-- /social -->
 	</section><!-- /copy -->
 	
-	<div id="twitter" class="social-api twitter ss-social"></div>
-	<div id="instagram" class="social-api instagram ss-social"></div>
-	<div id="rdio" class="social-api rdio ss-social"></div>
-	<div id="readmill" class="social-api readmill ss-social"></div>
-		
+	<div id="twitter" class="social-api twitter"></div>
+	<div id="instagram" class="social-api instagram"></div>
+	<div id="rdio" class="social-api rdio"></div>
+	<div id="readmill" class="social-api readmill"></div>
 	
-	<script src="https://rdio.com/api/api.js?client_id=jIzIoQxELGiBUCzeYavYCA"></script>
+<!-- 	<script src="https://rdio.com/api/api.js?client_id=jIzIoQxELGiBUCzeYavYCA"></script> -->
 	<script src="js/scripts-ck.js"></script>
 	
 </body>
