@@ -2589,7 +2589,6 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   #home {
-    background: #000000 url('../images/home/background.jpg') no-repeat 70% 0;
     background-size: cover;
   }
   #home .copy {
