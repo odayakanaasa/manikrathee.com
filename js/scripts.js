@@ -25,7 +25,7 @@ var readmillID = $('#readmill').prop('id');
 function logofyAPI(){
     setTimeout(function(){
         if (instagramActive = true){
-        	console.log('instagrammmmmm');
+        	console.log('instagrammmmmm', instagramActive);
         	$(".social-api").prepend('<span class="ss-icon logo"></span>');
         	twitterAPI.find('span.logo').prepend(twitterID);
         	instagramAPI.find('span.logo').prepend(instagramID);

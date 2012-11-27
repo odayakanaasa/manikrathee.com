@@ -152,8 +152,8 @@
   animation: 2s ease;
 }
 .delay {
-  -webkit-animation-delay: 0, 2s;
-  -moz-animation-delay: 0, 2s;
+  -webkit-animation-delay: 0, 1s;
+  -moz-animation-delay: 0, 1s;
 }
 @-moz-keyframes fadeOut {
   0% {
@@ -631,8 +631,8 @@
   animation: 2s ease;
 }
 .delay {
-  -webkit-animation-delay: 0, 2s;
-  -moz-animation-delay: 0, 2s;
+  -webkit-animation-delay: 0, 1s;
+  -moz-animation-delay: 0, 1s;
 }
 @-moz-keyframes fadeOut {
   0% {
@@ -1032,8 +1032,8 @@
   -ms-animation-name: fadeInUp;
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
-  -webkit-animation-delay: 0, 2s;
-  -moz-animation-delay: 0, 2s;
+  -webkit-animation-delay: 0, 1s;
+  -moz-animation-delay: 0, 1s;
 }
 .social-api > div,
 .social-api > ul {
@@ -1105,8 +1105,9 @@
 @media screen and (min-width: 767px) {
   .social-api {
     position: absolute;
+    box-sizing: border-box;
     bottom: 0;
-    width: 25%;
+    width: 33%;
     padding: 20px 2.5%;
   }
   .social-api .logo {
@@ -1191,7 +1192,7 @@
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.3)), color-stop(1, rgba(255, 255, 255, 0.1)));
   }
   .instagram {
-    left: 25%;
+    left: 33%;
   }
   .instagram,
   .instagram.inactive:hover {
@@ -1212,7 +1213,7 @@
     margin-top: 27px;
   }
   .rdio {
-    left: 50%;
+    left: 66%;
   }
   .rdio,
   .rdio.inactive:hover {
@@ -2239,11 +2240,11 @@ nav.global-nav {
   width: 75px;
 }
 #logo.white {
-  background: transparent url('../images/home/white-logo.png') no-repeat top left;
+  background: transparent url('../images/white-logo.png') no-repeat top left;
   background-size: 100%;
 }
 #logo.dark {
-  background: transparent url('../images/home/dark-logo.png') no-repeat top left;
+  background: transparent url('../images/dark-logo.png') no-repeat top left;
   background-size: 100%;
 }
 nav {
@@ -2290,16 +2291,20 @@ nav p {
   padding: 0;
 }
 nav#dark a,
-nav#dark p {
+nav#dark p:not(#current) {
   color: rgba(51, 51, 51, 0.7);
 }
 nav#dark a.current,
-nav#dark p.current {
+nav#dark p:not(#current).current {
   color: #000;
 }
 nav#dark a:hover,
-nav#dark p:hover {
+nav#dark p:not(#current):hover {
   color: #000;
+}
+nav#dark p#current {
+  color: rgba(51, 51, 51, 0.7);
+  text-shadow: none;
 }
 nav#light a,
 nav#light p {

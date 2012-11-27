@@ -40,12 +40,16 @@ var instagramFeed = new function() {
     var script = "<script type='text/javascript' src='" + url + "'></script>";
 
     document.write(script);
-    
-    
-  // Set instagramActive to true so logofyAPI and activate API can fire
-  // instagramActive = true;
   
   }
+  
+  console.log('instagram should be false here -', instagramActive);
+    
+  // Set instagramActive to true so logofyAPI and activate API can fire
+  instagramActive = true;
+  
+  
+  console.log('instagram should be true here -', instagramActive);
   
 }
 

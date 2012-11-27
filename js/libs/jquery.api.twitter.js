@@ -48,7 +48,7 @@
 			relative_time(time_value);
 			
 			// Concatenate tweet and add linked relative time
-	    	html += "<li> ' " + status + ' - <a href="http://www.twitter.com/manikrathee/statuses/' + data[i].id_str + '" title="View this Tweet on Twitter.com">' + relative + "</a></span></li>";
+	    	html += "<li> " + status + ' - <a href="http://www.twitter.com/manikrathee/statuses/' + data[i].id_str + '" title="View this Tweet on Twitter.com">' + relative + "</a></span></li>";
 		}
 		html += "</ul>"
 		
