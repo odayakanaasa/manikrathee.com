@@ -1,15 +1,15 @@
-<?php $section='barackobama'; $upper='white'; $project='true'; ?>
+<?php $section='barackobama'; $upper='dark'; $project='true'; ?>
 <?php include('global/header.php'); ?>
 	
-<body class="interior mrphoto">
-	<div class="upper mrphoto_upper">
+<body class="interior barack-obama">
+	<div class="upper">
 		<?php include('global/nav.php'); ?>
 		<div class="container">
 			<div class="row">
 				<div class="onecol"></div>
 				<div class="fourcol">
 				<div class="mrphoto_title">
-					<img src="images/mrphoto_heading.png">
+					title
 				</div>
 				</div>
 				<div class="sevencol last"></div>
@@ -22,7 +22,7 @@
 			<div class="fourcol left-section">
 				<div class="right_col_inner">
 					<div class="headline">
-						<h3 id="fit" class="glance">Project Details</h2>
+						<h3 id="fit" class="glance">Project Details</h3>
 					</div>
 					<p class="glance_heading">Client</p>
 					<p class="glance_description">Manik Rathee Photography</p>
@@ -39,56 +39,19 @@
 				<div class="left_col_inner">
 						<div class="article">
 							<div class="headline">
-								<h2 id="fit">A moment, infinite.</h2>
+								<h2 id="fit">header</h2>
 							</div>
-							<p>I love being around happy people. I love seeing people smile their biggest smiles as they start their lives together and to know that it is one of the best moments that they will ever experience. I love being the person that allows those memories to live on forever.
-							
-								My name is Manik Rathee and I photograph love.</p>
+							<p>stuff.</p>
 						</div>
 						<div class="article">	
 							<div class="headline">
-								<h2 id="fit">Photography</h2>
+								<h2 id="fit">header</h2>
 							</div>
-							<p>Photography isn’t a job to me – it is my passion. I spend eight, nine, sometimes over ten hours, on my feet photographing weddings and engagement parties, but during all of that time, it never becomes “work”.</p>
-							
-								<p>Manik Rathee Photography is not a big company or a slew of photographers. It’s just me. You send a message through the contact form and it comes right to my phone. We schedule our first meeting and I’m the person there greeting you with a smile. I operate with full transparency – if you want to book me, you don’t just book the name or the style of photos I shoot – you book someone that is going to become a friend over the next few weeks. I will learn what makes you, well, you - and that, as simple as it sounds, will make your photos perfect.</p>
+							<p>stuff</p>
 						</div>
 				</div>
 			</div>
 		</div><!-- END row -->
-		<div class="row">
-			<div class="twelvecol last">
-				<div class="row">
-					<div class="onecol"></div>
-					<div class="tencol no_pad">
-							<div id="slider" class="mrphoto_slides">
-								<div class="flexslider">
-								    <ul class="slides">
-								    	<li>
-								    		<img src="images/mrphoto_slides_1.jpg">
-								    	</li>
-								    	<li>
-								    		<img src="images/mrphoto_slides_2.jpg">
-								    	</li>
-								    	<li>
-								    		<img src="images/mrphoto_slides_3.jpg">
-								    	</li>
-								    	<li>
-								    		<img src="images/mrphoto_slides_4.jpg">
-								    	</li>
-								    	<li>
-								    		<img src="images/mrphoto_slides_5.jpg">
-								    	</li>
-								    	
-								    </ul>
-							    </div>
-							</div>
-							
-					</div>
-					<div class="onecol last"></div>
-				</div>
-			</div>
-		</div>
 	</div><!-- END container -->	
 		
 

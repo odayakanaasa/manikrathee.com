@@ -26,41 +26,18 @@
 /_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/ 
 -->
 <body id="home">
-	<nav id="light" class="global-nav">
-		<div id="logo" class="white"></div>
-		<a id="nav" href="#"><span class="ss-icon">Rows</span> Navigation</a>
-		<ul id="navigation">
-			<li><a href="index.html" class="current" title="Home">Home</a></li>
-			<li><a href="about.php" title="About">About</a></li>
-			<li id="portfolio"><p>Portfolio</p>
-				<ul id="projects">
-					<li><a href="barack-obama.php">BarackObama.com</a></li>
-					<li><a href="barack-obama-contribute.php">Contribute.BarackObama.com</a></li>
-					<li><a href="barack-obama-call-tool.php">Barack Obama Call Tool</a></li>
-					<li><a href="catalyst-iphone-theme.php" title="CATALYST - Minimal iPhone Theme">Catalyst iOS Theme</a></li>
-					<li><a href="hope-will-see-us-through.php" title="Hope Will See Us Through">Hope Will See Us Through</a></li>
-					<li><a ref="manik-rathee-photography.php" title="Manik Rathee Photography">Manik Rathee Photography</a></li>
-					<li><a href="wrapskins.php" title="Wrapskins">Wrapskins</a></li>
-					<li><a  href="livescribe.php" title="Livescribe">Livescribe</a></li>
-					<li><a href="universal-shanti.php" title="Universal Shanti">Universal Shanti</a></li>
-					<li><a href="manik-rathee-blog.php" title="Blog.ManikRathee">Blog</a></li>
-				</ul>
-			</li>
-			<li><a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">Blog</a></li>
-			<li><a href="contact.php" title="Contact Me">Contact</a></li>
-			<li><a href="resources.php" title="Resources">Resources</a></li>
-		</ul>	
-	</nav>
+	<?php include('global/nav.php'); ?>
+	
 	<section class="copy">
 		<header>
 			<h1 class="name">Manik Rathee</h1>
 			<!-- <h1 class="title">User Experience Engineer,
 			<a href="" title="" target="_blank">President Barack Obama</a></h1> -->
 			<h1 class="title">Lead Designer,
-			<a href="" title="" target="_blank">Fluence</a></h1>
+			<a href="http://www.fluenceapp.com" title="Fluence">Fluence</a></h1>
 		</header>
 		<section class="title">	
-				<p>I'm a user interface designer, frontend developer and user experience engineer. Formerly a UX Engineer for <a href="http://www.barackobama.com" title="Obama For America">President Barack Obama</a>, I am now the Lead Designer for Fluence, a music startup in sunny San Francisco. In my spare time, I <a href="http://www.manikratheephotography.com" title="Manik Rathee Photography">photograph weddings</a> and <a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">I write about design and development</a>.</p>
+				<p>I'm a user interface designer, frontend developer and user experience engineer. Formerly a UX Engineer for <a href="http://www.barackobama.com" title="Obama For America">President Barack Obama</a>, I am now the Lead Designer for <a href="http://www.fluenceapp.com" title="Fluence">Fluence</a>, a startup in sunny San Francisco. In my spare time, I <a href="http://www.manikratheephotography.com" title="Manik Rathee Photography">photograph weddings</a> and <a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">I write about design and development</a>.</p>
 		</section> <!-- /title -->
 		<section class="social">
 			<ul class="social-icons">
@@ -78,7 +55,7 @@
 	<div id="twitter" class="social-api twitter"></div>
 	<div id="instagram" class="social-api instagram"></div>
 	<div id="rdio" class="social-api rdio"></div>
-	<div id="readmill" class="social-api readmill"></div>
+	<!-- <div id="readmill" class="social-api readmill"></div> -->
 	
 <!-- 	<script src="https://rdio.com/api/api.js?client_id=jIzIoQxELGiBUCzeYavYCA"></script> -->
 	<script src="js/scripts-ck.js"></script>
