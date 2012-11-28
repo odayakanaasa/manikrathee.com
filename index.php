@@ -41,13 +41,16 @@
 		</section> <!-- /title -->
 		<section class="social">
 			<ul class="social-icons">
-				<li><a class="ss-icon ss-social-circle tooltip" href="https://github.com/manikrathee" title="GitHub">Github</a></li>
+				<li><a class="ss-icon ss-social-circle tooltip" href="https://github.com/manikrathee" title="GitHub">Octocat</a></li>
 				<li><a class="ss-icon ss-social-circle tooltip" href="http://www.dribbble.com/manikrathee" title="Dribbble">Dribbble</a></li>
 				<li><a class="ss-icon ss-social-circle tooltip" href="http://www.twitter.com/manikrathee" title="Twitter">Twitter</a></li>
 				<li><a class="ss-icon ss-social-circle tooltip" href="http://www.readmill.com/manikrathee" title="Readmill">Readmill</a></li>
 				<li><a class="ss-icon ss-social-circle tooltip" href="http://manikrathee.tumblr.com" title="Tumblr">Tumblr</a></li>
 				<li><a class="ss-icon ss-social-circle tooltip" href="http://instagrid.me/manikrathee/" title="Instagram">Instagram</a></li>
-				<li><a class="ss-icon ss-social-circle tooltip" href="www.flickr.com/photos/manikrathee/" title="Flickr">Flickr</a></li>
+				<li><a class="ss-icon ss-social-circle tooltip" href="http://www.flickr.com/photos/manikrathee/" title="Flickr">Flickr</a></li>
+				<li><a class="ss-icon ss-social-circle tooltip" href="https://foursquare.com/manikrathee" title="Foursquare">Foursquare</a></li>
+				<li><a class="ss-icon ss-social-circle tooltip" href="skype:mrathee?call" title="Skype">Skype</a></li>
+				<li><a class="ss-icon ss-social-circle tooltip" href="http://www.last.fm/user/mrathee" title="lastFM">lastfm</a></li>
 			</ul>
 		</section><!-- /social -->
 	</section><!-- /copy -->
@@ -55,10 +58,9 @@
 	<div id="twitter" class="social-api twitter"></div>
 	<div id="instagram" class="social-api instagram"></div>
 	<div id="rdio" class="social-api rdio"></div>
-	<!-- <div id="readmill" class="social-api readmill"></div> -->
+	<div id="readmill" class="social-api readmill"><p id="readmill-book">Currently Reading: '<a href="http://readmill.com/manikrathee/reads/the-lean-startup-how-todays-entrepreneurs-use-continuous-innovation-to-create-radically-successful-businesses-1" title="The Lean Startup">The Lean Startup</a>'</p></div>
 	
-<!-- 	<script src="https://rdio.com/api/api.js?client_id=jIzIoQxELGiBUCzeYavYCA"></script> -->
+	<script src="https://rdio.com/api/api.js?client_id=jIzIoQxELGiBUCzeYavYCA"></script>
 	<script src="js/scripts-ck.js"></script>
-	
 </body>
 </html>

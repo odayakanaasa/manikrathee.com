@@ -43,7 +43,7 @@ function logofyAPI(){
  // Callback function for after API js has run to display the API containers
  function activateAPI(){
  	$('.social-api').addClass("run");
-	$(".social-api").delay(6500).queue(function(next){
+	$(".social-api").delay(4500).queue(function(next){
 		$(this).addClass('inactive');
 		next();
 	});
@@ -121,23 +121,23 @@ $(document).click(function() {
 
 
 // Rdio API
-// R.ready(function() {
-// 	R.request({
-// 		method: "getTopCharts",
-// 		content: {
-// 		type: "Track", 
-// 		start: 0, 
-// 		count: 1
-// 		},
-// 		success: function(response) {
-// 			var top = response.result[0];
-// 			console.log(top.name + " by " + top.artist);
-// 		},
-// 		error: function(response) {
-// 			console.log("error");
-// 		}
-// 	});
-// });
+R.ready(function() {
+	R.request({
+		method: "getTopCharts",
+		content: {
+		type: "Track", 
+		start: 0, 
+		count: 1
+		},
+		success: function(response) {
+			var top = response.result[0];
+			console.log(top.name + " by " + top.artist);
+		},
+		error: function(response) {
+			console.log("error");
+		}
+	});
+});
 
 
 //Slider
@@ -175,3 +175,4 @@ _gaq.push(['_trackPageview']);
 	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
+

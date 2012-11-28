@@ -1011,6 +1011,7 @@
   color: #fff;
   font-weight: bold;
   text-decoration: none;
+  overflow: hidden;
   -webkit-transition: height 1s linear, background-color 1s linear, padding 1s linear, color 1s linear;
   -moz-transition: height 1s linear, background-color 1s linear, padding 1s linear, color 1s linear;
   transition: height 1s linear, background-color 1s linear, padding 1s linear, color 1s linear;
@@ -1032,8 +1033,6 @@
   -ms-animation-name: fadeInUp;
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
-  -webkit-animation-delay: 0, 1s;
-  -moz-animation-delay: 0, 1s;
 }
 .social-api > div,
 .social-api > ul {
@@ -1070,7 +1069,6 @@
   overflow: hidden;
 }
 .twitter:hover {
-  overflow: visible;
   white-space: normal;
 }
 .instagram a {
@@ -1079,7 +1077,7 @@
 @media screen and (max-width: 767px) {
   .social-api .logo {
     display: block;
-    margin: 0 auto 15px;
+    margin: 0 auto 20px;
     height: 20px;
   }
   .social-api {
@@ -1105,9 +1103,8 @@
 @media screen and (min-width: 767px) {
   .social-api {
     position: absolute;
-    box-sizing: border-box;
     bottom: 0;
-    width: 33%;
+    width: 25%;
     padding: 20px 2.5%;
   }
   .social-api .logo {
@@ -1173,12 +1170,10 @@
     opacity: 1;
   }
   .twitter {
-    overflow: hidden;
     left: 0;
     margin-top: 0;
   }
   .twitter:hover {
-    overflow: visible;
     white-space: normal;
   }
   .twitter,
@@ -1192,7 +1187,7 @@
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.3)), color-stop(1, rgba(255, 255, 255, 0.1)));
   }
   .instagram {
-    left: 33%;
+    left: 25%;
   }
   .instagram,
   .instagram.inactive:hover {
@@ -1213,7 +1208,7 @@
     margin-top: 27px;
   }
   .rdio {
-    left: 66%;
+    left: 50%;
   }
   .rdio,
   .rdio.inactive:hover {
@@ -1228,6 +1223,16 @@
   .readmill {
     left: 75%;
   }
+  .readmill p {
+    margin: 25px 0 0 20px;
+    font-size: 15px;
+  }
+  .readmill.inactive p {
+    opacity: 0;
+    -webkit-transition: opacity 0.25s linear;
+    -moz-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear;
+  }
   .readmill,
   .readmill.inactive:hover {
     background-color: #81ce2c;
@@ -1238,11 +1243,15 @@
     background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.3)), color-stop(1, rgba(255, 255, 255, 0.1)));
   }
+  .readmill p,
+  .readmill.inactive:hover p {
+    opacity: 1;
+  }
 }
-@media screen and (max-height: 600px) {
+@media screen and (min-width: 768px) and (max-height: 600px) {
   .social-api {
     position: relative;
-    top: 50px;
+    top: 325px;
     left: 0;
     width: 100%;
     float: none;
@@ -1252,6 +1261,12 @@
     -webkit-transition: position 0.25s linear, top 0.25s linear, left 0.25s linear, float 0.25s linear;
     -moz-transition: position 0.25s linear, top 0.25s linear, left 0.25s linear, float 0.25s linear;
     transition: position 0.25s linear, top 0.25s linear, left 0.25s linear, float 0.25s linear;
+  }
+  .social-api ul,
+  .social-api div.photo,
+  .social-api p#readmill-book {
+    margin-left: 60px;
+    margin-top: 25px;
   }
 }
 @charset "UTF-8";
@@ -2550,11 +2565,6 @@ a:hover {
   #logo {
     margin: 0 auto;
   }
-  .social-icons {
-    width: 204px;
-    padding: 0;
-    margin: 45px auto;
-  }
 }
 @media screen and (max-width: 767px) {
   #home .copy h1.title {
@@ -2581,6 +2591,15 @@ a:hover {
     -moz-transition: color 0.25s linear;
     transition: color 0.25s linear;
   }
+  .social-icons {
+    width: 295px;
+    padding: 0;
+    margin: 45px auto;
+  }
+  #home .copy {
+    text-align: center;
+    margin-top: 50px;
+  }
   #projects {
     overflow: hidden;
     zoom: 1;
@@ -2594,6 +2613,7 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   #home {
+    background: #000000 url('../images/home/background.jpg') no-repeat 70% 0;
     background-size: cover;
   }
   #home .copy {
@@ -2605,6 +2625,15 @@ a:hover {
   }
   #home .copy.fade {
     opacity: 0;
+  }
+  #home .social {
+    margin-top: 20px;
+  }
+  #home .social ul {
+    padding: 0;
+  }
+  #home .social li {
+    margin-right: 20px;
   }
 }
 .oldie .onecol {

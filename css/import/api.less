@@ -32,6 +32,7 @@
 	color: #fff;	
 	font-weight: bold;
 	text-decoration: none;
+	overflow: hidden;
 	-webkit-transition:height 1s linear, background-color 1s linear, padding 1s linear, color 1s linear;
 	-moz-transition:height 1s linear, background-color 1s linear, padding 1s linear, color 1s linear;
 	transition:height 1s linear, background-color 1s linear, padding 1s linear, color 1s linear;
@@ -39,7 +40,7 @@
 		opacity: 1;
 		.animate;
 		.fadeInUp;
-		.delay;
+		// .delay;
 	}
 	& > div, & > ul{
 		opacity: 1;
@@ -74,7 +75,7 @@
 .twitter{
 	overflow: hidden;
 	&:hover{
-		overflow: visible;
+		// overflow: visible;
 		white-space: normal;
 	}
 }
@@ -88,7 +89,7 @@
 @media screen and (max-width: 767px) {
 	.social-api .logo{
 		display: block;
-		margin: 0 auto 15px;
+		margin: 0 auto 20px;
 		height: 20px;
 	}
 	.social-api{
@@ -114,9 +115,8 @@
 @media screen and (min-width: 767px) {
 	.social-api{
 		position: absolute;
-		box-sizing: border-box;
 		bottom: 0;
-		width: 33%;
+		width: 25%;
 		padding: 20px 2.5%;
 		.logo{
 			position: absolute;
@@ -179,11 +179,10 @@
 		}
 	}
 	.twitter{
-		overflow: hidden;
 		left: 0;
 		margin-top: 0;
 		&:hover{
-			overflow: visible;
+			// overflow: visible;
 			white-space: normal;
 		}
 	}
@@ -192,7 +191,7 @@
 		.gradient;
 	}
 	.instagram{
-		left: 33%;
+		left: 25%;
 	}
 	.instagram, .instagram.inactive:hover{
 		background-color: @instagram;
@@ -205,7 +204,7 @@
 		}
 	}
 	.rdio{
-		left: 66%;
+		left: 50%;
 	}
 	.rdio, .rdio.inactive:hover{
 		background-color: @rdio;
@@ -213,18 +212,33 @@
 	}
 	.readmill{
 		left:75%;
+		p{
+			margin: 25px 0 0 20px;
+			font-size: 15px;
+		}
+	}
+	.readmill.inactive{
+		p{
+			opacity: 0;
+			-webkit-transition: opacity 0.25s linear;
+			-moz-transition: opacity 0.25s linear;
+			transition: opacity 0.25s linear;
+		}
 	}
 	.readmill, .readmill.inactive:hover{
 		background-color: @readmill;
 		.gradient;
+		p{
+			opacity: 1;
+		}
 	}
 	
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (min-width: 768px) and (max-height: 600px) {
 	.social-api{
 		position: relative;
-		top: 50px;
+		top: 325px;
 		left: 0;
 		width: 100%;
 		float: none;
@@ -234,6 +248,12 @@
 		-webkit-transition: position 0.25s linear, top 0.25s linear, left 0.25s linear, float 0.25s linear;
 		-moz-transition: position 0.25s linear, top 0.25s linear, left 0.25s linear, float 0.25s linear;
 		transition: position 0.25s linear, top 0.25s linear, left 0.25s linear, float 0.25s linear;
+		// &:hover{
+			ul, div.photo, p#readmill-book{
+				margin-left: 60px;
+				margin-top: 25px;
+			}
+		// }
 	}
 }
 

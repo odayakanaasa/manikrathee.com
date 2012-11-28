@@ -107,11 +107,6 @@ a{
 	#logo{
 		margin: 0 auto;
 	}
-	.social-icons{
-		width: 204px;
-		padding: 0;
-		margin: 45px auto;
-	}
 }
 
 @media screen and (max-width: 767px) {
@@ -142,6 +137,16 @@ a{
 			}
 		}
 	}
+	
+	.social-icons{
+		width: 295px;
+		padding: 0;
+		margin: 45px auto;
+	}
+	#home .copy{
+		text-align: center;
+		margin-top: 50px;
+	}
 	#projects{
 		overflow: hidden;
 		zoom: 1;
@@ -156,7 +161,7 @@ a{
 
 @media screen and (min-width: 768px){
 	#home{
-		// background: #000 url('../images/home/background.jpg') no-repeat 70% 0;
+		background: #000 url('../images/home/background.jpg') no-repeat 70% 0;
 		background-size: cover;
 		.copy{
 			position: absolute;
@@ -168,8 +173,18 @@ a{
 				opacity: 0;
 			}
 		}
+		.social{
+			margin-top: 20px;
+			ul{
+				padding: 0;
+			}
+			li{
+				margin-right: 20px;
+			}
+		}
 	}
 }
+
 
 .oldie{
 	@import "import/ie"; 
