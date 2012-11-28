@@ -190,6 +190,17 @@ $(".interior h3#fit").fitText(0.9);
 })(jQuery);
 
 var numberOne = $('#about-data').find('#number-one');
+var numberOneValue = numberOne.text();
+var numberTwo = $('#about-data').find('#number-two');
+var numberTwoValue = numberTwo.text();
+var numberThree = $('#about-data').find('#number-three');
+var numberThreeValue = numberThree.text();
+var numberFour = $('#about-data').find('#number-four');
+var numberFourValue = numberFour.text();
+var numberFive = $('#about-data').find('#number-five');
+var numberFiveValue = numberFive.text();
+var numberSix = $('#about-data').find('#number-six');
+var numberSixValue = numberSix.text();
 
 // jQuery(function($) {
 //     numberOne.countTo({
@@ -207,14 +218,65 @@ var numberOne = $('#about-data').find('#number-one');
 function startCount() {
 	numberOne.countTo({
 	    from: 0,
-	    to: 2500,
-	    speed: 5000,
+	    to: numberOneValue,
+	    speed: 2000,
+	    refreshInterval: 5,
+	    onComplete: function(value) {
+	        console.debug(this);
+	    }
+	});
+	
+	numberTwo.countTo({
+	    from: 0,
+	    to: numberTwoValue,
+	    speed: 2000,
+	    refreshInterval: 5,
+	    onComplete: function(value) {
+	        console.debug(this);
+	    }
+	});
+	
+	numberThree.countTo({
+	    from: 0,
+	    to: numberThreeValue,
+	    speed: 2000,
+	    refreshInterval: 5,
+	    onComplete: function(value) {
+	        console.debug(this);
+	    }
+	});
+	
+	numberFour.countTo({
+	    from: 0,
+	    to: numberFourValue,
+	    speed: 2000,
+	    refreshInterval: 5,
+	    onComplete: function(value) {
+	        console.debug(this);
+	    }
+	});
+	
+	numberFive.countTo({
+	    from: 0,
+	    to: numberFiveValue,
+	    speed: 2000,
+	    refreshInterval: 5,
+	    onComplete: function(value) {
+	        console.debug(this);
+	    }
+	});
+	
+	numberSix.countTo({
+	    from: 0,
+	    to: numberSixValue,
+	    speed: 2000,
 	    refreshInterval: 5,
 	    onComplete: function(value) {
 	        console.debug(this);
 	    }
 	});
 }
+
 startCount();
 
 

@@ -82,12 +82,12 @@
 	<div class="container">
 		<div class="row">
 			<ul id="about-data">
-				<li><span id="number-one">25</span><p>Something something something</p></li>
-				<li><span>25</span><p>Something something something</p></li>
-				<li><span>25</span><p>Something something something</p></li>
-				<li><span>25</span><p>Something something something</p></li>
-				<li><span>25</span><p>Something something something</p></li>
-				<li><span>25</span><p>Something something something</p></li>
+				<li><span id="number-one">11111</span><p>Something something something</p></li>
+				<li><span id="number-two">22222</span><p>Something something something</p></li>
+				<li><span id="number-three">33333</span><p>Something something something</p></li>
+				<li><span id="number-four">44444</span><p>Something something something</p></li>
+				<li><span id="number-five">5555</span><p>Something something something</p></li>
+				<li><span id="number-six">6666</span><p>Something something something</p></li>
 			</ul>
 		</div><!-- END row -->
 	</div><!-- END container -->	
