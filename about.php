@@ -16,6 +16,12 @@
 	<div class="container body">
 		<div class="row">
 			<div class="fivecol left-section">
+				<h3>Published</h3>
+				<ul>
+					<li>Robin's Book</li>
+					<li>Offscreen Mag</li>
+					<li>Readmill Interview</li>
+				</ul>
 				<h3>Social</h3>
 				<ul class="social-links">
 					<li><a href="http://www.manikrathee.com/github" title="@manikrathee on Github">Github</a></li>
@@ -76,7 +82,7 @@
 	<div class="container">
 		<div class="row">
 			<ul id="about-data">
-				<li><span>25</span><p>Something something something</p></li>
+				<li><span id="number-one">25</span><p>Something something something</p></li>
 				<li><span>25</span><p>Something something something</p></li>
 				<li><span>25</span><p>Something something something</p></li>
 				<li><span>25</span><p>Something something something</p></li>

@@ -2636,6 +2636,16 @@ a:hover {
     margin-right: 20px;
   }
 }
+@media screen and (min-width: 1800px) {
+  #home .container {
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  #home .container .copy {
+    top: 60px;
+  }
+}
 .oldie .onecol {
   width: 4.7%;
 }
