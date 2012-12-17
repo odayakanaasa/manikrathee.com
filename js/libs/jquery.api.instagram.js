@@ -22,7 +22,6 @@ var instagramFeed = new function() {
   this.render = function(container, data) {
     var obj = document.getElementById(container);
     var buffer = this.render_html(data);
-    // console.log(data);
     obj.innerHTML = buffer;
   }
 
@@ -43,14 +42,8 @@ var instagramFeed = new function() {
   
   }
   
-  console.log('instagram should be false here -', instagramActive);
-    
   // Set instagramActive to true so logofyAPI and activate API can fire
   instagramActive = true;
-  
-  
-  console.log('instagram should be true here -', instagramActive);
-  
 }
 
 // Instagram API

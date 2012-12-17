@@ -7,7 +7,7 @@
 //@codekit-prepend "libs/jquery.twitter.js";
 //@codekit-prepend "libs/jquery.prettyForms.js";
 //@codekit-prepend "libs/jquery.tipTip.js";
-//@codekit-prepend "konami.js";
+//@codekit-prepend "libs/konami.js";
 
 // "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js", "libs/jquery.api.rdio.js"
 
@@ -25,7 +25,6 @@ var readmillID = $('#readmill').prop('id');
 function logofyAPI(){
     setTimeout(function(){
         if (instagramActive = true){
-        	console.log('instagrammmmmm', instagramActive);
         	$(".social-api").prepend('<span class="ss-icon logo"></span>');
         	twitterAPI.find('span.logo').prepend(twitterID);
         	instagramAPI.find('span.logo').prepend(instagramID);
@@ -34,7 +33,6 @@ function logofyAPI(){
         	activateAPI();
         }
         else{
-        	console.log('not true yet');
         	return;
         }
     }, 1000);
@@ -118,6 +116,14 @@ $(document).click(function() {
 // 	});
 // });
 
+// Konami Code
+konami = new Konami()
+konami.code = function() {
+    $('body').addClass('konami');
+}
+
+konami.load()
+
 
 //Slider
 $('.flexslider').flexslider();
@@ -137,8 +143,7 @@ toTop.click(function(e) {
 
 //FitText
 // $(".interior h2").fitText(1.2);
-$(".interior h3").fitText();
-$(".interior h3#fit").fitText(0.9);
+$(".interior h3").fitText(1.3);
 
 
 //Counter
