@@ -1,4 +1,4 @@
-<?php $section='interior_mrphoto'; $upper='white'; $project='true'; ?>
+<?php $section='mrphoto'; $upper='white'; $project='true'; ?>
 <?php include('global/header.php'); ?>
 	
 <body class="interior mrphoto">
@@ -8,30 +8,23 @@
 			<div class="row">
 				<div class="onecol"></div>
 				<div class="fourcol">
-				<div class="mrphoto_title">
-					<img src="images/mrphoto_heading.png">
-				</div>
+					<h1 class="mrphoto_title">Manik Rathee Photography</h1>
 				</div>
 				<div class="sevencol last"></div>
 			</div><!-- END row -->
 		</div>
 	</div>
-	<div class="shadow">&nbsp;</div>
 	<div class="container">
 		<div class="row section_spacer">
 			<div class="fourcol left-section">
 				<div class="right_col_inner">
 					<div class="headline">
-						<h3 id="fit" class="glance">Project Details</h2>
+						<h3 class="fit-low" class="glance">Project Details</h3>
 					</div>
-					<p class="glance_heading">Client</p>
-					<p class="glance_description">Manik Rathee Photography</p>
-					<p class="glance_heading">Project Type</p>
-					<p class="glance_description">Website &amp; Social Media</p>
-					<p class="glance_heading">Target Devices</p>
-					<p class="glance_description">Desktop / Screen</p>
-					<a class="button" href="http://www.manikratheephotography.com" target="_blank">View Project
-					</a>
+					<p class="glance_heading">Client<span>Manik Rathee Photography</span></p>
+					<p class="glance_heading">Project Type<span>Website &amp; Social Media</span></p>
+					<p class="glance_heading">Target Devices<span>Desktop / Screen</span></p>
+					<a class="button" href="http://www.manikratheephotography.com">View Project</a>
 				</div>
 			</div>
 			<div class="onecol"></div>
@@ -39,7 +32,7 @@
 				<div class="left_col_inner">
 						<div class="article">
 							<div class="headline">
-								<h2 id="fit">A moment, infinite.</h2>
+								<h2 class="fit">A moment, infinite.</h2>
 							</div>
 							<p>I love being around happy people. I love seeing people smile their biggest smiles as they start their lives together and to know that it is one of the best moments that they will ever experience. I love being the person that allows those memories to live on forever.
 							
@@ -47,7 +40,7 @@
 						</div>
 						<div class="article">	
 							<div class="headline">
-								<h2 id="fit">Photography</h2>
+								<h2 class="fit">Photography</h2>
 							</div>
 							<p>Photography isn’t a job to me – it is my passion. I spend eight, nine, sometimes over ten hours, on my feet photographing weddings and engagement parties, but during all of that time, it never becomes “work”.</p>
 							

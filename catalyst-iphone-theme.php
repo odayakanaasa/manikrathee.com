@@ -1,34 +1,31 @@
 <?php $section='catalyst'; $upper='white'; $project='true';?>
 <?php include('global/header.php'); ?>
+
 <body class="interior catalyst">
-		<div class="upper catalyst_upper">
+	<div class="upper catalyst_upper">
 		<?php include('global/nav.php'); ?>
 		<div class="container">
 			<div class="row">
 				<div class="fivecol">
 					<div class="catalyst_title"></div>
 				</div>
-				<div class="sevencol last">
+				<div class="sevencol last catalyst_container">
 					<div class="catalyst_title_right"></div>
 				</div>
 			</div><!-- END row -->
 		</div>
-		<div class="container">
-		<div class="row">
-			<div class="section_spacer"></div>
+	</div>
+	<div class="container">
+		<div class="row section_spacer">
 			<div class="fourcol left-section">
 				<div class="right_col_inner">
 					<div class="headline">
-						<h3 id="fit" class="glance">Project Details</h2>
+						<h3 class="fit-low" class="glance">Project Details</h3>
 					</div>
-					<p class="glance_heading">Client</p>
-					<p class="glance_description">Commercial</p>
-					<p class="glance_heading">Project Type</p>
-					<p class="glance_description">User Interface, iOS</p>
-					<p class="glance_heading">Target Devices</p>
-					<p class="glance_description">Mobile, iOS</p>
-					<a class="button" href="http://www.manikrathee.com/catalyst" target="_blank">View Project
-					</a>
+					<p class="glance_heading">Client<span>Commercial</span></p>
+					<p class="glance_heading">Project Type<span>User Interface, iOS</span></p>
+					<p class="glance_heading">Target Devices<span>Mobile, iOS</span></p>
+					<a class="button" href="http://www.manikrathee.com/catalyst">View Project</a>
 				</div>
 			</div>
 			<div class="onecol"></div>

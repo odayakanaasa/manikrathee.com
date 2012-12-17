@@ -83,7 +83,20 @@ p{font-size: 12px;line-height: 1.6;}
 
 
 /* ///  INTERIOR  //// */
-.button{display: block;background:#000 url(../images/button_bg.jpg) repeat-x;border-radius: 5px; -moz-border-radius: 5px;  -webkit-border-radius: 5px;width:155px;text-align:center;color:#fff !important;text-shadow:1px 1px 0 #000;font-weight:500;text-transform:uppercase;padding:5px 0;font-size: 12px;}
+.button{
+	display: block;
+	background:#000 url(../images/button_bg.jpg) repeat-x;
+	border-radius: 5px; 
+	width:155px;
+	text-align:center;
+	color:#fff !important;
+	text-shadow:1px 1px 0 #000;
+	font-weight:500;
+	text-transform:uppercase;
+	padding:5px 0;
+	font-size: 12px;
+	margin-bottom: 30px;
+}
 .button:hover{background:#000 url(../images/button_bg_hover.jpg) repeat-x;}
 .button a{text-decoration:none;}
 .button a:hover{text-decoration:none;}
@@ -92,8 +105,27 @@ p{font-size: 12px;line-height: 1.6;}
 .interior h2,h3{font-size: 45px;text-transform: uppercase;color:#333333;text-shadow:1px 1px 0 #fff;font-weight:500;display: block;}
 .interior a{color:#000;text-decoration:none;}
 .interior a:hover{color:#777;text-decoration:none;}	
-.interior p{font-size: 14px;line-height: 1.8;text-shadow:1px 1px 0 #fff;margin-bottom:20px;}
+.interior p{font-size: 14px;line-height: 1.8;margin-bottom:20px;}
 
+.section_spacer{
+	padding-top: 20px;
+}
+
+.glance_heading{
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1;
+	color: #555;
+	span{
+		display: block;
+		font-weight: normal;
+		color: #777;
+	}
+}
+
+.left_col_inner .article{
+	margin-bottom: 45px;
+}
 
 /* HOPE WILL SEE US THROUGH - INTERIOR */
 .hope{background:#FBFBFB url(../images/interior_lower_hope.jpg) repeat top center;}
@@ -107,7 +139,15 @@ p{font-size: 12px;line-height: 1.6;}
 /*MR PHOTOGRAPHY - INTERIOR */
 .mrphoto{background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;}
 .mrphoto_upper{background:#192E47 url(../images/interior_upper_mrphoto.jpg) no-repeat top center;color:#fff;text-shadow:1px 1px 0 #000;height:500px;}
-.mrphoto_title{margin-top:300px;}
+.mrphoto_title{
+	display: block;
+	background: transparent url('../images/mrphoto_heading.png') no-repeat 50% 50%;
+	margin-top: 245px;
+	height: 64px;
+	width: 345px;
+	text-indent: -999em;
+	text-align: left;
+}
 .mrphoto_title .subtitle{font-size:13px;}
 .mrphoto_slides{width:98%;margin:0 auto 35px auto;}
 
@@ -157,7 +197,6 @@ p{font-size: 12px;line-height: 1.6;}
 .barack-obama .title{
 	margin-top: 200px;
 }
-
 
 
 /* BLOG - INTERIOR */
@@ -335,7 +374,7 @@ p{font-size: 12px;line-height: 1.6;}
 @media screen and (min-width: 500px){
 	.about{
 		.upper{
-			background: #35383D url(../images/about-heading-small.jpg) no-repeat 50% 50%;
+			background: #2a2529 url(../images/about-heading-small.jpg) no-repeat 50% 50%;
 		}
 		.title{
 			
@@ -375,10 +414,14 @@ p{font-size: 12px;line-height: 1.6;}
 	.hope_slides{width:500px;}
 
 	.catalyst_upper{background:#000 url(../images/interior_upper_catalyst.jpg) repeat-x top center;color:#fff;text-shadow:1px 1px 0 #000;height:490px;}
-	.catalyst_title{margin:18% 0 0 28%;background:transparent url(../images/catalyst_title.png) no-repeat top center;width:263px;height:56px;}
-	.catalyst_title_right{display: block;background:transparent url(../images/interior_upper_catalyst_phones_small.png) no-repeat bottom center;width:225px;height:365px;padding:0 25% 0 0;float:right;}
+	.catalyst_title{margin: 350px 0 0 72px;background:transparent url(../images/catalyst_title.png) no-repeat top center;width:263px;height:56px;}
+	.catalyst_title_right{display: block;background:transparent url(../images/interior_upper_catalyst_phones_small.png) no-repeat bottom center;width:225px;height:365px;margin: 125px 0 0 0;}
 	.catalyst_icon_row .catalyst_iconset{float:left;width:40%;}
 	.catalyst_icon_row .catalyst_iconset_copy{float:left;padding:10px 0 0 40px;width:50%;border: none;}
+	
+	.mrphoto_title{
+		margin-top: 400px;
+	}
 
 	.livescribe_upper{background:#FFF url(../images/interior_livescribe_bg.jpg) no-repeat center top;color:#fff;text-shadow:1px 1px 0 #000;height:350px;}
 	.livescribe_title{margin:50px 0 0 0;}

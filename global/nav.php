@@ -1,6 +1,6 @@
 <nav id="<?php if ($upper=='dark') { echo 'dark'; } ?><?php if ($upper=='white') { echo 'light'; } ?>" class="global-nav">
 	<div id="logo"<?php if ($upper=='white') { echo ' class="white"'; } ?><?php if ($upper=='dark') { echo ' class="dark"'; } ?>"></div>
-	<a id="nav" href="#"><span class="ss-icon">Rows</span> Navigation</a>
+	<a id="nav" class="ss-icon" href="#">Rows</a>
 	<ul id="navigation">
 		<li><a<?php if ($section=='home') { echo ' class="current"'; } ?> href="index.php" title="Home">Home</a></li>
 		<li><a<?php if ($section=='about') { echo ' class="current"'; } ?> href="about.php" title="About Manik Rathee">About</a></li>
@@ -15,7 +15,7 @@
 				<li><a<?php if ($section=='wrap') { echo ' class="current"'; } ?> href="wrapskins.php" title="Wrapskins">Wrapskins</a></li>
 				<li><a<?php if ($section=='livescribe') { echo ' class="current"'; } ?> href="livescribe.php" title="Livescribe">Livescribe</a></li>
 				<li><a<?php if ($section=='universalshanti') { echo ' class="current"'; } ?> href="universal-shanti.php" title="Universal Shanti">Universal Shanti</a></li>
-				<li><a<?php if ($section=='blog') { echo ' class="current"'; } ?> href="manik-rathee-blog.php" title="Blog.ManikRathee">Blog</a></li>
+				<!-- <li><a<?php if ($section=='blog') { echo ' class="current"'; } ?> href="manik-rathee-blog.php" title="Blog.ManikRathee">Blog</a></li> -->
 			</ul>
 		</li>
 		<li><a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">Blog</a></li>

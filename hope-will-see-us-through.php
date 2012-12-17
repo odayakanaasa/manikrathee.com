@@ -17,31 +17,25 @@
 			</div><!-- END row -->
 		</div>
 	</div>
-	<div class="shadow">&nbsp;</div>
 	<div class="container">
 		<div class="row section_spacer">
 			<div class="onecol"></div>
 			<div class="fourcol left-section">
 				<div class="right_col_inner">
 					<div class="headline">
-						<h3 id="fit" class="glance">Project Details</h2>
+						<h3 class="fit-low" class="glance">Project Details</h3>
 					</div>
-					<p class="glance_heading">Client</p>
-					<p class="glance_description">Personal</p>
-					<p class="glance_heading">Project Type</p>
-					<p class="glance_description">Typography, Photo Blog</p>
-					<p class="glance_heading">Target Devices</p>
-					<p class="glance_description">Desktop / Screen</p>
-					<a class="button" href="http://hopewillseeusthrough.tumblr.com" target="_blank">
-						View Project
-					</a>
+					<p class="glance_heading">Client<span>Personal</span></p>
+					<p class="glance_heading">Project Type<span>Typography, Photo Blog</span></p>
+					<p class="glance_heading">Target Devices<span>Desktop / Screen</span></p>
+					<a class="button" href="http://hopewillseeusthrough.tumblr.com">View Project</a>
 				</div>
 			</div>
 			<div class="sixcol last main-section">
 				<div class="left_col_inner">
 						<div class="article">
 							<div class="headline">
-								<h2 id="fit">Typography &amp; Music</h2>
+								<h3 class="fit">Typography &amp; Music</h3>
 							</div>
 							<p>Hope Will See Us Through is a side project I started early this year. I was listening to a song, <a href="http://www.last.fm/music/Bayside/Killing+Time/It%27s+Not+A+Bad+Little+War" title="It's Not A Bad Little War by Bayside" target="_blank">Its Not A Bad Little War by Bayside</a>, for what must have been the thousandth time. At some point in the breakdown, I realized that I had listened to it over and over, but I had never actually <em>heard</em> it.</p>
 						
@@ -49,7 +43,7 @@
 						</div>
 						<div class="article">	
 							<div class="headline">
-								<h2 id="fit">Process</h2>
+								<h2 class="fit">Process</h2>
 							</div>
 							<p>I originally intended to create a new piece every week. This plan quickly changed because I realized that just picking a line in a song and making a piece out of it wasn’t what I really wanted.</p>
 						

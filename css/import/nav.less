@@ -49,41 +49,41 @@ nav{
 }
 
 nav#dark{
-	a, p:not(#current){
+	a{
 		color: rgba(51,51,51,0.7);
-		&.current{
-			color: #000;
-		}
 		&:hover{
 			color: #000;	
 		}
 	}
-	p#current{
+	p{
 		color: rgba(51,51,51,0.7);
-		text-shadow: none;
+	}
+	p#current{
+		color: #000;
 	}
 	#navigation.show{
 		background: rgba(255,255,255,0.8);
 	}
 }
 nav#light{
-	a, p{
+	a{
 		color: rgba(249,249,249,0.7);
-		&.current{
+		
+		&:hover{
 			color: #fff;
 		}
-		&:hover{
-			color: #fff;	
-		}
+	}
+	p{
+		color: rgba(249,249,249,0.7);
+	}
+	p#current{
+		color: #fff;
 	}
 	#navigation.show{
 		background: rgba(0,0,0,0.8);
 	}
 }
 #navigation{
-	position: absolute;
-	width: 100%;
-	text-align: center;
 	height: 0;
 	overflow: hidden;
 	padding: 20px 0;
@@ -91,13 +91,12 @@ nav#light{
 	-moz-transition: height 0.5s ease-in, background 0.5s ease-in;
 	transition: height 0.5s ease-in, background 0.5s ease-in;
 	&.show{
-		height: 295px;
+		height: auto;
 	}
 	#portfolio{
 		&:hover{
 			#projects{
-				height: 300px;
-				background:red;
+				height: 275px;
 			}
 		}
 	}
@@ -113,22 +112,13 @@ nav#light{
 @media screen and (max-width: 767px) {
 	#nav{
 		display: block;
-		background: url('../images/navigation-icon.png') no-repeat 50% 50%;
-		width: 50px;
-		height: 50px;
-		text-indent: -999em;
-		text-align: left;
-		margin: 15px auto;
-		span{
-			display: block;
-			float: left;
-			font-size: 20px;
-			margin-right: 10px;
-			margin-top: -5px;
-		}
+		width: 100%;
+		text-align: center;
+		margin: 30px 0;
+		font-size: 30px;
 		#current{ 
 			display: block;
-			
+			text-shadow: none;
 		}
 	}
 	#navigation, #navigation li, #navigation #portfolio, #navigation #portfolio li{
@@ -136,6 +126,33 @@ nav#light{
 		margin-right: 0;
 		text-align: center;
 		padding: 0;
+	}
+	#navigation{
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		li a{
+			display: block;
+			padding: 10px 0 0 0;
+			font-size: 14px;
+		}
+		&.show{
+			height: auto;
+		}
+		#portfolio{
+			&:hover{
+				#projects{
+					height: 275px;
+				}
+			}
+		}
+		#projects{
+			height: 0;
+			overflow: hidden;
+			-webkit-transition: height 0.25s linear;
+			-moz-transition: height 0.25s linear;
+			transition: height 0.25s linear;
+		}
 	}
 	#projects{
 		padding: 0;
