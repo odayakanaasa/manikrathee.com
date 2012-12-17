@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="onecol"></div>
 				<div class="fourcol">
-				<div class="mrphoto_title">
+				<div class="title">
 					title
 				</div>
 				</div>
