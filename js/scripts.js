@@ -6,11 +6,12 @@
 //@codekit-prepend "libs/jquery.api.twitter.js";
 //@codekit-prepend "libs/jquery.twitter.js";
 //@codekit-prepend "libs/jquery.prettyForms.js";
+//@codekit-prepend "libs/jquery.counter.js";
 //@codekit-prepend "libs/jquery.tipTip.js";
-//@codekit-prepend "libs/jhere.js";
+//@codekit-prepend "libs/jquery.api.rdio.js";
 //@codekit-prepend "libs/konami.js";
 
-// "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js", "libs/jquery.api.rdio.js"
+// "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js", "libs/jhere.js";
 
 //Social API Vars
 var twitterAPI = $('#twitter');
@@ -21,6 +22,8 @@ var twitterID = $('#twitter').prop('id');
 var instagramID = $('#instagram').prop('id');
 var rdioID = $('#rdio').prop('id');
 var readmillID = $('#readmill').prop('id');
+
+$('#readmill').prepend('<p id="readmill-book">Currently Reading: "<a href="http://readmill.com/manikrathee/reads/the-lean-startup-how-todays-entrepreneurs-use-continuous-innovation-to-create-radically-successful-businesses-1" title="The Lean Startup">The Lean Startup</a>"</p>');
 
 // This adds the logo spans which are targetted with symbolset. It is called in api.twitter.js after twitter.html();
 function logofyAPI(){
@@ -150,53 +153,6 @@ $('.fit-light').fitText(0.8);
 
 
 //Counter
-(function($) {
-    $.fn.countTo = function(options) {
-        // merge the default plugin settings with the custom options
-        options = $.extend({}, $.fn.countTo.defaults, options || {});
-
-        // how many times to update the value, and how much to increment the value on each update
-        var loops = Math.ceil(options.speed / options.refreshInterval),
-            increment = (options.to - options.from) / loops;
-
-        return $(this).each(function() {
-            var _this = this,
-                loopCount = 0,
-                value = options.from,
-                interval = setInterval(updateTimer, options.refreshInterval);
-
-            function updateTimer() {
-                value += increment;
-                loopCount++;
-                $(_this).html(value.toFixed(options.decimals));
-
-                if (typeof(options.onUpdate) == 'function') {
-                    options.onUpdate.call(_this, value);
-                }
-
-                if (loopCount >= loops) {
-                    clearInterval(interval);
-                    value = options.to;
-
-                    if (typeof(options.onComplete) == 'function') {
-                        options.onComplete.call(_this, value);
-                    }
-                }
-            }
-        });
-    };
-
-    $.fn.countTo.defaults = {
-        from: 0,  // the number the element should start at
-        to: 100,  // the number the element should end at
-        speed: 1000,  // how long it should take to count between the target numbers
-        refreshInterval: 100,  // how often the element should be updated
-        decimals: 0,  // the number of decimal places to show
-        onUpdate: null,  // callback method for every time the element is updated,
-        onComplete: null,  // callback method for when the element finishes updating
-    };
-})(jQuery);
-
 var numberOne = $('#about-data').find('#number-one');
 var numberOneValue = numberOne.text();
 var numberTwo = $('#about-data').find('#number-two');
@@ -210,77 +166,65 @@ var numberFiveValue = numberFive.text();
 var numberSix = $('#about-data').find('#number-six');
 var numberSixValue = numberSix.text();
 
-// jQuery(function($) {
-//     numberOne.countTo({
-//         from: 0,
-//         to: 2500,
-//         speed: 500,
-//         refreshInterval: 50,
-//         onComplete: function(value) {
-//             console.debug(this);
-//         }
-//     });
-// });
-
 
 function startCount() {
 	numberOne.countTo({
 	    from: 0,
 	    to: numberOneValue,
-	    speed: 2000,
+	    speed: 1400,
 	    refreshInterval: 5,
 	    onComplete: function(value) {
-	        console.debug(this);
+	        // console.debug(this);
 	    }
 	});
 	
 	numberTwo.countTo({
 	    from: 0,
 	    to: numberTwoValue,
-	    speed: 2000,
+	    speed: 1400,
 	    refreshInterval: 5,
 	    onComplete: function(value) {
-	        console.debug(this);
+	        // console.debug(this);
 	    }
 	});
 	
 	numberThree.countTo({
 	    from: 0,
 	    to: numberThreeValue,
-	    speed: 2000,
+	    speed: 1400,
 	    refreshInterval: 5,
 	    onComplete: function(value) {
-	        console.debug(this);
+	        // console.debug(this);
 	    }
 	});
 	
 	numberFour.countTo({
 	    from: 0,
 	    to: numberFourValue,
-	    speed: 2000,
+	    speed: 1400,
 	    refreshInterval: 5,
 	    onComplete: function(value) {
-	        console.debug(this);
+	        // console.debug(this);
 	    }
 	});
 	
 	numberFive.countTo({
 	    from: 0,
 	    to: numberFiveValue,
-	    speed: 2000,
+	    speed: 1400,
 	    refreshInterval: 5,
 	    onComplete: function(value) {
-	        console.debug(this);
+	        // console.debug(this);
 	    }
 	});
 	
 	numberSix.countTo({
 	    from: 0,
 	    to: numberSixValue,
-	    speed: 2000,
+	    speed: 1400,
 	    refreshInterval: 5,
 	    onComplete: function(value) {
-	        console.debug(this);
+	        // console.debug(this);
 	    }
 	});
 }
@@ -302,15 +246,12 @@ _gaq.push(['_trackPageview']);
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
+
+
 // jHere - Maps
-$('.selector').jHERE({
-    enable: [], //An array of components as strings.
-    zoom: 12, //a positive integer.
-    center: []|{}, //An object of type {latitude: Number, longitude: Number}
-                    //or array [latitude, longitude],
-    type: 'map', //can be map (the default), satellite, terrain, smart, pt.
-                  //see type documentation below for details.
-    appId: 'kWWUmJFcPYJoF6ayltNy', //appId from the Nokia developer website,
-    authToken: 'VPzI9NANqQaOHgaNF5li1g' //authenticationToken from the
-                                         //Nokia developer website
-});
+// $('#map').jHERE({
+//     center: [41.756459, -87.637939],
+//     type: 'map',
+//     appId: 'kWWUmJFcPYJoF6ayltNy', 
+//     authToken: 'VPzI9NANqQaOHgaNF5li1g'
+// });

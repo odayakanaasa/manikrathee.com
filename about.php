@@ -76,6 +76,45 @@
 			</div>
 		</div><!-- END row -->
 	</div><!-- END container -->
+	
+	<div class="fact-container">
+		<div class="container row">
+			<p id="quick-facts">Quick Facts</p>
+			<ul id="about-data">
+				<li id="i-take-photos">
+					<span class="ss-icon">camera</span>
+					<p>I take about 
+						<span class="number-container">
+							<span id="number-one" class="number">25</span> photos
+						</span> 
+						a day
+					</p>
+				</li>
+				<li id="i-run">
+					<span class="ss-icon">timer</span>
+					<p>I run a
+						<span class="number-container">
+							<span id="number-two" class="number">420</span> second
+						</span> 
+						mile
+					</p>
+				</li>
+				<li id="i-listen">
+					<span class="ss-social ss-icon">Rdio</span>
+					<p>I listen to
+						<span class="number-container">
+							<span id="number-three" class="number">42</span>+ hours
+						</span> 
+						of music every day
+					</p>
+				</li>
+				<li><span id="number-four" class="number">444</span><p>Something something something</p></li>
+				<li><span id="number-five" class="number">555</span><p>Something something something</p></li>
+				<li><span id="number-six" class="number">666</span><p>Something something something</p></li>
+			</ul>
+		</div><!-- END container row -->
+	</div><!-- END fact-container -->	
+		
 		
 	<div id="map">
 		<div class="container row">
@@ -97,17 +136,5 @@
 		</div><!-- END row -->
 	</div><!-- END container -->
 	
-	<div class="container">
-		<div class="row">
-			<ul id="about-data">
-				<li><span id="number-one">111</span><p>Something something something</p></li>
-				<li><span id="number-two">222</span><p>Something something something</p></li>
-				<li><span id="number-three">333</span><p>Something something something</p></li>
-				<li><span id="number-four">444</span><p>Something something something</p></li>
-				<li><span id="number-five">555</span><p>Something something something</p></li>
-				<li><span id="number-six">666</span><p>Something something something</p></li>
-			</ul>
-		</div><!-- END row -->
-	</div><!-- END container -->	
 			
 	<?php include('global/footer.php'); ?>

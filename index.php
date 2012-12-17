@@ -58,7 +58,7 @@
 	<div id="twitter" class="social-api twitter"></div>
 	<div id="instagram" class="social-api instagram"></div>
 	<div id="rdio" class="social-api rdio"></div>
-	<div id="readmill" class="social-api readmill"><p id="readmill-book">Currently Reading: '<a href="http://readmill.com/manikrathee/reads/the-lean-startup-how-todays-entrepreneurs-use-continuous-innovation-to-create-radically-successful-businesses-1" title="The Lean Startup">The Lean Startup</a>'</p></div>
+	<div id="readmill" class="social-api readmill"></div>
 	
 	<script src="https://rdio.com/api/api.js?client_id=jIzIoQxELGiBUCzeYavYCA"></script>
 	<script src="js/scripts-ck.js"></script>
