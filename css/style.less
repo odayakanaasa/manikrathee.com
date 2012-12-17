@@ -45,12 +45,22 @@ body{
 	}
 }
 
-.dark{color:#333;text-shadow:#fff;}
-.dark a{color:#333;text-shadow: 1px 1px 0 #fff;}
+.dark{
+	color:#333;
+	text-shadow:#fff;
+}
+.dark a{
+	color:#000;
+	text-shadow: 1px 1px 0 #fff;
+}
 .white{color:#fff;text-shadow:#000;}
 .white a{color:#fff;text-shadow: 1px 1px 0 #000;}
 
-a{text-decoration:none;}
+a{
+	text-decoration:none;
+	border-bottom: 1px solid #999;
+	padding-bottom: 0px;
+}
 p{font-size: 12px;line-height: 1.6;}
 
 .main{background: transparent url('../images/home/background_box.png') repeat top left;}
@@ -173,8 +183,9 @@ p{font-size: 12px;line-height: 1.6;}
 		position: relative;
 	}
 	.title{
-		margin-top: 400px;
-		margin-left: 115px;
+		margin: 100px 0 0 0;
+		width: 100%;
+		text-align: center;
 		h1, h2{
 			text-transform: uppercase;
 			line-height: 1;
@@ -193,6 +204,9 @@ p{font-size: 12px;line-height: 1.6;}
 		margin: 10px 0 ;
 		padding: 0;
 		font-size: 14px;
+		a{
+			border: none;
+		}
 		li{
 			list-style-type: none;
 			margin: 4px 0;
@@ -208,6 +222,22 @@ p{font-size: 12px;line-height: 1.6;}
 	ul#published-list{
 		margin-bottom: 30px;
 		list-style-type: none;
+		a{
+			font-size: 14px;
+			color: #333;
+			span{
+				display: block;
+				font-size: 12px;
+				font-style: italic;
+				color: #666;
+				margin-bottom: 10px;
+			}
+		}
+		p{
+			line-height: 1.2;
+			font-size: 14px;
+			margin-bottom: 30px;
+		}
 	}
 	#about-data{
 		overflow: hidden;
@@ -307,6 +337,13 @@ p{font-size: 12px;line-height: 1.6;}
 		.upper{
 			background: #35383D url(../images/about-heading-small.jpg) no-repeat 50% 50%;
 		}
+		.title{
+			
+			margin-top: 250px;
+			margin-left: 115px;
+			width: auto;
+			text-align: left;
+		}
 	}
 }
 
@@ -361,6 +398,7 @@ p{font-size: 12px;line-height: 1.6;}
 			background: #35383D url(../images/about-heading-medium.jpg) no-repeat 50% 50%;
 		}
 		.title{
+			margin-top: 400px;
 		}
 		.social-links{
 			max-width: 245px;
@@ -375,6 +413,14 @@ p{font-size: 12px;line-height: 1.6;}
 			li{
 				width: 30%;
 				float: left;
+			}
+		}
+		ul#published-list{
+			a{
+				font-size: 13px;
+			}
+			p{
+				font-size: 13px;
 			}
 		}
 		#map{

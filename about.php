@@ -19,15 +19,16 @@
 				<h3>Published</h3>
 				<ul id="published-list">
 					<li>
-						<a class="title" href="" title="">Title <span>Robin Landa</span></a>
+						<a class="published-title" href="http://search.barnesandnoble.com/Graphic-Design-Solutions/Robin-Landa/e/9781133945529" title="Graphic Design Solutions">Graphic Design Solutions<span>Robin Landa</span></a>
 						<p>Robin is a distinguished author and professor of Graphic Design at Kean University in New Jersey. She approached me in mid-2012 to include some of my work in her latest book about graphic design solutions.</p>
 					</li>
 					<li>
-						<a class="title" href="http://blog.offscreenmag.com/post/36344235407/hi-manik-give-us-a-short-introduction-about-how" title="Offscreen Magzine - An Interview with Manik Rathee">An Interview with Manik Rathee, a User Experience Engineer for President Barack Obama<span>Kai Brach, Offscreen Magazine</span></a>
+						<a class="published-title" href="http://blog.offscreenmag.com/post/36344235407/hi-manik-give-us-a-short-introduction-about-how" title="Offscreen Magzine - An Interview with Manik Rathee">An Interview with Manik Rathee, a User Experience Engineer for President Barack Obama<span>Kai Brach, Offscreen Magazine</span></a>
 						<p>I'm a huge fan of Offscreen magazine, so when Kai emailed me asking to be part of it, I was happy to do so. My interview is about my experience working on Barack Obama's campaign.</p>
 					</li>
 					<li>
-						<a class="title" href="hhttp://blog.readmill.com/post/34294256090/meet-the-readmillers-manik-rathee" title="Meet the Readmillers: Manik Rathee">Meet the Readmillers: Manik Rathee<span>Readmill</span></a>
+						<a class="published-title" href="hhttp://blog.readmill.com/post/34294256090/meet-the-readmillers-manik-rathee" title="Meet the Readmillers: Manik Rathee">Meet the Readmillers: Manik Rathee<span>Readmill</span></a>
+						<p>Readmill is arguably my most used app on the iPad. This interview went into depth about how I used it to support my work for the President.</p>
 					</li>
 				</ul>
 				<h3>Social</h3>
