@@ -7,6 +7,7 @@
 //@codekit-prepend "libs/jquery.twitter.js";
 //@codekit-prepend "libs/jquery.prettyForms.js";
 //@codekit-prepend "libs/jquery.tipTip.js";
+//@codekit-prepend "libs/jhere.js";
 //@codekit-prepend "libs/konami.js";
 
 // "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js", "libs/jquery.api.rdio.js"
@@ -301,3 +302,15 @@ _gaq.push(['_trackPageview']);
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
+// jHere - Maps
+$('.selector').jHERE({
+    enable: [], //An array of components as strings.
+    zoom: 12, //a positive integer.
+    center: []|{}, //An object of type {latitude: Number, longitude: Number}
+                    //or array [latitude, longitude],
+    type: 'map', //can be map (the default), satellite, terrain, smart, pt.
+                  //see type documentation below for details.
+    appId: 'kWWUmJFcPYJoF6ayltNy', //appId from the Nokia developer website,
+    authToken: 'VPzI9NANqQaOHgaNF5li1g' //authenticationToken from the
+                                         //Nokia developer website
+});

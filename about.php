@@ -70,8 +70,7 @@
 					
 					<p>And now, I'm headed out to beautiful San Francisco to join <a href="http://www.fluenceapp.com" title="Fluence App">Fluence</a> - a great new media-based startup. Forward.</p>
 					
-					PHOTO OF POTUS HUG BRO
-					
+					<img src="images/potus-hug.jpg" alt="Yep, President Barack Obama giving me a hug">
 					
 				</div>
 			</div>
