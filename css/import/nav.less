@@ -3,17 +3,16 @@ nav.global-nav{
 	z-index: 200;
 }
 #logo{
-	&.white{
-		background: transparent url('../images/white-logo.png') no-repeat top left;
-		background-size: 100%;
-	}
-	&.dark{
-		background: transparent url('../images/dark-logo.png') no-repeat top left;
-		background-size: 100%;
-	}
 	display:block;
 	height: 75px;
 	width: 75px;
+	background-size: 100%;
+	&.white{
+		background: transparent url('../images/white-logo.png') no-repeat 50% 50%;
+	}
+	&.dark{
+		background: transparent url('../images/dark-logo.png') no-repeat 50% 50%;
+	}
 }
 nav{
 	.animate;
@@ -241,18 +240,20 @@ nav#light{
 }
 
 
-@media only screen and (-webkit-min-device-pixel-ratio:2){
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-resolution: 192dpi) { 
 	#logo{
 		&.white{
-			background: transparent url('../images/white-logo@2x.png') no-repeat 50% 50%;
+			background-image: url('../images/white-logo@2x.png');
+			background-size: 100%;
 		}
 		&.dark{
-			background: transparent url('../images/dark-logo@2x.png') no-repeat 50% 50%;
+			background-image: url('../images/dark-logo@2x.png');
+			background-size: 100%;
 		}
-     	background-size:100px 100px;
 	}
 	#nav{
-		background: url('../images/navigation-icon@2x.png') no-repeat 50% 50%;
-		background-size: 50px 50px;
+		background-image: url('../images/navigation-icon@2x.png');
 	}
 }
