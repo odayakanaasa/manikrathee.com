@@ -22,15 +22,18 @@
 					<section>
 						<p class="subtitle">TextExpander</p>
 						Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.
+						<a href="https://github.com/manikrathee/apple-scripts" title="Download these AppleScripts on Manik Rathee's Github Page">Download on Github</a>
 					</section>
 					<section>
 						<p class="subtitle">Applescripts</p>
-						<figcaption><a href="https://github.com/manikrathee/apple-scripts" title="Download these AppleScripts on Manik Rathee's Github Page">Download on Github</a></figcaption>
+						
 						Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.
+						<a href="https://github.com/manikrathee/apple-scripts" title="Download these AppleScripts on Manik Rathee's Github Page">Download on Github</a>
 					</section>
 					<section>
 						<p class="subtitle">Other Thing</p>
 						Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.
+						<a href="https://github.com/manikrathee/apple-scripts" title="Download these AppleScripts on Manik Rathee's Github Page">Download on Github</a>
 					</section>
 				</article>
 			</div>
