@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="shadow">&nbsp;</div>
-		<div class="container">
+		<div class="container body">
 			<div class="row">
 				<div class="section_spacer"></div>
 				<div class="fourcol left-section">

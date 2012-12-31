@@ -14,7 +14,7 @@
 			</div><!-- END row -->
 		</div>
 	</div>
-	<div class="container">
+	<div class="container body">
 		<div class="row section_spacer">
 			<div class="fourcol left-section">
 				<div class="right_col_inner">

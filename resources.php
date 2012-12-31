@@ -13,7 +13,7 @@
 			</div><!-- END row -->
 		</div>
 	</div>
-	<div class="container">
+	<div class="container body">
 		<div class="row">
 			<div class="onecol"></div>
 			<div class="tencol main-section">
