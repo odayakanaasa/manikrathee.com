@@ -15,7 +15,7 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="twocol"></div>
+			<div class="onecol"></div>
 			<div class="eightcol main-section">
 				<article>
 					<h2 id="fit">Releases</h2>
@@ -29,18 +29,20 @@
 						Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.</section>
 				</article>
 			</div>
-			<div class="twocol"></div>
+			<div class="twocol">
+				dsadsads
+			</div> <!-- /twocol -->
+			<div class="onecol last"></div>
 			
 		</div><!-- END row -->
+		
 		<div class="row">
 			<div class="resource-block">
 				<h2 id="fit">What I Use</h2>
 				dsadsa
 			</div> <!-- /article -->
 		</div> <!-- /row -->
+		
 	</div><!-- END container -->	
 		
-
-	
-	
 	<?php include('global/footer.php'); ?>
