@@ -20,7 +20,7 @@
 		</li>
 		<li><a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">Blog</a></li>
 		<!-- <li><a<?php if ($section=='contact') { echo ' class="current"'; } ?> href="contact.php" title="Contact Me">Contact</a></li> -->
-		<li><a<?php if ($section=='resources') { echo ' class="current"'; } ?> href="resources.php" title="Resources">Resources</a></li>
+		<!-- <li><a<?php if ($section=='resources') { echo ' class="current"'; } ?> href="resources.php" title="Resources">Resources</a></li> -->
 	</ul>
 	<p id="current"<?php if ($project=='false') { echo 'class=" hide"'; } ?>><?php if ($section=='barackobama') { echo 'BarackObama.com'; } ?><?php if ($section=='contribute') { echo 'Contribute.BarackObama.com'; } ?><?php if ($section=='calltool') { echo 'Barack Obama Call Tool'; } ?><?php if ($section=='hope') { echo 'Hope Will See Us Through'; } ?><?php if ($section=='mrphoto') { echo 'Manik Rathee Photography'; } ?><?php if ($section=='wrap') { echo 'Wrapskins'; } ?><?php if ($section=='livescribe') { echo 'LiveScribe Smartpen'; } ?><?php if ($section=='universalshanti') { echo 'Universal Shanti'; } ?><?php if ($section=='blog') { echo 'Blog.ManikRathee.com'; } ?><?php if ($section=='catalyst') { echo 'Catalyst iOS Theme'; } ?></p>
 </nav>
