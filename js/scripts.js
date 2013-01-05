@@ -10,6 +10,9 @@
 //@codekit-prepend "libs/jquery.tipTip.js";
 //@codekit-prepend "libs/jquery.api.rdio.js";
 //@codekit-prepend "libs/konami.js";
+//@codekit-prepend "libs/withinViewport.js";
+//@codekit-prepend "libs/jquery.withinViewport.js";
+
 
 // "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js", "libs/jhere.js";
 
@@ -120,6 +123,7 @@ $(document).click(function() {
 // 	});
 // });
 
+
 // Konami Code
 konami = new Konami()
 konami.code = function() {
@@ -229,7 +233,7 @@ function startCount() {
 	});
 }
 
-startCount();
+// startCount();
 
 
 // Twitter Button
@@ -255,3 +259,13 @@ _gaq.push(['_trackPageview']);
 //     appId: 'kWWUmJFcPYJoF6ayltNy', 
 //     authToken: 'VPzI9NANqQaOHgaNF5li1g'
 // });
+
+/* Lazyload based on viewport */
+
+
+$(window).scroll(function() {
+    if ($("#about-data").is(":within-viewport")){
+    	startCount();
+    }
+});
+

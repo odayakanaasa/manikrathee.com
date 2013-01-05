@@ -10,6 +10,7 @@
 	<title>Manik Rathee, User Experience Engineer, Designer, Developer.</title>
 	<meta name="description" content="Graphic Design, Development, User Experience Engineer - Manik Rathee"> 
 	<meta name="author" content="Manik Rathee">
+    <meta name="keyword" content="manik, manik rathee, design, designer, developer, ux, user experience, frontend">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
