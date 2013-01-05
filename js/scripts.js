@@ -235,6 +235,18 @@ function startCount() {
 
 // startCount();
 
+var eventsFired = 0;
+
+$(window).scroll(function() {
+    if ($("#about-data").is(":within-viewport")){
+		if (eventsFired == 0) {
+    		startCount();
+    		eventsFired++;
+    	}
+    }
+});
+
+
 
 // Twitter Button
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
@@ -249,23 +261,3 @@ _gaq.push(['_trackPageview']);
 	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
-
-
-
-// jHere - Maps
-// $('#map').jHERE({
-//     center: [41.756459, -87.637939],
-//     type: 'map',
-//     appId: 'kWWUmJFcPYJoF6ayltNy', 
-//     authToken: 'VPzI9NANqQaOHgaNF5li1g'
-// });
-
-/* Lazyload based on viewport */
-
-
-$(window).scroll(function() {
-    if ($("#about-data").is(":within-viewport")){
-    	startCount();
-    }
-});
-
