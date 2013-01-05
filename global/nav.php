@@ -6,9 +6,9 @@
 		<li><a<?php if ($section=='about') { echo ' class="current"'; } ?> href="about.php" title="About Manik Rathee">About</a></li>
 		<li id="portfolio"><a <?php if ($project=='true') { echo ' class="current"'; } ?>href="#" title="Portfolio">Portfolio</a>
 			<ul id="projects">
-				<li><a<?php if ($section=='barackobama') { echo ' class="current"'; } ?> href="barack-obama.php" title="BarackObama.com">BarackObama.com</a></li>
+				<!-- <li><a<?php if ($section=='barackobama') { echo ' class="current"'; } ?> href="barack-obama.php" title="BarackObama.com">BarackObama.com</a></li>
 				<li><a<?php if ($section=='contribute') { echo ' class="current"'; } ?> href="barack-obama-contribute.php" title="Contribute.BarackObama.com">Contribute.BarackObama.com</a></li>
-				<li><a<?php if ($section=='calltool') { echo ' class="current"'; } ?> href="barack-obama-call-tool.php" title="Barack Obama Call Tool">Barack Obama Call Tool</a></li>
+				<li><a<?php if ($section=='calltool') { echo ' class="current"'; } ?> href="barack-obama-call-tool.php" title="Barack Obama Call Tool">Barack Obama Call Tool</a></li> -->
 				<li><a<?php if ($section=='catalyst') { echo ' class="current"'; } ?> href="catalyst-iphone-theme.php" title="CATALYST - Minimal iPhone Theme">Catalyst iOS Theme</a></li>
 				<li><a<?php if ($section=='hope') { echo ' class="current"'; } ?> href="hope-will-see-us-through.php" title="Hope Will See Us Through">Hope Will See Us Through</a></li>
 				<li><a<?php if ($section=='mrphoto') { echo ' class="current"'; } ?> href="manik-rathee-photography.php" title="Manik Rathee Photography">Manik Rathee Photography</a></li>

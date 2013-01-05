@@ -30,6 +30,8 @@ a{
 #home{
 	font-family: "proxima-nova",Helvetica,"Helvetica Neue",Arial,sans-serif;
 	background: #222;
+	background-size: cover;
+	background-repeat: no-repeat;
 	color:#f3f3f3;
 	margin: 0;
 	padding-top: 50px;
@@ -159,10 +161,9 @@ a{
 	}
 }
 
+
 @media screen and (min-width: 768px){
 	#home{
-		background: #000 url('../images/home/background.jpg') no-repeat 70% 0;
-		background-size: cover;
 		.copy{
 			position: absolute;
 			top: 110px;
@@ -196,10 +197,30 @@ a{
 	}
 }
 
+
+@media screen and (min-width: 768px){
+	#home{
+		background-image: url('../images/home/background-small.jpg');
+		background-color: #000;
+	}
+}
+
+@media screen and (min-width: 900px){
+	#home{
+		background-image: url('../images/home/background-medium.jpg');
+	}
+}
+
+@media screen and (min-width: 1200px){
+	#home{
+		background-image: url('../images/home/background-large.jpg');
+	}
+}
+
 .oldie{
 	@import "import/ie"; 
 	#home{
-		background: #000 url('../images/home/background.jpg') no-repeat 70% 0;
+		background: #000 url('../images/home/background-medium.jpg') no-repeat 70% 0;
 		background-size: cover;
 		nav{
 			margin-left: 30px;
