@@ -19,7 +19,6 @@
 	<!-- TYPEKIT -->
 	<script type="text/javascript" src="http://use.typekit.com/qyf3isq.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
 </head>
 <!--
     __  ___            _ __      ____        __  __            

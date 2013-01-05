@@ -71,6 +71,7 @@
 					<p>And now, I'm headed out to beautiful San Francisco to join <a href="http://www.fluenceapp.com" title="Fluence App">Fluence</a> - a great new media-based startup. Forward.</p>
 					
 					<img src="images/potus-hug.jpg" alt="Yep, President Barack Obama giving me a hug">
+					<figcaption> For the final day of the campaign,the President of the United States thanked me for my work with a strong handshake and a hug. It was cool.
 					
 				</div>
 			</div>
@@ -85,7 +86,7 @@
 					<span class="ss-icon">camera</span>
 					<p>I take about 
 						<span class="number-container">
-							<span id="number-one" class="number">25</span> photos
+							<span id="number-one" class="number" data-numer="25">0</span> photos
 						</span> 
 						a day
 					</p>
@@ -94,7 +95,7 @@
 					<span class="ss-icon">timer</span>
 					<p>I run a
 						<span class="number-container">
-							<span id="number-two" class="number">420</span> second
+							<span id="number-two" class="number" data-number="420">0</span> second
 						</span> 
 						mile
 					</p>
@@ -103,7 +104,7 @@
 					<span class="ss-social ss-icon">Rdio</span>
 					<p>I listen to
 						<span class="number-container">
-							<span id="number-three" class="number">42</span>+ hours
+							<span id="number-three" class="number" data-number="42">0</span>+ hours
 						</span> 
 						of music every day
 					</p>

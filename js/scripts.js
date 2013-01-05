@@ -157,18 +157,18 @@ $('.fit-light').fitText(0.8);
 
 
 //Counter
-var numberOne = $('#about-data').find('#number-one');
-var numberOneValue = numberOne.text();
-var numberTwo = $('#about-data').find('#number-two');
-var numberTwoValue = numberTwo.text();
-var numberThree = $('#about-data').find('#number-three');
-var numberThreeValue = numberThree.text();
-var numberFour = $('#about-data').find('#number-four');
-var numberFourValue = numberFour.text();
-var numberFive = $('#about-data').find('#number-five');
-var numberFiveValue = numberFive.text();
-var numberSix = $('#about-data').find('#number-six');
-var numberSixValue = numberSix.text();
+var numberOne = $('#number-one');
+var numberOneValue = numberOne.attr('data-number');
+var numberTwo = $('#number-two');
+var numberTwoValue = numberTwo.attr('data-number');
+var numberThree = $('#number-three');
+var numberThreeValue = numberThree.attr('data-number');
+var numberFour = $('#number-four');
+var numberFourValue = numberFour.attr('data-number');
+var numberFive = $('#number-five');
+var numberFiveValue = numberFive.attr('data-number');
+var numberSix = $('#number-six');
+var numberSixValue = numberSix.attr('data-number');
 
 
 function startCount() {
