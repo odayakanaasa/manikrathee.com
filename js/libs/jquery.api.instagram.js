@@ -8,10 +8,10 @@ var instagramFeed = new function() {
 
     for(i in data) {
       var photo = data[i];
-      console.log(photo);
+      // console.log(photo);
       str += "<div class='photo' data='" + photo.id + "'>";
       // str += "<p>Latest Photo:" + photo.created_time + "</p>";
-      str += "<a id='instagram-link' href='" + photo.link + "' title='View my latest Instagram Shot'>My latest instagram:' " + photo.caption.text + " '";
+      str += "<a id='instagram-link' href='" + photo.link + "' title='View my latest Instagram Shot'>My latest instagram: '" + photo.caption.text + "'";
       // str += "<img src='" + photo.images.thumbnail.url + "' />";
       str += "</a>";
       str += "</div>";

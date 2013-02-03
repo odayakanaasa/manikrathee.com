@@ -1,6 +1,6 @@
 <nav id="<?php if ($upper=='dark') { echo 'dark'; } ?><?php if ($upper=='white') { echo 'light'; } ?>" class="global-nav">
 	<div id="logo"<?php if ($upper=='white') { echo ' class="white"'; } ?><?php if ($upper=='dark') { echo ' class="dark"'; } ?>"></div>
-	<a id="nav" class="ss-icon" href="#">Rows</a>
+	<a id="nav" href="#">Navigation</a>
 	<ul id="navigation">
 		<li><a<?php if ($section=='home') { echo ' class="current"'; } ?> href="index.php" title="Home">Home</a></li>
 		<li><a<?php if ($section=='about') { echo ' class="current"'; } ?> href="about.php" title="About Manik Rathee">About</a></li>

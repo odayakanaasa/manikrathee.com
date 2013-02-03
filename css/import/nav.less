@@ -92,13 +92,13 @@ nav#light{
 	&.show{
 		height: auto;
 	}
-	#portfolio{
-		&:hover{
-			#projects{
-				height: 275px;
-			}
-		}
-	}
+	// #portfolio{
+	// 	&:hover{
+	// 		#projects{
+	// 			height: 275px;
+	// 		}
+	// 	}
+	// }
 	#projects{
 		height: 0;
 		overflow: hidden;
@@ -114,10 +114,12 @@ nav#light{
 @media screen and (max-width: 767px) {
 	#nav{
 		display: block;
-		width: 100%;
-		text-align: center;
-		margin: 30px 0;
-		font-size: 30px;
+		text-align: left;
+		text-indent: -999em;
+		height: 50px;
+		width: 50px;
+		background-size: 100%;
+		margin: 10px auto;
 		#current{ 
 			display: block;
 			text-shadow: none;
@@ -130,34 +132,53 @@ nav#light{
 		padding: 0;
 	}
 	#navigation{
+		box-sizing: border-box;
 		position: absolute;
-		width: 100%;
-		text-align: center;
-		li a{
-			display: block;
-			padding: 10px 0 0 0;
-			font-size: 14px;
-		}
-		&.show{
-			height: auto;
-		}
-		#portfolio{
-			&:hover{
-				#projects{
-					height: 275px;
-				}
-			}
-		}
+		left: -100%;
+		height: auto;
+		padding: 100px;
+		background: rgba(0,0,0,0.8);
+		-webkit-transition: left 0.25s ease-in-out;
+		-moz-transition: left 0.25s ease-in-out;
+		transition: left 0.25s ease-in-out;
+		// position: absolute;
+		// width: 100%;
+		// text-align: center;
+		// li a{
+		// 	display: block;
+		// 	padding: 10px 0 0 0;
+		// 	font-size: 14px;
+		// }
+		// &.show{
+		// 	height: auto;
+		// }
+		// #portfolio{
+		// 	&:hover{
+		// 		#projects{
+		// 			height: 275px;
+		// 		}
+		// 	}
+		// }
 		#projects{
-			height: 0;
-			overflow: hidden;
-			-webkit-transition: height 0.25s linear;
-			-moz-transition: height 0.25s linear;
-			transition: height 0.25s linear;
+			height: auto;
+			margin: 10px 0;
+			padding: 10px 0;
+			border-top: 1px solid rgba(255,255,255,0.4);
+			border-bottom: 1px solid rgba(255,255,255,0.4);
+		// 	overflow: hidden;
+		// 	-webkit-transition: height 0.25s linear;
+		// 	-moz-transition: height 0.25s linear;
+		// 	transition: height 0.25s linear;
 		}
 	}
 	#projects{
 		padding: 0;
+	}
+}
+body.nav, body#home.nav{
+	#navigation{
+		left: 0;
+		// width: 90%;
 	}
 }
 

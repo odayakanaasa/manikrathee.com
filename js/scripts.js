@@ -81,15 +81,16 @@ checkWidth();
 // Mobile Nav
 var navHook = $('#nav');
 var navMenu = $('#navigation');
+var body = $('body');
 
 navHook.click(function(e){
 	e.preventDefault();
 	e.stopPropagation();
-	if (navMenu.hasClass('show')){
-	   navMenu.removeClass('show');
+	if (body.hasClass('nav')){
+	   body.removeClass('nav');
    	}
    	else{
-		navMenu.addClass('show');
+		body.addClass('nav');
    	}
 });
 
@@ -98,8 +99,8 @@ navMenu.click(function(e){
 });
 
 $(document).click(function() {
-   if (navMenu.hasClass('show')){
-	   navMenu.removeClass('show');
+   if (body.hasClass('nav')){
+	   body.removeClass('nav');
    }
 });
 
