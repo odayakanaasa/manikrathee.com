@@ -11,7 +11,7 @@
 	<title>Manik Rathee, User Experience Engineer, Designer, Developer.</title>
 	<meta name="description" content="Graphic Design, Development, User Experience Engineer - Manik Rathee"> 
 	<meta name="author" content="Manik Rathee">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<link rel="stylesheet" href="css/home.css" type="text/css" media="screen" />
@@ -64,7 +64,8 @@
 	<div id="rdio" class="social-api rdio"></div>
 	<div id="readmill" class="social-api readmill"></div>
 	
-	<!-- <script src="https://rdio.com/api/api.js?client_id=jIzIoQxELGiBUCzeYavYCA"></script> -->
+	<script src="https://rdio.com/api/api.js?client_id=k9c4TK7rv2Ezm6oW6jHrJQ"></script>
 	<script src="js/scripts-ck.js"></script>
+	
 </body>
 </html>

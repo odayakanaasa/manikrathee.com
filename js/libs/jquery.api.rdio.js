@@ -6,6 +6,8 @@
     document.getElementsByTagName('head')[0].appendChild(js);
   }
   
+  var rdioActive = false;
+  
   // We create the bare minimum R here, with stubs for things that can be
   // called before the real initialization, as well as client-specific
   // configuration data. Then we load the real implementation script, 
@@ -14,10 +16,10 @@
   var originalRdio = window.rdio;
   window.R = window.rdio = window.__rdio = {
     _config: {
-      client_id: "jIzIoQxELGiBUCzeYavYCA",
+      client_id: "k9c4TK7rv2Ezm6oW6jHrJQ",
       helper: "helper.html",
-      iframe: "http://rdio.com/api/iframe/", 
-      oauth2: "https://rdio.com/oauth2/authorize",
+      iframe: "http://www.rdio.com/api/iframe/", 
+      oauth2: "https://www.rdio.com/oauth2/authorize",
       insideRdio: false,
       originalR: originalR,
       originalRdio: originalRdio,
@@ -63,4 +65,9 @@
   R.bind = R.on;
 
   injectScript("https://rdio.com/media/api/api-impl.6ef3cb79cfa8dd2abd146af1c180606e.js");
+  
+  
+  // Set rdioActive to true so logofyAPI and activate API can fire
+  rdioActive = true;
 })();
+
