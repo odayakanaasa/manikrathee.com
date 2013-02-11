@@ -27,8 +27,6 @@ var readmillID = $('#readmill').prop('id');
 
 $('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/execute" title="Execute">Execute</a></p></div>');
 
-
-
 // This adds the logo spans which are targetted with symbolset. It is called in api.twitter.js after twitter.html();
 function logofyAPI(){
     setTimeout(function(){

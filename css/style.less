@@ -106,7 +106,8 @@ p{font-size: 12px;line-height: 1.6;}
 .button a:hover{text-decoration:none;}
 
 .interior h1{} 
-.interior h2,h3{font-size: 45px;text-transform: uppercase;color:#333333;text-shadow:1px 1px 0 #fff;font-weight:500;display: block;}
+.interior h2,h3,h4{font-size: 45px;text-transform: uppercase;color:#333333;text-shadow:1px 1px 0 #fff;font-weight:500;display: block;}
+.interior h4{font-size: 30px;}
 .interior a{color:#000;text-decoration:none;}
 .interior a:hover{color:#777;text-decoration:none;}	
 .interior p{font-size: 14px;line-height: 1.8;margin-bottom:20px;}
@@ -248,6 +249,20 @@ p{font-size: 12px;line-height: 1.6;}
 			font-size:18px;
 		}
 	}
+	
+	.main-section{
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+	}
+	.left-section{
+		p{
+			line-height: 1.2;
+		}
+		h3, h4{
+			margin-bottom: 8px;
+		}
+	}
 	.social-links{
 		margin: 10px 0 ;
 		padding: 0;
@@ -270,9 +285,16 @@ p{font-size: 12px;line-height: 1.6;}
 	ul#published-list{
 		margin-bottom: 30px;
 		list-style-type: none;
+		li{
+			border-bottom: 1px solid rgba(0,0,0,0.2);
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+		}
 		a{
 			font-size: 14px;
 			color: #333;
+			border: none;
+			line-height: 1;
 			span{
 				display: block;
 				font-size: 12px;
@@ -284,7 +306,7 @@ p{font-size: 12px;line-height: 1.6;}
 		p{
 			line-height: 1.2;
 			font-size: 14px;
-			margin-bottom: 30px;
+			margin-bottom: 0;
 		}
 	}
 	.fact-container{
@@ -292,6 +314,7 @@ p{font-size: 12px;line-height: 1.6;}
 		padding: 30px 0;
 		margin: 40px 0 0;
 		border-top: 1px solid #D9D9D9;
+		border-bottom: 1px solid #D9D9D9;
 	}
 	figcaption{
 		font-size: 13px;
@@ -437,8 +460,6 @@ p{font-size: 12px;line-height: 1.6;}
 	}
 }
 
-
-
 /*  404  */
 .fourohfour{text-align:center;text-shadow:1px 1px 0 #fff;padding:12% 0 0 0;}
 .fourohfour h1{font-family:"freight-sans-pro",sans-serif;font-size:60px;font-weight:100;padding-bottom:40px;}
@@ -460,6 +481,7 @@ p{font-size: 12px;line-height: 1.6;}
 	}
 }
 
+
 @media screen and (min-width: 500px){
 	.about{
 		.upper{
@@ -480,12 +502,23 @@ p{font-size: 12px;line-height: 1.6;}
 	}
 }
 
+
+
+@media (min-width: 767px) and (max-width: 1120px) {
+	.about .fact-container #about-data span.number-container{
+		font-size: 25px;
+	}
+}
+
 @media screen and (min-width: 768px){
 	.left-section{
 		float:right;
 	}
 	.main-section{
 		float:left;
+	}
+	.about .main-section{
+		border-bottom: none;
 	}
 	.interior{
 		.fivecol, .sixcol{
@@ -550,6 +583,9 @@ p{font-size: 12px;line-height: 1.6;}
 			li{
 				width: 30%;
 				float: left;
+			}
+			#i-run{
+				margin: 0 26px 0 50px;
 			}
 		}
 		ul#published-list{

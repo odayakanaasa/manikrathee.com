@@ -15,8 +15,26 @@
 	</div>
 	<div class="container body">
 		<div class="row">
+			<div class="sixcol last main-section">
+				<div class="article">
+					<h3 class="fit">Always More To Learn</h3>
+					<p>I'm always looking for a new challenge. Every day something new comes out in the world of design and development and along with that comes new problems to solve. Tackling these problems helps me to grow as a thinker, as a designer, as a developer and as a creative in general.</p>
+					
+					<p>I've loved design, front-end development and user-focused research since I was first exposed to the web. I've had the priveledge of working with companies like AT&amp;T and T-Mobile while freelancing, which helped get me the skills that landed me at <a href="http://www.revsystems.com/" title="RevSystems, Inc">RevSystems, Inc</a> as the Lead Designer. I had a lot of freedom while working at Rev, both with client work and to apply my time towards experimenting with new web tech. It was here that I was able to experiement with a lot of frameworks and, more importantly, with responsive design.</p>
+					
+					<p>As soon as I stumbled onto responsive design, I started applying it to all of our projects. We built responsive websites, CMS control panels and more. I spent endless nights [foolishly] <a href="https://github.com/manikrathee/1140gs-Custom" title="1140 GS on Github">trying to</a> build <a href="https://github.com/manikrathee/FutureGS" title="FutureGS on Github">CSS frameworks</a> that could handle all the problems that responsive design presented. </p>
+					
+					<p>Around this time, I got an e-mail from <a href="http://dryan.com/" title="Daniel Ryan">Daniel Ryan</a>, the Director of Frontend Development for President Brack Obama. I interviewed to join the frontend dev team, got the job and promptly moved out to Chicago to start one of the most amazing journies of my life. I worked under the Lead Developer, <a href="http://jefflouden.com/" title="Jeffrey Louden">Jeffrey Louden</a> for a while, improving the UX of <a href="http:/www.barackobama.com/" title="BarackObama.com">BarackObama.com</a> and then jumped over to the Contribute team under <a href="http://www.kylerush.net/" title="Kyle Rush">Kyle Rush</a>, the Deputy Director of Development. We <a href="http://blog.manikrathee.com/posts/2012/11/16/the-tech-president.html" title="built some stuff">built some pretty groundbreaking stuff</a>, broke <del>some</del> <a href="http://swampland.time.com/2012/11/15/exclusive-obamas-2012-digital-fundraising-outperformed-2008/" title="broke some records">all of the records</a>, and <a href="http://www.youtube.com/watch?v=IeCY-jKpoZ0" title="elected a president">elected a president</a>.</p>
+					
+					<p>And now, I'm headed out to beautiful San Francisco to join <a href="http://www.fluenceapp.com" title="Fluence App">Fluence</a> - a great new media-based startup. Forward.</p>
+					
+					<img src="images/potus-hug.jpg" alt="Yep, President Barack Obama giving me a hug">
+					<figcaption> For the final day of the campaign,the President of the United States thanked me for my work with a strong handshake and a hug. It was cool.
+				</div>
+			</div>
+			<div class="onecol"></div>
 			<div class="fivecol left-section">
-				<h3>Words</h3>
+				<h4>Words</h4>
 				<p>I have had the priveledge of being interviewed, having my worked featured and appearing on some podcasts. Here are a select few of those:</p>
 				<ul id="published-list">
 					<li>
@@ -32,7 +50,7 @@
 						<p>Readmill is arguably my most used app on the iPad. This interview went into depth about how I used it to support my work for the President.</p>
 					</li>
 				</ul>
-				<h3>Social</h3>
+				<h4>Social</h4>
 				<ul class="social-links">
 					<li><a href="http://www.manikrathee.com/github" title="@manikrathee on Github">Github</a></li>
 					<li><a href="http://www.manikrathee.com/twitter" title="@manikrathee on Twitter">Twitter</a></li>
@@ -56,25 +74,6 @@
 						<a id="twitter-button" href="https://twitter.com/manikrathee" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @ManikRathee</a>
 					</li>
 				</ul>
-			</div>
-			<div class="onecol"></div>
-			<div class="sixcol last main-section">
-				<div class="article">
-					<h3 class="fit">Always More To Learn</h3>
-					<p>I'm always looking for a new challenge. Every day something new comes out in the world of design and development and along with that comes new problems to solve. Tackling these problems helps me to grow as a thinker, as a designer, as a developer and as a creative in general.</p>
-					
-					<p>I've loved design, front-end development and user-focused research since I was first exposed to the web. I've had the priveledge of working with companies like AT&amp;T and T-Mobile while freelancing, which helped get me the skills that landed me at <a href="http://www.revsystems.com/" title="RevSystems, Inc">RevSystems, Inc</a> as the Lead Designer. I had a lot of freedom while working at Rev, both with client work and to apply my time towards experimenting with new web tech. It was here that I was able to experiement with a lot of frameworks and, more importantly, with responsive design.</p>
-					
-					<p>As soon as I stumbled onto responsive design, I started applying it to all of our projects. We built responsive websites, CMS control panels and more. I spent endless nights [foolishly] <a href="https://github.com/manikrathee/1140gs-Custom" title="1140 GS on Github">trying to</a> build <a href="https://github.com/manikrathee/FutureGS" title="FutureGS on Github">CSS frameworks</a> that could handle all the problems that responsive design presented. </p>
-					
-					<p>Around this time, I got an e-mail from <a href="http://dryan.com/" title="Daniel Ryan">Daniel Ryan</a>, the Director of Frontend Development for President Brack Obama. I interviewed to join the frontend dev team, got the job and promptly moved out to Chicago to start one of the most amazing journies of my life. I worked under the Lead Developer, <a href="http://jefflouden.com/" title="Jeffrey Louden">Jeffrey Louden</a> for a while, improving the UX of <a href="http:/www.barackobama.com/" title="BarackObama.com">BarackObama.com</a> and then jumped over to the Contribute team under <a href="http://www.kylerush.net/" title="Kyle Rush">Kyle Rush</a>, the Deputy Director of Development. We <a href="/barack-obama-contribute.php" title="built some stuff">built some pretty groundbreaking stuff</a>, broke <del>some</del> <a href="http://swampland.time.com/2012/11/15/exclusive-obamas-2012-digital-fundraising-outperformed-2008/" title="broke some records">all of the records</a>, and <a href="http://www.youtube.com/watch?v=IeCY-jKpoZ0" title="elected a president">elected a president</a>.</p>
-					
-					<p>And now, I'm headed out to beautiful San Francisco to join <a href="http://www.fluenceapp.com" title="Fluence App">Fluence</a> - a great new media-based startup. Forward.</p>
-					
-					<img src="images/potus-hug.jpg" alt="Yep, President Barack Obama giving me a hug">
-					<figcaption> For the final day of the campaign,the President of the United States thanked me for my work with a strong handshake and a hug. It was cool.
-					
-				</div>
 			</div>
 		</div><!-- END row -->
 	</div><!-- END container -->
@@ -105,14 +104,11 @@
 					<span class="ss-social ss-icon">Rdio</span>
 					<p>I listen to
 						<span class="number-container">
-							<span id="number-three" class="number" data-number="42">0</span>+ hours
+							<span id="number-three" class="number" data-number="62">0</span>+ hours
 						</span> 
-						of music every day
+						of music every week
 					</p>
 				</li>
-				<li><span id="number-four" class="number">444</span><p>Something something something</p></li>
-				<li><span id="number-five" class="number">555</span><p>Something something something</p></li>
-				<li><span id="number-six" class="number">666</span><p>Something something something</p></li>
 			</ul>
 		</div><!-- END container row -->
 	</div><!-- END fact-container -->	
