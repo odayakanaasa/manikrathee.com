@@ -1,5 +1,6 @@
+var instagramActive = false;
+
 var instagramFeed = new function() {
-  var instagramActive = false;
     
   this.endpoint = 'instagram.me';
 
@@ -49,8 +50,6 @@ var instagramFeed = new function() {
   
   }
   
-  // Set instagramActive to true so logofyAPI and activate API can fire
-  instagramActive = true;
 }
 
 // Instagram API
@@ -59,3 +58,7 @@ instagramFeed.embed({
   count: 1,
   container: 'instagram'
 });
+
+
+  // Set instagramActive to true so logofyAPI and activate API can fire
+  instagramActive = true;

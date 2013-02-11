@@ -94,7 +94,7 @@
 			font-weight: normal;
 		}
 	}
-	#twitter ul li{
+	#twitter{
 		font-size: 14px;
 		font-weight: normal;
 	}
@@ -130,14 +130,21 @@
 		bottom: 0;
 		width: 25%;
 		padding: 20px 2.5%;
+		div{
+			position:absolute;
+    		top:50%;
+		}
 		.logo{
 			position: absolute;
-			top: 35px;
+			top: 31px;
 			left: 20px;
 		}
 		& > div, & > ul{
 			opacity: 1;
 			margin-left: 15px;
+		}
+		p{
+			margin: 0;
 		}
 		&.inactive{
 			background-color:  #e3e3e3;
@@ -173,7 +180,7 @@
 				-moz-transition:height 0.4s linear, background-color 0.4s linear, padding 0.4s linear, color 0.4s linear, border-radius 0.4s linear;
 				transition:height 0.4s linear, background-color 0.4s linear, padding 0.4s linear, color 0.4s linear, border-radius 0.4s linear;
 				.logo{
-					top: 35px;
+					top: 31px;
 					left: 20px;
 					margin-left: 0;
 				}
@@ -211,9 +218,9 @@
 		a{
 			text-decoration: none;
 		}
-		& > div{
-			margin-top: 27px;
-		}
+		// & > div{
+		// 	margin-top: 27px;
+		// }
 	}
 	.rdio{
 		left: 50%;
@@ -221,15 +228,21 @@
 	.rdio, .rdio.inactive:hover{
 		background-color: @rdio;
 		.gradient;
+		p{
+			opacity: 1;
+			font-size: 15px;
+		}
 	}
 	.readmill{
 		left:75%;
 		p{
-			margin: 25px 0 0 20px;
 			font-size: 15px;
 		}
+		a{
+			display: inline;
+		}
 	}
-	.readmill.inactive{
+	.readmill.inactive, .rdio.inactive{
 		p{
 			opacity: 0;
 			-webkit-transition: opacity 0.25s linear;

@@ -1,11 +1,11 @@
 //@codekit-prepend "libs/jquery-1.8.2.min.js";
 //@codekit-prepend "libs/jquery.backstretch.js";
+//@codekit-prepend "libs/jquery.api.rdio.js";
+//@codekit-prepend "libs/jquery.api.twitter.js";
+//@codekit-prepend "libs/jquery.api.instagram.js";
+//@codekit-prepend "libs/jquery.twitter.js";
 //@codekit-prepend "libs/jquery.fittext.js";
 //@codekit-prepend "libs/jquery.flexslider.js";
-//@codekit-prepend "libs/jquery.api.rdio.js";
-//@codekit-prepend "libs/jquery.api.instagram.js";
-//@codekit-prepend "libs/jquery.api.twitter.js";
-//@codekit-prepend "libs/jquery.twitter.js";
 //@codekit-prepend "libs/jquery.prettyForms.js";
 //@codekit-prepend "libs/jquery.counter.js";
 //@codekit-prepend "libs/jquery.tipTip.js";
@@ -13,28 +13,7 @@
 //@codekit-prepend "libs/withinViewport.js";
 //@codekit-prepend "libs/jquery.withinViewport.js";
 
-
 // "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js", "libs/jhere.js";
-
-
-// Rdio API
-R.ready(function() {
-    R.request({
-        method: "getTopCharts",
-        content: {
-        type: "Track", 
-        start: 0, 
-        count: 10
-        },
-        success: function(response) {
-            var top = response.result[0];
-            console.log(top.name + " by " + top.artist);
-        },
-        error: function(response) {
-            console.log("error");
-        }
-    });
-});
 
 //Social API Vars
 var twitterAPI = $('#twitter');
@@ -46,22 +25,21 @@ var instagramID = $('#instagram').prop('id');
 var rdioID = $('#rdio').prop('id');
 var readmillID = $('#readmill').prop('id');
 
-// Lean Startup
-// $('#readmill').prepend('<p id="readmill-book">Currently Reading: "<a href="http://readmill.com/manikrathee/reads/the-lean-startup-how-todays-entrepreneurs-use-continuous-innovation-to-create-radically-successful-businesses-1" title="The Lean Startup">The Lean Startup</a>"</p>');
+$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/execute" title="Execute">Execute</a></p></div>');
 
-$('#readmill').prepend('<p id="readmill-book">Currently Reading: "<a href="https://readmill.com/manikrathee/reads/execute" title="Execute">Execute</a>"</p>');
 
 
 // This adds the logo spans which are targetted with symbolset. It is called in api.twitter.js after twitter.html();
 function logofyAPI(){
     setTimeout(function(){
-        if (instagramActive == true && rdioActive == true){
+        if (instagramActive){
         	$(".social-api").prepend('<span class="ss-icon logo"></span>');
         	twitterAPI.find('span.logo').prepend(twitterID);
         	instagramAPI.find('span.logo').prepend(instagramID);
         	rdioAPI.find('span.logo').prepend(rdioID);
         	readmillAPI.find('span.logo').prepend(readmillID);
-        	activateAPI();
+        	// centerAPI();
+            activateAPI();
         }
         else{
         	return;
@@ -77,6 +55,17 @@ function activateAPI(){
     	next();
     });
 }
+
+function centerAPI(){
+    var socialAPI = $('.social-api');
+    $(socialAPI).each(function() {
+        var center = $(this).find('div');
+        var h = center.height();
+        center.css('margin-top', + h / -2 + 'px');
+    });
+}
+
+
 
 // Nav Hover
 function checkWidth() {

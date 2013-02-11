@@ -2,7 +2,7 @@
 // $(document).ready(function() {
 	$.getJSON('https://api.twitter.com/1/statuses/user_timeline.json?screen_name=manikrathee&count=1&callback=?', function(data) {
 		
-		var html = "<ul>";
+		var html = "<div>";
 		var twitter = $('.twitter');
 		
 		for(var i=0; i<data.length; i++) {
@@ -48,9 +48,9 @@
 			relative_time(time_value);
 			
 			// Concatenate tweet and add linked relative time
-	    	html += "<li> " + status + ' - <a href="http://www.twitter.com/manikrathee/statuses/' + data[i].id_str + '" title="View this Tweet on Twitter.com">' + relative + "</a></span></li>";
+	    	html += "<p> " + status + ' - <a href="http://www.twitter.com/manikrathee/statuses/' + data[i].id_str + '" title="View this Tweet on Twitter.com">' + relative + "</a></span></p>";
 		}
-		html += "</ul>"
+		html += "</div>"
 		
 		// Spit out the final product
     	twitter.html(html);
