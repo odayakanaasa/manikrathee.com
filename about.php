@@ -16,7 +16,8 @@
 	<div class="container body">
 		<div class="row">
 			<div class="fivecol left-section">
-				<h3>Published</h3>
+				<h3>Words</h3>
+				<p>I have had the priveledge of being interviewed, having my worked featured and appearing on some podcasts. Here are a select few of those:</p>
 				<ul id="published-list">
 					<li>
 						<a class="published-title" href="http://search.barnesandnoble.com/Graphic-Design-Solutions/Robin-Landa/e/9781133945529" title="Graphic Design Solutions">Graphic Design Solutions<span>Robin Landa</span></a>
@@ -116,7 +117,14 @@
 		</div><!-- END container row -->
 	</div><!-- END fact-container -->	
 		
-		
+	<!-- 
+	This is so not done.
+	
+	Like, not at all.
+	
+	Not even a little bit.
+	
+	
 	<div id="map">
 		<div class="container row">
 			<p><span class="ss-icon">Location</span> Current Location: <span class="location">Montclair, NJ</span></p>
@@ -134,8 +142,8 @@
 					<p>Lead Designer, <a href="http://www.revystems.com" title="RevSystems, inc">RevSystems, Inc</a></p>
 				</li>
 			</ul>
-		</div><!-- END row -->
-	</div><!-- END container -->
+		</div>
+	</div> -->
 	
 			
 	<?php include('global/footer.php'); ?>
