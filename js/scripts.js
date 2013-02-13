@@ -56,12 +56,21 @@ function activateAPI(){
 
 function centerAPI(){
     var socialAPI = $('.social-api');
-    $(socialAPI).each(function() {
-        var center = $(this).find('div');
-        var h = center.height();
-        center.css('margin-top', + h / -2 + 'px');
-    });
+    
+    if ($(window).width() > 768){ 
+        $(socialAPI).each(function() {
+            var center = $(this).find('div');
+            var h = center.height();
+            center.css('margin-top', + h / -2 + 'px');
+        });
+    }
 }
+
+$(window).resize(function() {
+    centerAPI();
+});
+
+centerAPI();
 
 
 

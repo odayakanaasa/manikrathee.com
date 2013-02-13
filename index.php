@@ -35,7 +35,7 @@
 				<a href="http://www.fluenceapp.com" title="Fluence">Fluence</a></h1>
 			</header>
 			<section class="title">	
-					<p>I'm a user experience engineer, user interface designer, frontend developer. Formerly a UX Engineer for <a href="http://www.barackobama.com" title="Obama For America">President Barack Obama</a>, I am now the Lead Designer for <a href="http://www.fluenceapp.com" title="Fluence">Fluence</a>, a startup in beautiful San Francisco. In my spare time, I <a href="http://www.manikratheephotography.com" title="Manik Rathee Photography">photograph weddings</a> and <a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">I write about design and development</a>.</p>
+					<p>I'm a user experience engineer, user interface designer, frontend developer. Formerly a UX Engineer for <a href="http://www.barackobama.com" title="Obama For America">President Barack Obama</a>, I am now the Lead Designer for <a href="http://www.fluenceapp.com" title="Fluence">Fluence</a>, a startup in beautiful San Francisco. In my spare time, I <a href="http://www.manikratheephotography.com" title="Manik Rathee Photography">photograph weddings</a> with <a href="http://www.aileenandmanik.com" title="Aileen and Manik">my beautiful fianc&eacute;e</a> and <a href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">I write about design and development</a>.</p>
 			</section> <!-- /title -->
 			<section class="social">
 				<ul class="social-icons">
