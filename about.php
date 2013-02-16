@@ -35,7 +35,7 @@
 			<div class="onecol"></div>
 			<div class="fivecol left-section">
 				<h4>Words</h4>
-				<p>I have had the priveledge of being interviewed, having my worked featured and appearing on some podcasts. Here are a select few of those:</p>
+				<p>I have had the privilege of being interviewed, having my worked featured and appearing on some podcasts. Here are a select few of those:</p>
 				<ul id="published-list">
 					<li>
 						<a class="published-title" href="http://search.barnesandnoble.com/Graphic-Design-Solutions/Robin-Landa/e/9781133945529" title="Graphic Design Solutions">Graphic Design Solutions<span>Robin Landa</span></a>
