@@ -96,6 +96,7 @@ R.ready(function() {
           var top = response.result[0];
           // console.log(top);
           rdio.html('<div><p>' + top.name + " by " + top.artist + '</p></div>');
+          rdioAPI.find('span.logo').remove();
           $("#rdio").prepend('<span class="ss-icon logo"></span>');
           rdioAPI.find('span.logo').prepend(rdioID);
           // Set rdioActive to true so logofyAPI and activate API can fire
