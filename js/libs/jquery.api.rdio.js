@@ -94,7 +94,7 @@ R.ready(function() {
         },
         success: function(response) {
           var top = response.result[0];
-          console.log(top);
+          // console.log(top);
           rdio.html('<div><p>' + top.name + " by " + top.artist + '</p></div>');
           $("#rdio").prepend('<span class="ss-icon logo"></span>');
           rdioAPI.find('span.logo').prepend(rdioID);

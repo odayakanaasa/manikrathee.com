@@ -32,11 +32,11 @@
 					<p class="glance_description">Website, Illustration, Copywriting</p>
 					<p class="glance_heading">Target Devices</p>
 					<p class="glance_description">Desktop / Screen</p>
-					<a href="http://www.smartpen-livescribe.com/" target="_blank">
+					<!-- <a href="http://www.smartpen-livescribe.com/" target="_blank">
 						<div class="button">
 						<div class="button_text">View Project</div>
 						</div>
-					</a>
+					</a> -->
 					
 				</div>
 			</div>

@@ -84,7 +84,7 @@
 							</div>
 							<div class="catalyst_iconset_copy">
 								<h4>Native Apps &amp; UI Elements</h3>
-								<p>Apple’s native applications all fit the minimal CATALYST theme. Applicationbadges are also skinned in a high-contrastblack design so you never miss your notifications again.</p>
+								<p>Apple’s native applications all fit the minimal CATALYST theme. Application badges are also skinned in a high-contrastblack design so you never miss your notifications again.</p>
 							</div>
 							<div class="clear"></div>
 						</div>

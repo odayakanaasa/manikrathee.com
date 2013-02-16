@@ -43,7 +43,7 @@
 			<div class="onecol"></div>
 			<div class="tencol main-section resource-block">
 				<h2 id="fit">What I Use</h2>
-				<p>I have a problem on the internet. I'm a sucker for productivity articles &amp; apps - so much so that my colleagues would constantly ask what new tip, trick or app I had that day. So, I decided to make this breakdown of what I use.</p>
+				<p>I have a problem on the internet. I'm a sucker for productivity articles &amp; apps - so much so that my colleagues would constantly ask what new tip, trick, app or <a href="http://manikfoundasecret.tumblr.com/" title="secret">secret</a> I had that day. So, I decided to make this breakdown of what I use.</p>
 				
 				<div class="module hardware">
 					<h4>Hardware</h4>

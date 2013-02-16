@@ -10,15 +10,18 @@ var instagramFeed = new function() {
     
     for(i in data) {
       var photo = data[i];
-      // console.log(photo);
+      var photoCaption;
       
-      if (!photo.caption){
-        photo.caption = 'Photo'
+      if (photo.caption === "undefined" || photo.caption === "null" || !photo.caption ) {
+        photoCaption = "Photo";
+      }
+      else{
+        photoCaption = photo.caption.text;
       }
       
       str += "<div class='photo' data='" + photo.id + "'>";
       // str += "<p>Latest Photo:" + photo.created_time + "</p>";
-      str += "<a id='instagram-link' href='" + photo.link + "' title='View my latest Instagram Shot'>My latest instagram: '" + photo.caption.text + "'";
+      str += "<a id='instagram-link' href='" + photo.link + "' title='View my latest Instagram Shot'>My latest instagram: '" + photoCaption + "'";
       // str += "<img src='" + photo.images.thumbnail.url + "' />";
       str += "</a>";
       str += "</div>";
