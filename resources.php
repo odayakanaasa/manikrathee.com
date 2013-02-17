@@ -21,7 +21,7 @@
 				<article id="releases">
 					<section>
 						<p class="subtitle">TextExpander</p>
-						I use <a href="http://smilesoftware.com/TextExpander/index.html" title="TextExpander">TextExpander</a>. It is one of the staples of my daily app usage, along with a few others listed on this page. TextExpander, in case you haven't heard of it, allows you to create expandable snippets for use across any application. So, I could make a snippet like 'manki' that expands to 'manik' for when I misspell my name. Or, I could make a snippet like '*fl' that expands to 'float: left;'. Really, the options are endless. All of my libraries are available on github.
+						I use <a href="http://smilesoftware.com/TextExpander/index.html" title="TextExpander">TextExpander</a>. It is one of the staples of my daily app usage, along with a few others listed on this page. TextExpander, in case you haven't heard of it, allows you to create expandable snippets for use across any application. So, I could make a snippet like 'manki' that expands to 'manik' for when I misspell my name. Or, I could make a snippet like '*fl' that expands to 'float: left;'. Really, the options are endless. All of my libraries are available on GitHub.
 						<a class="button" href="https://github.com/manikrathee/text-expander" title="Download these AppleScripts on Manik Rathee's Github Page">View on Github</a>
 					</section>
 					<section>
@@ -32,7 +32,7 @@
 					<section>
 						<p class="subtitle">Responsive CSS Framework</p>
 						I work on a lot of projects, whether they are sites for freelance, applications or fun side projects. After a while, it didn't make sense to keep rebuilding my frameworks with HTML5 boilerplate, modernizr, symbolset, etc. So, I combined all of my basic project needs into a framework and then started optimising it every time I noticed an issue or needed soemthing else. So this might work for you, or it might not. But it exists, so check it out.
-						<a class="button" href="https://github.com/manikrathee/1140gs-Custom" title="Download these AppleScripts on Manik Rathee's Github Page">View on Github</a>
+						<a class="button" href="https://github.com/manikrathee/1140gs-Custom" title="Download these AppleScripts on Manik Rathee's GitHub Page">View on GitHub</a>
 					</section>
 				</article>
 			</div>
@@ -77,10 +77,10 @@
 
 					<h4>Development</h4>
 					<a href="" title="">SublimeText 2.0</a>
-						<p>Recently graduated from textmate to this split-pane, plugin wielding editor. I am currently using a theme I made, <a href="https://github.com/manikrathee/appealr" title="Appealr">Appealr</a>, and have my user settings up on github: <a href="https://github.com/manikrathee/sublime-text" title="SublimeText settings on Github">https://github.com/manikrathee/sublime-text</a></p>
+						<p>Recently graduated from textmate to this split-pane, plugin wielding editor. I am currently using a theme I made, <a href="https://github.com/manikrathee/appealr" title="Appealr">Appealr</a>, and have my user settings up on GitHub: <a href="https://github.com/manikrathee/sublime-text" title="SublimeText settings on Github">https://github.com/manikrathee/sublime-text</a></p>
 					<a href="https://www.google.com/intl/en/chrome/browser/canary.html" title="Chrome Canary">Chrome Canary,</a> <a href="http://nightly.mozilla.org/" title="Firefox Nightly"></a>Firefox Nightly</a>
 						<p>Dev builds for geeking out over new code.</p>
-					<a href="http://www.github.com" title="Github">Git &amp; Github</a>
+					<a href="http://www.github.com" title="Github">Git &amp; GitHub</a>
 						<p>Does this need a description? go.</p>
 					<a href="https://github.com/manikrathee/FutureGS/" title="FutureGS">FutureGS</a>
 						<p>My custom responsive framework. I've been developing this for a few months, mainly for internal use. Considering opening it up as a downloadable framework in the future. The benefit of this: completely semantic markup and a less-based stylesheet that is optimized for speed. Check it out here: <a href="https://github.com/manikrathee/FutureGS/" title="FutureGS">https://github.com/manikrathee/FutureGS</a> or view my other framework here: <a href="https://github.com/manikrathee/1140gs-Custom" title="1140 Custom">https://github.com/manikrathee/1140gs-Custom</a></p>
