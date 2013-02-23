@@ -45,7 +45,7 @@
 					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.rdio.com/people/manikrathee/" title="Rdio">rdio</a></li>
 					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.readmill.com/manikrathee" title="Readmill">Readmill</a></li>
 					<li><a class="ss-icon ss-social-circle tooltip" href="http://manikrathee.tumblr.com" title="Tumblr">Tumblr</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="http://instagrid.me/manikrathee/" title="Instagram">Instagram</a></li>
+					<li><a class="ss-icon ss-social-circle tooltip" href="http://instagram.com/manikrathee" title="Instagram">Instagram</a></li>
 					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.flickr.com/photos/manikrathee/" title="Flickr">Flickr</a></li>
 					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.500px.com/manikrathee" title="500px">fivehundredpx</a></li>
 					<li><a class="ss-icon ss-social-circle tooltip" href="https://svpply.com/manikrathee" title="Svpply">svpply</a></li>
