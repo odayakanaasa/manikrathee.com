@@ -25,7 +25,7 @@ var instagramID = $('#instagram').prop('id');
 var rdioID = $('#rdio').prop('id');
 var readmillID = $('#readmill').prop('id');
 
-$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/execute" title="Execute">Execute</a></p></div>');
+$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/rework-1" title="ReWork">ReWork</a></p></div>');
 
 // This adds the logo spans which are targetted with symbolset. It is called in api.twitter.js after twitter.html();
 function logofyAPI(){
