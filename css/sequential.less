@@ -1,0 +1,1140 @@
+/*
+   OFA Donate - Sequential Module
+
+   Created By Manik Rathee on 2012-09-22
+   Copyright 2012 Obama for America. All rights reserved.
+*/
+
+
+@import "import/animation";
+@import "import/core";
+@import "import/mixins";
+
+@light-blue: #008fc5;
+@next-blue: #1297c9;
+@submit-green: #89cd46;
+@green: #81c341; 
+@error-red: #C41230;
+@slab-serif: "jubilat",sans-serif;
+@helvetica: "proxima-nova", helvetica, verdana, sans-serif;
+
+/* FORM BASE */
+
+#form-fields {
+
+    margin: 0;
+
+    ul {
+
+        margin: 0;
+
+    }
+
+    li {
+
+        list-style: none;
+        margin-bottom: 15px;
+
+    }
+
+    label {
+
+        font-size: 18px;
+        font-weight: bold;
+
+    }
+
+    input.text, select {
+
+        width: 100%;
+        font-size: 20px;
+
+    }
+
+    #custom1 {
+        width: auto;
+    }
+
+    /* to override some dumb important property in core.ss */
+    input[name='zip'] {
+
+        width: 100%;
+
+    }
+
+    #amounts { margin-top: 10px;}
+    #amount-other {width: 6.5em;}
+
+}
+
+#amounts {
+
+    li {
+
+        margin-bottom: 25px;
+
+    }
+
+    label {
+
+        display: inline;
+        font-weight: normal;
+
+    }
+
+}
+
+#accepted-ccs {
+
+    text-indent: -900em;
+    background: url(https://secure.assets.bostatic.com/hydepark/images/donate/donate-cards-transparent.png) no-repeat;  
+    height: 26px;
+    width: 188px;
+    margin: 0 auto 20px auto;
+
+}
+
+#cc-type-radio-cont {
+
+    label {
+
+        display: inline;
+        font-weight: normal;
+
+    }
+
+}
+
+#cc_expir_month {margin-bottom: 10px;}
+
+#other-amount-radio {display: none;}
+
+
+#recurring-cont {
+
+    padding: 5px 0 20px 0;
+    clear: both;
+    label {
+
+        display: inline;
+        font-size: 15px;
+
+    }
+
+}
+
+#submit {width: 100%;}
+#processing-indicator {
+
+    width: 100%;
+    letter-spacing: 1px;
+    color: white;
+    /*background: #C41230 url(../images/loading-donate-ofa.gif) no-repeat 10px center;*/
+    background: #C41230 url(https://secure.assets.bostatic.com/hydepark/images/loading-donate-ofa.gif) no-repeat 10px center;
+    padding: 12px 35px;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 16px;
+    border: 0;
+    margin: 0;
+    zoom: 1;
+    font-family: 'Sentinel 7r', 'Sentinel A', 'Sentinel B', "jubilat", Georgia, serif;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    clear: both;
+    display: none;
+}
+#cc-type-radio-cont {display: none;}
+
+/* personalization */
+/* this loading-message DOM element shows when the page is waiting on saved payment info or stuff from hashcloud */
+#loading-message {background: url(../images/loading.gif) center left no-repeat; padding-left: 20px; margin-bottom: 15px; margin: 0 auto; width: 80px;}
+#personalized-content {display: none;}
+body.personalized #personalized-content {display: block;}
+#donor-employer {margin-top: 15px;}
+#donor-credit-card {margin: 0 0 8px; color: #197419;}
+#donor-credit-card span {font-weight: bold; text-transform: uppercase;}
+#donor-info {margin: 0 0 20px 0; border-bottom: 1px solid #ccc; padding-bottom: 20px; padding-left: 2px;}
+#donor-name {text-transform: uppercase; font-size: 16px; font-weight: bold;}
+#donor-info a {font-size: 11px; text-transform: none; text-decoration: underline; font-weight: normal;}
+#donor-name {margin-bottom: 8px;}
+#donor-address-cont {margin-bottom: 20px;}
+#donor-address-cont p {margin-bottom: 0;}
+#donor-info p {margin-bottom: 3px;}
+#user-employer {margin-top: 15px;}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="file"]), textarea{
+    background: #f1f1f1;
+    border: 1px solid #DEDEDE;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.04);
+    box-shadow:  inset 1px 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+
+input:focus:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="file"]), textarea:focus{
+    background: #fff;
+    border-color: rgba(132, 185, 211, 0.8) ;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1),0 0 5px rgba(132, 185, 211, 0.6);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1),0 0 5px rgba(132,185,211,0.6);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1),0 0 5px rgba(132, 185, 211, 0.6);
+    outline: 0;
+}
+
+.oldie {
+
+    #form-fields {
+
+        width: 385px;
+        select {font-size: 14px;}
+        input.text {font-size: 14px;}
+        #cc_number {font-family: Monaco, "Lucida Sans Unicode", monospace; font-size: 13px; letter-spacing: 1px; padding: 7px 4px;}
+        label {font-size: 13px;}
+        li.form-section-header-cont {width: 100%; clear: both;}
+        #firstname-cont, #shipping_firstname-cont, #email-cont, #employer-cont {float: left;}
+        #lastname-cont, #shipping_lastname-cont, #phone-cont, #occupation-cont {float: right;}
+        #firstname-cont, #shipping_firstname-cont, #lastname-cont, #shipping_lastname-cont, #email-cont, #phone-cont, #employer-cont, #occupation-cont {width: 49%;}
+        #addr1-cont, #shipping_addr1-cont, #email-cont {clear: both;}
+        #city-cont, #shipping_city-cont {width: 54%; margin-right: 10px; float: left;}
+        #state_cd-cont, #shipping_state_cd-cont {width: 20%; margin-right: 10px; float: left;}
+        #state_cd-cont #state_cd.error{color: #333;}
+        #zip-cont, #shipping_zip-cont {width: 20%; float: left; margin-right: 0;}
+        #amounts-cont {overflow: hidden;}
+        .amount-cont {width: 70px; margin-right: 10px; float: left;}
+        #amount-cont-4 {margin-right: 0;}
+        #amount-cont-5 {clear: both;}
+        #amount-cont-8 {width: 140px; margin: -10px 0 0 0;}
+        #cc-number-cont {float: left;}
+        #cc-expiration-cont {float: right;}
+        #cc-number-cont, #cc-expiration-cont {width: 48%;}
+        #cc_expir_year, #cc_expir_month {width: 70px;}
+        #accepted-ccs {margin: 0;}
+        #employment-header {margin-bottom: 10px;}
+        #employment-disclaimer {font-size: 12px;}
+    }
+}
+
+@media all and (min-width:768px) { 
+
+    .oldie;
+
+}
+
+html.ie9 {
+
+    #form-fields {
+
+        #amount-cont-8 {margin-top: -7px; margin-left: 3px;}
+
+    }
+
+}
+
+html.ie8 {
+
+    #form-fields {
+
+        input.text {width: 90%;}
+        #addr1-cont input.text, #shipping_addr1-cont input.text, #addr2-cont input.text, #shipping_addr2-cont input.text {width: 95.3%;}
+        #city-cont, #shipping_#city-cont {width: 50%;}
+        #amount-cont-8 {clear: both; width: 100%;}
+        #amounts input[type="radio"], #recurring_acknowledge {background: none;}
+
+    }
+
+    input, textarea{
+        background: #f1f1f1;
+        border: 1px solid #DEDEDE;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    input:focus, textarea:focus{
+        background: #fff;
+        border-color: rgb(132, 185, 211) ;
+        outline: 0;
+    }
+
+}
+
+html.ie7 {
+
+    #form-fields {
+
+        input.text {width: 90%;}
+        #addr1-cont input.text, #shipping_addr1-cont input.text, #addr2-cont input.text, #shipping_addr2-cont input.text  {width: 95.3%;}
+        #city-cont, #shipping_#city-cont {width: 50%;}
+        #amount-cont-7 {width: 80px;}
+        #amount-cont-8 {clear: both; width: 100%;}
+        #amounts input[type="radio"], #recurring_acknowledge {background: none;}
+
+    }
+    input, textarea{
+        background: #f1f1f1;
+        border: 1px solid #DEDEDE;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    input:focus, textarea:focus{
+        background: #fff;
+        border-color: rgb(132, 185, 211) ;
+        outline: 0;
+    }
+}
+
+#shipping-billing-label { display: inline; }
+
+
+
+
+
+
+
+
+/* Hide all sequential markup on mobile */
+#breadcrumbs, #previous, #next, #submit-button, span.premature {
+    display: none;
+}
+
+/*  Change Styles for the Default Submit Button */
+ul#form-fields li#submit-cont #submit-hidden{
+    bottom: 52px;
+    left: 50%;
+    width: 100%;
+    background: #89C74E;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    /*font-family: @slab-serif;*/
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 6px;
+}
+body.error{
+    #submit-cont{
+        margin-top: 20px;
+    }
+}
+
+p.secure{
+    display: none;
+}
+#form-fields .form-section-header{
+    font-family: @slab-serif;
+    font-size: 20px;
+}
+
+/* Fix padding for new employment field helper text */
+#occupation-cont p{
+    margin-top: 15px;
+}
+#occupation-cont p.occupation_error{
+    margin-top: 0;
+}
+
+/* Amount Buttons */
+ul#amounts{
+    overflow: auto;
+    zoom: 1;
+    li.amount-cont{
+        margin-bottom: 25px;
+        width: 41%;
+        float: left;
+        margin-right: 27px;
+        label{
+            display: block;
+            width: 100%;
+            background: @light-blue;
+            background-image: linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+            background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+            background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+            background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.3) 100%);
+            background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+            background-image: -webkit-gradient(
+                    linear,
+                    left bottom,
+                    left top,
+                    color-stop(.1, rgba(0,0,0,0.1)),
+                    color-stop(1, rgba(255,255,255,0.2))
+            );
+            border: 1px solid darken(@light-blue, 2%);
+                border-radius: 3px;
+            box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.4),
+                    0px 1px 1px 1px darken(@light-blue, 25%);
+            font-family: @helvetica;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            /*padding: 8px 5px;*/
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+            &.active{
+                background: @green;
+                color: #fff;
+                border: 1px solid #fff;
+                box-shadow: inset 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+                -webkit-transition: none;
+                -moz-transition: none;
+                transition: none;
+            }
+        }
+        input{
+            display: none;
+        }
+    }
+    #amount-cont-8{
+        width: 41%;
+    }
+    #amount-cont-8 label{
+        display: none;
+    }
+    #amount-cont-8 input{
+        width: 100%;
+        font-size: 14px;
+        line-height: 26px;
+        display: block;
+    }
+}
+
+body.error{
+    &.sequential{
+        #donate-form{
+            margin-top: 0;
+        }
+    }
+    
+    #form-fields{
+        ul#amounts{
+            .amount-cont{
+                margin-right: 24px;
+            }
+        }
+    }
+}
+
+/*  Widen Amount Buttons above mobile */
+@media screen and (min-width: 470px)  and (max-width: 767px){
+    ul#amounts{
+        li.amount-cont{
+            width: 43%;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    body.sequential{
+        background: #fff ;
+        h2.header-title{
+            display: none;
+        }
+    }
+    body.error.ovfSwitch #form-fields li.form-section-header-cont.employer_related.occupation_related {
+        margin-bottom: 15px;
+    }
+    ul#amounts{
+        padding-left: 3px;
+        li.amount-cont{
+            label{
+                padding: 15px 5px;
+            }
+        }
+    }
+    #recurring-cont label span {
+        display: none;
+    }
+    .ofa-gateway #recurring-cont label span.ofa-recur,
+    .ovf-gateway #recurring-cont label span.ovf-recur {
+        display: inline;
+    }
+    #ovf-switch {
+        display: none;
+    }
+    .ovfSwitch #ovf-switch {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+    /*  transitions */
+    .page-header, #donate-form-content, p.secure{
+        
+        
+        opacity: 1;
+    }
+    
+    body.sequential{
+        .content-area-bg{
+            height: auto;
+        }
+        p.secure{
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            z-index: 999;
+            background: transparent url('https://secure.assets.bostatic.com/hydepark/images/secure-seal.png') no-repeat 50% 50%;
+            height: 15px;
+            width: 57px;
+            .ir;
+        }
+        #donate-form-content{
+            position: relative;
+            background: #fff;
+            width: 385px;
+            height: auto;
+            padding: 70px 0 0 0;
+            margin: 40px;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid #d8d8d8;
+            -webkit-transition: height 0.3s linear;
+            -moz-transition: height 0.3s linear;
+            transition: height 0.3s linear;
+            .header-title{
+                font-size: 16px;
+                text-align: center;
+                margin-top: 10px;
+                opacity: 0.6;
+            }
+            #loading-message{
+                display: none;
+            }
+            #donate-form{
+                margin: 20px auto 0;
+                width: 100%;
+            }
+        }
+        span.premature{
+            width: 100%;
+            position: absolute;
+            bottom: 75px;
+            left: -5px;
+            font-family: @slab-serif;
+            text-align: center;
+            font-size: 17px;
+            font-weight: bold;
+            color: #C41230;
+        }
+
+        /*  Form Fields */
+        #form-fields{
+            margin: 0 auto ;
+            label{
+                font-size: 14px;
+            }
+            input{
+                -webkit-transition: background-color 0.15s linear;
+                -moz-transition: background-color 0.15s linear;
+                transition: background-color 0.15s linear;
+                &.error{
+                    border: 2px solid @error-red ;
+                    -webkit-transition:border-color 0.15s ease-in-out;
+                    -moz-transition:border-color 0.15s ease-in-out;
+                    transition:border-color 0.15s ease-in-out;
+                }
+            }
+            /* Error Overrides */
+            #cc_expir_month.error, #cc_expir_year.error, #state_cd.error{
+                color: #c41230 ;
+                outline: 1px solid red;
+            }
+            /* Amounts */
+            #select-amount-header{
+                margin-top: 20px;
+            }
+            #amounts-cont{
+                width: 315px;
+                margin-left: auto;
+                margin-right: auto;
+                &.error{
+                    padding-right: 20px ;
+                }
+            }
+            ul#amounts{
+                overflow: auto;
+                zoom: 1;
+                width: 330px;
+                margin: 0 auto;
+                .amount-cont{
+                    display: block;
+                    width: 88px;
+                    float:left;
+                    clear: none ;
+                    margin-right: 20px;
+                    input{
+                        display: none;
+                    }
+                    label{
+                        display: block;
+                        width: 80px;
+                        padding: 8px 5px;
+                        font-family:@helvetica;
+                        font-size: 19px;
+                        font-weight: bold;
+                        text-align: center;
+                        color: #fff;
+                        margin: 1px 0 0 3px;
+                        cursor: pointer;
+                        outline: none;
+                        
+                        -webkit-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                        -moz-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                        transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                        &:hover{
+                            background: @next-blue;
+                            color: #fff;
+                            border: 1px solid darken(@next-blue, 2%);
+                            box-shadow: inset 0px 1px 1px 1px @next-blue,
+                                    0px 1px 1px 1px darken(@next-blue, 25%);
+                            -webkit-transition: background 0.1s linear;
+                            -moz-transition: background 0.1s linear;
+                            transition: background 0.1s linear;
+                        }
+                        &.active{
+                            background: @submit-green;
+                            color: #fff;
+                            border: 1px solid #fff;
+                            &:hover{
+                                background: @submit-green;
+                                box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                            }
+                        }
+                    }
+                }
+                #amount-cont-8{
+                    margin-top: 0;
+                    width:194px;
+                    input{
+                        display: block;
+                        height: 42px;
+                        width:100%;
+                    }
+                    label{
+                        display: none;
+                    }
+                }
+            }
+            #amount-cont-4{
+                margin-right:6px;
+            }
+            #suggested-amount{
+                font-family:@slab-serif;
+                font-size: 14px;
+                color: #555555;
+                font-style: italic;
+                display: block;
+                margin: -13px 0 0 0;
+            }
+            /* Personal info */
+            #addr2-cont{
+                display: none;
+            }
+            /* Credit Card & Payment */
+            #cc-type-cont{
+                margin-top: -13px;
+            }
+            #cc-number-cont, #cc-expiration-cont {
+                float: none;
+                width: 235px;
+            }
+            #cc-number-cont{
+                margin: 35px auto 10px;
+                input::-webkit-input-placeholder {
+                    color:    #999;
+                }
+                input:-moz-placeholder {
+                    color:    #999;
+                }
+                input:-ms-input-placeholder {
+                    color:    #999;
+                }
+            }
+            #cc_number {
+                font-size: 17px;
+            }
+            #cc_expir_year, #cc_expir_month {
+                width: 100px;
+            }
+            #cc-expiration-cont {
+                margin: 22px auto 10px auto;
+                 #cc_expir_month{
+                    margin-right:30px;
+                }
+            }
+            #cc-type-cont #accepted-ccs{
+                width: 190px;
+                margin: 0 auto;
+                /*background: none;
+                text-indent: 0;
+                width: 100%;
+                margin-bottom: 49px;
+                font-size: 16px;*/
+            }
+            #recurring-cont{
+                width: 392px;
+                margin-left: 0px;
+                margin-top: 20px;
+                label{
+                    font-weight: normal ;
+                }
+            }
+            /* Exmployment */
+            .form-section-header-cont.employer_related.occupation_related{
+                width: 100%;
+                margin: 0 auto;
+                line-height: 1.4;
+            }
+            #employment-header{
+                display: none;
+            }
+            #employer-cont, #occupation-cont {
+                width: 235px;
+                float: none;
+            }
+            #employer-cont{
+                margin: 5px auto 15px auto;
+            }
+            #occupation-cont{
+                margin: 15px auto;
+            }
+            #employer-occupation-helper{
+                width: 380px;
+                margin: 142px 0 0 0;
+                font-size: 13px;
+                clear: both;
+            }
+            .employment-disclaimer{
+                font-family: @helvetica;
+                font-size: 13px;
+                font-weight: normal;
+                color: #444;
+            }
+            #form-fields #submit-cont{
+                width:100%;
+                position: relative;
+                text-align: center;
+            }
+            #submit-cont{
+                margin: 20px 0 0 0;
+            }
+        }/* /#form-fields */
+        /* body.sequential-active */
+        &.sequential-active{
+            #donate-form-content{
+                height: 425px;
+                #donate-form{
+                    margin: 80px auto 0;
+                }
+            }
+            p.secure{
+                top: 104px;
+            }
+            /* Pull the standard submit button off screen */
+            #submit-cont, input#submit{
+                display: none;
+                position: absolute;
+                top: -100%;
+                left: -100%;
+            }
+            /* Group CSS to Show & Hide */
+            .group1:not(.submenu), .group2, .group3, .group4, .group5, .group6{
+                position:relative;
+                left:0;
+                opacity:1;
+                -webkit-transition: left 0.5s ease, opacity 1s ease;
+                -moz-transition: left 0.5s ease, opacity 1s ease;
+                transition: left 0.5s ease, opacity 1s ease;
+                #accepted-css{
+                    display: block;
+                }
+                &.hide{
+                    position:absolute;
+                    left:-100%;
+                    opacity:0;
+                    -webkit-transition: left 0.5s ease, opacity 0.15s ease;
+                    -moz-transition: left 0.5s ease, opacity 0.15s ease;
+                    transition: left 0.5s ease, opacity 0.15s ease;
+                }
+            }
+            .hide{
+                position:absolute;
+                left:-100%;
+                opacity:0;
+                -webkit-transition: left 0.5s ease, opacity 0.15s ease;
+                -moz-transition: left 0.5s ease, opacity 0.15s ease;
+                transition: left 0.5s ease, opacity 0.15s ease;
+                #accepted-ccs{
+                    display: none;
+                }
+            }
+            /* Breadcrumbs */
+            #breadcrumbs{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: #f2f2f2;
+                overflow:auto;
+                zoom: 1;
+                border-bottom: 1px solid #d8d8d8;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                &:after{
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    position: absolute;
+                    bottom: 0;
+                    background: #fff;
+                    content: '';
+                }
+                li{
+                    display: block;
+                    position: relative;
+                    float: left;
+                    /*width: 65px;*/
+                    width: 80px;
+                    list-style-type: none;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #b8b8b8;
+                    font-family: @helvetica;
+                    font-weight: normal;
+                    padding: 18px 0 20px 32px;
+                    -webkit-transition:color 0.25s linear, background-color 0.25s linear;
+                    -moz-transition:color 0.25s linear, background-color 0.25s linear;
+                    transition:color 0.25s linear, background-color 0.25s linear;
+                    hr{
+                        background: #fff;
+                        border-top: 1px solid #c9c9c9;
+                        position: absolute;
+                        left: -16px;
+                        top: 45%;
+                        width: 63px;
+                    }
+                    span{
+                        display: block;
+                        background: #b8b8b8;
+                        width: 25px;
+                        margin: 5px auto 0;
+                        color: #fff;
+                        padding: 4px;
+                        border-radius: 5em;
+                        text-align: center;
+                        font-weight: bold;
+                        //border: 1px solid #fff;
+                        -webkit-transition:color 0.25s linear, background-color 0.25s linear;
+                        -moz-transition:color 0.25s linear, background-color 0.25s linear;
+                        transition:color 0.25s linear, background-color 0.25s linear;
+                    }
+                    b{
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        opacity: 0;
+                        background: #b6b6b6;
+                        margin: 10px auto 0;
+                        border-bottom: 2px solid white;
+                    }
+                    &:first-child{
+                        margin-left: 55px;
+                        padding-left: 0;
+                    }
+                    &.saved-payment{
+                        &:first-child{
+                            margin-left: 142px;
+                        }
+                    }
+                    &.completed, &.current{
+                        color: #555555;
+                        font-weight: bold;
+                        cursor: pointer;
+                        hr{
+                            background: #b9d982;
+                        }
+                        span{
+                            background: #81c341;
+                            text-shadow: 1px 1px 0 #dbdbdb;
+                            -webkit-box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+                            box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+                        }
+                        &:hover{
+                            color: #000;
+                            text-shadow: 0 0 10px #fff;
+                            span{/*
+                                background: #88ef24;*/
+                                background: darken(@green, 15%);
+                                text-shadow: 1px 1px 0 #d3d3d3;
+                            }
+                            b{
+                                opacity: 1;
+                                -webkit-transition: opacity 0.25s linear;
+                                -moz-transition: opacity 0.25s linear;
+                                transition: opacity 0.25s linear;
+                            }
+                        }
+                    }
+                    &.current{
+                        /*background: white;
+                        color: @light-blue;*/
+                    }
+                }
+            }
+            /* Next And Submit */
+            #next{
+                
+                .super-clickable-button(@color: 1297c9){
+                    background: @color;
+                    background-image: linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -webkit-gradient(
+                        linear,
+                        left bottom,
+                        left top,
+                        color-stop(0, rgba(0,0,0,0.1)),
+                        color-stop(1, rgba(255,255,255,0.1))
+                    );
+                    cursor: pointer;
+                    outline: none;
+                    padding: 5px 10px;
+                    border: 1px solid darken(@color, 2%);
+                    border-radius: 4px;
+                    box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2),
+                                        0px 1px 1px 1px darken(@color, 25%);
+                                        /* 0px 1px 1px 1px rgba(25, 84, 114, 1); */
+                    -webkit-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                    -moz-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                    transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                    &:hover{
+                        background: @color;
+                    }
+                    &:active{
+                        background: darken(@color, 10%);
+                        box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                    }
+                }
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                display: block;
+                margin: 10px 0 0 -84px;
+                padding: 2px 10px;
+                width: 142px;
+                -webkit-transition: background-color 0.15s ease-in-out, box-shadow 0.15s linear;
+                -moz-transition: background-color 0.15s ease-in-out, box-shadow 0.15s linear;
+                transition: background-color 0.15s ease-in-out, box-shadow 0.15s linear;
+                border-radius: 4px 25px 25px 2px ;
+                p{
+                    background: transparent url('https://secure.assets.bostatic.com/hydepark/images/donate/20121008_ContinueButton_test.png') no-repeat 104% 49% ;
+                    text-align: center;
+                    color: #fff;
+                    font-family: @slab-serif;
+                    font-weight: bold;
+                    font-size: 18px;
+                    padding: 7px 30px 7px 10px;
+                    text-transform: uppercase;
+                }
+            }/* /#next */
+            
+            #submit-button{
+                position: absolute;
+                bottom: 172px;
+                left: 50%;
+                margin: 10px 0 0 -116px;
+                /*display: block;*/
+                width: 190px;
+                
+                .super-clickable-button(@color: 89cd46){
+                    background: @color;
+                    background-image: linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                    background-image: -webkit-gradient(
+                        linear,
+                        left bottom,
+                        left top,
+                        color-stop(0, rgba(0,0,0,0.1)),
+                        color-stop(1, rgba(255,255,255,0.1))
+                    );
+                    cursor: pointer;
+                    outline: none;
+                    padding: 5px 10px;
+                    border: 1px solid darken(@color, 2%);
+                    border-radius: 4px;
+                    box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2),
+                                        0px 1px 1px 1px darken(@color, 25%);
+                                        /* 0px 1px 1px 1px rgba(25, 84, 114, 1); */
+                    -webkit-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                    -moz-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                    transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                    &:hover{
+                        background: @color;
+                    }
+                    &:active{
+                        background: darken(@color, 10%);
+                        box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                    }
+                }
+                padding: 10px 28px 10px 10px;
+                font-weight: bold;
+                font-family:@slab-serif;
+                font-size: 20px;
+                color: #fff;
+                text-transform: uppercase;
+                text-align:center;
+                -webkit-transition: bottom 0.25s linear;
+                -moz-transition: bottom 0.25s linear;
+                transition: bottom 0.25s linear;
+                border-radius: 4px 25px 25px 2px ;
+                span#processingform{
+                    display: block;
+                    background: transparent url('https://secure.assets.bostatic.com/hydepark/images/donate/20121008_ContinueButton_test.png') no-repeat 104% 49%;
+                    width: 16px;
+                    height: 16px;
+                    .ir;
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                }
+                &.processingform{
+                    background: @submit-green;
+                    color: white;
+                    span#processingform{
+                        display: block;
+                        background: transparent url('https://secure.assets.bostatic.com/hydepark/images/donate/20121008_ContinueButton_test.png') no-repeat 104% 49%;
+                        width: 16px;
+                        height: 16px;
+                        .ir;
+                        position: absolute;
+                        top: 13px;
+                        right: 20px;
+                    }
+                }
+                &.saved-payment{
+                    bottom: 40px;
+                }
+            }/* /#submit-button */
+            #employer-occupation-helper{
+                margin: 146px 0 0 0;
+            }
+            #creditcard-header{
+                display: none;
+            }
+            #amount-header{
+                font-family: @slab-serif;
+                text-transform: none;
+                font-size: 16px;
+                /*color: #707070;*/
+                /* updated color to match WCAG Contrast Compliance */
+                color: #575757;
+                margin-top: 20px;
+                margin-left: 40px;
+                -webkit-transition:color 0.15s linear;
+                -moz-transition:color 0.15s linear;
+                transition:color 0.15s linear;
+                &.error{
+                    color: @error-red;
+                }
+            }
+        }/* /body.sequential-active */
+        /* body.error */
+        &.error{
+            #donate-form-content{
+                min-height: 500px;
+                height: auto;
+                #donate-form{
+                    margin-top: 0;
+                }
+            }
+            p.secure{
+                top: 5px ;
+            }
+            #form-fields{
+                /* Amounts */
+                ul#amounts{
+                    width: 330px;
+                    .amount-cont{
+                        width: 88px ;
+                        margin-right: 20px ;
+                    }
+                    #amount-cont-8{
+                        width: 40% ;
+                    }
+                }
+                #amount-cont-1, #amount-cont-5{
+                    width: auto;
+                }
+                /* CC / Payment */
+                #creditcard-header{
+                    display: block;
+                }
+                #accepted-ccs {
+                    width: 190px;
+                    margin: -45px 0 0 120px;
+                }
+                #cc-type-cont{
+                    margin-top: 0;
+                }
+                #cc-type-cont #accepted-ccs{
+                    padding-bottom: 30px;
+                }
+                #cc-number-cont {
+                    margin: -30px auto 0px;
+                }
+                #cc-expiration-cont {
+                    width: 60%;
+                    margin: 0px auto 10px auto;
+                }
+                #cc_expir_month{
+                    float:left;
+                }
+                /* Employement */
+                #employer-cont{
+                    margin-left: 18px;
+                }
+                #employer-cont, #occupation-cont{
+                    width: 45%;
+                    float: left;
+                    padding: 0 10px 0 0;
+                    margin-top: 10px;
+                    &.error{
+                        padding: 4px;
+                    }
+                }
+                #employer-occupation-helper{
+                    margin: 10px 0 0 0;
+                }
+                .form-section-header-cont.employer_related.occupation_related{
+                    margin-bottom: 55px;
+                }
+            }/* /#form-fields */
+            /* Submit */
+            #submit-button.fullform{
+                position: absolute;
+                bottom: 25px;
+            }
+        }/* /body.error */
+    }/* /body.sequential */
+}/* /.768 */
+

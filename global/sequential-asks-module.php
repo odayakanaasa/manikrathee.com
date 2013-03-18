@@ -1,7 +1,6 @@
 <aside id="donate-form-content">
-    <h2 class="header-title">Donate today</h2>
-    
-    <ul id="breadcrumbs" class="extra-header">
+    <ul id="breadcrumbs">
+        <h2 class="header-title">Donate today</h2>
         <li id="breadcrumb-amount" class="breadcrumb-item current">Amount<span>1</span></li>
         <li id="breadcrumb-name" class="breadcrumb-item">Name<span><hr>2</span></li>
         <li id="breadcrumb-payment" class="breadcrumb-item">Payment<span><hr>3</span></li>

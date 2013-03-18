@@ -15,6 +15,7 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<?php if ($section=='contribute') { echo '      <link rel="stylesheet" href="css/sequential.css" type="text/css" media="screen" />'; } ?>
 	<link rel="stylesheet" href="http://assets.manikrathee.com/global/fonts/symbolset/ss-standard.css" type="text/css" media="screen" />
 	<!-- TYPEKIT -->
     <script type="text/javascript" src="//use.typekit.net/zqq7yli.js"></script>

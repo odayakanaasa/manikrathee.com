@@ -1,6 +1,6 @@
 <?php $section='contribute'; $upper='white'; $project='true'; ?>
 <?php include('global/header.php'); ?>
-<body class="interior obama-contribute">
+<body class="interior obama-contribute sequential">
 	<div class="upper upper">
 	<?php include('global/nav.php'); ?>
 		<div class="container">
