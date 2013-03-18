@@ -1,18 +1,16 @@
-<?php $section='hope'; $upper='white'; $project='true'; ?>
+<?php $section='contribute'; $upper='white'; $project='true'; ?>
 <?php include('global/header.php'); ?>
 <body class="interior obama-contribute">
-	<div class="upper obama-contribute-upper">
+	<div class="upper upper">
 	<?php include('global/nav.php'); ?>
 		<div class="container">
 			<div class="row">
-				<div class="sevencol"></div>
-				<div class="fivecol last">
-					<div class="obama-contribute-title">
-						<img src="images/hope_heading.png">
-						<div class="subtitle">
-							typographic experiments
-						</div>
-					</div>
+				<div class="fivecol title">
+					<h1 class="header">Obama For America</h1>
+					<h2 class="header">Contribution Platform</h2>
+				</div>
+				<div class="sevencol last sequential">
+					<img src="images/interior_contribute-header_module.png" alt="Contribute.BarackObama.com">
 				</div>
 			</div><!-- END row -->
 		</div>
@@ -20,6 +18,8 @@
 	<div class="container body">
 		<div class="row section_spacer">
 			<div class="twelvecol last main-section">
+				<blockquote><span>We are being out-spent 4 to 1.</span>If we don’t make up the gap, we will lose this election.</blockquote>
+				<figcaption>Teddy Goff, Digital Director, Obama For America</figcaption>
 				<div class="left_col_inner">
 					<div class="article">
 						<div class="headline">

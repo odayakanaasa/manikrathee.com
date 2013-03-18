@@ -17,8 +17,8 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="http://assets.manikrathee.com/global/fonts/symbolset/ss-standard.css" type="text/css" media="screen" />
 	<!-- TYPEKIT -->
-	<script type="text/javascript" src="http://use.typekit.com/qyf3isq.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript" src="//use.typekit.net/zqq7yli.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <!--
     __  ___            _ __      ____        __  __            

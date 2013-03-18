@@ -1,9 +1,11 @@
 //@codekit-prepend "libs/jquery-1.8.2.min.js";
+
 //@codekit-prepend "libs/jquery.backstretch.js";
 //@codekit-prepend "libs/jquery.api.rdio.js";
 //@codekit-prepend "libs/jquery.api.twitter.js";
 //@codekit-prepend "libs/jquery.api.instagram.js";
 //@codekit-prepend "libs/jquery.twitter.js";
+
 //@codekit-prepend "libs/jquery.fittext.js";
 //@codekit-prepend "libs/jquery.flexslider.js";
 //@codekit-prepend "libs/jquery.prettyForms.js";
