@@ -333,7 +333,7 @@
             group2.removeClass('hide').fadeIn(1000);
             group3.removeClass('hide').fadeIn(1000);
             group4.not('#ovf-switch').removeClass('hide').fadeIn(1000);
-            replacementSubmit.html('<span id="processingform">Processing</span>Resubmit').removeClass('processingform').addClass('fullform');
+            replacementSubmit.html('<span id="processingform">Thanks for your fake donation</span>Resubmit').removeClass('processingform').addClass('fullform');
         }
 
         // Takes an object with two properties field and message. It finds the appropriate error element
@@ -518,7 +518,7 @@
                 if (!hasSavedPayment){
                     next.fadeIn(600);
                 }
-                replacementSubmit.html('<span id="processingform">Processing</span>Donate  $' + $this.parent().find("label").html().replace('$', ''));
+                replacementSubmit.html('<span id="processingform">Thanks for your fake donation</span>Donate  $' + $this.parent().find("label").html().replace('$', ''));
             }
         });
 
@@ -539,7 +539,7 @@
             if (!errorFullForm){
                 amountOther.on('blur.otherField', function(){
                     amountOtherClean = amountOther.text($(this).val().replace('$', '')).text();
-                    replacementSubmit.html('<span id="processingform">Processing</span>Donate  $' + amountOtherClean);
+                    replacementSubmit.html('<span id="processingform">Thanks for your fake donation</span>Donate  $' + amountOtherClean);
                 });
             }
         });
@@ -723,13 +723,11 @@
                     premature.css('bottom', bottomPx).text('Please correct your employment information.').fadeIn('800');
                 }
                 else{
-                    $('form').submit();
-                    replacementSubmit.html('<span id="processingform">Processing</span>Processing').addClass('processingform');
+                    replacementSubmit.html('<span id="processingform">Thanks for your fake donation</span>Processing').addClass('processingform');
                 }
             }
             else{
-                $('form').submit();
-                replacementSubmit.html('<span id="processingform">Processing</span>Processing').addClass('processingform');
+                replacementSubmit.html('<span id="processingform">Thanks for your fake donation</span>Processing').addClass('processingform');
             }
         });
     } // END 768 WIDTH CHECK

@@ -270,36 +270,7 @@
             </li>
             <li id="cc-expiration-cont" class="qd-info cc_expir_group_related">
                 <p class="cc_expir_group_error hidden error"></p>
-                <label for="cc_expir_month" class="cc_expir_group_related">*Expiration</label>
-                <select id="cc_expir_month" autocomplete="off" name="cc_expir_month" tabindex="24">
-                    <option value="">Month</option>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-                <select id="cc_expir_year" autocomplete="off" name="cc_expir_year" tabindex="25">
-                    <option value="">Year</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                </select>
+                <label id="dont-donate" for="cc_expir_month" class="cc_expir_group_related">*This panel has errors disabled. Please don't enter your credit card info. Seriously.</label>
             </li>
             
             <li id="employer-cont" class="personalized-info employer_related">
@@ -334,6 +305,6 @@
         </ul>
     </form>
     <a href="#" id="next" title="next"><p>Next</p></a>
-    <a href="#" id="submit-button" title="Submit"><span id="processingform">Processing</span>Submit</a>
+    <a href="#" id="submit-button" title="Submit"><span id="processingform">Thanks for your fake donation</span>Submit</a>
     <span class="premature">Please fill out all of the fields.</span>
 </aside><!--/.sequential-->
