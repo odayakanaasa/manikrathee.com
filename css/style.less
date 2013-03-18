@@ -521,8 +521,8 @@ p{font-size: 12px;line-height: 1.6;}
 		padding: 40px 0 50px 0;
 		blockquote{
 			width: 100%;
-			text-align: center;;
-			font-family: "jubilat",sans-serif;
+			text-align: center;
+			font-family: "jubilat",serif;
 			font-weight: 600;
 			font-style: italic;
 			line-height: 1;
@@ -549,6 +549,21 @@ p{font-size: 12px;line-height: 1.6;}
 			p, h4, h5{
 				color: #ECECEC;
 				text-shadow: none;
+			}
+		}
+		&.innovating{
+			background-image: url('../images/interior_contribute_ascii.png');
+			background-position: 50% 0;
+			background-repeat: no-repeat;
+		}
+		&.road-to-sequential{
+			.container{
+				background: url('../images/interior_contribute-road-to-sequential.png') no-repeat;
+				background-position: -4% 175px;
+			}
+			h4{
+				font-size: 45px;
+				font-weight: 100;
 			}
 		}
 		.inner-container{
@@ -583,7 +598,35 @@ p{font-size: 12px;line-height: 1.6;}
 	.live-sequential{
 		position: relative;
 		width: 445px;
+		max-width: 100%;
 		margin: 0 auto;
+		figcaption{
+			font-size: 12px;
+			line-height: 1.4;
+			width: 420px;
+			margin: 20px auto 0;
+			opacity: 0.7;
+		}
+	}
+	#donate-form-mobile{
+		display: block;
+		width: 100%;
+		padding: 0 20px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		#slider{
+			width: 90%;
+			margin: 10px auto 0;
+		}
+	}
+	#donate-form-content{
+		display: none;
+		width: 95%;
+		margin: 0 auto;
+	}
+	#donate-caption{
+		display: none;
 	}
 }
 
@@ -848,6 +891,31 @@ p{font-size: 12px;line-height: 1.6;}
 				font-size: 40px;
 				padding: 0;
 			}
+		}
+		.module{
+			&.innovating{
+				background-position: -10% 50%;
+			}
+			&.road-to-sequential{
+				.container{
+					background-position: 20px 0;
+				}
+				.inner-container{
+					float: right;
+					width: 500px;
+					max-width: 100%;
+				}
+			}
+		}
+		#donate-form-content{
+			display: block;
+			width: 100%;
+		}
+		#donate-caption{
+			display: block;
+		}
+		#donate-form-mobile{
+			display: none;
 		}
 	}
 }

@@ -302,37 +302,28 @@
                 </select>
             </li>
             
-            <li id="recurring-cont" class="hide">
-                <input name="recurring_acknowledge" id="recurring_acknowledge" type="checkbox" value="1" tabindex="26">
-                <label id="recurring_acknowledge-label" for="recurring_acknowledge"><span class="ofa-recur">Make this a monthly recurring donation.</span><span class="ovf-recur">Make this a monthly recurring donation.</span></label>
-            </li>
-            
             <li id="employer-cont" class="personalized-info employer_related">
                 <p class="employer_error hidden error"></p>
                 <label for="employer" class="employer_related">*Employer</label>
                 <input id="employer" type="text" class="text" name="employer" tabindex="27">
             </li>
+            
             <li id="occupation-cont" class="personalized-info occupation_related">
                 <p class="occupation_error hidden error"></p>
                 <label for="occupation" class="occupation_related">*Occupation</label>
                 <input id="occupation" type="text" class="text" name="occupation" tabindex="28">
             </li>
-            <li id="ovf-switch">
-                <p>Because of your contribution history, we are asking you to contribute to the Obama Victory Fund 2012 to support President Obama and Democrats across the country.</p>
-            </li>
-            <li id="employer-occupation-helper" class="personalized-info occupation_related">
-                <p>If you are retired, please enter "retired" in both fields.</p>
-            </li>
+           
             <li class="form-section-header-cont personalized-info employer_related occupation_related">
                 <h2 class="form-section-header" id="employment-header">Employment</h2>
                 <p class="employment-disclaimer"></p>
             </li><!--/#form-section-header-cont-->
+            
             <input id="BSDForm-quick_donate_populated" name="quick_donate_populated" type="hidden" value="0">
             
             <input type="hidden" value="https://my.barackobama.com/page/s/Thanks-Now-Volunteer" id="success_url" name="thank_you_override_url">
             
             <input id="source" type="hidden" name="source_codes" value="FE12_main_20130208_krr">
-            
             
             <input id="callback_host" name="callback_host" type="hidden" value="contribute.barackobama.com">
 

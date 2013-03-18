@@ -35,7 +35,7 @@
     var runValidation        = true;
     var minDonationLimit;
     var amountOtherClean;
-    
+    var keycode = false;
     // Enables Sequential To Fire
     $('body').addClass('sequential-active');
 
@@ -289,24 +289,6 @@
                     }
                 }
 
-                var creditcard = $('#cc_number');
-
-                if (!/[0-9]{13,19}|([0-9- ]{3,8}){3,6}/.test(
-                    creditcard.val())) {
-                    goNext = false;
-                    creditcard.addClass('error');
-                }
-
-                if ($('#cc_expir_month').val() === '') {
-                    goNext = false;
-                    $('#cc_expir_month').addClass('error');
-                }
-
-                if ($('#cc_expir_year').val() === '') {
-                    goNext = false;
-                    $('#cc_expir_year').addClass('error');
-                }
-
             }
 
             if (current === 4){
@@ -449,7 +431,7 @@
         $('.group1, .group2, .group3, .group4').addClass('hide');
         showContent();
         replacementSubmit.hide();
-        next.hide().attr('tabindex','19');
+        next.attr('tabindex','19');
         var currentInputs = $('.group' + current).find('input');
         group1.find('input').attr('checked', false);
 
@@ -720,13 +702,11 @@
                     if (keycode){
                         personalizedContent.removeClass('hide');
                     }
-                    $formContent.addClass('ovfSwitch');
                 }
             }
             if (current !== 4){
                 next.show();
                 replacementSubmit.hide();
-                $formContent.removeClass('ovfSwitch');
             }
             if (goNext){
                 premature.fadeOut(800);

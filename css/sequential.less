@@ -15,7 +15,7 @@
 @submit-green: #89cd46;
 @green: #81c341; 
 @error-red: #C41230;
-@slab-serif: "jubilat",sans-serif;
+@slab-serif: "jubilat", serif;
 @helvetica: "proxima-nova", helvetica, verdana, sans-serif;
 
 /* FORM BASE */
@@ -38,15 +38,15 @@
     }
 
     label {
-
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 14px;
+        margin: 0;
+        // font-size: 18px;
+        // font-weight: bold;
 
     }
 
     input.text, select {
-
-        width: 100%;
+        width: 90%;
         font-size: 20px;
 
     }
@@ -191,7 +191,7 @@ input:focus:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
         width: 385px;
         select {font-size: 14px;}
         input.text {font-size: 14px;}
-        #cc_number {font-family: Monaco, "Lucida Sans Unicode", monospace; font-size: 13px; letter-spacing: 1px; padding: 7px 4px;}
+        #cc_number {font-family: Monaco, "Lucida Sans Unicode", monospace; font-size: 13px; letter-spacing: 1px; padding: 0 4px;}
         label {font-size: 13px;}
         li.form-section-header-cont {width: 100%; clear: both;}
         #firstname-cont, #shipping_firstname-cont, #email-cont, #employer-cont {float: left;}
@@ -495,10 +495,9 @@ body.error{
         #donate-form-content{
             position: relative;
             background: #fff;
-            width: 385px;
+            width: 430px;
             height: auto;
             padding: 70px 0 0 0;
-            margin: 40px;
             overflow: hidden;
             border-radius: 4px;
             border: 1px solid #d8d8d8;
@@ -508,7 +507,7 @@ body.error{
             .header-title{
                 font-size: 16px;
                 text-align: center;
-                margin-top: 10px;
+                margin-top: 22px;
                 opacity: 0.6;
             }
             #loading-message{
@@ -536,6 +535,8 @@ body.error{
             margin: 0 auto ;
             label{
                 font-size: 14px;
+                margin: 0;
+                font-weight: bold;
             }
             input{
                 -webkit-transition: background-color 0.15s linear;
@@ -555,7 +556,7 @@ body.error{
             }
             /* Amounts */
             #select-amount-header{
-                margin-top: 20px;
+                margin-top: 100px;
             }
             #amounts-cont{
                 width: 315px;
@@ -646,7 +647,7 @@ body.error{
             }
             /* Credit Card & Payment */
             #cc-type-cont{
-                margin-top: -13px;
+                // margin-top: -13px;
             }
             #cc-number-cont, #cc-expiration-cont {
                 float: none;
@@ -736,13 +737,13 @@ body.error{
         /* body.sequential-active */
         &.sequential-active{
             #donate-form-content{
-                height: 425px;
+                height: 516px;
                 #donate-form{
                     margin: 80px auto 0;
                 }
             }
             p.secure{
-                top: 104px;
+                top: 132px;
             }
             /* Pull the standard submit button off screen */
             #submit-cont, input#submit{
@@ -756,6 +757,7 @@ body.error{
                 position:relative;
                 left:0;
                 opacity:1;
+                z-index: 999;
                 -webkit-transition: left 0.5s ease, opacity 1s ease;
                 -moz-transition: left 0.5s ease, opacity 1s ease;
                 transition: left 0.5s ease, opacity 1s ease;
@@ -766,6 +768,7 @@ body.error{
                     position:absolute;
                     left:-100%;
                     opacity:0;
+                    z-index: 0;
                     -webkit-transition: left 0.5s ease, opacity 0.15s ease;
                     -moz-transition: left 0.5s ease, opacity 0.15s ease;
                     transition: left 0.5s ease, opacity 0.15s ease;
@@ -810,6 +813,7 @@ body.error{
                     float: left;
                     /*width: 65px;*/
                     width: 80px;
+                    margin: 0 0 0 8px;
                     list-style-type: none;
                     text-align: center;
                     font-size: 14px;
@@ -820,6 +824,9 @@ body.error{
                     -webkit-transition:color 0.25s linear, background-color 0.25s linear;
                     -moz-transition:color 0.25s linear, background-color 0.25s linear;
                     transition:color 0.25s linear, background-color 0.25s linear;
+                    &#breadcrumb-amount{
+                        margin-left: 26px;
+                    }
                     hr{
                         background: #fff;
                         border-top: 1px solid #c9c9c9;
@@ -898,39 +905,36 @@ body.error{
             }
             /* Next And Submit */
             #next{
-                
-                .super-clickable-button(@color: 1297c9){
-                    background: @color;
-                    background-image: linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -webkit-gradient(
-                        linear,
-                        left bottom,
-                        left top,
-                        color-stop(0, rgba(0,0,0,0.1)),
-                        color-stop(1, rgba(255,255,255,0.1))
-                    );
-                    cursor: pointer;
-                    outline: none;
-                    padding: 5px 10px;
-                    border: 1px solid darken(@color, 2%);
-                    border-radius: 4px;
-                    box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2),
-                                        0px 1px 1px 1px darken(@color, 25%);
-                                        /* 0px 1px 1px 1px rgba(25, 84, 114, 1); */
-                    -webkit-transition: background-color 0.15s linear, box-shadow 0.15s linear;
-                    -moz-transition: background-color 0.15s linear, box-shadow 0.15s linear;
-                    transition: background-color 0.15s linear, box-shadow 0.15s linear;
-                    &:hover{
-                        background: @color;
-                    }
-                    &:active{
-                        background: darken(@color, 10%);
-                        box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-                    }
+                background: #1297c9;
+                background-image: linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -webkit-gradient(
+                linear,
+                left bottom,
+                left top,
+                color-stop(0, rgba(0,0,0,0.1)),
+                color-stop(1, rgba(255,255,255,0.1))
+                );
+                cursor: pointer;
+                outline: none;
+                padding: 5px 10px;
+                border: 1px solid darken(#1297c9, 2%);
+                border-radius: 4px;
+                box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2),
+                                    0px 1px 1px 1px darken(#1297c9, 25%);
+                                    /* 0px 1px 1px 1px rgba(25, 84, 114, 1); */
+                -webkit-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                -moz-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                &:hover{
+                    background: #1297c9;
+                }
+                &:active{
+                    background: darken(#1297c9, 10%);
+                    box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
                 }
                 position: absolute;
                 bottom: 20px;
@@ -939,6 +943,7 @@ body.error{
                 margin: 10px 0 0 -84px;
                 padding: 2px 10px;
                 width: 142px;
+                height: 50px;
                 -webkit-transition: background-color 0.15s ease-in-out, box-shadow 0.15s linear;
                 -moz-transition: background-color 0.15s ease-in-out, box-shadow 0.15s linear;
                 transition: background-color 0.15s ease-in-out, box-shadow 0.15s linear;
@@ -962,39 +967,36 @@ body.error{
                 margin: 10px 0 0 -116px;
                 /*display: block;*/
                 width: 190px;
-                
-                .super-clickable-button(@color: 89cd46){
-                    background: @color;
-                    background-image: linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
-                    background-image: -webkit-gradient(
-                        linear,
-                        left bottom,
-                        left top,
-                        color-stop(0, rgba(0,0,0,0.1)),
-                        color-stop(1, rgba(255,255,255,0.1))
-                    );
-                    cursor: pointer;
-                    outline: none;
-                    padding: 5px 10px;
-                    border: 1px solid darken(@color, 2%);
-                    border-radius: 4px;
-                    box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2),
-                                        0px 1px 1px 1px darken(@color, 25%);
-                                        /* 0px 1px 1px 1px rgba(25, 84, 114, 1); */
-                    -webkit-transition: background-color 0.15s linear, box-shadow 0.15s linear;
-                    -moz-transition: background-color 0.15s linear, box-shadow 0.15s linear;
-                    transition: background-color 0.15s linear, box-shadow 0.15s linear;
-                    &:hover{
-                        background: @color;
-                    }
-                    &:active{
-                        background: darken(@color, 10%);
-                        box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-                    }
+                background: #89cd46;
+                background-image: linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+                background-image: -webkit-gradient(
+                    linear,
+                    left bottom,
+                    left top,
+                    color-stop(0, rgba(0,0,0,0.1)),
+                    color-stop(1, rgba(255,255,255,0.1))
+                );
+                cursor: pointer;
+                outline: none;
+                padding: 5px 10px;
+                border: 1px solid darken(#89cd46, 2%);
+                border-radius: 4px;
+                box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.2),
+                                    0px 1px 1px 1px darken(#89cd46, 25%);
+                                    /* 0px 1px 1px 1px rgba(25, 84, 114, 1); */
+                -webkit-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                -moz-transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                transition: background-color 0.15s linear, box-shadow 0.15s linear;
+                &:hover{
+                    background: #89cd46;
+                }
+                &:active{
+                    background: darken(#89cd46, 10%);
+                    box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
                 }
                 padding: 10px 28px 10px 10px;
                 font-weight: bold;
@@ -1043,12 +1045,13 @@ body.error{
             }
             #amount-header{
                 font-family: @slab-serif;
+                font-weight: bold;
                 text-transform: none;
                 font-size: 16px;
                 /*color: #707070;*/
                 /* updated color to match WCAG Contrast Compliance */
                 color: #575757;
-                margin-top: 20px;
+                margin-top: 2px;
                 margin-left: 40px;
                 -webkit-transition:color 0.15s linear;
                 -moz-transition:color 0.15s linear;
@@ -1136,5 +1139,8 @@ body.error{
             }
         }/* /body.error */
     }/* /body.sequential */
+    #cc-number{
+        padding: 0 4px;
+    }
 }/* /.768 */
 

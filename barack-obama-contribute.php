@@ -22,7 +22,7 @@
 		</div>
 	</div><!-- /container.row.body -->
 				
-	<section class="module blue">
+	<section class="module blue innovating">
 		
 			<h4>Innovating for the Commander-In-Chief</h4>
 			
@@ -48,9 +48,80 @@
 		</div> <!-- /container row -->
 	</section><!-- /module blue -->
 	
+	
+				
+	<section class="module road-to-sequential">
+			<h4>The Road To Sequential</h4>
+		<div class="container row">
+			<div class="inner-container">
+				
+				<h5>STAGE 1</h5>
+				<p>We defined a few key points we needed to hit with new iterations of the page:</p>
+				<ol class="key-points">
+					<li>
+						<p class="subtitle">Difficulty</p>
+						<p>How hard is it to fill out the entire form? Are labels clear enough to avoid errors?</p>
+					</li>
+					<li>
+						<p class="subtitle">Effort</p>
+						<p>Is the form easy to fill out? How tough is the task if the user doesn’t have their credit card in from of them?</p>
+					</li>
+					<li>
+						<p class="subtitle">Enjoyment</p>
+						<p>Is the task of filling out this form terrible? How can we make it enjoyable for a user to get through each section?</p>
+					</li>
+					<li>
+						<p class="subtitle">Satisfaction</p>
+						<p>After a user donates, how can we reward them so the process is more satisfying? How can we show the impact they are making in this election?</p>
+					</li>
+					<li>
+						<p class="subtitle">Speed</p>
+						<p>On our end, how can we speed up our pages? We have a high barrier of entry for donations already, so we need the page load to be as quick as possible.</p>
+						<p>On the users’ end, how can we speed up the process? Since we can’t remove any fields, how can make the user perceive the entire process to be <em>significantly</em> faster?</p>
+					</li>
+					<li>
+						<p class="subtitle"></p>
+						<p></p>
+					</li>
+				</ol>
+
+			</div> 
+		</div> <!-- /container row -->
+		
+	</section><!-- /module -->
+	
+	
+	
 	<section class="module live-sequential">
 		
 		<?php include('global/sequential-asks-module.php'); ?>
+		<figcaption id="donate-caption">*Note: This form is now inactive and has been modified from it's original state. In order to see the official version, head to <a href="http://contribute.barackobama.com" title="Contribute.BarackObama.com">contribute.barackobama.com</a></figcaption>
+		
+		<div id="donate-form-mobile">
+			<p>On mobile, the form would collapse out of sequential to the standard full list of inputs. Here is a set of screenshots illustrating the progression through Sequential Donate</p>
+			
+			<div id="slider">
+				<div class="flexslider">
+				    <ul class="slides">
+				    	<li>
+				    		<img src="images/contribute_slides_1.jpg">
+				    	</li>
+				    	<li>
+				    		<img src="images/contribute_slides_2.jpg">
+				    	</li>
+				    	<li>
+				    		<img src="images/contribute_slides_3.jpg">
+				    	</li>
+				    	<li>
+				    		<img src="images/contribute_slides_4.jpg">
+				    	</li>
+				    </ul>
+			    </div>
+			</div>
+			
+			
+		</div> <!-- /donate-form-mobile -->
+		
 		
 	</section>
 				
