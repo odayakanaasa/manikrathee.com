@@ -319,101 +319,101 @@
         runValidation = true;
     }
 
-    // ERROR HIJACK
-    window.customError = function(errorObj){
-        errorFullForm = true;
-        amountOther.off('blur.otherField');
-        hasSavedPayment = false;
+    // // ERROR HIJACK
+    // window.customError = function(errorObj){
+    //     errorFullForm = true;
+    //     amountOther.off('blur.otherField');
+    //     hasSavedPayment = false;
 
-        $('body').addClass('error');
-        if ($(window).width() > 767){
-            breadcrumb.fadeOut(800);
-            premature.fadeOut(700);
-            group1.removeClass('hide').fadeIn(1000);
-            group2.removeClass('hide').fadeIn(1000);
-            group3.removeClass('hide').fadeIn(1000);
-            group4.not('#ovf-switch').removeClass('hide').fadeIn(1000);
-            replacementSubmit.html('<span id="processingform">Thanks for your fake donation</span>Resubmit').removeClass('processingform').addClass('fullform');
-        }
+    //     $('body').addClass('error');
+    //     if ($(window).width() > 767){
+    //         breadcrumb.fadeOut(800);
+    //         premature.fadeOut(700);
+    //         group1.removeClass('hide').fadeIn(1000);
+    //         group2.removeClass('hide').fadeIn(1000);
+    //         group3.removeClass('hide').fadeIn(1000);
+    //         group4.not('#ovf-switch').removeClass('hide').fadeIn(1000);
+    //         replacementSubmit.html('<span id="processingform">Thanks for your fake donation</span>Resubmit').removeClass('processingform').addClass('fullform');
+    //     }
 
-        // Takes an object with two properties field and message. It finds the appropriate error element
-        // for that form field and puts the message into it
-        function displayErrorMessage( errorPair ){
-            var $self = $('#donate-form');
-            var $errorFields = $self.find('[class*="_error"]');
-            var $relatedFields = $self.find('[class*="_related"]');
-            var $currentField = $errorFields.filter('.' + errorPair.field + '_error');
+    //     // Takes an object with two properties field and message. It finds the appropriate error element
+    //     // for that form field and puts the message into it
+    //     function displayErrorMessage( errorPair ){
+    //         var $self = $('#donate-form');
+    //         var $errorFields = $self.find('[class*="_error"]');
+    //         var $relatedFields = $self.find('[class*="_related"]');
+    //         var $currentField = $errorFields.filter('.' + errorPair.field + '_error');
 
-            if ( $currentField.length === 0 ) {
-                $self.find('[name="' + errorPair.field + '"]').before('<p class="error ' + errorPair.field + '_error"></p>');
-                $currentField = $self.find('.' + errorPair.field + '_error');
-            }
+    //         if ( $currentField.length === 0 ) {
+    //             $self.find('[name="' + errorPair.field + '"]').before('<p class="error ' + errorPair.field + '_error"></p>');
+    //             $currentField = $self.find('.' + errorPair.field + '_error');
+    //         }
 
-            $currentField.html( errorPair.message ).removeClass('hidden').addClass('error');
-            $self.find('#' + errorPair.field)
-                .add( $relatedFields.filter('.' + errorPair.field + '_related') )
-                    .addClass('error');
-        }
+    //         $currentField.html( errorPair.message ).removeClass('hidden').addClass('error');
+    //         $self.find('#' + errorPair.field)
+    //             .add( $relatedFields.filter('.' + errorPair.field + '_related') )
+    //                 .addClass('error');
+    //     }
         
-        function errorifyForm( donateError ){
+    //     function errorifyForm( donateError ){
 
-            var numErrors, i;
-            var ofaAPI = new win.ODonateAPIWrapper('');
+    //         var numErrors, i;
+    //         var ofaAPI = new win.ODonateAPIWrapper('');
             
-            if ( donateError.code ) {
-                switch ( donateError.code ) {
-                    case ofaAPI.VALIDATION_FAILURE :
-                        numErrors = donateError.field_errors.length;
-                        for ( i=0; i < numErrors; i++ ) {
-                            displayErrorMessage( donateError.field_errors[i] );
-                        }
-                        displayErrorMessage({
-                            field : 'general',
-                            message : '<strong>Error:</strong> Please correct the problems marked in the form and submit your donation again.'
-                        });
-                        break;
-                    case ofaAPI.CONFIRMATION_FAILURE :
-                        displayErrorMessage({
-                            field : 'general',
-                            message : '<strong>Error:</strong> Please try to submit your donation again.'
-                        });
-                        break;
-                    case ofaAPI.INVALID_SLUG_ERROR :
-                        displayErrorMessage({
-                            field : 'general',
-                            message : '<strong>Error:</strong> Please try to submit your donation again.'
-                        });
-                        break;
-                    case ofaAPI.NO_SLUG_ERROR :
-                        displayErrorMessage({
-                            field : 'general',
-                            message : '<strong>Error:</strong> Please try to submit your donation again.'
-                        });
-                        break;
-                    case ofaAPI.SERVER_ERROR :
-                        displayErrorMessage({
-                            field : 'general',
-                            message : '<strong>Error:</strong> Please try to submit your donation again.'
-                        });
-                        break;
-                    case ofaAPI.GATEWAY_ERROR :
-                        displayErrorMessage({
-                            field : 'general',
-                            message : '<strong>Error:</strong> The transaction was declined. Please verify the information below or try a different credit card.'
-                        });
-                        break;
-                    default:
-                        displayErrorMessage({
-                            field : 'general',
-                            message : '<strong>Error:</strong> Please try to submit your donation again.'
-                        });
-                        break;
-                }
-                $('body').addClass('error');
-            }
-        }
-        errorifyForm($.parseJSON(errorObj.responseText));
-    };
+    //         if ( donateError.code ) {
+    //             switch ( donateError.code ) {
+    //                 case ofaAPI.VALIDATION_FAILURE :
+    //                     numErrors = donateError.field_errors.length;
+    //                     for ( i=0; i < numErrors; i++ ) {
+    //                         displayErrorMessage( donateError.field_errors[i] );
+    //                     }
+    //                     displayErrorMessage({
+    //                         field : 'general',
+    //                         message : '<strong>Error:</strong> Please correct the problems marked in the form and submit your donation again.'
+    //                     });
+    //                     break;
+    //                 case ofaAPI.CONFIRMATION_FAILURE :
+    //                     displayErrorMessage({
+    //                         field : 'general',
+    //                         message : '<strong>Error:</strong> Please try to submit your donation again.'
+    //                     });
+    //                     break;
+    //                 case ofaAPI.INVALID_SLUG_ERROR :
+    //                     displayErrorMessage({
+    //                         field : 'general',
+    //                         message : '<strong>Error:</strong> Please try to submit your donation again.'
+    //                     });
+    //                     break;
+    //                 case ofaAPI.NO_SLUG_ERROR :
+    //                     displayErrorMessage({
+    //                         field : 'general',
+    //                         message : '<strong>Error:</strong> Please try to submit your donation again.'
+    //                     });
+    //                     break;
+    //                 case ofaAPI.SERVER_ERROR :
+    //                     displayErrorMessage({
+    //                         field : 'general',
+    //                         message : '<strong>Error:</strong> Please try to submit your donation again.'
+    //                     });
+    //                     break;
+    //                 case ofaAPI.GATEWAY_ERROR :
+    //                     displayErrorMessage({
+    //                         field : 'general',
+    //                         message : '<strong>Error:</strong> The transaction was declined. Please verify the information below or try a different credit card.'
+    //                     });
+    //                     break;
+    //                 default:
+    //                     displayErrorMessage({
+    //                         field : 'general',
+    //                         message : '<strong>Error:</strong> Please try to submit your donation again.'
+    //                     });
+    //                     break;
+    //             }
+    //             $('body').addClass('error');
+    //         }
+    //     }
+    //     errorifyForm($.parseJSON(errorObj.responseText));
+    // };
 
     // Check browser width and enable  for widths higher than 768
     if ($(window).width() > 767 && $('body').hasClass('sequential-active')){
@@ -652,26 +652,14 @@
             next.focus();
             validateForm();
 
-            if (goNext && hasSavedPayment){
-                showContent();
-                current = 4;
-                updateBreadcrumb(current);
-                showContent();
-                $('.employer_related.occupation_related, #employer-cont, #occupation-cont').hide();
-                $('#personalized-content').fadeIn(800);
-                next.hide();
-                replacementSubmit.css('display','block').fadeIn(1000);
-                $formContent.addClass('ovfSwitch');
-            }
-
-            else if (goNext) {
+           
+            if (goNext) {
                 premature.fadeOut('1200');
                 showContent();
                 current++;
                 if (current >= 4){
                     current = 4;
                 }
-
                 showContent();
                 updateBreadcrumb(current);
 
@@ -715,7 +703,6 @@
 
         // Validated last screen with submit button then submit form
         replacementSubmit.click(function(i){
-            var bottomPx = $('body').hasClass('ovfSwitch') ? '182px' : '112px';
             i.preventDefault();
             if (!$("body").hasClass("error")) {
                 validateForm();

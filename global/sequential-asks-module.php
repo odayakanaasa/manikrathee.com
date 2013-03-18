@@ -299,7 +299,7 @@
             <input id="callback_host" name="callback_host" type="hidden" value="contribute.barackobama.com">
 
             <li id="submit-cont" class="hide">
-                <p id="processing-indicator">Processing...</p>
+                <p id="processing-indicator">Thanks for your fake donation</p>
                 <input type="submit" value="Submit" id="submit-hidden" tabindex="29">
             </li>
         </ul>
