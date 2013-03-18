@@ -10,38 +10,49 @@
 					<h2 class="header">Contribution Platform</h2>
 				</div>
 				<div class="sevencol last sequential">
-					<img src="images/interior_contribute-header_module.png" alt="Contribute.BarackObama.com">
+					<img src="images/interior_contribute_header_module.png" alt="Contribute.BarackObama.com">
 				</div>
 			</div><!-- END row -->
 		</div>
 	</div>
-	<div class="container body">
-		<div class="row section_spacer">
-			<div class="twelvecol last main-section">
-				<blockquote><span>We are being out-spent 4 to 1.</span>If we don’t make up the gap, we will lose this election.</blockquote>
-				<figcaption>Teddy Goff, Digital Director, Obama For America</figcaption>
-				<div class="left_col_inner">
-					<div class="article">
-						<div class="headline">
-							<h3 class="fit">Typography &amp; Music</h3>
-						</div>
-						<p>Hope Will See Us Through is a side project I started early this year. I was listening to a song, <a href="http://www.last.fm/music/Bayside/Killing+Time/It%27s+Not+A+Bad+Little+War" title="It's Not A Bad Little War by Bayside" target="_blank">Its Not A Bad Little War by Bayside</a>, for what must have been the thousandth time. At some point in the breakdown, I realized that I had listened to it over and over, but I had never actually <em>heard</em> it.</p>
-					
-						<p>It was at this moment that I chose the very next line and decided to create a typographic blog dedicated to bringing lyrics to life. And so, HOPE was born.</p>
-					</div>
-					<div class="article">	
-						<div class="headline">
-							<h2 class="fit">Process</h2>
-						</div>
-						<p>I originally intended to create a new piece every week. This plan quickly changed because I realized that just picking a line in a song and making a piece out of it wasn’t what I really wanted.</p>
-					
-						<p>I wanted to take music that meant something to me and really feel it. Take a line that could send shudders down your spine and make it immortal.</p>
-					
-						<p>This is why my updates have become erratic. I won’t update just for the sake of updating. I’ll update when a song strikes me and I will listen to that song for hours while I sketch. At some point,  lyrics work their way into the sketches and thats when they make their way onto the screen.</p>
-					</div>
-				</div>
-			</div>
-		</div><!-- END row -->
+	<div class="container row body">
+		<div class="intro">
+			<blockquote><span>We are being out-spent 4 to 1.</span>If we don’t make up the gap, we will lose this election.</blockquote>
+			<figcaption>Teddy Goff, Digital Director, Obama For America</figcaption>
+		</div>
+	</div><!-- /container.row.body -->
+				
+	<section class="module blue">
 		
-	</div><!-- END container -->	
+			<h4>Innovating for the Commander-In-Chief</h4>
+			
+		<div class="inner-container">
+			
+			<p>We had a tough problem to solve. We had the support of a massive network of grassroots supporters giving between $5 and $50 when asked, but that wasn’t enough. We needed to make online donations easier, faster and more accessible.</p>
+
+			<p>We needed to take more risks.</p>
+
+			<p>The first question that came to my mind was: ‘How do we innovate on a fundraising platform that, because of the 2008 campaign, was already perceived as successful?’</p>
+
+			<h5>ESTABLISHING A BASIS</h5>
+
+			<p>We had starting information in the form of best practices and early-stage testing to validate our hypothesis but we had to decide whether we could run larger changes and estimate gains/losses based on this data. We didn’t have time to continue testing every little change. We had to be smarter and faster &mdash; we had to couple changes together and read the data in a more comprehensive way.</p>
+
+			<p>The standard web-form had not been drastically changed in years. People have tried modifying basic inputs and styles but the results have either been impossible to use or a step-back visually. </p>
+
+			<p>We needed to figure out a way to improve it and reduce the barrier of entry for all users. This was a unique challenge because our target audience could vary from a young supporter that works on computers for a living to a 48 year-old mother of two that is a partner at a law firm. Being able to build a single experience that can both excite any type of user &amp; allow them to easily fill out the form is not an easy thing to accomplish.</p>
+
+			<p>We did, however, have a great advantage: an un-ending audience to run a/b tests on and a fresh flow of volunteers for user research.</p>
+
+			<p>So, we started taking larger, smarter risks.</p>
+		</div> <!-- /container row -->
+	</section><!-- /module blue -->
+	
+	<section class="module live-sequential">
+		
+		<?php include('global/sequential-asks-module.php'); ?>
+		
+	</section>
+				
+		
 	<?php include('global/footer.php'); ?>

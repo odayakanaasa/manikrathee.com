@@ -208,57 +208,6 @@ p{font-size: 12px;line-height: 1.6;}
 	margin-top: 200px;
 }
 
-/* BARACK OBAMA - CONTRIBUTE */
-.obama-contribute{
-	background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;
-	.upper{
-		background: #00436B url(../images/interior-contribute-upper.jpg) 50% 0 no-repeat;
-		text-shadow: 1px 1px 0 #003453;
-		height: 530px;
-		display: block;
-		position: relative;
-		.sequential{
-			img{
-				position: absolute;
-				bottom: 0;
-			}
-		}
-	}
-	.title{
-		margin-top: 100px;
-		text-align: center;
-		h1, h2{
-			text-transform: uppercase;
-			line-height: 1;
-			margin: 0;
-			color: #fff;
-			text-shadow: none;
-		}
-		h1{
-			font-size: 30px;
-			font-weight: 100;
-		}
-		h2{
-			font-size: 23px;
-			font-weight: 700;
-		}
-	}
-	.main-section{
-		padding-bottom: 10px;
-		margin-bottom: 10px;
-		border-bottom: 1px solid rgba(0,0,0,0.2);
-	}
-	.left-section{
-		p{
-			line-height: 1.2;
-		}
-		h3, h4{
-			margin-bottom: 8px;
-		}
-	}
-}
-
-
 
 /* BLOG - INTERIOR */
 .blog{background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;}
@@ -524,6 +473,116 @@ p{font-size: 12px;line-height: 1.6;}
 	}
 }
 
+
+/* BARACK OBAMA - CONTRIBUTE */
+.obama-contribute{
+	background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;
+	font-family: "proxima-nova", helvetica, verdana, sans-serif;
+	.upper{
+		background: #00436B url(../images/interior_contribute_upper.jpg) no-repeat;
+		background-position: 20% 0;
+		text-shadow: 1px 1px 0 #003453;
+		height: 435px;
+		display: block;
+		position: relative;
+		-webkit-transition: background-position 0.25s linear;
+		-moz-transition: background-position 0.25s linear;
+		transition: background-position 0.25s linear;
+		.sequential{
+			text-align: center;
+			img{
+				.animate;
+				.delay;
+				.fadeInUp;
+				width: 252px;
+				margin-top: 49px;
+			}
+		}
+	}
+	.title{
+		text-align: center;
+		h1, h2{
+			text-transform: uppercase;
+			line-height: 1;
+			margin: 0;
+			color: #fff;
+			text-shadow: none;
+		}
+		h1{
+			font-size: 30px;
+			font-weight: 100;
+		}
+		h2{
+			font-size: 23px;
+			font-weight: 600;
+		}
+	}
+	.intro{
+		padding: 40px 0 50px 0;
+		blockquote{
+			width: 100%;
+			text-align: center;;
+			font-family: "jubilat",sans-serif;
+			font-weight: 600;
+			font-style: italic;
+			line-height: 1;
+			font-size: 25px;
+			padding: 0 20px;
+			span{
+				display: block;
+			}
+		}
+		figcaption{
+			width: 100%;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 300;
+			margin: 30px 0 0 0;
+		}
+	}
+	.module{
+		padding: 80px 0;
+		&.blue{
+			background: #00416E;
+			color: #ECECEC;
+			p, h4, h5{
+				color: #ECECEC;
+				text-shadow: none;
+			}
+		}
+		.inner-container{
+			width: 550px;
+			margin: 0 auto;
+			max-width: 100%;
+			border-top: 1px solid rgba(255,255,255,0.2);
+			padding: 20px 20px 0 20px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			p{
+				font-size: 14px;
+				line-height: 1.6;
+				font-weight: 300;
+			}
+		}
+		h4{
+			width: 100%;
+			padding-bottom: 20px;
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: 100;
+			font-size: 30px;
+		}
+		h5, .subtitle{
+			font-size: 18px;
+			font-weight: 600;
+			margin: 20px 0;
+		}
+	}
+}
+
+
 /*  404  */
 .fourohfour{text-align:center;text-shadow:1px 1px 0 #fff;padding:12% 0 0 0;}
 .fourohfour h1{font-family:"freight-sans-pro",sans-serif;font-size:60px;font-weight:100;padding-bottom:40px;}
@@ -753,6 +812,39 @@ p{font-size: 12px;line-height: 1.6;}
 			}
 		}
 	}
+	
+	/* BARACK OBAMA - CONTRIBUTE */
+	.obama-contribute{
+		.upper{
+			background-position: 50% 0;
+			height: 435px;
+			.sequential{
+				text-align: right;
+				img{
+					float: right;
+					margin-top: 122px;
+					width: 420px;
+				}
+			}
+		}
+		.title{
+			margin-top: 345px;
+			h1{
+				font-size: 20px;
+				font-weight: 100;
+			}
+			h2{
+				font-size: 16px;
+				font-weight: 600;
+			}
+		}
+		.intro{
+			blockquote{
+				font-size: 40px;
+				padding: 0;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 940px){
@@ -770,6 +862,24 @@ p{font-size: 12px;line-height: 1.6;}
 			-webkit-column-gap: 35px;
 			column-count: 3;
 			column-gap: 35px;
+		}
+	}
+	
+	/* BARACK OBAMA - CONTRIBUTE */
+	.obama-contribute{
+		.upper{
+			background-position: 0 0;
+		}
+		.title{
+			margin-top: 345px;
+			h1{
+				font-size: 30px;
+				font-weight: 100;
+			}
+			h2{
+				font-size: 23px;
+				font-weight: 600;
+			}
 		}
 	}
 }
