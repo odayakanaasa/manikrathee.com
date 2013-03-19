@@ -18,7 +18,7 @@
 	<div class="container row body">
 		<div class="intro">
 			<blockquote><span>We are being out-spent 4 to 1.</span>If we don’t make up the gap, we will lose this election.</blockquote>
-			<figcaption>Teddy Goff, Digital Director, Obama For America</figcaption>
+			<figcaption>Teddy Goff, Digital Director, Obama For America - April 2012</figcaption>
 		</div>
 	</div><!-- /container.row.body -->
 				

@@ -12,6 +12,9 @@
 	<meta name="author" content="Manik Rathee">
     <meta name="keyword" content="manik, manik rathee, design, designer, developer, ux, user experience, frontend">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <meta property="og:title" content="Manik Rathee">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.manikrathee.com">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
