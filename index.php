@@ -26,7 +26,7 @@
 /_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/ 
 -->
 <body id="home">
-	<a id="net-awards" href="#" title="Nominated for .NET Awards Young Designer of the Year">Nominated for .NET Awards Young Designer of the Year</a>
+	<a id="net-awards" href="http://www.thenetawards.com/" title="Nominated for .NET Awards Young Designer of the Year">Nominated for .NET Awards Young Designer of the Year</a>
 	<div class="container">
 		<?php include('global/nav.php'); ?>
 		<section class="copy">
