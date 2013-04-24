@@ -70,7 +70,7 @@ var LastFMStatus = {
       message  = '<strong>'+this.trackInfo.message+'</strong>';
     } else {
       status = this.trackInfo.playing ? 'Now Playing: ' : 'Last Played: ';
-      message  = '<div><p>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</p></div>';
+      message  = '<span class="ss-icon logo">rdio</span><div><p>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</p></div>';
     }
     statusBox.innerHTML = message;
     

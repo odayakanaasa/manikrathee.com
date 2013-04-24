@@ -38,7 +38,7 @@ function logofyAPI(){
         	$(".social-api").prepend('<span class="ss-icon logo"></span>');
         	twitterAPI.find('span.logo').prepend(twitterID);
         	instagramAPI.find('span.logo').prepend(instagramID);
-        	rdioAPI.find('span.logo').prepend(rdioID);
+        	// rdioAPI.find('span.logo').prepend(rdioID);
         	readmillAPI.find('span.logo').prepend(readmillID);
         	// centerAPI();
             activateAPI();
