@@ -16,7 +16,7 @@ if ( $('body').attr('id') === 'home' ){
     var originalRdio = window.rdio;
     window.R = window.rdio = window.__rdio = {
       _config: {
-        client_id: "k9c4TK7rv2Ezm6oW6jHrJQ",
+        client_id: "JkQ9oKroxXdL2sjeGErpng",
         helper: "helper.html",
         iframe: "http://www.rdio.com/api/iframe/", 
         oauth2: "https://www.rdio.com/oauth2/authorize",
@@ -113,6 +113,4 @@ if ( $('body').attr('id') === 'home' ){
       }
     })
   });
-  
-  
 }
