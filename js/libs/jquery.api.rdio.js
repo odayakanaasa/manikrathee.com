@@ -7,11 +7,6 @@ if ( $('body').attr('id') === 'home' ){
       document.getElementsByTagName('head')[0].appendChild(js);
     }
     
-    
-    // We create the bare minimum R here, with stubs for things that can be
-    // called before the real initialization, as well as client-specific
-    // configuration data. Then we load the real implementation script, 
-    // which gets cached, minimized, versioned, etc, like normal. 
     var originalR = window.R;
     var originalRdio = window.rdio;
     window.R = window.rdio = window.__rdio = {
