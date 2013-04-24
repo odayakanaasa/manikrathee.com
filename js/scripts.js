@@ -1,9 +1,9 @@
 //@codekit-prepend "libs/jquery-1.8.2.min.js";
-
 //@codekit-prepend "libs/jquery.backstretch.js";
-//@codekit-prepend "libs/jquery.api.rdio.js";
+
 //@codekit-prepend "libs/jquery.api.twitter.js";
 //@codekit-prepend "libs/jquery.api.instagram.js";
+//@codekit-prepend "libs/jquery.api.last.fm.js";
 //@codekit-prepend "libs/jquery.twitter.js";
 
 //@codekit-prepend "libs/jquery.fittext.js";
@@ -15,7 +15,7 @@
 //@codekit-prepend "libs/withinViewport.js";
 //@codekit-prepend "libs/jquery.withinViewport.js";
 
-// "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js", "libs/jhere.js";
+// "libs/ss-social.js", "libs/ss-standard.js", "libs/jquery.lettering.js", "libs/jhere.js", "libs/jquery.api.rdio.js";
 
 //Social API Vars
 var twitterAPI = $('#twitter');
@@ -28,7 +28,9 @@ var rdioID = $('#rdio').prop('id');
 var readmillID = $('#readmill').prop('id');
 
 $('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/these-days" title="These Days - Jack Cheng">These Days</a></p></div>');
-
+LastFMStatus.init({
+    username: "mrathee"
+});
 // This adds the logo spans which are targetted with symbolset. It is called in api.twitter.js after twitter.html();
 function logofyAPI(){
     setTimeout(function(){
@@ -36,7 +38,7 @@ function logofyAPI(){
         	$(".social-api").prepend('<span class="ss-icon logo"></span>');
         	twitterAPI.find('span.logo').prepend(twitterID);
         	instagramAPI.find('span.logo').prepend(instagramID);
-        	// rdioAPI.find('span.logo').prepend(rdioID);
+        	rdioAPI.find('span.logo').prepend(rdioID);
         	readmillAPI.find('span.logo').prepend(readmillID);
         	// centerAPI();
             activateAPI();
