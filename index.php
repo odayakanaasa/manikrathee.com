@@ -70,7 +70,7 @@
 	<div id="rdio" class="social-api rdio"></div>
 	<div id="readmill" class="social-api readmill"></div>
 	
-	<script src="https://rdio.com/api/api.js?client_id=JkQ9oKroxXdL2sjeGErpng"></script>
+	<script src="https://rdio.com/api/api.js?client_id=k9c4TK7rv2Ezm6oW6jHrJQ"></script>
 	<script src="js/scripts-ck.js"></script>
 	
 </body>
