@@ -114,8 +114,8 @@ p{font-size: 12px;line-height: 1.6;}
 .interior h1{} 
 .interior h2,h3,h4{font-size: 45px;text-transform: uppercase;color:#333333;text-shadow:1px 1px 0 #fff;font-weight:500;display: block;}
 .interior h4{font-size: 30px;}
-.interior a{color:#000;text-decoration:none;}
-.interior a:hover{color:#777;text-decoration:none;}	
+.interior a:not(.button){color:#000;text-decoration:none;}
+.interior a:not(.button):hover{color:#777;text-decoration:none;}	
 .interior p{font-size: 14px;line-height: 1.8;margin-bottom:20px;}
 .interior{
 	.container.body{
@@ -149,7 +149,7 @@ p{font-size: 12px;line-height: 1.6;}
 .hope_title{margin:250px 20px 0 0;}
 .hope_title .subtitle{font-size:13px;}
 .hope .no_margin{margin-right: 0 !important;}
-.hope div:hover a{color: #4684CF;}
+.hope div:hover a:not(.button){color: #4684CF;}
 .hope_slides{width:90%;margin:0 auto 40px auto;}
 
 /*MR PHOTOGRAPHY - INTERIOR */
@@ -174,7 +174,7 @@ p{font-size: 12px;line-height: 1.6;}
 .wrap_title .subtitle{text-align:center;margin-top:-20px;padding:0 0 50px 0;font-size:14px;text-shadow:1px 1px 0 #A63A1A}
 .wrapskins_slider_outer{width:350px;margin:0 auto;height:450px;}
 .wrapskins_slider_inner{width:310px;margin:-265px auto 0 auto;}
-.wrap div:hover a{color: #EF5227;}
+.wrap div:hover a:not(.button){color: #EF5227;}
 
 
 /*CATALYST - INTERIOR */
@@ -188,7 +188,7 @@ p{font-size: 12px;line-height: 1.6;}
 .catalyst_icon_row .catalyst_iconset_copy{padding:10px 0;width:100%;}
 .catalyst_icon_row .catalyst_iconset_copy h4{font-size:25px;text-transform:uppercase;}
 .catalyst_icon_row .catalyst_iconset_copy p{}
-.catalyst div:hover a{color: #EF5227;}
+.catalyst div:hover a:not(.button){color: #EF5227;}
 
 
 /* LIVESCRIBE - INTERIOR */
@@ -831,7 +831,7 @@ p{font-size: 12px;line-height: 1.6;}
 		}
 		.title{
 			margin-top: 250px;
-			margin-left: 115px;
+			// margin-left: 115px;
 			width: auto;
 			text-align: left;
 		}
