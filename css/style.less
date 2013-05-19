@@ -286,13 +286,23 @@ p{font-size: 12px;line-height: 1.6;}
 		// margin-bottom: 30px;
 		list-style-type: none;
 		li{
-			// border-bottom: 1px solid rgba(0,0,0,0.2);
-			// margin-bottom: 20px;
-			// padding-bottom: 20px;
+			margin-bottom: 15px;
+			&:last-child{
+				margin-bottom: 40px;
+			}
+		}
+		.ss-icon{
+			display: block;
+			float: left;
+			font-size: 12px;
+			padding: 4px 5px 20px 0;
+			opacity: 0.5;
+		}
+		a, p{
+			font-size: 14px;
 		}
 		a{
-			font-size: 14px;
-			color: #333;
+			color: lighten(#000, 40%);
 			border: none;
 			line-height: 1;
 			span{
@@ -300,12 +310,13 @@ p{font-size: 12px;line-height: 1.6;}
 				font-size: 12px;
 				font-style: italic;
 				color: #666;
-				// margin-bottom: 10px;
+			}
+			&:hover{
+				color: #000;
 			}
 		}
 		p{
 			line-height: 1.2;
-			font-size: 14px;
 			margin-bottom: 0;
 		}
 	}
@@ -919,30 +930,6 @@ p{font-size: 12px;line-height: 1.6;}
 			}
 			#i-run{
 				margin: 0 26px 0 50px;
-			}
-		}
-		ul#published-list{
-			li{
-				margin-bottom: 15px;
-				&:last-child{
-					margin-bottom: 40px;
-				}
-			}
-			.ss-icon{
-				display: block;
-				float: left;
-				font-size: 12px;
-				padding: 4px 5px 20px 0;
-				opacity: 0.5;
-			}
-			a, p{
-				font-size: 14px;
-			}
-			a{
-				color: lighten(#000, 40%);
-				&:hover{
-					color: #000;
-				}
 			}
 		}
 		#map{
