@@ -311,10 +311,14 @@ p{font-size: 12px;line-height: 1.6;}
 	}
 	.fact-container{
 		width: 100%;
-		padding: 30px 0;
+		background: rgb(31, 31, 31);
+		padding: 50px 0;
 		margin: 40px 0 0;
+		color: darken(#fff, 10%);
+		text-shadow: 0 1px 0 #000;
 		border-top: 1px solid #D9D9D9;
 		border-bottom: 1px solid #D9D9D9;
+		
 	}
 	figcaption{
 		font-size: 13px;
@@ -329,7 +333,7 @@ p{font-size: 12px;line-height: 1.6;}
 		text-align: center;
 		text-transform: uppercase;
 		line-height: 1;
-		margin: 0;
+		margin: 0 0 25px 0;
 		padding: 0;
 	}
 	#about-data{
@@ -783,9 +787,11 @@ p{font-size: 12px;line-height: 1.6;}
 #top{
 	width: 85px;
 	display: block;
-	text-align: center;
 	padding: 20px 0;
 	margin: 0 auto;
+	text-align: center;
+	font-size: 25px;
+	line-height: 1;
 	opacity: 0.3;
 	-webkit-transition: color 0.25s linear, opacity 0.25s linear;
 	-moz-transition: color 0.25s linear, opacity 0.25s linear;
@@ -793,10 +799,11 @@ p{font-size: 12px;line-height: 1.6;}
 	&:hover{
 		opacity: 1;
 	}
-	span{
-		display: block;
-		margin-top: 8px;
-	}
+	// span{
+		// .ir;
+		// display: block;
+		// margin-top: 8px;
+	// }
 }
 
 
@@ -806,7 +813,6 @@ p{font-size: 12px;line-height: 1.6;}
 			background: #2a2529 url(../images/about-heading-small.jpg) no-repeat 50% 50%;
 		}
 		.title{
-			
 			margin-top: 250px;
 			margin-left: 115px;
 			width: auto;
@@ -884,6 +890,15 @@ p{font-size: 12px;line-height: 1.6;}
 		}
 		.title{
 			margin-top: 400px;
+		}
+		.main-section{
+			h3{
+				margin-bottom: 10px;
+			}
+			p{
+				font-size: 13px;
+				line-height: 1.8;
+			}
 		}
 		.social-links{
 			max-width: 245px;
