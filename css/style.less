@@ -87,23 +87,29 @@ p{font-size: 12px;line-height: 1.6;}
 
 
 /* ///  INTERIOR  //// */
-.button{
+.button, a.button, .interior a.button{
 	display: block;
-	background:#000 url(../images/button_bg.jpg) repeat-x;
+	// background:#000 url(../images/button_bg.jpg) repeat-x;
+	background: transparent;
+	border: 1px solid rgba(0,0,0,0.6);
 	border-radius: 5px; 
-	width:155px;
-	text-align:center;
-	color:#fff !important;
-	text-shadow:1px 1px 0 #000;
-	font-weight:500;
-	text-transform:uppercase;
-	padding:5px 0;
+	width: 155px;
+	text-align: center;
+	color: rgba(0,0,0,0.6);
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 5px 0;
 	font-size: 12px;
 	margin-bottom: 30px;
+	-webkit-transition: color 0.25s ease-in-out, background 0.25s ease-in-out, border 0.25s ease-in-out;
+	-moz-transition: color 0.25s ease-in-out, background 0.25s ease-in-out, border 0.25s ease-in-out;
+	transition: color 0.25s ease-in-out, background 0.25s ease-in-out, border 0.25s ease-in-out;
+	&:hover{ 
+		background: rgba(0,0,0,0.8);
+		border-color: rgba(0,0,0,1);
+		color: #fff;
+	}    
 }
-.button:hover{background:#000 url(../images/button_bg_hover.jpg) repeat-x;}
-.button a{text-decoration:none;}
-.button a:hover{text-decoration:none;}
 
 .interior h1{} 
 .interior h2,h3,h4{font-size: 45px;text-transform: uppercase;color:#333333;text-shadow:1px 1px 0 #fff;font-weight:500;display: block;}
