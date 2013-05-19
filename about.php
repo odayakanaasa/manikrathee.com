@@ -34,20 +34,28 @@
 			</div>
 			<div class="onecol"></div>
 			<div class="fivecol left-section">
-				<h4>Words</h4>
+				<h4>Interviews and More</h4>
 				<p>I have had the privilege of being interviewed, having my worked featured and appearing on some podcasts. Here are a select few of those:</p>
 				<ul id="published-list">
 					<li>
-						<a class="published-title" href="http://search.barnesandnoble.com/Graphic-Design-Solutions/Robin-Landa/e/9781133945529" title="Graphic Design Solutions">Graphic Design Solutions<span>Robin Landa</span></a>
-						<p>Robin is a distinguished author and professor of Graphic Design at Kean University in New Jersey. She approached me in mid-2012 to include some of my work in her latest book about graphic design solutions.</p>
+						<span class="ss-icon">book</span>
+						<a class="published-title" href="http://www.amazon.com/Build-Your-Own-Brand-Strategies/dp/1440324557/" title="Build Your Own Brand">Build Your Own Brand<span>Robin Landa</span></a>
 					</li>
 					<li>
+						<span class="ss-icon">video</span>
+						<a class="published-title" href="https://www.youtube.com/watch?v=RlMpaGBFguM" title="Manik Rathee, Kean Graduate works for Obama Campaign" itemprop="url">Kean Graduate Works For Obama<span>Kean University</span></a>
+					</li>
+					<li>
+						<span class="ss-icon">file</span>
+						<a class="published-title" href="http://www.netmagazine.com/features/net-awards-2013-top-10-young-designers" title=".net Awards 2013: top 10 young designers" itemprop="url">.net Awards 2013: Top 10 Young Designers<span>.net Magazine</span></a>
+					</li>
+					<li>
+						<span class="ss-icon">file</span>
 						<a class="published-title" href="http://blog.offscreenmag.com/post/36344235407/hi-manik-give-us-a-short-introduction-about-how" title="Offscreen Magzine - An Interview with Manik Rathee">An Interview with Manik Rathee, a User Experience Engineer for President Barack Obama<span>Kai Brach, Offscreen Magazine</span></a>
-						<p>I'm a huge fan of Offscreen magazine, so when Kai emailed me asking to be part of it, I was happy to do so. My interview is about my experience working on Barack Obama's campaign.</p>
 					</li>
 					<li>
+						<span class="ss-icon">file</span>
 						<a class="published-title" href="hhttp://blog.readmill.com/post/34294256090/meet-the-readmillers-manik-rathee" title="Meet the Readmillers: Manik Rathee">Meet the Readmillers: Manik Rathee<span>Readmill</span></a>
-						<p>Readmill is arguably my most used app on the iPad. This interview went into depth about how I used it to support my work for the President.</p>
 					</li>
 				</ul>
 				<h4>Social</h4>
