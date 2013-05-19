@@ -40,7 +40,7 @@ function logofyAPI(){
         	instagramAPI.find('span.logo').prepend(instagramID);
         	// rdioAPI.find('span.logo').prepend(rdioID);
         	readmillAPI.find('span.logo').prepend(readmillID);
-        	// centerAPI();
+        	   centerAPI();
             activateAPI();
         }
         else{

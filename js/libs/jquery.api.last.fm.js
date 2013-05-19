@@ -72,7 +72,11 @@ var LastFMStatus = {
       status = this.trackInfo.playing ? 'Now Playing: ' : 'Last Played: ';
       message  = '<span class="ss-icon logo">rdio</span><div><p>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</p></div>';
     }
-    statusBox.innerHTML = message;
+    
+    if ( $('body').attr('id') === 'home' ){
+    // if ($('body').attr('id','home')){
+      statusBox.innerHTML = message;
+    }
     
     // Set rdioActive to true so logofyAPI and activate API can fire
     rdioActive = true;
