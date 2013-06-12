@@ -65,7 +65,7 @@
 	</div> <!-- /container -->
 		
 	
-	<div id="twitter" class="social-api twitter"></div>
+	<div id="twitter" class="social-api twitter"><p></p></div>
 	<div id="instagram" class="social-api instagram"></div>
 	<div id="rdio" class="social-api rdio"></div>
 	<div id="readmill" class="social-api readmill"></div>
