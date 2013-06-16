@@ -29,7 +29,7 @@
 					<p>And now, I'm headed out to beautiful San Francisco to join <a href="http://www.fluenceapp.com" title="Fluence App">Fluence</a> - a great new media-based startup. Forward.</p>
 					
 					<img src="images/potus-hug.jpg" alt="Yep, President Barack Obama giving me a hug">
-					<figcaption> For the final day of the campaign,the President of the United States thanked me for my work with a strong handshake and a hug. It was cool.
+					<figcaption> For the final day of the campaign,the President of the United States thanked me for my work with a strong handshake and a hug. It was cool.</figcaption>
 				</div>
 			</div>
 			<div class="onecol"></div>
