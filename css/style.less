@@ -288,7 +288,7 @@ p{font-size: 12px;line-height: 1.6;}
 			list-style-type: none;
 		}
 	}
-	ul#published-list{
+	.title-subtitle-list{
 		// margin-bottom: 30px;
 		list-style-type: none;
 		li{
@@ -297,12 +297,27 @@ p{font-size: 12px;line-height: 1.6;}
 				margin-bottom: 40px;
 			}
 		}
+		.view-more{
+			a{
+				font-size: 11px;
+				text-transform: uppercase;
+				opacity: 0.5;
+				@include transition(opacity 0.25s ease-in-out);
+				&:hover{
+					opacity: 1;
+				}
+				.ss-icon{
+					font-style: normal;
+				}
+			}
+		}
 		.ss-icon{
 			display: block;
 			float: left;
 			font-size: 12px;
 			padding: 4px 5px 20px 0;
 			opacity: 0.5;
+			font-style: normal;
 		}
 		a, p{
 			font-size: 14px;
@@ -316,6 +331,8 @@ p{font-size: 12px;line-height: 1.6;}
 				font-size: 12px;
 				font-style: italic;
 				color: #666;
+				margin: 2px 0 2px 2px;
+				padding-left: 2px;
 			}
 			&:hover{
 				color: #000;

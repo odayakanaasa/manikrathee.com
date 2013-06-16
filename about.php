@@ -34,9 +34,33 @@
 			</div>
 			<div class="onecol"></div>
 			<div class="fivecol left-section">
-				<h4>Interviews and More</h4>
+				<h4>Speaking &amp; Conferences</h4>
+				<p>I have spoken at a few conferences on topics ranging from experience working on a presidential campaign, to writing scalable front-end code for large projects. Some of those, including upcoming talks, are below:</p>
+				<ul id="speaking-list" class="title-subtitle-list">
+					<li>
+						<span class="ss-icon">Sound</span>
+						<a class="published-title" href="http://2013.cssdevconf.com/" title="CSS Dev Conf">
+							The Tech President
+							<span>CSS Dev Conf</span>
+							<span>Estes Park, CO &nbsp; &mdash; &nbsp; Oct. 21-23, 2013</span>
+						</a>
+					</li>
+					<li>
+						<span class="ss-icon">Sound</span>
+						<a class="published-title" href="http://2013.cssdevconf.com/" title="Thinking Creatively Conference 10">
+							"Building Obama"
+							<span>Keynote Address, Thinking Creatively Conference</span>
+							<span>Union, NJ &nbsp; &mdash; &nbsp; Apr. 18-20, 2013</span>
+						</a>
+					</li>
+					<li class="view-more">
+						<a href="http://lanyrd.com/profile/manikrathee/" title="ManikRathee on Lanyrd" itemprop="url"><span class="ss-icon">right</span>View more on Lanyrd</a>
+					</li>
+				</ul>
+				
+				<h4>Interviews &amp; Features</h4>
 				<p>I have had the privilege of being interviewed, having my worked featured and appearing on some podcasts. Here are a select few of those:</p>
-				<ul id="published-list">
+				<ul id="published-list" class="title-subtitle-list">
 					<li>
 						<span class="ss-icon">book</span>
 						<a class="published-title" href="http://www.amazon.com/Build-Your-Own-Brand-Strategies/dp/1440324557/" title="Build Your Own Brand">Build Your Own Brand<span>Robin Landa</span></a>
