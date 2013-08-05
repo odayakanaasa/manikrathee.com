@@ -1,0 +1,267 @@
+<h1>tmhOAuth</h1>
+
+<p>An OAuth 1.0A library written in PHP by @themattharris, specifically for use
+with the Twitter API.</p>
+
+<p><strong>Disclaimer</strong>: This project is a work in progress. Please use the issue tracker
+to report any enhancements or issues you encounter.</p>
+
+<h2>Goals</h2>
+
+<ul>
+  <li>Support OAuth 1.0A</li>
+  <li>Use Authorisation headers instead of query string or POST parameters</li>
+  <li>Allow uploading of images</li>
+  <li>Provide enough information to assist with debugging</li>
+</ul>
+
+<h2>Dependencies</h2>
+
+<p>The library has been tested with PHP 5.3+ and relies on CURL and hash_hmac. The
+vast majority of hosting providers include these libraries and run with PHP 5.1+.</p>
+
+<p>The code makes use of hash_hmac, which was introduced in PHP 5.1.2. If your version
+of PHP is lower than this you should ask your hosting provider for an update.</p>
+
+<h2>A note about security and SSL</h2>
+
+<p>Version 0.60 hardened the security of the library and defaulted <code>curl_ssl_verifypeer</code> to <code>true</code>.
+As some hosting providers do not provide the most current certificate root file
+it is now included in this repository. If the version is out of date OR you prefer
+to download the certificate roots yourself, you can get them
+from: http://curl.haxx.se/ca/cacert.pem</p>
+
+<p>Before upgrading the version of tmhOAuth that you use, be sure to verify the SSL
+handling works on your server by running the <code>examples/verify_ssl.php</code> script.</p>
+
+<h2>Usage</h2>
+
+<p>This will be built out later but for the moment review the examples repository
+<a href="https://github.com/themattharris/tmhOAuth-examples">https://github.com/themattharris/tmhOAuth-examples</a> for ways the library can be
+used. Each example contains instructions on how to use it.</p>
+
+<h2>Notes for users of previous versions</h2>
+
+<p>If you previously used version 0.4 be aware the utility functions
+have now been broken into their own file. Before you use version 0.5+ in your app
+test locally to ensure your code doesn&#8217;t need tmhUtilities included.</p>
+
+<p>If you used custom HTTP request headers when they were defined as <code>'key: value'</code> strings
+you should now define them as <code>'key' =&gt; 'value'</code> pairs.</p>
+
+<p>Versions prior to 0.7.3 collapsed headers with the same value into one
+$tmhOAuth-&gt;response[&#8216;headers&#8217;] key. Since 0.7.3 headers with the same key will use an array
+to store their values.</p>
+
+<h2>Change History</h2>
+<p>### 0.7.5 - 20 Februrary 2013
+- tidying up of composer.json. (Issue #112) Props: ceeram</p>
+
+<h3>0.7.4 - 19 Februrary 2013</h3>
+<ul>
+  <li>corrections to composer.json to support packagists requirements. (Issue #110)</li>
+</ul>
+
+<h3>0.7.3 - 18 Februrary 2013</h3>
+<ul>
+  <li>add support for making requests with the host header being different to the request host.</li>
+  <li>ensure headers with the same key do not overwrite each other in $tmhOAuth-&gt;response[&#8216;headers&#8217;].</li>
+  <li>removed examples submodule in favor of examples including tmhOAuth, rather than tmhOAuth including examples</li>
+  <li>made it so that if param values are sent to $tmhOAuth-&gt;request as an array (key -&gt; array()) then $tmhOAuth-&gt;prepare_params will now implode them using &#8216;,&#8217;</li>
+  <li>fixed composer. (Issue #99). Props: rasa</li>
+  <li>fixed PHPDoc. (Issue #47). Props: trante</li>
+  <li>instead of void, $tmhOAuth-&gt;curlit now returns 0 if &#8216;prevent_request&#8217; is set</li>
+</ul>
+
+<h3>0.7.2 - 01 November 2012</h3>
+<ul>
+  <li>use DIRECTORY_SEPARATOR for multi-environment support. (Issue #80) Props: whallz</li>
+  <li>tidied up the curlHeader function to use explode instead of substr and store the keys in the format they are returned from the API</li>
+  <li>removed content-length hack as it isn&#8217;t needed if CURLOPT_POSTFIELDS is initialized on all POSTs</li>
+  <li>removed the expects header hack as Twitter no longer requires it to be there</li>
+  <li>introduce composer.json. (Issues #39, #77, #85) Props: akandels, conradkleinespel, dguyon, kud, philsturgeon, willdurand</li>
+  <li>added support for specifying custom headers when using $tmhOAuth-&gt;request. (Issue #98)</li>
+</ul>
+
+<h3>0.7.1 - 27 October 2012</h3>
+<ul>
+  <li>set content-length to 0 explictly to avoid a bug between libcurl and Twitter. (Issue #94)</li>
+  <li>allow initialization without a configuration array (default config to array())</li>
+  <li>prevent -&gt;url allowing double slashes in paths</li>
+</ul>
+
+<h3>0.7.0 - 04 September 2012</h3>
+<ul>
+  <li>changed version numbers to x.y.z format</li>
+  <li>stronger method scoping (public and private)</li>
+  <li>Typo fix in depenencies. (Issue #42) Props: tantek</li>
+  <li>Only lowercase the host and scheme, and not path, in prepare_url. (Issue #56) Props: uzyn</li>
+  <li>Fixed a number of PHP warnings by changing some tmhUtilty methods to static. (Issue #52) Props: DrayChou</li>
+  <li>Raw headers and response body are now available as <code>$tmhOAuth-&gt;response['raw']</code></li>
+  <li>Moved the examples to their own repository <a href="https://github.com/themattharris/tmhOAuth-examples">https://github.com/themattharris/tmhOAuth-examples</a></li>
+  <li>Removed the <code>noexamples</code> branch as master does not contain examples anymore</li>
+  <li>Introduced <code>$tmhOAuth-&gt;config['timezone']</code> and set <code>date_default_timezone_set</code>. (Issue #70) Props: iamctodd</li>
+</ul>
+
+<h3>0.621 - 12 March 2012</h3>
+<ul>
+  <li>Ensure <code>$_SERVER['HTTPS']</code> isset before checking it&#8217;s value. Props: kud</li>
+</ul>
+
+<h3>0.62 - 01 March 2012</h3>
+<ul>
+  <li>Fix array merging bug. Props: julien-c</li>
+  <li>use is_callable instead of function_exists: Props: samwierema</li>
+  <li>Allow options to be specified for the entify function. Props: davidcroda</li>
+  <li>protocol was not inferred correctly for https when [&#8216;HTTPS&#8217;] == &#8216;on&#8217;. Props: ospector</li>
+  <li>Switched to https for twitter.com display URLs</li>
+  <li>Improved the search results example</li>
+</ul>
+
+<h3>0.61 - 16 January 2012</h3>
+<ul>
+  <li>Removed trailing ?&gt; from tmhOAuth.php and tmhUtilities.php to meet the Zend Framework&#8217;s coding practices. Props: reedy</li>
+  <li>Fixed bug where CURLOPT_SSL_VERIFYHOST was defaulted to true when it should have been defaulted to 2. Props: kevinsmcarthur</li>
+</ul>
+
+<h3>0.60 - 29 December 2011</h3>
+<ul>
+  <li>Changed any use of implode to the preferred format of implode($glue, $pieces). Props: reedy</li>
+  <li>Moved oauth_verifier to the authorization header as shown in example of RFC 5849. Props: spacenick</li>
+  <li>added curl error and error number values to the $tmhOAuth-&gt;response object</li>
+  <li>added an example script for testing the SSL connection to twitter.com with the new SSL configuration of tmhOAuth</li>
+  <li>added a function to generate the useragent depending on whether SSL is on or not</li>
+  <li>defaulted CURLOPT_SSL_VERIFYPEER to true</li>
+  <li>added CURLOPT_SSL_VERIFYHOST and defaulted it to true</li>
+  <li>added the most current cacert.pem file from http://curl.haxx.se/ca/cacert.pem and configured curl to use it</li>
+</ul>
+
+<h3>0.58 - 29 December 2011</h3>
+<ul>
+  <li>Rearranged some configuration variables around to make commenting easier</li>
+  <li>Standarised on lowercase booleans</li>
+</ul>
+
+<h3>0.57 - 11 December 2011</h3>
+<ul>
+  <li>Fixed prevent_request so OAuth Echo requests work again.</li>
+  <li>Added a TwitPic OAuth Echo example</li>
+</ul>
+
+<h3>0.56 - 29 September 2011</h3>
+<ul>
+  <li>Fixed version reference in the UserAgent</li>
+  <li>Updated tmhUtilities::entify with support for media</li>
+  <li>Updated tmhUtilities::entify with support for multibyte characters. Props: andersonshatch</li>
+</ul>
+
+<h3>0.55 - 29 September 2011</h3>
+<ul>
+  <li>Added support for content encoding. Defaults to whatever localhost supports. Props: yusuke</li>
+</ul>
+
+<h3>0.54 - 29 September 2011</h3>
+<ul>
+  <li>User-Agent is now configurable and includes the current version number of the script</li>
+  <li>Updated the Streaming examples to use SSL</li>
+</ul>
+
+<h3>0.53 - 15 July 2011</h3>
+<ul>
+  <li>Fixed issue where headers were being duplicated if the library was called more than once.</li>
+  <li>Updated examples to fit the new location of access tokens and secrets on dev.twitter.com</li>
+  <li>Added Photo Tweet example</li>
+</ul>
+
+<h3>0.52 - 06 July 2011</h3>
+<ul>
+  <li>Fixed issue where the preference for include_time in create_nonce was being ignored</li>
+</ul>
+
+<h3>0.51 - 06 July 2011</h3>
+<ul>
+  <li>Use isset instead of suppress errors. Props: funkatron</li>
+  <li>Added example of using the Search API</li>
+  <li>Added example of using friends/ids and users/lookup to get details of a users friends</li>
+  <li>Added example of the authorize OAuth webflow</li>
+</ul>
+
+<h3>0.5 - 29 March 2011</h3>
+<ul>
+  <li>Moved utility functions out of the main class and into the tmhUtilities class.</li>
+  <li>Added the ability to send OAuth parameters as part of the querystring or POST body.</li>
+  <li>Section 3.4.1.2 says the url must be lowercase so prepare URL now does this.</li>
+  <li>Added a convenience method for accessing the safe_encode/decode transforms.</li>
+  <li>Updated the examples to use the new utilities library.</li>
+  <li>Added examples for sitestreams and userstreams.</li>
+  <li>Added a more advanced streaming API example.</li>
+</ul>
+
+<h3>0.4 - 03 March 2011</h3>
+<ul>
+  <li>Fixed handling of parameters when using DELETE. Thanks to yusuke for reporting</li>
+  <li>Fixed php_self to handle port numbers other than 80/443. Props: yusuke</li>
+  <li>Updated function pr to use pre only when not running in CLI mode</li>
+  <li>Add support for proxy servers. Props juanchorossi</li>
+  <li>Function request now returns the HTTP status code. Props: kronenthaler</li>
+  <li>Documentation fixes for xAuth. Props: 140dev</li>
+  <li>Some minor code formatting changes</li>
+</ul>
+
+<h3>0.3 - 28 September 2010</h3>
+<ul>
+  <li>Moved entities rendering into the library</li>
+</ul>
+
+<h3>0.2 - 17 September 2010</h3>
+<ul>
+  <li>Added support for the Streaming API</li>
+</ul>
+
+<h3>0.14 - 17 September 2010</h3>
+<ul>
+  <li>Fixed authorisation header for use with OAuth Echo</li>
+</ul>
+
+<h3>0.13 - 17 September 2010</h3>
+<ul>
+  <li>Added use_ssl configuration parameter</li>
+  <li>Fixed config array typo</li>
+  <li>Removed v from the config</li>
+  <li>Remove protocol from the host (configured by use_ssl)</li>
+  <li>Added include for easier debugging</li>
+</ul>
+
+<h3>0.12 - 17 September 2010</h3>
+
+<ul>
+  <li>Moved curl options to config</li>
+  <li>Added the ability for curl to follow redirects, default false</li>
+</ul>
+
+<h3>0.11 - 17 September 2010</h3>
+
+<ul>
+  <li>Fixed a bug in the GET requests</li>
+</ul>
+
+<h3>0.1 - 26 August 2010</h3>
+
+<ul>
+  <li>Initial beta version</li>
+</ul>
+
+<h2>Community</h2>
+
+<p>License: Apache 2 (see <a href="https://github.com/themattharris/tmhOAuth/blob/master/LICENSE">included LICENSE file</a>)</p>
+
+<p>Follow <a href="https://twitter.com/intent/follow?screen_name=tmhOAuth">@tmhOAuth</a> to receive updates on releases, or ask for support
+Follow me on Twitter: <a href="https://twitter.com/intent/follow?screen_name=themattharris">@themattharris</a>
+Check out the Twitter Developer Resources: <a href="https://dev.twitter.com">https://dev.twitter.com</a></p>
+
+<h2>To Do</h2>
+
+<ul>
+  <li>Add good behavior logic to the Streaming API handler - i.e. on disconnect back off</li>
+  <li>Async Curl support</li>
+</ul>
