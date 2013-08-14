@@ -27,7 +27,7 @@ var instagramID = $('#instagram').prop('id');
 var rdioID = $('#rdio').prop('id');
 var readmillID = $('#readmill').prop('id');
 
-$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/books/a-practical-guide-to-designing-with-data" title="A Practical Guide to Designing with Data">Designing with Data</a></p></div>');
+$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/digest" title="Digest by Elliot Jay Stocks And Keir Whitaker">Digest by Elliot Jay Stocks &amp Keir Whitaker</a></p></div>');
 LastFMStatus.init({
     username: "mrathee"
 });
@@ -60,8 +60,8 @@ function activateAPI(){
 
 function centerAPI(){
     var socialAPI = $('.social-api');
-    
-    if ($(window).width() > 768){ 
+
+    if ($(window).width() > 768){
         $(socialAPI).each(function() {
             var center = $(this).find('div');
             var h = center.height();
@@ -154,7 +154,7 @@ var toTop = $('#top');
 toTop.click(function(e) {
 	e.preventDefault();
 	$('body,html').animate({scrollTop:0},800);
-});	
+});
 
 
 //FitText
@@ -189,7 +189,7 @@ function startCount() {
 	        // console.debug(this);
 	    }
 	});
-	
+
 	numberTwo.countTo({
 	    from: 0,
 	    to: numberTwoValue,
@@ -199,7 +199,7 @@ function startCount() {
 	        // console.debug(this);
 	    }
 	});
-	
+
 	numberThree.countTo({
 	    from: 0,
 	    to: numberThreeValue,
@@ -209,7 +209,7 @@ function startCount() {
 	        // console.debug(this);
 	    }
 	});
-	
+
 	numberFour.countTo({
 	    from: 0,
 	    to: numberFourValue,
@@ -219,7 +219,7 @@ function startCount() {
 	        // console.debug(this);
 	    }
 	});
-	
+
 	numberFive.countTo({
 	    from: 0,
 	    to: numberFiveValue,
@@ -229,7 +229,7 @@ function startCount() {
 	        // console.debug(this);
 	    }
 	});
-	
+
 	numberSix.countTo({
 	    from: 0,
 	    to: numberSixValue,
@@ -258,8 +258,8 @@ $(window).scroll(function() {
 
 // Twitter Button
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
- 
- 
+
+
  // Google Analytics
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-19400273-3']);
