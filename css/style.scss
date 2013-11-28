@@ -9,30 +9,23 @@
 	"import/flexslider",
 	"import/prettyforms",
 	"import/tiptip",
+	"import/api",
 	"import/ss-standard",
 	"import/ss-social",
 	"import/media-queries",
+	"import/home",
 	"import/nav";
 
 // @import "import/konami";
 
 @import "styles/base";
+@import "styles/home";
+@import "styles/about";
 
-@media (min-width: 500px){
-	@import "styles/small-screen";
-}
-
-@media (min-width: 768px){
-	@import "styles/regular-screen";
-}
-
-@media (min-width: 940px){
-	@import "styles/medium-screen";
-}
-
-@media (min-width: 1420px){
-	@import "styles/large-screen";
-}
+// Projects
+@import "styles/project-catalyst";
+@import "styles/project-wrapskins";
+@import "styles/project-livescribe";
 
 
 
