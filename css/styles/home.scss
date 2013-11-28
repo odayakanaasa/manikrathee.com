@@ -4,9 +4,7 @@ $red: rgb(255, 226, 189);
 a{
 	color: #f3f3f3;
 	text-decoration: none;
-	-webkit-transition: color 0.25s linear, text-shadow 0.25s linear;
-	-moz-transition: color 0.25s linear, text-shadow 0.25s linear;
-	transition: color 0.25s linear, text-shadow 0.25s linear;
+	@include transition( (color 0.25s ease-in-out),(text-shadow 0.25s ease-in-out) );
 	&:hover{
 		color: #fff;
 	}
@@ -28,6 +26,16 @@ a{
 // 	@include fadeInDown;
 // 	@include delay;
 // }
+// #css-award{
+// 	display: block;
+// 	background: transparent url('../images/css-award.png') no-repeat top right;
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	height:164px;
+// 	width:69px;
+// 	z-index: 100;
+// }
 #home{
 	font-family: "proxima-nova",Helvetica,"Helvetica Neue",Arial,sans-serif;
 	background: #222;
@@ -46,16 +54,6 @@ a{
 		height:100px;
 		width:300px;
 	}
-	#css-award{
-		display: block;
-		background: transparent url('../images/css-award.png') no-repeat top right;
-		position: absolute;
-		top: 0;
-		right: 0;
-		height:164px;
-		width:69px;
-		z-index: 100;
-	}
 	.copy{
 		@include animate;
 		@include fadeInDown;
@@ -64,7 +62,7 @@ a{
 		opacity: 1;
 		margin: 20px auto 0;
 		font-size: 14px;
-		text-shadow: 0 2px 5px #000;
+		text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 		@include transition(opacity 0.25s ease-in-out);
 		h1{
 			text-transform: uppercase;
@@ -94,9 +92,7 @@ a{
 			a{
 				border-bottom: 1px solid rgb(114, 114, 114);
 				padding-bottom: 1px;
-				-webkit-transition: border 0.25s linear, text-shadow 0.25s linear;
-				-moz-transition: border 0.25s linear, text-shadow 0.25s linear;
-				transition: border 0.25s linear, text-shadow 0.25s linear;
+				@include transition( (border 0.25s ease-in-out),(text-shadow 0.25s ease-in-out) );
 				&:hover{
 					text-shadow: 0 0 2px #fff;
 					border-bottom: 1px solid rgb(255, 255, 255);
@@ -104,29 +100,29 @@ a{
 			}
 		}
 	}
-	section.projects{
-		text-transform: uppercase;
-		h2{
-			margin:0;
-			padding:0;
-			font-size:13px;
-			font-weight:normal;
-		}
-		ul{
-			font-size:11px;
-			margin:2px 0 0 0;
-			padding:0;
-			font-weight:300;
-			li{
-				margin:0;
-				padding:0 0 5px 0;
-				list-style-type:none;
-				&:last-child{
-					padding:0;
-				}
-			}
-		}
-	}
+	// section.projects{
+	// 	text-transform: uppercase;
+	// 	h2{
+	// 		margin:0;
+	// 		padding:0;
+	// 		font-size:13px;
+	// 		font-weight:normal;
+	// 	}
+	// 	ul{
+	// 		font-size:11px;
+	// 		margin:2px 0 0 0;
+	// 		padding:0;
+	// 		font-weight:300;
+	// 		li{
+	// 			margin:0;
+	// 			padding:0 0 5px 0;
+	// 			list-style-type:none;
+	// 			&:last-child{
+	// 				padding:0;
+	// 			}
+	// 		}
+	// 	}
+	// }
 	.social{
 		margin:32px 0;
 		ul{
@@ -266,6 +262,14 @@ a{
 			li{
 				margin-right: 20px;
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 940px){
+	#home{
+		.copy{
+				margin: 50px 0 0 50px;
 		}
 	}
 }
