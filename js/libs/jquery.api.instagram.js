@@ -4,29 +4,29 @@ if ( $('body').attr('id') === 'home' ){
   var instagramActive = false;
 
   var instagramFeed = new function() {
-      
+
     this.endpoint = 'instagram.me';
 
     this.render_html = function(data, options) {
       var str = "";
-      
-      
+
+
       for(i in data) {
         var photo = data[i];
         var photoCaption;
-        
+
         if (photo.caption === "undefined" || photo.caption === "null" || !photo.caption ) {
           photoCaption = "Photo";
         }
         else{
           photoCaption = photo.caption.text;
         }
-        
+
         str += "<div class='photo' data='" + photo.id + "'>";
         // str += "<p>Latest Photo:" + photo.created_time + "</p>";
-        str += "<a id='instagram-link' href='" + photo.link + "' title='View my latest Instagram Shot'>My latest instagram: '" + photoCaption + "'";
+        str += "<p>My latest instagram: <a id='instagram-link' href='" + photo.link + "' title='View my latest Instagram Shot'>'" + photoCaption + "'";
         // str += "<img src='" + photo.images.thumbnail.url + "' />";
-        str += "</a>";
+        str += "</a></p>";
         str += "</div>";
       }
 
@@ -49,13 +49,13 @@ if ( $('body').attr('id') === 'home' ){
       if (options.count) {
         url += "&count=" + options.count;
       }
-      
+
       var script = "<script type='text/javascript' src='" + url + "'></script>";
 
       document.write(script);
-    
+
     }
-    
+
   }
 
   // Instagram API
