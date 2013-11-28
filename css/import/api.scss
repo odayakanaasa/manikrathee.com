@@ -1,10 +1,10 @@
 @import "animation";
 
 /* Color Mixins */
-@twitter: #5dc5f7;
-@instagram: #3f729d;
-@rdio: 	#008fd6;
-@readmill: #81ce2c; /*  #71b427;  */
+$twitter: #5dc5f7;
+$instagram: #3f729d;
+$rdio: 	#008fd6;
+$readmill: #81ce2c; /*  #71b427;  */
 
 .gradient{
 	background-image: linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
@@ -41,9 +41,8 @@
 	transition:height 1s linear, background-color 1s linear, padding 1s linear, color 1s linear;
 	&.run{
 		opacity: 1;
-		.animate;
-		.fadeInUp;
-		// .delay;
+		@include animate;
+		@include fadeInUp;
 	}
 	& > div, & > ul{
 		opacity: 1;
@@ -91,7 +90,6 @@
 }
 
 @media screen and (max-width: 767px) {
-
 	.social-api{
 		height: auto;
 		p, a, ul, li{
@@ -215,15 +213,15 @@
 		}
 	}
 	.twitter, .twitter.inactive:hover{
-		background-color: @twitter;
-		.gradient;
+		background-color: $twitter;
+		@include transparent-gradient;
 	}
 	.instagram{
 		left: 25%;
 	}
 	.instagram, .instagram.inactive:hover{
-		background-color: @instagram;
-		.gradient;
+		background-color: $instagram;
+		@include transparent-gradient;
 		a{
 			text-decoration: none;
 		}
@@ -235,8 +233,8 @@
 		left: 50%;
 	}
 	.rdio, .rdio.inactive:hover{
-		background-color: @rdio;
-		.gradient;
+		background-color: $rdio;
+		@include transparent-gradient;
 		p{
 			opacity: 1;
 			// font-size: 15px;
@@ -260,8 +258,8 @@
 		}
 	}
 	.readmill, .readmill.inactive:hover{
-		background-color: @readmill;
-		.gradient;
+		background-color: $readmill;
+		@include transparent-gradient;
 		p{
 			opacity: 1;
 		}

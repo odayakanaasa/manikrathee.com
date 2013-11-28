@@ -1,0 +1,239 @@
+// Tablet Styles
+// min-width 768px
+
+.left-section {
+  float:right;
+}
+.main-section {
+  float:left;
+}
+.about .main-section {
+  border-bottom: none;
+}
+.interior {
+  .fivecol, .sixcol {
+    padding: 0 20px;
+  }
+}
+.upper_logo_bar .mobile_nav {display:none;}
+.upper_logo_bar .full_nav {display:block;}
+.right_col_inner {padding-left:10%;border-left:1px solid #efefef;}
+
+.wrapskins_slider_outer {width:496px;margin:0 auto;height:450px;}
+.wrapskins_slider_inner {width:430px;height:250px;margin:-375px auto 0 auto;}
+.wrap_upper {height:500px;}
+.wrap_title {float:right;}
+.wrap_title .subtitle {padding-left:380px;margin-top: -40px;}
+
+.hope_slides {width:500px;}
+
+.catalyst_upper {background:#000 url(../images/interior_upper_catalyst.jpg) repeat-x top center;color:#fff;text-shadow:1px 1px 0 #000;height:490px;}
+.catalyst_title {margin: 350px 0 0 72px;background:transparent url(../images/catalyst_title.png) no-repeat top center;width:263px;height:56px;}
+.catalyst_title_right {display: block;background:transparent url(../images/interior_upper_catalyst_phones_small.png) no-repeat bottom center;width:225px;height:365px;margin: 125px 0 0 0;}
+.catalyst_icon_row .catalyst_iconset {float:left;width:40%;}
+.catalyst_icon_row .catalyst_iconset_copy {float:left;padding:10px 0 0 40px;width:50%;border: none;}
+
+.mrphoto_title {
+  margin-top: 400px;
+}
+
+.livescribe_upper {background:#FFF url(../images/interior_livescribe_bg.jpg) no-repeat center top;color:#fff;text-shadow:1px 1px 0 #000;height:350px;}
+.livescribe_title {margin:50px 0 0 0;}
+
+.shanti_upper {height:420px;}
+.shanti_title {width:420px;margin-top:200px;}
+
+.blog_upper {background:#000 url(../images/interior_upper_blog.jpg) no-repeat top center;color:#fff;text-shadow:1px 1px 0 #000;height:420px;}
+.blog_title {margin-top:200px;}
+
+.barack-obama .upper {background: #C1E0F3 url(../images/interior_upper_barack_obama.jpg) no-repeat top center;color:#fff;text-shadow:1px 1px 0 #000;height:425px;}
+
+
+/* ABOUT */
+.about {
+  .upper {
+    background: #35383D url(../images/about-heading-medium.jpg) no-repeat 50% 50%;
+  }
+  .title {
+    margin-top: 400px;
+  }
+  .main-section {
+    h3 {
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+  .social-links {
+    max-width: 245px;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+  }
+  #about-data {
+    max-width: 100%;
+    width: auto;
+    margin: 0;
+    li {
+      width: 30%;
+      float: left;
+    }
+    #i-run {
+      margin: 0 26px 0 50px;
+    }
+  }
+  #map {
+    background: #DCDCDC url('../images/about-map.jpg') no-repeat 50% 50%;
+    height: 420px;
+    margin: 30px 0;
+    -webkit-box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.3);
+    p {
+      margin: 0;
+      line-height: 1;
+      span.location {
+        display: block;
+        font-size: 14px;
+      }
+    }
+    ul {
+      position: relative;
+      li {
+        position: absolute;
+        width: 320px;
+        padding: 10px;
+        text-align: left;
+        border-radius: 4px;
+        -webkit-box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+        box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+        &.san-francisco {
+          top: 20px;
+          left: 40px;
+        }
+        &.chicago {
+          top: 30px;
+          left: 500px;
+        }
+        &.montclair {
+          top: 100px;
+          right: 40px;
+        }
+      }
+    }
+  }
+}
+
+/*  Resoruces  */
+.resources {
+  .upper {
+    background:#000 url(../images/resources-heading-medium.jpg) no-repeat 50% 50%;
+  }
+  .title {
+    margin: 230px 0 0 0;
+  }
+  .title h1 {
+    font-size: 21px;
+    font-weight: bold;
+    font-size:46px;
+    line-height: 1;
+    margin: 0 0 4px 0;
+  }
+  .module {
+    padding: 10px 0;
+    margin: 10px 0;
+    &.hardware {
+      padding-top: 26px;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      border-top: 1px solid rgba(0,0,0,0.2);
+    }
+  }
+  .resource-block {
+    .left {
+      float: left;
+      width: 50%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0 30px 0 0;
+    }
+    .right {
+      float: right;
+      width: 50%;
+      margin-bottom: 20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    #hardware {
+      li {
+        width: 50%;
+        float: left;
+      }
+    }
+  }
+}
+
+/* BARACK OBAMA - CONTRIBUTE */
+.obama-contribute {
+  .upper {
+    background-position: 50% 0;
+    height: 435px;
+    .sequential {
+      text-align: right;
+      img {
+        float: right;
+        margin-top: 122px;
+        width: 420px;
+      }
+    }
+  }
+  .title {
+    margin-top: 345px;
+    h1 {
+      font-size: 20px;
+      font-weight: 100;
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+  .intro {
+    blockquote {
+      font-size: 40px;
+      padding: 0;
+    }
+  }
+  .module {
+    &.innovating {
+      background-position: -10% 50%;
+    }
+    &.road-to-sequential {
+      .fivecol {
+        margin-top: 0;
+        // float: right;
+      }
+    }
+    &.sequential-born {
+      background-position: 70%;
+      h4 {
+        text-shadow: none;
+      }
+    }
+  }
+  #donate-form-content {
+    display: block;
+    width: 100%;
+  }
+  #donate-caption {
+    display: block;
+  }
+  #donate-form-mobile {
+    display: none;
+  }
+}

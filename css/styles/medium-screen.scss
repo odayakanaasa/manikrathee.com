@@ -1,0 +1,38 @@
+// Desktop Styles
+// min-width 940px
+
+
+.wrap_title .subtitle {padding-left:458px;}
+
+.catalyst_title_right {background:transparent url(../images/interior_upper_catalyst_phones.png) no-repeat bottom center;width:563px;height:365px;float:right;padding:0 0 0 0;}
+
+
+/*  Resoruces  */
+.resources {
+  #releases {
+    -moz-column-count: 3;
+    -moz-column-gap: 35px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 35px;
+    column-count: 3;
+    column-gap: 35px;
+  }
+}
+
+/* BARACK OBAMA - CONTRIBUTE */
+.obama-contribute {
+  .upper {
+    background-position: 0 0;
+  }
+  .title {
+    margin-top: 345px;
+    h1 {
+      font-size: 30px;
+      font-weight: 100;
+    }
+    h2 {
+      font-size: 23px;
+      font-weight: 600;
+    }
+  }
+}

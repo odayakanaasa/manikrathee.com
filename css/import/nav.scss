@@ -17,8 +17,8 @@ nav.global-nav{
 	}
 }
 nav{
-	.animate;
-	.fadeInDown;
+	@include animate;
+	@include fadeInDown;
 	font-size: 13px;
 	text-transform: uppercase;
 	text-shadow: none;
