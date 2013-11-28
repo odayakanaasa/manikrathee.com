@@ -2417,7 +2417,7 @@ a:hover {
 @media screen and (min-width: 768px) {
   #home {
     background-image: url('../images/home/background-small.jpg');
-    background-color: #000;
+    background-color: #2a4043;
   }
 }
 @media screen and (min-width: 900px) {
