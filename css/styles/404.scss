@@ -1,0 +1,69 @@
+/* 404 */
+
+
+
+
+
+/*  404  */
+.fourohfour {text-align:center;text-shadow:1px 1px 0 #fff;padding:12% 0 0 0;}
+.fourohfour h1 {font-family:"freight-sans-pro",sans-serif;font-size:60px;font-weight:100;padding-bottom:40px;}
+.fourohfour a {color:red;}
+.fourohfour a:hover {color:#000;}
+
+
+
+
+/*
+**********************
+***** 500
+**********************
+*/
+@include min-screen(500px) {
+
+
+
+} // 500
+
+
+
+
+
+/*
+**********************
+***** 768
+**********************
+*/
+@include min-screen(768px) {
+
+
+
+} // 768
+
+
+
+/*
+**********************
+***** 960
+**********************
+*/
+@include min-screen(940px) {
+
+
+
+
+} // 960
+
+
+
+/*
+**********************
+***** 1420
+**********************
+*/
+@include min-screen(1420) {
+
+
+
+} // 1420
+
+

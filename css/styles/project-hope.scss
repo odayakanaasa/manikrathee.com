@@ -1,0 +1,36 @@
+/* Project: Hope Will See Us Through */
+
+
+.hope {background:#FBFBFB url(../images/interior_lower_hope.jpg) repeat top center;}
+.hope_upper {background:#172e47 url(../images/interior_upper_hope.jpg) no-repeat center top;color:#fff;text-shadow:1px 1px 0 #000;height:450px;}
+.hope_title {margin:250px 20px 0 0;}
+.hope_title .subtitle {font-size:13px;}
+.hope .no_margin {margin-right: 0 !important;}
+.hope div:hover a:not(.button) {color: #4684CF;}
+.hope_slides {width:90%;margin:0 auto 40px auto;}
+
+
+/*
+**********************
+***** 768
+**********************
+*/
+@include min-screen(768px) {
+
+
+.hope_slides {width:500px;}
+
+
+} // 768
+
+
+
+/*
+**********************
+***** 960
+**********************
+*/
+@include min-screen(940px) {
+
+
+} // 960

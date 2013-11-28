@@ -1,0 +1,427 @@
+/* Project: Obama - Contribute */
+
+
+.obama-contribute {
+  background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;
+  font-family: "proxima-nova", helvetica, verdana, sans-serif;
+  .upper {
+    background: #00436B url(../images/interior_contribute_upper.jpg) no-repeat;
+    background-position: 20% 0;
+    text-shadow: 1px 1px 0 #003453;
+    height: 435px;
+    display: block;
+    position: relative;
+    -webkit-transition: background-position 0.25s linear;
+    -moz-transition: background-position 0.25s linear;
+    transition: background-position 0.25s linear;
+    .sequential {
+      text-align: center;
+      img {
+        @include animate;
+        @include delay;
+        @include fadeInUp;
+        // width: 252px;
+        // margin-top: 49px;
+        width: 261px;
+        margin-top: 50px;
+      }
+    }
+  }
+  .title {
+    text-align: center;
+    h1, h2 {
+      text-transform: uppercase;
+      line-height: 1;
+      margin: 0;
+      color: #fff;
+      text-shadow: none;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 100;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  .intro {
+    padding: 40px 0 50px 0;
+    blockquote {
+      width: 100%;
+      text-align: center;
+      font-family: "jubilat",serif;
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1;
+      font-size: 25px;
+      padding: 0 20px;
+      span {
+        display: block;
+      }
+    }
+    figcaption {
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 300;
+      margin: 30px 0 0 0;
+    }
+  }
+  .module {
+    padding: 80px 0;
+    &.blue {
+      background: #00416E;
+      color: #ECECEC;
+      p, h4, h5 {
+        color: #ECECEC;
+        text-shadow: none;
+      }
+    }
+    &.innovating {
+      background-image: url('../images/interior_contribute_ascii.png');
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+    }
+    &.road-to-sequential {
+      .sevencol {
+        text-align: center;
+      }
+      .fivecol {
+        margin-top: -80px;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h4 {
+        font-size: 45px;
+        font-weight: 100;
+        margin-bottom: 30px;
+      }
+      h5 {
+        font-size: 24px;
+        font-weight: 100;
+        margin: 0;
+      }
+      ol {
+        list-style-type: none;
+        li {
+          margin-bottom: 20px;
+        }
+      }
+      .subtitle {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+    &.revamp {
+      h4.subtitle {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        // padding: 0;
+        // border: none;
+      }
+    }
+    &.sequential-born {
+      background: #E6E6E6 url('../images/interior_contribute_sketch.jpg') no-repeat;
+      background-position: 41% 0;
+      h4 span {
+        text-transform: lowercase;
+      }
+      .image-container {
+        width: 100%;
+        text-align: center;
+        margin: 35px 0;
+      }
+      .quote-block {
+        border-top: 1px solid rgba(0,0,0,0.2);
+        padding-top: 30px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 40px auto -38px auto;
+      }
+      blockquote {
+        width: 100%;
+        text-align: center;
+        font-family: "jubilat",serif;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 1;
+        font-size: 25px;
+        padding: 0 20px;
+        span {
+          display: block;
+        }
+      }
+      figcaption {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 300;
+        margin: 15px 0 0 0;
+        span {
+          display: block;
+          font-style: italic;
+          text-transform: lowercase;
+        }
+      }
+      ul {
+        margin-bottom: 20px;
+        font-size: 13px;
+        font-style: italic;
+        margin-left: 50px;
+        color: rgb(76, 76, 76);
+        li {
+          margin-bottom: 3px;
+        }
+      }
+    }
+    .inner-container {
+      width: 550px;
+      margin: 0 auto;
+      max-width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 20px 20px 0 20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 300;
+      }
+    }
+    h4 {
+      width: 100%;
+      padding-bottom: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 100;
+      font-size: 30px;
+    }
+    h5, .subtitle {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 20px 0;
+      text-transform: uppercase;
+    }
+  }
+  .live-sequential {
+    position: relative;
+    width: 445px;
+    max-width: 100%;
+    margin: 0 auto;
+    figcaption {
+      font-size: 12px;
+      line-height: 1.4;
+      width: 420px;
+      margin: 20px auto 0;
+      opacity: 0.7;
+    }
+    blockquote, iframe {
+      width: 500px;
+      margin: 10px auto 20px !important;
+    }
+  }
+  #sequential-reveal {
+    width: 100%;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    margin: 50px 0 -50px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    #rising-sun {
+      display: block;
+      background: url('../images/rising-sun.png') 50% 0 no-repeat;
+      padding-top: 60px;
+      background-size: 40px;
+    }
+  }
+  #donate-form-mobile {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    #slider {
+      width: 90%;
+      margin: 10px auto 0;
+    }
+  }
+  #donate-form-content {
+    display: none;
+    width: 95%;
+    margin: 0 auto;
+  }
+  #donate-caption {
+    display: none;
+  }
+  .closing {
+    blockquote {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: "jubilat",serif;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.4;
+      font-size: 20px;
+      padding: 0 20px;
+    }
+  }
+  #ofa-logo {
+    display: block;
+    @include ir;
+    background: url('../images/2012-logo.png') 50% 50% no-repeat;
+    width: 162px;
+    height: 70px;
+    margin: 100px auto 50px;
+  }
+}
+
+
+
+
+/*
+**********************
+***** 768
+**********************
+*/
+@include min-screen(768px) {
+
+
+  /* BARACK OBAMA - CONTRIBUTE */
+  .obama-contribute {
+    .upper {
+      background-position: 50% 0;
+      height: 435px;
+      .sequential {
+        text-align: right;
+        img {
+          float: right;
+          margin-top: 122px;
+          width: 420px;
+        }
+      }
+    }
+    .title {
+      margin-top: 345px;
+      h1 {
+        font-size: 20px;
+        font-weight: 100;
+      }
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    .intro {
+      blockquote {
+        font-size: 40px;
+        padding: 0;
+      }
+    }
+    .module {
+      &.innovating {
+        background-position: -10% 50%;
+      }
+      &.road-to-sequential {
+        .fivecol {
+          margin-top: 0;
+          // float: right;
+        }
+      }
+      &.sequential-born {
+        background-position: 70%;
+        h4 {
+          text-shadow: none;
+        }
+      }
+    }
+    #donate-form-content {
+      display: block;
+      width: 100%;
+    }
+    #donate-caption {
+      display: block;
+    }
+    #donate-form-mobile {
+      display: none;
+    }
+  }
+
+
+
+} // 768
+
+
+
+/*
+**********************
+***** 940
+**********************
+*/
+@include min-screen(940px) {
+
+
+  .obama-contribute {
+    .upper {
+      background-position: 0 0;
+    }
+    .title {
+      margin-top: 345px;
+      h1 {
+        font-size: 30px;
+        font-weight: 100;
+      }
+      h2 {
+        font-size: 23px;
+        font-weight: 600;
+      }
+    }
+  }
+
+
+} // 940
+
+
+
+
+/*
+**********************
+***** 1420px
+**********************
+*/
+@include min-screen(1420px) {
+
+
+    .obama-contribute {
+      .module {
+        &.sequential-born {
+          background-position: 150%;
+        }
+      }
+    }
+
+
+} // 1420px

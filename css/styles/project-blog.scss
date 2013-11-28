@@ -1,0 +1,56 @@
+/* Project: Blog */
+
+
+
+
+/* BLOG - INTERIOR */
+.blog {background:#FBFBFB url(../images/interior_lower_mrphoto.jpg) repeat top center;}
+.blog_upper {background:#000 url(../images/interior_upper_blog_768.jpg) no-repeat top left;color:#fff;text-shadow:1px 1px 0 #000;height:300px;}
+.blog_title {margin-top:100px;}
+.blog_slides {width:98%;margin:0 auto 75px auto;}
+
+
+
+/*
+**********************
+***** 768
+**********************
+*/
+@include min-screen(768px) {
+
+
+.blog_upper {background:#000 url(../images/interior_upper_blog.jpg) no-repeat top center;color:#fff;text-shadow:1px 1px 0 #000;height:420px;}
+.blog_title {margin-top:200px;}
+
+
+
+
+
+
+} // 768
+
+
+
+/*
+**********************
+***** 940
+**********************
+*/
+@include min-screen(940px) {
+
+
+
+} // 940
+
+
+
+
+/*
+**********************
+***** 1420px
+**********************
+*/
+@include min-screen(1420px) {
+
+
+} // 1420px

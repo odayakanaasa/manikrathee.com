@@ -13,7 +13,6 @@
 	"import/ss-standard",
 	"import/ss-social",
 	"import/media-queries",
-	"import/home",
 	"import/nav";
 
 // @import "import/konami";
@@ -21,13 +20,17 @@
 @import "styles/base";
 @import "styles/home";
 @import "styles/about";
+@import "styles/resources";
 
 // Projects
 @import "styles/project-catalyst";
 @import "styles/project-wrapskins";
 @import "styles/project-livescribe";
-
-
+@import "styles/project-hope";
+@import "styles/project-mrphoto";
+@import "styles/project-obama";
+@import "styles/project-obama-contribute";
+@import "styles/project-blog";
 
 
 
