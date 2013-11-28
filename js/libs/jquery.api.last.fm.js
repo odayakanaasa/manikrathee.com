@@ -70,14 +70,14 @@ var LastFMStatus = {
       message  = '<strong>'+this.trackInfo.message+'</strong>';
     } else {
       status = this.trackInfo.playing ? 'Now Playing: ' : 'Last Played: ';
-      message  = '<span class="ss-icon logo">rdio</span><div><p>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</p></div>';
+      message  = '<a href="http://www.rdio.com/people/manikrathee/history/" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Rdio" itemprop="url"><span class="ss-icon logo">rdio</span><div><p>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</p></a></div>';
     }
-    
+
     if ( $('body').attr('id') === 'home' ){
     // if ($('body').attr('id','home')){
       statusBox.innerHTML = message;
     }
-    
+
     // Set rdioActive to true so logofyAPI and activate API can fire
     rdioActive = true;
     centerAPI();

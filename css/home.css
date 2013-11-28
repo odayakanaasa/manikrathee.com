@@ -692,8 +692,11 @@
 .twitter:hover {
   white-space: normal;
 }
-.instagram a {
-  text-decoration: none;
+#instagram-link {
+  text-decoration: underline;
+}
+.rdio a {
+  text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
   .social-api {

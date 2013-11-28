@@ -33,50 +33,46 @@ LastFMStatus.init({
 });
 // This adds the logo spans which are targetted with symbolset. It is called in api.twitter.js after twitter.html();
 function logofyAPI(){
-    setTimeout(function(){
-        if (instagramActive){
-        	$(".social-api").prepend('<span class="ss-icon logo"></span>');
-        	twitterAPI.find('span.logo').prepend(twitterID);
-        	instagramAPI.find('span.logo').prepend(instagramID);
-        	// rdioAPI.find('span.logo').prepend(rdioID);
-        	readmillAPI.find('span.logo').prepend(readmillID);
-        	   centerAPI();
-            activateAPI();
-        }
-        else{
-        	return;
-        }
-    }, 1000);
+  setTimeout(function(){
+    if (instagramActive){
+      $(".social-api").prepend('<span class="ss-icon logo"></span>');
+      twitterAPI.find('span.logo').prepend(twitterID);
+      instagramAPI.find('span.logo').prepend(instagramID);
+      // rdioAPI.find('span.logo').prepend(rdioID);
+      readmillAPI.find('span.logo').prepend(readmillID);
+      centerAPI();
+      activateAPI();
+    }
+    else{
+    	return;
+    }
+  }, 1000);
 }
 
 // Callback function for after API js has run to display the API containers
 function activateAPI(){
 	$('.social-api').addClass("run");
-    $(".social-api").delay(4500).queue(function(next){
-    	$(this).addClass('inactive');
-    	next();
-    });
+  $(".social-api").delay(4500).queue(function(next){
+  	$(this).addClass('inactive');
+  	next();
+  });
 }
 
 function centerAPI(){
-    var socialAPI = $('.social-api');
-
-    if ($(window).width() > 768){
-        $(socialAPI).each(function() {
-            var center = $(this).find('div');
-            var h = center.height();
-            center.css('margin-top', + h / -2 + 'px');
-        });
-    }
+  var socialAPI = $('.social-api');
+  if ($(window).width() > 768){
+    $(socialAPI).each(function() {
+        var center = $(this).find('div');
+        var h = center.height();
+        center.css('margin-top', + h / -2 + 'px');
+    });
+  }
 }
 
 $(window).resize(function() {
-    centerAPI();
+  centerAPI();
 });
-
 centerAPI();
-
-
 
 // Nav Hover
 function checkWidth() {
