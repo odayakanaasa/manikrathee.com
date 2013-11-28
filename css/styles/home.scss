@@ -10,6 +10,9 @@ a{
 	&:hover{
 		color: #fff;
 	}
+	&:active, &:visited {
+		color: #f3f3f3;
+	}
 }
 
 #net-awards{
@@ -170,9 +173,15 @@ a{
 			top: 110px;
 			z-index: 10;
 			width: 420px;
-			margin: 50px 0 0 120px;
+			margin: 50px 0 0 50px;
 			&.fade{
 				opacity: 0;
+			}
+		}
+		.title {
+			margin: 25px 0 30px;
+			p {
+				font-size: 15px;
 			}
 		}
 		.social{
