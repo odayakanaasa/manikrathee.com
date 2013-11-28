@@ -10,13 +10,13 @@
 @import "import/core";
 @import "import/mixins";
 
-@light-blue: #008fc5;
-@next-blue: #1297c9;
-@submit-green: #89cd46;
-@green: #81c341; 
-@error-red: #C41230;
-@slab-serif: "jubilat", serif;
-@helvetica: "proxima-nova", helvetica, verdana, sans-serif;
+$light-blue: #008fc5;
+$next-blue: #1297c9;
+$submit-green: #89cd46;
+$green: #81c341;
+$error-red: #C41230;
+$slab-serif: "jubilat", serif;
+$helvetica: "proxima-nova", helvetica, verdana, sans-serif;
 
 /* FORM BASE */
 
@@ -87,7 +87,7 @@
 #accepted-ccs {
 
     text-indent: -900em;
-    background: url(https://secure.assets.bostatic.com/hydepark/images/donate/donate-cards-transparent.png) no-repeat;  
+    background: url(https://secure.assets.bostatic.com/hydepark/images/donate/donate-cards-transparent.png) no-repeat;
     height: 26px;
     width: 188px;
     margin: 0 auto 20px auto;
@@ -184,7 +184,8 @@ input:focus:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
     outline: 0;
 }
 
-.oldie {
+
+@media all and (min-width:768px) {
 
     #form-fields {
 
@@ -215,11 +216,6 @@ input:focus:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
         #employment-header {margin-bottom: 10px;}
         #employment-disclaimer {font-size: 12px;}
     }
-}
-
-@media all and (min-width:768px) { 
-
-    .oldie;
 
 }
 
@@ -310,7 +306,7 @@ ul#form-fields li#submit-cont #submit-hidden{
     background: #89C74E;
     padding: 10px 10px 10px 10px;
     font-weight: bold;
-    /*font-family: @slab-serif;*/
+    /*font-family: $slab-serif;*/
     font-size: 20px;
     color: white;
     text-transform: uppercase;
@@ -327,7 +323,7 @@ p.secure{
     display: none;
 }
 #form-fields .form-section-header{
-    font-family: @slab-serif;
+    font-family: $slab-serif;
     font-size: 20px;
 }
 
@@ -351,7 +347,7 @@ ul#amounts{
         label{
             display: block;
             width: 100%;
-            background: @light-blue;
+            background: $light-blue;
             background-image: linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
             background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
             background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
@@ -364,11 +360,11 @@ ul#amounts{
                     color-stop(.1, rgba(0,0,0,0.1)),
                     color-stop(1, rgba(255,255,255,0.2))
             );
-            border: 1px solid darken(@light-blue, 2%);
+            border: 1px solid darken($light-blue, 2%);
                 border-radius: 3px;
             box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.4),
-                    0px 1px 1px 1px darken(@light-blue, 25%);
-            font-family: @helvetica;
+                    0px 1px 1px 1px darken($light-blue, 25%);
+            font-family: $helvetica;
             color: #fff;
             font-size: 16px;
             font-weight: 700;
@@ -379,7 +375,7 @@ ul#amounts{
             -ms-backface-visibility: hidden;
             backface-visibility: hidden;
             &.active{
-                background: @green;
+                background: $green;
                 color: #fff;
                 border: 1px solid #fff;
                 box-shadow: inset 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -412,7 +408,7 @@ body.error{
             margin-top: 0;
         }
     }
-    
+
     #form-fields{
         ul#amounts{
             .amount-cont{
@@ -466,17 +462,14 @@ body.error{
 
 
 
-
-
-
 @media screen and (min-width: 768px){
     /*  transitions */
     .page-header, #donate-form-content, p.secure{
-        
-        
+
+
         opacity: 1;
     }
-    
+
     body.sequential{
         .content-area-bg{
             height: auto;
@@ -490,7 +483,7 @@ body.error{
             background: transparent url('https://secure.assets.bostatic.com/hydepark/images/secure-seal.png') no-repeat 50% 50%;
             height: 15px;
             width: 57px;
-            .ir;
+            @include ir;
         }
         #donate-form-content{
             position: relative;
@@ -523,7 +516,7 @@ body.error{
             position: absolute;
             bottom: 75px;
             left: -5px;
-            font-family: @slab-serif;
+            font-family: $slab-serif;
             text-align: center;
             font-size: 17px;
             font-weight: bold;
@@ -543,7 +536,7 @@ body.error{
                 -moz-transition: background-color 0.15s linear;
                 transition: background-color 0.15s linear;
                 &.error{
-                    border: 2px solid @error-red ;
+                    border: 2px solid $error-red ;
                     -webkit-transition:border-color 0.15s ease-in-out;
                     -moz-transition:border-color 0.15s ease-in-out;
                     transition:border-color 0.15s ease-in-out;
@@ -584,7 +577,7 @@ body.error{
                         display: block;
                         width: 80px;
                         padding: 8px 5px;
-                        font-family:@helvetica;
+                        font-family:$helvetica;
                         font-size: 19px;
                         font-weight: bold;
                         text-align: center;
@@ -592,26 +585,26 @@ body.error{
                         margin: 1px 0 0 3px;
                         cursor: pointer;
                         outline: none;
-                        
+
                         -webkit-transition: background-color 0.15s linear, box-shadow 0.15s linear;
                         -moz-transition: background-color 0.15s linear, box-shadow 0.15s linear;
                         transition: background-color 0.15s linear, box-shadow 0.15s linear;
                         &:hover{
-                            background: @next-blue;
+                            background: $next-blue;
                             color: #fff;
-                            border: 1px solid darken(@next-blue, 2%);
-                            box-shadow: inset 0px 1px 1px 1px @next-blue,
-                                    0px 1px 1px 1px darken(@next-blue, 25%);
+                            border: 1px solid darken($next-blue, 2%);
+                            box-shadow: inset 0px 1px 1px 1px $next-blue,
+                                    0px 1px 1px 1px darken($next-blue, 25%);
                             -webkit-transition: background 0.1s linear;
                             -moz-transition: background 0.1s linear;
                             transition: background 0.1s linear;
                         }
                         &.active{
-                            background: @submit-green;
+                            background: $submit-green;
                             color: #fff;
                             border: 1px solid #fff;
                             &:hover{
-                                background: @submit-green;
+                                background: $submit-green;
                                 box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
                             }
                         }
@@ -634,7 +627,7 @@ body.error{
                 margin-right:6px;
             }
             #suggested-amount{
-                font-family:@slab-serif;
+                font-family:$slab-serif;
                 font-size: 14px;
                 color: #555555;
                 font-style: italic;
@@ -723,7 +716,7 @@ body.error{
                 clear: both;
             }
             .employment-disclaimer{
-                font-family: @helvetica;
+                font-family: $helvetica;
                 font-size: 13px;
                 font-weight: normal;
                 color: #444;
@@ -821,7 +814,7 @@ body.error{
                     text-align: center;
                     font-size: 14px;
                     color: #b8b8b8;
-                    font-family: @helvetica;
+                    font-family: $helvetica;
                     font-weight: normal;
                     padding: 18px 0 20px 32px;
                     -webkit-transition:color 0.25s linear, background-color 0.25s linear;
@@ -889,7 +882,7 @@ body.error{
                             text-shadow: 0 0 10px #fff;
                             span{/*
                                 background: #88ef24;*/
-                                background: darken(@green, 15%);
+                                background: darken($green, 15%);
                                 text-shadow: 1px 1px 0 #d3d3d3;
                             }
                             b{
@@ -902,7 +895,7 @@ body.error{
                     }
                     &.current{
                         /*background: white;
-                        color: @light-blue;*/
+                        color: $light-blue;*/
                     }
                 }
             }
@@ -955,14 +948,14 @@ body.error{
                     background: transparent url('https://secure.assets.bostatic.com/hydepark/images/donate/20121008_ContinueButton_test.png') no-repeat 104% 49% ;
                     text-align: center;
                     color: #fff;
-                    font-family: @slab-serif;
+                    font-family: $slab-serif;
                     font-weight: bold;
                     font-size: 18px;
                     padding: 7px 30px 7px 10px;
                     text-transform: uppercase;
                 }
             }/* /#next */
-            
+
             #submit-button{
                 position: absolute;
                 bottom: 172px;
@@ -1003,7 +996,7 @@ body.error{
                 }
                 padding: 10px 28px 10px 10px;
                 font-weight: bold;
-                font-family:@slab-serif;
+                font-family:$slab-serif;
                 font-size: 20px;
                 color: #fff;
                 text-transform: uppercase;
@@ -1017,20 +1010,20 @@ body.error{
                     background: transparent url('https://secure.assets.bostatic.com/hydepark/images/donate/20121008_ContinueButton_test.png') no-repeat 104% 49%;
                     width: 16px;
                     height: 16px;
-                    .ir;
+                    @include ir;
                     position: absolute;
                     top: 15px;
                     right: 20px;
                 }
                 &.processingform{
-                    background: @submit-green;
+                    background: $submit-green;
                     color: white;
                     span#processingform{
                         display: block;
                         background: transparent url('https://secure.assets.bostatic.com/hydepark/images/donate/20121008_ContinueButton_test.png') no-repeat 104% 49%;
                         width: 16px;
                         height: 16px;
-                        .ir;
+                        @include ir;
                         position: absolute;
                         top: 13px;
                         right: 20px;
@@ -1047,7 +1040,7 @@ body.error{
                 display: none;
             }
             #amount-header{
-                font-family: @slab-serif;
+                font-family: $slab-serif;
                 font-weight: bold;
                 text-transform: none;
                 font-size: 16px;
@@ -1060,7 +1053,7 @@ body.error{
                 -moz-transition:color 0.15s linear;
                 transition:color 0.15s linear;
                 &.error{
-                    color: @error-red;
+                    color: $error-red;
                 }
             }
         }/* /body.sequential-active */

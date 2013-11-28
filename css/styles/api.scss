@@ -1,3 +1,21 @@
+
+
+.gradient{
+	background-image: linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgba(0,0,0,0.3)),
+		color-stop(1, rgba(255,255,255,0.1))
+	);
+}
+
+
 .social-api{
 	p, a, ul, li{
 		font-size: 12px;

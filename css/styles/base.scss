@@ -1,34 +1,15 @@
 /* Base Styles */
 
-/* Variables */
-  // Color
-  $white: rgba(255,255,255,1); /* #ffffff */
-  $off-white: rgba(243,243,243,1); /* #f3f3f3 */
-  $black: rgba(21,19,20,1); /* #151314 */
-  $grey: rgba(136,136,136,1); /* #888888 */
-
-  // Base Type
-  $georgia: Georgia, Cambria, "Times New Roman", Times, serif;
-  $helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  $lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
-  $monospace: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
-  // TypeKit
-  $proxima:  "proxima-nova", helvetica, tahoma, verdana, sans-serif;
-
-
-  // Elements
-  $divider: 1px solid rgba(229,229,229,1); /* #E5E5E5 */
-
-  // Symbolset
-  .ss-icon {
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: none;
-    text-rendering: optimizeLegibility;
-    white-space: nowrap;
-    -webkit-font-smoothing: antialiased;
-    vertical-align: middle;
-  }
+// Symbolset
+.ss-icon {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
 
 
 // Highlights
@@ -53,7 +34,6 @@ body {
   font-family: "proxima-nova", helvetica, verdana, sans-serif;
   color: #4C4C4C;
   -webkit-backface-visibility: hidden;
-  /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
   text-rendering: optimizelegibility;
 }
 dl, menu, ol, ul {
@@ -126,9 +106,7 @@ p {
   padding: 5px 0;
   font-size: 12px;
   margin-bottom: 30px;
-  -webkit-transition: color 0.25s ease-in-out, background 0.25s ease-in-out, border 0.25s ease-in-out;
-  -moz-transition: color 0.25s ease-in-out, background 0.25s ease-in-out, border 0.25s ease-in-out;
-  transition: color 0.25s ease-in-out, background 0.25s ease-in-out, border 0.25s ease-in-out;
+  @include transition( (color 0.25s ease-in-out),(background 0.25s ease-in-out),(border 0.25s ease-in-out) );
   &:hover {
     background: rgba(0,0,0,0.8);
     border-color: rgba(0,0,0,1);
@@ -185,11 +163,6 @@ p {
   &:hover {
     opacity: 1;
   }
-  // span {
-    // .ir;
-    // display: block;
-    // margin-top: 8px;
-  // }
 }
 
 
@@ -201,12 +174,11 @@ p {
 */
 @include min-screen(768px) {
 
-
   .left-section {
-    float:right;
+    float: right;
   }
   .main-section {
-    float:left;
+    float: left;
   }
   .interior {
     .fivecol, .sixcol {
@@ -217,5 +189,13 @@ p {
   .upper_logo_bar .full_nav {display:block;}
   .right_col_inner {padding-left:10%;border-left:1px solid #efefef;}
 
-
 } // 768
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+  #logo{
+    background: transparent url('../images/white-logo@2x.png') no-repeat 50% 50%;
+      -webkit-background-size:100px 100px;
+  }
+}
