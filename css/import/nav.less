@@ -53,7 +53,7 @@ nav#dark{
 	a{
 		color: rgba(51,51,51,0.7);
 		&:hover{
-			color: #000;	
+			color: #000;
 		}
 	}
 	p{
@@ -69,7 +69,7 @@ nav#dark{
 nav#light{
 	a{
 		color: rgba(249,249,249,0.7);
-		
+
 		&:hover{
 			color: #fff;
 		}
@@ -94,19 +94,9 @@ nav#light{
 	&.show{
 		height: auto;
 	}
-	// #portfolio{
-	// 	&:hover{
-	// 		#projects{
-	// 			height: 275px;
-	// 		}
-	// 	}
-	// }
 	#projects{
 		height: 0;
 		overflow: hidden;
-		-webkit-transition: height 0.25s linear;
-		-moz-transition: height 0.25s linear;
-		transition: height 0.25s linear;
 		li{
 			min-width: 200px;
 		}
@@ -123,7 +113,7 @@ nav#light{
 		width: 50px;
 		background-size: 100%;
 		margin: 10px auto;
-		#current{ 
+		#current{
 			display: block;
 			text-shadow: none;
 		}
@@ -175,9 +165,6 @@ nav#light{
 		// 	transition: height 0.25s linear;
 		}
 	}
-	#projects{
-		padding: 0;
-	}
 }
 body.nav, body#home.nav{
 	#navigation{
@@ -201,27 +188,35 @@ body.nav, body#home.nav{
 				list-style-type: none;
 				margin-right: 15px;
 			}
-			#portfolio{
-				position: relative;
-				cursor: pointer;
-				&:hover{
+
+		}
+		#portfolio{
+			position: relative;
+			cursor: pointer;
+			height: 15px;
+			&:hover{
+				height: 220px;
+				#projects{
 					height: 220px;
-					#projects{
-						height: 220px;
-						opacity: 1;
-					}
+					opacity: 1;
+		-webkit-transition: none;
+		-moz-transition: none;
+		transition: none;
 				}
 			}
 		}
 		#projects{
 			position: absolute;
-			top: 14px;
+			top: 15px;
 			left: 0;
+			float: none;
+			overflow: hidden;
 			padding: 0;
 			background: none;
-			overflow: hidden;
-			zoom: 1;
 			z-index: 999;
+			-webkit-transition: opacity 0.25s linear,height 0.25s linear;
+			-moz-transition: opacity 0.25s linear,height 0.25s linear;
+			transition: opacity 0.25s linear,height 0.25s linear;
 			li{
 				float: none;
 				display: block;
@@ -268,9 +263,9 @@ body.nav, body#home.nav{
 }
 
 
-@media 
-only screen and (-webkit-min-device-pixel-ratio: 2), 
-only screen and (min-resolution: 192dpi) { 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
 	#logo{
 		background-size: 100%;
 		&.white{

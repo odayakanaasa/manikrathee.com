@@ -27,7 +27,7 @@ var instagramID = $('#instagram').prop('id');
 var rdioID = $('#rdio').prop('id');
 var readmillID = $('#readmill').prop('id');
 
-$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/digest" title="Digest by Elliot Jay Stocks And Keir Whitaker">Digest by Elliot Jay Stocks &amp Keir Whitaker</a></p></div>');
+$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/a-pocket-guide-to-international-user-research" title="A Pocket Guide to International User Research by Chui Chui Tan">A Pocket Guide to International User Research by Chui Chui Tan</a></p></div>');
 LastFMStatus.init({
     username: "mrathee"
 });
@@ -82,11 +82,9 @@ centerAPI();
 function checkWidth() {
 	if ($(window).width() > 769){
 		$('#portfolio').hover(function(){
-			$('.copy').addClass('fade');
-			$('#current').addClass('fade');
+			$('#current, .copy').addClass('fade');
 		}, function(){
-			$('.copy').removeClass('fade');
-			$('#current').removeClass('fade');
+			$('#current, .copy').removeClass('fade');
 		});
 		// TipTip
 		$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
@@ -130,24 +128,18 @@ $(document).click(function() {
 
 
 
-
-
 // Konami Code
-konami = new Konami()
-konami.code = function() {
-    $('body').addClass('konami');
-}
-
-konami.load()
-
+// konami = new Konami()
+// konami.code = function() {
+//     $('body').addClass('konami');
+// }
+// konami.load()
 
 //Slider
 $('.flexslider').flexslider();
 
-
 // TipTip
 $(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
-
 
 // ScrollTop Function
 var toTop = $('#top');
@@ -165,86 +157,24 @@ $('.fit-light').fitText(0.8);
 
 
 //Counter
-var numberOne = $('#number-one');
-var numberOneValue = numberOne.attr('data-number');
-var numberTwo = $('#number-two');
-var numberTwoValue = numberTwo.attr('data-number');
-var numberThree = $('#number-three');
-var numberThreeValue = numberThree.attr('data-number');
-var numberFour = $('#number-four');
-var numberFourValue = numberFour.attr('data-number');
-var numberFive = $('#number-five');
-var numberFiveValue = numberFive.attr('data-number');
-var numberSix = $('#number-six');
-var numberSixValue = numberSix.attr('data-number');
-
-
+var countNumberValue;
 function startCount() {
-	numberOne.countTo({
-	    from: 0,
-	    to: numberOneValue,
-	    speed: 1400,
-	    refreshInterval: 5,
-	    onComplete: function(value) {
-	        // console.debug(this);
-	    }
-	});
-
-	numberTwo.countTo({
-	    from: 0,
-	    to: numberTwoValue,
-	    speed: 1400,
-	    refreshInterval: 5,
-	    onComplete: function(value) {
-	        // console.debug(this);
-	    }
-	});
-
-	numberThree.countTo({
-	    from: 0,
-	    to: numberThreeValue,
-	    speed: 1400,
-	    refreshInterval: 5,
-	    onComplete: function(value) {
-	        // console.debug(this);
-	    }
-	});
-
-	numberFour.countTo({
-	    from: 0,
-	    to: numberFourValue,
-	    speed: 1400,
-	    refreshInterval: 5,
-	    onComplete: function(value) {
-	        // console.debug(this);
-	    }
-	});
-
-	numberFive.countTo({
-	    from: 0,
-	    to: numberFiveValue,
-	    speed: 1400,
-	    refreshInterval: 5,
-	    onComplete: function(value) {
-	        // console.debug(this);
-	    }
-	});
-
-	numberSix.countTo({
-	    from: 0,
-	    to: numberSixValue,
-	    speed: 1400,
-	    refreshInterval: 5,
-	    onComplete: function(value) {
-	        // console.debug(this);
-	    }
-	});
+  $('.count').each(function() {
+    countNumberValue = $(this).attr('data-number');
+    $(this).countTo({
+        from: 0,
+        to: countNumberValue,
+        speed: 1400,
+        refreshInterval: 5,
+        onComplete: function(value) {
+            // console.debug(this);
+        }
+    });
+  });
 }
-
 // startCount();
 
 var eventsFired = 0;
-
 $(window).scroll(function() {
     if ($("#about-data").is(":within-viewport")){
 		if (eventsFired == 0) {

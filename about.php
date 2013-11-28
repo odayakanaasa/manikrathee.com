@@ -118,7 +118,7 @@
 					<span class="ss-icon">camera</span>
 					<p>I take about
 						<span class="number-container">
-							<span id="number-one" class="number" data-numer="25">0</span> photos
+							<span id="number-one" class="number count" data-number="25">0</span> photos
 						</span>
 						a day
 					</p>
@@ -127,7 +127,7 @@
 					<span class="ss-icon">timer</span>
 					<p>I run a
 						<span class="number-container">
-							<span id="number-two" class="number" data-number="420">0</span> second
+							<span id="number-two" class="number count" data-number="420">0</span> second
 						</span>
 						mile
 					</p>
@@ -136,7 +136,7 @@
 					<span class="ss-social ss-icon">Rdio</span>
 					<p>I listen to
 						<span class="number-container">
-							<span id="number-three" class="number" data-number="62">0</span>+ hours
+							<span id="number-three" class="number count" data-number="62">0</span>+ hours
 						</span>
 						of music every week
 					</p>
