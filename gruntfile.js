@@ -54,6 +54,7 @@ module.exports = function(grunt) {
       my_target: {
         files: {
           '_site/js/script.js' : ['_site/js/script.js'],
+          '_site/js/sequential.js' : ['_site/js/sequential.js'],
         }
       }
     },
