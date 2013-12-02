@@ -5637,11 +5637,11 @@ nav.global-nav {
   width: 75px;
   background-size: 100%;
 }
-#logo.white {
+body.light #logo {
   background: transparent url("../img/white-logo.png") no-repeat 50% 50%;
   background-size: 100%;
 }
-#logo.dark {
+body.dark #logo {
   background: transparent url("../img/dark-logo.png") no-repeat 50% 50%;
   background-size: 100%;
 }
@@ -5680,9 +5680,11 @@ nav #current {
   line-height: 1;
 }
 nav a {
-  -webkit-transition: color 0.25s linear;
-  -moz-transition: color 0.25s linear;
-  transition: color 0.25s linear;
+  -webkit-transition: color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
   border: none;
 }
 nav p {
@@ -5692,34 +5694,34 @@ nav p {
 }
 
 body.dark nav#dark a {
-  color: rgba(51, 51, 51, 0.7);
+  color: rgba(50, 50, 50, 0.6);
 }
 body.dark nav#dark a:hover {
-  color: #000;
+  color: #323232;
 }
 body.dark nav#dark p {
-  color: rgba(51, 51, 51, 0.7);
+  color: rgba(50, 50, 50, 0.6);
 }
 body.dark nav#dark p#current {
-  color: #000;
+  color: #323232;
 }
 body.dark nav#dark #navigation.show {
   background: rgba(255, 255, 255, 0.8);
 }
 body.light nav#dark a {
-  color: rgba(249, 249, 249, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 }
 body.light nav#dark a:hover {
-  color: #fff;
+  color: white;
 }
 body.light nav#dark p {
-  color: rgba(249, 249, 249, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 }
 body.light nav#dark p#current {
-  color: #fff;
+  color: white;
 }
 body.light nav#dark #navigation.show {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #navigation {
@@ -5757,7 +5759,7 @@ body.light nav#dark #navigation.show {
     text-shadow: none;
   }
 
-  #navigation, #navigation li, #navigation #portfolio, #navigation #portfolio li {
+  #navigation, #navigation li {
     margin-left: 0;
     margin-right: 0;
     text-align: center;
@@ -5774,6 +5776,8 @@ body.light nav#dark #navigation.show {
     background: rgba(0, 0, 0, 0.8);
     -webkit-transition: left 0.25s ease-in-out;
     -moz-transition: left 0.25s ease-in-out;
+    -ms-transition: left 0.25s ease-in-out;
+    -o-transition: left 0.25s ease-in-out;
     transition: left 0.25s ease-in-out;
   }
   #navigation #projects {
@@ -5817,6 +5821,8 @@ body.nav #navigation, body#home.nav #navigation {
     opacity: 1;
     -webkit-transition: none;
     -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
     transition: none;
   }
   nav #projects {
@@ -5828,9 +5834,11 @@ body.nav #navigation, body#home.nav #navigation {
     padding: 0;
     background: none;
     z-index: 999;
-    -webkit-transition: opacity 0.25s linear,height 0.25s linear;
-    -moz-transition: opacity 0.25s linear,height 0.25s linear;
-    transition: opacity 0.25s linear,height 0.25s linear;
+    -webkit-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
   }
   nav #projects li {
     float: none;
@@ -5864,9 +5872,11 @@ body.nav #navigation, body#home.nav #navigation {
   }
 
   #current {
-    -webkit-transition: opacity 0.25s linear;
-    -moz-transition: opacity 0.25s linear;
-    transition: opacity 0.25s linear;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
   }
   #current.fade {
     opacity: 0;
@@ -5879,10 +5889,10 @@ body.nav #navigation, body#home.nav #navigation {
   #logo {
     background-size: 100%;
   }
-  #logo.white {
+  body.light #logo {
     background-image: url("../img/white-logo@2x.png");
   }
-  #logo.dark {
+  body.dark #logo {
     background-image: url("../img/dark-logo@2x.png");
   }
 
