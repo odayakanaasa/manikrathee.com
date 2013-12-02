@@ -21,7 +21,21 @@ module.exports = function(grunt) {
          separator: ';',
        },
        dist: {
-        src: ['_site/js/libs/jquery-1.9.1.min.js','_site/js/libs/ss-social.js','_site/js/libs/ss-standard.js','_site/js/libs/twitter.js','_site/js/libs/facebook.js','_site/js/libs/validate.js','_site/js/libs/waypoints.js','_site/js/libs/global.js'],
+        src: [
+          '_site/js/libs/jquery-1.8.2.min.js',
+          '_site/js/libs/jquery.api.twitter.js',
+          '_site/js/libs/jquery.api.last.fm.js',
+          '_site/js/libs/jquery.api.instagram.js',
+          '_site/js/libs/jquery.twitter.js',
+          'libs/jquery.fittext.js',
+          'libs/jquery.flexslider.js',
+          'libs/jquery.prettyForms.js',
+          'libs/jquery.counter.js',
+          'libs/jquery.tipTip.js',
+          'libs/konami.js',
+          'libs/jquery.withinViewport.js',
+          'libs/script.js',
+          ],
         dest: '_site/js/script.js',
         nonull: true,
        },
@@ -54,9 +68,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '_site/img/',
+          cwd: '_site/images/',
           src: ['**/*.{png,jpg,gif}'],
-          dest: '_site/img/'
+          dest: '_site/images/'
         }]
       }
     },
