@@ -1,9 +1,34 @@
-<?php $section='about'; $upper='white'; $project='false';?>
-<!-- @todo Rebuild php vars into styles -->
-<!-- @include global/header.html -->
-<body class="interior about">
+---
+
+layout: default
+
+#home:
+
+#title:
+
+body-class: 'interior about'
+
+body-id: home
+
+section: about
+
+upper: white
+
+#project:
+
+#stylesheet:
+
+#script:
+
+---
+
+
+
+
 	<div class="upper">
-	<?php include('global/nav.php'); ?>
+
+  	{% include global-nav-bar.html %}
+
 		<div class="container">
 			<div class="row">
 				<div class="title">
@@ -28,7 +53,7 @@
 
 					<p>And now, I'm headed out to beautiful San Francisco to join <a href="http://www.fluenceapp.com" title="Fluence App">Fluence</a> - a great new media-based startup. Forward.</p>
 
-					<img src="images/potus-hug.jpg" alt="Yep, President Barack Obama giving me a hug">
+					<img src="img/potus-hug.jpg" alt="Yep, President Barack Obama giving me a hug">
 					<figcaption> For the final day of the campaign,the President of the United States thanked me for my work with a strong handshake and a hug. It was cool.</figcaption>
 				</div>
 			</div>
@@ -47,7 +72,7 @@
 					</li>
 					<li>
 						<span class="ss-icon">Sound</span>
-						<a class="published-title" href="http://2013.cssdevconf.com/" title="Thinking Creatively Conference 10">
+						<a class="published-title" href="http://blog.manikrathee.com/posts/2013/05/29/building-obama.html" title="Thinking Creatively Conference 10">
 							"Building Obama"
 							<span>Keynote Address, Thinking Creatively Conference</span>
 							<span>Union, NJ &nbsp; &mdash; &nbsp; Apr. 18-20, 2013</span>
@@ -118,7 +143,7 @@
 					<span class="ss-icon">camera</span>
 					<p>I take about
 						<span class="number-container">
-							<span id="number-one" class="number" data-numer="25">0</span> photos
+							<span id="number-one" class="number count" data-number="25">0</span> photos
 						</span>
 						a day
 					</p>
@@ -127,7 +152,7 @@
 					<span class="ss-icon">timer</span>
 					<p>I run a
 						<span class="number-container">
-							<span id="number-two" class="number" data-number="420">0</span> second
+							<span id="number-two" class="number count" data-number="420">0</span> second
 						</span>
 						mile
 					</p>
@@ -136,7 +161,7 @@
 					<span class="ss-social ss-icon">Rdio</span>
 					<p>I listen to
 						<span class="number-container">
-							<span id="number-three" class="number" data-number="62">0</span>+ hours
+							<span id="number-three" class="number count" data-number="62">0</span>+ hours
 						</span>
 						of music every week
 					</p>
@@ -172,6 +197,3 @@
 			</ul>
 		</div>
 	</div> -->
-
-
-	<?php include('global/footer.php'); ?>
