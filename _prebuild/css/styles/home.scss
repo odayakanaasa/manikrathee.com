@@ -124,23 +124,25 @@ a{
 	// 	}
 	// }
 	.social{
-		margin:32px 0;
-		ul{
+		margin: 32px 0;
+		ul {
 			overflow: hidden;
 			zoom: 1;
-			margin:0;
-			padding:0;
-			li{
-				display: inline-block;
-				vertical-align: top;
-				zoom: 1;
-				*display: inline;
-				// float: left;
-				font-size: 19px;
-				margin:0 8px 0 0;
-				padding:0;
-				list-style-type:none;
-			}
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+			vertical-align: top;
+			zoom: 1;
+			font-size: 19px;
+			margin: 0 8px 0 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		a {
+			font-size: 0.75em;
+			text-decoration: none;
+			border: none;
 		}
 	}
 }
@@ -181,9 +183,7 @@ a{
 	}
 	#home .social ul li{
 		font-size: 48px;
-		-webkit-transition: font-size 0.25s linear;
-		-moz-transition: font-size 0.25s linear;
-		transition: font-size 0.25s linear;
+		@include transition(font-size 0.25s ease-in-out);
 	}
 
 	.social-icons{
@@ -261,6 +261,10 @@ a{
 			}
 			li{
 				margin-right: 20px;
+			}
+			a {
+				font-size: 1.05em;
+				line-height: 2em;
 			}
 		}
 	}

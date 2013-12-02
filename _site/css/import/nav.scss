@@ -7,6 +7,8 @@ nav.global-nav{
 	display:block;
 	height: 75px;
 	width: 75px;
+	margin-left: auto;
+	margin-right: auto;
 	background-size: 100%;
 	body.light & {
 		background: transparent url('../img/white-logo.png') no-repeat 50% 50%;
@@ -49,10 +51,11 @@ nav{
 	}
 }
 
-nav#dark{
+nav{
 	body.dark & {
 		a {
 			color: rgba(50,50,50,0.6);
+			text-shadow: 0 1px 0 rgba(255,255,255,0.4);
 			&:hover{
 				color: rgba(50,50,50,1);
 			}
@@ -70,6 +73,7 @@ nav#dark{
 	body.light & {
 		a {
 			color: rgba(255,255,255,0.6);
+			text-shadow: 0 1px 0 rgba(50,50,50,0.2);
 			&:hover{
 				color: rgba(255,255,255,1);
 			}

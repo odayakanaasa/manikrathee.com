@@ -5635,6 +5635,8 @@ nav.global-nav {
   display: block;
   height: 75px;
   width: 75px;
+  margin-left: auto;
+  margin-right: auto;
   background-size: 100%;
 }
 body.light #logo {
@@ -5693,34 +5695,36 @@ nav p {
   padding: 0;
 }
 
-body.dark nav#dark a {
+body.dark nav a {
   color: rgba(50, 50, 50, 0.6);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
-body.dark nav#dark a:hover {
+body.dark nav a:hover {
   color: #323232;
 }
-body.dark nav#dark p {
+body.dark nav p {
   color: rgba(50, 50, 50, 0.6);
 }
-body.dark nav#dark p#current {
+body.dark nav p#current {
   color: #323232;
 }
-body.dark nav#dark #navigation.show {
+body.dark nav #navigation.show {
   background: rgba(255, 255, 255, 0.8);
 }
-body.light nav#dark a {
+body.light nav a {
   color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 1px 0 rgba(50, 50, 50, 0.2);
 }
-body.light nav#dark a:hover {
+body.light nav a:hover {
   color: white;
 }
-body.light nav#dark p {
+body.light nav p {
   color: rgba(255, 255, 255, 0.6);
 }
-body.light nav#dark p#current {
+body.light nav p#current {
   color: white;
 }
-body.light nav#dark #navigation.show {
+body.light nav #navigation.show {
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -6258,18 +6262,21 @@ a:active, a:visited {
 #home .social ul {
   overflow: hidden;
   zoom: 1;
-  margin: 0;
   padding: 0;
 }
-#home .social ul li {
+#home .social li {
   display: inline-block;
   vertical-align: top;
   zoom: 1;
-  *display: inline;
   font-size: 19px;
   margin: 0 8px 0 0;
   padding: 0;
   list-style-type: none;
+}
+#home .social a {
+  font-size: 0.75em;
+  text-decoration: none;
+  border: none;
 }
 
 @media screen and (max-width: 599px) {
@@ -6306,9 +6313,11 @@ a:active, a:visited {
 
   #home .social ul li {
     font-size: 48px;
-    -webkit-transition: font-size 0.25s linear;
-    -moz-transition: font-size 0.25s linear;
-    transition: font-size 0.25s linear;
+    -webkit-transition: font-size 0.25s ease-in-out;
+    -moz-transition: font-size 0.25s ease-in-out;
+    -ms-transition: font-size 0.25s ease-in-out;
+    -o-transition: font-size 0.25s ease-in-out;
+    transition: font-size 0.25s ease-in-out;
   }
 
   .social-icons {
@@ -6383,6 +6392,10 @@ a:active, a:visited {
   }
   #home .social li {
     margin-right: 20px;
+  }
+  #home .social a {
+    font-size: 1.05em;
+    line-height: 2em;
   }
 }
 @media screen and (min-width: 940px) {
