@@ -50,40 +50,43 @@ nav{
 }
 
 nav#dark{
-	a{
-		color: rgba(51,51,51,0.7);
-		&:hover{
+	body.dark & {
+		a{
+			color: rgba(51,51,51,0.7);
+			&:hover{
+				color: #000;
+			}
+		}
+		p{
+			color: rgba(51,51,51,0.7);
+		}
+		p#current{
 			color: #000;
 		}
-	}
-	p{
-		color: rgba(51,51,51,0.7);
-	}
-	p#current{
-		color: #000;
-	}
-	#navigation.show{
-		background: rgba(255,255,255,0.8);
-	}
-}
-nav#light{
-	a{
-		color: rgba(249,249,249,0.7);
-
-		&:hover{
-			color: #fff;
+		#navigation.show{
+			background: rgba(255,255,255,0.8);
 		}
 	}
-	p{
-		color: rgba(249,249,249,0.7);
-	}
-	p#current{
-		color: #fff;
-	}
-	#navigation.show{
-		background: rgba(0,0,0,0.8);
+	body.light & {
+		a{
+			color: rgba(249,249,249,0.7);
+
+			&:hover{
+				color: #fff;
+			}
+		}
+		p{
+			color: rgba(249,249,249,0.7);
+		}
+		p#current{
+			color: #fff;
+		}
+		#navigation.show{
+			background: rgba(0,0,0,0.8);
+		}
 	}
 }
+
 #navigation{
 	height: 0;
 	overflow: hidden;

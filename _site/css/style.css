@@ -5691,35 +5691,34 @@ nav p {
   padding: 0;
 }
 
-nav#dark a {
+body.dark nav#dark a {
   color: rgba(51, 51, 51, 0.7);
 }
-nav#dark a:hover {
+body.dark nav#dark a:hover {
   color: #000;
 }
-nav#dark p {
+body.dark nav#dark p {
   color: rgba(51, 51, 51, 0.7);
 }
-nav#dark p#current {
+body.dark nav#dark p#current {
   color: #000;
 }
-nav#dark #navigation.show {
+body.dark nav#dark #navigation.show {
   background: rgba(255, 255, 255, 0.8);
 }
-
-nav#light a {
+body.light nav#dark a {
   color: rgba(249, 249, 249, 0.7);
 }
-nav#light a:hover {
+body.light nav#dark a:hover {
   color: #fff;
 }
-nav#light p {
+body.light nav#dark p {
   color: rgba(249, 249, 249, 0.7);
 }
-nav#light p#current {
+body.light nav#dark p#current {
   color: #fff;
 }
-nav#light #navigation.show {
+body.light nav#dark #navigation.show {
   background: rgba(0, 0, 0, 0.8);
 }
 
