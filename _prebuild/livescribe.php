@@ -8,7 +8,7 @@
 				<div class="sevencol"></div>
 				<div class="fivecol last">
 					<div class="livescribe_title">
-						<img src="images/interior_livescribe_title.png">
+						<img src="img/interior_livescribe_title.png">
 					</div>
 				</div>
 			</div><!-- END row -->
@@ -38,7 +38,7 @@
 							<p>The Livescribe Echo Smartpen has always been a piece of tech that I envied. It's beyond useful for artists, students, parents.. really anyone that writes anything down. So, when we were approached to create a single page advertising site for the Echo Smartpen, I already knew the selling points.</p>
 							<p>The target audience for the Echo Smartpen advertising site was educators: school administrators &amp; teachers that want to purchase the pens for entire classes, or even entire schools.</p>
 						</div>
-						<div class="article">	
+						<div class="article">
 							<div class="headline">
 								<h2 class="fit">Challenges</h2>
 							</div>
@@ -57,18 +57,18 @@
 							<div class="flexslider">
 							    <ul class="slides">
 							    	<li>
-							    		<img src="images/livescribe_slides_1.jpg">
+							    		<img src="img/livescribe_slides_1.jpg">
 							    	</li>
 							    	<li>
-							    		<img src="images/livescribe_slides_2.jpg">
+							    		<img src="img/livescribe_slides_2.jpg">
 							    	</li>
 							    	<li>
-							    		<img src="images/livescribe_slides_3.jpg">
+							    		<img src="img/livescribe_slides_3.jpg">
 							    	</li>
 							    	<li>
-							    		<img src="images/livescribe_slides_4.jpg">
+							    		<img src="img/livescribe_slides_4.jpg">
 							    	</li>
-							    	
+
 							    </ul>
 						    </div>
 						</div>
@@ -77,6 +77,6 @@
 				</div>
 			</div>
 		</div>
-	</div><!-- END container -->	
+	</div><!-- END container -->
 
 	<?php include('global/footer.php'); ?>

@@ -8,11 +8,11 @@ nav.global-nav{
 	width: 75px;
 	background-size: 100%;
 	&.white{
-		background: transparent url('../images/white-logo.png') no-repeat 50% 50%;
+		background: transparent url('../img/white-logo.png') no-repeat 50% 50%;
 		background-size: 100%;
 	}
 	&.dark{
-		background: transparent url('../images/dark-logo.png') no-repeat 50% 50%;
+		background: transparent url('../img/dark-logo.png') no-repeat 50% 50%;
 		background-size: 100%;
 	}
 }
@@ -106,7 +106,7 @@ nav#light{
 @media screen and (max-width: 767px) {
 	#nav{
 		display: block;
-		background: url('../images/navigation-icon.png');
+		background: url('../img/navigation-icon.png');
 		text-align: left;
 		text-indent: -999em;
 		height: 50px;
@@ -269,14 +269,14 @@ only screen and (min-resolution: 192dpi) {
 	#logo{
 		background-size: 100%;
 		&.white{
-			background-image: url('../images/white-logo@2x.png');
+			background-image: url('../img/white-logo@2x.png');
 		}
 		&.dark{
-			background-image: url('../images/dark-logo@2x.png');
+			background-image: url('../img/dark-logo@2x.png');
 		}
 	}
 	#nav{
-		background: url('../images/navigation-icon@2x.png');
+		background: url('../img/navigation-icon@2x.png');
 		background-size: 100%;
 	}
 }

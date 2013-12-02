@@ -4277,7 +4277,7 @@ html[xmlns] .slides {
   height: 52px;
   margin: -13px 0 0;
   display: block;
-  background: url(../images/bg_direction_nav.png) no-repeat 0 0;
+  background: url(../img/bg_direction_nav.png) no-repeat 0 0;
   position: absolute;
   top: 50%;
   cursor: pointer;
@@ -4323,7 +4323,7 @@ html[xmlns] .slides {
   width: 13px;
   height: 13px;
   display: block;
-  background: url(../images/bg_control_nav.png) no-repeat 0 0;
+  background: url(../img/bg_control_nav.png) no-repeat 0 0;
   cursor: pointer;
   text-indent: -9999px;
 }
@@ -5638,11 +5638,11 @@ nav.global-nav {
   background-size: 100%;
 }
 #logo.white {
-  background: transparent url("../images/white-logo.png") no-repeat 50% 50%;
+  background: transparent url("../img/white-logo.png") no-repeat 50% 50%;
   background-size: 100%;
 }
 #logo.dark {
-  background: transparent url("../images/dark-logo.png") no-repeat 50% 50%;
+  background: transparent url("../img/dark-logo.png") no-repeat 50% 50%;
   background-size: 100%;
 }
 
@@ -5745,7 +5745,7 @@ nav#light #navigation.show {
 @media screen and (max-width: 767px) {
   #nav {
     display: block;
-    background: url("../images/navigation-icon.png");
+    background: url("../img/navigation-icon.png");
     text-align: left;
     text-indent: -999em;
     height: 50px;
@@ -5881,14 +5881,14 @@ body.nav #navigation, body#home.nav #navigation {
     background-size: 100%;
   }
   #logo.white {
-    background-image: url("../images/white-logo@2x.png");
+    background-image: url("../img/white-logo@2x.png");
   }
   #logo.dark {
-    background-image: url("../images/dark-logo@2x.png");
+    background-image: url("../img/dark-logo@2x.png");
   }
 
   #nav {
-    background: url("../images/navigation-icon@2x.png");
+    background: url("../img/navigation-icon@2x.png");
     background-size: 100%;
   }
 }

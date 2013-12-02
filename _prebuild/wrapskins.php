@@ -8,7 +8,7 @@
 				<div class="fourcol"></div>
 				<div class="eightcol last">
 					<div class="wrap_title">
-						<img src="images/wrap_heading.png">
+						<img src="img/wrap_heading.png">
 						<div class="subtitle">
 							icon &amp; ui design
 						</div>
@@ -42,7 +42,7 @@
 						</div>
 							<p>Wrapskins are adhesive skins for many objects: mailboxes, doors, walls and more. My first project with <a href="http://www.revsystems.com" target="_blank">RevSystems, Inc</a> was handling the user interface design for the Wrapskins webapp. Following the success of the interface, we returned to the project to review the UX for the entire checkout process, which was far from optimal.</p>
 						</div>
-						<div class="article">	
+						<div class="article">
 							<div class="headline">
 								<h2 class="fit">Challenges</h2>
 							</div>
@@ -58,14 +58,14 @@
 					<div class="onecol mobile_hidden"></div>
 					<div class="tencol">
 						<div id="slider" class="wrapskins_slider_outer">
-							<img src="images/imac.png">
+							<img src="img/imac.png">
 							<div class="flexslider wrapskins_slider_inner">
 							    <ul class="slides">
 							    	<li>
-							    		<img src="images/wrapskins_slider_1.jpg">
+							    		<img src="img/wrapskins_slider_1.jpg">
 							    	</li>
 							    	<li>
-							    		<img src="images/wrapskins_slider_2.jpg"></a>
+							    		<img src="img/wrapskins_slider_2.jpg"></a>
 							    	</li>
 							    </ul>
 						    </div>
@@ -74,8 +74,8 @@
 					<div class="onecol last mobile_hidden"></div>
 				</div>
 			</div>
-		</div>			
-	</div><!-- END container -->	
-		
+		</div>
+	</div><!-- END container -->
+
 	<?php include('global/footer.php'); ?>
-		
+

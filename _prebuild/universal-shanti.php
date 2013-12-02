@@ -1,6 +1,6 @@
 <?php $section='universalshanti'; $upper='dark'; $project='true'; ?>
 <?php include('global/header.php'); ?>
-	
+
 <body class="interior shanti">
 	<div class="upper shanti_upper">
 		<?php include('global/nav.php'); ?>
@@ -9,7 +9,7 @@
 				<div class="onecol"></div>
 				<div class="fourcol">
 				<div class="shanti_title">
-					<img src="images/shanti_heading.png">
+					<img src="img/shanti_heading.png">
 				</div>
 				</div>
 				<div class="sevencol last"></div>
@@ -38,7 +38,7 @@
 							</div>
 							<p>The Universal Shanti project was a redesign of a site I created in 2009. I kept the design almost identical but re-coded the entire thing onto my custom responsive framework. (Build on a combination of 1140gs, html5 boiler, fittext and more) The entire project needed to be built on wordpress so the client could continue to update the blog and pages herself.</p>
 						</div>
-						<div class="article">	
+						<div class="article">
 							<div class="headline">
 								<h2 class="fit">Non-Mobile First</h2>
 							</div>
@@ -56,29 +56,29 @@
 								<div class="flexslider">
 								    <ul class="slides">
 								    	<li>
-								    		<img src="images/shanti_slides_1.jpg">
+								    		<img src="img/shanti_slides_1.jpg">
 								    	</li>
 								    	<li>
-								    		<img src="images/shanti_slides_2.jpg">
+								    		<img src="img/shanti_slides_2.jpg">
 								    	</li>
 								    	<li>
-								    		<img src="images/shanti_slides_3.jpg">
+								    		<img src="img/shanti_slides_3.jpg">
 								    	</li>
 								    	<li>
-								    		<img src="images/shanti_slides_4.jpg">
+								    		<img src="img/shanti_slides_4.jpg">
 								    	</li>
 								    </ul>
 							    </div>
 							</div>
-							
+
 					</div>
 					<div class="onecol last"></div>
 				</div>
 			</div>
 		</div>
-	</div><!-- END container -->	
-		
+	</div><!-- END container -->
 
-	
-	
+
+
+
 	<?php include('global/footer.php'); ?>

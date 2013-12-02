@@ -5,7 +5,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          '_site/css/style.css' : ['_site/css/style.scss']
+          '_site/css/style.css' : ['_site/css/style.scss'],
+          '_site/css/sequential.css' : ['_site/css/sequential.scss']
         },
         options: {
           style: 'expanded'
@@ -45,6 +46,8 @@ module.exports = function(grunt) {
       minify: {
         src: ['_site/css/style.css'],
         dest: '_site/css/style.css',
+        src: ['_site/css/sequential.css'],
+        dest: '_site/css/sequential.css',
       }
     },
     uglify: {
