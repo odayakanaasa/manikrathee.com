@@ -41,23 +41,20 @@ a{
 	background: #222;
 	background-size: cover;
 	background-repeat: no-repeat;
-	// color: #ffffff;
-	color:#f3f3f3;
+	color: #f3f3f3;
 	margin: 0;
 	padding-top: 50px;
 	#logo{
 		@include animate;
 		@include fadeInDown;
-		margin:0 auto;
 		display:block;
 		background: transparent url('../img/home/white-logo.png') no-repeat top left;
-		height:100px;
-		width:300px;
+		background-size: 100%;
+		margin: 0 auto;
+		@include size(100px, 100px);
 	}
 	.copy{
-		@include animate;
-		@include fadeInDown;
-		width:300px;
+		width: 300px;
 		max-width: 90%;
 		opacity: 1;
 		margin: 20px auto 0;
@@ -66,10 +63,10 @@ a{
 		@include transition(opacity 0.25s ease-in-out);
 		h1{
 			text-transform: uppercase;
-			font-weight:100;
-			margin:0;
-			padding:0;
-			line-height:1;
+			font-weight: 100;
+			margin: 0;
+			padding: 0;
+			line-height: 1;
 		}
 		h1.name{
 			font-weight: 100;
@@ -100,29 +97,6 @@ a{
 			}
 		}
 	}
-	// section.projects{
-	// 	text-transform: uppercase;
-	// 	h2{
-	// 		margin:0;
-	// 		padding:0;
-	// 		font-size:13px;
-	// 		font-weight:normal;
-	// 	}
-	// 	ul{
-	// 		font-size:11px;
-	// 		margin:2px 0 0 0;
-	// 		padding:0;
-	// 		font-weight:300;
-	// 		li{
-	// 			margin:0;
-	// 			padding:0 0 5px 0;
-	// 			list-style-type:none;
-	// 			&:last-child{
-	// 				padding:0;
-	// 			}
-	// 		}
-	// 	}
-	// }
 	.social{
 		margin: 32px 0;
 		ul {
@@ -134,9 +108,9 @@ a{
 			display: inline-block;
 			vertical-align: top;
 			zoom: 1;
-			font-size: 19px;
 			margin: 0 8px 0 0;
 			padding: 0;
+			font-size: 19px;
 			list-style-type: none;
 		}
 		a {
@@ -149,12 +123,13 @@ a{
 
 @media screen and (max-width: 599px) {
 	#logo{
-		margin: 0 auto;
 	}
 }
 
 @media screen and (max-width: 767px) {
 	#home .copy{
+		text-align: center;
+		margin-top: 50px;
 		.title{
 			font-size: 13px;
 		}
@@ -185,15 +160,10 @@ a{
 		font-size: 48px;
 		@include transition(font-size 0.25s ease-in-out);
 	}
-
 	.social-icons{
 		width: 235px;
 		padding: 0;
 		margin: 45px auto;
-	}
-	#home .copy{
-		text-align: center;
-		margin-top: 50px;
 	}
 	#projects{
 		overflow: hidden;
@@ -213,8 +183,9 @@ a{
 		#logo{
 			display:block;
 			background: transparent url('../img/home/white-logo.png') no-repeat center left;
-			height:100px;
-			width:450px;
+			background-size: 100%;
+			margin: 0;
+			@include size(100px, 100px);
 		}
 		.copy{
 			width:450px;
@@ -232,18 +203,19 @@ a{
 		background: #000 url('../img/home/bg-1024.jpg') no-repeat 70% 0;
 		color:#f1f1f1;
 		#logo{
-			background: transparent url('../img/home/logo.png') no-repeat 50% 50%;
-			position:absolute;
-			top:10px;
-			left:10px;
-			width:100px;
+			background: transparent url('../img/home/white-logo.png') no-repeat 50% 50%;
+			background-size: 100%;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			@include size(75px, 75px);
 		}
 		.copy{
 				position: absolute;
 				top: 110px;
 				z-index: 10;
 				width: 420px;
-				margin: 50px 0 0 150px;
+				margin: 75px 0 0 150px;
 			&.fade{
 				opacity: 0;
 			}
@@ -255,12 +227,12 @@ a{
 			}
 		}
 		.social{
-			margin-top: 20px;
+			margin-top: 4px;
 			ul{
 				padding: 0;
 			}
 			li{
-				margin-right: 20px;
+				margin-right: 6px;
 			}
 			a {
 				font-size: 1.05em;
@@ -272,9 +244,6 @@ a{
 
 @media screen and (min-width: 940px){
 	#home{
-		.copy{
-				margin: 50px 0 0 50px;
-		}
 	}
 }
 

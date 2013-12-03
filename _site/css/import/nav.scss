@@ -181,7 +181,6 @@ body.nav, body#home.nav{
 				#projects{
 					height: 220px;
 					opacity: 1;
-					@include transition(none);
 				}
 			}
 		}
@@ -213,7 +212,7 @@ body.nav, body#home.nav{
 	}
 	#navigation{
 		height: auto;
-		padding-left: 120px;
+		padding: 38px 0 0 120px;
 	}
 	.interior nav{
 		position: absolute;

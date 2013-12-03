@@ -5823,11 +5823,6 @@ body.nav #navigation, body#home.nav #navigation {
   nav #portfolio:hover #projects {
     height: 220px;
     opacity: 1;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    transition: none;
   }
   nav #projects {
     position: absolute;
@@ -5862,7 +5857,7 @@ body.nav #navigation, body#home.nav #navigation {
 
   #navigation {
     height: auto;
-    padding-left: 120px;
+    padding: 38px 0 0 120px;
   }
 
   .interior nav {
@@ -6184,27 +6179,15 @@ a:active, a:visited {
   -moz-animation-name: fadeInDown;
   -o-animation-name: fadeInDown;
   animation-name: fadeInDown;
-  margin: 0 auto;
   display: block;
   background: transparent url("../img/home/white-logo.png") no-repeat top left;
+  background-size: 100%;
+  margin: 0 auto;
+  width: 100px;
   height: 100px;
-  width: 300px;
+  border-radius: 0;
 }
 #home .copy {
-  -webkit-animation: 1s ease;
-  -moz-animation: 1s ease;
-  -ms-animation: 1s ease;
-  -o-animation: 1s ease;
-  animation: 1s ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -o-animation-name: fadeInDown;
-  animation-name: fadeInDown;
   width: 300px;
   max-width: 90%;
   opacity: 1;
@@ -6268,9 +6251,9 @@ a:active, a:visited {
   display: inline-block;
   vertical-align: top;
   zoom: 1;
-  font-size: 19px;
   margin: 0 8px 0 0;
   padding: 0;
+  font-size: 19px;
   list-style-type: none;
 }
 #home .social a {
@@ -6279,12 +6262,11 @@ a:active, a:visited {
   border: none;
 }
 
-@media screen and (max-width: 599px) {
-  #logo {
-    margin: 0 auto;
-  }
-}
 @media screen and (max-width: 767px) {
+  #home .copy {
+    text-align: center;
+    margin-top: 50px;
+  }
   #home .copy .title {
     font-size: 13px;
   }
@@ -6326,11 +6308,6 @@ a:active, a:visited {
     margin: 45px auto;
   }
 
-  #home .copy {
-    text-align: center;
-    margin-top: 50px;
-  }
-
   #projects {
     overflow: hidden;
     zoom: 1;
@@ -6346,8 +6323,11 @@ a:active, a:visited {
   #home #logo {
     display: block;
     background: transparent url("../img/home/white-logo.png") no-repeat center left;
+    background-size: 100%;
+    margin: 0;
+    width: 100px;
     height: 100px;
-    width: 450px;
+    border-radius: 0;
   }
   #home .copy {
     width: 450px;
@@ -6362,18 +6342,21 @@ a:active, a:visited {
     color: #f1f1f1;
   }
   #home #logo {
-    background: transparent url("../img/home/logo.png") no-repeat 50% 50%;
+    background: transparent url("../img/home/white-logo.png") no-repeat 50% 50%;
+    background-size: 100%;
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 100px;
+    width: 75px;
+    height: 75px;
+    border-radius: 0;
   }
   #home .copy {
     position: absolute;
     top: 110px;
     z-index: 10;
     width: 420px;
-    margin: 50px 0 0 150px;
+    margin: 75px 0 0 150px;
   }
   #home .copy.fade {
     opacity: 0;
@@ -6385,22 +6368,17 @@ a:active, a:visited {
     font-size: 15px;
   }
   #home .social {
-    margin-top: 20px;
+    margin-top: 4px;
   }
   #home .social ul {
     padding: 0;
   }
   #home .social li {
-    margin-right: 20px;
+    margin-right: 6px;
   }
   #home .social a {
     font-size: 1.05em;
     line-height: 2em;
-  }
-}
-@media screen and (min-width: 940px) {
-  #home .copy {
-    margin: 50px 0 0 50px;
   }
 }
 @media screen and (min-width: 1800px) {
