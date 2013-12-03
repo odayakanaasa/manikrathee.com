@@ -1,9 +1,24 @@
-<?php $section='mrphoto'; $upper='white'; $project='true'; ?>
-<?php include('global/header.php'); ?>
+---
 
-<body class="interior mrphoto">
+layout: default
+
+#home:
+
+title: Manik Rathee Photography
+
+body-class: 'interior mrphoto light'
+
+#body-id:
+
+section: mrphoto
+
+#stylesheet:
+
+#script:
+
+---
 	<div class="upper mrphoto_upper">
-		<?php include('global/nav.php'); ?>
+  	{% include global-nav-bar.html %}
 		<div class="container">
 			<div class="row">
 				<div class="onecol"></div>
@@ -84,7 +99,3 @@
 		</div>
 	</div><!-- END container -->
 
-
-
-
-	<?php include('global/footer.php'); ?>

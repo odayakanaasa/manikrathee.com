@@ -1,8 +1,24 @@
-<?php $section='hope'; $upper='white'; $project='true'; ?>
-<?php include('global/header.php'); ?>
-<body class="interior hope">
+---
+
+layout: default
+
+#home:
+
+title: Hope Will See Us Through
+
+body-class: 'interior hope light'
+
+#body-id:
+
+section: hope
+
+#stylesheet:
+
+#script:
+
+---
 	<div class="upper hope_upper">
-	<?php include('global/nav.php'); ?>
+  	{% include global-nav-bar.html %}
 		<div class="container">
 			<div class="row">
 				<div class="sevencol"></div>
@@ -87,7 +103,3 @@
 		</div>
 	</div><!-- END container -->
 
-
-
-
-	<?php include('global/footer.php'); ?>

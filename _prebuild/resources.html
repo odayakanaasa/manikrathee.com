@@ -1,9 +1,24 @@
-<?php $section='resources'; $upper='white'; $project='false';?>
-<?php include('global/header.php'); ?>
-	
-<body class="interior resources">
+---
+
+layout: default
+
+#home:
+
+title: 'Resources &amp; Tools'
+
+body-class: 'interior resources light'
+
+#body-id:
+
+section: resources
+
+#stylesheet:
+
+#script:
+
+---
 	<div class="upper">
-		<?php include('global/nav.php'); ?>
+  	{% include global-nav-bar.html %}
 		<div class="container">
 			<div class="row">
 				<div class="title">
@@ -38,13 +53,13 @@
 			</div>
 			<div class="onecol last"></div>
 		</div><!-- END row -->
-		
+
 		<div class="row">
 			<div class="onecol"></div>
 			<div class="tencol main-section resource-block">
 				<h2 id="fit">What I Use</h2>
 				<p>I have a problem on the internet. I'm a sucker for productivity articles &amp; apps - so much so that my colleagues would constantly ask what new tip, trick, app or <a href="http://manikfoundasecret.tumblr.com/" title="secret">secret</a> I had that day. So, I decided to make this breakdown of what I use.</p>
-				
+
 				<div class="module hardware">
 					<h4>Hardware</h4>
 					<ul id="hardware">
@@ -65,9 +80,9 @@
 						<li><a href="http://share.manikrathee.com/2C1h0n0x2F3s" title="EyeFi">EyeFi Pro X2</a></li>
 					</ul>
 				</div> <!-- /module -->
-				
-				
-				
+
+
+
 				<div class="left module">
 					<h4>Design</h4>
 					<a href="" title=""><a href="http://www.google.com/aclk?sa=L&ai=C9mCBPvweUcqgDqWEigKN7oD4DsDji-0CgNyTwlaI2oaJAQgAEAFQ4teBVWDJ9viGyKOgGcgBAaoEH0_QYrrk5qUsQoRzN8ehnWX7c8d4QEnE2HsEQZ2Ag4K6BRMIhomw4_C5tQIV0HVCCh3mHQCOygUAgAfcv9AM&ei=PvweUYbyC9DriQLmu4DwCA&sig=AOD64_0h096myxWqOjzUFdWf0UoBN2_M3g&sqi=2&ved=0CC8Q0Qw&adurl=http://pixel.everesttech.net/3085/cq%3Fev_sid%3D3%26ev_cmpid%3D70979800%26ev_ln%3Dadobe%2520creative%2520suite%26ev_crx%3D23194065640%26ev_mt%3De%26ev_n%3Dg%26ev_ltx%3D%26ev_pl%3D%26ev_pos%3D1t1%26url%3D!http://success.adobe.com/en/na/sem/products/creativesuite/family.html%3Fkw%3Dp%26sdid%3DJRSIM%26skwcid%3DTC%7C22178%7Cadobe%2520creative%2520suite%7C%7CS%7Ce%7C23194065640&rct=j&q=adobe+creative+suite" title="Adobe Fireworks and Photoshop">Fireworks &amp; Photoshop</a>
@@ -93,7 +108,7 @@
 					<a href="http://incident57.com/codekit/" title="Codekit">Codekit</a>
 						<p>Must have for LESS &amp; SASS users. Compiles less/sass/js files locally so you don't have to depend on slow server-side compilers. Also gives you the power of javascript file concatenation and linting.</p>
 				</div> <!-- /left -->
-				
+
 				<div class="right module">
 					<h4>Utilities </h4>
 					<a href="http://www.alfredapp.com/" title="AlfredApp">AlfredApp</a>
@@ -123,17 +138,8 @@
 					<a href="http://cordlessdog.com/stay/" title="Stay">Stay</a>
 						<p>Gone are the days of arranging windows every time you connect or disocnnect your external monitor. Set up your windows and Stay will store their locations. Once you connect your external monitor, it detects your workspace, and automatically updates your app positions to the way you like them. Piece of cake.</p>
 				</div> <!-- /right -->
-				
-
-
-				
-
-
-
 			</div> <!-- /main-section resource-block -->
 			<div class="onecol last"></div>
 		</div> <!-- /row -->
-		
-	</div><!-- END container -->	
-		
-	<?php include('global/footer.php'); ?>
+
+	</div><!-- END container -->

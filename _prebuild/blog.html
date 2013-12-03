@@ -1,30 +1,47 @@
-<?php $section='interior_blog'; $upper='white'; ?>
-<?php include('global/header.php'); ?>
+---
 
-<body class="blog">
-	<div class="interior">
-		<div class="upper blog_upper">
-			<?php include('global/upper_logo_bar.php'); ?>
+layout: default
+
+#home:
+
+title: 'Blog'
+
+body-class: 'interior blog light'
+
+#body-id:
+
+section: blog
+
+#project:
+
+#stylesheet: sequential.css
+
+script:
+
+---
+
+	<div class="upper blog_upper">
+  	{% include global-nav-bar.html %}
 			<div class="container">
 				<div class="row">
-					<div class="onecol"></div>
+					<div class="onecol mobile_hidden"></div>
 					<div class="fourcol">
 					<div class="blog_title">
 						<img src="img/blog_heading.png">
 					</div>
 					</div>
-					<div class="sevencol last"></div>
+					<div class="sevencol last mobile_hidden"></div>
 				</div><!-- END row -->
 			</div>
 		</div>
 		<div class="shadow">&nbsp;</div>
-		<div class="container">
+		<div class="container body">
 			<div class="row">
 				<div class="section_spacer"></div>
 				<div class="fourcol left-section">
 					<div class="right_col_inner">
 						<div class="headline">
-							<h3 id="fit" class="glance">Project Details</h2>
+							<h3 id="fit_mobile_glance" class="glance">At A Glance</h2>
 						</div>
 						<p class="glance_heading">Client</p>
 						<p class="glance_description">Personal Blog</p>
@@ -32,7 +49,10 @@
 						<p class="glance_description">Responsive Blog &amp; CMS</p>
 						<p class="glance_heading">Target Devices</p>
 						<p class="glance_description">Desktop / Mobile</p>
-						<a class="button" href="http://blog.manikrathee.com" target="_blank">View Project
+						<a href="http://blog.manikrathee.com" target="_blank">
+							<div class="button">
+							<div class="button_text">&#x1F517; View Project</div>
+							</div>
 						</a>
 					</div>
 				</div>
@@ -41,9 +61,9 @@
 					<div class="left_col_inner">
 							<div class="article">
 								<div class="headline">
-									<h2 id="fit">Design &amp; Development</h2>
+									<h2 id="fit">New Experimentation</h2>
 								</div>
-								<p><a href="http://blog.manikrathee.com">Blog.manikrathee.com</a> is my newly designed blog. The entire layout is a custom responsive wordpress build that I created as a "one hour project." I spent under an hour doing all of the layout, design, developement and testing. It is still in its infancy with less than ten posts but I plan to expand it with technical posts regarding responsive design and new css3/html5 techniques.</p>
+								<p><a href="http://blog.manikrathee.com">Blog.manikrathee.com</a> jekyll, mobile first, responsive images, huge header with vsco filtered images</p>
 							</div>
 							<div class="article">
 								<div class="headline">
@@ -58,7 +78,7 @@
 			<div class="row">
 				<div class="twelvecol last">
 					<div class="row">
-						<div class="onecol"></div>
+						<div class="onecol mobile_hidden"></div>
 						<div class="tencol no_pad">
 								<div id="slider" class="blog_slides">
 									<div class="flexslider">
@@ -80,11 +100,10 @@
 								</div>
 
 						</div>
-						<div class="onecol last"></div>
+						<div class="onecol last mobile_hidden"></div>
 					</div>
 				</div>
 			</div>
 		</div><!-- END container -->
 	</div>
 
-	<?php include('global/footer.php'); ?>

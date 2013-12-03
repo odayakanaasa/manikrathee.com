@@ -1,9 +1,28 @@
-<?php $section='barackobama'; $upper='dark'; $project='true'; ?>
-<?php include('global/header.php'); ?>
-	
-<body class="interior barack-obama">
+---
+
+layout: default
+
+#home:
+
+title: 'Barack Obama: Contribute'
+
+body-class: 'interior barack-obama'
+
+#body-id:
+
+section: barack-obama
+
+upper: white
+
+#project:
+
+#stylesheet: sequential.css
+
+script:
+
+---
 	<div class="upper">
-		<?php include('global/nav.php'); ?>
+  	{% include global-nav-bar.html %}
 		<div class="container">
 			<div class="row">
 				<div class="onecol"></div>
@@ -38,7 +57,7 @@
 							</div>
 							<p>stuff.</p>
 						</div>
-						<div class="article">	
+						<div class="article">
 							<div class="headline">
 								<h2 class="fit">header</h2>
 							</div>
@@ -47,9 +66,4 @@
 				</div>
 			</div>
 		</div><!-- END row -->
-	</div><!-- END container -->	
-		
-
-	
-	
-	<?php include('global/footer.php'); ?>
+	</div><!-- END container -->

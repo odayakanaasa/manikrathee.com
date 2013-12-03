@@ -1,9 +1,83 @@
-<?php $section='resources'; $upper='white'; $project='false';?>
-<?php include('global/header.php'); ?>
-	
-<body class="interior resources">
-	<div class="upper">
-		<?php include('global/nav.php'); ?>
+	<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="robots" content="index,follow,archive">
+  <meta name="author" content="Manik Rathee">
+  <meta name="description" content="Manik Rathee is a designer, developer and user-experience engineer based in San Francisco, CA.">
+  <meta name="keyword" content="manik, rathee, manik rathee, designer, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
+  <meta itemprop="name" content="Manik Rathee">
+  <meta itemprop="description" content="Manik Rathee is a designer, developer and user-experience engineer based in San Francisco, CA.">
+  <meta itemprop="image" content="/img/root/apple-touch-icon.png">
+  <meta property="og:title" content='Manik' />
+  <meta property="og:type" content='website' />
+  <meta property="og:url" content="http://www.manikrathee.com/" />
+  <meta property="og:image" content="/img/root/apple-touch-icon.png">
+  <meta property="og:description" content="Manik Rathee is a designer, developer and user-experience engineer based in San Francisco, CA."/>
+  <meta name="twitter:creator" content="@manikrathee">
+
+  <title>
+  
+  Resources &amp; Tools | Manik Rathee | User Experience Engineer, Designer, Developer.
+  
+  </title>
+
+  <link rel="shortcut icon" href="/img/root/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="img/root/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/root/apple-touch-icon-57x57-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/root/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/root/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/root/apple-touch-icon-144x144-precomposed.png">
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+  
+  <script src="js/libs/modernizr.min.js"></script>
+
+  <script type="text/javascript" src="//use.typekit.net/zqq7yli.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<!--
+    __  ___            _ __      ____        __  __
+   /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
+  / /|_/ / __ `/ __ \/ / //_/  / /_/ / __ `/ __/ __ \/ _ \/ _ \
+ / /  / / /_/ / / / / / ,\    / _, _/ /_/ / /_/ / / /  __/  __/
+/_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/
+-->
+
+
+	<body  class="interior resources light">
+
+		<div class="upper">
+  	<nav id="white" class="global-nav">
+  <div id="logo" class="white"></div>
+  <a id="nav" href="#">Navigation</a>
+  <ul id="navigation">
+    <li><a itemprop="url" href="index.html" title="Home">Home</a></li>
+    <li><a itemprop="url" href="about.html" title="About Manik Rathee">About</a></li>
+    <li id="portfolio"><a itemprop="url" href="#" title="Portfolio">Portfolio</a>
+      <ul id="projects">
+        <li><a itemprop="url" href="barack-obama-contribute.html" title="Contribute.BarackObama.com">Contribute.BarackObama.com</a></li>
+         <!--
+        <li><a itemprop="url" href="barack-obama-call-tool.html" title="Barack Obama Call Tool">Barack Obama Call Tool</a></li> -->
+        <li><a itemprop="url" href="catalyst-iphone-theme.html" title="CATALYST - Minimal iPhone Theme">Catalyst iOS Theme</a></li>
+        <li><a itemprop="url" href="hope-will-see-us-through.html" title="Hope Will See Us Through">Hope Will See Us Through</a></li>
+        <li><a itemprop="url" href="manik-rathee-photography.html" title="Manik Rathee Photography">Manik Rathee Photography</a></li>
+        <li><a itemprop="url" href="wrapskins.html" title="Wrapskins">Wrapskins</a></li>
+        <li><a itemprop="url" href="livescribe.html" title="Livescribe">Livescribe</a></li>
+        <li><a itemprop="url" href="universal-shanti.html" title="Universal Shanti">Universal Shanti</a></li>
+        <li><a itemprop="url" href="manik-rathee-blog.html" title="Blog.ManikRathee">Design Experiment: My Blog</a></li>
+      </ul>
+    </li>
+    <li><a itemprop="url" href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">Blog</a></li>
+    <li><a itemprop="url" href="resources.html" title="Resources">Resources</a></li>
+  </ul>
+<!--      <p id="current"<?php if ($project=='false') { echo 'class=" hide"'; } ?>><?php if ($section=='barackobama') { echo 'BarackObama.com'; } ?><?php if ($section=='contribute') { echo 'Contribute.BarackObama.com'; } ?><?php if ($section=='calltool') { echo 'Barack Obama Call Tool'; } ?><?php if ($section=='hope') { echo 'Hope Will See Us Through'; } ?><?php if ($section=='mrphoto') { echo 'Manik Rathee Photography'; } ?><?php if ($section=='wrap') { echo 'Wrapskins'; } ?><?php if ($section=='livescribe') { echo 'LiveScribe Smartpen'; } ?><?php if ($section=='universalshanti') { echo 'Universal Shanti'; } ?><?php if ($section=='blog') { echo 'Blog.ManikRathee.com'; } ?><?php if ($section=='catalyst') { echo 'Catalyst iOS Theme'; } ?></p> -->
+</nav>
+
 		<div class="container">
 			<div class="row">
 				<div class="title">
@@ -38,13 +112,13 @@
 			</div>
 			<div class="onecol last"></div>
 		</div><!-- END row -->
-		
+
 		<div class="row">
 			<div class="onecol"></div>
 			<div class="tencol main-section resource-block">
 				<h2 id="fit">What I Use</h2>
 				<p>I have a problem on the internet. I'm a sucker for productivity articles &amp; apps - so much so that my colleagues would constantly ask what new tip, trick, app or <a href="http://manikfoundasecret.tumblr.com/" title="secret">secret</a> I had that day. So, I decided to make this breakdown of what I use.</p>
-				
+
 				<div class="module hardware">
 					<h4>Hardware</h4>
 					<ul id="hardware">
@@ -65,9 +139,9 @@
 						<li><a href="http://share.manikrathee.com/2C1h0n0x2F3s" title="EyeFi">EyeFi Pro X2</a></li>
 					</ul>
 				</div> <!-- /module -->
-				
-				
-				
+
+
+
 				<div class="left module">
 					<h4>Design</h4>
 					<a href="" title=""><a href="http://www.google.com/aclk?sa=L&ai=C9mCBPvweUcqgDqWEigKN7oD4DsDji-0CgNyTwlaI2oaJAQgAEAFQ4teBVWDJ9viGyKOgGcgBAaoEH0_QYrrk5qUsQoRzN8ehnWX7c8d4QEnE2HsEQZ2Ag4K6BRMIhomw4_C5tQIV0HVCCh3mHQCOygUAgAfcv9AM&ei=PvweUYbyC9DriQLmu4DwCA&sig=AOD64_0h096myxWqOjzUFdWf0UoBN2_M3g&sqi=2&ved=0CC8Q0Qw&adurl=http://pixel.everesttech.net/3085/cq%3Fev_sid%3D3%26ev_cmpid%3D70979800%26ev_ln%3Dadobe%2520creative%2520suite%26ev_crx%3D23194065640%26ev_mt%3De%26ev_n%3Dg%26ev_ltx%3D%26ev_pl%3D%26ev_pos%3D1t1%26url%3D!http://success.adobe.com/en/na/sem/products/creativesuite/family.html%3Fkw%3Dp%26sdid%3DJRSIM%26skwcid%3DTC%7C22178%7Cadobe%2520creative%2520suite%7C%7CS%7Ce%7C23194065640&rct=j&q=adobe+creative+suite" title="Adobe Fireworks and Photoshop">Fireworks &amp; Photoshop</a>
@@ -93,7 +167,7 @@
 					<a href="http://incident57.com/codekit/" title="Codekit">Codekit</a>
 						<p>Must have for LESS &amp; SASS users. Compiles less/sass/js files locally so you don't have to depend on slow server-side compilers. Also gives you the power of javascript file concatenation and linting.</p>
 				</div> <!-- /left -->
-				
+
 				<div class="right module">
 					<h4>Utilities </h4>
 					<a href="http://www.alfredapp.com/" title="AlfredApp">AlfredApp</a>
@@ -123,17 +197,23 @@
 					<a href="http://cordlessdog.com/stay/" title="Stay">Stay</a>
 						<p>Gone are the days of arranging windows every time you connect or disocnnect your external monitor. Set up your windows and Stay will store their locations. Once you connect your external monitor, it detects your workspace, and automatically updates your app positions to the way you like them. Piece of cake.</p>
 				</div> <!-- /right -->
-				
-
-
-				
-
-
-
 			</div> <!-- /main-section resource-block -->
 			<div class="onecol last"></div>
 		</div> <!-- /row -->
-		
-	</div><!-- END container -->	
-		
-	<?php include('global/footer.php'); ?>
+
+	</div><!-- END container -->
+
+
+    
+  <a id="top" class="ss-icon" href="#" title="Back To The Top">Up</a>
+  
+
+  <script src="js/script.js"></script>
+  
+
+</body>
+</html>
+
+
+</body>
+</html>

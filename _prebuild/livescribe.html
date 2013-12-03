@@ -1,8 +1,24 @@
-<?php $section='livescribe';  $upper='dark'; $project='true'; ?>
-<?php include('global/header.php'); ?>
-<body class="interior livescribe">
+---
+
+layout: default
+
+#home:
+
+title: Livescribe Smartpen
+
+body-class: 'interior livescribe dark'
+
+#body-id:
+
+section: livescribe
+
+#stylesheet:
+
+#script:
+
+---
 	<div class="upper livescribe_upper">
-	<?php include('global/nav.php'); ?>
+  	{% include global-nav-bar.html %}
 		<div class="container">
 			<div class="row">
 				<div class="sevencol"></div>
@@ -78,5 +94,3 @@
 			</div>
 		</div>
 	</div><!-- END container -->
-
-	<?php include('global/footer.php'); ?>
