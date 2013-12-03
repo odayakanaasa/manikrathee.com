@@ -53,39 +53,45 @@ nav{
 
 nav{
 	body.dark & {
-		a {
-			color: rgba(50,50,50,0.6);
-			text-shadow: 0 1px 0 rgba(255,255,255,0.4);
-			&:hover{
+		#navigation {
+			li a {
+				color: rgba(50,50,50,0.6);
+				text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+				&:hover{
+					color: rgba(50,50,50,1);
+				}
+			}
+			p{
+				color: rgba(50,50,50,0.6);
+			}
+			p#current{
 				color: rgba(50,50,50,1);
 			}
-		}
-		p{
-			color: rgba(50,50,50,0.6);
-		}
-		p#current{
-			color: rgba(50,50,50,1);
-		}
-		#navigation.show{
-			background: rgba(255,255,255,0.8);
-		}
-	}
-	body.light & {
-		a {
-			color: rgba(255,255,255,0.6);
-			text-shadow: 0 1px 0 rgba(50,50,50,0.2);
-			&:hover{
-				color: rgba(255,255,255,1);
+			#navigation.show{
+				background: rgba(255,255,255,0.8);
 			}
 		}
-		p{
-			color: rgba(255,255,255,0.6);
-		}
-		p#current{
-			color: rgba(255,255,255,1);
-		}
-		#navigation.show{
-			background: rgba(0,0,0,0.7);
+
+	}
+	body.light & {
+
+		#navigation {
+			li a {
+				color: rgba(255,255,255,0.6);
+				text-shadow: 0 1px 0 rgba(50,50,50,0.2);
+				&:hover{
+					color: rgba(255,255,255,1);
+				}
+			}
+			p{
+				color: rgba(255,255,255,0.6);
+			}
+			p#current{
+				color: rgba(255,255,255,1);
+			}
+			#navigation.show{
+				background: rgba(0,0,0,0.7);
+			}
 		}
 	}
 }
@@ -151,7 +157,6 @@ nav{
 body.nav, body#home.nav{
 	#navigation{
 		left: 0;
-		// width: 90%;
 	}
 }
 
@@ -170,42 +175,41 @@ body.nav, body#home.nav{
 				list-style-type: none;
 				margin-right: 15px;
 			}
-
 		}
-		#portfolio{
-			position: relative;
-			cursor: pointer;
-			height: 15px;
-			&:hover{
+	}
+	#portfolio{
+		position: relative;
+		cursor: pointer;
+		height: 15px;
+		&:hover{
+			height: 220px;
+			#projects{
 				height: 220px;
-				#projects{
-					height: 220px;
-					opacity: 1;
-				}
+				opacity: 1;
 			}
 		}
-		#projects{
-			position: absolute;
-			top: 15px;
-			left: 0;
+	}
+	#projects{
+		position: absolute;
+		top: 15px;
+		left: 0;
+		float: none;
+		overflow: hidden;
+		padding: 0;
+		background: none;
+		z-index: 999;
+		@include transition( (opacity 0.25s ease-in-out),(height 0.25s ease-in-out) );
+		li{
 			float: none;
-			overflow: hidden;
-			padding: 0;
-			background: none;
-			z-index: 999;
-			@include transition( (opacity 0.25s ease-in-out),(height 0.25s ease-in-out) );
-			li{
-				float: none;
-				display: block;
-				margin: 5px 0;
-			}
-		}
-		#current{
-			position: absolute;
-			top: 64px;
-			left: 93px;
 			display: block;
+			margin: 5px 0;
 		}
+	}
+	#current{
+		position: absolute;
+		top: 64px;
+		left: 93px;
+		display: block;
 	}
 	nav ul, nav #logo{
 		float: left;
@@ -213,6 +217,9 @@ body.nav, body#home.nav{
 	#navigation{
 		height: auto;
 		padding: 38px 0 0 120px;
+		body.interior & {
+			padding: 32px 0 0 30px;
+		}
 	}
 	.interior nav{
 		position: absolute;

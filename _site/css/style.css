@@ -5695,36 +5695,36 @@ nav p {
   padding: 0;
 }
 
-body.dark nav a {
+body.dark nav #navigation li a {
   color: rgba(50, 50, 50, 0.6);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
-body.dark nav a:hover {
+body.dark nav #navigation li a:hover {
   color: #323232;
 }
-body.dark nav p {
+body.dark nav #navigation p {
   color: rgba(50, 50, 50, 0.6);
 }
-body.dark nav p#current {
+body.dark nav #navigation p#current {
   color: #323232;
 }
-body.dark nav #navigation.show {
+body.dark nav #navigation #navigation.show {
   background: rgba(255, 255, 255, 0.8);
 }
-body.light nav a {
+body.light nav #navigation li a {
   color: rgba(255, 255, 255, 0.6);
   text-shadow: 0 1px 0 rgba(50, 50, 50, 0.2);
 }
-body.light nav a:hover {
+body.light nav #navigation li a:hover {
   color: white;
 }
-body.light nav p {
+body.light nav #navigation p {
   color: rgba(255, 255, 255, 0.6);
 }
-body.light nav p#current {
+body.light nav #navigation p#current {
   color: white;
 }
-body.light nav #navigation.show {
+body.light nav #navigation #navigation.show {
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -5812,19 +5812,21 @@ body.nav #navigation, body#home.nav #navigation {
     list-style-type: none;
     margin-right: 15px;
   }
-  nav #portfolio {
+
+  #portfolio {
     position: relative;
     cursor: pointer;
     height: 15px;
   }
-  nav #portfolio:hover {
+  #portfolio:hover {
     height: 220px;
   }
-  nav #portfolio:hover #projects {
+  #portfolio:hover #projects {
     height: 220px;
     opacity: 1;
   }
-  nav #projects {
+
+  #projects {
     position: absolute;
     top: 15px;
     left: 0;
@@ -5839,12 +5841,13 @@ body.nav #navigation, body#home.nav #navigation {
     -o-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
     transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
   }
-  nav #projects li {
+  #projects li {
     float: none;
     display: block;
     margin: 5px 0;
   }
-  nav #current {
+
+  #current {
     position: absolute;
     top: 64px;
     left: 93px;
@@ -5858,6 +5861,9 @@ body.nav #navigation, body#home.nav #navigation {
   #navigation {
     height: auto;
     padding: 38px 0 0 120px;
+  }
+  body.interior #navigation {
+    padding: 32px 0 0 30px;
   }
 
   .interior nav {
