@@ -19,7 +19,7 @@ LastFMStatus.init({
 function logofyAPI(){
   setTimeout(function(){
     if (instagramActive){
-      $(".social-api").prepend('<span class="ss-icon logo"></span>');
+      $(".social-api").prepend('<span class="ss-icon ss-social logo"></span>');
       twitterAPI.find('span.logo').prepend(twitterID);
       instagramAPI.find('span.logo').prepend(instagramID);
       // rdioAPI.find('span.logo').prepend(rdioID);

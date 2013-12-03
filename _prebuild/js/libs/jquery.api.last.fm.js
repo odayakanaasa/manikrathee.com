@@ -70,7 +70,7 @@ var LastFMStatus = {
       message  = '<strong>'+this.trackInfo.message+'</strong>';
     } else {
       status = this.trackInfo.playing ? 'Now Playing: ' : 'Last Played: ';
-      message  = '<a href="http://www.rdio.com/people/manikrathee/history/" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Rdio" itemprop="url"><span class="ss-icon logo">rdio</span><div><p>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</p></a></div>';
+      message  = '<a href="http://www.rdio.com/people/manikrathee/history/" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Rdio" itemprop="url"><span class="ss-icon ss-social logo">rdio</span><div><p>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</p></a></div>';
     }
 
     if ( $('body').attr('id') === 'home' ){
