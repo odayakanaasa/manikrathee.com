@@ -91,5 +91,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jekyll','sass','concat']);
   grunt.registerTask('w', ['jekyll','sass','concat','watch']);
-  grunt.registerTask('production', ['jekyll','sass','concat','cssmin','uglify','imagemin']);
+  grunt.registerTask('production', ['jekyll','sass','concat','imagemin','cssmin','uglify']);
 };
