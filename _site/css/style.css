@@ -5695,33 +5695,33 @@ nav p {
   padding: 0;
 }
 
-body.dark nav #navigation li a {
+body.dark nav #navigation a {
   color: rgba(50, 50, 50, 0.6);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
-body.dark nav #navigation li a:hover {
+body.dark nav #navigation a:hover {
   color: #323232;
 }
 body.dark nav #navigation p {
   color: rgba(50, 50, 50, 0.6);
 }
-body.dark nav #navigation p#current {
+body.dark nav #navigation #current {
   color: #323232;
 }
 body.dark nav #navigation #navigation.show {
   background: rgba(255, 255, 255, 0.8);
 }
-body.light nav #navigation li a {
+body.light nav #navigation a {
   color: rgba(255, 255, 255, 0.6);
   text-shadow: 0 1px 0 rgba(50, 50, 50, 0.2);
 }
-body.light nav #navigation li a:hover {
+body.light nav #navigation a:hover {
   color: white;
 }
 body.light nav #navigation p {
   color: rgba(255, 255, 255, 0.6);
 }
-body.light nav #navigation p#current {
+body.light nav #navigation #current {
   color: white;
 }
 body.light nav #navigation #navigation.show {

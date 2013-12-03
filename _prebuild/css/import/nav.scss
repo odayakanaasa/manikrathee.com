@@ -54,7 +54,7 @@ nav{
 nav{
 	body.dark & {
 		#navigation {
-			li a {
+			a {
 				color: rgba(50,50,50,0.6);
 				text-shadow: 0 1px 0 rgba(255,255,255,0.4);
 				&:hover{
@@ -64,7 +64,7 @@ nav{
 			p{
 				color: rgba(50,50,50,0.6);
 			}
-			p#current{
+			#current{
 				color: rgba(50,50,50,1);
 			}
 			#navigation.show{
@@ -74,9 +74,8 @@ nav{
 
 	}
 	body.light & {
-
 		#navigation {
-			li a {
+			a {
 				color: rgba(255,255,255,0.6);
 				text-shadow: 0 1px 0 rgba(50,50,50,0.2);
 				&:hover{
@@ -86,7 +85,7 @@ nav{
 			p{
 				color: rgba(255,255,255,0.6);
 			}
-			p#current{
+			#current{
 				color: rgba(255,255,255,1);
 			}
 			#navigation.show{

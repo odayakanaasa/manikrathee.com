@@ -35,7 +35,9 @@
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/root/apple-touch-icon-144x144-precomposed.png">
 
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-
+  {% if page.stylesheet %}
+  <link rel="stylesheet" href="css/{{ page.stylesheet }}" type="text/css" media="screen" />
+  {% endif%}
   <script src="js/libs/modernizr.min.js"></script>
 
   <script type="text/javascript" src="//use.typekit.net/zqq7yli.js"></script>

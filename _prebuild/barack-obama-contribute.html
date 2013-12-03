@@ -1,8 +1,29 @@
-<?php $section='contribute'; $upper='white'; $project='true'; ?>
-<?php include('global/header.php'); ?>
-<body class="interior obama-contribute sequential">
+---
+
+layout: default
+
+#home:
+
+title: 'Barack Obama: Contribute'
+
+body-class: 'interior obama-contribute light'
+
+#body-id:
+
+section: obama-contribute
+
+upper: white
+
+#project:
+
+stylesheet: sequential.css
+
+#script:
+
+---
+
 	<div class="upper upper">
-	<?php include('global/nav.php'); ?>
+  	{% include global-nav-bar.html %}
 		<div class="container">
 			<div class="row">
 				<div class="fivecol title">
@@ -44,8 +65,6 @@
 			<p>So, we started taking larger, smarter risks.</p>
 		</div> <!-- /container row -->
 	</section><!-- /module blue -->
-
-
 
 	<section class="module road-to-sequential">
 			<h4>The Road To Sequential</h4>
@@ -98,9 +117,6 @@
 			<img src="img/interior_contribute_stage_2.jpg" alt="Stage 2">
 		</div> <!-- /container row -->
 	</section><!-- /module blue -->
-
-
-
 
 	<section class="module sequential-born">
 			<h4>Stage 3: Gradual Incline <span>vs</span> Steep Slope</h4>
@@ -158,7 +174,8 @@
 
 	<section class="module live-sequential">
 
-		<?php include('global/sequential-asks-module.php'); ?>
+  	{% include sequential-asks-module.html %}
+
 		<figcaption id="donate-caption">*Note: This form is now inactive and has been modified from it's original state. In order to see the official version, head to <a href="http://contribute.barackobama.com" title="Contribute.BarackObama.com">contribute.barackobama.com</a></figcaption>
 
 		<div id="donate-form-mobile">
@@ -197,5 +214,3 @@
 	</section>
 
 	<p id="ofa-logo">Obama For America, 2012</p>
-
-	<?php include('global/footer.php'); ?>
