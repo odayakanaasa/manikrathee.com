@@ -57,7 +57,8 @@ a{
 		width: 300px;
 		max-width: 90%;
 		opacity: 1;
-		margin: 20px auto 0;
+		margin: 50px auto 0;
+		text-align: center;
 		font-size: 14px;
 		text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 		@include transition(opacity 0.25s ease-in-out);
@@ -68,25 +69,18 @@ a{
 			padding: 0;
 			line-height: 1;
 		}
-		h1.name{
+		.name{
 			font-weight: 100;
 			font-size: 40px;
 			text-transform: uppercase;
 		}
-		h1.title{
+		.title{
 			font-weight: 300;
-			font-size: 16px;
+			font-size: 1em;
 			text-transform: uppercase;
 			a{
 				border: none;
 				padding: none;
-			}
-		}
-		.title{
-			font-size: 14px;
-			font-weight: 300;
-			line-height: 1.6;
-			a{
 				border-bottom: 1px solid rgb(114, 114, 114);
 				padding-bottom: 1px;
 				@include transition( (border 0.25s ease-in-out),(text-shadow 0.25s ease-in-out) );
@@ -95,43 +89,6 @@ a{
 					border-bottom: 1px solid rgb(255, 255, 255);
 				}
 			}
-		}
-	}
-	.social{
-		margin: 32px 0;
-		ul {
-			overflow: hidden;
-			zoom: 1;
-			padding: 0;
-		}
-		li {
-			display: inline-block;
-			vertical-align: top;
-			zoom: 1;
-			margin: 0 8px 0 0;
-			padding: 0;
-			font-size: 19px;
-			list-style-type: none;
-		}
-		a {
-			font-size: 0.75em;
-			text-decoration: none;
-			border: none;
-		}
-	}
-}
-
-@media screen and (max-width: 599px) {
-	#logo{
-	}
-}
-
-@media screen and (max-width: 767px) {
-	#home .copy{
-		text-align: center;
-		margin-top: 50px;
-		.title{
-			font-size: 13px;
 		}
 	}
 	ul:not(.social-icons){
@@ -156,15 +113,6 @@ a{
 			}
 		}
 	}
-	#home .social ul li{
-		font-size: 48px;
-		@include transition(font-size 0.25s ease-in-out);
-	}
-	.social-icons{
-		width: 235px;
-		padding: 0;
-		margin: 45px auto;
-	}
 	#projects{
 		overflow: hidden;
 		zoom: 1;
@@ -175,33 +123,58 @@ a{
 			margin: 10px 0;
 		}
 	}
+	.social{
+		margin: 32px 0;
+		ul {
+			overflow: hidden;
+			zoom: 1;
+			width: 235px;
+			margin: 45px auto;
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+			vertical-align: top;
+			zoom: 1;
+			margin: 0 8px 0 0;
+			padding: 0;
+			// font-size: 19px;
+			font-size: 48px;
+			list-style-type: none;
+			@include transition(font-size 0.25s ease-in-out);
+		}
+		a {
+			font-size: 0.75em;
+			text-decoration: none;
+			border: none;
+		}
+	}
 }
 
 
 @media screen and (min-width:500px){
 	#home{
 		#logo{
-			display:block;
+			display: block;
 			background: transparent url('../img/home/white-logo.png') no-repeat center left;
 			background-size: 100%;
-			margin: 0;
+			margin: 0 auto;
 			@include size(100px, 100px);
 		}
 		.copy{
-			width:450px;
+			width: 450px;
 			.title{
-				font-size:15px;
+				font-size: 1.25em;
 			}
 		}
 	}
 }
 
 
-
 @media screen and (min-width: 768px){
 	#home{
 		background: #000 url('../img/home/bg-1024.jpg') no-repeat 70% 0;
-		color:#f1f1f1;
+		color: #f1f1f1;
 		#logo{
 			background: transparent url('../img/home/white-logo.png') no-repeat 50% 50%;
 			background-size: 100%;
@@ -210,40 +183,54 @@ a{
 			left: 10px;
 			@include size(75px, 75px);
 		}
+		#projects{
+			overflow: visible;
+
+		}
 		.copy{
-				position: absolute;
-				top: 110px;
-				z-index: 10;
-				width: 420px;
-				margin: 75px 0 0 150px;
+			position: absolute;
+			top: 110px;
+			z-index: 10;
+			width: 420px;
+			margin: 75px 0 0 150px;
+			font-size: 1em;
+			text-align: left;
+			p {
+				font-size: 0.9em;
+				text-transform: none;
+			}
 			&.fade{
 				opacity: 0;
 			}
 		}
 		.title {
+			font-size: 1.2em;
 			margin: 20px 0 30px;
-			p {
-				font-size: 15px;
-			}
 		}
-		.social{
-			margin-top: 4px;
-			ul{
-				padding: 0;
-			}
-			li{
-				margin-right: 6px;
-			}
-			a {
-				font-size: 1.05em;
-				line-height: 2em;
-			}
-		}
-	}
-}
 
-@media screen and (min-width: 940px){
-	#home{
+		ul:not(.social) {
+			li {
+				margin-right: 16px;
+				font-size: 13px;
+			}
+		}
+		.social {
+			ul {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				@include clearfix;
+				li{
+					display: block;
+					float: left;
+					margin-right: 12px;
+				}
+				a {
+					font-size: 1.5em;
+					line-height: 2em;
+				}
+			}
+		}
 	}
 }
 
