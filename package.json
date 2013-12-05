@@ -1,14 +1,14 @@
 {
-  "name": "fluence-www",
+  "name": "Manik Rathee",
   "version": "2.0.0",
-  "description": "Fluence Marketing Site",
+  "description": "Manik Rathee's personal website",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
     "name": "Manik Rathee",
-    "email": "manik@fluenceapp.com",
-    "url": "http://fluenceapp.com"
+    "email": "manikrathee@gmail.com",
+    "url": "http://manikrathee.com"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
