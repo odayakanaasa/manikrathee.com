@@ -13,16 +13,6 @@ module.exports = function(grunt) {
         },
       },
     },
-    uncss: {
-      dist: {
-        files: {
-          '_site/css/style-tidy.css': ['_site/css/style.css'],
-          }
-        },
-        options: {
-          compress:true
-        }
-    },
     watch: {
       files: ['_prebuild/**'],
       tasks: ['jekyll','sass','concat'],
@@ -94,7 +84,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks("grunt-remove-logging");
 
