@@ -9556,8 +9556,6 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   
 })(jQuery);
 ;if ( $('body').attr('id') === 'home' ){
-
-
 	//Twitter Call
 	// $(document).ready(function() {
 		// $.getJSON('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=manikrathee&count=1', function(data) {
@@ -9621,6 +9619,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	$(document).ready(function() {
 		$('.twitter').load('OAuth/twitter-auth.php');
 		logofyAPI();
+		centerAPI();
 	});
 }
 ;var LastFMStatus = {
