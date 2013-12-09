@@ -5,13 +5,21 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          '_site/css/style.css' : ['_site/css/style.scss'],
-          '_site/css/sequential.css' : ['_site/css/sequential.scss']
+          '_site/css/style.max.css' : ['_site/css/style.scss'],
+          '_site/css/sequential.max.css' : ['_site/css/sequential.scss'],
         },
         options: {
-          style: 'compressed'
+          style: 'expanded'
         },
       },
+    },
+    cssmin: {
+      compress: {
+        files: {
+          '_site/css/style.min.css': '_site/css/style.max.css',
+          '_site/css/sequential.min.css': '_site/css/sequential.max.css',
+        }
+      }
     },
     watch: {
       files: ['_prebuild/**'],
@@ -89,5 +97,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jekyll','sass','concat']);
   grunt.registerTask('w', ['jekyll','sass','concat','watch']);
-  grunt.registerTask('production', ['jekyll','sass','concat','imagemin','removelogging','uglify']);
+  grunt.registerTask('production', ['jekyll','sass','cssmin','concat','imagemin','removelogging','uglify']);
 };
