@@ -1,5 +1,5 @@
 {
-  "name": "Manik Rathee",
+  "name": "manikrathee",
   "version": "2.0.0",
   "description": "Manik Rathee's personal website",
   "scripts": {
@@ -20,6 +20,8 @@
     "grunt-contrib-imagemin": "~0.3.0",
     "grunt-contrib-sass": "~0.5.0",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-jekyll": "~0.4.0"
+    "grunt-jekyll": "~0.4.0",
+    "grunt-remove-logging": "~0.1.1",
+    "grunt-uncss": "~0.1.5"
   }
 }

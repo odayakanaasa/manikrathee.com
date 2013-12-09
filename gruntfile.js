@@ -9,9 +9,19 @@ module.exports = function(grunt) {
           '_site/css/sequential.css' : ['_site/css/sequential.scss']
         },
         options: {
-          style: 'expanded'
+          style: 'compressed'
         },
       },
+    },
+    uncss: {
+      dist: {
+        files: {
+          '_site/css/style-tidy.css': ['_site/css/style.css'],
+          }
+        },
+        options: {
+          compress:true
+        }
     },
     watch: {
       files: ['_prebuild/**'],
@@ -42,12 +52,9 @@ module.exports = function(grunt) {
         nonull: true,
        },
     },
-    cssmin: {
-      minify: {
-        src: ['_site/css/style.css'],
-        dest: '_site/css/style.css',
-        src: ['_site/css/sequential.css'],
-        dest: '_site/css/sequential.css',
+    removelogging: {
+      dist: {
+        '_site/js/script.js' : ['_site/js/script.js'],
       }
     },
     uglify: {
@@ -87,9 +94,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks("grunt-remove-logging");
 
   grunt.registerTask('default', ['jekyll','sass','concat']);
   grunt.registerTask('w', ['jekyll','sass','concat','watch']);
-  grunt.registerTask('production', ['jekyll','sass','concat','imagemin','cssmin','uglify']);
+  grunt.registerTask('production', ['jekyll','sass','concat','imagemin','removelogging','uglify']);
 };
