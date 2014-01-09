@@ -2575,7 +2575,9 @@ body.light nav #navigation #navigation.show {
     width: 100%;
     height: auto;
     padding: 100px 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(22, 34, 36, 0.975);
+    border-top: 1px solid rgba(255, 255, 255, 0.55);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.55);
     -webkit-transition: left 0.25s ease-in-out;
     -moz-transition: left 0.25s ease-in-out;
     -ms-transition: left 0.25s ease-in-out;
@@ -2585,6 +2587,9 @@ body.light nav #navigation #navigation.show {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+  body.nav #navigation {
+    left: 0;
   }
   #navigation #projects {
     height: auto;

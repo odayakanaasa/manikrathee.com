@@ -11302,15 +11302,14 @@ var navHook = $('#nav');
 var navMenu = $('#navigation');
 var body = $('body');
 
-navHook.click(function(e){
+navHook.click(function(e) {
 	e.preventDefault();
 	e.stopPropagation();
-	if (body.hasClass('nav')){
-	   body.removeClass('nav');
-   	}
-   	else{
+	if (body.hasClass('nav')) {
+    body.removeClass('nav');
+ 	} else {
 		body.addClass('nav');
-   	}
+ 	}
 });
 
 navMenu.click(function(e){

@@ -138,12 +138,18 @@ nav{
 		padding: 0;
 	}
 	#navigation{
+		body.nav & {
+			left: 0;
+		}
 		position: absolute;
 		left: -100%;
 		width: 100%;
 		height: auto;
 		padding: 100px 0;
-		background: rgba(0,0,0,0.9);
+		// background: rgba(0,0,0,0.9); // black
+		background: darken(rgba(42,64,67,0.975), 10%); // #2a4043
+		border-top: 1px solid rgba(255,255,255,0.55);
+		border-bottom: 1px solid rgba(255,255,255,0.55);
 		@include transition(left 0.25s ease-in-out);
 		@include box;
 		#projects{
