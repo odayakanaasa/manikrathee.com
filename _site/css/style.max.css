@@ -3010,9 +3010,9 @@ a:active, a:visited {
   text-transform: uppercase;
 }
 #home .title {
+  margin-top: 40px;
   font-weight: 300;
   font-size: 1em;
-  text-transform: uppercase;
 }
 #home .title a {
   border: none;
@@ -3142,8 +3142,9 @@ a:active, a:visited {
     opacity: 0;
   }
   #home .title {
-    font-size: 1.2em;
     margin: 20px 0 30px;
+    font-size: 1.2em;
+    text-transform: uppercase;
   }
   #home ul:not(.social) li {
     margin-right: 16px;

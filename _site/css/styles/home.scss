@@ -74,9 +74,9 @@ a{
 		text-transform: uppercase;
 	}
 	.title{
+		margin-top: 40px;
 		font-weight: 300;
 		font-size: 1em;
-		text-transform: uppercase;
 		a{
 			border: none;
 			padding: none;
@@ -201,8 +201,9 @@ a{
 			}
 		}
 		.title {
-			font-size: 1.2em;
 			margin: 20px 0 30px;
+			font-size: 1.2em;
+			text-transform: uppercase;
 		}
 
 		ul:not(.social) {
