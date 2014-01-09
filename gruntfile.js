@@ -43,7 +43,7 @@ module.exports = function(grunt) {
           '_site/js/libs/jquery.counter.js',
           '_site/js/libs/jquery.tipTip.js',
           // '_site/js/libs/konami.js',
-          '_site/js/libs/jquery.withinViewport.js',
+          '_site/js/libs/withinViewport.js',
           '_site/js/libs/script.js',
           ],
         dest: '_site/js/script.js',
