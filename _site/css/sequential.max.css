@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
    OFA Donate - Sequential Module
 
@@ -584,7 +585,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   a, a:visited {
-    color: #444 !important;
+    color: #444444 !important;
     text-decoration: underline;
   }
 
@@ -601,7 +602,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
@@ -717,7 +718,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border: 0;
   margin: 0;
   zoom: 1;
-  font-family: 'Sentinel 7r', 'Sentinel A', 'Sentinel B', "jubilat", Georgia, serif;
+  font-family: "Sentinel 7r", "Sentinel A", "Sentinel B", "jubilat", Georgia, serif;
   -webkit-appearance: none;
   border-radius: 3px;
   clear: both;
@@ -762,7 +763,7 @@ body.personalized #personalized-content {
 
 #donor-info {
   margin: 0 0 20px 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   padding-bottom: 20px;
   padding-left: 2px;
 }
@@ -802,7 +803,7 @@ body.personalized #personalized-content {
 
 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="file"]), textarea {
   background: #f1f1f1;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 3px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -936,7 +937,7 @@ html.ie8 #form-fields #amounts input[type="radio"], html.ie8 #form-fields #recur
 }
 html.ie8 input, html.ie8 textarea {
   background: #f1f1f1;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 3px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -969,7 +970,7 @@ html.ie7 #form-fields #amounts input[type="radio"], html.ie7 #form-fields #recur
 }
 html.ie7 input, html.ie7 textarea {
   background: #f1f1f1;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 3px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1066,7 +1067,7 @@ ul#amounts li.amount-cont label {
 ul#amounts li.amount-cont label.active {
   background: #81c341;
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid white;
   box-shadow: inset 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
   -webkit-transition: none;
   -moz-transition: none;
@@ -1289,7 +1290,7 @@ body.error #form-fields ul#amounts .amount-cont {
   body.sequential #form-fields ul#amounts .amount-cont label.active {
     background: #89cd46;
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid white;
   }
   body.sequential #form-fields ul#amounts .amount-cont label.active:hover {
     background: #89cd46;
@@ -1559,13 +1560,13 @@ body.error #form-fields ul#amounts .amount-cont {
   }
   body.sequential.sequential-active #breadcrumbs li.completed:hover, body.sequential.sequential-active #breadcrumbs li.current:hover {
     color: #000;
-    text-shadow: 0 0 10px #fff;
+    text-shadow: 0 0 10px white;
   }
   body.sequential.sequential-active #breadcrumbs li.completed:hover span, body.sequential.sequential-active #breadcrumbs li.current:hover span {
    /*
   background: #88ef24;*/
     background: #5b8b2c;
-    text-shadow: 1px 1px 0 #d3d3d3;
+    text-shadow: 1px 1px 0 lightgrey;
   }
   body.sequential.sequential-active #breadcrumbs li.completed:hover b, body.sequential.sequential-active #breadcrumbs li.current:hover b {
     opacity: 1;
