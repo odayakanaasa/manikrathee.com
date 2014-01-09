@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           '_site/js/libs/jquery.api.last.fm.js',
           '_site/js/libs/jquery.api.instagram.js',
           '_site/js/libs/jquery.twitter.js',
-          // '_site/js/libs/jquery.fittext.js',
+          '_site/js/libs/jquery.fittext.js',
           '_site/js/libs/jquery.flexslider.js',
           '_site/js/libs/jquery.prettyForms.js',
           '_site/js/libs/jquery.counter.js',
