@@ -2953,7 +2953,7 @@ a:active, a:visited {
 
 #home {
   font-family: "proxima-nova",Helvetica,"Helvetica Neue",Arial,sans-serif;
-  background: #222;
+  background: #2a4043;
   background-size: cover;
   background-repeat: no-repeat;
   color: #f3f3f3;
@@ -3066,7 +3066,7 @@ a:active, a:visited {
 #home .social ul {
   overflow: hidden;
   zoom: 1;
-  width: 180px;
+  width: 200px;
   margin: 45px auto;
   padding: 0;
 }
