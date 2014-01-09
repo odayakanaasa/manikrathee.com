@@ -4,23 +4,27 @@ module.exports = function(grunt) {
   grunt.initConfig({
     sass: {
       dist: {
+        // files: {
+        //   '_site/css/style.max.css' : ['_site/css/style.scss'],
+        //   '_site/css/sequential.max.css' : ['_site/css/sequential.scss'],
+        // },
         files: {
-          '_site/css/style.max.css' : ['_site/css/style.scss'],
-          '_site/css/sequential.max.css' : ['_site/css/sequential.scss'],
+          '_site/css/style.css' : ['_site/css/style.scss'],
+          '_site/css/sequential.css' : ['_site/css/sequential.scss'],
         },
         options: {
           style: 'expanded'
         },
       },
     },
-    cssmin: {
-      compress: {
-        files: {
-          '_site/css/style.min.css': '_site/css/style.max.css',
-          '_site/css/sequential.min.css': '_site/css/sequential.max.css',
-        }
-      }
-    },
+    // cssmin: {
+    //   compress: {
+    //     files: {
+    //       '_site/css/style.min.css': '_site/css/style.max.css',
+    //       '_site/css/sequential.min.css': '_site/css/sequential.max.css',
+    //     }
+    //   }
+    // },
     watch: {
       files: ['_prebuild/**'],
       tasks: ['jekyll','sass','concat'],
@@ -97,5 +101,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jekyll','sass','concat']);
   grunt.registerTask('w', ['jekyll','sass','concat','watch']);
-  grunt.registerTask('production', ['jekyll','sass','cssmin','concat','imagemin','removelogging','uglify']);
+  grunt.registerTask('production', ['jekyll','sass','concat','imagemin','removelogging','uglify']);
 };
+// 'cssmin' removed fromm prod for now
