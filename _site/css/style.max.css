@@ -4833,7 +4833,7 @@ a:active, a:visited {
 */
 @media (min-width: 767px) and (max-width: 1120px) {
   .about .fact-container #about-data span.number-container {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {

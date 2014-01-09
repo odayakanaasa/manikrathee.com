@@ -155,12 +155,14 @@ function startCount() {
 
 var eventsFired = 0;
 $(window).scroll(function() {
-    if ($("#about-data").is(":within-viewport")){
-		if (eventsFired == 0) {
-    		startCount();
-    		eventsFired++;
-    	}
-    }
+  var elem = $('#about-data');
+  withinViewport(elem);
+  if ($("#about-data").is(":within-viewport")){
+	  if (eventsFired == 0) {
+  		startCount();
+  		eventsFired++;
+  	}
+  }
 });
 
 

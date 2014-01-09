@@ -8,7 +8,7 @@
  */
 
 ;(function( $, window, undefined ) {
-  
+
   /**
    * $.withinViewport()
    * @description          jQuery method
@@ -25,20 +25,20 @@
     });
     return $(elems);
   };
-  
+
   // Custom selector
   $.extend($.expr[":"], {
     "within-viewport": function(element) {
       return withinViewport(element, "all");
     }
   });
-  
+
   /**
    * Optional enhancements and shortcuts
-   * 
+   *
    * @description Uncomment or comment these pieces as they apply to your project and coding preferences
    */
-  
+
   // Shorthand jQuery methods
   //
   $.fn.withinViewportTop = function(settings) {
@@ -51,7 +51,7 @@
     });
     return $(elems);
   };
-  
+
   $.fn.withinViewportRight = function(settings) {
     if (typeof settings === "string") { settings = {sides: settings}; }
     var opts = $.extend({}, settings, {sides: "right"}), elems = [];
@@ -62,7 +62,7 @@
     });
     return $(elems);
   };
-  
+
   $.fn.withinViewportBottom = function(settings) {
     if (typeof settings === "string") { settings = {sides: settings}; }
     var opts = $.extend({}, settings, {sides: "bottom"}), elems = [];
@@ -73,7 +73,7 @@
     });
     return $(elems);
   };
-  
+
   $.fn.withinViewportLeft = function(settings) {
     if (typeof settings === "string") { settings = {sides: settings}; }
     var opts = $.extend({}, settings, {sides: "left"}), elems = [];
@@ -84,7 +84,7 @@
     });
     return $(elems);
   };
-  
+
   // Custom jQuery selectors
   //
   $.extend($.expr[":"], {
@@ -105,5 +105,5 @@
     //   return withinViewport(element, {sides:'top left', top: 45, left: 45});
     // }
   });
-  
+
 })(jQuery, window);
