@@ -3718,6 +3718,7 @@ a:active, a:visited {
 @media screen and (min-width: 500px) {
   .about .upper {
     background: #2a2529 url(../img/about-heading-small.jpg) no-repeat 50% 50%;
+    background-size: cover;
   }
   .about .title {
     margin: 250px 0 0 20px;
@@ -3737,6 +3738,7 @@ a:active, a:visited {
 
   .about .upper {
     background: #35383d url(../img/about-heading-medium.jpg) no-repeat 50% 50%;
+    background-size: cover;
   }
   .about .title {
     margin-top: 400px;
@@ -3896,6 +3898,7 @@ a:active, a:visited {
 @media screen and (min-width: 500px) {
   .resources .upper {
     background: black url(../img/resources-heading-small.jpg) no-repeat 50% 50%;
+    background-size: cover;
   }
 }
 /*
@@ -3904,9 +3907,9 @@ a:active, a:visited {
 **********************
 */
 @media screen and (min-width: 768px) {
-  /*  Resoruces  */
   .resources .upper {
     background: black url(../img/resources-heading-medium.jpg) no-repeat 50% 50%;
+    background-size: cover;
   }
   .resources .title {
     margin: 230px 0 0 0;

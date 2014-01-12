@@ -3,12 +3,12 @@
 
 
 .resources {
-  background:#FBFBFB url(../img/interior_lower_mrphoto.jpg) repeat top center;
+  background: #FBFBFB url(../img/interior_lower_mrphoto.jpg) repeat top center;
   .upper {
-    background:#000;
-    color:#fff;
-    text-shadow:1px 1px 0 #000;
-    height:530px;
+    background: #000;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    height: 530px;
     display: block;
   }
   .title {
@@ -28,7 +28,7 @@
     margin: 0 0 4px 0;
   }
   .title h2 {
-    font-size:14px;
+    font-size: 14px;
     line-height: 1;
     margin: 0;
   }
@@ -77,15 +77,12 @@
 **********************
 */
 @include min-screen(500px) {
-
-
   .resources {
     .upper {
-      background:#000 url(../img/resources-heading-small.jpg) no-repeat 50% 50%;
+      background: #000 url(../img/resources-heading-small.jpg) no-repeat 50% 50%;
+      background-size: cover;
     }
   }
-
-
 } // 500
 
 
@@ -98,12 +95,10 @@
 **********************
 */
 @include min-screen(768px) {
-
-
-  /*  Resoruces  */
   .resources {
     .upper {
       background:#000 url(../img/resources-heading-medium.jpg) no-repeat 50% 50%;
+      background-size: cover;
     }
     .title {
       margin: 230px 0 0 0;
@@ -149,8 +144,6 @@
       }
     }
   }
-
-
 } // 768
 
 
@@ -161,8 +154,6 @@
 **********************
 */
 @include min-screen(940px) {
-
-
   .resources {
     #releases {
       -moz-column-count: 3;
@@ -173,8 +164,6 @@
       column-gap: 35px;
     }
   }
-
-
 } // 960
 
 
@@ -185,14 +174,9 @@
 **********************
 */
 @include min-screen(1420) {
-
-
-.resources {
-  .upper {
-    background:#000 url(../img/resources-heading-large.jpg) no-repeat 50% 50%;
+  .resources {
+    .upper {
+      background:#000 url(../img/resources-heading-large.jpg) no-repeat 50% 50%;
+    }
   }
-}
-
 } // 1420
-
-
