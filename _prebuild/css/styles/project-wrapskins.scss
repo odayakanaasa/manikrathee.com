@@ -21,13 +21,28 @@
 **********************
 */
 @include min-screen(768px) {
-
-
-  .wrapskins_slider_outer {width:496px;margin:0 auto;height:450px;}
-  .wrapskins_slider_inner {width:430px;height:250px;margin:-375px auto 0 auto;}
-  .wrap_upper {height:500px;}
-  .wrap_title {float:right;}
-  .wrap_title .subtitle {padding-left:380px;margin-top: -40px;}
+  .wrapskins_slider_outer {
+    width:496px;
+    margin:0 auto;
+    height:450px;
+  }
+  .wrapskins_slider_inner {
+    width:430px;
+    height:250px;
+    margin:-375px auto 0 auto;
+  }
+  .wrap_upper {
+    height:500px;
+  }
+  .wrap_title {
+    float: right;
+    margin-top: 255px;
+    margin-right: 50px;
+  }
+  .wrap_title .subtitle {
+    padding-left:380px;
+    margin-top: -40px;
+  }
 
 
 } // 768

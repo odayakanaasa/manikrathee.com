@@ -77,6 +77,7 @@ nav{
 			}
 		}
 	}
+
 	body.light & {
 		#navigation {
 			a {
@@ -122,10 +123,14 @@ nav{
 		background: url('../img/navigation-icon.png');
 		text-align: left;
 		text-indent: -999em;
+		color: #fff;
 		height: 50px;
 		width: 50px;
 		background-size: 100%;
 		margin: 10px auto;
+		body.dark & {
+			color: #000;
+		}
 	}
 	#navigation, #navigation li {
 		margin-left: 0;
