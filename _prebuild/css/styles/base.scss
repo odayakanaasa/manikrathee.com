@@ -146,20 +146,21 @@ p {
   margin-bottom: 45px;
 }
 
+#slider {
+  margin-top: 40px;
+}
 
 
 #top {
   width: 85px;
   display: block;
-  padding: 20px 0;
-  margin: 0 auto;
+  padding: 20px 0 40px;
+  margin: 40px auto;
   text-align: center;
   font-size: 25px;
   line-height: 1;
-  opacity: 0.3;
-  -webkit-transition: color 0.25s linear, opacity 0.25s linear;
-  -moz-transition: color 0.25s linear, opacity 0.25s linear;
-  transition: color 0.25s linear, opacity 0.25s linear;
+  opacity: 0.25;
+  @include transition( (color 0.25s ease-in-out),(opacity 0.25s ease-in-out) );
   &:hover {
     opacity: 1;
   }
