@@ -11446,9 +11446,9 @@ centerAPI();
 function checkWidth() {
 	if ($(window).width() > 769){
 		$('#portfolio').hover(function(){
-			$('#current, .copy').addClass('fade');
+			$('#current, .copy, .dark-shade').addClass('fade');
 		}, function(){
-			$('#current, .copy').removeClass('fade');
+			$('#current, .copy, .dark-shade').removeClass('fade');
 		});
 		// TipTip
 		$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});

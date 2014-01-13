@@ -130,6 +130,27 @@ p {
   padding-top: 20px;
 }
 
+.dark-shade {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  @include transition( (background 0.25s ease-in-out),(opacity 0.25s ease-in-out) );
+  &.fade {
+    // uses .fade to match nav / copy class for hiding/showing
+    body.dark & {
+      background: rgba(255,255,255,0.8);
+    }
+    body.light & {
+      background: rgba(0,0,0,0.8);
+    }
+    opacity: 1;
+  }
+}
+
 .glance_heading {
   font-weight: bold;
   text-transform: uppercase;

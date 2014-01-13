@@ -56,50 +56,6 @@ nav{
 	}
 }
 
-nav{
-	body.dark & {
-		#navigation {
-			a {
-				color: rgba(50,50,50,0.6);
-				text-shadow: 0 1px 0 rgba(255,255,255,0.4);
-				&:hover{
-					color: rgba(50,50,50,1);
-				}
-			}
-			p{
-				color: rgba(50,50,50,0.6);
-			}
-			#current{
-				color: rgba(50,50,50,1);
-			}
-			#navigation.show{
-				background: rgba(255,255,255,0.8);
-			}
-		}
-	}
-
-	body.light & {
-		#navigation {
-			a {
-				color: rgba(255,255,255,0.6);
-				text-shadow: 0 1px 0 rgba(50,50,50,0.2);
-				&:hover{
-					color: rgba(255,255,255,1);
-				}
-			}
-			p{
-				color: rgba(255,255,255,0.6);
-			}
-			#current{
-				color: rgba(255,255,255,1);
-			}
-			#navigation.show{
-				background: rgba(0,0,0,0.7);
-			}
-		}
-	}
-}
-
 #navigation{
 	height: 0;
 	overflow: hidden;
@@ -120,18 +76,17 @@ nav{
 @media screen and (max-width: 767px) {
 	#nav{
 		display: block;
-		background: url('../img/navigation-icon.png');
-		text-align: left;
-		text-indent: -999em;
-		color: #fff;
-		height: 50px;
-		width: 50px;
-		background-size: 100%;
 		margin: 10px auto;
+		font-size: 2em;
+		text-align: center;
+		color: #fff;
+		@include size(50px,50px);
 		body.dark & {
 			color: #000;
 		}
 	}
+
+
 	#navigation, #navigation li {
 		margin-left: 0;
 		margin-right: 0;
@@ -146,9 +101,11 @@ nav{
 		left: -100%;
 		width: 100%;
 		height: auto;
-		padding: 100px 0;
 		// background: rgba(0,0,0,0.9); // black
 		background: darken(rgba(42,64,67,0.975), 10%); // #2a4043
+		padding: 100px 0;
+		color: #fff;
+		text-shadow: none;
 		border-top: 1px solid rgba(255,255,255,0.55);
 		border-bottom: 1px solid rgba(255,255,255,0.55);
 		@include transition(left 0.25s ease-in-out);
@@ -168,6 +125,47 @@ nav{
 	nav{
 		margin-left: 30px;
 		background: none;
+		body.dark & {
+			#navigation {
+				a {
+					color: rgba(50,50,50,0.6);
+					text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+					&:hover{
+						color: rgba(50,50,50,1);
+					}
+				}
+				p{
+					color: rgba(50,50,50,0.6);
+				}
+				#current{
+					color: rgba(50,50,50,1);
+				}
+				#navigation.show{
+					background: rgba(255,255,255,0.8);
+				}
+			}
+		}
+
+		body.light & {
+			#navigation {
+				a {
+					color: rgba(255,255,255,0.6);
+					text-shadow: 0 1px 0 rgba(50,50,50,0.2);
+					&:hover{
+						color: rgba(255,255,255,1);
+					}
+				}
+				p{
+					color: rgba(255,255,255,0.6);
+				}
+				#current{
+					color: rgba(255,255,255,1);
+				}
+				#navigation.show{
+					background: rgba(0,0,0,0.7);
+				}
+			}
+		}
 		#nav{
 			display: none;
 		}
@@ -180,6 +178,7 @@ nav{
 			}
 		}
 	}
+
 	#portfolio{
 		position: relative;
 		cursor: pointer;

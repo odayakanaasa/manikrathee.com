@@ -2492,39 +2492,6 @@ nav p {
   padding: 0;
 }
 
-body.dark nav #navigation a {
-  color: rgba(50, 50, 50, 0.6);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-body.dark nav #navigation a:hover {
-  color: #323232;
-}
-body.dark nav #navigation p {
-  color: rgba(50, 50, 50, 0.6);
-}
-body.dark nav #navigation #current {
-  color: #323232;
-}
-body.dark nav #navigation #navigation.show {
-  background: rgba(255, 255, 255, 0.8);
-}
-body.light nav #navigation a {
-  color: rgba(255, 255, 255, 0.6);
-  text-shadow: 0 1px 0 rgba(50, 50, 50, 0.2);
-}
-body.light nav #navigation a:hover {
-  color: white;
-}
-body.light nav #navigation p {
-  color: rgba(255, 255, 255, 0.6);
-}
-body.light nav #navigation #current {
-  color: white;
-}
-body.light nav #navigation #navigation.show {
-  background: rgba(0, 0, 0, 0.7);
-}
-
 #navigation {
   height: 0;
   overflow: hidden;
@@ -2549,14 +2516,13 @@ body.light nav #navigation #navigation.show {
 @media screen and (max-width: 767px) {
   #nav {
     display: block;
-    background: url("../img/navigation-icon.png");
-    text-align: left;
-    text-indent: -999em;
-    color: #fff;
-    height: 50px;
-    width: 50px;
-    background-size: 100%;
     margin: 10px auto;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
   }
   body.dark #nav {
     color: #000;
@@ -2574,8 +2540,10 @@ body.light nav #navigation #navigation.show {
     left: -100%;
     width: 100%;
     height: auto;
-    padding: 100px 0;
     background: rgba(22, 34, 36, 0.975);
+    padding: 100px 0;
+    color: #fff;
+    text-shadow: none;
     border-top: 1px solid rgba(255, 255, 255, 0.55);
     border-bottom: 1px solid rgba(255, 255, 255, 0.55);
     -webkit-transition: left 0.25s ease-in-out;
@@ -2603,6 +2571,38 @@ body.light nav #navigation #navigation.show {
   nav {
     margin-left: 30px;
     background: none;
+  }
+  body.dark nav #navigation a {
+    color: rgba(50, 50, 50, 0.6);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+  body.dark nav #navigation a:hover {
+    color: #323232;
+  }
+  body.dark nav #navigation p {
+    color: rgba(50, 50, 50, 0.6);
+  }
+  body.dark nav #navigation #current {
+    color: #323232;
+  }
+  body.dark nav #navigation #navigation.show {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  body.light nav #navigation a {
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 1px 0 rgba(50, 50, 50, 0.2);
+  }
+  body.light nav #navigation a:hover {
+    color: white;
+  }
+  body.light nav #navigation p {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  body.light nav #navigation #current {
+    color: white;
+  }
+  body.light nav #navigation #navigation.show {
+    background: rgba(0, 0, 0, 0.7);
   }
   nav #nav {
     display: none;
@@ -2868,6 +2868,30 @@ p {
 
 .section_spacer {
   padding-top: 20px;
+}
+
+.dark-shade {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: background 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  -moz-transition: background 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  -ms-transition: background 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  -o-transition: background 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transition: background 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+.dark-shade.fade {
+  opacity: 1;
+}
+body.dark .dark-shade.fade {
+  background: rgba(255, 255, 255, 0.8);
+}
+body.light .dark-shade.fade {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .glance_heading {
