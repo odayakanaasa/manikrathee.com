@@ -1,0 +1,260 @@
+nav.global-nav{
+	position: relative;
+	z-index: 200;
+}
+
+#logo{
+	display:block;
+	height: 75px;
+	width: 75px;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: 100%;
+	body.light & {
+		background: transparent url('../img/white-logo.png') no-repeat 50% 50%;
+		background-size: 100%;
+	}
+	body.dark & {
+		background: transparent url('../img/dark-logo.png') no-repeat 50% 50%;
+		background-size: 100%;
+	}
+}
+
+nav{
+	font-size: 13px;
+	text-transform: uppercase;
+	text-shadow: none;
+	@include animate;
+	@include fadeInDown;
+	#logo{
+		margin: 0 auto;
+	}
+	&:after{
+		clear: both;
+		display: block;
+		content: '';
+	}
+	#current{
+		display: none;
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height: 1;
+		@include animate;
+		@include fadeIn;
+		&.fade {
+			@include fadeOut;
+		}
+	}
+	a{
+		@include transition(color 0.25s ease-in-out);
+		border: none;
+	}
+	p{
+		text-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#navigation{
+	height: 0;
+	overflow: hidden;
+	padding: 20px 0;
+	@include transition( (height 0.25s ease-in-out),(background 0.25s ease-in-out) );
+	&.show{
+		height: auto;
+	}
+	#projects{
+		height: 0;
+		overflow: hidden;
+		li{
+			min-width: 200px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#nav{
+		display: block;
+		margin: 10px auto;
+		font-size: 2em;
+		text-align: center;
+		color: #fff;
+		@include size(50px,50px);
+		body.dark & {
+			color: #000;
+		}
+	}
+
+
+	#navigation, #navigation li {
+		margin-left: 0;
+		margin-right: 0;
+		text-align: center;
+		padding: 0;
+	}
+	#navigation{
+		body.nav & {
+			left: 0;
+		}
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: auto;
+		// background: rgba(0,0,0,0.9); // black
+		background: darken(rgba(42,64,67,0.975), 10%); // #2a4043
+		padding: 100px 0;
+		color: #fff;
+		text-shadow: none;
+		border-top: 1px solid rgba(255,255,255,0.55);
+		border-bottom: 1px solid rgba(255,255,255,0.55);
+		@include transition(left 0.25s ease-in-out);
+		@include box;
+		#projects{
+			height: auto;
+			margin: 10px 0;
+			padding: 10px 0;
+			border-top: 1px solid rgba(255,255,255,0.4);
+			border-bottom: 1px solid rgba(255,255,255,0.4);
+		}
+	}
+}
+
+
+@media screen and (min-width: 768px){
+	nav{
+		margin-left: 30px;
+		background: none;
+		body.dark & {
+			#navigation {
+				a {
+					color: rgba(50,50,50,0.6);
+					text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+					&:hover{
+						color: rgba(50,50,50,1);
+					}
+				}
+				p{
+					color: rgba(50,50,50,0.6);
+				}
+				#current{
+					color: rgba(50,50,50,1);
+				}
+				#navigation.show{
+					background: rgba(255,255,255,0.8);
+				}
+			}
+		}
+
+		body.light & {
+			#navigation {
+				a {
+					color: rgba(255,255,255,0.6);
+					text-shadow: 0 1px 0 rgba(50,50,50,0.2);
+					&:hover{
+						color: rgba(255,255,255,1);
+					}
+				}
+				p{
+					color: rgba(255,255,255,0.6);
+				}
+				#current{
+					color: rgba(255,255,255,1);
+				}
+				#navigation.show{
+					background: rgba(0,0,0,0.7);
+				}
+			}
+		}
+		#nav{
+			display: none;
+		}
+		ul{
+			padding: 20px 0 0 19px;
+			li{
+				float: left;
+				list-style-type: none;
+				margin-right: 15px;
+			}
+		}
+	}
+
+	#portfolio{
+		position: relative;
+		cursor: pointer;
+		height: 15px;
+		&:hover{
+			height: 220px;
+			#projects{
+				height: 220px;
+				opacity: 1;
+			}
+		}
+	}
+	#projects{
+		position: absolute;
+		top: 15px;
+		left: 0;
+		float: none;
+		overflow: hidden;
+		padding: 0;
+		background: none;
+		z-index: 999;
+		@include transition( (opacity 0.25s ease-in-out),(height 0.25s ease-in-out) );
+		li{
+			float: none;
+			display: block;
+			margin: 5px 0;
+		}
+	}
+	nav ul, nav #logo{
+		float: left;
+	}
+	#navigation{
+		height: auto;
+		padding: 38px 0 0 120px;
+		body.interior & {
+			padding: 32px 0 0 30px;
+		}
+	}
+	.interior nav{
+		position: absolute;
+		top: 20px;
+		left: 20px;
+	}
+	body.interior{
+		nav{
+			ul{
+				padding-top: 6px;
+			}
+		}
+	}
+	#current{
+		@include transition(opacity 0.25s ease-in-out);
+		&.fade{
+			opacity: 0;
+		}
+		&.hide{
+			display: none;
+		}
+	}
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+	#logo{
+		background-size: 100%;
+		body.light & {
+			background-image: url('../img/white-logo@2x.png');
+		}
+		body.dark & {
+			background-image: url('../img/dark-logo@2x.png');
+		}
+	}
+	#nav{
+		background: url('../img/navigation-icon@2x.png');
+		background-size: 100%;
+	}
+}

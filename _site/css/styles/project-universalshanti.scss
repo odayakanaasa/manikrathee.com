@@ -1,0 +1,39 @@
+/* Project: Universal Shanti */
+
+
+.shanti_title {width:300px;margin:50px auto;}
+
+.shanti {background:#FBFBFB url(../img/interior_lower_mrphoto.jpg) repeat top center;}
+.shanti_upper {background:#fff url(../img/interior_upper_shanti.jpg) no-repeat top center;color:#fff;text-shadow:1px 1px 0 #000;height:auto;}
+.shanti_title {margin:50px auto;}
+.shanti_title img {max-width: 100%;}
+.shanti_slides {width:98%;margin:0 auto 35px auto;}
+
+
+
+/*
+**********************
+***** 768
+**********************
+*/
+@include min-screen(768px) {
+  .shanti_upper {
+    height:420px;
+  }
+  .shanti_title {
+    width:420px;
+    margin-top:200px;
+  }
+} // 768
+
+
+
+/*
+**********************
+***** 960
+**********************
+*/
+@include min-screen(940px) {
+
+
+} // 960

@@ -1,0 +1,46 @@
+/* Project: Catalyst */
+
+.catalyst_title {margin:40px auto 0;}
+.catalyst_icon_row .catalyst_iconset {float:none;width:300px;margin:0 auto;padding:0;}
+.catalyst_icon_row .catalyst_iconset_copy {float:none;width:100%;padding:20px 0 10px 0;border-bottom:1px solid #999;margin:0 0 10px 0;}
+.catalyst_icon_row .catalyst_iconset_copy h4 {padding: 0 0 10px 0;}
+.catalyst_icon_row .catalyst_iconset_copy p {line-height:1.8;}
+
+
+.catalyst {background:#FBFBFB url(../img/interior_lower_wrap.jpg) repeat top center;}
+.catalyst_upper {background:#000 url(../img/interior_upper_catalyst_768.jpg) repeat-x top center;color:#fff;text-shadow:1px 1px 0 #000;height:290px;}
+.catalyst_title {margin:0 auto;background:transparent url(../img/catalyst_title.png) no-repeat top center;width:263px;height:56px;}
+.catalyst_title_right {display:none;}
+.catalyst_icon_row {padding:60px 0 0 0;}
+.catalyst_icon_row_last {padding:50px 0;}
+.catalyst_icon_row .catalyst_iconset {width:100%;}
+.catalyst_icon_row .catalyst_iconset_copy {padding:10px 0;width:100%;}
+.catalyst_icon_row .catalyst_iconset_copy h4 {font-size:25px;text-transform:uppercase;}
+.catalyst_icon_row .catalyst_iconset_copy p {}
+.catalyst div:hover a:not(.button) {color: #EF5227;}
+
+
+
+/*
+**********************
+***** 768
+**********************
+*/
+@include min-screen(768px) {
+	.catalyst_upper {background:#000 url(../img/interior_upper_catalyst.jpg) repeat-x top center;color:#fff;text-shadow:1px 1px 0 #000;height:490px;}
+	.catalyst_title {margin: 350px 0 0 72px;background:transparent url(../img/catalyst_title.png) no-repeat top center;width:263px;height:56px;}
+	.catalyst_title_right {display: block;background:transparent url(../img/interior_upper_catalyst_phones_small.png) no-repeat bottom center;width:225px;height:365px;margin: 125px 0 0 0;}
+	.catalyst_icon_row .catalyst_iconset {float:left;width:40%;}
+	.catalyst_icon_row .catalyst_iconset_copy {float:left;padding:10px 0 0 40px;width:50%;border: none;}
+} // 768
+
+
+
+/*
+**********************
+***** 960
+**********************
+*/
+@include min-screen(940px) {
+	.catalyst_title_right {background:transparent url(../img/interior_upper_catalyst_phones.png) no-repeat bottom center;width:563px;height:365px;float:right;padding:0 0 0 0;}
+} // 960
