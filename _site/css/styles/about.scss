@@ -65,65 +65,60 @@
       margin: 10px 0;
       list-style-type: none;
     }
+    .email-me-container {
+      margin-bottom: 16px;
+    }
+    .email-me {
+      background: #fff;
+      padding: 2px 4px;
+      font-size: 0.95em;
+      font-weight: 700;
+      color: rgba(0,0,0,0.7);
+      border: 1px solid rgba(0,0,0,0.2);
+      @include transparent-gradient;
+      @include radius(2px);
+      &:hover {
+        background: darken(#fff, 2%);
+        border-color: rgba(0,0,0,0.35);
+        @include transparent-gradient;
+      }
+      .ss-icon {
+        padding-right: 4px;
+        font-size: 0.8em;
+        opacity: 0.75;
+      }
+    }
   }
   .title-subtitle-list {
     list-style-type: none;
     li {
-      margin-bottom: 15px;
+      padding: 4px 0;
+      font-size: 1.1em;
+      & + li {
+        margin-top: 15px;
+      }
       &:last-child {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
       }
     }
-    .view-more {
-      a {
-        font-size: 12px;
-        text-transform: uppercase;
-        opacity: 0.65;
-        &:hover {
-          opacity: 1;
-        }
-        .ss-icon {
-          font-style: normal;
-        }
+    a {
+      text-decoration: none;
+      border: none;
+      padding: 0;
+    }
+    span:not(.ss-icon) {
+      display: block;
+      font-style: italic;
+      font-size: 0.9em;
+      opacity: 0.7;
+      &.speaking-location {
+
       }
     }
     .ss-icon {
-      display: block;
-      float: left;
-      font-size: 12px;
-      padding: 4px 5px 20px 0;
-      opacity: 0.5;
-      font-style: normal;
-    }
-    a, p {
-      font-size: 14px;
-    }
-    a {
-      color: lighten(#000, 40%);
-      border: none;
-      line-height: 1;
-      span {
-        display: block;
-        font-size: 12px;
-        text-transform: uppercase;
-        color: #666;
-        margin: 2px 0;
-        padding-left: 2px;
-        opacity: 0.7;
-        -webkit-transition: opacity 0.25s linear;
-        -moz-transition: opacity 0.25s linear;
-        transition: opacity 0.25s linear;
-      }
-      &:hover {
-        color: #000;
-        span {
-          opacity: 1;
-        }
-      }
-    }
-    p {
-      line-height: 1.2;
-      margin-bottom: 0;
+      padding-right: 6px;
+      opacity: 0.75;
+      font-size: 0.8em;
     }
   }
   .fact-container {

@@ -3573,63 +3573,70 @@ a:active, a:visited {
   margin: 10px 0;
   list-style-type: none;
 }
+.about ul#follows .email-me-container {
+  margin-bottom: 16px;
+}
+.about ul#follows .email-me {
+  background: #fff;
+  padding: 2px 4px;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(1, rgba(255, 255, 255, 0.1)));
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.about ul#follows .email-me:hover {
+  background: #fafafa;
+  border-color: rgba(0, 0, 0, 0.35);
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(1, rgba(255, 255, 255, 0.1)));
+}
+.about ul#follows .email-me .ss-icon {
+  padding-right: 4px;
+  font-size: 0.8em;
+  opacity: 0.75;
+}
 .about .title-subtitle-list {
   list-style-type: none;
 }
 .about .title-subtitle-list li {
-  margin-bottom: 15px;
+  padding: 4px 0;
+  font-size: 1.1em;
+}
+.about .title-subtitle-list li + li {
+  margin-top: 15px;
 }
 .about .title-subtitle-list li:last-child {
-  margin-bottom: 40px;
-}
-.about .title-subtitle-list .view-more a {
-  font-size: 12px;
-  text-transform: uppercase;
-  opacity: 0.65;
-}
-.about .title-subtitle-list .view-more a:hover {
-  opacity: 1;
-}
-.about .title-subtitle-list .view-more a .ss-icon {
-  font-style: normal;
-}
-.about .title-subtitle-list .ss-icon {
-  display: block;
-  float: left;
-  font-size: 12px;
-  padding: 4px 5px 20px 0;
-  opacity: 0.5;
-  font-style: normal;
-}
-.about .title-subtitle-list a, .about .title-subtitle-list p {
-  font-size: 14px;
+  margin-bottom: 25px;
 }
 .about .title-subtitle-list a {
-  color: #666666;
+  text-decoration: none;
   border: none;
-  line-height: 1;
+  padding: 0;
 }
-.about .title-subtitle-list a span {
+.about .title-subtitle-list span:not(.ss-icon) {
   display: block;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #666;
-  margin: 2px 0;
-  padding-left: 2px;
+  font-style: italic;
+  font-size: 0.9em;
   opacity: 0.7;
-  -webkit-transition: opacity 0.25s linear;
-  -moz-transition: opacity 0.25s linear;
-  transition: opacity 0.25s linear;
 }
-.about .title-subtitle-list a:hover {
-  color: #000;
-}
-.about .title-subtitle-list a:hover span {
-  opacity: 1;
-}
-.about .title-subtitle-list p {
-  line-height: 1.2;
-  margin-bottom: 0;
+.about .title-subtitle-list .ss-icon {
+  padding-right: 6px;
+  opacity: 0.75;
+  font-size: 0.8em;
 }
 .about .fact-container {
   width: 100%;
