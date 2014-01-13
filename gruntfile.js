@@ -13,7 +13,7 @@ module.exports = function(grunt) {
           '_site/css/sequential.css' : ['_site/css/sequential.scss'],
         },
         options: {
-          style: 'expanded'
+          style: 'compressed'
         },
       },
     },
