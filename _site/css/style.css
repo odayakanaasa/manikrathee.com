@@ -3932,7 +3932,7 @@ a:active, a:visited {
 .resources .resource-block #hardware li {
   font-size: 13px;
   list-style-type: none;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 /*
@@ -4001,16 +4001,6 @@ a:active, a:visited {
 ***** 960
 **********************
 */
-@media screen and (min-width: 940px) {
-  .resources #releases {
-    -moz-column-count: 3;
-    -moz-column-gap: 35px;
-    -webkit-column-count: 3;
-    -webkit-column-gap: 35px;
-    column-count: 3;
-    column-gap: 35px;
-  }
-}
 /*
 **********************
 ***** 1420
