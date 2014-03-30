@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/manikrathee
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://manikrathee.com
+  * I am manikrathee (https://keybase.io/manikrathee) on keybase.
+  * I have a public key with fingerprint C1FC 86AD 5608 5B89 9A77  89CB 691E FF7F 997B 21C1
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "c1fc86ad56085b899a7789cb691eff7f997b21c1",
+            "host": "keybase.io",
+            "key_id": "691eff7f997b21c1",
+            "uid": "875581197aa0892e4bab03d36677ad00",
+            "username": "manikrathee"
+        },
+        "service": {
+            "hostname": "manikrathee.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1396206371,
+    "expire_in": 157680000,
+    "prev": "efb8fc0f74418e989bfdf6ac4c8d9d2587e3294f89cf7fac6a2bce148a245443",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.1
+Comment: https://keybase.io/crypto
+
+yMH0AnicbZFdSBxXFMdXjdEsLEoSIQ8thRGCLsbMzM7HnQ1UCnYjJpoaoy5Rs3tn
+5o47bndmnZ31o9uiaI3WRDRbJAEfgg95WyGUQGhJiGZFsQnZNEQkYKoSMNWarHkw
+gi96R9qn5L5c7vn/zv/cc86MI8tmz7jU/6b51ejWbsaTqZ2orRYEC2OEqMtdhDtG
+BNHBpahaCzLChqqZhJuQKEUCHJRZjgSsCAQB8jwQJJETKKQovCIIvEhTEkWUEAE9
+YmVgGxFGUKmq4xh++FQZRz/DRw8EwLMsoCiBh5AEAo0YEYqkS3ZxHM9DmSQtMIIM
+DYYQpkNQU4MGNAMIET+VEFhoVyUsxA6qfwqVSnoIO4QN3dQl/XssBkwz7LZyza6w
+BXcg0fefjU9UNRl3jxPakRFRdY1wU5iUTNXypVwCR5Oci6dKCNQZVg3kUy2C5TlA
+4mOVQe3YEikiUCRS4RmGAkgAgqjICgclRgKyINMs4JGLFhgFzxFPBEocpEUJUQyA
+NMMyjAvXj6A2TSfcDP4mbMGWEbVFg2bUwF0/nmo6ZMuw2w5nZ1r7s9mP5P+/1fxE
+ru1qX0+T92hVLP7tTaFocsQ/Up+uzp/+KzF63e9Y9c+huS/Kub3z6aEcf6s7cf+r
+xbn53NuVv5xp8KQ8x3a3qge/PuX+k3j2zU7PZtL5oax7obb7u4n+O/eOv1iETtff
+ydHlc0HYOn6rreJE/OlK48MbE/7evkc1b08PNH9catzI/vnC3di/2YO9ayfrxi6H
+HD9sjA/mDdV41+NVaMQ+k/njNU9deoHbHFudfV7svPJge+Cdo6BBb5iefJ1w0mA9
+9T6ZCtQuVP9a1LT2T9ZwxbC9INm2xlbO5nhrfptfLs/s/WNp8+zeeMqzUpb+fVuI
+Vy0XeodeFn/JlV7szOvojtbvAy1lGO8=
+=AgH0
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/manikrathee
+
+==================================================================
