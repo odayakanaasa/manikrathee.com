@@ -1,5 +1,5 @@
 source: _prebuild/
 exclude: ['gruntfile.js', 'package.json', '/node_modules']
-keep_files:  ['.git']
+keep_files:  ['.git','.htaccess','.well-known']
 safe: false
 lsi: true
