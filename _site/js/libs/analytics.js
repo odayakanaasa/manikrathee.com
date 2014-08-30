@@ -16,3 +16,5 @@ function trackEvent(cat, action, label){
 $('.social-api').on('hover', function(){
   trackEvent('home','api bar','interaction: hovered [' + $(this).attr('id') + ']');
 });
+
+
