@@ -4,12 +4,12 @@ var twitterAPI = $('#twitter');
 var instagramAPI = $('#instagram');
 var rdioAPI = $('#rdio');
 var readmillAPI = $('#readmill');
-var twitterID = $('#twitter').prop('id');
-var instagramID = $('#instagram').prop('id');
-var rdioID = $('#rdio').prop('id');
-var readmillID = $('#readmill').prop('id');
+var twitterID = twitterAPI.prop('id');
+var instagramID = instagramAPI.prop('id');
+var rdioID = instagramAPI.prop('id');
+var readmillID = readmillAPI.prop('id');
 
-$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/a-pocket-guide-to-international-user-research" title="A Pocket Guide to International User Research by Chui Chui Tan">A Pocket Guide to International User Research by Chui Chui Tan</a></p></div>');
+$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: A Pocket Guide to International User Research by Chui Chui Tan</p></div>');
 
 LastFMStatus.init({
     username: "mrathee"
@@ -37,8 +37,8 @@ function logofyAPI(){
 function activateAPI(){
 	$('.social-api').addClass("run");
   $(".social-api").delay(4500).queue(function(next){
-  	$(this).addClass('inactive');
-  	next();
+    $(this).addClass('inactive');
+    next();
   });
 }
 
@@ -56,7 +56,9 @@ function centerAPI(){
 $(window).resize(function() {
   centerAPI();
 });
+
 centerAPI();
+
 
 // Nav Hover
 function checkWidth() {
@@ -78,6 +80,7 @@ $(window).resize(function() {
 	checkWidth();
 });
 checkWidth();
+
 
 
 // Mobile Nav
@@ -166,17 +169,16 @@ $(window).scroll(function() {
 });
 
 
-
 // Twitter Button
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
 
  // Google Analytics
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-19400273-3']);
-_gaq.push(['_trackPageview']);
-(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-19400273-3', 'auto');
+ga('send', 'pageview');
+
