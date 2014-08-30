@@ -2,40 +2,39 @@
 @charset "UTF-8";
 
 @import
-	"import/core",
-	"import/mixins",
-	"import/animation",
-	"import/1140",
-	"import/reset",
-	"import/flexslider",
-	"import/prettyforms",
-	"import/tiptip",
-	"import/ss-social",
-	"import/ss-standard",
-	"import/media-queries",
-	"import/nav";
-
-// @import "import/konami";
+    "import/variables"
+	, "import/core"
+	, "import/mixins"
+	, "import/animation"
+	, "import/1140"
+	, "import/reset"
+	, "import/flexslider"
+	, "import/prettyforms"
+	, "import/tiptip"
+	, "import/ss-social"
+	, "import/ss-standard"
+	, "import/media-queries"
+	, "import/nav"
+  , "import/konami"
 
 // Main
-@import
-	"styles/variables",
-	"styles/base",
-	"styles/home",
-	"styles/api",
-	"styles/about",
-	"styles/resources";
+	, "styles/variables"
+	, "styles/base"
+	, "styles/home"
+	, "styles/api"
+	, "styles/about"
+	, "styles/resources"
 
 // Projects
-@import
-	"styles/project-catalyst",
-	"styles/project-wrapskins",
-	"styles/project-livescribe",
-	"styles/project-hope",
-	"styles/project-mrphoto",
-	"styles/project-obama",
-	"styles/project-obama-contribute",
-	"styles/project-blog";
+	, "styles/project-catalyst"
+	, "styles/project-wrapskins"
+	, "styles/project-livescribe"
+	, "styles/project-hope"
+	, "styles/project-mrphoto"
+	, "styles/project-obama"
+	, "styles/project-obama-contribute"
+	, "styles/project-blog"
+  ;
 
 
 

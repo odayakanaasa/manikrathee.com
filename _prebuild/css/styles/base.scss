@@ -1,5 +1,36 @@
 /* Base Styles */
 
+// Global Elements
+html {
+  font-size: 62.5%; // Base 10 for REM sizing
+    // See: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+}
+
+html,
+body {
+  height:100%;
+}
+
+body {
+  -webkit-backface-visibility: hidden;
+  text-rendering: optimizelegibility;
+  font-family: $sans;
+  color: #4C4C4C;
+}
+dl, menu, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+  padding-bottom: 0;
+  @include transition(color 0.25s ease-in-out);
+}
+p {
+  font-size: 12px;line-height: 1.6;
+}
+
 // Symbolset
 .ss-icon {
   font-style: normal;
@@ -11,7 +42,6 @@
   vertical-align: middle;
 }
 
-
 // Highlights
 ::-moz-selection { background: #4C4C4C; color:#fff; text-shadow: none; }
 ::selection  { background:#4C4C4C; color:#fff; text-shadow: none; }
@@ -21,33 +51,6 @@ a:link  { -webkit-tap-highlight-color: #333; }
   -webkit-transition: color 0.35s linear;
   -moz-transition: color 0.35s linear;
   transition: color 0.35s linear;
-}
-
-// Global Elements
-
-html,body {
-  height:100%;
-}
-
-body {
-  // background: url(../img/bg.jpg) repeat;
-  font-family: "proxima-nova", helvetica, verdana, sans-serif;
-  color: #4C4C4C;
-  -webkit-backface-visibility: hidden;
-  text-rendering: optimizelegibility;
-}
-dl, menu, ol, ul {
-    margin: 0;
-    padding: 0;
-}
-a {
-  text-decoration: none;
-  border-bottom: 1px solid #999;
-  padding-bottom: 0px;
-  @include transition(color 0.25s ease-in-out);
-}
-p {
-  font-size: 12px;line-height: 1.6;
 }
 
 .main {
@@ -73,8 +76,8 @@ p {
 
 
 .upper {
-  font-family: "proxima-nova", helvetica, verdana, sans-serif;
   position: relative;
+  font-family: $sans;
   &:after {
     display: block;
     position: absolute;
@@ -92,9 +95,10 @@ p {
 
 
 /* ///  INTERIOR  //// */
-.button, a.button, .interior a.button {
+.button,
+ a.button,
+ .interior a.button {
   display: block;
-  // background:#000 url(../img/button_bg.jpg) repeat-x;
   background: transparent;
   border: 1px solid rgba(0,0,0,0.6);
   border-radius: 5px;
@@ -114,15 +118,34 @@ p {
   }
 }
 
-.interior h1 {}
-.interior h2,h3,h4 {font-size: 45px;text-transform: uppercase;color:#333333;text-shadow:1px 1px 0 #fff;font-weight:500;display: block;}
-.interior h4 {font-size: 30px;}
-.interior a:not(.button) {color:#000;text-decoration:none;}
-.interior a:not(.button):hover {color:#777;text-decoration:none;}
-.interior p {font-size: 14px;line-height: 1.8;margin-bottom:20px;}
 .interior {
   .container.body {
     padding-top: 20px;
+  }
+  h1 {}
+  h2,h3,h4 {
+    display: block;
+    @include font-size(45);
+    font-weight: 500;
+    color: $grey;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #fff;
+  }
+  h4 {
+    font-size: 30px;
+  }
+  a:not(.button) {
+    color: $black;
+    text-decoration:none;
+    &:hover {
+      color: lighten($black, 20%);
+      text-decoration:none;
+    }
+  }
+  p {
+    margin-bottom: 20px;
+    @include font-size(14);
+    line-height: 1.8;
   }
 }
 
@@ -137,11 +160,16 @@ p {
   bottom: 0;
   width: 100%;
   opacity: 0;
-  @include transition( (background 0.25s ease-in-out),(opacity 0.25s ease-in-out) );
+  pointer-events: none;
+  @include transition(
+    (background 0.25s ease-in-out),
+    (opacity 0.25s ease-in-out)
+  );
   &.fade {
     // uses .fade to match nav / copy class for hiding/showing
     display: block;
     opacity: 1;
+    pointer-events: normal;
     body.dark & {
       background: rgba(255,255,255,0.875);
     }
@@ -177,15 +205,18 @@ p {
 
 
 #top {
-  width: 85px;
   display: block;
+  width: 85px;
   padding: 20px 0 40px;
   margin: 40px auto;
   text-align: center;
   font-size: 25px;
   line-height: 1;
   opacity: 0.25;
-  @include transition( (color 0.25s ease-in-out),(opacity 0.25s ease-in-out) );
+  @include transition(
+    (color 0.25s ease-in-out),
+    (opacity 0.25s ease-in-out)
+  );
   &:hover {
     opacity: 1;
   }
@@ -211,9 +242,18 @@ p {
       padding: 0 20px;
     }
   }
-  .upper_logo_bar .mobile_nav {display:none;}
-  .upper_logo_bar .full_nav {display:block;}
-  .right_col_inner {padding-left:10%;border-left:1px solid #efefef;}
+  .upper_logo_bar {
+    .mobile_nav {
+      display:none;
+    }
+    .full_nav {
+      display:block;
+    }
+  }
+  .right_col_inner {
+    padding-left: 10%;
+    border-left: 1px solid #efefef;
+  }
 
 } // 768
 

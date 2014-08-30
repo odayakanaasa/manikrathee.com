@@ -4,12 +4,12 @@ var twitterAPI = $('#twitter');
 var instagramAPI = $('#instagram');
 var rdioAPI = $('#rdio');
 var readmillAPI = $('#readmill');
-var twitterID = $('#twitter').prop('id');
-var instagramID = $('#instagram').prop('id');
-var rdioID = $('#rdio').prop('id');
-var readmillID = $('#readmill').prop('id');
+var twitterID = twitterAPI.prop('id');
+var instagramID = instagramAPI.prop('id');
+var rdioID = instagramAPI.prop('id');
+var readmillID = readmillAPI.prop('id');
 
-$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: <a href="https://readmill.com/manikrathee/reads/a-pocket-guide-to-international-user-research" title="A Pocket Guide to International User Research by Chui Chui Tan">A Pocket Guide to International User Research by Chui Chui Tan</a></p></div>');
+$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: A Pocket Guide to International User Research by Chui Chui Tan</p></div>');
 
 LastFMStatus.init({
     username: "mrathee"
@@ -36,11 +36,13 @@ function logofyAPI(){
 // Callback function for after API js has run to display the API containers
 function activateAPI(){
 	$('.social-api').addClass("run");
+  trackEvent('home','api bar','init');
   $(".social-api").delay(4500).queue(function(next){
-  	$(this).addClass('inactive');
-  	next();
+    $(this).addClass('inactive');
+    next();
   });
 }
+
 
 function centerAPI(){
   var socialAPI = $('.social-api');
@@ -56,6 +58,7 @@ function centerAPI(){
 $(window).resize(function() {
   centerAPI();
 });
+
 centerAPI();
 
 // Nav Hover
@@ -63,8 +66,10 @@ function checkWidth() {
 	if ($(window).width() > 769){
 		$('#portfolio').hover(function(){
 			$('#current, .copy, .dark-shade').addClass('fade');
+      trackEvent('global','portfolio sub menu','opened');
 		}, function(){
 			$('#current, .copy, .dark-shade').removeClass('fade');
+      trackEvent('global','portfolio sub menu','closed');
 		});
 		// TipTip
 		$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
@@ -80,6 +85,7 @@ $(window).resize(function() {
 checkWidth();
 
 
+
 // Mobile Nav
 var navHook = $('#nav');
 var navMenu = $('#navigation');
@@ -90,8 +96,10 @@ navHook.click(function(e) {
 	e.stopPropagation();
 	if (body.hasClass('nav')) {
     body.removeClass('nav');
+    trackEvent('global','mobile menu','closed');
  	} else {
 		body.addClass('nav');
+    trackEvent('global','mobile menu','opened');
  	}
 });
 
@@ -125,14 +133,8 @@ var toTop = $('#top');
 toTop.click(function(e) {
 	e.preventDefault();
 	$('body,html').animate({scrollTop:0},800);
+  trackEvent('global','back to top link','page: ' + location.pathname);
 });
-
-
-//FitText
-// $(".interior h2").fitText(1.2);
-$('.interior h3').fitText(1.3);
-$('.fit').fitText(1.2);
-$('.fit-light').fitText(0.8);
 
 
 //Counter
@@ -146,7 +148,6 @@ function startCount() {
         speed: 1400,
         refreshInterval: 5,
         onComplete: function(value) {
-            // console.debug(this);
         }
     });
   });
@@ -161,10 +162,10 @@ $(window).scroll(function() {
 	  if (eventsFired == 0) {
   		startCount();
   		eventsFired++;
+      trackEvent('about','element watcher','stats-view');
   	}
   }
 });
-
 
 
 // Twitter Button
@@ -172,11 +173,20 @@ $(window).scroll(function() {
 
 
  // Google Analytics
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-19400273-3']);
-_gaq.push(['_trackPageview']);
-(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-19400273-3', 'auto');
+ga('send', 'pageview');
+
+function trackEvent(cat, action, label){
+  if (cat && action && label) {
+    ga('send', 'event', cat, action, label);
+  }
+}
+
+$('.social-api').on('hover', function(){
+  trackEvent('home','api bar','interaction: hovered [' + $(this).attr('id') + ']');
+});

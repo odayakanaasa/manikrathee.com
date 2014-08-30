@@ -35,13 +35,13 @@ module.exports = function(grunt) {
        },
        dist: {
         src: [
-          '_site/js/libs/jquery-1.8.2.min.js',
-          '_site/js/libs/jquery.backstretch.js',
+          '_site/js/libs/analytics.js',
+          // '_site/js/libs/jquery.backstretch.js',
           '_site/js/libs/jquery.api.twitter.js',
           '_site/js/libs/jquery.api.last.fm.js',
           '_site/js/libs/jquery.api.instagram.js',
           '_site/js/libs/jquery.twitter.js',
-          '_site/js/libs/jquery.fittext.js',
+          // '_site/js/libs/jquery.fittext.js',
           '_site/js/libs/jquery.flexslider.js',
           '_site/js/libs/jquery.prettyForms.js',
           '_site/js/libs/jquery.counter.js',
