@@ -26,7 +26,9 @@
   border-top-right-radius: $topright;
   border-bottom-right-radius: $bottomright;
   border-bottom-left-radius: $bottomleft;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 // Transition
@@ -41,7 +43,9 @@
 // Border Radius
 @mixin radius($amount) {
   border-radius: $amount;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 //  Image Replacement
@@ -69,11 +73,21 @@
   border-radius: $radius;
 }
 
+// Font sizing + rem calc
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
 // Ellipsis
 @mixin ellipsis() {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+@mixin antialias {
+  -webkit-font-smoothing: antialiased;
 }
 
 //Text Wrap
@@ -92,8 +106,4 @@
   &:after {
     clear: both;
   }
-}
-
-@mixin antialias {
-  -webkit-font-smoothing: antialiased;
 }
