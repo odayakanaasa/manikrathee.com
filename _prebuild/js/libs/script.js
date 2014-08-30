@@ -137,13 +137,6 @@ toTop.click(function(e) {
 });
 
 
-//FitText
-// $(".interior h2").fitText(1.2);
-$('.interior h3').fitText(1.3);
-$('.fit').fitText(1.2);
-$('.fit-light').fitText(0.8);
-
-
 //Counter
 var countNumberValue;
 function startCount() {
