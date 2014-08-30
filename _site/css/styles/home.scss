@@ -1,3 +1,32 @@
+	// #663399Becca
+	//
+	// For Eric,
+	// 		Nothing can change what happened. All we can do is show that //
+	// 		we're here for you in good times, and most importantly, we're
+	// 		here for you in difficult times.
+	//
+	// Usage:
+	// 		<span id="becca"></span>
+	//
+#becca {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(102,51,153,0.7); // #663399
+	&:after {
+		display: block;
+		content: '#663399Becca';
+		color: lighten(rgb(102,51,153),35%);
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+}
+
+
+
 // #net-awards{
 // 	@include ir;
 // 	background: transparent url('../img/net-award.png') 0 0 no-repeat;
@@ -23,22 +52,6 @@
 // 	z-index: 100;
 // }
 
-#becca {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	background: rgba(102,51,153,0.7); // #663399
-	&:before {
-		display: block;
-		content: '#663399Becca';
-		color: lighten(rgb(102,51,153),35%);
-		position: absolute;
-		top: 20px;
-		right: 20px;
-	}
-}
 
 a{
 	color: #f3f3f3;
@@ -199,7 +212,6 @@ a{
 		}
 		#projects{
 			overflow: visible;
-
 		}
 		.copy{
 			position: absolute;

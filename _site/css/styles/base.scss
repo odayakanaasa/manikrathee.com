@@ -25,16 +25,21 @@ a:link  { -webkit-tap-highlight-color: #333; }
 
 // Global Elements
 
-html,body {
+html {
+  font-size: 62.5%; // Base 10 for REM sizing
+    // See: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+}
+
+html,
+body {
   height:100%;
 }
 
 body {
-  // background: url(../img/bg.jpg) repeat;
-  font-family: "proxima-nova", helvetica, verdana, sans-serif;
-  color: #4C4C4C;
   -webkit-backface-visibility: hidden;
   text-rendering: optimizelegibility;
+  font-family: "proxima-nova", helvetica, verdana, sans-serif;
+  color: #4C4C4C;
 }
 dl, menu, ol, ul {
     margin: 0;
@@ -43,7 +48,7 @@ dl, menu, ol, ul {
 a {
   text-decoration: none;
   border-bottom: 1px solid #999;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   @include transition(color 0.25s ease-in-out);
 }
 p {
