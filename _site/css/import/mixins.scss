@@ -1,6 +1,15 @@
 /* Mixins */
 
 
+// RGBa colors with fallbacks
+// Usage
+//  @include rgba(#333, 0.5);
+@mixin rgba($color, $opacity: 1) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+
 // Gradient
 @mixin transparent-gradient {
   background-image: linear-gradient(bottom, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);

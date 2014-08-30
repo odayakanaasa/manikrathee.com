@@ -47,8 +47,8 @@
 // 	position: absolute;
 // 	top: 0;
 // 	right: 0;
-// 	height:164px;
-// 	width:69px;
+// 	height: 164px;
+// 	width: 69px;
 // 	z-index: 100;
 // }
 
@@ -56,7 +56,10 @@
 a{
 	color: #f3f3f3;
 	text-decoration: none;
-	@include transition( (color 0.25s ease-in-out),(text-shadow 0.25s ease-in-out) );
+	@include transition(
+		(color 0.25s ease-in-out),
+		(text-shadow 0.25s ease-in-out)
+	);
 	&:hover{
 		color: #fff;
 	}
@@ -64,6 +67,7 @@ a{
 		color: #f3f3f3;
 	}
 }
+
 #home{
 	font-family: "proxima-nova",Helvetica,"Helvetica Neue",Arial,sans-serif;
 	background: #2a4043;
@@ -87,35 +91,38 @@ a{
 		opacity: 1;
 		margin: 50px auto 0;
 		text-align: center;
-		font-size: 14px;
+    @include font-size(14);
 		text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 		@include transition(opacity 0.25s ease-in-out);
 		h1{
+      margin: 0;
+      padding: 0;
 			text-transform: uppercase;
 			font-weight: 100;
-			margin: 0;
-			padding: 0;
-			line-height: 1;
+      line-height: 1;
 		}
 	}
 	.name{
 		font-weight: 100;
-		font-size: 40px;
+    @include font-size(40);
 		text-transform: uppercase;
 	}
 	.title{
 		margin-top: 40px;
-		font-weight: 300;
-		font-size: 1em;
+    @include font-size(16);
+    font-weight: 300;
 		a{
 			border: none;
 			padding: none;
 			border-bottom: 1px solid rgb(114, 114, 114);
 			padding-bottom: 1px;
-			@include transition( (border 0.25s ease-in-out),(text-shadow 0.25s ease-in-out) );
+			@include transition(
+        (border 0.25s ease-in-out),
+        (text-shadow 0.25s ease-in-out)
+      );
 			&:hover{
-				text-shadow: 0 0 2px #fff;
-				border-bottom: 1px solid rgb(255, 255, 255);
+				text-shadow: 0 0 2px $white;
+				border-bottom: 1px solid $white;
 			}
 		}
 	}
@@ -124,9 +131,8 @@ a{
 		text-align: left;
 		li{
 			list-style-type: none;
-			margin-bottom: 10px;
-			font-size: 16px;
 			margin: 0 auto 10px auto;
+      @include font-size(10);
 		}
 	}
 	#portfolio{
@@ -135,19 +141,17 @@ a{
 		p{
 			margin: 0;
 			color: #D8D8D8;
-			-webkit-transition: color 0.25s linear;
-			-moz-transition: color 0.25s linear;
-			transition: color 0.25s linear;
+      @include transition(color 0.25s ease-in-out);
 		}
 	}
 	#projects{
 		overflow: hidden;
 		zoom: 1;
 		li{
-			float: none;
-			font-size: 12px;
 			display: block;
-			margin: 10px 0;
+      float: none;
+      margin: 10px 0;
+      @include font-size(12);
 		}
 	}
 	.social{
@@ -156,6 +160,7 @@ a{
 			overflow: hidden;
 			zoom: 1;
 			width: 200px;
+      max-width: 100%;
 			margin: 45px auto;
 			padding: 0;
 		}
@@ -165,17 +170,24 @@ a{
 			zoom: 1;
 			margin: 0 8px 0 0;
 			padding: 0;
-			// font-size: 19px;
-			font-size: 48px;
+      @include font-size(48);
 			list-style-type: none;
-			@include transition(font-size 0.25s ease-in-out);
 		}
 		a {
-			font-size: 0.75em;
+      @include font-size(20);
+			// font-size: 0.75em;
 			text-decoration: none;
 			border: none;
 		}
 	}
+  .exposure-co {
+    display: block;
+    background: transparent url('../img/home/exposure-center_2x.png') no-repeat center center;
+    background-size: 20px 20px;
+    margin: 3px 5px 0 0;
+    @include size(20px, 27px);
+    @include ir;
+  }
 }
 
 
@@ -218,11 +230,10 @@ a{
 			top: 110px;
 			z-index: 10;
 			width: 420px;
-			margin: 75px 0 0 150px;
-			font-size: 1em;
+			margin: 75px 0 0 42px;
 			text-align: left;
 			p {
-				font-size: 0.9em;
+        @include font-size(16);
 				text-transform: none;
 			}
 			&.fade{
@@ -238,7 +249,7 @@ a{
 		ul:not(.social) {
 			li {
 				margin-right: 16px;
-				font-size: 13px;
+        @include font-size(13);
 			}
 		}
 		.social {

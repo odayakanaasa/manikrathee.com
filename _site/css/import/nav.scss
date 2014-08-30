@@ -1,6 +1,9 @@
 nav.global-nav{
 	position: relative;
 	z-index: 200;
+  // @include mq(768) {
+    min-height: 95px;
+  // }
 }
 
 #logo{
@@ -212,7 +215,7 @@ nav{
 	}
 	#navigation{
 		height: auto;
-		padding: 38px 0 0 120px;
+		padding: 40px 0 0 120px;
 		body.interior & {
 			padding: 32px 0 0 30px;
 		}
