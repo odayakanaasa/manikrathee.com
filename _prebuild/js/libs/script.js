@@ -61,11 +61,6 @@ $(window).resize(function() {
 
 centerAPI();
 
-
-$('.social-api').on('hover', function(){
-  trackEvent('home','api bar','interaction: hovered [' + $(this).attr('id') + ']');
-});
-
 // Nav Hover
 function checkWidth() {
 	if ($(window).width() > 769){
@@ -198,3 +193,7 @@ function trackEvent(cat, action, label){
     ga('send', 'event', cat, action, label);
   }
 }
+
+$('.social-api').on('hover', function(){
+  trackEvent('home','api bar','interaction: hovered [' + $(this).attr('id') + ']');
+});

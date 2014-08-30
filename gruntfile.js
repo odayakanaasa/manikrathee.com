@@ -35,6 +35,7 @@ module.exports = function(grunt) {
        },
        dist: {
         src: [
+          '_site/js/libs/analytics.js',
           '_site/js/libs/jquery-1.8.2.min.js',
           '_site/js/libs/jquery.backstretch.js',
           '_site/js/libs/jquery.api.twitter.js',
