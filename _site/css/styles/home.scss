@@ -184,9 +184,12 @@ a{
     display: block;
     background: transparent url('../img/home/exposure-center_2x.png') no-repeat center center;
     background-size: 20px 20px;
-    margin: 3px 5px 0 0;
+    margin: 16px 6px 0;
     @include size(20px, 27px);
     @include ir;
+    @media (min-width: 768px) {
+      margin: 3px 5px 0 0;
+    }
   }
 }
 
