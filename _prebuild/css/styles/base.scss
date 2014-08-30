@@ -160,6 +160,7 @@ a:link  { -webkit-tap-highlight-color: #333; }
   bottom: 0;
   width: 100%;
   opacity: 0;
+  pointer-events: none;
   @include transition(
     (background 0.25s ease-in-out),
     (opacity 0.25s ease-in-out)
@@ -168,6 +169,7 @@ a:link  { -webkit-tap-highlight-color: #333; }
     // uses .fade to match nav / copy class for hiding/showing
     display: block;
     opacity: 1;
+    pointer-events: normal;
     body.dark & {
       background: rgba(255,255,255,0.875);
     }
