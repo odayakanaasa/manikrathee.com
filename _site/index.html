@@ -53,17 +53,19 @@
 
 	<body id="home" class="light">
 
-	<span id="becca"></span>
-	<div class="container">
+		<div class="container" role="main">
   	<div class="dark-shade"></div>
 
-<nav id="white" class="global-nav">
+<nav id="white" class="global-nav" role="navigation">
 
   <a href="/" title="Go Home" itemprop="url">
     <div id="logo" class="white"></div>
   </a>
 
-  <a id="nav" class="ss-icon" href="#">list</a>
+  <a id="nav" href="#" itemprop="url">
+    <span class="ss-icon">list</span>
+    <span class="label">Menu</span>
+  </a>
 
   <ul id="navigation">
     <li><a itemprop="url" href="index.html" title="Home">Home</a></li>
@@ -97,7 +99,7 @@
 
 			<section class="title">
 
-					<p>I am a designer. Formerly, a User Experience Engineer for <a itemprop="url" href="http://www.barackobama.com" title="Obama For America">President Barack Obama</a>, I am now building <em>thoughtful things</em> at Nest / Google. In my spare time, I <a itemprop="url" href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">write about design and development</a> and <a itemprop="url" href="http://photos.manikrathee.com" title="Photos.ManikRathee.com">take a lot of photos</a>.</p>
+					<p>I am a designer. Formerly, a User Experience Engineer for <a itemprop="url" href="http://www.barackobama.com" title="Obama For America">President Barack Obama</a>, I am now building <em>thoughtful things</em> at Google by way of Nest. In my spare time, I <a itemprop="url" href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">write about design and development</a> and <a itemprop="url" href="http://photos.manikrathee.com" title="Manikrathee on Exposure.co">take a lot of photos</a>.</p>
 
 					<!--
 						// Oh, hello. This is some extra copy that I used to have here.
@@ -108,13 +110,46 @@
 
 			<section class="social">
 				<ul class="social-icons">
-					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.twitter.com/manikrathee" title="Twitter">Twitter</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="http://instagram.com/manikrathee" title="Instagram">Instagram</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.dribbble.com/manikrathee" title="Dribbble">Dribbble</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="https://github.com/manikrathee" title="GitHub">Octocat</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.rdio.com/people/manikrathee/" title="Rdio">rdio</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="http://manikrathee.tumblr.com" title="Tumblr">Tumblr</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.flickr.com/photos/manikrathee/" title="Flickr">Flickr</a></li>
+					<li>
+						<a class="ss-icon ss-social-circle tooltip" href="http://www.twitter.com/manikrathee" title="Twitter">
+							Twitter
+						</a>
+					</li>
+					<li>
+						<a class="exposure-co tooltip" href="http://photos.manikrathee.com" title="Exposure" itemprop="url">
+							Manik Rathee on Exposure
+						</a>
+					</li>
+					<li>
+						<a class="ss-icon ss-social-circle tooltip" href="http://instagram.com/manikrathee" title="Instagram" itemprop="url">
+							Instagram
+						</a>
+					</li>
+					<li>
+						<a class="ss-icon ss-social-circle tooltip" href="http://www.dribbble.com/manikrathee" title="Dribbble" itemprop="url">
+							Dribbble
+						</a>
+					</li>
+					<li>
+						<a class="ss-icon ss-social-circle tooltip" href="https://github.com/manikrathee" title="GitHub" itemprop="url">
+							Octocat
+						</a>
+					</li>
+					<li>
+						<a class="ss-icon ss-social-circle tooltip" href="http://www.rdio.com/people/manikrathee/" title="Rdio" itemprop="url">
+							Rdio
+						</a>
+					</li>
+					<li>
+						<a class="ss-icon ss-social-circle tooltip" href="http://manikrathee.tumblr.com" title="Tumblr" itemprop="url">
+							Tumblr
+						</a>
+					</li>
+					<li>
+						<a class="ss-icon ss-social-circle tooltip" href="http://www.flickr.com/photos/manikrathee/" title="Flickr" itemprop="url">
+							Flickr
+						</a>
+					</li>
 
 				<!--
 				// Yo, I heard you like social icons
@@ -149,6 +184,8 @@
     
   
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-2.1.1.min.js"><\/script>')</script>
   <script src="js/script.js"></script>
   
 
