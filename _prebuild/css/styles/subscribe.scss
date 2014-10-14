@@ -9,7 +9,8 @@
     left: 50%;
     margin-left: -38px;
   }
-  #navigation {
+  #navigation,
+  #nav {
     display: none;
   }
   h1 {
@@ -69,8 +70,6 @@
   margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 65px;
-  padding-right: 65px;
   text-align: center;
   @include box;
   header,
@@ -79,7 +78,7 @@
   footer {
     background: darken(#fff, 1%);
     padding: 30px 20px;
-    border-bottom: 1px solid darken(#fff, 6%);
+    border-bottom: 1px solid darken(#fff, 12%);
     @include animate;
     @include slideInRight;
   }
@@ -95,6 +94,25 @@
       footer {
         @include delay-custom(0.55s);
       }
+
+  #tiny-credit {
+    display: block;
+    width: 100%;
+    background: rgba(255,255,255,0.25);
+    clear: both;
+    opacity: 0.75;
+    padding: 30px 0;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    &:hover {
+      opacity: 1;
+    }
+  }
   form {
     padding-top: 65px;
     padding-bottom: 65px;
@@ -137,7 +155,7 @@
     }
   }
   #tlemail {
-    padding-top: 4px;
+    padding-top: 6px;
   }
   #hidden {
     position: absolute;
@@ -166,21 +184,6 @@
     }
   }
 }
-#tiny-credit {
-  display: block;
-  width: 100%;
-  clear: both;
-  opacity: 0.5;
-  padding: 10px 0;
-  color: #333;
-  font-size: 0.8em;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  &:hover {
-    opacity: 1;
-  }
-}
 footer {
   small {
     opacity: 0.7;
@@ -195,6 +198,7 @@ footer {
 */
 @include min-screen(768px) {
   #subscribe {
+    overflow: hidden;
     h1 {
       font-size: 3em;
     }
@@ -205,6 +209,9 @@ footer {
     }
     .twitter-author{
       font-size: 0.8em;
+      font-weight: 300;
+      text-decoration: none;
+      border: none;
       &:hover {
         opacity: 1;
         color: #000;
@@ -212,6 +219,8 @@ footer {
     }
   }
   [id=subscription] {
+    padding-left: 65px;
+    padding-right: 65px;
     @include box;
     header,
     form,
