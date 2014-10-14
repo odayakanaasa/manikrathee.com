@@ -48,20 +48,36 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
        -o-animation-fill-mode: both;
           animation-fill-mode: both;
 }
+@mixin animate-custom($speed){
+  -webkit-animation: $speed ease;
+     -moz-animation: $speed ease;
+      -ms-animation: $speed ease;
+       -o-animation: $speed ease;
+          animation: $speed ease;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
 
 @mixin delay {
-  -webkit-animation-delay: 0, 1s;
-  -moz-animation-delay: 0, 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
 }
 
 @mixin delay-short {
-  -webkit-animation-delay: 0, 0.25s;
-  -moz-animation-delay: 0, 0.25s;
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
 }
 
 @mixin delay-long {
-  -webkit-animation-delay: 0, 2.5s;
-  -moz-animation-delay: 0, 2.5s;
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+}
+@mixin delay-custom($time) {
+  -webkit-animation-delay: $time;
+  -moz-animation-delay: $time;
 }
 
 // @mixin bloop {
@@ -458,93 +474,94 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 //   backface-visibility: visible !important;
 //   animation-name: flip;
 // }
-// @-webkit-keyframes flipInX {
-//     0% {
-//         -webkit-transform: perspective(400px) rotateX(90deg);
-//         opacity: 0;
-//     }
 
-//     40% {
-//         -webkit-transform: perspective(400px) rotateX(-10deg);
-//     }
 
-//     70% {
-//         -webkit-transform: perspective(400px) rotateX(10deg);
-//     }
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
 
-//     100% {
-//         -webkit-transform: perspective(400px) rotateX(0deg);
-//         opacity: 1;
-//     }
-// }
-// @-moz-keyframes flipInX {
-//     0% {
-//         -moz-transform: perspective(400px) rotateX(90deg);
-//         opacity: 0;
-//     }
+    // 40% {
+    //     -webkit-transform: perspective(400px) rotateX(-10deg);
+    // }
 
-//     40% {
-//         -moz-transform: perspective(400px) rotateX(-10deg);
-//     }
+    // 70% {
+    //     -webkit-transform: perspective(400px) rotateX(10deg);
+    // }
 
-//     70% {
-//         -moz-transform: perspective(400px) rotateX(10deg);
-//     }
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-moz-keyframes flipInX {
+    0% {
+        -moz-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
 
-//     100% {
-//         -moz-transform: perspective(400px) rotateX(0deg);
-//         opacity: 1;
-//     }
-// }
-// @-o-keyframes flipInX {
-//     0% {
-//         -o-transform: perspective(400px) rotateX(90deg);
-//         opacity: 0;
-//     }
+    // 40% {
+    //     -moz-transform: perspective(400px) rotateX(-10deg);
+    // }
 
-//     40% {
-//         -o-transform: perspective(400px) rotateX(-10deg);
-//     }
+    // 70% {
+    //     -moz-transform: perspective(400px) rotateX(10deg);
+    // }
 
-//     70% {
-//         -o-transform: perspective(400px) rotateX(10deg);
-//     }
+    100% {
+        -moz-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-o-keyframes flipInX {
+    0% {
+        -o-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
 
-//     100% {
-//         -o-transform: perspective(400px) rotateX(0deg);
-//         opacity: 1;
-//     }
-// }
-// @keyframes flipInX {
-//     0% {
-//         transform: perspective(400px) rotateX(90deg);
-//         opacity: 0;
-//     }
+    // 40% {
+    //     -o-transform: perspective(400px) rotateX(-10deg);
+    // }
 
-//     40% {
-//         transform: perspective(400px) rotateX(-10deg);
-//     }
+    // 70% {
+    //     -o-transform: perspective(400px) rotateX(10deg);
+    // }
 
-//     70% {
-//         transform: perspective(400px) rotateX(10deg);
-//     }
+    100% {
+        -o-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
 
-//     100% {
-//         transform: perspective(400px) rotateX(0deg);
-//         opacity: 1;
-//     }
-// }
+    // 40% {
+    //     transform: perspective(400px) rotateX(-10deg);
+    // }
 
-// @mixin flipInX {
-//   -webkit-backface-visibility: visible !important;
-//   -webkit-animation-name: flipInX;
-//   -moz-backface-visibility: visible !important;
-//   -moz-animation-name: flipInX;
-//   -o-backface-visibility: visible !important;
-//   -o-animation-name: flipInX;
-//   backface-visibility: visible !important;
-//   animation-name: flipInX;
-// }
+    // 70% {
+    //     transform: perspective(400px) rotateX(10deg);
+    // }
+
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@mixin flipInX {
+  -webkit-animation-name: flipInX;
+  -moz-animation-name: flipInX;
+  -o-animation-name: flipInX;
+  animation-name: flipInX;
+}
+
+
+
 // @-webkit-keyframes flipOutX {
 //     0% {
 //         -webkit-transform: perspective(400px) rotateX(0deg);
@@ -591,101 +608,95 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 // @mixin flipOutX {
 //   -webkit-animation-name: flipOutX;
-//   -webkit-backface-visibility: visible !important;
 //   -moz-animation-name: flipOutX;
-//   -moz-backface-visibility: visible !important;
 //   -o-animation-name: flipOutX;
-//   -o-backface-visibility: visible !important;
 //   animation-name: flipOutX;
-//   backface-visibility: visible !important;
-// }
-// @-webkit-keyframes flipInY {
-//     0% {
-//         -webkit-transform: perspective(400px) rotateY(90deg);
-//         opacity: 0;
-//     }
-
-//     40% {
-//         -webkit-transform: perspective(400px) rotateY(-10deg);
-//     }
-
-//     70% {
-//         -webkit-transform: perspective(400px) rotateY(10deg);
-//     }
-
-//     100% {
-//         -webkit-transform: perspective(400px) rotateY(0deg);
-//         opacity: 1;
-//     }
-// }
-// @-moz-keyframes flipInY {
-//     0% {
-//         -moz-transform: perspective(400px) rotateY(90deg);
-//         opacity: 0;
-//     }
-
-//     40% {
-//         -moz-transform: perspective(400px) rotateY(-10deg);
-//     }
-
-//     70% {
-//         -moz-transform: perspective(400px) rotateY(10deg);
-//     }
-
-//     100% {
-//         -moz-transform: perspective(400px) rotateY(0deg);
-//         opacity: 1;
-//     }
-// }
-// @-o-keyframes flipInY {
-//     0% {
-//         -o-transform: perspective(400px) rotateY(90deg);
-//         opacity: 0;
-//     }
-
-//     40% {
-//         -o-transform: perspective(400px) rotateY(-10deg);
-//     }
-
-//     70% {
-//         -o-transform: perspective(400px) rotateY(10deg);
-//     }
-
-//     100% {
-//         -o-transform: perspective(400px) rotateY(0deg);
-//         opacity: 1;
-//     }
-// }
-// @keyframes flipInY {
-//     0% {
-//         transform: perspective(400px) rotateY(90deg);
-//         opacity: 0;
-//     }
-
-//     40% {
-//         transform: perspective(400px) rotateY(-10deg);
-//     }
-
-//     70% {
-//         transform: perspective(400px) rotateY(10deg);
-//     }
-
-//     100% {
-//         transform: perspective(400px) rotateY(0deg);
-//         opacity: 1;
-//     }
 // }
 
-// @mixin flipInY {
-//   -webkit-backface-visibility: visible !important;
-//   -webkit-animation-name: flipInY;
-//   -moz-backface-visibility: visible !important;
-//   -moz-animation-name: flipInY;
-//   -o-backface-visibility: visible !important;
-//   -o-animation-name: flipInY;
-//   backface-visibility: visible !important;
-//   animation-name: flipInY;
-// }
+@-webkit-keyframes flipInY {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@-moz-keyframes flipInY {
+    0% {
+        -moz-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        -moz-transform: perspective(400px) rotateY(-10deg);
+    }
+
+    70% {
+        -moz-transform: perspective(400px) rotateY(10deg);
+    }
+
+    100% {
+        -moz-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@-o-keyframes flipInY {
+    0% {
+        -o-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        -o-transform: perspective(400px) rotateY(-10deg);
+    }
+
+    70% {
+        -o-transform: perspective(400px) rotateY(10deg);
+    }
+
+    100% {
+        -o-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@keyframes flipInY {
+    0% {
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotateY(-10deg);
+    }
+
+    70% {
+        transform: perspective(400px) rotateY(10deg);
+    }
+
+    100% {
+        transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@mixin flipInY {
+  -webkit-animation-name: flipInY;
+  -moz-animation-name: flipInY;
+  -o-animation-name: flipInY;
+  animation-name: flipInY;
+}
+
 // @-webkit-keyframes flipOutY {
 //     0% {
 //         -webkit-transform: perspective(400px) rotateY(0deg);
@@ -3406,4 +3417,98 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -moz-animation-duration: 0.5s;
     -o-animation-duration: 0.5s;
     animation-duration: 0.5s;
+}
+
+
+
+
+@-webkit-keyframes slideUpLeft {
+  0% {
+    -webkit-transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@-moz-keyframes slideUpLeft {
+  0% {
+    -moz-transform: translateX(-50%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+@-o-keyframes slideUpLeft {
+  0% {
+    -o-transform: translateX(-50%);
+  }
+  100% {
+    -o-transform: translateX(-100%);
+  }
+}
+
+@keyframes slideUpLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@mixin slideUpLeft {
+  -webkit-animation-name: slideUpLeft;
+  -moz-animation-name: slideUpLeft;
+  -o-animation-name: slideUpLeft;
+  animation-name: slideUpLeft;
+}
+
+
+
+
+
+
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideInRight {
+  0% {
+    -moz-transform: translateX(-100%);
+  }
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes slideInRight {
+  0% {
+    -o-transform: translateX(-100%);
+  }
+  100% {
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@mixin slideInRight {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
 }

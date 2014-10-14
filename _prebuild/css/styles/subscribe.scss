@@ -1,0 +1,257 @@
+/* Subscribe, Tiny Letter */
+
+
+#subscribe {
+  background: darken(#fff, 6%);
+  #logo {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    margin-left: -38px;
+  }
+  #navigation {
+    display: none;
+  }
+  h1 {
+    font-size: 2.2em;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 20px auto;
+    font-size: 1.15em;
+    font-weight: 300;
+  }
+  .twitter-author{
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.65;
+    color: #333;
+    &:hover {
+      opacity: 1;
+      color: #000;
+    }
+  }
+}
+#overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 250%;
+  width: 500%;
+  opacity: 0.9;
+  z-index: 1;
+    background: #1fc5b7;
+    background: -moz-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1fc5b7), color-stop(49%,#007de1), color-stop(100%,#a81fc5));
+    background: -webkit-linear-gradient(-45deg, #1fc5b7 0%,#007de1 49%,#a81fc5 100%);
+    background: -o-linear-gradient(-45deg, #1fc5b7 0%,#007de1 49%,#a81fc5 100%);
+    background: -ms-linear-gradient(-45deg, #1fc5b7 0%,#007de1 49%,#a81fc5 100%);
+    background: linear-gradient(135deg, #1fc5b7 0%,#007de1 49%,#a81fc5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fc5b7', endColorstr='#a81fc5',GradientType=1 );
+  // Enable GPU
+  -webkit-transform : translateZ(0);
+  -o-transform : translateZ(0);
+  -moz-transform : translateZ(0);
+  transform : translateZ(0);
+  // Animate gradient
+  @include animate-custom(100s);
+  @include slideUpLeft;
+}
+[id=subscription] {
+  position: relative;
+  z-index: 20;
+  max-width: 90%;
+  width: 725px;
+  overflow: hidden;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 65px;
+  padding-right: 65px;
+  text-align: center;
+  @include box;
+  header,
+  form,
+  #tiny-credit,
+  footer {
+    background: darken(#fff, 1%);
+    padding: 30px 20px;
+    border-bottom: 1px solid darken(#fff, 6%);
+    @include animate;
+    @include slideInRight;
+  }
+      header {
+        @include delay-custom(0.25s);
+      }
+      form {
+        @include delay-custom(0.35s);
+      }
+      #tiny-credit {
+        @include delay-custom(0.45s);
+      }
+      footer {
+        @include delay-custom(0.55s);
+      }
+  form {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    text-align: left;
+  }
+  label,
+  input {
+    display: block;
+    width: auto;
+  }
+  label {
+    display: block;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  input {
+    display: block;
+    border: 1px solid darken(#fff, 30%);
+    @include transition(border 0.25s ease-in-out);
+    &:focus, &:active {
+      border-bottom: 2px solid darken(#fff, 30%);
+    }
+    &:focus {
+        outline: 0;
+    }
+  }
+  label, #tlemail, #submit {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .form-fields {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    li {
+      list-style-type: none;
+    }
+  }
+  #hidden {
+    position: absolute;
+    top: 0;
+    left: -999em;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .wrap {
+    width: 100%;
+    margin: 15px auto 10px;
+  }
+  #submit {
+    background: #1fc5b7;
+    max-width: 100%;
+    width: 100%;
+    padding: 8px 0;
+    font-family: $sans;
+    text-transform: uppercase;
+    color: #fff;
+    @include transition(background 0.15s linear);
+    &:hover {
+      background: lighten(saturate(#1fc5b7, 10%), 3%);
+      // background: #a81fc5;
+      background: #007de1;
+    }
+  }
+}
+#tiny-credit {
+  display: block;
+  width: 100%;
+  clear: both;
+  opacity: 0.5;
+  padding: 10px 0;
+  color: #333;
+  font-size: 0.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  &:hover {
+    opacity: 1;
+  }
+}
+footer {
+  small {
+    opacity: 0.7;
+    font-style: italic;
+  }
+}
+
+/*
+**********************
+***** 768
+**********************
+*/
+@include min-screen(768px) {
+  #subscribe {
+    h1 {
+      font-size: 3em;
+    }
+    h2 {
+      width: 400px;
+      margin: 10px auto;
+      font-size: 1em;
+    }
+    .twitter-author{
+      font-size: 0.8em;
+      &:hover {
+        opacity: 1;
+        color: #000;
+      }
+    }
+  }
+  [id=subscription] {
+    @include box;
+    header,
+    form,
+    #tiny-credit,
+    footer {
+      @include flipInX;
+      & > * {
+        @include animate-slow;
+        @include fadeInDown;
+      }
+    }
+    .form-fields {
+      overflow: hidden;
+      clear: both;
+      li {
+        width: 50%;
+        float: left;
+      }
+    }
+    label {
+    }
+    input {
+      max-width: 80%;
+      border: none;
+      border-bottom: 1px solid darken(#fff, 30%);
+    }
+    .wrap {
+      display: block;
+      width: 190px;
+      margin-top: 6px;
+      &:hover {
+        background: red;
+      }
+    }
+    #submit {
+      border: none;
+      &:hover {
+        background: none;
+      }
+    }
+  }
+} // 768
+
+
+
+
