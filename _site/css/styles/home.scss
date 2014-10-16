@@ -225,10 +225,10 @@ a{
 			left: 10px;
 			@include size(75px, 75px);
 		}
-		#projects{
+		#projects {
 			overflow: visible;
 		}
-		.copy{
+		.copy {
 			position: absolute;
 			top: 110px;
 			z-index: 10;
@@ -236,7 +236,7 @@ a{
 			margin: 75px 0 0 42px;
 			text-align: left;
 			p {
-        @include font-size(16);
+        @include font-size(14);
 				text-transform: none;
 			}
 			&.fade{
