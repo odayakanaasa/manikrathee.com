@@ -1,0 +1,29 @@
+---
+layout: blog-root
+title: Blog | Manik Rathee, Designer.
+
+home: 1
+
+sitemap:
+  lastmod: {{ post.date }}
+  priority: 0.7
+  changefreq: monthly
+  exclude: 'no'
+---
+
+<style>
+  {% for post in site.posts %}
+    #{{ post.slug }}:hover{
+      background-color: #{{ post.link-color }};
+      color: #fff;
+    }
+  {% endfor %}
+</style>
+
+
+{% for post in site.posts %}
+  <a id="{{ post.slug }}" class="post" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}
+    <p class="info subtitle">{{ post.subtitle }}</p>
+    <p class="info date">{{ post.date | date: "%B %d %Y" }}</p>
+  </a>
+{% endfor %}

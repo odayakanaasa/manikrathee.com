@@ -1,0 +1,28 @@
+{% include blog/header.html %}
+{% capture page.each_subtitle %}{{ post.subtitle }}{% endcapture %}
+</head>
+<body class="blog-root">
+	<header id="page-header">
+		<section class="container">
+			<a href="http://blog.manikrathee.com" title="blog.manikrathee.com" itemprop="url">
+				<h1 id="logo">Blog.Manikrathee.com</h1>
+			</a>
+		</section>
+	</header>
+
+	<section>
+		{{ content }}
+	</section>
+
+	<footer>
+		<div class="container">
+			<a href="https://github.com/manikrathee/Blog" class="ss-icon ss-social-circle" title="Code behind this blog is available on Github" itemprop="url">Octocat</a>
+		</div>
+	</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/global/js/libs/jquery-2.1.1.min.js"><\/script>')</script>
+	<script src="/assets/global/js/scripts.js"></script>
+
+</body>
+</html>
