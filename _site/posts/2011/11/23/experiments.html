@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
@@ -36,6 +36,8 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
   
+  
+
   <script src="js/libs/modernizr.min.js"></script>
 
   <script type="text/javascript" src="//use.typekit.net/zqq7yli.js"></script>
@@ -51,9 +53,54 @@
 -->
 
 
-	<body  >
+<body class="blog blog-post "
+  
+  
+  
+  
+  
+  data-reading-time="true"
+  >
 
-	<p>This is a very exciting time for the web. People are designing using new and innovative techniques, websites are evolving from "eye-candy with a little bit of content" to <em>content-focused, device-agnostic experiences.</em> UX has erupted and spilled over to the web, and while others may argue, I say it is for the best.</p>
+	<header id="page-header">
+		<section class="container" itemscope>
+			<a id="header-link" href="/" title="blog.manikrathee.com"  itemprop="url">
+				<h1 id="logo">Blog.Manikrathee.com</h1>
+				<p id="back">Back to blog.manikrathee.com</p>
+			</a>
+		</section>
+	</header>
+
+	<article>
+		<header>
+			<!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
+			<div id="feature" data-picture data-alt="">
+	      <div itemprop="image" data-src="/img/blog/20111123/feature-x.jpg"></div>
+	      <div itemprop="image" data-src="/img/blog/20111123/feature-l.jpg" data-media="(min-width: 400px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20111123/feature-m.jpg" data-media="(min-width: 800px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20111123/feature-s.jpg" data-media="(min-width: 1000px)"></div>
+
+	      <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+	      <noscript><img itemprop="image" src="/img/blog/20111123/feature-x.jpg" alt=""></noscript>
+	    </div>
+
+			<div id="post-title-container">
+				
+				<h3 id="post-title">Experiments, Responsive Design & General Merryment</h3>
+				<p id="subtitle">work and play</p>
+				<p id="date">November 23 2011</p>
+				<!-- Jekyll Reading Time via Andy Taylor // http://andytaylor.me/2013/04/07/reading-time/ -->
+				
+				<p id="reading-time">Reading Time: <span class="time">7.1571428571428575min</span> minutes</p>
+				
+				
+			</div>
+		</header>
+
+		
+
+		<section class="body itemscope">
+			<p>This is a very exciting time for the web. People are designing using new and innovative techniques, websites are evolving from "eye-candy with a little bit of content" to <em>content-focused, device-agnostic experiences.</em> UX has erupted and spilled over to the web, and while others may argue, I say it is for the best.</p>
 
 <p>Lately, I have been tackling an almost excessive amount of projects. I have very little spare time so the fact that I am trying multiple projects is pretty stupid to begin with, but I do it anyway. Because... well.. why not? I've redesigned <a href="http://www.manikrathee.com" target="_blank" title="Manik Rathee dot com">my personal home page</a>, started <a href="http://manikrathee.tumblr.com" target="_blank" title="Manik Rathee's Tumblr">a tumblr</a>, redesigned <a href="http://manikrathee.tumblr.com" target="_blank" title="Manik Rathee's Tumblr">that same tumblr with my first ever theme (and made it responsive)</a>, created a <a href="http://hopewillseeusthrough.tumblr.com" target="_blank" title="Hope Will See Us Through">type project based on lyrics from my favorite songs</a>, and even designed a <a href="http://manikrathee.com/iOS/" target="_blank" title="Catalyst iOS Theme">completely custom ui &amp; iphone theme called CATALYST</a>. Point being, there are so many options in our fields that, in my opinion, it is almost ignorant not to experiment. This isn't to say that people should focus on all of these variations to develop their skills permanently, but why not experiment with one or two projects?</p>
 
@@ -86,19 +133,54 @@
 
 <p>Also, merry whatever.</p>
 
+		</section>
+	</article>
 
-    
-  <a id="top" class="ss-icon" href="#" title="Back To The Top">navigateup</a>
-  
+	
+
+	<section id="next-previous-post" class="body bare">
+		<div id="page-navigation" class="body" itemscope>
+			
+
+			<p class="pre-heading">Next Post</p>
+			<a href="/posts/2011/12/12/changes-obama-for-america.html" title="next Post: Changes & Obama For America" itemprop="url">
+				<h3>Changes & Obama For America</h3>
+				<p>Working for a greater cause</p>
+				<p class="date">December 12 2011</p>
+			</a>
+
+			
+		</div>
+	</section>
+
+
+	<section id="profile" class="body bare">
+		<div class="body" itemscope>
+				<h4>About <a href="http://www.manikrathee.com" title="ManikRathee.com" itemprop="url">Manik Rathee</a></h4>
+				<p>I'm a designer and photographer. Formerly a UX Engineer for <a href="http://www.barackobama.com" title="Barack Obama" itemprop="url">President Barack Obama</a>, I am now building thoughtful things at Google</p>
+
+				<ul id="social">
+	<li id="follow">
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<a href="https://twitter.com/ManikRathee" class="twitter-follow-button" data-show-count="false">Follow @ManikRathee</a>
+	</li>
+</ul>
+
+
+		</div>
+	</section>
+
+	<footer itemscope>
+		<p>Set in <a href="https://typekit.com/fonts/garamond-premier-pro" title="Garamond Premier Pro on Typekit" itemprop="url">Garamond Premier Pro</a> and <a href="https://typekit.com/fonts/ff-meta-web-pro" title="FF Meta Serif Web Pro on Typekit" itemprop="url">FF Meta Serif Web Pro</a>.</p>
+		<div class="container">
+			<a href="https://github.com/manikrathee/Blog" class="ss-icon ss-social-circle" title="Github" itemprop="url">Octocat</a>
+		</div>
+	</footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-2.1.1.min.js"><\/script>')</script>
-  <script src="js/script.js"></script>
-  
-
-</body>
-</html>
-
-
+  <script>window.jQuery || document.write('<script src="/assets/global/js/libs/jquery-2.1.1.min.js"><\/script>')</script>
+	<script src="/assets/global/js/scripts.js"></script>
+	
+	
 </body>
 </html>

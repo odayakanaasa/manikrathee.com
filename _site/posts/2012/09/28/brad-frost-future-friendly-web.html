@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
@@ -36,6 +36,8 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
   
+  
+
   <script src="js/libs/modernizr.min.js"></script>
 
   <script type="text/javascript" src="//use.typekit.net/zqq7yli.js"></script>
@@ -51,9 +53,58 @@
 -->
 
 
-	<body  >
+<body class="blog blog-post "
+  data-lazyload="true"
+  
+  
+  
+  
+  data-reading-time="true"
+  >
 
-	<style>
+	<header id="page-header">
+		<section class="container" itemscope>
+			<a id="header-link" href="/" title="blog.manikrathee.com"  itemprop="url">
+				<h1 id="logo">Blog.Manikrathee.com</h1>
+				<p id="back">Back to blog.manikrathee.com</p>
+			</a>
+		</section>
+	</header>
+
+	<article>
+		<header>
+			<!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
+			<div id="feature" data-picture data-alt="">
+	      <div itemprop="image" data-src="/img/blog/20120928/feature-s.jpg"></div>
+	      <div itemprop="image" data-src="/img/blog/20120928/feature-m.jpg" data-media="(min-width: 400px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20120928/feature-l.jpg" data-media="(min-width: 800px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20120928/feature-x.jpg" data-media="(min-width: 1000px)"></div>
+
+	      <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+	      <noscript><img itemprop="image" src="/img/blog/20120928/feature-s.jpg" alt=""></noscript>
+	    </div>
+
+			<div id="post-title-container">
+				
+				<h3 id="post-title">The Future Friendly Web</h3>
+				<p id="subtitle">Notes from Brad Frost's Talk at Web Visions 2012</p>
+				<p id="date">September 28 2012</p>
+				<!-- Jekyll Reading Time via Andy Taylor // http://andytaylor.me/2013/04/07/reading-time/ -->
+				
+				<p id="reading-time">Reading Time: <span class="time">4.65min</span> minutes</p>
+				
+				
+			</div>
+		</header>
+
+		
+		<section class="body intro">
+			<p>We want to make things that are future friendly. By anticipating what's next, we can react to today's concerns but also build long-term value for people and businesses. The following ideas have been on our minds recently. Help us explore them further or suggest new ones. <a href='http://futurefriend.ly' title='FutureFriend.ly'>FutureFriend.ly</a></p>
+		</section>
+		
+
+		<section class="body itemscope">
+			<style>
 	ul li{
 		margin-top: 4px;
 		margin-bottom: 4px;
@@ -103,24 +154,24 @@
 <hr>
 
 <ul id="loader">
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-01.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-02.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-03.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-04.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-05.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-06.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-07.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-08.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-09.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-10.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-11.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-12.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-13.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-14.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-15.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-16.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-17.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
-	<li><img data-original="/assets/20120928/images/brad-frost-future-friendly-18.JPG" src="/assets/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-01.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-02.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-03.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-04.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-05.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-06.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-07.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-08.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-09.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-10.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-11.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-12.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-13.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-14.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-15.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-16.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-17.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
+	<li><img data-original="/img/blog/20120928/images/brad-frost-future-friendly-18.JPG" src="/img/blog/global/images/holder.gif" alt="Brad Frost at Web Visions 2012 in Chicago"></li>
 </ul>
 
 <hr>
@@ -150,19 +201,54 @@
 
 <p>The above slide photos are on flickr <a href="http://www.flickr.com/photos/manikrathee/sets/72157631643763220/" title="Brad Frost's Future Friendly Presentation Slides">here.</a></p>
 
+		</section>
+	</article>
 
-    
-  <a id="top" class="ss-icon" href="#" title="Back To The Top">navigateup</a>
-  
+	
+
+	<section id="next-previous-post" class="body bare">
+		<div id="page-navigation" class="body" itemscope>
+			
+
+			<p class="pre-heading">Next Post</p>
+			<a href="/posts/2012/11/16/the-tech-president.html" title="next Post: The Tech President" itemprop="url">
+				<h3>The Tech President</h3>
+				<p>Obama's Digital Powerhouse</p>
+				<p class="date">November 16 2012</p>
+			</a>
+
+			
+		</div>
+	</section>
+
+
+	<section id="profile" class="body bare">
+		<div class="body" itemscope>
+				<h4>About <a href="http://www.manikrathee.com" title="ManikRathee.com" itemprop="url">Manik Rathee</a></h4>
+				<p>I'm a designer and photographer. Formerly a UX Engineer for <a href="http://www.barackobama.com" title="Barack Obama" itemprop="url">President Barack Obama</a>, I am now building thoughtful things at Google</p>
+
+				<ul id="social">
+	<li id="follow">
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<a href="https://twitter.com/ManikRathee" class="twitter-follow-button" data-show-count="false">Follow @ManikRathee</a>
+	</li>
+</ul>
+
+
+		</div>
+	</section>
+
+	<footer itemscope>
+		<p>Set in <a href="https://typekit.com/fonts/garamond-premier-pro" title="Garamond Premier Pro on Typekit" itemprop="url">Garamond Premier Pro</a> and <a href="https://typekit.com/fonts/ff-meta-web-pro" title="FF Meta Serif Web Pro on Typekit" itemprop="url">FF Meta Serif Web Pro</a>.</p>
+		<div class="container">
+			<a href="https://github.com/manikrathee/Blog" class="ss-icon ss-social-circle" title="Github" itemprop="url">Octocat</a>
+		</div>
+	</footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-2.1.1.min.js"><\/script>')</script>
-  <script src="js/script.js"></script>
-  
-
-</body>
-</html>
-
-
+  <script>window.jQuery || document.write('<script src="/assets/global/js/libs/jquery-2.1.1.min.js"><\/script>')</script>
+	<script src="/assets/global/js/scripts.js"></script>
+	
+	
 </body>
 </html>
