@@ -4,10 +4,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     sass: {
       dist: {
-        // files: {
-        //   '_site/css/style.max.css' : ['_site/css/style.scss'],
-        //   '_site/css/sequential.max.css' : ['_site/css/sequential.scss'],
-        // },
         files: {
           '_site/css/style.css' : ['_site/css/style.scss'],
           '_site/css/sequential.css' : ['_site/css/sequential.scss'],
@@ -17,14 +13,6 @@ module.exports = function(grunt) {
         },
       },
     },
-    // cssmin: {
-    //   compress: {
-    //     files: {
-    //       '_site/css/style.min.css': '_site/css/style.max.css',
-    //       '_site/css/sequential.min.css': '_site/css/sequential.max.css',
-    //     }
-    //   }
-    // },
     watch: {
       files: ['_prebuild/**'],
       tasks: ['jekyll','sass','concat'],

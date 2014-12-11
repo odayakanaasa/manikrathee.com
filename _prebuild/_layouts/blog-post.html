@@ -3,7 +3,7 @@
 	<link rel="stylesheet" href="{{ page.stylesheet }}" type="text/css" media="screen" />
 	{% endif %}
 	{% if page.code %}
-	<link rel="stylesheet" href="/assets/global/css/code-highlighting-tomorrow-night-eighties.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/css/styles/code-highlighting-tomorrow-night-eighties.css" type="text/css" media="screen" />
 	{% endif %}
 	{% if page.link-color %}
 	<style type="text/css">
@@ -63,7 +63,7 @@
 				{% endif %}
 				<h3 id="post-title">{{ page.title }}</h3>
 				<p id="subtitle">{{ page.subtitle }}</p>
-				<!-- <p id="date">{{ page.date | date: "%B %d %Y" }}</p> -->
+				<p id="date">{{ page.date | date: "%B %d %Y" }}</p>
 				<!-- Jekyll Reading Time via Andy Taylor // http://andytaylor.me/2013/04/07/reading-time/ -->
 				{% if page.reading-time %}
 				<p id="reading-time">Reading Time: <span class="time">{{ page.content | number_of_words | append: '.0' | divided_by:140 | append: 'min' }}</span> minutes</p>
