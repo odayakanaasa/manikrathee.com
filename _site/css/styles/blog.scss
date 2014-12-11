@@ -1,10 +1,5 @@
 /* Blog Styles */
 
-
-/* Typography */
-$body-copy: "ff-meta-serif-web-pro",serif;
-$headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", "Adobe Garamond", Garamond, Georgia, serif;
-
 .blog-root{
   #page-header{
     position: relative;
@@ -13,7 +8,7 @@ $headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur",
   }
   #logo{
     @include ir;
-    background: transparent url('/assets/global/images/logo.png') no-repeat 50% 50%;
+    background: transparent url('/img/blog/global/logo.png') no-repeat 50% 50%;
     background-size: 50px 50px;
     height: 53px;
     width: 52px;
@@ -29,7 +24,7 @@ $headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur",
     padding: 100px 0 90px 0;
     text-align: center;
     border-top: 1px solid #999;
-    font-family: $headline;
+    font-family: $display;
     font-weight: 900;
     font-style: italic;
     line-height: 1;
@@ -68,7 +63,7 @@ $headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur",
   background: rgb(240, 240, 240);
   color: #333;
   text-rendering: optimizelegibility;
-  font-family: $body-copy;
+  font-family: $serif;
   a {
     color: #333;
     text-decoration:none;
@@ -103,7 +98,7 @@ $headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur",
     height: 55px;
     #logo{
       @include ir;
-      background: transparent url('/assets/global/images/logo@2x.png') no-repeat 50% 50%;
+      background: transparent url('/img/blog/global/logo@2x.png') no-repeat 50% 50%;
       background-size: 50px 50px;
       height: 50px;
       width: 50px;
@@ -167,7 +162,7 @@ $headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur",
   }
   #post-title{
     margin: 0;
-    font-family: $headline;
+    font-family: $display;
     font-style: italic;
     font-weight: 900;
     font-size: 24px;
@@ -314,7 +309,7 @@ $headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur",
     }
   }
   blockquote{
-    font-family: $headline;
+    font-family: $display;
     font-size: 16px;
   }
   #next-previous-post{
@@ -353,7 +348,7 @@ $headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur",
       max-width: 650px;
       margin-left: auto;
       margin-right: auto;
-      background: transparent url('/assets/global/images/blog-profile@2x.jpg') no-repeat 50% 50%;
+      background: transparent url('/img/blog/global/blog-profile@2x.jpg') no-repeat 50% 50%;
       background-size: 225px 225px;
       @include box;
     }
@@ -402,7 +397,7 @@ $headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur",
     border-bottom: 1px solid darken(rgba(248, 248, 248, 1), 5%);
     padding: 10px 0;
     text-align:center;
-    font-family: $body-copy;
+    font-family: $serif;
     p, a{
       font-size: 12px;
       font-weight: normal;
@@ -483,7 +478,7 @@ $headline: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur",
 
     header#page-header{
       position: fixed;
-      background: transparent url('/assets/global/images/header-bg-dark.png') repeat 0 0;
+      background: transparent url('/img/blog/global/header-bg-dark.png') repeat 0 0;
       border: none;
     }
     #feature{
