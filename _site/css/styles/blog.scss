@@ -6,16 +6,6 @@
     background: #333;
     border-bottom: 1px solid #999;
   }
-  #logo{
-    @include ir;
-    background: transparent url('/img/blog/global/logo.png') no-repeat 50% 50%;
-    background-size: 50px 50px;
-    height: 53px;
-    width: 52px;
-    width: 100%;
-    margin: 10px auto;
-    float: none;
-  }
   a.post{
     display: block;
     width:100%;

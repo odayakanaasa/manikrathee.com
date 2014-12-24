@@ -13,13 +13,21 @@
   $readmill: #81ce2c; //  #71b427;
 
   // Base Type
-  $georgia: Georgia, Cambria, "Times New Roman", Times, serif;
-  $helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  $lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
-  $monospace: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
-
-  // TypeKit
-  $proxima:  "proxima-nova", helvetica, tahoma, verdana, sans-serif;
+    // $georgia: Georgia, Cambria, "Times New Roman", Times, serif;
+    // $helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    // $lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+    // $monospace: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+  $sans: "proxima-nova", Helvetica, "Helvetica Neue", Verdana, Arial, sans-serif;
+  $serif: "ff-meta-serif-web-pro", Garamond, Georgia, serif;
+  $display: "garamond-premier-pro","Adobe Jenson Pro", "Hoefler Text", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", "Adobe Garamond", Garamond, Georgia, serif;
 
   // Elements
   $divider: 1px solid rgba(229,229,229,1); // #E5E5E5
+
+  // Base Colors
+  $white: #fff;
+  $black: #000;
+  $grey: #333333;
+
+  // Attributes
+  $text-shadow-color: rgba(0,0,0,0.5);
