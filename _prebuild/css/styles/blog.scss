@@ -1,50 +1,18 @@
 /* Blog Styles */
 
-.blog-root{
-  #page-header{
+.blog-root {
+  #page-header {
     position: relative;
     background: #333;
     border-bottom: 1px solid #999;
   }
-  a.post{
+  a.post {
     display: block;
-    width:100%;
-    background: #f9f9f9;
     color: #999;
-    padding: 100px 0 90px 0;
-    text-align: center;
-    border-top: 1px solid #999;
     font-family: $display;
-    font-weight: 900;
-    font-style: italic;
-    line-height: 1;
     font-size: 35px;
-    text-align: center;
-    @include transition( (color 0.25s ease-in-out),(background 0.25s ease-in-out) );
-    @include animate;
-    @include fadeInDown;
-    -moz-font-feature-settings:"liga=1, dlig=1";
-    -moz-font-feature-settings:"liga", "dlig"; /* EDIT: new syntax for FF 15+ */
-    -ms-font-feature-settings:"liga", "dlig";
-    -o-font-feature-settings:"liga", "dlig";
-    -webkit-font-feature-settings:"liga", "dlig";
-    font-feature-settings:"liga", "dlig";
-    &:last-child{
-      border-bottom: 1px solid #999;
-    }
-    &:hover{
-      color: red;
-    }
-    .info{
-      width: 100%;
-      text-align:center;
-      font-weight: normal;
-      text-transform: none;
-      font-size: 14px;
-      margin: 0;
-      &.date{
-        margin-top: 2px;
-      }
+    font-style: italic;
+    .info {
     }
   }
 }
@@ -423,27 +391,7 @@
 
 @media (min-width: 768px) {
   body.blog-root{
-    #logo{
-      margin: 10px auto;
-    }
-    a.post{
-      font-size: 60px;
-    }
-    .post{
-      -webkit-transition:color 0.3s ease-in-out;
-      -moz-transition:color 0.3s ease-in-out;
-      transition:color 0.3s ease-in-out;
-      &:hover{
-        .info{
-          @include animate;
-          @include fadeInUp;
-        }
-      }
-      .info{
-        @include animate;
-        @include fadeOut;
-      }
-    }
+
   }
   .blog {
     #header-link{
