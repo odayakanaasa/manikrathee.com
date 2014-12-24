@@ -391,24 +391,7 @@
 
 @media (min-width: 768px) {
   body.blog-root{
-    #logo{
-      margin: 10px auto;
-    }
-    .post{
-      -webkit-transition:color 0.3s ease-in-out;
-      -moz-transition:color 0.3s ease-in-out;
-      transition:color 0.3s ease-in-out;
-      &:hover{
-        .info{
-          @include animate;
-          @include fadeInUp;
-        }
-      }
-      .info{
-        @include animate;
-        @include fadeOut;
-      }
-    }
+
   }
   .blog {
     #header-link{
