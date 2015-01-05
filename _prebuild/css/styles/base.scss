@@ -207,18 +207,16 @@ a:link  { -webkit-tap-highlight-color: #333; }
 #top {
   display: block;
   width: 85px;
-  padding: 20px 0 40px;
   margin: 40px auto;
-  text-align: center;
+  padding: 20px 0 40px;
   font-size: 25px;
+  color: #333;
+  text-align: center;
   line-height: 1;
-  opacity: 0.25;
-  @include transition(
-    (color 0.25s ease-in-out),
-    (opacity 0.25s ease-in-out)
-  );
+  border: none;
+  @include transition(color 0.25s ease-in-out);
   &:hover {
-    opacity: 1;
+    color: #000;
   }
   #home &,
   .blog & {
