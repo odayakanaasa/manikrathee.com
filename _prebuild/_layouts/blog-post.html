@@ -1,6 +1,6 @@
 {% include global-header.html %}
 
-<body class="blog blog-post {% if page.body-class %}{{ page.body-class }}{% endif %}"
+<body {% if page.body-id %}id="{{ page.body-id }}" {% endif %}class="blog blog-post {% if page.body-class %}{{ page.body-class }}{% endif %}"
   {% if page.lazyload %}data-lazyload="true"{% endif %}
   {% if page.lettering %}data-lettering="true"{% endif %}
   {% if page.fittext %}data-fittext="true"{% endif %}
@@ -9,14 +9,7 @@
   {% if page.reading-time %}data-reading-time="true"{% endif %}
   >
 
-	<header id="page-header">
-		<section class="container" itemscope>
-			<a id="header-link" href="/blog/" title="Blog | Manik Rathee, Designer."  itemprop="url">
-				<h1 id="logo">Blog.Manikrathee.com</h1>
-				<p id="back">Back to blog.manikrathee.com</p>
-			</a>
-		</section>
-	</header>
+	{% include global-nav-bar.html %}
 
 	<article>
 		<header>

@@ -2,24 +2,15 @@
 
 {% capture page.each_subtitle %}{{ post.subtitle }}{% endcapture %}
 
-<body class="blog blog-root">
+<body class="blog blog-root dark">
 
-    <div class="container" role="main">
-      {% include global-nav-bar.html %}
+  <div class="container" role="main">
+    {% include global-nav-bar.html %}
 
-      {{ content }}
-    </div>
-
-
-  <footer>
-    <div class="container">
-      <a href="https://github.com/manikrathee/Blog" class="ss-icon ss-social-circle" title="Code behind this blog is available on Github" itemprop="url">Octocat</a>
-    </div>
-  </footer>
-
+    {{ content }}
+  </div>
 
   {% include global-footer.html %}
-
 
 </body>
 </html>
