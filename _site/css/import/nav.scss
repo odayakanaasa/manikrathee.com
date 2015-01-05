@@ -1,9 +1,24 @@
 nav.global-nav{
 	position: relative;
 	z-index: 200;
-  // @include mq(768) {
-    min-height: 95px;
-  // }
+  min-height: 95px;
+}
+
+@media (max-width: 766px) {
+  body.blog:not(.blog-root) {
+    nav.global-nav{
+      background-color: #333;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  body.blog {
+    nav.global-nav{
+      position: absolute;
+    }
+  }
 }
 
 #logo{
@@ -26,7 +41,7 @@ nav.global-nav{
 nav{
 	font-size: 13px;
 	text-transform: uppercase;
-	text-shadow: none;
+	// text-shadow: none;
 	@include animate;
 	@include fadeInDown;
 	#logo{
@@ -53,7 +68,7 @@ nav{
 		border: none;
 	}
 	p{
-		text-shadow: none;
+		// text-shadow: none;
 		margin: 0;
 		padding: 0;
 	}
@@ -118,7 +133,7 @@ nav{
 		background: darken(rgba(42,64,67,0.975), 10%); // #2a4043
 		padding: 100px 0;
 		color: #fff;
-		text-shadow: none;
+		// text-shadow: none;
 		border-top: 1px solid rgba(255,255,255,0.55);
 		border-bottom: 1px solid rgba(255,255,255,0.55);
 		@include transition(left 0.25s ease-in-out);
@@ -142,7 +157,7 @@ nav{
 			#navigation {
 				a {
 					color: rgba(50,50,50,0.6);
-					text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+					// text-shadow: 0 1px 0 rgba(255,255,255,0.4);
 					&:hover{
 						color: rgba(50,50,50,1);
 					}
@@ -163,7 +178,7 @@ nav{
 			#navigation {
 				a {
 					color: rgba(255,255,255,0.6);
-					text-shadow: 0 1px 0 rgba(50,50,50,0.2);
+					// text-shadow: 0 1px 0 rgba(50,50,50,0.2);
 					&:hover{
 						color: rgba(255,255,255,1);
 					}
@@ -226,7 +241,8 @@ nav{
 	#navigation{
 		height: auto;
 		padding: 40px 0 0 120px;
-		body.interior & {
+		body.interior & ,
+    body.blog & {
 			padding: 32px 0 0 30px;
 		}
 	}

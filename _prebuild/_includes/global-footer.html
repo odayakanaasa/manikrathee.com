@@ -2,12 +2,21 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/js/libs/jquery-2.1.1.min.js"><\/script>')</script>
+
   <script src="/js/script.js"></script>
+  {% if page.page-type == 'blog' %}
+  <script src="/js/script-blog.js"></script>
+  {% endif%}
+
   {% if page.section == 'obama-contribute' %}
     <script src="/js/sequential.js"></script>
   {% endif%}
-  {% if page.script %}<script type="text/javascript" src="/{{ page.script }}"></script>{% endif %}
-  {% if page.comments %}{% include comments.html %}{% endif %}
+  {% if page.script %}
+    <script type="text/javascript" src="/{{ page.script }}"></script>
+  {% endif %}
+  {% if page.comments %}
+    {% include comments.html %}
+  {% endif %}
 
 </body>
 </html>

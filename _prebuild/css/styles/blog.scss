@@ -1,4 +1,11 @@
 /* Blog Styles */
+.blog {
+  a {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
 
 .blog-root {
   #page-header {
@@ -8,12 +15,40 @@
   }
   a.post {
     display: block;
-    color: #999;
-    font-family: $display;
-    font-size: 35px;
+    overflow: hidden;
+    height: 100px;
+    margin-bottom: 45px;
+    color: #333; // #999 above mobile
     font-style: italic;
-    .info {
+    border: none;
+    @include clearfix;
+    @include transition(color 0.1s ease-in-out);
+    .post-date {
+      width: 100%;
+      margin-top: 5px;
+      text-align: center;
+      font-family: $sans;
+      @include font-size(11);
+      font-style: normal;
+      text-transform: uppercase;
     }
+    .post-title {
+      margin-top: 10px;
+      font-family: $display;
+      @include font-size(20);
+      line-height: 1.1;
+      text-align: center;
+      span {
+        display: block;
+        margin-top: 5px;
+        font-family: $sans;
+        font-weight: 300;
+        font-style: normal;
+        text-transform: uppercase;
+        @include font-size(12);
+      }
+    }
+
   }
 }
 
@@ -36,11 +71,12 @@
   }
 
   .container{
-    width:96%;
-    padding:0 2%;
+    width: 100%;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1000px;
+    padding: 0;
+    @include box;
   }
 
   header#page-header{
@@ -103,8 +139,7 @@
       max-width:100%;
     }
   }
-
-  #post-title-container{
+  #post-title-container {
     position: relative;
     z-index: 50;
     width:96%;
@@ -122,8 +157,9 @@
     margin: 0;
     font-family: $display;
     font-style: italic;
+    @include font-size(24);
+    // font-size: 24px;
     font-weight: 900;
-    font-size: 24px;
     text-align: center;
      -moz-font-feature-settings: "liga=1, dlig=1";
     -ms-font-feature-settings: "liga", "dlig";
@@ -162,15 +198,15 @@
     font-style: italic;
   }
 
-  .body, #body{
+  .body, #body {
     position: relative;
     z-index: 20;
     background: #fff;
     width: 650px;
-    max-width:92%;
+    max-width: 92%;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 4%;
+    padding: 15px 4%;
     line-height: 1.6;
     -webkit-transition: color 0.2s ease-in-out;
     -moz-transition: color 0.2s ease-in-out;
@@ -306,7 +342,8 @@
       max-width: 650px;
       margin-left: auto;
       margin-right: auto;
-      background: transparent url('/img/blog/global/blog-profile@2x.jpg') no-repeat 50% 50%;
+      padding-top: 235px;
+      background: transparent url('/img/blog/global/blog-profile@2x.jpg') no-repeat 50% 0;
       background-size: 225px 225px;
       @include box;
     }
@@ -378,21 +415,29 @@
 
 
 
-
-
 @media screen and (min-width: 600px){
-  .blog {
-    #post-title-container{
-      padding:0;
-      background: none;
-    }
+  #post-title-container {
+    padding: 0;
+    background: none;
   }
 }
 
-@media (min-width: 768px) {
-  body.blog-root{
 
+
+@media (min-width: 768px) {
+  body.blog-root {
+    a.post {
+      color: #999;
+      &:hover {
+        color: #333;
+      }
+      .post-title {
+        @include font-size(30);
+      }
+    }
   }
+
+
   .blog {
     #header-link{
       &:hover{
@@ -414,64 +459,64 @@
       }
     }
 
-    header#page-header{
+    header#page-header {
       position: fixed;
       background: transparent url('/img/blog/global/header-bg-dark.png') repeat 0 0;
       border: none;
     }
-    #feature{
+    #feature {
       min-height: 400px;
       margin-top: 0;
     }
-    #post-title-container{
+    #post-title-container {
       padding: 0;
       background: none;
       margin: -308px auto 175px auto;
       color: #fff;
     }
-    #post-title{
+    #post-title {
       font-size: 36px;
     }
-    #subtitle{
+    #subtitle {
       font-size: 20px;
       margin: 0px 0 6px 0;
       text-transform: capitalize;
       font-weight: 100;
     }
-    .body, #body{
-      max-width:92%;
-      padding: 10px 50px;
+    .body, #body {
+      max-width: 92%;
+      padding: 350px 50px;
     }
-    footer{
+    footer {
       border: none;
-      p{
+      p {
         font-size: 14px;
       }
-      .ss-icon{
+      .ss-icon {
         font-size: 2em;
       }
     }
-    #next-previous-post{
-      .body{
+    #next-previous-post {
+      .body {
         padding: 80px;
       }
-      h3{
+      h3 {
         font-size: 2.5em;
       }
     }
-    #profile{
+    #profile {
       text-align: left;
       .body {
         background-position: 0 50%;
         padding: 80px 20px 80px 250px;
-        h4{
+        h4 {
           font-size: 2em;
         }
       }
-      ul#social{
+      ul#social {
         margin: 4px 0 0 0;
       }
-      img{
+      img {
         width: 30%;
         float: left;
         margin: 0 5% 0 0;
