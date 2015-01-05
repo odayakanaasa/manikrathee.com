@@ -15,16 +15,16 @@ keep_files:  ['.git','.htaccess','.well-known']
 
 
 safe: false
-lsi: true
-markdown: kramdown
+lsi: false
+# markdown: kramdown
 highlighter: true
 
-sitemap:
-    file: "/sitemap.xml"
-    include_posts:
-        - "/index.html"
-    change_frequency_name: "change_frequency"
-    priority_name: "priority"
+# sitemap:
+#     file: "/sitemap.xml"
+#     include_posts:
+#         - "/index.html"
+#     change_frequency_name: "change_frequency"
+#     priority_name: "priority"
 
 host:        0.0.0.0
 port:        4000
