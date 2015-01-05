@@ -492,7 +492,7 @@
     }
     .body, #body {
       max-width: 92%;
-      padding: 350px 50px;
+      // padding: 350px 50px;
     }
     footer {
       border: none;
@@ -501,6 +501,10 @@
       }
       .ss-icon {
         font-size: 2em;
+      }
+      #logo {
+        margin: 20px auto;
+        @include size(30px, 30px);
       }
     }
     #next-previous-post {

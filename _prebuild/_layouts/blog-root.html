@@ -3,13 +3,10 @@
 {% capture page.each_subtitle %}{{ post.subtitle }}{% endcapture %}
 
 <body class="blog blog-root dark">
-
+  {% include global-nav-bar.html %}
   <div class="container" role="main">
-    {% include global-nav-bar.html %}
     {{ content }}
   </div>
-
   {% include global-footer.html %}
-
 </body>
 </html>

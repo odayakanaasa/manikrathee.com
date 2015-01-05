@@ -65,13 +65,13 @@
     }
     .email-me {
       background: #fff;
-      padding: 2px 4px;
-      font-size: 0.95em;
+      padding: 2px 6px;
+      @include font-size(12);
       font-weight: 700;
-      color: rgba(0,0,0,0.7);
+      color: #353535;
       border: 1px solid rgba(0,0,0,0.2);
       @include transparent-gradient;
-      @include radius(2px);
+      @include radius(3px);
       &:hover {
         background: darken(#fff, 2%);
         border-color: rgba(0,0,0,0.35);
