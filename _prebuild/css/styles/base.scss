@@ -116,7 +116,8 @@ a:link  { -webkit-tap-highlight-color: #333; }
   h1 {}
   h2,h3,h4 {
     display: block;
-    @include font-size(45);
+    @include font-size(25);
+    // @include font-size(45);
     font-weight: 500;
     color: $grey;
     text-transform: uppercase;
