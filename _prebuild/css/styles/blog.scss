@@ -144,10 +144,10 @@
     }
   }
 
-  #feature{
+  #feature {
     width: 100%;
     max-width: 100%;
-    margin-top: 62px;
+    border-top: 1px solid #000;
     img{
       width: 100%;
       max-width: 100%;
@@ -492,7 +492,7 @@
     }
     #feature {
       min-height: 400px;
-      margin-top: 0;
+      border: none;
     }
     #post-title-container {
       padding: 0;

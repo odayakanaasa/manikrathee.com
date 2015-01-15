@@ -50,11 +50,11 @@
       width: 100%;
       text-align: center;
       font-family: "jubilat",serif;
-      font-weight: 600;
       font-style: italic;
-      line-height: 1;
-      font-size: 25px;
       padding: 0 20px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.2;
       span {
         display: block;
       }
@@ -336,8 +336,10 @@
     }
     .intro {
       blockquote {
-        font-size: 40px;
         padding: 0;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1;
       }
     }
     .module {
