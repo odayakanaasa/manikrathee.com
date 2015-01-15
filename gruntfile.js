@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       base: ['jekyll'],
       dev: ['sass','concat'],
       prod: ['sass','concat','imagemin','removelogging'],
-      prod2: ['uglify','htmlmin'],
+      prod2: ['uglify:javascript','htmlmin'],
       // limit: 4, // 2x # of cores
     },
     sass: {
@@ -112,10 +112,8 @@ module.exports = function(grunt) {
       options: {
         mangle: true,
         beautify: true,
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %> */',
       },
-      my_target: {
+      javascript: {
         files: {
           '_site/js/script.js' : ['_site/js/script.js'],
           '_site/js/sequential.js' : ['_site/js/sequential.js'],
@@ -139,7 +137,7 @@ module.exports = function(grunt) {
           useShortDoctype: true,
         },
         files: {
-          '_site/**.html': '_site/**.html',
+          '_site/barack-obama-contribute.html': '_site/barack-obama-contribute.html',
         }
       },
     },
@@ -171,5 +169,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['concurrent:base','concurrent:dev']);
   grunt.registerTask('w', ['concurrent:base','concurrent:dev','watch']);
-  grunt.registerTask('production', ['jekyll','sass','concat','imagemin','removelogging','uglify']);
+  grunt.registerTask('production', ['concurrent:base','concurrent:prod','concurrent:prod2']);
 };
