@@ -95,6 +95,8 @@ a{
     @include font-size(14);
 		text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 		@include transition(opacity 0.25s ease-in-out);
+    @include animate;
+    @include fadeIn;
 		h1{
       margin: 0;
       padding: 0;
