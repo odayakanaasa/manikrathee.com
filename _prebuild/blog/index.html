@@ -16,7 +16,7 @@ sitemap:
 <ul id="blog-list">
   {% for post in site.posts %}
   <li>
-    <a id="{{ post.slug }}" class="post" href="{{ post.url }}" title="{{ post.title }}">
+    <a id="{{ post.slug }}" class="post" href="/blog/{{ post.url }}" title="{{ post.title }}">
       <p class="post-date info date">{{ post.date | date: "%B %d, %Y" }}</p>
       <p class="post-title">
         {{ post.title }}
