@@ -48,8 +48,8 @@ nav {
 	font-size: 13px;
 	text-transform: uppercase;
 	text-shadow: none;
-	@include animate;
-	@include fadeInDown;
+	@include animate-fast;
+	@include fadeIn;
 	#logo {
 		margin: 0 auto;
 	}

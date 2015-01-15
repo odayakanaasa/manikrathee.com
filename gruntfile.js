@@ -137,8 +137,23 @@ module.exports = function(grunt) {
           useShortDoctype: true,
         },
         files: {
+          // todo - set this to watch all main dirs, not individual files
           '_site/barack-obama-contribute.html': '_site/barack-obama-contribute.html',
-        }
+          '_site/barack-obama.html': '_site/barack-obama.html',
+          '_site/blog-old.html': '_site/blog-old.html',
+          '_site/catalyst-iphone-theme.html': '_site/catalyst-iphone-theme.html',
+          '_site/hope-will-see-us-through.html': '_site/hope-will-see-us-through.html',
+          '_site/index.html': '_site/index.html',
+          '_site/livescribe.html': '_site/livescribe.html',
+          '_site/manik-rathee-blog.html': '_site/manik-rathee-blog.html',
+          '_site/manik-rathee-photography.html': '_site/manik-rathee-photography.html',
+          '_site/subscribe.html': '_site/subscribe.html',
+          '_site/universal-shanti.html': '_site/universal-shanti.html',
+          '_site/about/index.html': '_site/about/index.html',
+          '_site/resources/index.html': '_site/resources/index.html',
+          '_site/wrapskins.html': '_site/wrapskins.html',
+
+        },
       },
     },
     imagemin: {
