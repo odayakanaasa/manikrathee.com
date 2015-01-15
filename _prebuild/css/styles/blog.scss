@@ -61,6 +61,10 @@
   color: #333;
   text-rendering: optimizelegibility;
   font-family: $serif;
+  blockquote {
+    font-family: $serif;
+    margin-bottom: 25px;
+  }
   a {
     color: #333;
     text-decoration:none;
@@ -70,8 +74,11 @@
     max-width: 100%;
   }
   i {
-    font-size: 0.8em;
-    font-style: italic;
+    @include font-size(11);
+    font-family: $sans;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
   }
 
   .container{
@@ -131,16 +138,23 @@
   }
 
   article{
-    width:100%;
+    width: 100%;
+    ul {
+      li {
+        a {
+          font-size: 1.2em;
+        }
+      }
+    }
   }
 
   #feature{
     width: 100%;
-    max-width:100%;
+    max-width: 100%;
     margin-top: 62px;
     img{
       width: 100%;
-      max-width:100%;
+      max-width: 100%;
     }
   }
   #post-title-container {
@@ -485,7 +499,8 @@
       color: #fff;
     }
     #post-title {
-      font-size: 36px;
+      // font-size: 36px;
+      @include font-size(50);
     }
     #subtitle {
       font-size: 20px;
