@@ -2,6 +2,8 @@ nav.global-nav{
 	position: relative;
 	z-index: 200;
   min-height: 95px;
+  @include animate;
+  @include fadeIn;
 }
 
 @media (max-width: 766px) {
@@ -48,8 +50,6 @@ nav {
 	font-size: 13px;
 	text-transform: uppercase;
 	text-shadow: none;
-	@include animate-fast;
-	@include fadeIn;
 	#logo {
 		margin: 0 auto;
 	}
@@ -63,11 +63,6 @@ nav {
 		text-transform: uppercase;
 		font-size: 12px;
 		line-height: 1;
-		@include animate;
-		@include fadeIn;
-		&.fade {
-			@include fadeOut;
-		}
 	}
 	a {
     font-family: $sans;

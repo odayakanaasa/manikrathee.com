@@ -80,8 +80,6 @@ a{
 	padding-top: 50px;
   color: #f3f3f3;
 	#logo{
-		@include animate;
-		@include fadeInDown;
 		display:block;
 		background: transparent url('../img/home/white-logo.png') no-repeat top left;
 		background-size: 100%;
@@ -97,6 +95,8 @@ a{
     @include font-size(14);
 		text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 		@include transition(opacity 0.25s ease-in-out);
+    @include animate;
+    @include fadeIn;
 		h1{
       margin: 0;
       padding: 0;
