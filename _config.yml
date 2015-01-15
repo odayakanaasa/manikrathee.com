@@ -7,7 +7,7 @@ url: http://blog.manikrathee.com
 #encoding:    nil
 
 source: _prebuild/
-permalink: /posts/:year/:month/:day/:title.html
+permalink: /blog/posts/:year/:month/:day/:title.html
 
 # include: [".htaccess"]
 exclude: ['gruntfile.js', 'package.json', '/node_modules', '*.psd']
