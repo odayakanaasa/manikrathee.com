@@ -1,0 +1,12 @@
+{% include global-header.html %}
+
+{% capture page.each_subtitle %}{{ post.subtitle }}{% endcapture %}
+
+<body class="blog blog-root dark">
+  {% include global-nav-bar.html %}
+  <div class="container" role="main">
+    {{ content }}
+  </div>
+  {% include global-footer.html %}
+</body>
+</html>

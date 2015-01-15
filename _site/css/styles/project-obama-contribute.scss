@@ -1,8 +1,8 @@
 /* Project: Obama - Contribute */
 
 .obama-contribute {
-  background:#FBFBFB url(../img/interior_lower_mrphoto.jpg) repeat top center;
-  font-family: "proxima-nova", helvetica, verdana, sans-serif;
+  background:#FBFBFB;
+  font-family: $sans;
   .upper {
     background: #00436B url(../img/interior_contribute_upper.jpg) no-repeat;
     background-position: 20% 0;

@@ -4,10 +4,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     sass: {
       dist: {
-        // files: {
-        //   '_site/css/style.max.css' : ['_site/css/style.scss'],
-        //   '_site/css/sequential.max.css' : ['_site/css/sequential.scss'],
-        // },
         files: {
           '_site/css/style.css' : ['_site/css/style.scss'],
           '_site/css/sequential.css' : ['_site/css/sequential.scss'],
@@ -17,14 +13,6 @@ module.exports = function(grunt) {
         },
       },
     },
-    // cssmin: {
-    //   compress: {
-    //     files: {
-    //       '_site/css/style.min.css': '_site/css/style.max.css',
-    //       '_site/css/sequential.min.css': '_site/css/sequential.max.css',
-    //     }
-    //   }
-    // },
     watch: {
       files: ['_prebuild/**'],
       tasks: ['jekyll','sass','concat'],
@@ -33,7 +21,7 @@ module.exports = function(grunt) {
        options: {
          separator: ';',
        },
-       dist: {
+       main: {
         src: [
           '_site/js/libs/analytics.js',
           // '_site/js/libs/jquery.backstretch.js',
@@ -50,10 +38,62 @@ module.exports = function(grunt) {
           '_site/js/libs/jquery.withinViewport_base.js',
           '_site/js/libs/jquery.withinViewport.js',
           '_site/js/libs/script.js',
-          ],
+        ],
         dest: '_site/js/script.js',
         nonull: true,
-       },
+      },
+      blog: {
+        src: [
+          '_site/js/blog/picturefill.js',
+          '_site/js/blog/lazyload.js',
+          '_site/js/blog/lettering.js',
+          '_site/js/blog/fittext.js',
+          '_site/js/blog/fitvids.js',
+          '_site/js/blog/highlight.js',
+          '_site/js/blog/scrolldepth.js',
+          '_site/js/blog/riveted.js',
+          '_site/js/blog/custom.js',
+        ],
+        dest: '_site/js/script-blog.js',
+        nonull: true,
+      },
+
+       // dist: {
+       //  src: [
+       //    '_site/js/libs/analytics.js',
+       //    // '_site/js/libs/jquery.backstretch.js',
+       //    '_site/js/libs/jquery.api.twitter.js',
+       //    '_site/js/libs/jquery.api.last.fm.js',
+       //    '_site/js/libs/jquery.api.instagram.js',
+       //    '_site/js/libs/jquery.twitter.js',
+       //    // '_site/js/libs/jquery.fittext.js',
+       //    '_site/js/libs/jquery.flexslider.js',
+       //    '_site/js/libs/jquery.prettyForms.js',
+       //    '_site/js/libs/jquery.counter.js',
+       //    '_site/js/libs/jquery.tipTip.js',
+       //    // '_site/js/libs/konami.js',
+       //    '_site/js/libs/jquery.withinViewport_base.js',
+       //    '_site/js/libs/jquery.withinViewport.js',
+       //    '_site/js/libs/script.js',
+       //    ],
+       //  dest: '_site/js/script.js',
+       //  nonull: true,
+       // },
+       // dist: {
+       //  src: [
+       //    '_site/js/blog/picturefill.js',
+       //    '_site/js/blog/lazyload.js',
+       //    '_site/js/blog/lettering.js',
+       //    '_site/js/blog/fittext.js',
+       //    '_site/js/blog/fitvids.js',
+       //    '_site/js/blog/highlight.js',
+       //    '_site/js/blog/scrolldepth.js',
+       //    '_site/js/blog/riveted.js',
+       //    '_site/js/blog/custom.js',
+       //    ],
+       //  dest: '_site/js/script-blog.js',
+       //  nonull: true,
+       // },
     },
     removelogging: {
       dist: {

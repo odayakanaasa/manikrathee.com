@@ -1,13 +1,15 @@
-	// #663399Becca
-	//
-	// For Eric,
-	// 		Nothing can change what happened. All we can do is show that //
-	// 		we're here for you in good times, and most importantly, we're
-	// 		here for you in difficult times.
-	//
-	// Usage:
-	// 		<span id="becca"></span>
-	//
+/*!
+  // #663399Becca
+  //
+  // For Eric,
+  //    Nothing can change what happened. All we can do is show that //
+  //    we're here for you in good times, and most importantly, we're
+  //    here for you in difficult times.
+  //
+  // Usage:
+  //    <span id="becca"></span>
+  //
+*/
 #becca {
 	position: fixed;
 	top: 0;
@@ -69,7 +71,7 @@ a{
 }
 
 #home{
-	font-family: "proxima-nova",Helvetica,"Helvetica Neue",Arial,sans-serif;
+	font-family: $sans;
 	background: #2a4043;
 	background-size: cover;
 	background-repeat: no-repeat;

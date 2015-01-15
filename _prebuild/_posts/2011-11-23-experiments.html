@@ -1,0 +1,79 @@
+---
+
+layout: blog-post
+page-type: blog
+
+title: Experiments, Responsive Design & General Merryment
+slug: experiments-responsive-design
+subtitle: work and play
+date: November 23, 2011
+
+#title-before:
+
+#description:
+
+featured-image-s: /img/blog/20111123/feature-x.jpg
+featured-image-m: /img/blog/20111123/feature-l.jpg
+featured-image-l: /img/blog/20111123/feature-m.jpg
+featured-image-x: /img/blog/20111123/feature-s.jpg
+#this needs small, medium, large and extra large files for picturefill responsive images
+#s = 400px, m=800px, l=1000px, xl=1600px = widths
+
+#featured-alt:
+
+title-size: 35px
+
+link-color: '00a0c8'
+
+link-color-hover: '004e62'
+#add hex WITHOUT #, #ffffff - Must fill both regular link-color and hover
+
+body-class: 'light'
+# To change logo/nav color, add 'dark' / 'light' depending on the version you need displayed
+
+#stylesheet:
+
+#script:
+
+#lazyload: 1
+
+#lettering: 1
+
+#comments: 1
+
+reading-time: 1
+
+---
+
+<p>This is a very exciting time for the web. People are designing using new and innovative techniques, websites are evolving from "eye-candy with a little bit of content" to <em>content-focused, device-agnostic experiences.</em> UX has erupted and spilled over to the web, and while others may argue, I say it is for the best.</p>
+
+<p>Lately, I have been tackling an almost excessive amount of projects. I have very little spare time so the fact that I am trying multiple projects is pretty stupid to begin with, but I do it anyway. Because... well.. why not? I've redesigned <a href="http://www.manikrathee.com" target="_blank" title="Manik Rathee dot com">my personal home page</a>, started <a href="http://manikrathee.tumblr.com" target="_blank" title="Manik Rathee's Tumblr">a tumblr</a>, redesigned <a href="http://manikrathee.tumblr.com" target="_blank" title="Manik Rathee's Tumblr">that same tumblr with my first ever theme (and made it responsive)</a>, created a <a href="http://hopewillseeusthrough.tumblr.com" target="_blank" title="Hope Will See Us Through">type project based on lyrics from my favorite songs</a>, and even designed a <a href="http://manikrathee.com/iOS/" target="_blank" title="Catalyst iOS Theme">completely custom ui &amp; iphone theme called CATALYST</a>. Point being, there are so many options in our fields that, in my opinion, it is almost ignorant not to experiment. This isn't to say that people should focus on all of these variations to develop their skills permanently, but why not experiment with one or two projects?</p>
+
+<p><em>On to the next, and arguably the largest project-style that I been working on:</em> I have spent a good amount of time working with a new(ish) technique in web design called Responsive Design. If you have heard of it, which most of you probably have, then not to worry: I won't bore you with the simple description. (If you don't know what it is, I refer you to Ethan Marcotte's <a href="http://www.alistapart.com/articles/responsive-web-design/" target="_blank" title="Responsive Web Design - A List Apart">article</a> and <a href="http://www.abookapart.com/products/responsive-web-design" target="_blank" title="Responsive Web Design, Ethan Marcotte">book</a>, via A Book Apart) Instead, I decided to answer the requests that have started to come in to me from twitter. A lot of people are trying to get a grasp on CSS3, HTML5, progressive enhancement, and more, and can't really understand how to put all of these things together. I'm going to give a quick list of the tools / plugins / scripts / frameworks that I use as my standard "project starter."</p>
+
+<h4>Frameworks</h4>
+
+<p>Frameworks have been popping up like weeds lately, and I am not really a fan. When I started with responsive design, several months ago, I took a very research/results driven head-first dive into the frameworks that were making headlines in the design world. I compiled a short list of the note-worthy frameworks, downloaded them and started to use them to rebuild relatively simple modern websites. (<a href="http://methodandcraft.com/" target="_blank" title="Method And Craft">Method&amp;Craft</a>,<a href="http://www.alistapart.com/" target="_blank" title="A List Apart"> A List Apart</a>, <a href="http://www.manikrathee.com" target="_blank" title="Manik Rathee dot Com">my own site</a>)</p>
+
+<p>After testing all of these frameworks out, there were some immediate (and massive) flaws that appeared. Some of these so-called "responsive" frameworks didn't take into account the layout change needed when breaking barriers like tablet -&gt; mobile devices, and so on. Naturally, a three column layout can't stay a three column layout when brought down to 400px wide mobile view. One could even argue that the 768px wide tablet view shouldn't even have three columns. Needless to say, noticing issues like this made my decision exceptionally easy. In the end, the only framework that stood up to all of my tests was the <a href="http://cssgrid.net/" target="_blank" title="1140 GS">1140 Grid System</a>. It was simple, practically barebones, but still robust enough in its handling of media queries and its inherently responsive nature.</p>
+
+<p>Once the framework was in place, it was time to move forward with other additions. My go to pieces:</p>
+<ul>
+    <li><a href="http://www.fittextjs.com" target="_blank">FitText</a> - Allow headlines to keep their form within fluid grids</li>
+    <li><a href="http://cssuseragent.org/" target="_blank">UserAgent</a> - UA is a little controversial because of future-proofing (or lack thereof) Either way, I love it for small tweaks and targetted changes</li>
+    <li><a href="http://flex.madebymufffin.com/" target="_blank">FlexSlider</a> - Fantastic responsive jQuery slider with touch control on mobile devices</li>
+</ul>
+
+<h4>Responsive Design</h4>
+
+<p>I'm a huge advocate for responsive design. After reading Ethan's article late last year, I immediately jumped on the techniques he posted. It was (is?) extremely experimental because of the use of css3 media queries, and the ever changing device landscape. Now, the media queries are more widely supported, along with the<a href="http://code.google.com/p/css3-mediaqueries-js/" target="_blank" title="mediaqueries js"> js fix</a> for older browsers, so there is no real reason not to attempt it.</p>
+
+<p>For me, the only real question is whether to work mobile-first or start with the desktop and scale down for mobile devices? I don't think there is a definite answer. Each project has its own use-case and will have a unique workflow. A dominantly text based site, much like this blog, doesn't need to be mobile first. Everything on this blog, with the exception of the top image, is done with code and therefore there is no load strain for mobile devices vs desktops. Of course, there are very few sites that will fit into this category, and that is where the mobile-first methodology comes into play. Luckily, there is another A Book Apart title that you can add to your arsenal: <a href="http://www.abookapart.com/products/mobile-first" target="_blank" title="mobile first - luke wroblewski">Mobile First by Luke Wroblewski</a>.</p>
+
+<h4>Photography</h4>
+
+<p>Last part of this incoherent rant is about photography. I have loved photography since I was in 5th grade, but it took about twenty-two years of my life to make it more than a hobby (<a href="http://www.manikratheephotography.com" title="Manik Rathee photography">Manik Rathee Photography</a>). I also am a HUGE advocate for iphoneography. I believe that the best camera is the one you have on you - and what do you have on you 98% of the time? (All percentages and statistics in this post are made up.) Your phone.</p>
+
+<p>Anyway, this was a pretty solid intro into what I have been working with lately. Expect future posts to have some semblance to organized thoughts, instead of incoherent ramblings. (See above. All of it. The whole thing.)</p>
+
+<p>Also, merry whatever.</p>

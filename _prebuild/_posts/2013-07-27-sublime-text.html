@@ -1,0 +1,205 @@
+---
+
+layout: blog-post
+page-type: blog
+
+title: Sublime Text
+slug: sublime-text-preferences
+subtitle: Customizing Your Workflow
+date: July 27, 2013
+
+#intro:
+
+#title-before:
+
+#description:
+
+featured-image-s: /img/blog/20130727/feature-s.jpg
+featured-image-m: /img/blog/20130727/feature-m.jpg
+featured-image-l: /img/blog/20130727/feature-l.jpg
+featured-image-x: /img/blog/20130727/feature-x.jpg
+#this needs small, medium, large and extra large files for picturefill responsive images
+#s = 400px, m=800px, l=1000px, xl=1600px = widths
+
+#featured-alt:
+
+title-size: 80px
+
+link-color: eb9000
+
+link-color-hover: b37200
+#add hex WITHOUT #, #ffffff - Must fill both regular link-color and hover
+
+body-class: 'light sublime-text-20130827'
+# To change logo/nav color, add 'dark' / 'light' depending on the version you need displayed
+
+#stylesheet:
+
+#script:
+
+#lazyload: 1
+
+#comments: 1
+
+reading-time: 1
+
+code: 1
+
+---
+
+<style>
+  @media (min-width: 768px) {
+    #post-title-container {
+      margin: -308px auto 182px auto;
+    }
+  }
+</style>
+
+<p>I have used a long list of code editors over the years, ranging from notepad on windows to Espresso on mac, to textmate and Sublime Text. Ultimately, SublimeText 2 came out in front because it is so simple to use and so exceptionally customizable.</p>
+
+<p>With a field as broad as development, every individual's personal preferences can yeild varying effects on speed and productivity. I research quite a bit about improving my workflow and have built my SublimeText preference file up to be a pretty solid starting point for most people.</p>
+
+<h4>Favorite Snippets</h4>
+
+<p><strong>Close_windows_when_empty</strong>  —  Closes the whole window if there are only empty tabs open when you hit cmd + w.
+  <pre>
+    <code class="json">
+      "close_windows_when_empty": true
+    </code>
+  </pre>
+</p>
+
+<p><strong>Color_scheme</strong>  —  Set a path to use a custom downloaded theme like <a href="https://github.com/manikrathee/appealr" title="Appealr, color scheme for Sublime Text" itemprop="url">Appealr</a>.
+  <pre>
+    <code class="json">
+      "color_scheme": "Packages/Appealr Color Scheme/appealr-color-scheme.tmTheme"
+    </code>
+  </pre>
+</p>
+
+<p><strong>Folder_exclude_patterns</strong>  —  Set up folder exclusion for commonly used directories in your projects.
+  <pre>
+    <code class="json">
+      "folder_exclude_patterns":
+      [
+        ".git",
+        ".bundle",
+        ".sass-cache",
+        ".svn",
+        ".hg"
+      ]
+    </code>
+  </pre>
+</p>
+
+<p><strong>Font_</strong>  —  Set type preferences for readability. Obviously, a monospaced font like <a href="http://blogs.adobe.com/typblography/2012/09/source-code-pro.html" title="Source Code pro" itemprop="url">Source Code Pro from Adobe</a> would be best.
+  <pre>
+    <code class="json">
+      "font_face": "Source Code Pro",
+      "font_size": 12.0
+    </code>
+  </pre>
+</p>
+
+<p><strong>Highlight_line</strong>  —  Highlights the currently selected line based on styles in your theme. Incredibly useful if you use <a href="https://a248.e.akamai.net/camo.github.com/d15ec3fd5cce53bb1e95d738ab1fe81a4f5e91ac/687474703a2f2f662e636c2e6c792f6974656d732f31783175304e336a32553356334f33493031316c2f53637265656e25323053686f74253230323031332d30342d3233253230617425323031312e35372e3039253230414d2e706e67" title="Multipane screenshot" itemprop="url">multi-pane layouts</a>.
+  <pre>
+    <code class="json">
+      "highlight_line": true
+    </code>
+  </pre>
+</p>
+
+<p><strong>Highlight_modified_tabs</strong>  —  Another theme-based preference, but still useful. If you have multiple tabs open, one with un-saved changes will be highlighted.
+  <pre>
+    <code class="json">
+      "highlight_modified_tabs": true
+    </code>
+  </pre>
+</p>
+
+<p><strong>Match_</strong>  —  On creation of an opening bracket/brace/etc, a closing one is inserted.
+  <pre>
+    <code class="json">
+      "match_brackets": true,
+      "match_brackets_angle": true,
+      "match_brackets_braces": true,
+      "match_brackets_content": true,
+      "match_brackets_square": true,
+    </code>
+  </pre>
+</p>
+
+<p><strong>Scroll_</strong>  —  Allows you to scroll past the end of a file, which is necessary, especially if you hate extra empty lines at the end of a file like I do. Scroll speed to 2 is also helpful if you're impatient with large files.
+  <pre>
+    <code class="json">
+      "scroll_past_end": true,
+      "scroll_speed": 2,
+    </code>
+  </pre>
+</p>
+
+<p><strong>Translate_tabs_to_spaces</strong>  —  Simple. Add this. And if you're still using tabs in your code, quit it.
+  <pre>
+    <code class="json">
+      "translate_tabs_to_spaces": true
+    </code>
+  </pre>
+</p>
+
+<h4>Complete Preferences:</h4>
+<p>The <a href="https://github.com/manikrathee/sublime-text" title="ManikRathee's Sublime Text Preferences on GitHub" itemprop="url">full preferences file</a> is available on GitHub. My <a href="https://github.com/manikrathee/appealr" title="Appealr, color scheme for Sublime Text" itemprop="url">sublime text color scheme, Appealr,</a> is also available on GitHub.</p>
+
+<pre>
+  <code class="json">
+    {
+      "bold_folder_labels": true,
+      "caret_style": "phase",
+      "close_windows_when_empty": true,
+      "color_scheme": "Packages/Appealr Color Scheme/appealr-color-scheme.tmTheme",
+      "draw_indent_guides": true,
+      "draw_white_space": "selection",
+      "file_exclude_patterns":
+      [
+        ".DS_Store",
+        "*.lib",
+        "*.log"
+      ],
+      "folder_exclude_patterns":
+      [
+        ".git",
+        ".bundle",
+        ".sass-cache",
+        ".svn",
+        ".hg"
+      ],
+      "font_face": "Source Code Pro",
+      "font_size": 12.0,
+      "highlight_line": true,
+      "highlight_modified_tabs": true,
+      "ignored_packages":
+      [
+        "Vintage",
+        "SublimeLinter"
+      ],
+      "line_padding_bottom": 3,
+      "line_padding_top": 3,
+      "match_brackets": true,
+      "match_brackets_angle": true,
+      "match_brackets_braces": true,
+      "match_brackets_content": true,
+      "match_brackets_square": true,
+      "open_files_in_new_window": false,
+      "remember_open_files": true,
+      "remember_open_folders": true,
+      "scroll_past_end": true,
+      "scroll_speed": 2,
+      "show_full_path": true,
+      "tab_size": 2,
+      "theme": "Nil.sublime-theme",
+      "translate_tabs_to_spaces": true,
+      "use_simple_full_screen": true,
+      "wide_caret": true,
+      "word_wrap": true
+    }
+  </code>
+</pre>
