@@ -71,13 +71,14 @@ a{
 }
 
 #home{
+  // background: #2a4043;
+  background: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
 	font-family: $sans;
-	background: #2a4043;
-	background-size: cover;
-	background-repeat: no-repeat;
-	color: #f3f3f3;
 	margin: 0;
 	padding-top: 50px;
+  color: #f3f3f3;
 	#logo{
 		@include animate;
 		@include fadeInDown;

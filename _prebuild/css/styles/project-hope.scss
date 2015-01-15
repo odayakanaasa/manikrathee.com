@@ -1,13 +1,34 @@
 /* Project: Hope Will See Us Through */
 
 
-.hope {background:#FBFBFB url(../img/interior_lower_hope.jpg) repeat top center;}
-.hope_upper {background:#172e47 url(../img/interior_upper_hope.jpg) no-repeat center top;color:#fff;text-shadow:1px 1px 0 #000;height:450px;}
-.hope_title {margin:250px 20px 0 0;}
-.hope_title .subtitle {font-size:13px;}
-.hope .no_margin {margin-right: 0 !important;}
-.hope div:hover a:not(.button) {color: #4684CF;}
-.hope_slides {width:90%;margin:0 auto 40px auto;}
+.hope {
+  background: #FBFBFB;
+}
+.hope_upper {
+  background: #172e47 url(../img/interior_upper_hope.jpg) no-repeat center top;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  height: 450px;
+}
+.hope_title {
+  width: 300px;
+  max-width: 100%;
+  margin: 105px auto 0;
+}
+.hope_title .subtitle {
+  font-size: 13px;
+}
+.hope .no_margin {
+  margin-right: 0 !important;
+}
+.hope div:hover a:not(.button) {
+  color: #4684CF;
+}
+.hope_slides {
+  width: 400px;
+  max-width: 95%;
+  margin: 0 auto 40px auto;
+}
 
 
 /*
@@ -17,8 +38,13 @@
 */
 @include min-screen(768px) {
 
-
-.hope_slides {width:500px;}
+  .hope_title {
+    width: 400px;
+    margin: 345px auto;
+  }
+  .hope_slides {
+    width:500px;
+  }
 
 
 } // 768

@@ -111,7 +111,7 @@ a:link  { -webkit-tap-highlight-color: #333; }
 
 .interior {
   .container.body {
-    padding-top: 20px;
+    padding: 40px 0;
   }
   h1 {}
   h2,h3,h4 {
@@ -187,8 +187,8 @@ a:link  { -webkit-tap-highlight-color: #333; }
   }
 }
 
-.left_col_inner article {
-  margin-bottom: 45px;
+.left_col_inner .article {
+  margin-bottom: 35px;
 }
 
 #slider {
@@ -199,16 +199,16 @@ a:link  { -webkit-tap-highlight-color: #333; }
 #top {
   display: block;
   width: 85px;
-  margin: 40px auto 20px;
-  padding: 20px 0 40px;
-  @include font-size(25);
-  color: #333;
+  margin: 20px auto;
+  padding: 20px 0;
+  @include font-size(15);
+  color: #999;
   text-align: center;
   line-height: 1;
   border: none;
   @include transition(color 0.25s ease-in-out);
   &:hover {
-    color: #000;
+    color: #333;
   }
   #home &,
   .blog & {
