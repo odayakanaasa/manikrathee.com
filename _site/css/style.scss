@@ -2,7 +2,8 @@
 @charset "UTF-8";
 
 @import
-	  "import/core"
+    "import/variables"
+	, "import/core"
 	, "import/mixins"
 	, "import/animation"
 	, "import/1140"
@@ -17,7 +18,6 @@
   , "import/konami"
 
 // Main
-	, "styles/variables"
 	, "styles/base"
 	, "styles/home"
 	, "styles/api"

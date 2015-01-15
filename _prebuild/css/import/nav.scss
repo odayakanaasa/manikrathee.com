@@ -44,21 +44,21 @@ nav.global-nav{
 }
 
 
-nav{
+nav {
 	font-size: 13px;
 	text-transform: uppercase;
 	text-shadow: none;
 	@include animate;
 	@include fadeInDown;
-	#logo{
+	#logo {
 		margin: 0 auto;
 	}
-	&:after{
+	&:after {
 		clear: both;
 		display: block;
 		content: '';
 	}
-	#current{
+	#current {
 		display: none;
 		text-transform: uppercase;
 		font-size: 12px;
@@ -69,11 +69,12 @@ nav{
 			@include fadeOut;
 		}
 	}
-	a{
-		@include transition(color 0.25s ease-in-out);
+	a {
+    font-family: $sans;
 		border: none;
+    @include transition(color 0.25s ease-in-out);
 	}
-	p{
+	p {
 		// text-shadow: none;
 		margin: 0;
 		padding: 0;
