@@ -305,6 +305,9 @@
         text-align: center;
       }
     }
+    & + p {
+      margin-top: 25px;
+    }
   }
   blockquote{
     font-family: $display;
