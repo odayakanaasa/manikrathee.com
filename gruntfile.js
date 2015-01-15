@@ -2,6 +2,13 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    concurrent: {
+      base: ['jekyll'],
+      dev: ['sass','concat'],
+      prod: ['sass','concat','imagemin','removelogging'],
+      prod2: ['uglify','htmlmin'],
+      // limit: 4, // 2x # of cores
+    },
     sass: {
       dist: {
         files: {
@@ -15,7 +22,8 @@ module.exports = function(grunt) {
     },
     watch: {
       files: ['_prebuild/**'],
-      tasks: ['jekyll','sass','concat'],
+      tasks: ['concurrent:base','concurrent:dev'],
+      // tasks: ['jekyll','sass','concat'],
     },
     concat: {
        options: {
@@ -101,6 +109,12 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
+      options: {
+        mangle: true,
+        beautify: true,
+        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+        '<%= grunt.template.today("yyyy-mm-dd") %> */',
+      },
       my_target: {
         files: {
           '_site/js/script.js' : ['_site/js/script.js'],
@@ -114,6 +128,20 @@ module.exports = function(grunt) {
           config: '_config.yml'
         }
       }
+    },
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+        },
+        files: {
+          '_site/**.html': '_site/**.html',
+        }
+      },
     },
     imagemin: {
       dynamic: {
@@ -133,14 +161,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  // grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks("grunt-remove-logging");
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-concurrent');
 
-  grunt.registerTask('default', ['jekyll','sass','concat']);
-  grunt.registerTask('w', ['jekyll','sass','concat','watch']);
+  grunt.registerTask('default', ['concurrent:base','concurrent:dev']);
+  grunt.registerTask('w', ['concurrent:base','concurrent:dev','watch']);
   grunt.registerTask('production', ['jekyll','sass','concat','imagemin','removelogging','uglify']);
 };
-// 'cssmin' removed fromm prod for now
