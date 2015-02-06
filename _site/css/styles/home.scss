@@ -208,9 +208,21 @@ a{
 		}
 		.copy{
 			width: 450px;
-			.title{
-				font-size: 1.25em;
-			}
+      header, section {
+        @include transition(opacity 0.25s ease-in-out);
+      }
+      &.fade{
+        @include animate-custom(0.05s);
+        @include fadeOut;
+        // opacity: 0;
+        // & > header,
+        // & > section {
+        //   opacity: 0;
+        // }
+      }
+      .title{
+        font-size: 1.25em;
+      }
 		}
 	}
 }
@@ -234,6 +246,7 @@ a{
 		.copy {
 			position: absolute;
 			top: 110px;
+      overflow: hidden;
 			z-index: 10;
 			width: 420px;
 			margin: 75px 0 0 42px;
@@ -241,9 +254,6 @@ a{
 			p {
         @include font-size(14);
 				text-transform: none;
-			}
-			&.fade{
-				opacity: 0;
 			}
 		}
 		.title {

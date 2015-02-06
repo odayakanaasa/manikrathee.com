@@ -168,10 +168,10 @@ a:link  { -webkit-tap-highlight-color: #333; }
     body.light & {
       background: rgba(0,0,0,0.8);
     }
-    body#home & {
-      display: none;
-      opacity: 0;
-    }
+    // body#home & {
+      // display: none;
+      // opacity: 0;
+    // }
   }
 }
 
