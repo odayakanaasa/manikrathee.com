@@ -49,11 +49,87 @@ code: 1
 
 <p class="series">This is the first post in the 'How I Use' series.</p>
 
-<p>When I buy a new machine, the very first things I install are: <a href="http://www.alfredapp.com/" title="Alfred App" itemprop="url">Alfred</a>, <a href="https://www.dropbox.com/referrals/NTQxOTYwMDg5?src=global9" title="Dropbox" itemprop="url">Dropbox</a> (%r) and <a href="http://smilesoftware.com/TextExpander/index.html" title="TextExpander" itemprop="url">TextExpander</a>.</p>
+<p>When I buy a new machine, the very first things I install are: <a href="http://www.alfredapp.com/" title="Alfred App" itemprop="url">Alfred</a>, <a href="https://www.dropbox.com/referrals/NTQxOTYwMDg5?src=global9" title="Dropbox" itemprop="url">Dropbox</a> (%r) and <a href="http://smilesoftware.com/TextExpander/index.html" title="TextExpander" itemprop="url">TextExpander</a>. All of these apps are crucial to my day-to-day work, but only one saves me a gratuitous amount of time.</p>
 
-<p>With a field as broad as development, every individual's personal preferences can yeild varying effects on speed and productivity. I research quite a bit about improving my workflow and have built my SublimeText preference file up to be a pretty solid starting point for most people.</p>
+<p>TextExpander's premise is simple: type a shortcut and it expands to a longer phrase. In essence, you can any repetitive tasks you have to do with a carefully crafted <em>snippet</em>. You can create simple <em>text to text</em> snippets, or more complex ones with dropdown options, default text, dynamic dates and times, and more.</p>
 
-<p><strong>Close_windows_when_empty</strong>  —  Closes the whole window if there are only empty tabs open when you hit cmd + w.
+<p><strong>Core</strong>—These are simple snippets for typos, addresses and more. A few examples:
+  <pre>
+    <code class="json">
+      maink
+    </code>
+    <code class="json">
+      manik
+    </code>
+  </pre>
+
+  <pre>
+    <code class="json">
+      rahtee
+    </code>
+    <code class="json">
+      rathee
+    </code>
+  </pre>
+
+  <pre>
+    <code class="json">
+      github
+    </code>
+    <code class="json">
+      GitHub
+    </code>
+  </pre>
+
+  <pre>
+    <code class="json">
+      _address
+    </code>
+    <code class="json">
+      [my current address]
+    </code>
+  </pre>
+
+  <pre>
+    <code class="json">
+      _date
+    </code>
+    <code class="json">
+      20150302 [year|month}day]
+    </code>
+  </pre>
+</p>
+
+
+
+
+<p><strong>DayOne</strong>  —  I use DayOne as a journal/scrpbook combination. I save screenshots, photos and bits of text every day. To help organize it and bring some structure, I created a few snippets that expand to a set of dynamic tags.
+  <pre>
+    <code class="json">
+      <dl>
+        <dt>dayone.day</dt>
+        <dd>#DayInReview
+#%AInReview
+#%BDayInReview
+#%Y-%BDayInReview
+
+%|
+</dd>
+      </dl>
+      <dl>
+        <dt>n.web</dt>
+        <dd>bundle exec middleman preview</dd>
+      </dl>
+      <dl>
+        <dt>n.web</dt>
+        <dd>bundle exec middleman preview</dd>
+      </dl>
+    </code>
+  </pre>
+</p>
+
+
+<p><strong>Git</strong>  —  I scope this to only expand in <em>Terminal</em>, and because of this application scope, I can be more liberal with my snippet abbreviations.
   <pre>
     <code class="json">
       <dl>

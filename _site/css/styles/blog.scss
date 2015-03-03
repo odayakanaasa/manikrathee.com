@@ -76,7 +76,6 @@
     text-transform: uppercase;
     letter-spacing: 0.4px;
   }
-
   .container {
     width: 100%;
     max-width: 1000px;
@@ -85,7 +84,6 @@
     padding: 0;
     @include box;
   }
-
   header#page-header {
     position: absolute;
     top: 0;
@@ -124,7 +122,6 @@
       @include fadeOut;
     }
   }
-
   #title {
     font-weight: 600;
     line-height: 1;
@@ -144,7 +141,7 @@
     }
   }
   .series {
-    padding: 40px 0 0;
+    padding: 20px 0 10px;
     @include font-size(15);
     font-style: italic;
     text-align: center;
@@ -307,8 +304,20 @@
     }
   }
   pre {
+    display: block;
+    overflow: hidden;
     margin: 20px 0;
     padding: 0;
+  }
+  code {
+    display: block;
+    width: 45%;
+    float: left;
+    padding: 20px;
+    @include box;
+    & + code {
+      margin-left: 10%;
+    }
   }
   blockquote {
     margin: 25px 0;
@@ -429,14 +438,12 @@
 
 
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   #post-title-container {
     padding: 0;
     background: none;
   }
 }
-
-
 
 @media (min-width: 768px) {
   body.blog-root {
@@ -678,7 +685,6 @@
     }
   }
 }
-
 
 
 // 20150302
