@@ -77,7 +77,7 @@
     letter-spacing: 0.4px;
   }
 
-  .container{
+  .container {
     width: 100%;
     max-width: 1000px;
     margin-left: auto;
@@ -86,7 +86,7 @@
     @include box;
   }
 
-  header#page-header{
+  header#page-header {
     position: absolute;
     top: 0;
     z-index: 50;
@@ -95,7 +95,7 @@
     background: #222;
     border-bottom: 1px solid #000;
   }
-  #header-link{
+  #header-link {
     height: 55px;
     #logo{
       @include ir;
@@ -115,7 +115,7 @@
       text-align: center;
       text-indent: 0;
       text-align: center;
-      font-size: 11px;
+      @include font-size(11);
       text-transform: uppercase;
       color: #F9F9F9;
       margin-top: -40px;
@@ -125,7 +125,7 @@
     }
   }
 
-  h1#title{
+  #title {
     font-weight: 600;
     line-height: 1;
     font-size: 21px;
@@ -133,7 +133,7 @@
     color: #fff;
   }
 
-  article{
+  article {
     width: 100%;
     ul {
       li {
@@ -143,12 +143,17 @@
       }
     }
   }
-
+  .series {
+    padding: 40px 0 0;
+    @include font-size(15);
+    font-style: italic;
+    text-align: center;
+  }
   #feature {
     width: 100%;
     max-width: 100%;
     border-top: 1px solid #000;
-    img{
+    img {
       width: 100%;
       max-width: 100%;
     }
@@ -163,16 +168,15 @@
     line-height: 1;
     padding: 10px 5px;
   }
-  #post-title-logo{
+  #post-title-logo {
     float:left;
     margin:0 20px;
   }
-  #post-title{
+  #post-title {
     margin: 0;
     font-family: $display;
     font-style: italic;
     @include font-size(24);
-    // font-size: 24px;
     font-weight: 900;
     text-align: center;
      -moz-font-feature-settings: "liga=1, dlig=1";
@@ -181,30 +185,30 @@
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig";
   }
-  #subtitle{
-    font-size: 18px;
+  #subtitle {
+    @include font-size(18);
     font-weight: 300;
     display: block;
     text-align: center;
     margin: 0;
   }
-  #reading-time, #originally-posted{
+  #reading-time, #originally-posted {
     width: 100%;
     text-align: center;
     margin: 6px 0 0 0;
     font-style: italic;
-    font-size: 13px;
+    @include font-size(13);
     opacity: 0.75;
-    a{
+    a {
       color: #fff;
       text-decoration: underline;
-      &:hover{
+      &:hover {
         color: darken(#fff, 10%);
       }
     }
   }
-  #date{
-    font-size: 14px;
+  #date {
+    @include font-size(14);
     font-weight: 300;
     display: block;
     text-align: center;
@@ -212,11 +216,12 @@
     font-style: italic;
   }
 
-  .body, #body {
+  .body,
+  #body {
     position: relative;
     z-index: 20;
     background: #fff;
-    width: 650px;
+    width: 725px;
     max-width: 92%;
     margin-left: auto;
     margin-right: auto;
@@ -225,60 +230,45 @@
     -webkit-transition: color 0.2s ease-in-out;
     -moz-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
-    &.intro{
+    &.intro {
       width: 100%;
       max-width: 100%;
-      font-size: 30px;
+      @include font-size(30);
       margin: 0 auto;
       padding: 0;
       line-height: 1.6;
       font-weight: bold;
       font-style: italic;
-      p{
+      p {
         display: block;
-        // width: 1200px;
         width: 1000px;
         max-width: 92%;
         margin: 0 auto;
         padding: 40px 0;
-        font-size: 28px;
+        @include font-size(28);
         line-height: 1.6;
-        // &:before{
-        //   display: block;
-        //   content: '';
-        //   height: 1px;
-        //   background: rgba(0,0,0,0.05);
-        //   margin: 10px 0;
-        // }
-        // &:after{
-        //   display: block;
-        //   content: '';
-        //   height: 1px;
-        //   background: rgba(0,0,0,0.05);
-        //   margin: 10px 0;
-        // }
       }
-      a{
+      a {
         font-size: 15px;
         display: block;
         text-align: center;
       }
     }
-    &.bare{
+    &.bare {
       width: 100%;
       max-width: 100%;
       padding: 40px;
       @include box;
-      &:first-child{
+      &:first-child {
         margin: 40px 0 0 0;
       }
     }
-    &:hover{
-      a{
+    &:hover {
+      a {
         color: #000;
       }
     }
-    ul#loader{
+    ul#loader {
       padding: 0;
       margin: 0;
       list-style-type:none;
@@ -291,25 +281,22 @@
       }
     }
   }
-  h4{
-    // font-size: 24px;
-    // margin: 0 0 10px 0;
-    // font-style: italic;
-    font-size: 20px;
+  h4 {
     margin: 60px 0 0;
+    font-size: 20px;
     font-style: italic;
   }
-  p{
-    font-size: 20px;
+  p {
+    font-size: 18px;
+    line-height: 1.7;
     font-weight: 300;
-    &.intro{
+    &.intro {
       font-size: 30px;
       margin: 30px 0 40px 0;
-      line-height: 1.6;
       font-weight: bold;
       font-style: italic;
       opacity: 0.9;
-      a{
+      a {
         font-size: 15px;
         display: block;
         text-align: center;
@@ -319,7 +306,11 @@
       margin-top: 25px;
     }
   }
-  blockquote{
+  pre {
+    margin: 20px 0;
+    padding: 0;
+  }
+  blockquote {
     margin: 25px 0;
     p {
       @include font-size(11);
@@ -329,29 +320,29 @@
       letter-spacing: 0.1px;
     }
   }
-  #next-previous-post{
+  #next-previous-post {
     background: rgba(248, 248, 248, 1);
     border-top: 1px solid darken(rgba(248, 248, 248, 1), 5%);
     border-bottom: 1px solid darken(rgba(248, 248, 248, 1), 5%);
-    .body{
+    .body {
       background: none;
     }
-    .pre-heading{
+    .pre-heading {
       font-weight: 300;
       text-transform: uppercase;
       font-size: 0.5em;
       margin: 0;
       line-height: 1;
     }
-    h3{
+    h3 {
       @extend #post-title;
       font-size: 1.5em;
       text-align: left;
     }
-    p{
+    p {
       font-size: 0.8em;
       margin: -4px 0 0 0;
-      &.date{
+      &.date {
         font-style: italic;
         opacity: 0.75;
       }
@@ -370,24 +361,24 @@
       background-size: 225px 225px;
       @include box;
     }
-    a{
+    a {
       font-style: italic;
     }
-    img{
+    img {
       display: block;
       width: 40%;
       margin: 0 auto 10px;
     }
-    h4{
+    h4 {
       font-size: 1em;
       margin: 18px 0 0 0;
     }
-    p{
+    p {
       font-size: 14px;
       margin: 0;
     }
   }
-  ul#social{
+  ul#social {
     display: block;
     width: 145px;
     margin: 5px auto 0;
@@ -395,41 +386,41 @@
     overflow: auto;
     zoom: 1;
     list-style-type:none;
-    li{
+    li {
       list-style-type: none;
       float: left;
       display: block;
     }
-    #facebook{
+    #facebook {
 
     }
-    #tweet{
+    #tweet {
       margin: 4px 0 0 25px;
     }
-    #follow{
+    #follow {
       margin: 5px 0 0 0;
     }
   }
-  footer{
+  footer {
     background: #fff;
     border-bottom: 1px solid darken(rgba(248, 248, 248, 1), 5%);
     padding: 10px 0;
     text-align:center;
     font-family: $serif;
-    p, a{
+    p, a {
       font-size: 12px;
       font-weight: normal;
     }
-    a{
+    a {
       font-style: italic;
     }
-    .ss-icon{
+    .ss-icon {
       font-size: 2.5em;
     }
   }
 
-  #disqus_thread{
-    #footer{
+  #disqus_thread {
+    #footer {
       display: none !important;
     }
   }
@@ -438,7 +429,7 @@
 
 
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   #post-title-container {
     padding: 0;
     background: none;
@@ -694,5 +685,9 @@
 // TextExpander
 .blog-post {
   &.sublime-text-20150302 {
+    #feature {
+      max-height: 600px;
+      overflow: hidden;
+    }
   }
 }
