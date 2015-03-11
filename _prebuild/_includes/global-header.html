@@ -51,6 +51,23 @@
   <script type="text/javascript" src="//use.typekit.net/zqq7yli.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+  {% if page.page-type == 'blog' %}
+    {% if page.link-color %}
+    <style type="text/css">
+      #body a, .body a, footer a{
+        color: #{{ page.link-color }};
+      }
+      @media (min-width: 768px) {
+        #body:hover a, .body:hover a, footer:hover a{
+          color: #{{ page.link-color }};
+        }
+        #body:hover a:hover, .body:hover a:hover, footer:hover a:hover{
+          color: #{{ page.link-color-hover }};
+        }
+      }
+    </style>
+    {% endif %}
+  {% endif %}
 </head>
 <!--
     __  ___            _ __      ____        __  __
