@@ -25,9 +25,9 @@ featured-image-x: /img/blog/20150302/feature-x.jpg
 
 title-size: 80px
 
-link-color: eb9000
+link-color: e0954d
 
-link-color-hover: e0954d
+link-color-hover: b06e30
 #add hex WITHOUT #, #ffffff - Must fill both regular link-color and hover
 
 body-class: 'light sublime-text-20150302'
@@ -49,101 +49,224 @@ code: 1
 
 <p class="series">This is the first post in the 'How I Use' series.</p>
 
-<p>When I buy a new machine, the very first things I install are: <a href="http://www.alfredapp.com/" title="Alfred App" itemprop="url">Alfred</a>, <a href="https://www.dropbox.com/referrals/NTQxOTYwMDg5?src=global9" title="Dropbox" itemprop="url">Dropbox</a> (%r) and <a href="http://smilesoftware.com/TextExpander/index.html" title="TextExpander" itemprop="url">TextExpander</a>. All of these apps are crucial to my day-to-day work, but only one saves me a gratuitous amount of time.</p>
+<p>When I buy a new machine, the very first things I install are: <a href="http://www.alfredapp.com/" title="Alfred App" itemprop="url">Alfred</a>, <a href="https://www.dropbox.com/referrals/NTQxOTYwMDg5?src=global9" title="Dropbox" itemprop="url">Dropbox</a><sup>(%r)</sup> and <a href="http://smilesoftware.com/TextExpander/index.html" title="TextExpander" itemprop="url">TextExpander</a>. All of these apps are crucial to my day-to-day work, but only one saves me a gratuitous amount of time.</p>
 
 <p>TextExpander's premise is simple: type a shortcut and it expands to a longer phrase. In essence, you can any repetitive tasks you have to do with a carefully crafted <em>snippet</em>. You can create simple <em>text to text</em> snippets, or more complex ones with dropdown options, default text, dynamic dates and times, and more.</p>
 
-<p><strong>Core</strong>—These are simple snippets for typos, addresses and more. A few examples:
-  <pre>
-    <code class="json">
-      maink
-    </code>
-    <code class="json">
-      manik
-    </code>
-  </pre>
-
-  <pre>
-    <code class="json">
-      rahtee
-    </code>
-    <code class="json">
-      rathee
-    </code>
-  </pre>
-
-  <pre>
-    <code class="json">
-      github
-    </code>
-    <code class="json">
-      GitHub
-    </code>
-  </pre>
-
-  <pre>
-    <code class="json">
-      _address
-    </code>
-    <code class="json">
-      [my current address]
-    </code>
-  </pre>
-
-  <pre>
-    <code class="json">
-      _date
-    </code>
-    <code class="json">
-      20150302 [year|month}day]
-    </code>
-  </pre>
+<p>After using this for several years, I found a few sources of truth:
+  <ul>
+    <li>Group your snippets logically. Development related ones should be broken into tool groups and then scoped to expand only to that group.</li>
+    <li>Utilities should be prefixed so they don't inadvertantly expand.</li>
+    <li>Your prefixes and groups <em>will</em> change, so don't get too set on the first iteration.</li>
+    <li>TextExpander has a ton of more powerful input types, but starting out with plaintext snippets will help you get acquainted.</li>
+  </ul>
 </p>
 
+<p><strong>Core</strong> — These are simple snippets for typos, addresses and more. Most snippets in this category are prefixed with 'c'. A few examples:</p>
+<pre>
+  <code class="json">
+    maink      rahtee      github
+  </code>
+  <code class="text">
+    manik      rathee      GitHub
+  </code>
+</pre>
+
+<pre>
+  <code class="json">
+    c.address
+  </code>
+  <code class="text">
+    [my current address]
+  </code>
+</pre>
+
+<pre>
+  <code class="json">
+    c.date
+  </code>
+  <code class="text">
+    20150302 [year|month|day]
+  </code>
+</pre>
 
 
 
-<p><strong>DayOne</strong>  —  I use DayOne as a journal/scrpbook combination. I save screenshots, photos and bits of text every day. To help organize it and bring some structure, I created a few snippets that expand to a set of dynamic tags.
-  <pre>
-    <code class="json">
-      <dl>
-        <dt>dayone.day</dt>
-        <dd>#DayInReview
-#%AInReview
-#%BDayInReview
-#%Y-%BDayInReview
+<h4>DayOne</h4>
+<p>I use DayOne as a journal/scrapbook combination by saving screenshots, photos and bits of text every day. To help organize it and bring some structure, I created a few snippets that expand to a set of dynamic tags.</p>
+<pre>
+  <code class="json">
+    dayone.day
+  </code>
+  <code class="text">
+    #DayInReview
+    #%AInReview
+    #%BDayInReview
+    #%Y-%BDayInReview
+    %| (Places the cursor at this location)
+  </code>
+</pre>
 
-%|
-</dd>
-      </dl>
-      <dl>
-        <dt>n.web</dt>
-        <dd>bundle exec middleman preview</dd>
-      </dl>
-      <dl>
-        <dt>n.web</dt>
-        <dd>bundle exec middleman preview</dd>
-      </dl>
-    </code>
-  </pre>
-</p>
+<pre>
+  <code class="json">
+    dayone.work
+  </code>
+  <code class="text">
+    #WorkDayInReview
+    #%AInReview
+    #%BWorkDayInReview
+    #%Y-%BWorkDayInReview
+    %|
+  </code>
+</pre>
+<span class="code-subtext">The '%|' is where the cursor will jump after the snippet is completely expanded.</span>
 
+<h4>Git</h4>
+<p>I scope this to only expand in <em>Terminal</em>, and because of this application-specific scope, I can be more liberal with my snippet abbreviations.</p>
+<pre>
+  <code class="json">
+    ga
+  </code>
+  <code class="text">
+    git add --all .
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    gc
+  </code>
+  <code class="text">
+    git commit -m "%|"
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    g.tag
+  </code>
+  <code class="text">
+    git tag %Y%m%d%H%M
+    git tag 201503032211
+  </code>
+</pre>
 
-<p><strong>Git</strong>  —  I scope this to only expand in <em>Terminal</em>, and because of this application scope, I can be more liberal with my snippet abbreviations.
-  <pre>
-    <code class="json">
-      <dl>
-        <dt>n.web</dt>
-        <dd>bundle exec middleman preview</dd>
-      </dl>
-      <dl>
-        <dt>n.web</dt>
-        <dd>bundle exec middleman preview</dd>
-      </dl>
-      <dl>
-        <dt>n.web</dt>
-        <dd>bundle exec middleman preview</dd>
-      </dl>
-    </code>
-  </pre>
-</p>
+<h4>Characters</h4>
+<p>Sometimes you need to express yourself with intricate special characters. Instead of googling them every time, why not sav them to TE and set phrases to create them?</p>
+<pre>
+  <code class="json">
+    char.interrobang
+  </code>
+  <code class="text">
+    ‽
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    char.dunno
+  </code>
+  <code class="text">
+    ¯\_(ツ)_/¯
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    char.applewatch | apple watch
+  </code>
+  <code class="text">
+    Watch
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    .rr
+  </code>
+  <code class="text">
+    (%r)
+  </code>
+</pre>
+<span class="code-subtext">This is the symbol I use to denote referral links. Great for tweets, TinyLetters, etc.</span>
+
+<h4>Development</h4>
+<p>HTML, CSS, Javascript, Ruby, etc.</p>
+<pre>
+  <code class="json">
+    *trans
+  </code>
+  <code class="text">
+    @include transition
+    ( %fill:type%
+      %filltext:name=seconds:default=0.25%s
+      %filltext:name=curve:default=ease-in-out%
+      );
+  </code>
+</pre>
+<span class="code-subtext">This is a more advanced snippet. It opens up an <a href="http://manik.io/image/2Q2N2M1H2K1g" title="Input window" itemprop="url">input window</a> with 3 input fields, 2 of which have default states.</span>
+<pre>
+  <code class="json">
+    @fs
+  </code>
+  <code class="text">
+    @include font-size(%|);
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    @mq
+  </code>
+  <code class="text">
+    @media (min-width: %|px) {}
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    js.log
+    js.warn
+    js.error
+  </code>
+  <code class="text">
+    console.log();
+    console.warn();
+    console.error();
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    lorempara
+  </code>
+  <code class="text">
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida...
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    :n
+  </code>
+  <code class="text">
+    :not(.%|)
+  </code>
+</pre>
+
+<pre>
+  <code class="json">
+    < a hr
+  </code>
+  <code class="text">
+    < a href="%|" title="" itemprop="url" >< / a >
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    *ahref
+  </code>
+  <code class="text">
+    < a href="%clipboard" title="%fill:title%">%fill:title%< /a>
+  </code>
+</pre>
+<pre>
+  <code class="json">
+    < im
+  </code>
+  <code class="text">
+    < img src="%|" alt="">
+  </code>
+</pre>
+
