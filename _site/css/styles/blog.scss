@@ -260,11 +260,11 @@
         margin: 40px 0 0 0;
       }
     }
-    &:hover {
-      a {
-        color: #000;
-      }
-    }
+    // &:hover {
+    //   a {
+    //     color: #000;
+    //   }
+    // }
     ul#loader {
       padding: 0;
       margin: 0;
@@ -306,18 +306,34 @@
   pre {
     display: block;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 0;
     padding: 0;
+    line-height: 1;
+    & + pre {
+      margin-top: 10px;
+    }
   }
   code {
     display: block;
-    width: 45%;
-    float: left;
-    padding: 20px;
+    padding: 10px 0 0 0;
+    color: darken(#fff, 18%);
     @include box;
-    & + code {
-      margin-left: 10%;
+    &.text {
+      color: #fff;
     }
+    & + code {
+      margin-top: -2em;
+      padding: 0 0 10px 0;
+    }
+  }
+  .code-subtext {
+    display: block;
+    margin: -7px 0 10px 0;
+  }
+  sup {
+    top: -0.5em;
+    left: 0.1em;
+    font-size: 0.7em;
   }
   blockquote {
     margin: 25px 0;
@@ -692,7 +708,7 @@
 .blog-post {
   &.sublime-text-20150302 {
     #feature {
-      max-height: 600px;
+      max-height: 725px;
       overflow: hidden;
     }
   }
