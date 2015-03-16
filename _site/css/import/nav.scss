@@ -219,10 +219,12 @@ nav {
 	#portfolio{
 		position: relative;
 		cursor: pointer;
+    overflow: visible;
 		height: 15px;
 		&:hover{
 			height: 220px;
 			#projects{
+        width: auto;
 				height: 220px;
 				opacity: 1;
 			}
