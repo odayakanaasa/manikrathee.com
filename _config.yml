@@ -1,6 +1,6 @@
 name: "Manik Rathee &#007C Designer"
 description: "Design &amp; Development"
-url: http://blog.manikrathee.com
+url: http://manikrathee.com/blog
 
 #gems:        []
 #timezone:    nil
@@ -16,7 +16,7 @@ keep_files:  ['.git','.htaccess','.well-known']
 
 safe: false
 lsi: false
-# markdown: kramdown
+markdown: kramdown
 highlighter: true
 
 # sitemap:

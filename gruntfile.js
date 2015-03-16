@@ -57,7 +57,6 @@ module.exports = function(grunt) {
           '_site/js/blog/lettering.js',
           '_site/js/blog/fittext.js',
           '_site/js/blog/fitvids.js',
-          '_site/js/blog/highlight.js',
           '_site/js/blog/scrolldepth.js',
           '_site/js/blog/riveted.js',
           '_site/js/blog/custom.js',

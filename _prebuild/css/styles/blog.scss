@@ -76,8 +76,7 @@
     text-transform: uppercase;
     letter-spacing: 0.4px;
   }
-
-  .container{
+  .container {
     width: 100%;
     max-width: 1000px;
     margin-left: auto;
@@ -85,8 +84,7 @@
     padding: 0;
     @include box;
   }
-
-  header#page-header{
+  header#page-header {
     position: absolute;
     top: 0;
     z-index: 50;
@@ -95,7 +93,7 @@
     background: #222;
     border-bottom: 1px solid #000;
   }
-  #header-link{
+  #header-link {
     height: 55px;
     #logo{
       @include ir;
@@ -115,7 +113,7 @@
       text-align: center;
       text-indent: 0;
       text-align: center;
-      font-size: 11px;
+      @include font-size(11);
       text-transform: uppercase;
       color: #F9F9F9;
       margin-top: -40px;
@@ -124,8 +122,7 @@
       @include fadeOut;
     }
   }
-
-  h1#title{
+  #title {
     font-weight: 600;
     line-height: 1;
     font-size: 21px;
@@ -133,9 +130,14 @@
     color: #fff;
   }
 
-  article{
+  article {
     width: 100%;
+    background: #fff;
+    padding-bottom: 50px;
     ul {
+      margin: 18px 0 10px 50px;
+      font-size: 17px;
+      color: #000;
       li {
         a {
           font-size: 1.2em;
@@ -143,12 +145,17 @@
       }
     }
   }
-
+  .series {
+    padding: 20px 0 10px;
+    @include font-size(15);
+    font-style: italic;
+    text-align: center;
+  }
   #feature {
     width: 100%;
     max-width: 100%;
     border-top: 1px solid #000;
-    img{
+    img {
       width: 100%;
       max-width: 100%;
     }
@@ -163,16 +170,15 @@
     line-height: 1;
     padding: 10px 5px;
   }
-  #post-title-logo{
+  #post-title-logo {
     float:left;
     margin:0 20px;
   }
-  #post-title{
+  #post-title {
     margin: 0;
     font-family: $display;
     font-style: italic;
     @include font-size(24);
-    // font-size: 24px;
     font-weight: 900;
     text-align: center;
      -moz-font-feature-settings: "liga=1, dlig=1";
@@ -181,30 +187,30 @@
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig";
   }
-  #subtitle{
-    font-size: 18px;
+  #subtitle {
+    @include font-size(18);
     font-weight: 300;
     display: block;
     text-align: center;
     margin: 0;
   }
-  #reading-time, #originally-posted{
+  #reading-time, #originally-posted {
     width: 100%;
     text-align: center;
     margin: 6px 0 0 0;
     font-style: italic;
-    font-size: 13px;
+    @include font-size(13);
     opacity: 0.75;
-    a{
+    a {
       color: #fff;
       text-decoration: underline;
-      &:hover{
+      &:hover {
         color: darken(#fff, 10%);
       }
     }
   }
-  #date{
-    font-size: 14px;
+  #date {
+    @include font-size(14);
     font-weight: 300;
     display: block;
     text-align: center;
@@ -212,11 +218,12 @@
     font-style: italic;
   }
 
-  .body, #body {
+  .body,
+  #body {
     position: relative;
     z-index: 20;
     background: #fff;
-    width: 650px;
+    width: 725px;
     max-width: 92%;
     margin-left: auto;
     margin-right: auto;
@@ -225,60 +232,45 @@
     -webkit-transition: color 0.2s ease-in-out;
     -moz-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
-    &.intro{
+    &.intro {
       width: 100%;
       max-width: 100%;
-      font-size: 30px;
+      @include font-size(30);
       margin: 0 auto;
       padding: 0;
       line-height: 1.6;
       font-weight: bold;
       font-style: italic;
-      p{
+      p {
         display: block;
-        // width: 1200px;
         width: 1000px;
         max-width: 92%;
         margin: 0 auto;
         padding: 40px 0;
-        font-size: 28px;
+        @include font-size(28);
         line-height: 1.6;
-        // &:before{
-        //   display: block;
-        //   content: '';
-        //   height: 1px;
-        //   background: rgba(0,0,0,0.05);
-        //   margin: 10px 0;
-        // }
-        // &:after{
-        //   display: block;
-        //   content: '';
-        //   height: 1px;
-        //   background: rgba(0,0,0,0.05);
-        //   margin: 10px 0;
-        // }
       }
-      a{
+      a {
         font-size: 15px;
         display: block;
         text-align: center;
       }
     }
-    &.bare{
+    &.bare {
       width: 100%;
       max-width: 100%;
       padding: 40px;
       @include box;
-      &:first-child{
+      &:first-child {
         margin: 40px 0 0 0;
       }
     }
-    &:hover{
-      a{
-        color: #000;
-      }
-    }
-    ul#loader{
+    // &:hover {
+    //   a {
+    //     color: #000;
+    //   }
+    // }
+    ul#loader {
       padding: 0;
       margin: 0;
       list-style-type:none;
@@ -291,25 +283,29 @@
       }
     }
   }
-  h4{
-    // font-size: 24px;
-    // margin: 0 0 10px 0;
-    // font-style: italic;
-    font-size: 20px;
+  h3 {
+    margin: 50px 0 0 0;
+    font-size: 22px;
+    & + h4 {
+      margin-top: 15px;
+    }
+  }
+  h4 {
     margin: 60px 0 0;
+    font-size: 20px;
     font-style: italic;
   }
-  p{
-    font-size: 20px;
+  p {
+    font-size: 18px;
+    line-height: 1.7;
     font-weight: 300;
-    &.intro{
+    &.intro {
       font-size: 30px;
       margin: 30px 0 40px 0;
-      line-height: 1.6;
       font-weight: bold;
       font-style: italic;
       opacity: 0.9;
-      a{
+      a {
         font-size: 15px;
         display: block;
         text-align: center;
@@ -319,7 +315,50 @@
       margin-top: 25px;
     }
   }
-  blockquote{
+  em {
+    font-style: italic;
+  }
+  pre {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    & + pre {
+      margin-top: 10px;
+    }
+  }
+  code {
+    display: block;
+    background: #F0F0F0;
+    padding: 12px 0 10px 0;
+    color: #282828;
+    border: 1px solid #D7D7D7;
+    @include radius(6px);
+    @include box;
+    &.text {
+      color: #fff;
+    }
+    & + code {
+      margin: -22px 0 10px;
+      color: darken(saturate(#282828, 20%), 10%);
+    }
+  }
+  .code-subtext {
+    display: block;
+    margin: -18px 0 10px 5px;
+    opacity: 0.7;
+    @include transition(opacity 0.25s ease-in-out);
+    &:hover {
+      opacity: 1;
+    }
+  }
+  sup {
+    top: -0.5em;
+    left: 0.1em;
+    font-size: 0.7em;
+  }
+  blockquote {
     margin: 25px 0;
     p {
       @include font-size(11);
@@ -329,31 +368,46 @@
       letter-spacing: 0.1px;
     }
   }
-  #next-previous-post{
+  #next-previous-post {
     background: rgba(248, 248, 248, 1);
+    padding-top: 0;
+    padding-bottom: 0;
     border-top: 1px solid darken(rgba(248, 248, 248, 1), 5%);
     border-bottom: 1px solid darken(rgba(248, 248, 248, 1), 5%);
-    .body{
+    text-align: center;
+    .body {
       background: none;
     }
-    .pre-heading{
-      font-weight: 300;
-      text-transform: uppercase;
-      font-size: 0.5em;
+    .pre-heading {
       margin: 0;
+      margin-bottom: 30px;
+      font-family: $sans;
+      font-size: 0.8em;
+      font-weight: 400;
+      color: #ABABAB;
+      text-transform: uppercase;
       line-height: 1;
+      letter-spacing: 3px;
     }
-    h3{
+    h3 {
       @extend #post-title;
       font-size: 1.5em;
-      text-align: left;
+      & + p {
+        margin-top: -25px;
+        font-size: 1.25em;
+      }
     }
-    p{
+    p {
       font-size: 0.8em;
       margin: -4px 0 0 0;
-      &.date{
+      &.date {
         font-style: italic;
         opacity: 0.75;
+      }
+      &:first-child {
+        margin-top: -24px;
+      }
+      &:last-child {
       }
     }
   }
@@ -370,24 +424,24 @@
       background-size: 225px 225px;
       @include box;
     }
-    a{
+    a {
       font-style: italic;
     }
-    img{
+    img {
       display: block;
       width: 40%;
       margin: 0 auto 10px;
     }
-    h4{
+    h4 {
       font-size: 1em;
       margin: 18px 0 0 0;
     }
-    p{
+    p {
       font-size: 14px;
       margin: 0;
     }
   }
-  ul#social{
+  ul#social {
     display: block;
     width: 145px;
     margin: 5px auto 0;
@@ -395,41 +449,41 @@
     overflow: auto;
     zoom: 1;
     list-style-type:none;
-    li{
+    li {
       list-style-type: none;
       float: left;
       display: block;
     }
-    #facebook{
+    #facebook {
 
     }
-    #tweet{
+    #tweet {
       margin: 4px 0 0 25px;
     }
-    #follow{
+    #follow {
       margin: 5px 0 0 0;
     }
   }
-  footer{
+  footer {
     background: #fff;
     border-bottom: 1px solid darken(rgba(248, 248, 248, 1), 5%);
     padding: 10px 0;
     text-align:center;
     font-family: $serif;
-    p, a{
+    p, a {
       font-size: 12px;
       font-weight: normal;
     }
-    a{
+    a {
       font-style: italic;
     }
-    .ss-icon{
+    .ss-icon {
       font-size: 2.5em;
     }
   }
 
-  #disqus_thread{
-    #footer{
+  #disqus_thread {
+    #footer {
       display: none !important;
     }
   }
@@ -438,14 +492,12 @@
 
 
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   #post-title-container {
     padding: 0;
     background: none;
   }
 }
-
-
 
 @media (min-width: 768px) {
   body.blog-root {
@@ -529,10 +581,14 @@
     }
     #next-previous-post {
       .body {
+        width: 100%;
         padding: 80px;
       }
       h3 {
-        font-size: 2.5em;
+        font-size: 4.5em;
+      }
+      p {
+        font-size: 1em;
       }
     }
     #profile {
@@ -683,6 +739,45 @@
       .right {
         width: 50%;
         margin-top: 0;
+      }
+    }
+  }
+}
+
+
+// 20150302
+// TextExpander
+.blog-post {
+  &.sublime-text-20150312 {
+    #feature {
+      max-height: 725px;
+      overflow: hidden;
+    }
+    #transition-modal {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -999em;
+      text-align: center;
+      opacity: 0;
+      @include transition(opacity 0.25s ease-in-out);
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: proxima-nova;
+      }
+    }
+    &.transition-modal & {
+      #transition-modal {
+        left: 0;
+        z-index: 99999;
+        opacity: 1;
+        @include animate;
+        @include fadeIn;
       }
     }
   }
