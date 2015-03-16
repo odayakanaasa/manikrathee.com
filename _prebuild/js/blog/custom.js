@@ -20,37 +20,31 @@ function trackEvent(cat, action, label){
   }
 }
 
-var body = $('body');
 
 $(document).ready(function() {
+var body = $('body');
 
   // Reading Time
   $(".time").text(function (index, value) {
     return Math.round(parseFloat(value));
   });
 
-  if (body.data('lazyload')) {
+  if ( body.data('lazyload') ) {
     $('#loader li img').lazyload({
       effect : "fadeIn",
       threshold : 50
     });
   }
 
-  if (body.data('lettering')) {
+  if ( body.data('lettering') ) {
     $("#post-title").lettering();
   }
 
-  if (body.data('fittext')) {
+  if ( body.data('fittext') ) {
     $("#post-title").fitText();
   }
 
-  if (body.data('code')) {
-    $('pre code').each(function(e) {
-      highlightBlock(e);
-    });
-  }
-
-  if (body.data('video')) {
+  if ( body.data('video') ) {
     $(".body").fitVids();
   }
 

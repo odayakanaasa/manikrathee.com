@@ -37,8 +37,6 @@
   
   
   
-  <link rel="stylesheet" href="/css/styles/code-highlighting-tomorrow-night-eighties.css" type="text/css" media="screen" />
-  
 
   <script src="/js/libs/modernizr.min.js"></script>
 
@@ -77,11 +75,11 @@ Don't worry though, a new version is coming.
 -->
 
 
-<body class="blog blog-post light sublime-text-20150302"
+<body class="blog blog-post light sublime-text-20150312"
   
   
   
-  data-code="true"
+  
   
   data-reading-time="true"
   >
@@ -130,23 +128,23 @@ Don't worry though, a new version is coming.
 		<header>
 			<!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
 			<div id="feature" data-picture data-alt="">
-	      <div itemprop="image" data-src="/img/blog/20150302/feature-s.jpg"></div>
-	      <div itemprop="image" data-src="/img/blog/20150302/feature-m.jpg" data-media="(min-width: 400px)"></div>
-	      <div itemprop="image" data-src="/img/blog/20150302/feature-l.jpg" data-media="(min-width: 800px)"></div>
-	      <div itemprop="image" data-src="/img/blog/20150302/feature-x.jpg" data-media="(min-width: 1000px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20150312/feature-s.jpg"></div>
+	      <div itemprop="image" data-src="/img/blog/20150312/feature-m.jpg" data-media="(min-width: 400px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20150312/feature-l.jpg" data-media="(min-width: 800px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20150312/feature-x.jpg" data-media="(min-width: 1000px)"></div>
 
 	      <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-	      <noscript><img itemprop="image" src="/img/blog/20150302/feature-s.jpg" alt=""></noscript>
+	      <noscript><img itemprop="image" src="/img/blog/20150312/feature-s.jpg" alt=""></noscript>
 	    </div>
 
 			<div id="post-title-container">
 				
 				<h3 id="post-title">TextExpander</h3>
 				<p id="subtitle">'How I Use' Series</p>
-				<p id="date">March 02 2015</p>
+				<p id="date">March 12 2015</p>
 				<!-- Jekyll Reading Time via Andy Taylor // http://andytaylor.me/2013/04/07/reading-time/ -->
 				
-				<p id="reading-time">Reading Time: <span class="time">3.2357142857142858</span> minutes</p>
+				<p id="reading-time">Reading Time: <span class="time">5.5</span> minutes</p>
 				
 				
 			</div>
@@ -157,9 +155,11 @@ Don't worry though, a new version is coming.
 		<section class="body itemscope">
 			<p class="series">This is the first post in the 'How I Use' series.</p>
 
-<p>When I buy a new machine, the very first things I install are: <a href="http://www.alfredapp.com/" title="Alfred App" itemprop="url">Alfred</a>, <a href="https://www.dropbox.com/referrals/NTQxOTYwMDg5?src=global9" title="Dropbox" itemprop="url">Dropbox</a><sup>(%r)</sup> and <a href="http://smilesoftware.com/TextExpander/index.html" title="TextExpander" itemprop="url">TextExpander</a>. All of these apps are crucial to my day-to-day work, but only one saves me a gratuitous amount of time.</p>
+<p>When I buy a new machine, the very first things I install are: <a href="http://www.alfredapp.com/" title="Alfred App" itemprop="url">Alfred</a>, <a href="https://www.dropbox.com/referrals/NTQxOTYwMDg5?src=global9" title="Dropbox" itemprop="url">Dropbox</a><sup>(%r)</sup> and <a href="http://smilesoftware.com/TextExpander/index.html" title="TextExpander" itemprop="url">TextExpander</a>. All of these apps are crucial to my day-to-day work, but only one can be credited with saving me gratuitous amounts of time.</p>
 
 <p>TextExpander's premise is simple: type a shortcut and it expands to a longer phrase. In essence, you can any repetitive tasks you have to do with a carefully crafted <em>snippet</em>. You can create simple <em>text to text</em> snippets, or more complex ones with dropdown options, default text, dynamic dates and times, and more.</p>
+
+<p>Before we dive in, there's a really simple way to figure out if TextExpander is for you. I'm writing this blog post on my personal Mac Book Air, which I have owned for about a year. I installed TextExpander on day-one, so it is safe to assume that I have used it, on this machine, for a year as well. In that time, I have expanded upwards of <em>forty-eight thousand snippets</em> and saved <strong>31.43 hours</strong> (Based on 110 words–per–minute, which many typing–race–car games have confirmed to be accurate). If you were as blown away reading that stat as I was writing it, well, let's begin.</p>
 
 <p>After using this for several years, I found a few sources of truth:
   <ul>
@@ -170,43 +170,45 @@ Don't worry though, a new version is coming.
   </ul>
 </p>
 
-<p><strong>Core</strong> — These are simple snippets for typos, addresses and more. Most snippets in this category are prefixed with 'c'. A few examples:</p>
+<h3>The Basics</h3>
+
+<h4>Core</h4>
+<p>These are simple snippets for typos, addresses and more. Most snippets in this category are prefixed with 'c'. A few examples:</p>
 <pre>
-  <code class="json">
+  <code>
     maink      rahtee      github
   </code>
-  <code class="text">
+  <code>
     manik      rathee      GitHub
   </code>
 </pre>
 
 <pre>
-  <code class="json">
+  <code>
     c.address
   </code>
-  <code class="text">
+  <code>
     [my current address]
   </code>
 </pre>
 
 <pre>
-  <code class="json">
+  <code>
     c.date
   </code>
-  <code class="text">
-    20150302 [year|month|day]
+  <code>
+    20150312 [year|month|day]
   </code>
 </pre>
-
 
 
 <h4>DayOne</h4>
 <p>I use DayOne as a journal/scrapbook combination by saving screenshots, photos and bits of text every day. To help organize it and bring some structure, I created a few snippets that expand to a set of dynamic tags.</p>
 <pre>
-  <code class="json">
+  <code>
     dayone.day
   </code>
-  <code class="text">
+  <code>
     #DayInReview
     #%AInReview
     #%BDayInReview
@@ -216,10 +218,10 @@ Don't worry though, a new version is coming.
 </pre>
 
 <pre>
-  <code class="json">
+  <code>
     dayone.work
   </code>
-  <code class="text">
+  <code>
     #WorkDayInReview
     #%AInReview
     #%BWorkDayInReview
@@ -232,26 +234,26 @@ Don't worry though, a new version is coming.
 <h4>Git</h4>
 <p>I scope this to only expand in <em>Terminal</em>, and because of this application-specific scope, I can be more liberal with my snippet abbreviations.</p>
 <pre>
-  <code class="json">
+  <code>
     ga
   </code>
-  <code class="text">
+  <code>
     git add --all .
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     gc
   </code>
-  <code class="text">
+  <code>
     git commit -m "%|"
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     g.tag
   </code>
-  <code class="text">
+  <code>
     git tag %Y%m%d%H%M
     git tag 201503032211
   </code>
@@ -260,34 +262,34 @@ Don't worry though, a new version is coming.
 <h4>Characters</h4>
 <p>Sometimes you need to express yourself with intricate special characters. Instead of googling them every time, why not sav them to TE and set phrases to create them?</p>
 <pre>
-  <code class="json">
+  <code>
     char.interrobang
   </code>
-  <code class="text">
+  <code>
     ‽
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     char.dunno
   </code>
-  <code class="text">
+  <code>
     ¯\_(ツ)_/¯
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     char.applewatch | apple watch
   </code>
-  <code class="text">
+  <code>
     Watch
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     .rr
   </code>
-  <code class="text">
+  <code>
     (%r)
   </code>
 </pre>
@@ -296,10 +298,10 @@ Don't worry though, a new version is coming.
 <h4>Development</h4>
 <p>HTML, CSS, Javascript, Ruby, etc.</p>
 <pre>
-  <code class="json">
+  <code>
     *trans
   </code>
-  <code class="text">
+  <code>
     @include transition
     ( %fill:type%
       %filltext:name=seconds:default=0.25%s
@@ -307,77 +309,103 @@ Don't worry though, a new version is coming.
       );
   </code>
 </pre>
-<span class="code-subtext">This is a more advanced snippet. It opens up an <a href="http://manik.io/image/2Q2N2M1H2K1g" title="Input window" itemprop="url">input window</a> with 3 input fields, 2 of which have default states.</span>
+<span class="code-subtext">This is a <a href="#advanced" title="Jump to the Advanced section" itemprop="url">more advanced snippet</a>. It opens up an <a href="http://manik.io/image/2Q2N2M1H2K1g" title="Input window" itemprop="url">input window</a> with 3 input fields, 2 of which have default states.</span>
 <pre>
-  <code class="json">
+  <code>
     @fs
   </code>
-  <code class="text">
+  <code>
     @include font-size(%|);
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     @mq
   </code>
-  <code class="text">
+  <code>
     @media (min-width: %|px) {}
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     js.log
     js.warn
     js.error
   </code>
-  <code class="text">
+  <code>
     console.log();
     console.warn();
     console.error();
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     lorempara
   </code>
-  <code class="text">
+  <code>
     Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida...
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     :n
   </code>
-  <code class="text">
+  <code>
     :not(.%|)
   </code>
 </pre>
 
 <pre>
-  <code class="json">
-    < a hr
+  <code>
+    &#12296;a hr
   </code>
-  <code class="text">
-    < a href="%|" title="" itemprop="url" >< / a >
+  <code>
+    &#12296;a href="%|" title="" itemprop="url"&#12297;&#12297;/ a&#12297;
   </code>
 </pre>
 <pre>
-  <code class="json">
+  <code>
     *ahref
   </code>
-  <code class="text">
-    < a href="%clipboard" title="%fill:title%">%fill:title%< /a>
+  <code>
+    &#12296;a href="%clipboard" title="%fill:title%">%fill:title%&#12297;/a&#12297;
   </code>
 </pre>
 <pre>
-  <code class="json">
-    < im
+  <code>
+    &#12296;im
   </code>
-  <code class="text">
-    < img src="%|" alt="">
+  <code>
+    &#12296;img src="%|" alt=""&#12297;
   </code>
 </pre>
 
+<h3 id="advanced">Advanced Snippets</h3>
+<p>After getting an understanding of the snippets you need, the text you type repeatedly every day, the naming conventions for snippet abbreviations, etc, you'll start coming up with more clever uses.</p>
+<p>My first <em>clever</em> use was for canned emails when I was a freelancer. I was able to prepare canned paragraphs, but to make the emails custom, I needed to add text here and there after expansion. Instead of manually changing it each time, I created a snippet that uses the <em>fill in</em> attribute. This lets you add a custom input field for TextExpander to process.</p>
+<p>Code example? If you want to output a CSS 3 transition mixin for Sass, you can create a snippet like this:</p>
+<pre>
+  <code>
+    @include transition(
+      %fill:type%
+      %filltext:name=seconds:default=0.25%s
+      %filltext:name=curve:default=ease-in-out%
+    );
+  </code>
+  <code>
+    @include transition(
+      color
+      0.25s
+      ease-in-out
+    );
+  </code>
+</pre>
+<p>In this snippet, I entered 'color', '0.25s', 'ease-in-out' into <a class="modal-trigger" href="#" title="Text Expander's fill-in snippet window" data-modal="transition-modal" itemprop="url">Text Expander's fill-in snippet window</a>. Once you get a handle on how to create snippets and how these advanced snippets work, the options are endless.</p>
+<p><em>Bottom line:</em> If there's something you regularly type more than once, you should consider making a snippet out of it. The time you save with each snippet will add up faster than you think.</p>
+<div id="transition-modal" class="modal">
+  <img src="/img/blog/20150312/transition-fill.png" alt="Text Expander's Fill-In Snippet Window">
+  <a class="close" href="#" title="Close" itemprop="url">Close</a>
+</div>
 
 		</section>
 	</article>
@@ -429,24 +457,18 @@ Don't worry though, a new version is coming.
 
     <a id="top" class="ss-icon" href="#" title="Back To The Top">navigateup</a>
 
-  <!-- <footer id="global-footer">
-    Full Nav
-    Social
-    Email
-    Copyright
-  </footer> -->
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/js/libs/jquery-2.1.1.min.js"><\/script>')</script>
 
   <script src="/js/script.js"></script>
-  
-  <script src="/js/script-blog.js"></script>
-  
 
-  
-  
-  
+  <script src="/js/script-blog.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/blog/20150312.js"></script>
+
+
 
 </body>
 </html>
