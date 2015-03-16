@@ -499,7 +499,7 @@ function trackEvent(cat, action, label){
 
 
 $(document).ready(function() {
-var body = $('body');
+  var body = $('body');
 
   // Reading Time
   $(".time").text(function (index, value) {
@@ -548,6 +548,4 @@ var body = $('body');
     idleTimeout: 40,      // Default: 30
     nonInteraction: true  // Default: true
   });
-
-
 })(jQuery, window, document);

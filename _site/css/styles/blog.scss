@@ -368,6 +368,14 @@
       letter-spacing: 0.1px;
     }
   }
+  figcaption.image-cap {
+    display: block;
+    margin: -18px 0 10px 5px;
+    opacity: 0.7;
+    font-size: 0.9em;
+    text-align: center;
+  }
+
   #next-previous-post {
     background: rgba(248, 248, 248, 1);
     padding-top: 0;
