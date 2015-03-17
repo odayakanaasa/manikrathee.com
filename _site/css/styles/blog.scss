@@ -401,7 +401,6 @@
       @extend #post-title;
       font-size: 1.5em;
       & + p {
-        margin-top: -25px;
         font-size: 1.25em;
       }
     }
@@ -411,11 +410,6 @@
       &.date {
         font-style: italic;
         opacity: 0.75;
-      }
-      &:first-child {
-        margin-top: -24px;
-      }
-      &:last-child {
       }
     }
   }
@@ -597,9 +591,17 @@
       }
       h3 {
         font-size: 4.5em;
+        & + p {
+          margin-top: -25px;
+          font-size: 1.25em;
+        }
       }
       p {
         font-size: 1em;
+        margin: -4px 0 0 0;
+        &:first-child {
+          margin-top: -24px;
+        }
       }
     }
     #profile {
