@@ -39,19 +39,19 @@
     h2 {
       margin-bottom: 20px;
     }
-  }
-  h2,
-  h3,
-  h4,
-  ul,
-  p {
-    color: #575757;
-  }
-  ul {
-    padding: 0 0 0 18px;
-    li {
-      & + li {
-        padding-top: 10px;
+    h2,
+    h3,
+    h4,
+    ul,
+    p {
+      color: #575757;
+    }
+    ul {
+      padding: 0 0 0 18px;
+      li {
+        & + li {
+          padding-top: 10px;
+        }
       }
     }
   }
