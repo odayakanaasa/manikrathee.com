@@ -168,6 +168,14 @@ module.exports = function(grunt) {
         }]
       }
     },
+    perfbudget: {
+      default: {
+        options: {
+          url: 'http://manikrathee.com',
+          key: 'API_KEY_HERE'
+        }
+      }
+    },
   });
 
   grunt.loadNpmTasks('grunt-jekyll');
@@ -180,6 +188,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-remove-logging");
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-perfbudget');
 
   grunt.registerTask('default', ['concurrent:base','concurrent:dev']);
   grunt.registerTask('w', ['concurrent:base','concurrent:dev','watch']);
