@@ -9,7 +9,7 @@ var instagramID = instagramAPI.prop('id');
 var rdioID = instagramAPI.prop('id');
 var readmillID = readmillAPI.prop('id');
 
-$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: A Pocket Guide to International User Research by Chui Chui Tan</p></div>');
+$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: Helvetica/ Objectified/ Urbanized: The Complete Interviews</p></div>');
 
 LastFMStatus.init({
     username: "mrathee"
