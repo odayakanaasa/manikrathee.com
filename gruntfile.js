@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     concurrent: {
       base: ['jekyll'],
-      dev: ['sass','concat'],
+      dev: ['newer:sass','newer:concat'],
       prod: ['sass','concat','imagemin','removelogging'],
       prod2: ['uglify:javascript','htmlmin'],
       // limit: 4, // 2x # of cores
@@ -189,7 +189,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-perfbudget');
+  grunt.loadNpmTasks('grunt-newer');
 
+  grunt.registerTask('minify', ['newer:uglify:all']);
   grunt.registerTask('default', ['concurrent:base','concurrent:dev']);
   grunt.registerTask('w', ['concurrent:base','concurrent:dev','watch']);
   grunt.registerTask('production', ['concurrent:base','concurrent:prod','concurrent:prod2']);

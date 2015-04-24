@@ -40,11 +40,35 @@
       margin-bottom: 20px;
     }
   }
+  h2,
+  h3,
+  h4,
+  ul,
+  p {
+    color: #575757;
+  }
+  ul {
+    padding: 0 0 0 18px;
+    li {
+      & + li {
+        padding-top: 10px;
+      }
+    }
+  }
+  .subtitle-link {
+    display: block;
+  }
+  .main-section {
+    padding-bottom: 35px;
+  }
   #releases {
     p.subtitle {
       margin-bottom: 8px;
       font-weight: bold;
       line-height: 1;
+      em {
+        @include font-size(20);
+      }
     }
     section {
       margin-bottom: 30px;
