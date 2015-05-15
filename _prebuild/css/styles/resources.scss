@@ -15,22 +15,22 @@
     width: 100%;
     text-align: center;
     margin: 100px 0 0 0;
-    h1, h2 {
+    h1,
+    h2 {
       color: #fff;
       text-shadow: none;
       text-transform: uppercase;
+      line-height: 1;
     }
-  }
-  .title h1 {
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 1;
-    margin: 0 0 4px 0;
-  }
-  .title h2 {
-    font-size: 14px;
-    line-height: 1;
-    margin: 0;
+    h1 {
+      margin: 0 0 4px 0;
+      font-size: 21px;
+      font-weight: bold;
+    }
+    h2 {
+      margin: 0;
+      font-size: 14px;
+    }
   }
   .resource-block {
     margin-top: 40px;
