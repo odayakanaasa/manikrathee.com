@@ -123,10 +123,16 @@ $(document).click(function() {
 // konami.load()
 
 //Slider
-$('.flexslider').flexslider();
+var slider = $('.flexslider');
+if (slider) {
+  $('.flexslider').flexslider();
+}
 
 // TipTip
-$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
+var toolTip = $(".tooltip");
+if (toolTip) {
+  $(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
+}
 
 // ScrollTop Function
 var toTop = $('#top');
