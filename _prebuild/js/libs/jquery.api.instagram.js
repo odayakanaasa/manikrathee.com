@@ -3,13 +3,6 @@
 if ( $('body').attr('id') === 'home' ){
   var instagramActive = false;
 
-  // Instagram API
-  // instagramFeed.embed({
-  //   username: 'manikrathee',
-  //   count: 1,
-  //   container: 'instagram'
-  // });
-
   var feed = new Instafeed({
     get: 'user',
     userId: 262351,
@@ -26,7 +19,8 @@ if ( $('body').attr('id') === 'home' ){
   instagramActive = true;
 }
 
-// To Do - add an instagram phone hook to launch the app on mobile: @"instagram://location?id=1
+// To Do - add an instagram phone hook to launch the app on mobile:
+// @"instagram://location?id=1
 // https://instagram.com/developer/iphone-hooks/
 
 
