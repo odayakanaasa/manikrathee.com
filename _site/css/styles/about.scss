@@ -126,17 +126,6 @@
       font-size: 0.8em;
     }
   }
-  .fact-container {
-    width: 100%;
-    background: rgb(31, 31, 31);
-    padding: 50px 0;
-    margin: 40px 0 0;
-    color: darken(#fff, 10%);
-    text-shadow: 0 1px 0 #000;
-    border-top: 1px solid #D9D9D9;
-    border-bottom: 1px solid #D9D9D9;
-
-  }
   figcaption {
     display: block;
     max-width: 315px;
@@ -149,84 +138,6 @@
     text-transform: uppercase;
     border-left: 5px solid darken(#fff, 20%);
     opacity: 0.8;
-  }
-  #quick-facts {
-    display: block;
-    width: 100%;
-    margin: 0 0 25px 0;
-    padding: 0;
-    @include font-size(40);
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1;
-  }
-  #about-data {
-    overflow: hidden;
-    zoom: 1;
-    max-width: 90%;
-    width: 350px;
-    margin: 0 auto;
-    li {
-      list-style-type: none;
-      padding: 20px;
-      font-weight: 100;
-      font-size: 18px;
-      span.ss-icon {
-        display: block;
-        float: left;
-        font-weight: bold;
-        padding: 8px 10px 20px 0;
-      }
-      span.number-container {
-        display: block;
-        font-size: 40px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-      }
-      p {
-        line-height: 1;
-      }
-
-    }
-    #i-take-photos {
-      .ss-icon {
-        font-size: 40px;
-      }
-    }
-
-    #i-run {
-      .ss-icon {
-        font-size: 40px;
-      }
-    }
-
-    #i-listen {
-      .ss-icon {
-        font-size: 40px;
-      }
-    }
-  }
-  #map {
-    margin: 10px 0;
-    p {
-      text-transform: uppercase;
-      font-size: 12px;
-      span.location {
-        display: block;
-        font-size: 14px;
-      }
-    }
-    ul {
-      li {
-        margin: 10px 0;
-        background: #f9f9f9;
-        text-align: center;
-      }
-    }
   }
 }
 
@@ -292,57 +203,6 @@
       -webkit-column-gap: 20px;
       column-count: 2;
       column-gap: 20px;
-    }
-    #about-data {
-      max-width: 100%;
-      width: auto;
-      margin: 0;
-      li {
-        width: 30%;
-        float: left;
-      }
-      #i-run {
-        margin: 0 26px 0 50px;
-      }
-    }
-    #map {
-      background: #DCDCDC url('../img/about-map.jpg') no-repeat 50% 50%;
-      height: 420px;
-      margin: 30px 0;
-      -webkit-box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.3);
-      p {
-        margin: 0;
-        line-height: 1;
-        span.location {
-          display: block;
-          font-size: 14px;
-        }
-      }
-      ul {
-        position: relative;
-        li {
-          position: absolute;
-          width: 320px;
-          padding: 10px;
-          text-align: left;
-          border-radius: 4px;
-          -webkit-box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.3);
-          box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.3);
-          &.san-francisco {
-            top: 20px;
-            left: 40px;
-          }
-          &.chicago {
-            top: 30px;
-            left: 500px;
-          }
-          &.montclair {
-            top: 100px;
-            right: 40px;
-          }
-        }
-      }
     }
   }
 
