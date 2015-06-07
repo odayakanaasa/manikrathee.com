@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
     concurrent: {
       base: ['jekyll'],
@@ -62,43 +61,6 @@ module.exports = function(grunt) {
         dest: '_site/js/script-blog.js',
         nonull: true,
       },
-
-       // dist: {
-       //  src: [
-       //    '_site/js/libs/analytics.js',
-       //    // '_site/js/libs/jquery.backstretch.js',
-       //    '_site/js/libs/jquery.api.twitter.js',
-       //    '_site/js/libs/jquery.api.last.fm.js',
-       //    '_site/js/libs/jquery.api.instagram.js',
-       //    '_site/js/libs/jquery.twitter.js',
-       //    // '_site/js/libs/jquery.fittext.js',
-       //    '_site/js/libs/jquery.flexslider.js',
-       //    '_site/js/libs/jquery.prettyForms.js',
-       //    '_site/js/libs/jquery.counter.js',
-       //    '_site/js/libs/jquery.tipTip.js',
-       //    // '_site/js/libs/konami.js',
-       //    '_site/js/libs/jquery.withinViewport_base.js',
-       //    '_site/js/libs/jquery.withinViewport.js',
-       //    '_site/js/libs/script.js',
-       //    ],
-       //  dest: '_site/js/script.js',
-       //  nonull: true,
-       // },
-       // dist: {
-       //  src: [
-       //    '_site/js/blog/picturefill.js',
-       //    '_site/js/blog/lazyload.js',
-       //    '_site/js/blog/lettering.js',
-       //    '_site/js/blog/fittext.js',
-       //    '_site/js/blog/fitvids.js',
-       //    '_site/js/blog/highlight.js',
-       //    '_site/js/blog/scrolldepth.js',
-       //    '_site/js/blog/riveted.js',
-       //    '_site/js/blog/custom.js',
-       //    ],
-       //  dest: '_site/js/script-blog.js',
-       //  nonull: true,
-       // },
     },
     removelogging: {
       dist: {
@@ -166,48 +128,21 @@ module.exports = function(grunt) {
         }]
       }
     },
-    perfbudget: {
-      default: {
-        options: {
-          url: 'http://manikrathee.com',
-          key: 'API_KEY_HERE'
-        }
-      }
-    },
-    //notify: {
-    //  watch: {
-    //    options: {
-    //      title: 'Task Complete',  // optional
-    //      message: 'Jekyll, Sass and Concat finished running', //required
-    //    }
-    //  },
-    //  server: {
-    //    options: {
-    //      title: '0.0.0.0:4000',
-    //      message: 'Server is ready'
-    //    }
-    //  }
-    //},
   });
 
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  // grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks("grunt-remove-logging");
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-concurrent');
-  grunt.loadNpmTasks('grunt-perfbudget');
   grunt.loadNpmTasks('grunt-newer');
-  //grunt.loadNpmTasks('grunt-notify');
 
   grunt.registerTask('minify', ['newer:uglify:all']);
   grunt.registerTask('default', ['concurrent:base','concurrent:dev']);
   grunt.registerTask('w', ['concurrent:base','concurrent:dev','watch']);
   grunt.registerTask('production', ['concurrent:base','concurrent:prod','concurrent:prod2']);
-
-  //grunt.task.run('notify_hooks');
 };
