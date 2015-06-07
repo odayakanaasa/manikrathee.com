@@ -49,40 +49,39 @@ lazyload: 1
 ---
 
 <style>
+  #post-title {
+      @include font-size(40);
+  }
+  iframe {
+      max-width: 100%;
+  }
+  ul li {
+      list-style-type:square;
+  }
+  .blue,
+  .white {
+      display: inline-block;
+      margin-right: 5px;
+      border: 1px solid #999;
+      @include size(15px, 15px);
+  }
+  .blue {
+      background: #004467;
+  }
+  .white {
+      background: #f6f6f6;
+  }
+  @media (min-width: 768px) {
     #post-title {
-        font-size: 40px;
+        @include font-size(70);
     }
-    iframe{
-        max-width: 100%;
+    #subtitle {
+        margin-top: 8px;
     }
-    ul li{
-        list-style-type:square;
+    #post-title-container {
+        margin: -308px auto 203px auto;
     }
-    .blue, .white{
-        display: inline-block;
-        height: 15px;
-        width: 15px;
-        margin-right: 5px;
-        border: 1px solid #999;
-    }
-    .blue{
-        background: #004467;
-    }
-    .white{
-        background: #f6f6f6;
-    }
-    @media (min-width: 768px) {
-        #post-title {
-            font-size: 70px;
-        }
-        )
-        #subtitle {
-            margin-top: 8px;
-        }
-        #post-title-container {
-            margin: -308px auto 203px auto;
-        }
-    }
+  }
 </style>
 
 <p>In April of this year, I had the pleasure of giving the opening keynote at the Thinking Creatively Conference 10th Anniversary. Naturally, I was asked to speak about my experience on the Obama campaign in 2012. So, I put together a talk called <em>Building Obama</em> which went into detail about the various products &amp; tools under <a href="http://www.barackobama.com" title="barackobama.com" itemprop="url">BarackObama.com</a> and how we designed, built and optimized them for tens-of-millions of users around the world.</p>
