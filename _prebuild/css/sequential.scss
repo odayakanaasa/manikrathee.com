@@ -21,28 +21,20 @@ $helvetica: "proxima-nova", helvetica, verdana, sans-serif;
 /* FORM BASE */
 
 #form-fields {
-
     margin: 0;
 
     ul {
-
         margin: 0;
-
     }
 
     li {
-
         list-style: none;
         margin-bottom: 15px;
-
     }
 
     label {
-        font-size: 14px;
+      @include font-size(14);
         margin: 0;
-        // font-size: 18px;
-        // font-weight: bold;
-
     }
 
     input.text, select {

@@ -260,14 +260,6 @@ span.tldr {
       padding: 0 20px;
     }
   }
-  .upper_logo_bar {
-    .mobile_nav {
-      display:none;
-    }
-    .full_nav {
-      display:block;
-    }
-  }
   .right_col_inner {
     padding-left: 10%;
     border-left: 1px solid #efefef;
@@ -276,10 +268,3 @@ span.tldr {
 } // 768
 
 
-
-@media only screen and (-webkit-min-device-pixel-ratio:2){
-  #logo{
-    background: transparent url('../img/white-logo@2x.png') no-repeat 50% 50%;
-      -webkit-background-size:100px 100px;
-  }
-}
