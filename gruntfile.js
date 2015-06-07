@@ -7,7 +7,6 @@ module.exports = function(grunt) {
       dev: ['newer:sass','newer:concat'],
       prod: ['sass','concat','imagemin','removelogging'],
       prod2: ['uglify:javascript','htmlmin'],
-      // limit: 4, // 2x # of cores
     },
     sass: {
       dist: {
@@ -41,7 +40,6 @@ module.exports = function(grunt) {
           '_site/js/libs/jquery.flexslider.js',
           '_site/js/libs/jquery.prettyForms.js',
           '_site/js/libs/jquery.counter.js',
-          '_site/js/libs/jquery.tipTip.js',
           // '_site/js/libs/konami.js',
           '_site/js/libs/jquery.withinViewport_base.js',
           '_site/js/libs/jquery.withinViewport.js',
@@ -176,20 +174,20 @@ module.exports = function(grunt) {
         }
       }
     },
-    notify: {
-      watch: {
-        options: {
-          title: 'Task Complete',  // optional
-          message: 'Jekyll, Sass and Concat finished running', //required
-        }
-      },
-      server: {
-        options: {
-          title: '0.0.0.0:4000',
-          message: 'Server is ready'
-        }
-      }
-    },
+    //notify: {
+    //  watch: {
+    //    options: {
+    //      title: 'Task Complete',  // optional
+    //      message: 'Jekyll, Sass and Concat finished running', //required
+    //    }
+    //  },
+    //  server: {
+    //    options: {
+    //      title: '0.0.0.0:4000',
+    //      message: 'Server is ready'
+    //    }
+    //  }
+    //},
   });
 
   grunt.loadNpmTasks('grunt-jekyll');
@@ -204,12 +202,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-perfbudget');
   grunt.loadNpmTasks('grunt-newer');
-  grunt.loadNpmTasks('grunt-notify');
+  //grunt.loadNpmTasks('grunt-notify');
 
   grunt.registerTask('minify', ['newer:uglify:all']);
   grunt.registerTask('default', ['concurrent:base','concurrent:dev']);
   grunt.registerTask('w', ['concurrent:base','concurrent:dev','watch']);
   grunt.registerTask('production', ['concurrent:base','concurrent:prod','concurrent:prod2']);
 
-  grunt.task.run('notify_hooks');
+  //grunt.task.run('notify_hooks');
 };
