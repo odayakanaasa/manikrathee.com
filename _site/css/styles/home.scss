@@ -79,13 +79,6 @@ a{
 	margin: 0;
 	padding-top: 50px;
   color: #f3f3f3;
-	#logo{
-		display:block;
-		background: transparent url('../img/home/white-logo.png') no-repeat top left;
-		background-size: 100%;
-		margin: 0 auto;
-		@include size(100px, 100px);
-	}
 	.copy{
 		width: 300px;
 		max-width: 90%;
@@ -199,13 +192,6 @@ a{
 
 @media screen and (min-width:500px){
 	#home{
-		#logo{
-			display: block;
-			background: transparent url('../img/home/white-logo.png') no-repeat center left;
-			background-size: 100%;
-			margin: 0 auto;
-			@include size(100px, 100px);
-		}
 		.copy{
 			width: 450px;
       header, section {
@@ -232,14 +218,6 @@ a{
 	#home{
 		background: #000 url('../img/home/bg-1024.jpg') no-repeat 70% 0;
 		color: #f1f1f1;
-		#logo{
-			background: transparent url('../img/home/white-logo.png') no-repeat 50% 50%;
-			background-size: 100%;
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			@include size(75px, 75px);
-		}
 		#projects {
 			overflow: visible;
 		}

@@ -23,31 +23,10 @@ nav.global-nav{
   }
 }
 
-.blog #logo,
-#logo {
-	display:block;
-	height: 75px;
-	width: 75px;
-	margin-left: auto;
-	margin-right: auto;
-	background-size: 100%;
-	body.light &,
-  &.white,
-  &.light {
-		background: transparent url('../img/white-logo.png') no-repeat 50% 50%;
-		background-size: 100%;
-	}
-	body.dark &,
-  &.dark,
-  &.black {
-		background: transparent url('../img/dark-logo.png') no-repeat 50% 50%;
-		background-size: 100%;
-	}
-}
 
 
 nav {
-	font-size: 13px;
+  @include font-size(13);
 	text-transform: uppercase;
 	text-shadow: none;
 	#logo {
@@ -61,7 +40,7 @@ nav {
 	#current {
 		display: none;
 		text-transform: uppercase;
-		font-size: 12px;
+    @include font-size(12);
 		line-height: 1;
 	}
 	a {
@@ -276,21 +255,6 @@ nav {
 		}
 		&.hide{
 			display: none;
-		}
-	}
-}
-
-
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min-resolution: 192dpi) {
-	#logo{
-		background-size: 100%;
-		body.light & {
-			background-image: url('../img/white-logo@2x.png');
-		}
-		body.dark & {
-			background-image: url('../img/dark-logo@2x.png');
 		}
 	}
 }
