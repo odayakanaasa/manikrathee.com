@@ -5,7 +5,8 @@ module.exports = function(grunt) {
       base: ['jekyll'],
       dev: ['newer:sass','newer:concat'],
       prod: ['sass','concat','imagemin','removelogging'],
-      prod2: ['uglify:javascript','htmlmin'],
+      // prod2: ['uglify:javascript','htmlmin'],
+      prod2: ['uglify:javascript'],
     },
     sass: {
       dist: {
