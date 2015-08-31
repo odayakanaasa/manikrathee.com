@@ -151,6 +151,7 @@ a:link  { -webkit-tap-highlight-color: #333; }
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 200;
   opacity: 0;
   pointer-events: none;
   @include transition(

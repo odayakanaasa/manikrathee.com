@@ -34,7 +34,7 @@
     }
     .post-title {
       margin-top: 10px;
-      font-family: $display;
+      font-family: $serif;
       @include font-size(20);
       line-height: 1.1;
       text-align: center;
@@ -165,7 +165,7 @@
   }
   #post-title {
     margin: 0;
-    font-family: $display;
+    font-family: $serif;
     font-style: italic;
     @include font-size(24);
     font-weight: 900;

@@ -1596,8 +1596,6 @@ function checkWidth() {
 			$('#current, .copy, .dark-shade').removeClass('fade');
       trackEvent('global','portfolio sub menu','closed');
 		});
-		// TipTip
-		$(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
 	}
 	else{
 		$('.copy').removeClass('fade');
@@ -1651,12 +1649,6 @@ $(document).click(function() {
 var slider = $('.flexslider');
 if (slider) {
   $('.flexslider').flexslider();
-}
-
-// TipTip
-var toolTip = $(".tooltip");
-if (toolTip) {
-  $(".tooltip").tipTip({maxWidth: "auto", edgeOffset: 10});
 }
 
 // ScrollTop Function

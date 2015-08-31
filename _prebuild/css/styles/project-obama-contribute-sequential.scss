@@ -15,7 +15,6 @@ $next-blue: #1297c9;
 $submit-green: #89cd46;
 $green: #81c341;
 $error-red: #C41230;
-$slab-serif: "jubilat", serif;
 $helvetica: "proxima-nova", helvetica, verdana, sans-serif;
 
 /* FORM BASE */
@@ -298,7 +297,7 @@ ul#form-fields li#submit-cont #submit-hidden{
     background: #89C74E;
     padding: 10px 10px 10px 10px;
     font-weight: bold;
-    /*font-family: $slab-serif;*/
+    /*font-family: $serif;*/
     font-size: 20px;
     color: white;
     text-transform: uppercase;
@@ -315,7 +314,7 @@ p.secure{
     display: none;
 }
 #form-fields .form-section-header{
-    font-family: $slab-serif;
+    font-family: $serif;
     font-size: 20px;
 }
 
@@ -508,7 +507,7 @@ body.error{
             position: absolute;
             bottom: 75px;
             left: -5px;
-            font-family: $slab-serif;
+            font-family: $serif;
             text-align: center;
             font-size: 17px;
             font-weight: bold;
@@ -619,7 +618,7 @@ body.error{
                 margin-right:6px;
             }
             #suggested-amount{
-                font-family:$slab-serif;
+                font-family:$serif;
                 font-size: 14px;
                 color: #555555;
                 font-style: italic;
@@ -940,7 +939,7 @@ body.error{
                     // background: transparent url('https://secure.assets.bostatic.com/hydepark/img/donate/20121008_ContinueButton_test.png') no-repeat 104% 49% ;
                     text-align: center;
                     color: #fff;
-                    font-family: $slab-serif;
+                    font-family: $serif;
                     font-weight: bold;
                     font-size: 18px;
                     padding: 7px 30px 7px 10px;
@@ -988,7 +987,7 @@ body.error{
                 }
                 padding: 10px 28px 10px 10px;
                 font-weight: bold;
-                font-family:$slab-serif;
+                font-family:$serif;
                 font-size: 20px;
                 color: #fff;
                 text-transform: uppercase;
@@ -1032,7 +1031,7 @@ body.error{
                 display: none;
             }
             #amount-header{
-                font-family: $slab-serif;
+                font-family: $serif;
                 font-weight: bold;
                 text-transform: none;
                 font-size: 16px;

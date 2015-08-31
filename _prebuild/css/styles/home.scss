@@ -122,15 +122,15 @@ a{
 			}
 		}
 	}
-	ul:not(.social-icons){
-		width: 100%;
-		text-align: left;
-		li{
-			list-style-type: none;
-			margin: 0 auto 10px auto;
-      @include font-size(10);
-		}
-	}
+	// ul:not(.social-icons){
+	// 	width: 100%;
+	// 	text-align: left;
+	// 	li{
+	// 		list-style-type: none;
+	// 		margin: 0 auto 10px auto;
+ //      @include font-size(10);
+	// 	}
+	// }
 	#portfolio{
 		position: relative;
 		cursor: pointer;
@@ -155,7 +155,7 @@ a{
 		ul {
 			overflow: hidden;
 			zoom: 1;
-			width: 200px;
+			width: 225px;
       max-width: 100%;
 			margin: 45px auto;
 			padding: 0;
@@ -227,7 +227,7 @@ a{
       overflow: hidden;
 			z-index: 10;
 			width: 420px;
-			margin: 75px 0 0 42px;
+      margin: 100px 0 0 52px;
 			text-align: left;
 			p {
         @include font-size(14);
@@ -240,13 +240,10 @@ a{
 			text-transform: uppercase;
 		}
 
-		ul:not(.social) {
-			li {
-				margin-right: 16px;
-        @include font-size(13);
-			}
-		}
+
 		.social {
+      margin-top: 78px;
+
 			ul {
 				width: 100%;
 				margin: 0;
@@ -255,11 +252,17 @@ a{
 				li{
 					display: block;
 					float: left;
-					margin-right: 12px;
+          margin-right: 16px;
+          @include font-size(13);
 				}
 				a {
-					font-size: 1.5em;
+					font-size: 1.35em;
 					line-height: 2em;
+          opacity: 0.65;
+          @include transition(opacity 0.25s ease-in-out);
+          &:hover {
+            opacity: 1;
+          }
 				}
 			}
 		}

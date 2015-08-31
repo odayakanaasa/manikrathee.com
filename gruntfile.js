@@ -11,7 +11,6 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '_site/css/style.css' : ['_site/css/style.scss'],
-          '_site/css/sequential.css' : ['_site/css/sequential.scss'],
         },
         options: {
           style: 'compressed'
