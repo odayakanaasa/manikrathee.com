@@ -1,0 +1,33 @@
+#logo {
+  display:block;
+  height: 75px;
+  width: 75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#logo-svg {
+  height: 75px;
+  width: 75px;
+
+  .triangle-a {
+    stroke:  #000;
+    stroke-width: 8;
+    stroke-miterlimit:  10;
+    fill:  none;
+  }
+  .triangle-b {
+    stroke: #000;
+    stroke-width: 4;
+    stroke-miterlimit:  10;
+    fill:  none;
+  }
+
+  // body.dark & {
+  body.light & {
+    .triangle-a,
+    .triangle-b {
+      stroke: #fff;
+    }
+  }
+}
+
