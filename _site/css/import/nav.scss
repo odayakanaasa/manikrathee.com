@@ -234,14 +234,14 @@ nav {
     // left: 20px;
 	}
 	#navigation{
-		// height: auto;
-    height: 64px;
-    overflow: visible;
+		height: auto;
     padding: 48px 0 0 44px;
-		// padding: 40px 0 0 120px;
-		// body.interior & {
+    // padding: 40px 0 0 120px;
+    body.interior & {
+      height: 64px;
+      overflow: visible;
 			// padding: 32px 0 0 30px;
-		// }
+		}
 	}
 	nav{
 		position: absolute;

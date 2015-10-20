@@ -4,13 +4,16 @@
 .about {
   background:#FBFBFB;
   .upper {
-    background: rgb(98,102,107); /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(98,102,107,1) 0%, rgba(80,87,93,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(98,102,107,1)), color-stop(100%,rgba(80,87,93,1)));
-    background: -webkit-linear-gradient(top, rgba(98,102,107,1) 0%,rgba(80,87,93,1) 100%);
-    background: -o-linear-gradient(top, rgba(98,102,107,1) 0%,rgba(80,87,93,1) 100%);
-    background: linear-gradient(to bottom, rgba(98,102,107,1) 0%,rgba(80,87,93,1) 100%);
-    text-shadow: 1px 1px 0 #000;
+    background: #35383D url(../img/about-heading-medium.jpg) no-repeat 50% 50%;
+    background-size: cover;
+
+    // background: rgb(98,102,107); /* Old browsers */
+    // background: -moz-linear-gradient(top, rgba(98,102,107,1) 0%, rgba(80,87,93,1) 100%);
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(98,102,107,1)), color-stop(100%,rgba(80,87,93,1)));
+    // background: -webkit-linear-gradient(top, rgba(98,102,107,1) 0%,rgba(80,87,93,1) 100%);
+    // background: -o-linear-gradient(top, rgba(98,102,107,1) 0%,rgba(80,87,93,1) 100%);
+    // background: linear-gradient(to bottom, rgba(98,102,107,1) 0%,rgba(80,87,93,1) 100%);
+    // text-shadow: 1px 1px 0 #000;
     height: 350px;
     display: block;
     position: relative;
@@ -178,10 +181,6 @@
   }
 
   .about {
-    .upper {
-      background: #35383D url(../img/about-heading-medium.jpg) no-repeat 50% 50%;
-      background-size: cover;
-    }
     .title {
       margin: 300px 0 0 48px;
     }

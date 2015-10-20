@@ -497,6 +497,11 @@
 }
 
 @media (min-width: 768px) {
+  .blog {
+    .container {
+      position: relative;
+    }
+  }
   body.blog-root {
     a.post {
       color: #999;
