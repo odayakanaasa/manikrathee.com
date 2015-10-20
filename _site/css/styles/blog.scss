@@ -1,5 +1,8 @@
 /* Blog Styles */
 .blog {
+  .container {
+    // position: relative;
+  }
   a {
     border-bottom: none;
     margin-bottom: 0;
@@ -581,7 +584,7 @@
       h3 {
         font-size: 4.5em;
         & + p {
-          margin-top: -25px;
+          margin-top: -15px;
           font-size: 1.25em;
         }
       }

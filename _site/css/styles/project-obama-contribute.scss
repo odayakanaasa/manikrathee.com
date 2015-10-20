@@ -16,6 +16,7 @@
     height: 435px;
     display: block;
     position: relative;
+    overflow: hidden;
     -webkit-transition: background-position 0.25s linear;
     -moz-transition: background-position 0.25s linear;
     transition: background-position 0.25s linear;

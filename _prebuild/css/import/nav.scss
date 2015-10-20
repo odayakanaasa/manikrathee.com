@@ -139,8 +139,9 @@ nav {
 
 @media screen and (min-width: 768px){
 	nav{
-		margin-left: 30px;
 		background: none;
+    margin: 0;
+    padding-left: 30px;
 		body.dark & {
 			#navigation {
 				a {
@@ -233,7 +234,9 @@ nav {
     // left: 20px;
 	}
 	#navigation{
-		height: auto;
+		// height: auto;
+    height: 64px;
+    overflow: visible;
     padding: 48px 0 0 44px;
 		// padding: 40px 0 0 120px;
 		// body.interior & {
