@@ -3,38 +3,47 @@
 
 #subscribe {
   background: darken(#fff, 6%);
+
   #logo {
     position: absolute;
     top: 12px;
     left: 50%;
-    margin-left: -38px;
+    margin-left: -65px;
   }
+
   #navigation,
   #nav {
     display: none;
   }
+
   h1 {
     font-size: 2.2em;
     font-weight: 100;
     text-transform: uppercase;
   }
+
   h2 {
     margin: 20px auto;
     font-size: 1.15em;
     font-weight: 300;
   }
-  .twitter-author{
+
+  .twitter-author {
     font-size: 1.1em;
     font-weight: 600;
     text-transform: uppercase;
     opacity: 0.65;
     color: #333;
+
     &:hover {
       opacity: 1;
       color: #000;
     }
+
   }
+
 }
+
 #overlay {
   display: block;
   position: fixed;
@@ -58,9 +67,10 @@
   -moz-transform : translateZ(0);
   transform : translateZ(0);
   // Animate gradient
-  @include animate-custom(100s);
+  @include animate-custom(30s);
   @include slideUpLeft;
 }
+
 [id=subscription] {
   position: relative;
   z-index: 20;
@@ -72,6 +82,7 @@
   margin-right: auto;
   text-align: center;
   @include box;
+
   header,
   form,
   #tiny-credit,
@@ -82,6 +93,7 @@
     @include animate;
     @include slideInRight;
   }
+
       header {
         @include delay-custom(0.25s);
       }
@@ -113,16 +125,19 @@
       opacity: 1;
     }
   }
+
   form {
     padding-top: 65px;
     padding-bottom: 65px;
     text-align: left;
   }
+
   label,
   input {
     display: block;
     width: auto;
   }
+
   label {
     display: block;
     font-size: 0.8em;
@@ -130,33 +145,44 @@
     text-align: left;
     text-transform: uppercase;
   }
+
   input {
     display: block;
     border: 1px solid darken(#fff, 30%);
     @include transition(border 0.25s ease-in-out);
+
     &:focus, &:active {
       border-bottom: 2px solid darken(#fff, 30%);
     }
+
     &:focus {
         outline: 0;
     }
   }
-  label, #tlemail, #submit {
+
+  label,
+  #tlemail,
+  #submit {
     display: block;
     width: 100%;
     margin: 0;
   }
+
   .form-fields {
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
+
     li {
       list-style-type: none;
     }
+
   }
+
   #tlemail {
     padding-top: 6px;
   }
+
   #hidden {
     position: absolute;
     top: 0;
@@ -164,10 +190,12 @@
     visibility: hidden;
     pointer-events: none;
   }
+
   .wrap {
     width: 100%;
     margin: 15px auto 10px;
   }
+
   #submit {
     background: #1fc5b7;
     max-width: 100%;
@@ -177,13 +205,14 @@
     text-transform: uppercase;
     color: #fff;
     @include transition(background 0.15s linear);
+
     &:hover {
       background: lighten(saturate(#1fc5b7, 10%), 3%);
-      // background: #a81fc5;
       background: #007de1;
     }
   }
 }
+
 footer {
   small {
     opacity: 0.7;
