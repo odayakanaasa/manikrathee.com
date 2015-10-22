@@ -178,6 +178,9 @@
 
     li {
       list-style-type: none;
+      & + li {
+        margin-top: 10px;
+      }
     }
 
   }
@@ -221,6 +224,14 @@ footer {
     opacity: 0.7;
     font-style: italic;
   }
+}
+
+#on-medium {
+  display: inline-block;
+  margin-top: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.75em;
 }
 
 /*
