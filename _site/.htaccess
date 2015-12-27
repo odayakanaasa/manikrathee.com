@@ -5,10 +5,11 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^manikrathee.com [NC]
 RewriteRule ^(.*)$ http://www.manikrathee.com/$1 [L,R=301]
 
-Redirect /weeklyreads http://www.manikrathee.com/subscribe.html
-Redirect /sign-up http://www.manikrathee.com/subscribe.html
-Redirect /signup http://www.manikrathee.com/subscribe.html
-Redirect /weekly-reads http://www.manikrathee.com/subscribe.html
+Redirect /subscribe http://www.manikrathee.com/weeklyreads
+Redirect /subscribe.html http://www.manikrathee.com/weeklyreads
+Redirect /sign-up http://www.manikrathee.com/weeklyreads
+Redirect /signup http://www.manikrathee.com/weeklyreads
+Redirect /weekly-reads http://www.manikrathee.com/weeklyreads
 
 Redirect /photography http://photos.manikrathee.com/
 Redirect /photos http://photos.manikrathee.com/
