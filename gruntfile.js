@@ -138,6 +138,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-critical');
 
   grunt.registerTask('minify', ['newer:uglify:all']);
   grunt.registerTask('default', ['concurrent:base','concurrent:dev']);
