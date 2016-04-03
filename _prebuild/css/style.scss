@@ -1,22 +1,16 @@
 @charset "UTF-8";
 
 @import
-  , "modules/reset"
-  , "modules/core"
-    "modules/variables"
-  , "modules/mixins"
-  , "modules/animation"
-  , "modules/nav"
-  , "modules/logo"
+    "modules/_all"
   ;
 
 @import
-  , "imports/reset"
+    "imports/reset"
   , "imports/animation"
   ;
 
 @import
-  , "pages/404"
+    "pages/404"
   , "pages/about"
   , "pages/api"
   , "pages/awards"

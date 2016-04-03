@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import "modules/_all";
+
 #net-awards{
  @include ir;
  background: transparent url('../img/net-award.png') 0 0 no-repeat;
