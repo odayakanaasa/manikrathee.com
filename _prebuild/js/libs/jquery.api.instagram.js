@@ -20,7 +20,8 @@ if ( $('body').attr('id') === 'home' ){
 }
 
 // To Do - add an instagram phone hook to launch the app on mobile:
-// @"instagram://location?id=1
+// This does an alert-style redirect to the app -- make sure the use-case is stable
+// @"instagram://user?username=manikrathee
 // https://instagram.com/developer/iphone-hooks/
 
 

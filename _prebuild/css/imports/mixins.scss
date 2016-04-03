@@ -1,5 +1,10 @@
 /* Mixins */
 
+@mixin mq($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
 
 // RGBa colors with fallbacks
 // Usage

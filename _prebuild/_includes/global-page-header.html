@@ -5,13 +5,21 @@
         fade in up/down?
 
 
-        <a class="mountain-monday" href="/" title="manikrathee.com" itemprop="url"></a>
-        <h1 class="name">
-          Manik Rathee
-          Designer, Engineer, Photographer
-        </h1>
+        <div class="main-header">
+          <a class="mountain-monday" href="/" title="manikrathee.com" itemprop="url"></a>
+          <h1 class="name">
+            Manik Rathee
+            Designer, Engineer, Photographer
+          </h1>
 
-        {% include global-nav-list.html %}
+          {% include global-nav-list.html %}
+        </div>
+
+        {% if page.title %}
+        <h2 id="page-title" class="">
+          {{ page.title }}
+        </h2>
+        {% endif%}
 
       </header>
 

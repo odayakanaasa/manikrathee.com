@@ -1,0 +1,29 @@
+header {}
+
+.main-header {
+  opacity: 0.7;
+  @include transition(opacity 0.25s ease-in-out);
+
+  &:hover & {
+    opacity: 1;
+  }
+
+  #home & {
+    opacity: 1;
+  }
+}
+
+
+.main-nav {
+
+}
+.main-nav-list {
+
+  li {
+
+  }
+
+  a {
+
+  }
+}

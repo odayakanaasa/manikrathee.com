@@ -50,6 +50,22 @@ h5,
 h6 {
 
 }
+h1:not(.name,.custom) {
+  @include font-size(40);
+}
+h2 {
+  font-family: $serif;
+  @include font-size(28);
+  @include transition(font 0.25s ease-in-out);
+
+  @include mq(500px) {
+    @include font-size(40);
+  }
+
+  @include mq(800px) {
+    @include font-size(50);
+  }
+}
 
 blockquote {
 
@@ -59,4 +75,44 @@ blockquote {
 .logo,
 .mountain-monday {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODYuMiA0NDAuNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggY2xhc3M9InRyaWFuZ2xlIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIGQ9Ik0zNzQuMSAyMjIuOGwxMjEuNyAyMTAuNy0yNDMuNC4xSDlsMTIxLjctMjEwLjhMMjUyLjMgMTJ6Ii8+PHBhdGggY2xhc3M9InRyaWFuZ2xlLWJyb3RoZXIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgZD0iTTU2Ni4zIDIyMC43bDEyMy41IDIxMy43LTI0Ni4xLS40LTI0Ni0uNCAxMjIuNi0yMTMuNEw0NDIuOCA2Ljl6Ii8+PC9zdmc+);
+}
+
+#main { // shadow-container
+  position: relative;
+  background: #fff;
+  padding: 15px;
+  border-radius: 3px;
+  @include transition(padding 0.25s ease-in-out);
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    opacity: 0;
+    -webkit-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.06);
+    -moz-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.06);
+    box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.06);
+    @include transition(opacity 1s ease-in-out);
+  }
+
+  @include mq(500px) {
+    margin: 35px;
+    padding: 15px;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  @include mq(800px) {
+    max-width: 960px;
+    margin: 45px auto;
+    padding: 60px;
+  }
 }

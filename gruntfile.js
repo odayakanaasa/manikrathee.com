@@ -11,22 +11,6 @@ module.exports = function(grunt) {
         },
       },
     },
-    watch: {
-      css: {
-        files: '**/*.scss',
-        tasks: ['sass'],
-        options: {
-          debounceDelay: 750,
-        },
-      },
-      scripts: {
-        files: '**/*.js',
-        tasks: ['concat'],
-        options: {
-          debounceDelay: 750,
-        },
-      },
-    },
     concat: {
        options: {
          separator: ';',
@@ -60,11 +44,13 @@ module.exports = function(grunt) {
       //  nonull: true,
       //},
     },
+
     removelogging: {
       dist: {
         '_site/js/script.js' : ['_site/js/script.js'],
       }
     },
+
     uglify: {
       options: {
         mangle: true,
@@ -77,6 +63,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     jekyll: {
       dist: {
         options: {
@@ -84,6 +71,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     htmlmin: {
       dist: {
         options: {
@@ -113,6 +101,7 @@ module.exports = function(grunt) {
         },
       },
     },
+
     imagemin: {
       dynamic: {
         options: {
@@ -125,6 +114,30 @@ module.exports = function(grunt) {
           dest: '_site/img/',
         }]
       }
+    },
+
+    watch: {
+      template: {
+        files: '_prebuild/**/*.html',
+        tasks: ['jekyll', 'sass', 'concat'],
+        options: {
+          debounceDelay: 750,
+        },
+      },
+      css: {
+        files: '_prebuild/css/**/*',
+        tasks: ['newer:sass'],
+        options: {
+          debounceDelay: 750,
+        },
+      },
+      scripts: {
+        files: '_prebuild/js/**/*',
+        tasks: ['concat'],
+        options: {
+          debounceDelay: 750,
+        },
+      },
     },
   });
 
@@ -144,7 +157,10 @@ module.exports = function(grunt) {
   grunt.registerTask('minify', ['newer:uglify:all']);
 
   grunt.registerTask('default', ['newer:sass','newer:concat']);
-  grunt.registerTask('w', ['newer:sass','newer:concat','watch']);
+
+  grunt.registerTask('all', ['sass','concat']);
+
+  grunt.registerTask('w', ['jekyll','newer:sass','newer:concat','watch']);
 
   grunt.registerTask('production', ['jekyll','sass','concat','removelogging','uglify:javascript','htmlmin','imagemin']);
 };
