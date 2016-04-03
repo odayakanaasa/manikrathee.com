@@ -2,8 +2,16 @@ RewriteEngine On
 
 RewriteBase /
 
+# http://viralpatel.net/blogs/htaccess-directory-listing-enable-disable-allow-deny-prevent-htaccess-directory-listing/
+IndexIgnore *
+
 RewriteCond %{HTTP_HOST} ^manikrathee.com [NC]
 RewriteRule ^(.*)$ http://www.manikrathee.com/$1 [L,R=301]
+
+# HTTPS -- Not ready yet
+# RewriteEngine On
+# RewriteCond %{HTTPS} !on
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 Redirect /subscribe http://www.manikrathee.com/weeklyreads
 Redirect /subscribe.html http://www.manikrathee.com/weeklyreads
@@ -19,13 +27,10 @@ Redirect /exposure http://photos.manikrathee.com/
 Redirect /ios http://www.manikrathee.com/catalyst
 Redirect /iOS http://www.manikrathee.com/catalyst
 
-Redirect /+ http://plus.google.com/118337203025285830553/
-Redirect /gplus http://plus.google.com/118337203025285830553/
-Redirect /googleplus http://plus.google.com/118337203025285830553/
 Redirect /tumblr http://manikrathee.tumblr.com
 Redirect /twitter http://www.twitter.com/manikrathee
 Redirect /reading https://www.reading.am/ManikRathee/
-Redirect /instagram http://instagrid.me/manikrathee/
+Redirect /instagram https://www.instagram.com/manikrathee/
 Redirect /linkedin http://www.linkedin.com/in/manikrathee
 Redirect /github http://www.github.com/manikrathee
 Redirect /gist http://gist.github.com/manikrathee
@@ -33,8 +38,9 @@ Redirect /dribbble http://dribbble.com/manikrathee
 Redirect /foursquare http://foursquare.com/manikrathee
 Redirect /flickr http://www.flickr.com/photos/manikrathee
 Redirect /lastfm http://www.last.fm/user/mrathee
-Redirect /rdio https://play.spotify.com/user/manikrathee
+# Redirect /rdio https://play.spotify.com/user/manikrathee # RIP
 Redirect /spotify https://play.spotify.com/user/manikrathee
+Redirect /vsco http://vsco.co/manikrathee/grid
 
 AddType application/x-font-woff woff
 AddType application/x-font-ttf ttf
