@@ -1,13 +1,6 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    concurrent: {
-      base: ['jekyll'],
-      dev: ['newer:sass','newer:concat'],
-      prod: ['sass','concat','imagemin','removelogging'],
-      prod2: ['uglify:javascript','htmlmin'],
-      //prod2: ['uglify:javascript'],
-    },
     sass: {
       dist: {
         files: {
@@ -19,9 +12,20 @@ module.exports = function(grunt) {
       },
     },
     watch: {
-      files: ['_prebuild/**'],
-      tasks: ['concurrent:base','concurrent:dev'],
-      // tasks: ['jekyll','sass','concat'],
+      css: {
+        files: '**/*.scss',
+        tasks: ['sass'],
+        options: {
+          debounceDelay: 750,
+        },
+      },
+      scripts: {
+        files: '**/*.js',
+        tasks: ['concat'],
+        options: {
+          debounceDelay: 750,
+        },
+      },
     },
     concat: {
        options: {
@@ -100,7 +104,7 @@ module.exports = function(grunt) {
           '_site/livescribe.html': '_site/livescribe.html',
           '_site/manik-rathee-blog.html': '_site/manik-rathee-blog.html',
           '_site/manik-rathee-photography.html': '_site/manik-rathee-photography.html',
-          '_site/subscribe.html': '_site/subscribe.html',
+          '_site/weeklyreads/index.html': '_site/weeklyreads/index.html',
           '_site/universal-shanti.html': '_site/universal-shanti.html',
           '_site/about/index.html': '_site/about/index.html',
           '_site/resources/index.html': '_site/resources/index.html',
@@ -112,7 +116,7 @@ module.exports = function(grunt) {
     imagemin: {
       dynamic: {
         options: {
-          optimizationLevel: 7,
+          optimizationLevel: 2,
           progressive: true,
         },
         files: [{
@@ -132,12 +136,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks("grunt-remove-logging");
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-newer');
-  grunt.loadNpmTasks('grunt-critical');
+  // grunt.loadNpmTasks('grunt-critical'); // To Do -- implement before launch
+
+  // Consider moving to gulp -- enough time has passed that data and support comparisons should be stable.
 
   grunt.registerTask('minify', ['newer:uglify:all']);
-  grunt.registerTask('default', ['concurrent:base','concurrent:dev']);
-  grunt.registerTask('w', ['concurrent:base','concurrent:dev','watch']);
-  grunt.registerTask('production', ['concurrent:base','concurrent:prod','concurrent:prod2']);
+
+  grunt.registerTask('default', ['newer:sass','newer:concat']);
+  grunt.registerTask('w', ['newer:sass','newer:concat','watch']);
+
+  grunt.registerTask('production', ['jekyll','sass','concat','removelogging','uglify:javascript','htmlmin','imagemin']);
 };

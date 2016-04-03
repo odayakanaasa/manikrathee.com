@@ -1,6 +1,6 @@
-name: "Manik Rathee &#007C Designer"
-description: "Design &amp; Development"
-url: http://manikrathee.com/blog
+name: "Manik Rathee"
+description: "Designer&#007C Photographer"
+url: http://manikrathee.com/
 
 #gems:        []
 #timezone:    nil
@@ -13,18 +13,17 @@ permalink: /blog/posts/:year/:month/:day/:title.html
 exclude: ['gruntfile.js', 'package.json', '/node_modules', '*.psd']
 keep_files:  ['.git','.htaccess','.well-known']
 
-
 safe: false
 lsi: false
 markdown: kramdown
 highlighter: true
 
-# sitemap:
-#     file: "/sitemap.xml"
-#     include_posts:
-#         - "/index.html"
-#     change_frequency_name: "change_frequency"
-#     priority_name: "priority"
+sitemap:
+    file: "/sitemap.xml"
+    include_posts:
+        - "/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
 
-host:        127.0.0.1
-port:        4000
+host: 127.0.0.1
+port: 4000
