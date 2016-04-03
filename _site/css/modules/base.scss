@@ -95,12 +95,10 @@ blockquote {
     height: 100%;
     border-radius: 3px;
     opacity: 0;
-
     -webkit-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.06);
     -moz-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.06);
     box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.06);
-
-    @include transition(opacity 0.25s ease-in-out);
+    @include transition(opacity 1s ease-in-out);
   }
 
   @include mq(500px) {
@@ -110,5 +108,11 @@ blockquote {
     &:after {
       opacity: 1;
     }
+  }
+
+  @include mq(800px) {
+    max-width: 960px;
+    margin: 45px auto;
+    padding: 60px;
   }
 }

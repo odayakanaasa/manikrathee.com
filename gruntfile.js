@@ -156,7 +156,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('minify', ['newer:uglify:all']);
 
-  grunt.registerTask('default', ['newer:sass','newer:concat']);
+  grunt.registerTask('default', ['jekyll','newer:sass','newer:concat']);
 
   grunt.registerTask('all', ['sass','concat']);
 
