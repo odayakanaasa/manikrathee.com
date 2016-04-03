@@ -1,12 +1,10 @@
 @charset "UTF-8";
 
 @import
-    "./normalize"
-  , "./becca"
-  , "./awards"
-  , "./api"
-  , "./logo"
-  , "./nav"
+    "./variables"
+  , "./mixins"
+  , "./animation"
+  , "./print"
   ;
 
 

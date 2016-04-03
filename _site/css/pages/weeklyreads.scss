@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "modules/_all";
+@import "imports/_all";
 
 
 
@@ -276,7 +276,7 @@ footer {
     footer {
       @include flipInX;
       & > * {
-        @include animate-slow;
+        @include animate-custom(2s);
         @include fadeInDown;
       }
     }

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "modules/_all";
+@import "imports/_all";
 
 /* Blog Styles */
 .blog {
@@ -532,12 +532,12 @@
         }
       }
       #logo{
-        @include animate-fast;
+        @include animate;
         @include fadeIn;
       }
       p#back{
         opacity: 0;
-        @include animate-fast;
+        @include animate;
         @include fadeOutDown;
       }
     }

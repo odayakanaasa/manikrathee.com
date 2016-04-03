@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "modules/_all";
+@import "imports/_all";
 
 #net-awards{
  @include ir;
@@ -13,7 +13,7 @@
  z-index: 500;
  @include animate;
  @include fadeInDown;
- @include delay;
+ @include delay-custom(2s);
 }
 
 #css-award{

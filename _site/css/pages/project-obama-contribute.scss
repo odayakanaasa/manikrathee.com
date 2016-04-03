@@ -1,12 +1,10 @@
 @charset "UTF-8";
-@import "modules/_all";
+@import "imports/_all";
 
 
 
 /* Project: Obama - Contribute */
 
-
-@import "./project-obama-contribute-sequential";
 
 
 
@@ -29,7 +27,7 @@
       text-align: center;
       img {
         @include animate;
-        @include delay;
+        @include delay-custom(1s);
         @include fadeInUp;
         // width: 252px;
         // margin-top: 49px;

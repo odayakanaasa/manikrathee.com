@@ -26,6 +26,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
 }
+
+@mixin animate-custom($time) {
+  -webkit-animation: $time ease;
+     -moz-animation: $time ease;
+      -ms-animation: $time ease;
+       -o-animation: $time ease;
+          animation: $time ease;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+}
 @mixin delay-custom($time) {
   -webkit-animation-delay: $time;
   -moz-animation-delay: $time;

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "modules/_all";
+@import "imports/_all";
 
 
 
@@ -10,10 +10,6 @@
    Copyright 2012 Obama for America. All rights reserved.
 */
 
-
-@import "import/animation";
-@import "import/core";
-@import "import/mixins";
 
 $light-blue: #008fc5;
 $next-blue: #1297c9;

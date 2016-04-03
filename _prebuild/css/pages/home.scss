@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "modules/_all";
+@import "imports/_all";
 
 a{
 	color: #f3f3f3;
@@ -144,7 +144,7 @@ a{
         @include transition(opacity 0.25s ease-in-out);
       }
       &.fade{
-        @include animate-custom(0.05s);
+        @include animate;
         @include fadeOut;
         // opacity: 0;
         // & > header,
