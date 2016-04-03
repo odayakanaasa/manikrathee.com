@@ -1,0 +1,25 @@
+#net-awards{
+ @include ir;
+ background: transparent url('../img/net-award.png') 0 0 no-repeat;
+ background-size: 100%;
+ position: absolute;
+ top: 0;
+ right: 0;
+ height: 150px;
+ width: 150px;
+ z-index: 500;
+ @include animate;
+ @include fadeInDown;
+ @include delay;
+}
+
+#css-award{
+ display: block;
+ background: transparent url('../img/css-award.png') no-repeat top right;
+ position: absolute;
+ top: 0;
+ right: 0;
+ height: 164px;
+ width: 69px;
+ z-index: 100;
+}

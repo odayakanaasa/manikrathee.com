@@ -5,13 +5,13 @@ module.exports = function(grunt) {
       base: ['jekyll'],
       dev: ['newer:sass','newer:concat'],
       prod: ['sass','concat','imagemin','removelogging'],
-      // prod2: ['uglify:javascript','htmlmin'],
-      prod2: ['uglify:javascript'],
+      prod2: ['uglify:javascript','htmlmin'],
+      //prod2: ['uglify:javascript'],
     },
     sass: {
       dist: {
         files: {
-          '_site/css/style.css' : ['_site/css/style.scss'],
+          '_site/css/style.css' : ['_prebuild/css/style.scss'],
         },
         options: {
           style: 'compressed'
@@ -30,14 +30,10 @@ module.exports = function(grunt) {
        main: {
         src: [
           '_site/js/libs/analytics.js',
-          // '_site/js/libs/jquery.backstretch.js',
           '_site/js/libs/jquery.api.twitter.js',
           '_site/js/libs/jquery.api.last.fm.js',
           '_site/js/libs/jquery.api.instagram.js',
           '_site/js/libs/jquery.twitter.js',
-          '_site/js/libs/jquery.flexslider.js',
-          '_site/js/libs/jquery.prettyForms.js',
-          // '_site/js/libs/konami.js',
           '_site/js/libs/jquery.withinViewport_base.js',
           '_site/js/libs/jquery.withinViewport.js',
           '_site/js/libs/script.js',
@@ -45,20 +41,20 @@ module.exports = function(grunt) {
         dest: '_site/js/script.js',
         nonull: true,
       },
-      blog: {
-        src: [
-          '_site/js/blog/picturefill.js',
-          '_site/js/blog/lazyload.js',
-          '_site/js/blog/lettering.js',
-          '_site/js/blog/fittext.js',
-          '_site/js/blog/fitvids.js',
-          '_site/js/blog/scrolldepth.js',
-          '_site/js/blog/riveted.js',
-          '_site/js/blog/custom.js',
-        ],
-        dest: '_site/js/script-blog.js',
-        nonull: true,
-      },
+      //blog: {
+      //  src: [
+      //    '_site/js/blog/picturefill.js',
+      //    '_site/js/blog/lazyload.js',
+      //    '_site/js/blog/lettering.js',
+      //    '_site/js/blog/fittext.js',
+      //    '_site/js/blog/fitvids.js',
+      //    '_site/js/blog/scrolldepth.js',
+      //    '_site/js/blog/riveted.js',
+      //    '_site/js/blog/custom.js',
+      //  ],
+      //  dest: '_site/js/script-blog.js',
+      //  nonull: true,
+      //},
     },
     removelogging: {
       dist: {

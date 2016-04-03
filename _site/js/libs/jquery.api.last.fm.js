@@ -79,7 +79,7 @@ var LastFMStatus = {
     }
 
     // Set rdioActive to true so logofyAPI and activate API can fire
-    rdioActive = true;
-    centerAPI();
+    // rdioActive = true;
+    // centerAPI();
   }
 };

@@ -1,0 +1,59 @@
+::-moz-selection { background: #76A3E1; color: #fff; text-shadow: none; }
+::selection  { background: #76A3E1; color: #fff; text-shadow: none; }
+
+a:link  { -webkit-tap-highlight-color: #76A3E1; }
+
+
+html {
+  font-size: 62.5%; // Base 10 for REM sizing
+    // See: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: $grey;
+  font-family: $sans;
+  color: #4C4C4C;
+  -webkit-backface-visibility: hidden;
+  text-rendering: optimizelegibility;
+}
+
+dl, menu, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+  border-bottom: 1px solid #CBCBCB;
+  padding-bottom: 0;
+  text-decoration: none;
+  @include transition(color 0.15s ease-in-out);
+}
+
+p {
+  @include font-size(12);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+}
+
+blockquote {
+
+}
+
+
+.logo,
+.mountain-monday {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODYuMiA0NDAuNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggY2xhc3M9InRyaWFuZ2xlIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIGQ9Ik0zNzQuMSAyMjIuOGwxMjEuNyAyMTAuNy0yNDMuNC4xSDlsMTIxLjctMjEwLjhMMjUyLjMgMTJ6Ii8+PHBhdGggY2xhc3M9InRyaWFuZ2xlLWJyb3RoZXIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgZD0iTTU2Ni4zIDIyMC43bDEyMy41IDIxMy43LTI0Ni4xLS40LTI0Ni0uNCAxMjIuNi0yMTMuNEw0NDIuOCA2Ljl6Ii8+PC9zdmc+);
+}
