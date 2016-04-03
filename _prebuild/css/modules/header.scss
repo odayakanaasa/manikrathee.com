@@ -1,0 +1,25 @@
+// Main header
+// Shared with all pages
+
+
+#page-header {
+  overflow: hidden;
+}
+
+.main-header {
+  opacity: 0.7;
+  @include transition(opacity 0.25s ease-in-out);
+
+  &:hover & {
+    opacity: 1;
+  }
+
+  #home & {
+    opacity: 1;
+  }
+
+  @include mq(768px) {
+    float: left;
+    width: 50%;
+  }
+}
