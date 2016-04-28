@@ -18,12 +18,13 @@ module.exports = function(grunt) {
        main: {
         src: [
           '_site/js/libs/analytics.js',
+          '_site/js/libs/mo.min.js',
+          '_site/js/libs/jquery.withinViewport_base.js',
+          '_site/js/libs/jquery.withinViewport.js',
           '_site/js/libs/jquery.api.twitter.js',
           '_site/js/libs/jquery.api.last.fm.js',
           '_site/js/libs/jquery.api.instagram.js',
           '_site/js/libs/jquery.twitter.js',
-          '_site/js/libs/jquery.withinViewport_base.js',
-          '_site/js/libs/jquery.withinViewport.js',
           '_site/js/libs/script.js',
         ],
         dest: '_site/js/script.js',
@@ -67,7 +68,8 @@ module.exports = function(grunt) {
     jekyll: {
       dist: {
         options: {
-          config: '_config.yml'
+          config: '_config.yml',
+          incremental: true,
         }
       }
     },
@@ -102,6 +104,21 @@ module.exports = function(grunt) {
       },
     },
 
+    critical: {
+      test: {
+        options: {
+          base: './',
+          css: [
+            '_site/css/style.css',
+          ],
+          width: 320,
+          height: 70
+        },
+        src: '_site/index.html',
+        dest: '_site/index.html',
+      }
+    },
+
     imagemin: {
       dynamic: {
         options: {
@@ -117,27 +134,34 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      template: {
-        files: '_prebuild/**/*.html',
-        tasks: ['jekyll', 'sass', 'concat'],
+      // template: {
+      //   files: '_prebuild/**/*.html',
+      //   tasks: ['jekyll', 'sass', 'concat'],
+      //   options: {
+      //     debounceDelay: 450,
+      //   },
+      // },
+      main: {
+        files: '_prebuild/**/*',
+        tasks: ['sass','concat'],
         options: {
-          debounceDelay: 750,
+          debounceDelay: 450,
         },
       },
-      css: {
-        files: '_prebuild/css/**/*',
-        tasks: ['newer:sass'],
-        options: {
-          debounceDelay: 750,
-        },
-      },
-      scripts: {
-        files: '_prebuild/js/**/*',
-        tasks: ['concat'],
-        options: {
-          debounceDelay: 750,
-        },
-      },
+      // css: {
+      //   files: '_prebuild/**/*',
+      //   tasks: ['sass'],
+      //   options: {
+      //     debounceDelay: 450,
+      //   },
+      // },
+      // scripts: {
+      //   files: '_prebuild/**/*.html','_prebuild/js/**/*',
+      //   tasks: ['concat'],
+      //   options: {
+      //     debounceDelay: 450,
+      //   },
+      // },
     },
   });
 
@@ -150,9 +174,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-remove-logging");
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-newer');
-  // grunt.loadNpmTasks('grunt-critical'); // To Do -- implement before launch
+  grunt.loadNpmTasks('grunt-critical');
 
   // Consider moving to gulp -- enough time has passed that data and support comparisons should be stable.
+
+  var critical = require('critical');
 
   grunt.registerTask('minify', ['newer:uglify:all']);
 
@@ -160,7 +186,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('all', ['sass','concat']);
 
-  grunt.registerTask('w', ['jekyll','newer:sass','newer:concat','watch']);
+  // grunt.registerTask('w', ['jekyll','newer:sass','newer:concat','watch']);
+  grunt.registerTask('w', ['newer:sass','newer:concat','watch']);
 
-  grunt.registerTask('production', ['jekyll','sass','concat','removelogging','uglify:javascript','htmlmin','imagemin']);
+  grunt.registerTask('production', ['jekyll','sass','concat','removelogging','uglify:javascript','critical','htmlmin','imagemin']);
 };

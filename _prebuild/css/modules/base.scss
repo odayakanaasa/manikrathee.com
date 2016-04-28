@@ -10,6 +10,10 @@ a:link  { -webkit-tap-highlight-color: #999; }
 html {
   font-size: 62.5%; // Base 10 for REM sizing
     // See: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+  text-rendering: optimizelegibility;
+  font-feature-settings: "liga", "hist", "onum";
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
 }
 
 html,
@@ -20,9 +24,9 @@ body {
 body {
   background: $grey;
   font-family: $sans;
-  color: #4C4C4C;
+  @include font-size(15);
+  color: #444444;
   -webkit-backface-visibility: hidden;
-  text-rendering: optimizelegibility;
 }
 
 dl, menu, ol, ul {
@@ -31,15 +35,23 @@ dl, menu, ol, ul {
 }
 
 a {
+  color: $dark-grey;
   border-bottom: 1px solid #CBCBCB;
   padding-bottom: 0;
   text-decoration: none;
   @include transition(color 0.15s ease-in-out);
+
+  &:hover {
+    .no-touch & {
+      color: #000;
+    }
+  }
 }
 
 p {
-  @include font-size(12);
+  @include font-size(15);
   line-height: 1.6;
+  margin: 0 0 1.15rem 0;
 }
 
 h1,
@@ -48,7 +60,8 @@ h3,
 h4,
 h5,
 h6 {
-
+  line-height: 1.6;
+  margin: 0 0 1.2rem 0;
 }
 h1:not(.name,.custom) {
   @include font-size(40);
@@ -77,6 +90,7 @@ blockquote {
   background: #fff;
   padding: 15px;
   border-radius: 3px;
+  @include box;
   @include transition(padding 0.25s ease-in-out);
 
   &:after {
@@ -106,14 +120,14 @@ blockquote {
   }
 
   @include mq(800px) {
-    max-width: 960px;
-    margin-top: 45px;
-    margin-bottom: 45px;
-    padding: 60px;
+    max-width: 1140px;
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+    padding: $spacer*1.5;
   }
 
   @include mq(960px) {
-    margin: 45px auto;
+    margin: ($spacer*1.5) auto $spacer;
   }
 
 }

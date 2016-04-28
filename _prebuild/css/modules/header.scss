@@ -1,25 +1,87 @@
+@charset "UTF-8";
+@import "imports/_all";
+
 // Main header
 // Shared with all pages
 
 
-#page-header {
+[id=page-header] {
   overflow: hidden;
-}
 
-.main-header {
-  opacity: 0.7;
-  @include transition(opacity 0.25s ease-in-out);
+  .main-header {
+    opacity: 0.7;
+    @include transition(opacity 0.25s ease-in-out);
 
-  &:hover & {
-    opacity: 1;
+    &:hover & {
+      opacity: 1;
+    }
+
+    #home & {
+      opacity: 1;
+    }
+
+    @include mq(768px) {
+      float: left;
+      width: 50%;
+    }
   }
 
-  #home & {
-    opacity: 1;
+  .mountain-monday {
+    margin-bottom: $spacer/2; // 20px
   }
 
-  @include mq(768px) {
-    float: left;
-    width: 50%;
+  .title {
+    margin-bottom: $spacer;
+
+    span {
+      display: block;
+      line-height: 1;
+    }
+
+    .name {
+      font-weight: 700;
+      @include font-size(22);
+    }
+
+    .greeting {
+      font-weight: 100;
+      @include font-size(18);
+    }
   }
-}
+
+  #who-is {
+    // shown in header on right side, only for homepage
+    float: right;
+    margin-top: $spacer*1.25; // push content to the baseline of the title
+  }
+
+  .current-title {
+    font-weight: 500;
+    @include font-size(18);
+    margin-bottom: $spacer;
+  }
+
+  .previous-heading {
+    margin: 0;
+    color: $light-grey;
+    text-transform: uppercase;
+    @include font-size(12);
+    line-height: 1;
+  }
+
+  .previous {
+    li {
+      list-style-type: none;
+    }
+
+    li,
+    a {
+      font-weight: 100;
+      color: $light-grey;
+    }
+  }
+
+} // #page-header
+
+
+
