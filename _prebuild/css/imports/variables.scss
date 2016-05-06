@@ -7,7 +7,7 @@
   $grey: #EFF0F0;
   $dark-grey: #444444;
 
-  $peak-color: #65D97D;
+  $peak-color: #27415F;
 
   $copy: $dark-grey;
   $subcopy: $off-white;
@@ -29,3 +29,6 @@
   $standard-unit: $base-unit * 2; // For use with typography, line-heights, etc.
   $spacer: $base-unit * 20; // For use with layout, sections, etc.
   $divider: 1px solid rgba(229,229,229,1); // #E5E5E5
+
+  // Branding
+  $logo-svg-encoded: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODYuMiA0NDAuNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggY2xhc3M9InRyaWFuZ2xlIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIGQ9Ik0zNzQuMSAyMjIuOGwxMjEuNyAyMTAuNy0yNDMuNC4xSDlsMTIxLjctMjEwLjhMMjUyLjMgMTJ6Ii8+PHBhdGggY2xhc3M9InRyaWFuZ2xlLWJyb3RoZXIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgZD0iTTU2Ni4zIDIyMC43bDEyMy41IDIxMy43LTI0Ni4xLS40LTI0Ni0uNCAxMjIuNi0yMTMuNEw0NDIuOCA2Ljl6Ii8+PC9zdmc+';
