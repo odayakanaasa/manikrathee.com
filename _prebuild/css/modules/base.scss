@@ -29,52 +29,16 @@ body {
   color: #444444;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
-}
-
-dl, menu, ol, ul {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-  color: $dark-grey;
-  border-bottom: 1px solid #CBCBCB;
-  padding-bottom: 0;
-  text-decoration: none;
-  @include transition(color 0.15s ease-in-out);
-
-  &:hover {
-    .no-touch & {
-      color: #000;
-    }
-  }
-}
-
-p {
-  @include font-size(15);
-  line-height: 1.6;
-  margin: 0 0 1.15rem 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.6;
-  margin: 0 0 1.2rem 0;
-}
-h1:not(.name,.custom) {
-  @include font-size(40);
-}
-h2 {
-  font-family: $serif;
-  @include font-size(28);
-  @include transition(font 0.25s ease-in-out);
 
   @include mq(500px) {
-    @include font-size(40);
+    margin: 35px;
+    padding: 15px;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
   @include mq(800px) {
     max-width: 1140px;
     margin-top: $spacer;
@@ -87,12 +51,14 @@ h2 {
   }
 }
 
-blockquote {
-
-}
-
 
 #main { // shadow-container
+  display: flex; // http://caniuse.com/#feat=flexbox
+
+  // justify-content: space-between;
+  // align-items: center;
+  // flex-wrap: wrap;
+
   position: relative;
   background: #fff;
   padding: 15px;
@@ -118,7 +84,6 @@ blockquote {
   }
 
   @include mq(500px) {
-    margin: 35px;
     padding: 15px;
 
     &:after {
@@ -128,13 +93,12 @@ blockquote {
 
   @include mq(800px) {
     max-width: 1140px;
-    margin-top: $spacer;
-    margin-bottom: $spacer;
-    padding: $spacer*1.5;
+    padding: $spacer * 1.5;
   }
 
-  @include mq(960px) {
-    margin: ($spacer*1.5) auto $spacer;
+}
+
+
 dl, menu, ol, ul {
     margin: 0;
     padding: 0;
@@ -172,4 +136,13 @@ blockqoute {
 
 h1,
 h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.6;
+}
+
+p {
+  @include font-size(15);
 }
