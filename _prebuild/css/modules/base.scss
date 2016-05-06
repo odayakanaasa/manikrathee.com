@@ -8,6 +8,7 @@ a:link  { -webkit-tap-highlight-color: #999; }
 
 
 html {
+  background: $peakColor;
   font-size: 62.5%; // Base 10 for REM sizing
     // See: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
   text-rendering: optimizelegibility;
@@ -73,10 +74,15 @@ h2 {
 
   @include mq(500px) {
     @include font-size(40);
+  @include mq(800px) {
+    max-width: 1140px;
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+    padding: $spacer*1.5;
   }
 
-  @include mq(800px) {
-    @include font-size(50);
+  @include mq(960px) {
+    margin: ($spacer*1.5) auto;
   }
 }
 

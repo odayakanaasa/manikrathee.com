@@ -74,6 +74,7 @@
   .previous {
     li {
       list-style-type: none;
+      margin-top: $base-unit;
     }
 
     li,
@@ -95,5 +96,7 @@
       float: left;
       width: 50%;
     }
+
+  }
 
 } // 768
