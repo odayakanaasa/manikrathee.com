@@ -2,15 +2,39 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     sass: {
-      dist: {
+      dev: {
         files: {
           '_site/css/style.css' : ['_prebuild/css/style.scss'],
         },
         options: {
-          style: 'compressed'
+          style: 'nested',
+        },
+      },
+      production: {
+        files: {
+          '_site/css/style.css' : ['_prebuild/css/style.scss'],
+        },
+        options: {
+          style: 'compressed',
         },
       },
     },
+
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 4 versions'],
+        cascade: true,
+        remove: true,
+      },
+      dist: {
+       files: {
+        '_site/css/style.css' : '_prebuild/css/style.scss'
+       }
+      },
+    },
+
+
     concat: {
        options: {
          separator: ';',
@@ -25,32 +49,21 @@ module.exports = function(grunt) {
           '_site/js/libs/jquery.api.last.fm.js',
           '_site/js/libs/jquery.api.instagram.js',
           '_site/js/libs/jquery.twitter.js',
+          '_site/js/sequential.js',
           '_site/js/libs/script.js',
         ],
         dest: '_site/js/script.js',
         nonull: true,
       },
-      //blog: {
-      //  src: [
-      //    '_site/js/blog/picturefill.js',
-      //    '_site/js/blog/lazyload.js',
-      //    '_site/js/blog/lettering.js',
-      //    '_site/js/blog/fittext.js',
-      //    '_site/js/blog/fitvids.js',
-      //    '_site/js/blog/scrolldepth.js',
-      //    '_site/js/blog/riveted.js',
-      //    '_site/js/blog/custom.js',
-      //  ],
-      //  dest: '_site/js/script-blog.js',
-      //  nonull: true,
-      //},
     },
+
 
     removelogging: {
       dist: {
-        '_site/js/script.js' : ['_site/js/script.js'],
+        '_site/js/script.js' : '_site/js/script.js',
       }
     },
+
 
     uglify: {
       options: {
@@ -59,11 +72,11 @@ module.exports = function(grunt) {
       },
       javascript: {
         files: {
-          '_site/js/script.js' : ['_site/js/script.js'],
-          '_site/js/sequential.js' : ['_site/js/sequential.js'],
+          '_site/js/script.js' : ['_site/js/script.js']
         }
       }
     },
+
 
     jekyll: {
       dist: {
@@ -73,6 +86,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
 
     htmlmin: {
       dist: {
@@ -104,6 +118,7 @@ module.exports = function(grunt) {
       },
     },
 
+
     critical: {
       test: {
         options: {
@@ -119,6 +134,7 @@ module.exports = function(grunt) {
       }
     },
 
+
     imagemin: {
       dynamic: {
         options: {
@@ -132,6 +148,7 @@ module.exports = function(grunt) {
         }]
       }
     },
+
 
     watch: {
       // template: {
@@ -163,6 +180,18 @@ module.exports = function(grunt) {
       //   },
       // },
     },
+
+
+    pagespeed: {
+      options: {
+        nokey: true,
+        url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
+        locale: "en_US",
+        strategy: ["desktop","mobile"],
+        threshold: 85
+      },
+    }
+
   });
 
   grunt.loadNpmTasks('grunt-jekyll');
@@ -175,19 +204,21 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-critical');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-pagespeed');
 
   // Consider moving to gulp -- enough time has passed that data and support comparisons should be stable.
 
   var critical = require('critical');
 
-  grunt.registerTask('minify', ['newer:uglify:all']);
+  grunt.registerTask('minify', ['[sass:production]','uglify:all']);
 
-  grunt.registerTask('default', ['jekyll','newer:sass','newer:concat']);
+  grunt.registerTask('default', ['jekyll','sass:dev','newer:concat']);
 
-  grunt.registerTask('all', ['sass','concat']);
+  grunt.registerTask('all', ['[sass:dev]','autoprefixer','concat']);
 
   // grunt.registerTask('w', ['jekyll','newer:sass','newer:concat','watch']);
-  grunt.registerTask('w', ['newer:sass','newer:concat','watch']);
+  grunt.registerTask('w', ['sass:dev','autoprefixer','concat','watch']);
 
-  grunt.registerTask('production', ['jekyll','sass','concat','removelogging','uglify:javascript','critical','htmlmin','imagemin']);
+  grunt.registerTask('production', ['jekyll','sass:production','autoprefixer','concat','removelogging','uglify:javascript','critical','htmlmin','imagemin','pagespeed']);
 };

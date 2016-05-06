@@ -33,7 +33,8 @@ body {
   &:after {
     position: fixed;
     bottom: calc(100% + 50px);
-    left: ;
+    left: 50%;
+    translate: transform3d(-50%,0,0);
     background-image: url($logo-svg-encoded);
     background-size: 50px 50px;
     background-position: bottom center;

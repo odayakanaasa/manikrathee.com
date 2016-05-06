@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-autoprefixer": "^3.0.4",
     "grunt-cli": "~0.1.9",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-concat": "~0.3.0",
@@ -25,7 +26,9 @@
     "grunt-critical": "^0.1.7",
     "grunt-jekyll": "~0.4.0",
     "grunt-newer": "^1.1.0",
+    "grunt-pagespeed": "^2.0.0",
     "grunt-perfbudget": "^0.1.6",
+    "grunt-postcss": "^0.8.0",
     "grunt-remove-logging": "~0.1.1",
     "grunt-uncss": "~0.1.5"
   }
