@@ -9,7 +9,12 @@
   flex-direction: column;
   overflow: hidden;
 
+  @include mq(768px) {
+    flex-direction: row;
+  }
+
   .main-header {
+    justify-content: flex-start;
     opacity: 0.7;
     @include transition(opacity 0.25s ease-in-out);
 
@@ -23,16 +28,12 @@
 
   }
 
-  @include mq(768px) {
-    flex-direction: row;
-  }
 
   .mountain-monday {
     margin-bottom: $spacer/2; // 20px
   }
 
   [id=page-title] {
-    justify-content: flex-start;
     margin-bottom: $spacer;
 
     > * {
