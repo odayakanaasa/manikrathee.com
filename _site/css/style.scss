@@ -1,14 +1,10 @@
 @charset "UTF-8";
 
-@import "imports/_all";
-@import "modules/_all";
+@import "imports/all";
+@import "modules/all";
 
 @import
-    "modules/normalize"
-  , "modules/base"
-  , "modules/nav"
-  , "modules/logo"
-  , "pages/404"
+    "pages/404"
   , "pages/about"
   , "pages/blog"
   , "pages/home"
