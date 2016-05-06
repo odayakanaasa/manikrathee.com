@@ -20,38 +20,34 @@
       opacity: 1;
     }
 
-    @include mq(768px) {
-      float: left;
-      width: 50%;
-    }
   }
 
   .mountain-monday {
     margin-bottom: $spacer/2; // 20px
   }
 
-  .title {
+  [id=page-title] {
     margin-bottom: $spacer;
 
-    span {
+    > * {
       display: block;
       line-height: 1;
     }
 
-    .name {
-      font-weight: 700;
+    [id=name] {
       @include font-size(22);
+      font-weight: 700;
     }
 
-    .greeting {
-      font-weight: 100;
+    [id=greeting] {
       @include font-size(18);
+      font-weight: 100;
     }
   }
 
   #who-is {
     // shown in header on right side, only for homepage
-    float: right;
+    float: right; // TODO: flexbox?
     margin-top: $spacer*1.25; // push content to the baseline of the title
   }
 
@@ -85,3 +81,13 @@
 
 
 
+@include mq(768px) {
+
+  [id=page-header] {
+
+    .main-header {
+      float: left;
+      width: 50%;
+    }
+
+} // 768
