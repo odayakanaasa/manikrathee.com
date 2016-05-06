@@ -8,7 +8,7 @@ a:link  { -webkit-tap-highlight-color: #999; }
 
 
 html {
-  background: $peakColor;
+  background-color: $peak-color;
   font-size: 62.5%; // Base 10 for REM sizing
     // See: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
   text-rendering: optimizelegibility;
@@ -31,8 +31,7 @@ body {
   -webkit-backface-visibility: hidden;
 
   @include mq(500px) {
-    margin: 35px;
-    padding: 15px;
+    padding: $spacer;
 
     &:after {
       opacity: 1;
@@ -40,14 +39,7 @@ body {
   }
 
   @include mq(800px) {
-    max-width: 1140px;
-    margin-top: $spacer;
-    margin-bottom: $spacer;
     padding: $spacer*1.5;
-  }
-
-  @include mq(960px) {
-    margin: ($spacer*1.5) auto;
   }
 }
 
