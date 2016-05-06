@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "imports/_all";
+@import "./imports/all";
 
 ::-moz-selection { background: #999; color: #fff; text-shadow: none; }
 ::selection  { background: #999; color: #fff; text-shadow: none; }
@@ -8,6 +8,7 @@ a:link  { -webkit-tap-highlight-color: #999; }
 
 
 html {
+  background: $peakColor;
   font-size: 62.5%; // Base 10 for REM sizing
     // See: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
   text-rendering: optimizelegibility;
@@ -26,66 +27,38 @@ body {
   font-family: $sans;
   @include font-size(15);
   color: #444444;
+  text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
-}
-
-dl, menu, ol, ul {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-  color: $dark-grey;
-  border-bottom: 1px solid #CBCBCB;
-  padding-bottom: 0;
-  text-decoration: none;
-  @include transition(color 0.15s ease-in-out);
-
-  &:hover {
-    .no-touch & {
-      color: #000;
-    }
-  }
-}
-
-p {
-  @include font-size(15);
-  line-height: 1.6;
-  margin: 0 0 1.15rem 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.6;
-  margin: 0 0 1.2rem 0;
-}
-h1:not(.name,.custom) {
-  @include font-size(40);
-}
-h2 {
-  font-family: $serif;
-  @include font-size(28);
-  @include transition(font 0.25s ease-in-out);
 
   @include mq(500px) {
-    @include font-size(40);
+    margin: 35px;
+    padding: 15px;
+
+    &:after {
+      opacity: 1;
+    }
   }
 
   @include mq(800px) {
-    @include font-size(50);
+    max-width: 1140px;
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+    padding: $spacer*1.5;
   }
-}
 
-blockquote {
-
+  @include mq(960px) {
+    margin: ($spacer*1.5) auto;
+  }
 }
 
 
 #main { // shadow-container
+  display: flex; // http://caniuse.com/#feat=flexbox
+
+  // justify-content: space-between;
+  // align-items: center;
+  // flex-wrap: wrap;
+
   position: relative;
   background: #fff;
   padding: 15px;
@@ -111,7 +84,6 @@ blockquote {
   }
 
   @include mq(500px) {
-    margin: 35px;
     padding: 15px;
 
     &:after {
@@ -121,13 +93,56 @@ blockquote {
 
   @include mq(800px) {
     max-width: 1140px;
-    margin-top: $spacer;
-    margin-bottom: $spacer;
-    padding: $spacer*1.5;
+    padding: $spacer * 1.5;
   }
 
-  @include mq(960px) {
-    margin: ($spacer*1.5) auto $spacer;
-  }
+}
 
+
+dl, menu, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+  color: $dark-grey;
+  padding-bottom: 0;
+  text-decoration: none;
+  border-bottom: 1px solid #CBCBCB;
+  @include transition(color 0.15s ease-in-out);
+
+  &:hover {
+    .no-touch & {
+      color: #000;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockqoute {
+  margin: 0 0 $base-unit 0;
+  line-height: 1.6;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.6;
+}
+
+p {
+  @include font-size(15);
 }

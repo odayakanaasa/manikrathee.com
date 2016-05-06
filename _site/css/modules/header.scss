@@ -1,11 +1,12 @@
 @charset "UTF-8";
-@import "imports/_all";
+@import "./imports/all";
 
 // Main header
 // Shared with all pages
 
 
 [id=page-header] {
+  flex-direction: column;
   overflow: hidden;
 
   .main-header {
@@ -22,11 +23,16 @@
 
   }
 
+  @include mq(768px) {
+    flex-direction: row;
+  }
+
   .mountain-monday {
     margin-bottom: $spacer/2; // 20px
   }
 
   [id=page-title] {
+    justify-content: flex-start;
     margin-bottom: $spacer;
 
     > * {
@@ -47,7 +53,7 @@
 
   #who-is {
     // shown in header on right side, only for homepage
-    float: right; // TODO: flexbox?
+    justify-content: space-between;
     margin-top: $spacer*1.25; // push content to the baseline of the title
   }
 
@@ -68,6 +74,7 @@
   .previous {
     li {
       list-style-type: none;
+      margin-top: $base-unit;
     }
 
     li,
@@ -89,5 +96,7 @@
       float: left;
       width: 50%;
     }
+
+  }
 
 } // 768

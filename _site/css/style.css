@@ -1,37 +1,37 @@
 /*
-Error: Invalid CSS after "} // 768": expected "}", was ""
-        on line 94 of _prebuild/css/modules/header.scss
-        from line 9 of _prebuild/css/modules/_all.scss
-        from line 4 of _prebuild/css/style.scss
+Error: Undefined variable: "$peakColor".
+        on line 11 of _prebuild/css/modules/base.scss
+        from line 8 of _prebuild/css/style.scss
 
-89:       float: left;
-90:       width: 50%;
-91:     }
-92: 
-93: } // 768
+6: @import
+7:     "modules/normalize"
+8:   , "modules/base"
+9:   , "modules/nav"
+10:   , "modules/logo"
+11:   , "pages/404"
+12:   , "pages/about"
+13:   , "pages/blog"
+14:   , "pages/home"
+15:   , "pages/library"
+16:   , "pages/project-blog"
 
 Backtrace:
-_prebuild/css/modules/header.scss:94
-_prebuild/css/modules/_all.scss:9
-_prebuild/css/style.scss:4
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:658:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:245:in `include_directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:222:in `special_directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:197:in `directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+_prebuild/css/modules/base.scss:11
+_prebuild/css/style.scss:8
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
@@ -77,4 +77,4 @@ _prebuild/css/style.scss:4
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"} // 768\": expected \"}\", was \"\"\A         on line 94 of _prebuild/css/modules/header.scss\A         from line 9 of _prebuild/css/modules/_all.scss\A         from line 4 of _prebuild/css/style.scss\A \A 89:       float: left;\A 90:       width: 50%;\A 91:     }\A 92: \A 93: } // 768"; }
+  content: "Error: Undefined variable: \"$peakColor\".\A         on line 11 of _prebuild/css/modules/base.scss\A         from line 8 of _prebuild/css/style.scss\A \A 6: @import\A 7:     \"modules/normalize\"\A 8:   , \"modules/base\"\A 9:   , \"modules/nav\"\A 10:   , \"modules/logo\"\A 11:   , \"pages/404\"\A 12:   , \"pages/about\"\A 13:   , \"pages/blog\"\A 14:   , \"pages/home\"\A 15:   , \"pages/library\"\A 16:   , \"pages/project-blog\""; }
