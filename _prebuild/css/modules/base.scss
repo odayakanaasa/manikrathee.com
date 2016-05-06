@@ -27,6 +27,7 @@ body {
   font-family: $sans;
   @include font-size(15);
   color: #444444;
+  text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
 }
 
@@ -134,6 +135,41 @@ blockquote {
 
   @include mq(960px) {
     margin: ($spacer*1.5) auto $spacer;
-  }
+dl, menu, ol, ul {
+    margin: 0;
+    padding: 0;
+}
 
+a {
+  color: $dark-grey;
+  padding-bottom: 0;
+  text-decoration: none;
+  border-bottom: 1px solid #CBCBCB;
+  @include transition(color 0.15s ease-in-out);
+
+  &:hover {
+    .no-touch & {
+      color: #000;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockqoute {
+  margin: 0 0 $base-unit 0;
+  line-height: 1.6;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+}
+
+
+
+h1,
+h2,
 }
