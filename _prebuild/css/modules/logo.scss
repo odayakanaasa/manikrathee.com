@@ -1,0 +1,11 @@
+.logo,
+.mountain-monday {
+  // change me to normal svg, import via partial and style individual path sets
+
+  background-image: url($logo-svg-encoded);
+
+  display: block;
+  background-color: dark-blue;
+  @include size(30px, 20px);
+
+}
