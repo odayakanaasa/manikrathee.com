@@ -1,5 +1,5 @@
-name: "Manik Rathee"
-description: "&emdash;Designer&#007C Photographer"
+name: 'Manik Rathee'
+description: '&emdash;Designer&#007C Photographer'
 url: http://manikrathee.com/
 
 #gems:        []
@@ -18,17 +18,17 @@ lsi: false
 host: 127.0.0.1
 port: 4000
 
-# include: [".htaccess"]
+# include: ['.htaccess']
 exclude: ['gruntfile.js', 'package.json', '/node_modules', '*.psd']
 keep_files:  ['.git','.htaccess','.well-known']
-encoding:     "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+encoding:     'utf-8'
+markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 # markdown: kramdown
 
 sitemap:
-    file: "/sitemap.xml"
-    include_posts:
-      - "/*.html"
-    change_frequency_name: "change_frequency"
-    priority_name: "priority"
+  file: '/sitemap.xml'
+  include_posts:
+    - '/*.html'
+  change_frequency_name: 'change_frequency'
+  priority_name: 'priority'
 
