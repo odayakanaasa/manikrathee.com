@@ -1,19 +1,59 @@
 	{% include global-header.html %}
 
-	<body {% if page.body-id %}id="{{ page.body-id }}"{% endif %} {% if page.body-class %}class="{{ page.body-class }}"{% endif %}>
+	<body
+    {% if page.body-id %}
+      id="{{ page.body-id }}"
+    {% endif %}
+    {% if page.body-class %}
+      class="
+        {{ page.body-class }}
+        {% if page.page-type == 'blog' %}
+        blog blog-post
+        {% endif %}
+      "
+    {% endif %}
+  >
 
     <div id="main" class="container" role="main">
 
       {% include global-page-header.html %}
 
-      <section class="{{page.section}}" >
+      <section id="inner-container" class="{{page.section}}" >
+
+        {% if page.page-type == 'blog' %}
+        <figure>
+          <img src="" alt="">
+        </figure>
+
+
+        <!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
+        <div id="feature" data-picture data-alt="{% if page.featured-alt %}{{ page.featured-alt }}{else}blog- manikrathee{% endif %}">
+          <div itemprop="image" data-src="{{ page.featured-image-s }}"></div>
+          <div itemprop="image" data-src="{{ page.featured-image-m }}" data-media="(min-width: 400px)"></div>
+          <div itemprop="image" data-src="{{ page.featured-image-l }}" data-media="(min-width: 800px)"></div>
+          <div itemprop="image" data-src="{{ page.featured-image-x }}" data-media="(min-width: 1000px)"></div>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript><img itemprop="image" src="{{ page.featured-image-s }}" alt="{% if page.featured-alt %}{{ page.featured-alt }}{else}blog- manikrathee{% endif %}"></noscript>
+        </div>
+        {% endif%}
+
   	   {{ content }}
+
+        {% if page.page-type == 'blog' %}
+          OTHER POSTS
+          {% include blog-pagination.html %}
+
+          {% if page.share %}
+          {% include share.html %}
+          {% endif %}
+        {% endif%}
+
       </section>
 
+      {% include global-footer.html %}
 
     </div>
-
-    {% include global-footer.html %}
 
   </body>
 
