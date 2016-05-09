@@ -1,16 +1,17 @@
 
-  <footer role="contentinfo">
+  <footer id="main-footer" role="contentinfo">
+
 
     {% include global-nav-list.html %}
 
     <a id="top" href="#" title="Back To The Top">Back to the top -- should I evne have this?</a>
 
-    <div class="weekly-reads-tout">
+    <div id="weekly-reads-tout">
       icon
       something w/ link
     </div>
 
-    <div class="photo-metadata">
+    <div id="photo-metadata">
       icon
       LEICA Q — 25mm f1.8 200/s 200iso
       Big Sur, California, USA
@@ -23,14 +24,15 @@
 
   <script src="/js/script.js"></script>
 
-{% if page.section == 'obama-contribute' %}
-  <script src="/js/sequential.js"></script>
-{% endif%}
+
+<!--
 
 {% if page.script %}
   <script type="text/javascript" src="/js/blog/{{ page.script }}.js"></script>
-{% endif %}
+{% endif %} -->
 
-{% if page.comments %}
-  {% include comments.html %}
+{% if page.page-type == 'blog' %}
+  {% if page.comments %}
+    {% include blog-comments-js.html %}
+  {% endif %}
 {% endif %}
