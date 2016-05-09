@@ -120,7 +120,7 @@ module.exports = function(grunt) {
         width: 320,
         height: 70
       },
-      // src: '_site/index.html',
+      src: '_site/index.html',
       dest: '_site/index.html',
 
     },
@@ -166,9 +166,9 @@ module.exports = function(grunt) {
       // },
       main: {
         files: '_prebuild/**/*',
-        tasks: ['newer:sass','autoprefixer','newer:concat'],
+        tasks: ['newer:jekyll','newer:sass','autoprefixer','newer:concat'],
         options: {
-          debounceDelay: 450,
+          debounceDelay: 550,
         },
       },
       // css: {
@@ -257,4 +257,4 @@ module.exports = function(grunt) {
 };
 
 
-// sass production is running onw atch - fix that and then fix cirtical css which isnt working right
+//  fix cirtical css which isnt working right

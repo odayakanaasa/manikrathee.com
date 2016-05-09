@@ -5,23 +5,56 @@
 // Shared with all pages
 
 [id=main-footer] {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: $spacer;
-
-
   background: #333;
+  padding: $spacer;
   color: #fff;
 
-  p,
-  a {
+  p {
     color: #fff;
   }
 
+  a {
+    color: #fff;
+    &:hover {
+      color: #7D7D7D;
+      border-bottom: #7D7D7D;
+    }
+  }
+
+  .mountain-monday {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0,0);
+  }
+
+  .footer-nav {
+    justify-content: space-around;
+  }
+  .footer-data {
+    justify-content: space-around;
+  }
+
+
   .main-nav-list,
+  #snapchat,
   #top {
     margin-bottom: $spacer;
   }
+
+
+  #snapchat {
+    display: block;
+    @include size(78px, 78px);
+    background-image: url('../img/snapchat.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 
   #weekly-reads-tout,
   #photo-metadata {
@@ -29,8 +62,16 @@
     justify-content: space-between;
     margin-top: $spacer*1.25; // push content to the baseline of the title
 
-    @include mq(768px) {
-      justify-content: flex-end;
+  }
+
+  #photo-metadata {
+    opacity: 0;
+    visibility: hidden;
+    @include transition( (opacity 1s ease-in-out),(visibility 1s ease-in-out) );
+
+    &.is-visible {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -42,25 +83,32 @@
 
 
 
-
-
-
-
-
-
-
-
 @include mq(768px) {
+
   [id=main-footer] {
     flex-direction: row;
 
-    .main-nav-list,
-    #top {
+    .mountain-monday {
+      margin-left: auto;
+      margin-top: $spacer;
+      margin-right: auto;
+      margin-bottom: $spacer;
+    }
+
+    .footer-nav {
       justify-content: flex-start;
     }
 
+    .footer-data {
+      justify-content: flex-end;
+    }
   }
+
 }
+
+
+
+
 
 
 
@@ -78,8 +126,8 @@
 
 @include mq(960px) {
   [id=main-footer] {
-    width: calc(100% + 200px);
-    margin-left: -100px;
+    width: 100%;
+    max-width: 1300px;
     padding: 10rem;
     @include box;
   }

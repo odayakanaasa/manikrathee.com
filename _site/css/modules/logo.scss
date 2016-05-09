@@ -1,13 +1,11 @@
 .logo,
-.mountain-monday {
+.mountain-monday,
+.mountain-monday--light {
   display: block;
-  // @include size(30px, 20px);
-  @include size(40px, 28px);
-
   background-image: url($logo-svg-encoded);
   margin-bottom: $standard-unit;
   border-bottom: none;
-
+  @include size(40px, 28px);
   @include ir;
 
   svg {
@@ -16,3 +14,8 @@
 
 }
 
+
+
+.mountain-monday--light {
+  background-image: url($logo-svg-encoded-inverse);
+}
