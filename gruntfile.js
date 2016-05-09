@@ -2,20 +2,12 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     sass: {
-      dev: {
+      dist: {
         files: {
-          '_site/css/style.css' : ['_prebuild/css/style.scss'],
+          '_site/css/style.css' : '_prebuild/css/style.scss',
         },
         options: {
           style: 'nested',
-        },
-      },
-      production: {
-        files: {
-          '_site/css/style.css' : ['_prebuild/css/style.scss'],
-        },
-        options: {
-          style: 'compressed',
         },
       },
     },
@@ -29,7 +21,7 @@ module.exports = function(grunt) {
       },
       dist: {
        files: {
-        '_site/css/style.css' : '_prebuild/css/style.scss'
+        '_site/css/style.css' : '_site/css/style.css',
        }
       },
     },
@@ -74,7 +66,7 @@ module.exports = function(grunt) {
         files: {
           '_site/js/script.js' : ['_site/js/script.js']
         }
-      }
+      },
     },
 
 
@@ -120,17 +112,31 @@ module.exports = function(grunt) {
 
 
     critical: {
-      test: {
-        options: {
-          base: './',
-          css: [
-            '_site/css/style.css',
-          ],
-          width: 320,
-          height: 70
-        },
-        src: '_site/index.html',
-        dest: '_site/index.html',
+      options: {
+        base: './',
+        css: [
+          '_site/css/style.css',
+        ],
+        width: 320,
+        height: 70
+      },
+      // src: '_site/index.html',
+      dest: '_site/index.html',
+
+    },
+
+
+    cssmin: {
+      options: {
+        report: 'min',
+        sourceMap: true,
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: {
+          '_site/css/style.css' : '_site/css/style.css',
+        }
       }
     },
 
@@ -160,7 +166,7 @@ module.exports = function(grunt) {
       // },
       main: {
         files: '_prebuild/**/*',
-        tasks: ['sass','concat'],
+        tasks: ['newer:sass','autoprefixer','newer:concat'],
         options: {
           debounceDelay: 450,
         },
@@ -181,11 +187,11 @@ module.exports = function(grunt) {
       // },
     },
 
-
     pagespeed: {
       options: {
         nokey: true,
-        url: "https://developers.google.com/speed/docs/insights/v1/getting_started",
+        url: "http://127.0.0.1:4000/",
+        paths: ['about/','blog/'],
         locale: "en_US",
         strategy: ["desktop","mobile"],
         threshold: 85
@@ -194,31 +200,61 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks("grunt-remove-logging");
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks("grunt-remove-logging");
-  grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-critical');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-pagespeed');
+
+  var critical = require('critical');
+  grunt.task.run('notify_hooks');
+  // require('time-grunt')(grunt);
 
   // Consider moving to gulp -- enough time has passed that data and support comparisons should be stable.
 
-  var critical = require('critical');
 
-  grunt.registerTask('minify', ['[sass:production]','uglify:all']);
+  grunt.registerTask('default',
+    [
+      'sass','concat'
+    ]
+  );
 
-  grunt.registerTask('default', ['jekyll','sass:dev','newer:concat']);
 
-  grunt.registerTask('all', ['[sass:dev]','autoprefixer','concat']);
+  grunt.registerTask('all',
+    [
+      'jekyll','sass','autoprefixer','concat'
+    ]
+  );
 
-  // grunt.registerTask('w', ['jekyll','newer:sass','newer:concat','watch']);
-  grunt.registerTask('w', ['sass:dev','autoprefixer','concat','watch']);
 
-  grunt.registerTask('production', ['jekyll','sass:production','autoprefixer','concat','removelogging','uglify:javascript','critical','htmlmin','imagemin','pagespeed']);
+  grunt.registerTask('minify',
+    [
+      'sass','concat','uglify:all'
+    ]
+  );
+
+
+  grunt.registerTask('w',
+    [
+      'sass','autoprefixer','concat','watch'
+    ]
+  );
+
+  grunt.registerTask('production',
+    [
+      'jekyll','sass','autoprefixer','concat','removelogging','uglify','critical','cssmin','htmlmin','imagemin','pagespeed'
+    ]
+  );
 };
+
+
+// sass production is running onw atch - fix that and then fix cirtical css which isnt working right

@@ -11,20 +11,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="HandheldFriendly" content="true" />
-  <meta name="p:domain_verify" content="442914185983bc4fa55ed98fd101a62f"/>
+  <meta name="HandheldFriendly" content="true">
+  <meta name="p:domain_verify" content="442914185983bc4fa55ed98fd101a62f">
   <meta http-equiv="x-dns-prefetch-control" content="on">
 
   <meta name="author" itemprop="name" content="Manik Rathee">
-  <meta property="og:type" content='website' />
-  <meta property="og:url" content="http://www.manikrathee.com/" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.manikrathee.com/">
   <meta name="twitter:creator" content="@manikrathee">
   <meta name="description" property="og:description" itemprop="description" content="Manik Rathee is a designer, developer and user-experience engineer based in California">
   <meta itemprop="image" property="og:image" content="/img/root/apple-touch-icon.png">
   <meta name="keyword" content="manik, rathee, manik rathee, designer, google, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
   <meta name="robots" content="index,follow,archive">
   
-  <meta property="og:title" content='Manik Rathee | Designer, Engineer, Photographer' />
+  <meta property="og:title" content="Manik Rathee | Designer, Engineer, Photographer">
   
 
   <title>
@@ -35,8 +35,168 @@
 
   <script src="//cdn.optimizely.com/js/2688330005.js"></script>
 
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <style type="text/css">
+header{
+  display: block; }
+
+
+
+html {
+  font-size: 100%;
+  
+  -webkit-text-size-adjust: 100%;
+  
+  -ms-text-size-adjust: 100%;
+   }
+
+
+html{
+  font-family: sans-serif; }
+
+
+body {
+  margin: 0; }
+
+
+svg:not(:root) {
+  overflow: hidden; }
+::-moz-selection {
+  background: #999;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #999;
+  color: #fff;
+  text-shadow: none; }
+
+a:link {
+  -webkit-tap-highlight-color: #999; }
+
+html {
+  background-color: #27415F;
+  font-size: 62.5%;
+  text-rendering: optimizelegibility;
+  -webkit-font-feature-settings: "liga", "hist", "onum";
+          font-feature-settings: "liga", "hist", "onum";
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  background: #EFF0F0;
+  font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  color: #444444;
+  text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden; }
+  body:after {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    translate: transform3d(-50%, 0, 0);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODYuMiA0NDAuNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggY2xhc3M9InRyaWFuZ2xlIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIGQ9Ik0zNzQuMSAyMjIuOGwxMjEuNyAyMTAuNy0yNDMuNC4xSDlsMTIxLjctMjEwLjhMMjUyLjMgMTJ6Ii8+PHBhdGggY2xhc3M9InRyaWFuZ2xlLWJyb3RoZXIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgZD0iTTU2Ni4zIDIyMC43bDEyMy41IDIxMy43LTI0Ni4xLS40LTI0Ni0uNCAxMjIuNi0yMTMuNEw0NDIuOCA2Ljl6Ii8+PC9zdmc+");
+    background-size: 50px 50px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    border: 1px solid yellow; }
+  @media (min-width: 500px) {
+    body {
+      padding: 4rem; }
+      body:after {
+        opacity: 1; } }
+  @media (min-width: 800px) {
+    body {
+      padding: 6rem; } }
+
+a {
+  color: #444444;
+  padding-bottom: 0;
+  text-decoration: none;
+  border-bottom: 1px solid #CBCBCB;
+  transition: color 0.15s ease-in-out; }
+[id=main] {
+  display: block;
+  position: relative;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: padding 0.25s ease-in-out; }
+  [id=main]:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    opacity: 0;
+    box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 0.06);
+    transition: opacity 1s ease-in-out; }
+
+@media (min-width: 500px) {
+  [id=main] {
+    padding: 4rem 8rem; }
+    [id=main]:after {
+      opacity: 1; } }
+@media (min-width: 800px) {
+  [id=main] {
+    max-width: 1140px;
+    padding: 6rem; } }
+[id=page-header] {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden; }
+  @media (min-width: 768px) {
+    [id=page-header] {
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+  [id=page-header] .main-header {
+    opacity: 0.7;
+    transition: opacity 0.25s ease-in-out; }
+    #home [id=page-header] .main-header {
+      opacity: 1; }
+  [id=page-header] .mountain-monday {
+    display: block;
+    width: 40px;
+    height: 28px;
+    border-radius: 0;
+    margin-bottom: 0.4rem;
+    border-bottom: none; }
+    [id=page-header] .mountain-monday svg {
+      width: 100%; }
+</style>
+<script>
+(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700','/css/style.css']));
+</script>
+<noscript>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+</noscript>
+  
   
   
 
@@ -69,17 +229,10 @@ https://github.com/manikrathee/manikrathee.com
 -->
 
 
-	<body
-    
-      id="home"
-    
-    
-      class="
+	<body id="home" class="
         light
         
-      "
-    
-  >
+      ">
 
     <div id="main" class="container" role="main">
 
@@ -87,8 +240,8 @@ https://github.com/manikrathee/manikrathee.com
       <header id="page-header" role="banner">
 
         <div class="main-header">
-          <a class="mountain-monday" href="/" title="manikrathee.com" alt="MountianMonday 🍻" itemprop="url">
-            MountianMonday 🍻
+          <a class="mountain-monday" href="/" title="manikrathee.com" itemprop="url">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 686.2 440.7" xml:space="preserve"><path class="triangle" fill="none" stroke="#000" d="M374.1 222.8l121.7 210.7-243.4.1H9l121.7-210.8L252.3 12z"/><path class="triangle-brother" fill="none" stroke="#000" d="M566.3 220.7l123.5 213.7-246.1-.4-246-.4 122.6-213.4L442.8 6.9z"/></svg>
           </a>
           <hgroup id="page-title">
             <h1 id="name">Manik Rathee</h1>
@@ -151,7 +304,7 @@ https://github.com/manikrathee/manikrathee.com
   
 
 
-      <section id="inner-container" class="home" >
+      <section id="inner-container" class="home">
 
         
 

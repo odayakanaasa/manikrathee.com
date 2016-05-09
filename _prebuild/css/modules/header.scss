@@ -6,15 +6,18 @@
 
 
 [id=page-header] {
+  display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   overflow: hidden;
 
   @include mq(768px) {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .main-header {
-    justify-content: flex-start;
     opacity: 0.7;
     @include transition(opacity 0.25s ease-in-out);
 
@@ -26,11 +29,6 @@
       opacity: 1;
     }
 
-  }
-
-
-  .mountain-monday {
-    margin-bottom: $spacer/2; // 20px
   }
 
   [id=page-title] {
@@ -52,10 +50,14 @@
     }
   }
 
-  #who-is {
+  [id=who-is] {
     // shown in header on right side, only for homepage
-    justify-content: space-between;
     margin-top: $spacer*1.25; // push content to the baseline of the title
+
+    @include mq(768px) {
+      justify-content: flex-end;
+    }
+
   }
 
   .current-title {
@@ -87,17 +89,3 @@
 
 } // #page-header
 
-
-
-@include mq(768px) {
-
-  [id=page-header] {
-
-    .main-header {
-      float: left;
-      width: 50%;
-    }
-
-  }
-
-} // 768

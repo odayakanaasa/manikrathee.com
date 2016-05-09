@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@import "./imports/all";
+
+// Main footer
+// Shared with all pages
+
+[id=main-footer] {
+  display: flex;
+  flex-direction: column;
+  padding: $spacer;
+
+
+  background: #333;
+  color: #fff;
+
+  p,
+  a {
+    color: #fff;
+  }
+
+  .main-nav-list,
+  #top {
+    margin-bottom: $spacer;
+  }
+
+  #weekly-reads-tout,
+  #photo-metadata {
+    // shown in header on right side, only for homepage
+    justify-content: space-between;
+    margin-top: $spacer*1.25; // push content to the baseline of the title
+
+    @include mq(768px) {
+      justify-content: flex-end;
+    }
+  }
+
+
+} // #page-header
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include mq(768px) {
+  [id=main-footer] {
+    flex-direction: row;
+
+    .main-nav-list,
+    #top {
+      justify-content: flex-start;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include mq(960px) {
+  [id=main-footer] {
+    width: calc(100% + 200px);
+    margin-left: -100px;
+    padding: 10rem;
+    @include box;
+  }
+}

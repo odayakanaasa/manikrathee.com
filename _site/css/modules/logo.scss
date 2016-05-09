@@ -1,11 +1,18 @@
 .logo,
 .mountain-monday {
-  // change me to normal svg, import via partial and style individual path sets
+  display: block;
+  // @include size(30px, 20px);
+  @include size(40px, 28px);
 
   background-image: url($logo-svg-encoded);
+  margin-bottom: $standard-unit;
+  border-bottom: none;
 
-  display: block;
-  background-color: dark-blue;
-  @include size(30px, 20px);
+  @include ir;
+
+  svg {
+    width: 100%;
+  }
 
 }
+
