@@ -1,0 +1,22 @@
+{% if page.next.url %}
+
+<p class="pre-heading">Next Post</p>
+<a href="{{page.next.url}}" title="next Post: {{page.next.title}}" itemprop="url">
+  <h3>{{page.next.title}}</h3>
+  <p>{{page.next.subtitle}}</p>
+  <p class="date">{{ page.next.date | date: "%B %d %Y" }}</p>
+</a>
+
+{% elsif !page.next.url %}
+<p class="pre-heading">Next Post: None / This is the most recent post.</p>
+
+{% elsif page.previous.url %}
+
+<p class="pre-heading">Previous Post</p>
+<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}" itemprop="url">
+  <h3>{{page.previous.title}}</h3>
+  <p>{{page.previous.subtitle}}</p>
+  <p class="date">{{ page.previous.date | date: "%B %d %Y" }}</p>
+</a>
+
+{% endif %}
