@@ -1,8 +1,8 @@
 AddHandler php5-script .php
 RewriteEngine On
 RewriteBase /
-RewriteCond %{HTTP_HOST} ^manikrathee.com [NC]
-RewriteRule ^(.*)$ http://www.manikrathee.com/$1 [L,R=301]
+#RewriteCond %{HTTP_HOST} ^manikrathee.com [NC]
+#RewriteRule ^(.*)$ http://www.manikrathee.com/$1 [L,R=301]
 #Redirect /500px https://500px.com/manikrathee/
 #Redirect /blog http://blog.manikrathee.com/
 #Redirect /bot https://twitter.com/manikbot/
