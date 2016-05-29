@@ -154,7 +154,6 @@ LastFMStatus.init({
   //   }
   // });
 
-
   tween1 = new mojs.Burst({
     parent: el,
     duration: 1000,
@@ -198,15 +197,14 @@ LastFMStatus.init({
       var scaleProgress = scaleCurve(progress);
       interiorLogo.style.WebkitTransform = interiorLogo.style.transform = 'scale3d(' + progress + ',' + progress + ',1)';
     }
-  })
-
-
-
+  });
 
 
 // add tweens to timeline:
-timeline.add(tween1, tween2, tween3);
-timeline.start();
+if (el.length && interiorLogo.length) {
+  timeline.add(tween1, tween2, tween3);
+  timeline.start();
+}
 
 
 
@@ -216,42 +214,15 @@ timeline.start();
 
 
 
+$('#main-footer').withinviewport({top: -300});
 
 
 
 
 
 
-
-
-
-
-
-// Nav Hover
-function checkWidth() {
-	if ($(window).width() > 769){
-		$('#portfolio').hover(function(){
-			$('#current, .copy, .dark-shade').addClass('fade');
-      trackEvent('global','portfolio sub menu','opened');
-		}, function(){
-			$('#current, .copy, .dark-shade').removeClass('fade');
-      trackEvent('global','portfolio sub menu','closed');
-		});
-	}
-	else{
-		$('.copy').removeClass('fade');
-	}
-};
-
-$(window).resize(function() {
-	checkWidth();
-});
-checkWidth();
-
-
-
-// Twitter Button
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+// // Twitter Button
+// !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
 
 
@@ -271,7 +242,7 @@ function trackEvent(cat, action, label){
   if (cat && action && label) {
     ga('send', 'event', cat, action, label);
   }
-}
+};
 
 
 $(document).ready(function() {

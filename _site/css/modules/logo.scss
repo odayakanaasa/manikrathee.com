@@ -1,9 +1,8 @@
 .logo,
 .mountain-monday,
-.mountain-monday--light {
+.mountain-monday--inverse {
   display: block;
   background-image: url($logo-svg-encoded);
-  margin-bottom: $standard-unit;
   border-bottom: none;
   @include size(40px, 28px);
   @include ir;

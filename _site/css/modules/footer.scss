@@ -8,6 +8,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  mix-blend-mode: difference;
+
+  width: 100%;
+
+
   background: #333;
   padding: $spacer;
   color: #fff;
@@ -75,6 +80,9 @@
     }
   }
 
+  #manikrathee {
+    display: none;
+  }
 
 } // #page-header
 
@@ -87,6 +95,7 @@
 
   [id=main-footer] {
     flex-direction: row;
+    margin-left: -40px;
 
     .mountain-monday {
       margin-left: auto;
@@ -101,6 +110,10 @@
 
     .footer-data {
       justify-content: flex-end;
+    }
+
+    #manikrathee {
+      display: none;
     }
   }
 
@@ -128,6 +141,7 @@
   [id=main-footer] {
     width: 100%;
     max-width: 1300px;
+    margin: 0;
     padding: 10rem;
     @include box;
   }

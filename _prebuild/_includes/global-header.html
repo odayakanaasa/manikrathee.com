@@ -2,54 +2,69 @@
 <html lang="en" class="no-js">
 <head>
 
-  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="//www.google-analytics.com">
-  <link rel="dns-prefetch" href="//ajax.googleapis.com">
-  <link rel="dns-prefetch" href="//cdn.optimizely.com/js/2688330005.js">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
   <meta name="HandheldFriendly" content="true" />
   <meta name="p:domain_verify" content="442914185983bc4fa55ed98fd101a62f"/>
   <meta http-equiv="x-dns-prefetch-control" content="on">
 
   <meta name="author" itemprop="name" content="Manik Rathee">
   <meta property="og:type" content='website' />
-  <meta property="og:url" content="http://www.manikrathee.com/" />
+  <meta name="url" property="og:url" content="http://www.manikrathee.com/" />
   <meta name="twitter:creator" content="@manikrathee">
+  <meta name="twitter:site" content="@manikrathee">
   <meta name="description" property="og:description" itemprop="description" content="Manik Rathee is a designer, developer and user-experience engineer based in California">
   <meta itemprop="image" property="og:image" content="/img/root/apple-touch-icon.png">
   <meta name="keyword" content="manik, rathee, manik rathee, designer, google, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
   <meta name="robots" content="index,follow,archive">
   {% if page.home %}
-  <meta property="og:title" content='Manik Rathee | Designer, Engineer, Photographer' />
+  <meta name="twitter:title"  property="og:title" content='Manik Rathee | Designer, Engineer, Photographer' />
   {% elsif page.page-type == 'blog' %}
     {% if page.page-subtype == 'blog-index' %}
-  <meta property="og:title" content='{{ page.title }} - Manik Rathee | Designer, Engineer, Photographer' />
+  <meta name="twitter:title"  property="og:title" content='{{ page.title }} - Manik Rathee | Designer, Engineer, Photographer' />
   {% else %}
-  <meta property="og:title" content='{{ page.title }} - a post by Manik Rathee | Designer, Engineer, Photographer' />
+  <meta name="twitter:title"  property="og:title" content='{{ page.title }} - a post by Manik Rathee | Designer, Engineer, Photographer' />
     {% endif%}
   {% else %}
-  <meta property="og:title" content='{{ page.title }} | Manik Rathee, Designer, Engineer, Photographer' />
+  <meta name="twitter:title"  property="og:title" content='{{ page.title }} | Manik Rathee, Designer, Engineer, Photographer' />
   {% endif%}
+
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="//fonts.googleapis.com">
+  {% if site.data.build.optimizely == true %}
+  <link rel="dns-prefetch" href="//cdn.optimizely.com/js/2688330005.js">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="M">
+
+  <!-- The URL of the web version of your article -->
+  <link rel="canonical" href="http://www.manikrathee.com">
+
+  {% endif %}
 
   <title>
   {% if page.home %}
-  Manik Rathee—Designer, Photographer. Prototyping and engineering at Nest.
+    Manik Rathee—Designer, Photographer. Prototyping and Engineering at Nest.
   {% elsif page.page-type == 'blog' %}
     {% if page.page-subtype == 'blog-index' %}
-  Writing - Manik Rathee—Designer, Photographer.
+      Writing - Manik Rathee—Designer, Photographer.
     {% else %}
-  {{ page.title }} - a post by Manik Rathee | Designer, Photographer
+      {{ page.title }} - a post by Manik Rathee | Designer, Photographer
     {% endif%}
   {% else %}
-  {{ page.title }} | Manik Rathee
-  {% endif%}
+    {{ page.title }} | Manik Rathee
+  {% endif %}
   </title>
 
+  {% if site.data.build.optimizely == true %}
   <script src="//cdn.optimizely.com/js/2688330005.js"></script>
+  {% endif %}
 
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/style.css" type="text/css">

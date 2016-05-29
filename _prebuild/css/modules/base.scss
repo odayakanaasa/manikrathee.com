@@ -4,7 +4,6 @@
 ::-moz-selection { background: #999; color: #fff; text-shadow: none; }
 ::selection  { background: #999; color: #fff; text-shadow: none; }
 
-a:link  { -webkit-tap-highlight-color: #999; }
 
 
 html {
@@ -65,40 +64,12 @@ a {
   padding-bottom: 0;
   text-decoration: none;
   border-bottom: 1px solid #CBCBCB;
-  @include transition( (color 0.15s ease-in-out),(bottom 0.15s ease-in-out) );
+  -webkit-tap-highlight-color: $dark-grey;
+  @include transition( (color 0.15s ease-in-out),(border 0.15s ease-in-out) );
 
-  &:hover {
-    .no-touch & {
-      color: #000;
-    }
+  @include touch-hover() {
+    color: #000;
+    border-color: #000;
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockqoute {
-  margin: 0 0 $base-unit 0;
-  line-height: 1.6;
-  -webkit-font-variant-ligatures: common-ligatures;
-  font-variant-ligatures: common-ligatures;
-}
-
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.6;
-}
-
-p {
-  @include font-size(15);
-}

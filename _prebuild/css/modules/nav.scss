@@ -2,13 +2,39 @@
 
 }
 .main-nav-list {
+  @include font-size(16);
+  line-height: $base-unit * 11;
 
-  li {
-
+  @include mq(768px) {
+    line-height: $base-unit * 10;
   }
 
+  li,
+  a,
+  i {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  li {
+    & + li {
+      margin-top: $standard-unit;
+    }
+  }
+
+  i {
+    margin-left: 10px;
+    @include font-size(13);
+    font-weight: 200;
+  }
+}
+
+.footer-nav {
+
   a {
-    @include font-size(14);
-    line-height: 1.5;
+    @include touch-hover() {
+      color: $off-white;
+      border-color: $off-white;
+    }
   }
 }

@@ -1,6 +1,52 @@
 @charset "UTF-8";
 @import "imports/_all";
 
-.subheading {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockqoute {
+  margin: 0 0 $base-unit 0;
+  line-height: 1.6;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
 }
 
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.large-heading {
+  @include font-size(26);
+}
+
+.medium-heading {
+  @include font-size(22);
+}
+
+.small-heading {
+  @include font-size(18);
+  font-weight: 700;
+}
+
+p {
+  @include font-size(15);
+}
+
+em {
+  // font-family: $serif;
+  font-style: italic;
+  // font-weight: 300;
+  opacity: 0.75;
+}
