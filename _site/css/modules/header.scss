@@ -31,7 +31,10 @@
 
   }
 
-  [id=page-title] {
+  [id=site-title] {
+    font-family: $serif;
+    @include font-size(50);
+    font-weight: 700;
     margin-bottom: $spacer;
 
     > * {
@@ -52,29 +55,37 @@
 
   [id=who-is] {
     // shown in header on right side, only for homepage
-    margin-top: $spacer*1.25; // push content to the baseline of the title
-    margin-bottom: 111px;
-    padding: 50px 0;
+    margin: ($spacer * 2) 0; // push content to the baseline of the title
     line-height: 1.6;
-    border-top: $border;
-    border-bottom: $border;
+
+    @include mq(768px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p {
+      @include font-size(15); // same as previous heading
+
+      @include mq(800px) {
+        @include font-size(18); // restore to match .current-title
+      }
+    }
 
     i {
       display: block;
       opacity: 0.7;
       font-style: normal;
-      @include font-size(15); // same as previous heading
       @include transition(opacity 1s ease-in-out);
 
-      @include mq(768px) {
+      @include mq(800px) {
         display: inline;
         opacity: 1;
-        @include font-size(18); // restore to match .current-title
       }
     }
 
     @include mq(768px) {
       justify-content: flex-end;
+      margin-top: 50px;
     }
 
   }
@@ -87,7 +98,7 @@
 
   .previous-heading {
     margin: 0;
-    color: $light-grey;
+    color: $dark-grey;
     text-transform: uppercase;
     @include font-size(12);
     line-height: 1;

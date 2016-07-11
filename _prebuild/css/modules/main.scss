@@ -20,13 +20,9 @@
   @include box;
   @include transition(padding 0.25s ease-in-out);
 
-  @include mq(768px) {
-    padding: $spacer * 2;
-  }
-
   @include mq(800px) {
     max-width: 1140px;
-    padding: $spacer * 1.5;
+    padding: $spacer * 2;
   }
 
 

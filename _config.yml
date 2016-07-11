@@ -1,11 +1,13 @@
 name: 'Manik Rathee'
-description: '&emdash;Designer&#007C Photographer'
+description: ' &emdash; Designer&#007C Photographer'
 url: http://manikrathee.com/
 
 #gems:        []
 #timezone:    nil
 #encoding:    nil
 
+host: 127.0.0.1
+port: 4000
 source: _prebuild/
 # permalink: /blog/posts/:year/:month/:day/:title.html
 permalink: /blog/:title.html
@@ -14,16 +16,22 @@ incremental: false
 quiet:    false
 safe: false
 lsi: false
+# markdown: kramdown
+markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 # highlighter: true
-host: 127.0.0.1
-port: 4000
-
 # include: ['.htaccess']
-exclude: ['gruntfile.js', 'package.json', '/node_modules', '*.psd']
+exclude: ['gruntfile.js', 'package.json', '/node_modules', '*.psd', '*.sketch']
 keep_files:  ['.git','.htaccess','.well-known']
 encoding:     'utf-8'
-markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
-# markdown: kramdown
+
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+
 
 sitemap:
   file: '/sitemap.xml'
@@ -31,4 +39,3 @@ sitemap:
     - '/*.html'
   change_frequency_name: 'change_frequency'
   priority_name: 'priority'
-

@@ -49,7 +49,6 @@ module.exports = function(grunt) {
       },
     },
 
-
     removelogging: {
       dist: {
         '_site/js/script.js' : '_site/js/script.js',
@@ -166,7 +165,8 @@ module.exports = function(grunt) {
       // },
       main: {
         files: '_prebuild/**/*',
-        tasks: ['jekyll','sass','autoprefixer','concat'],
+        // tasks: ['jekyll','sass','autoprefixer','concat'],
+        tasks: ['sass','autoprefixer','concat'],
         options: {
           debounceDelay: 550,
         },
@@ -212,14 +212,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-newer');
-  grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-pagespeed');
 
   var critical = require('critical');
-  grunt.task.run('notify_hooks');
-  // require('time-grunt')(grunt);
 
   // Consider moving to gulp -- enough time has passed that data and support comparisons should be stable.
+
+//  fix cirtical css which isnt working right
 
 
   grunt.registerTask('default',
@@ -257,4 +256,3 @@ module.exports = function(grunt) {
 };
 
 
-//  fix cirtical css which isnt working right

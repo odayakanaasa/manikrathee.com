@@ -4,6 +4,8 @@
 .main-nav-list {
   @include font-size(16);
   line-height: $base-unit * 11;
+  padding-bottom: 1px;
+
 
   @include mq(768px) {
     line-height: $base-unit * 10;

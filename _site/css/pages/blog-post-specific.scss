@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import "imports/_all";
+
+// 20131105
+// Wanderlust: Big Sur
+.blog-post {
+  &.wanderlust-big-sur-20131105 {
+    #post-title {
+      font-size: 50px;
+    }
+    #subtitle {
+      font-size: 18px;
+    }
+    .fluid-width-video-wrapper {
+      margin: 75px 0;
+    }
+
+    @media (min-width: 768px) {
+      #post-title {
+        font-size: 80px;
+      }
+      #subtitle {
+        font-size: 28px;
+      }
+
+      #post-title-container {
+        margin-bottom: 151px;
+      }
+    }
+
+  }
+}
+
+
+// 20130731
+// Uber vs Taxis
+.blog-post {
+  &.uber-vs-taxis-20130731 {
+    .comparison, .question, .left, .right {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .comparison {
+      max-width: 100%;
+      overflow: hidden;
+      clear: both;
+    }
+    .question {
+      overflow: hidden;
+      clear: both;
+      padding: 75px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      &:last-child{
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+      h4{
+        font-size: 1.5em;
+        width: 100%;
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+      p {
+        margin: 0;
+        strong {
+          margin: 1em 0 0 0;
+          font-size: 1em;
+          opacity: 0.7;
+        }
+      }
+    }
+    .left {
+      float: left;
+      line-height: 1.4;
+    }
+    .right {
+      float: right;
+      line-height: 1.4;
+      margin-top: 35px;
+    }
+
+
+    @media (min-width: 767px) {
+      #post-title-container {
+        margin: -300px auto 174px auto;
+        #post-title {
+          font-size: 80px;
+        }
+      }
+      .question {
+        margin: 100px 0;
+        padding: 0;
+        border: none;
+        h4{
+          font-size: 2em;
+        }
+        &:last-child{
+          margin-bottom: 50px;
+        }
+      }
+      .left, .right {
+        padding: 0 20px;
+      }
+      .left {
+        width: 50%;
+        border-right: 1px solid rgba(0,0,0,0.1);
+      }
+      .right {
+        width: 50%;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+// 20150302
+// TextExpander
+.blog-post {
+  &.sublime-text-20150312 {
+    #feature {
+      max-height: 725px;
+      overflow: hidden;
+    }
+    #transition-modal {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -999em;
+      text-align: center;
+      opacity: 0;
+      @include transition(opacity 0.25s ease-in-out);
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: proxima-nova;
+      }
+    }
+    &.transition-modal & {
+      #transition-modal {
+        left: 0;
+        z-index: 99999;
+        opacity: 1;
+        @include animate;
+        @include fadeIn;
+      }
+    }
+  }
+}

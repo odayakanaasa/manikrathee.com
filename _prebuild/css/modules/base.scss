@@ -49,9 +49,11 @@ body {
     }
   }
 
-  @include mq(800px) {
-    padding: $spacer*1.5;
+
+  @include mq(960px) {
+    padding: $spacer * 2;
   }
+
 }
 
 dl, menu, ol, ul {
