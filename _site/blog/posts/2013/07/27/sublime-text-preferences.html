@@ -22,7 +22,7 @@
   <meta name="keyword" content="manik, rathee, manik rathee, designer, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
   <meta itemprop="image" content="/img/root/apple-touch-icon.png">
   
-  <meta property="og:title" content='Uber vs Taxis | Manik Rathee, Designer.' />
+  <meta property="og:title" content='Sublime Text | Manik Rathee, Designer.' />
   
   <meta property="og:type" content='website' />
   <meta property="og:url" content="http://www.manikrathee.com/" />
@@ -32,7 +32,7 @@
 
   <title>
   
-  Uber vs Taxis | Manik Rathee, Designer.
+  Sublime Text | Manik Rathee, Designer.
   
   </title>
 
@@ -49,6 +49,8 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
   
+  <link rel="stylesheet" href="/css/styles/code-highlighting-tomorrow-night-eighties.css" type="text/css" media="screen" />
+  
 
   <script src="/js/libs/modernizr.min.js"></script>
 
@@ -61,14 +63,14 @@
     
     <style type="text/css">
       #body a, .body a, footer a{
-        color: #247932;
+        color: #eb9000;
       }
       @media (min-width: 768px) {
         #body:hover a, .body:hover a, footer:hover a{
-          color: #247932;
+          color: #eb9000;
         }
         #body:hover a:hover, .body:hover a:hover, footer:hover a:hover{
-          color: #01440c;
+          color: #b37200;
         }
       }
     </style>
@@ -89,11 +91,11 @@ Don't worry though, a new version is coming.
 -->
 
 
-<body class="blog blog-post light uber-vs-taxis-20130731"
+<body class="blog blog-post light sublime-text-20130827"
   
   
   
-  
+  data-code="true"
   
   data-reading-time="true"
   >
@@ -147,23 +149,23 @@ Don't worry though, a new version is coming.
 		<header>
 			<!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
 			<div id="feature" data-picture data-alt="">
-	      <div itemprop="image" data-src="/img/blog/20130731/feature-s.jpg"></div>
-	      <div itemprop="image" data-src="/img/blog/20130731/feature-m.jpg" data-media="(min-width: 400px)"></div>
-	      <div itemprop="image" data-src="/img/blog/20130731/feature-l.jpg" data-media="(min-width: 800px)"></div>
-	      <div itemprop="image" data-src="/img/blog/20130731/feature-x.jpg" data-media="(min-width: 1000px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20130727/feature-s.jpg"></div>
+	      <div itemprop="image" data-src="/img/blog/20130727/feature-m.jpg" data-media="(min-width: 400px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20130727/feature-l.jpg" data-media="(min-width: 800px)"></div>
+	      <div itemprop="image" data-src="/img/blog/20130727/feature-x.jpg" data-media="(min-width: 1000px)"></div>
 
 	      <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-	      <noscript><img itemprop="image" src="/img/blog/20130731/feature-s.jpg" alt=""></noscript>
+	      <noscript><img itemprop="image" src="/img/blog/20130727/feature-s.jpg" alt=""></noscript>
 	    </div>
 
 			<div id="post-title-container">
 				
-				<h3 id="post-title">Uber vs Taxis</h3>
-				<p id="subtitle">Why @Uber is a threat to Taxi Labor Groups</p>
-				<p id="date">July 31 2013</p>
+				<h3 id="post-title">Sublime Text</h3>
+				<p id="subtitle">Customizing Your Workflow</p>
+				<p id="date">July 27 2013</p>
 				<!-- Jekyll Reading Time via Andy Taylor // http://andytaylor.me/2013/04/07/reading-time/ -->
 				
-				<p id="reading-time">Reading Time: <span class="time">4.571428571428571</span> minutes</p>
+				<p id="reading-time">Reading Time: <span class="time">2.9642857142857144</span> minutes</p>
 				
 				
 			</div>
@@ -172,73 +174,162 @@ Don't worry though, a new version is coming.
 		
 
 		<section class="body itemscope">
-			<p>The San Francisco Taxi Labor Union is on strike. They are unhappy with Uber, RideShare and Lyft taking away their business. But it begs the question - if customers are leaving, are these new innovators to blame?</p>
+			<style>
+  @media (min-width: 768px) {
+    #post-title-container {
+      margin: -308px auto 182px auto;
+    }
+  }
+</style>
 
-<p>From my perspective, there is a really simple reason customers are not using regular cabs anymore. Allow me to take my experience and paint you a word picture.</p>
+<p>I have used a long list of code editors over the years, ranging from notepad on windows to Espresso on mac, to textmate and Sublime Text. Ultimately, SublimeText 2 came out in front because it is so simple to use and so exceptionally customizable.</p>
 
-<article class="comparison">
-  <section class="question">
-    <h4>The Process of Finding a Cab</h4>
-    <div class="left">
-      <p><strong>Taxi</strong></p>
-      <p>Try hailing a cab for 5-10 minutes while several empty ones ignore me and drive past.</p>
-    </div>
-    <div class="right">
-      <p><strong>Uber</strong></p>
-      <p>Wait 3 minutes for a driver to arrive and call my phone, while I enjoy a beer at home. Follow their location via GPS.</p>
-    </div>
-  </section>
+<p>With a field as broad as development, every individual's personal preferences can yeild varying effects on speed and productivity. I research quite a bit about improving my workflow and have built my SublimeText preference file up to be a pretty solid starting point for most people.</p>
 
-  <section class="question">
-    <h4>Then, The Driver Arrives</h4>
-    <div class="left">
-      <p><strong>Taxi</strong></p>
-      <p>I get in and tell the driver a location. The driver doesn't respond and peels out, cutting off another car in the process. (Best case scenario: they start driving safely. Unfortunately, this has not been my experience.)</p>
-    </div>
-    <div class="right">
-      <p><strong>Uber</strong></p>
-      <p>I get a text saying my Uber has arrived. I get downstairs and the driver is waiting outside of the car. He/She greets me, opens the door and offers cold water, snacks and gum. Once inside, driver asks how my day is going and then requests a destination.</p>
-    </div>
-  </section>
+<h4>Favorite Snippets</h4>
 
-  <section class="question">
-    <h4>Then, The Driver Arrives <sup>2</sup></h4>
-    <div class="left">
-      <p><strong>Taxi</strong></p>
-      <p>I get in and tell driver a location. Driver says 'I dont know where that is'. There is an awkward silence while waiting for the driver to do his job: ask a question to get a better idea of my destination. I end up loading Google Maps on my phone for turn-by-turn directions, for fear that we will sit in this awkward situation for the rest of my life.</p>
-    </div>
-    <div class="right">
-      <p><strong>Uber</strong></p>
-      <p>See above. After giving the driver an address, he/she says 'Sorry, I'm not familiar with the address. Do you mind if I put it in my GPS so I can make sure to get you there on time?'</p>
-    </div>
-  </section>
+<p><strong>Close_windows_when_empty</strong>  —  Closes the whole window if there are only empty tabs open when you hit cmd + w.
+  <pre>
+    <code class="json">
+      "close_windows_when_empty": true
+    </code>
+  </pre>
+</p>
 
-  <section class="question">
-    <h4>En Route</h4>
-    <div class="left">
-      <p><strong>Taxi</strong></p>
-      <p>The commute continues while the driver is talking on the phone, driving like a maniac and cutting off other drivers, bicyclists, etc.</p>
-    </div>
-    <div class="right">
-      <p><strong>Uber</strong></p>
-      <p>The driver is obeying traffic laws, not talking on the phone and is paying attention to the road. Some even maintain a nice conversation with you, if that's something you enjoy. (The power of rating systems should not be underestimated)</p>
-    </div>
-  </section>
+<p><strong>Color_scheme</strong>  —  Set a path to use a custom downloaded theme like <a href="https://github.com/manikrathee/appealr" title="Appealr, color scheme for Sublime Text" itemprop="url">Appealr</a>.
+  <pre>
+    <code class="json">
+      "color_scheme": "Packages/Appealr Color Scheme/appealr-color-scheme.tmTheme"
+    </code>
+  </pre>
+</p>
 
-  <section class="question">
-    <h4>Arrival</h4>
-    <div class="left">
-      <p><strong>Taxi</strong></p>
-      <p>Seeing the cost of the ride on the meter, I pull out my debit card to start the payment process. 'Sorry, no cards.', another awkward silence since they <strong>must</strong> accept cards. ' Ok, fine, hold on.' The driver then rumages through his/her glove compartment before claiming that the credit card machine is broken. Show continues as he/she makes more of a fuss about accepting a debit card, and then a Square Card Reader appears. After transaction is complete, there is silence and I exit the vehicle. With just enough time to shut the door, the driver peels away again.</p>
-    </div>
-    <div class="right">
-      <p><strong>Uber</strong></p>
-      <p>'Alright sir, here we are. Please allow me to get your door.' - Driver exits, opens the door for me, and says 'Thank you very much Manik, have a great day.' <em>Note: He/she often will address me by name throughout the ride.</em> Very simple action with a big impact. I exit the vehicle at my destination, in one piece, without being frustrated by my commute. I say thanks and goodbye, knowing that my fare &amp; the driver's tip is paid and I can review the entire trip later when my e-mail receipt arrives. <em>Effortless</em>.</p>
-    </div>
-  </section>
-</article>
+<p><strong>Folder_exclude_patterns</strong>  —  Set up folder exclusion for commonly used directories in your projects.
+  <pre>
+    <code class="json">
+      "folder_exclude_patterns":
+      [
+        ".git",
+        ".bundle",
+        ".sass-cache",
+        ".svn",
+        ".hg"
+      ]
+    </code>
+  </pre>
+</p>
 
-<p>This comparison is not an exaggeration or a biased view - this is based on using several cabs and several Ubers since last year in the cities of New York City, Chicago and San Francisco.</p>
+<p><strong>Font_</strong>  —  Set type preferences for readability. Obviously, a monospaced font like <a href="http://blogs.adobe.com/typblography/2012/09/source-code-pro.html" title="Source Code pro" itemprop="url">Source Code Pro from Adobe</a> would be best.
+  <pre>
+    <code class="json">
+      "font_face": "Source Code Pro",
+      "font_size": 12.0
+    </code>
+  </pre>
+</p>
+
+<p><strong>Highlight_line</strong>  —  Highlights the currently selected line based on styles in your theme. Incredibly useful if you use <a href="https://a248.e.akamai.net/camo.github.com/d15ec3fd5cce53bb1e95d738ab1fe81a4f5e91ac/687474703a2f2f662e636c2e6c792f6974656d732f31783175304e336a32553356334f33493031316c2f53637265656e25323053686f74253230323031332d30342d3233253230617425323031312e35372e3039253230414d2e706e67" title="Multipane screenshot" itemprop="url">multi-pane layouts</a>.
+  <pre>
+    <code class="json">
+      "highlight_line": true
+    </code>
+  </pre>
+</p>
+
+<p><strong>Highlight_modified_tabs</strong>  —  Another theme-based preference, but still useful. If you have multiple tabs open, one with un-saved changes will be highlighted.
+  <pre>
+    <code class="json">
+      "highlight_modified_tabs": true
+    </code>
+  </pre>
+</p>
+
+<p><strong>Match_</strong>  —  On creation of an opening bracket/brace/etc, a closing one is inserted.
+  <pre>
+    <code class="json">
+      "match_brackets": true,
+      "match_brackets_angle": true,
+      "match_brackets_braces": true,
+      "match_brackets_content": true,
+      "match_brackets_square": true,
+    </code>
+  </pre>
+</p>
+
+<p><strong>Scroll_</strong>  —  Allows you to scroll past the end of a file, which is necessary, especially if you hate extra empty lines at the end of a file like I do. Scroll speed to 2 is also helpful if you're impatient with large files.
+  <pre>
+    <code class="json">
+      "scroll_past_end": true,
+      "scroll_speed": 2,
+    </code>
+  </pre>
+</p>
+
+<p><strong>Translate_tabs_to_spaces</strong>  —  Simple. Add this. And if you're still using tabs in your code, quit it.
+  <pre>
+    <code class="json">
+      "translate_tabs_to_spaces": true
+    </code>
+  </pre>
+</p>
+
+<h4>Complete Preferences:</h4>
+<p>The <a href="https://github.com/manikrathee/sublime-text" title="ManikRathee's Sublime Text Preferences on GitHub" itemprop="url">full preferences file</a> is available on GitHub. My <a href="https://github.com/manikrathee/appealr" title="Appealr, color scheme for Sublime Text" itemprop="url">sublime text color scheme, Appealr,</a> is also available on GitHub.</p>
+
+<pre>
+  <code class="json">
+    {
+      "bold_folder_labels": true,
+      "caret_style": "phase",
+      "close_windows_when_empty": true,
+      "color_scheme": "Packages/Appealr Color Scheme/appealr-color-scheme.tmTheme",
+      "draw_indent_guides": true,
+      "draw_white_space": "selection",
+      "file_exclude_patterns":
+      [
+        ".DS_Store",
+        "*.lib",
+        "*.log"
+      ],
+      "folder_exclude_patterns":
+      [
+        ".git",
+        ".bundle",
+        ".sass-cache",
+        ".svn",
+        ".hg"
+      ],
+      "font_face": "Source Code Pro",
+      "font_size": 12.0,
+      "highlight_line": true,
+      "highlight_modified_tabs": true,
+      "ignored_packages":
+      [
+        "Vintage",
+        "SublimeLinter"
+      ],
+      "line_padding_bottom": 3,
+      "line_padding_top": 3,
+      "match_brackets": true,
+      "match_brackets_angle": true,
+      "match_brackets_braces": true,
+      "match_brackets_content": true,
+      "match_brackets_square": true,
+      "open_files_in_new_window": false,
+      "remember_open_files": true,
+      "remember_open_folders": true,
+      "scroll_past_end": true,
+      "scroll_speed": 2,
+      "show_full_path": true,
+      "tab_size": 2,
+      "theme": "Nil.sublime-theme",
+      "translate_tabs_to_spaces": true,
+      "use_simple_full_screen": true,
+      "wide_caret": true,
+      "word_wrap": true
+    }
+  </code>
+</pre>
 
 		</section>
 	</article>
@@ -250,10 +341,10 @@ Don't worry though, a new version is coming.
 			
 
 			<p class="pre-heading">Next Post</p>
-			<a href="/blog/posts/2013/11/05/wanderlust-big-sur.html" title="next Post: Wanderlust" itemprop="url">
-				<h3>Wanderlust</h3>
-				<p>Big Sur</p>
-				<p class="date">November 05 2013</p>
+			<a href="/blog/posts/2013/07/31/why-uber-threatens-taxi-labor-groups.html" title="next Post: Uber vs Taxis" itemprop="url">
+				<h3>Uber vs Taxis</h3>
+				<p>Why @Uber is a threat to Taxi Labor Groups</p>
+				<p class="date">July 31 2013</p>
 			</a>
 
 			
