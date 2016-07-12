@@ -7,13 +7,13 @@ if ( $('body').attr('id') === 'home' ){
     get: 'user',
     userId: 262351,
     clientId: 'f7f319ceb411486593db148972918108',
-    accessToken: '91dc3ed9fcf74949a3b7944c5ab3ea90',
+    accessToken: '262351.467ede5.32fb0226aa3c4ef88bcbbaa67ea2ded5',
     target: 'instagram',
     limit: 1,
     template: '<div class="photo" data="{{id}}"><p><a id="instagram-link" href="{{link}}" title="View my latest Instagram Shot">{{caption}}</a></p></div>'
  });
 
- feed.run();
+ // feed.run();
 
   // Set instagramActive to true so logofyAPI and activate API can fire
   instagramActive = true;
