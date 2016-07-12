@@ -214,7 +214,7 @@ if (el.length && interiorLogo.length) {
 
 
 
-$('#main-footer').withinviewport({top: -300});
+// $('#main-footer').withinviewport({top: -300});
 
 
 

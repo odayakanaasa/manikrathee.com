@@ -1,11 +1,9 @@
-.main-nav {
+.main-nav {}
 
-}
 .main-nav-list {
   @include font-size(16);
-  line-height: $base-unit * 11;
+  line-height: 1;
   padding-bottom: 1px;
-
 
   @include mq(768px) {
     line-height: $base-unit * 10;
@@ -19,6 +17,16 @@
   }
 
   li {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+
+    @include mq(768px) {
+      width: auto;
+      float: none;
+      margin-bottom: 10px;
+    }
+
     & + li {
       margin-top: $standard-unit;
     }
@@ -32,6 +40,15 @@
 }
 
 .footer-nav {
+  // shared styles with .main-nav-list > li above
+  li {
+    width: auto;
+    margin-bottom: 0;
+
+    @include mq(768px) {
+      margin-bottom: 10px;
+    }
+  }
 
   a {
     @include touch-hover() {
@@ -39,4 +56,19 @@
       border-color: $off-white;
     }
   }
+}
+
+.nav-work-case-studies,
+.nav-weekly-reads {
+
+  span {
+    display: none;
+  }
+
+  @include mq(768px) {
+    span {
+      display: inline;
+    }
+  }
+
 }

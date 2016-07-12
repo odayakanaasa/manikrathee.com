@@ -58,12 +58,12 @@ var LastFMStatus = {
   updateView: function() {
     var status, message,
     userlink = ' ( <a target="__blank" href="http://www.last.fm/user/' + this.username + '">last.fm</a> )';
-    var statusBox = document.getElementById('rdio');
+    var statusBox = document.getElementById('spotify');
     if (!statusBox) {
       var view = document.createElement('div');
-      view.id  = "rdio";
-      document.body.appendChild(view);
-      statusBox = document.getElementById('rdio');
+      view.id  = "spotify";
+      document.getElementById('main-footer').appendChild(view);
+      statusBox = document.getElementById('spotify');
     }
     if (this.trackInfo.error) {
       status   = "Error: ";
@@ -77,8 +77,5 @@ var LastFMStatus = {
       statusBox.innerHTML = message;
     }
 
-    // Set rdioActive to true so logofyAPI and activate API can fire
-    // rdioActive = true;
-    // centerAPI();
   }
 };

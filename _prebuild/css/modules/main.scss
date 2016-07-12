@@ -22,6 +22,9 @@
 
   @include mq(800px) {
     max-width: 1140px;
+  }
+
+  @include mq(960px) {
     padding: $spacer * 2;
   }
 

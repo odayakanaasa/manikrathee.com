@@ -98,9 +98,18 @@
 }
 
 [id="page-title"] {
+  margin: $spacer 0;
   font-family: $serif;
-  @include font-size(50);
-  font-weight: 700;
+  @include font-size(25);
+  font-weight: 600;
+  line-height: 1.1;
+
+  @include mq(800px) {
+    @include font-size(50);
+    text-align: right;
+    margin: 0;
+  }
+
 }
 
 

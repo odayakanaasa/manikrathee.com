@@ -95,6 +95,7 @@
 
 @include mq(500px) {
   [id=main-footer] {
+    width: calc(100% + 40px + 4rem);
     margin-left: -40px;
   }
 }
@@ -161,5 +162,26 @@
     max-width: 1300px;
     margin-left: -80px;
     padding: 10rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include mq(1300px) {
+  [id=main-footer] {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -1764,7 +1764,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   transition: padding 0.25s ease-in-out; }
   @media (min-width: 800px) {
     [id=main] {
-      max-width: 1140px;
+      max-width: 1140px; } }
+  @media (min-width: 960px) {
+    [id=main] {
       padding: 8rem; } }
   [id=main]:after {
     display: block;
@@ -2191,10 +2193,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         opacity: 1; } }
 
 [id="page-title"] {
+  margin: 4rem 0;
   font-family: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif;
-  font-size: 50px;
-  font-size: 5rem;
-  font-weight: 700; }
+  font-size: 25px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.1; }
+  @media (min-width: 800px) {
+    [id="page-title"] {
+      font-size: 50px;
+      font-size: 5rem;
+      text-align: right;
+      margin: 0; } }
 
 .current-title {
   font-weight: 500;
@@ -2221,7 +2231,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .main-nav-list {
   font-size: 16px;
   font-size: 1.6rem;
-  line-height: 2.2rem;
+  line-height: 1;
   padding-bottom: 1px; }
   @media (min-width: 768px) {
     .main-nav-list {
@@ -2231,17 +2241,40 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   .main-nav-list i {
     font-size: inherit;
     line-height: inherit; }
-  .main-nav-list li + li {
-    margin-top: 0.4rem; }
+  .main-nav-list li {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px; }
+    @media (min-width: 768px) {
+      .main-nav-list li {
+        width: auto;
+        float: none;
+        margin-bottom: 10px; } }
+    .main-nav-list li + li {
+      margin-top: 0.4rem; }
   .main-nav-list i {
     margin-left: 10px;
     font-size: 13px;
     font-size: 1.3rem;
     font-weight: 200; }
 
+.footer-nav li {
+  width: auto;
+  margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .footer-nav li {
+      margin-bottom: 10px; } }
 .no-js .footer-nav a:hover, .no-js .footer-nav a:focus, .js.no-touch .footer-nav a:hover, .js.no-touch .footer-nav a:focus, .js.touch .footer-nav a:active {
   color: #A2A2A2;
   border-color: #A2A2A2; }
+
+.nav-work-case-studies span,
+.nav-weekly-reads span {
+  display: none; }
+@media (min-width: 768px) {
+  .nav-work-case-studies span,
+  .nav-weekly-reads span {
+    display: inline; } }
 
 /* Mixins */
 /*
@@ -2646,6 +2679,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     max-width: 1300px;
     margin-left: -80px;
     padding: 10rem; } }
+@media (min-width: 1300px) {
+  [id=main-footer] {
+    margin-left: auto;
+    margin-right: auto; } }
 /* Mixins */
 /*
  * Provide a hover effect for non-touch devices, turn it into an Active state for mobile, and maintain a fallback.
