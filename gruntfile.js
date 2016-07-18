@@ -165,8 +165,8 @@ module.exports = function(grunt) {
       // },
       main: {
         files: '_prebuild/**/*',
-        // tasks: ['jekyll','sass','autoprefixer','concat'],
-        tasks: ['sass','autoprefixer','concat'],
+        tasks: ['jekyll','sass','autoprefixer','concat'],
+        // tasks: ['sass','autoprefixer','concat'],
         options: {
           debounceDelay: 550,
         },

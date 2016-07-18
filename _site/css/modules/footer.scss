@@ -15,6 +15,20 @@
   color: #fff;
   @include box;
 
+  &.light-copy {
+    color: $dark-grey;
+    p,
+    a {
+      color: $dark-grey;
+    }
+
+    a {
+      &:hover {
+        color: $light-grey;
+      }
+    }
+  }
+
   p {
     color: #fff;
   }
@@ -48,6 +62,11 @@
     margin-bottom: $spacer;
   }
 
+  .main-nav-list {
+    overflow: hidden;
+    margin-top: $spacer;
+  }
+
 
   #snapchat {
     display: block;
@@ -59,12 +78,24 @@
   }
 
 
-  #weekly-reads-tout,
-  #photo-metadata {
+  .footer-tout {
     // shown in header on right side, only for homepage
     justify-content: space-between;
+    position: relative;
     margin-top: $spacer*1.25; // push content to the baseline of the title
 
+    i.icon {
+      display: block;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 60px;
+      width: calc(100% - 60px);
+      transform: translate3d(0,-50%,0);
+    }
   }
 
   #photo-metadata {
@@ -79,7 +110,24 @@
   }
 
   #manikrathee {
-    display: none;
+    position: absolute;
+    top: 160px;
+    left: -75px;
+    transform: rotate(-90deg);
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    opacity: 0.55;
+    pointer-events: none;
+
+    @include mq(768px) {
+      left: -30px;
+    }
+
+    @include mq(960px) {
+      top: 220px;
+      left: 25px;
+      opacity: 0.3;
+    }
   }
 
 } // #page-header
@@ -125,14 +173,11 @@
 
     .footer-nav {
       justify-content: flex-start;
+      min-width: 320px;
     }
 
     .footer-data {
       justify-content: flex-end;
-    }
-
-    #manikrathee {
-      display: none;
     }
   }
 
@@ -159,7 +204,6 @@
 @include mq(960px) {
   [id=main-footer] {
     width: calc(100% + 160px);
-    max-width: 1300px;
     margin-left: -80px;
     padding: 10rem;
   }
@@ -181,7 +225,7 @@
 
 @include mq(1300px) {
   [id=main-footer] {
-    margin-left: auto;
-    margin-right: auto;
+    width: calc(100% + 120px);
+    margin-left: -60px;
   }
 }

@@ -25,9 +25,10 @@
   $serif: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif;
 
 
+
   // Elements
   $base-unit: 0.2rem;
-  $standard-unit: $base-unit * 2; // For use with typography, line-heights, etc.
+  $standard-unit: $base-unit * 3; // For use with typography, line-heights, etc.
   $spacer: $base-unit * 20; // For use with layout, sections, etc.
   // $divider: 1px solid rgba(229,229,229,1); // #E5E5E5
   $border: 2px dotted rgba(0,0,0,0.1);

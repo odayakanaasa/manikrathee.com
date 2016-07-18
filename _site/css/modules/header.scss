@@ -17,7 +17,7 @@
     justify-content: space-between;
   }
 
-  .main-header {
+  .global-header {
     opacity: 0.7;
     @include transition(opacity 0.25s ease-in-out);
 
@@ -28,9 +28,7 @@
     #home & {
       opacity: 1;
     }
-
   }
-
 } // #page-header
 
 
@@ -53,49 +51,67 @@
   }
 }
 
-[id="who-is"],
-.page-header {
-
-  @include mq(768px) {
-    justify-content: flex-end;
-    margin-top: 50px;
-  }
-
-}
 
 
-
-[id="who-is"] {
-  // shown in header on right side, only for homepage
-  margin: ($spacer * 2) 0; // push content to the baseline of the title
+[id="who-is"] { // shown in header on right side, only for homepage
+  margin: $spacer 0; // push content to the baseline of the title
   line-height: 1.6;
 
   @include mq(768px) {
-    margin-top: 0;
+    margin-top: 50px; // align copy to heading and nav
     margin-bottom: 0;
   }
 
-  p {
-    @include font-size(15); // same as previous heading
+  .current-title {
+    font-weight: 500;
+    @include font-size(18);
+    margin-bottom: $spacer;
+  }
 
-    @include mq(800px) {
-      @include font-size(18); // restore to match .current-title
+  .previous-container {
+    color: $dark-grey;
+  }
+
+  .previous-heading {
+    margin: 0;
+    text-transform: uppercase;
+    @include font-size(12);
+    line-height: 1;
+
+    @include mq(768px) {
+      margin: 0 0 0.5rem 0;
     }
   }
 
+  .previous-positions { //ul
+
+    li {
+      list-style-type: none;
+      margin-bottom: $base-unit * 6;
+
+      @include mq(800px) {
+        margin-bottom: $base-unit * 2;
+      }
+    }
+
+    li,
+    a {
+      @include font-size(16); // same as previous heading
+      font-weight: 100;
+    }
+  }
+
+
   i {
     display: block;
-    opacity: 0.7;
-    font-style: normal;
-    @include transition(opacity 1s ease-in-out);
 
-    @include mq(800px) {
+    @include mq(540px) {
       display: inline;
-      opacity: 1;
     }
   }
 
 }
+
 
 [id="page-title"] {
   margin: $spacer 0;
@@ -107,36 +123,7 @@
   @include mq(800px) {
     @include font-size(50);
     text-align: right;
-    margin: 0;
-  }
-
-}
-
-
-// homepage, titles and previous positions
-.current-title {
-  font-weight: 500;
-  @include font-size(18);
-  margin-bottom: $spacer;
-}
-
-.previous-heading {
-  margin: 0;
-  color: $dark-grey;
-  text-transform: uppercase;
-  @include font-size(12);
-  line-height: 1;
-}
-
-.previous {
-  li {
-    list-style-type: none;
-    margin-top: $base-unit * 6;
-  }
-
-  li,
-  a {
-    font-weight: 100;
-    color: $light-grey;
+    margin: 120px 0 0 0;
   }
 }
+

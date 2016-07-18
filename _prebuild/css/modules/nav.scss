@@ -6,7 +6,7 @@
   padding-bottom: 1px;
 
   @include mq(768px) {
-    line-height: $base-unit * 10;
+    line-height: 2.6rem;
   }
 
   li,
@@ -19,16 +19,12 @@
   li {
     width: 50%;
     float: left;
-    margin-bottom: 10px;
+    margin-bottom: 1.5rem;
 
     @include mq(768px) {
       width: auto;
       float: none;
-      margin-bottom: 10px;
-    }
-
-    & + li {
-      margin-top: $standard-unit;
+      margin-bottom: 0;
     }
   }
 
@@ -40,13 +36,12 @@
 }
 
 .footer-nav {
+  @include clearfix;
   // shared styles with .main-nav-list > li above
   li {
-    width: auto;
-    margin-bottom: 0;
 
     @include mq(768px) {
-      margin-bottom: 10px;
+      margin-bottom: $standard-unit;
     }
   }
 

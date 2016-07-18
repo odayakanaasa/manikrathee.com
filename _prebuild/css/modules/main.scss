@@ -4,24 +4,25 @@
 
 [id=main] { // shadow-container
   display: block;
+  max-width: 1440px;
   // justify-content: space-between;
   // align-items: center;
   // flex-wrap: wrap;
 
   position: relative;
   background-color: #fff;
-  background-image: url('../img/bg.png');
-  background-repeat: repeat;
-  background-position: center top;
+  // background-image: url('../img/bg.png');
+  // background-repeat: repeat;
+  // background-position: center top;
   margin-left: auto;
   margin-right: auto;
-  padding: $spacer;
+  padding: $spacer / 2;
   border-radius: 3px;
   @include box;
   @include transition(padding 0.25s ease-in-out);
 
-  @include mq(800px) {
-    max-width: 1140px;
+  @include mq(500px) {
+    padding: $spacer;
   }
 
   @include mq(960px) {
