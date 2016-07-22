@@ -112,47 +112,47 @@ LastFMStatus.init({
   // tweens for the animation:
 
   // burst animation
-  // tween1 = new mojs.Burst({
-  //   parent: el,
-  //   duration: 800,
-  //   delay: 200,
-  //   // shape : 'circle',
-  //   shape : 'star',
-  //   fill : [ '#988ADE', '#DE8AA0', '#8AAEDE', '#8ADEAD', '#DEC58A', '#8AD1DE' ],
-  //   x: '50%',
-  //   y: '50%',
-  //   opacity: 0.6,
-  //   childOptions: { radius: {20:5} },
-  //   radius: {40:80},
-  //   count: 22,
-  //   // isSwirl: true,
-  //   isRunLess: true,
-  //   easing: mojs.easing.bezier(.89,0,.19,1)
-  // }),
-  // // ring animation
-  // tween2 = new mojs.Transit({
-  //   parent: el,
-  //   duration: 800,
-  //   delay: 200,
-  //   type: 'circle',
-  //   radius: {0: 50},
-  //   fill: 'transparent',
-  //   stroke: '#988ADE',
-  //   strokeWidth: {5:0},
-  //   opacity: 0.6,
-  //   x: '50%',
-  //   y: '50%',
-  //   isRunLess: true,
-  //   easing: mojs.easing.bezier(.89,0,.19,1)
-  // }),
-  // // icon scale animation
-  // tween3 = new mojs.Tween({
-  //   duration : 1000,
-  //   onUpdate: function(progress) {
-  //     var scaleProgress = scaleCurve(progress);
-  //     interiorLogo.style.WebkitTransform = interiorLogo.style.transform = 'scale3d(' + scaleProgress + ',' + scaleProgress + ',1)';
-  //   }
-  // });
+  tween1 = new mojs.Burst({
+    parent: el,
+    duration: 800,
+    delay: 200,
+    // shape : 'circle',
+    shape : 'star',
+    fill : [ '#988ADE', '#DE8AA0', '#8AAEDE', '#8ADEAD', '#DEC58A', '#8AD1DE' ],
+    x: '50%',
+    y: '50%',
+    opacity: 0.6,
+    childOptions: { radius: {20:5} },
+    radius: {40:80},
+    count: 22,
+    // isSwirl: true,
+    isRunLess: true,
+    easing: mojs.easing.bezier(.89,0,.19,1)
+  }),
+  // ring animation
+  tween2 = new mojs.Transit({
+    parent: el,
+    duration: 800,
+    delay: 200,
+    type: 'circle',
+    radius: {0: 50},
+    fill: 'transparent',
+    stroke: '#988ADE',
+    strokeWidth: {5:0},
+    opacity: 0.6,
+    x: '50%',
+    y: '50%',
+    isRunLess: true,
+    easing: mojs.easing.bezier(.89,0,.19,1)
+  }),
+  // icon scale animation
+  tween3 = new mojs.Tween({
+    duration : 1000,
+    onUpdate: function(progress) {
+      var scaleProgress = scaleCurve(progress);
+      interiorLogo.style.WebkitTransform = interiorLogo.style.transform = 'scale3d(' + scaleProgress + ',' + scaleProgress + ',1)';
+    }
+  });
 
   tween1 = new mojs.Burst({
     parent: el,
@@ -201,10 +201,10 @@ LastFMStatus.init({
 
 
 // add tweens to timeline:
-if (el.length && interiorLogo.length) {
+// if (el.length && interiorLogo.length) {
   timeline.add(tween1, tween2, tween3);
   timeline.start();
-}
+// }
 
 
 
@@ -229,21 +229,6 @@ if (el.length && interiorLogo.length) {
 
 
 
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-19400273-5', 'auto');
-ga('send', 'pageview');
-
-
-function trackEvent(cat, action, label){
-  if (cat && action && label) {
-    ga('send', 'event', cat, action, label);
-  }
-};
-
 
 $(document).ready(function() {
   var body = $('body');
@@ -261,3 +246,28 @@ $(document).ready(function() {
   }
 
 });
+
+
+
+
+
+
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-19400273-5', 'auto');
+ga('send', 'pageview');
+
+
+function trackEvent(cat, action, label){
+  if (cat && action && label) {
+    try {
+        ga('send', 'event', cat, action, label);
+    } catch (e) {
+        logMyErrors(e); // pass exception object to error handler
+    }
+  }
+};

@@ -48,6 +48,8 @@
 
 [id=inner-container] {
   // main content container
+  width: 100%;
+  overflow: hidden;
   padding-top: $spacer * 1.5;
   padding-bottom: $spacer * 1.5;
 }

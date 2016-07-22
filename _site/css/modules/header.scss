@@ -54,12 +54,17 @@
 
 
 [id="who-is"] { // shown in header on right side, only for homepage
-  margin: $spacer 0; // push content to the baseline of the title
+  margin: ($spacer * 1.15) 0 0 0; // push content to the baseline of the title
+  padding: ($spacer * 1.15) 0;
   line-height: 1.6;
+  border-top: $border;
+  border-bottom: $border;
 
   @include mq(768px) {
-    margin-top: 50px; // align copy to heading and nav
+    margin-top: 45px; // align copy to heading and nav
     margin-bottom: 0;
+    padding: 0;
+    border: none;
   }
 
   .current-title {

@@ -8,26 +8,30 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  mix-blend-mode: difference;
   width: 100%;
   background: #333;
   padding: $spacer;
   color: #fff;
   @include box;
 
-  &.light-copy {
-    color: $dark-grey;
-    p,
-    a {
-      color: $dark-grey;
-    }
-
-    a {
-      &:hover {
-        color: $light-grey;
-      }
-    }
+  & > * {
+    // set difference on children only, so the background image remains safe
+    mix-blend-mode: difference;
   }
+
+  // &.light-copy {
+  //   color: $dark-grey;
+  //   p,
+  //   a {
+  //     color: $dark-grey;
+  //   }
+
+  //   a {
+  //     &:hover {
+  //       color: $light-grey;
+  //     }
+  //   }
+  // }
 
   p {
     color: #fff;
@@ -43,12 +47,16 @@
 
   .mountain-monday {
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 50%;
-    transform: translate(-50%,0,0);
+    transform: translate(-50%, 0);
+
+    width: 70px;
+    height: 50px;
+    background-size: contain;
   }
 
-  .footer-nav {
+  .footer-nav-container {
     justify-content: space-around;
   }
   .footer-data {
@@ -65,16 +73,33 @@
   .main-nav-list {
     overflow: hidden;
     margin-top: $spacer;
+
+    li {
+      width: calc(50% - 20px);
+
+      &:nth-child(even) {
+        margin-left: 20px;
+        text-align: left;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+        text-align: right;
+      }
+
+    }
   }
 
 
   #snapchat {
     display: block;
-    @include size(78px, 78px);
     background-image: url('../img/snapchat.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    @include size(78px, 78px);
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
@@ -82,19 +107,22 @@
     // shown in header on right side, only for homepage
     justify-content: space-between;
     position: relative;
-    margin-top: $spacer*1.25; // push content to the baseline of the title
+    margin-top: $spacer*1.125; // push content to the baseline of the title
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     i.icon {
       display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     span {
       display: block;
-      position: absolute;
-      top: 50%;
-      left: 60px;
-      width: calc(100% - 60px);
-      transform: translate3d(0,-50%,0);
+      margin-top: 10px;
+      text-align: center;
     }
   }
 
@@ -110,23 +138,28 @@
   }
 
   #manikrathee {
+    display: none;
     position: absolute;
     top: 160px;
-    left: -75px;
+    left: -40px;
+    // left: -75px;
     transform: rotate(-90deg);
     letter-spacing: 7px;
     text-transform: uppercase;
     opacity: 0.55;
     pointer-events: none;
+  }
 
-    @include mq(768px) {
-      left: -30px;
-    }
+  .footer-photo-story-link {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: $border;
 
-    @include mq(960px) {
-      top: 220px;
-      left: 25px;
-      opacity: 0.3;
+    a {
+      &:hover {
+        color: $white;
+      }
     }
   }
 
@@ -162,22 +195,81 @@
 
   [id=main-footer] {
     flex-direction: row;
+    flex-wrap: wrap; // force photo story link to it's own line
     margin-left: -40px;
 
     .mountain-monday {
-      margin-left: auto;
-      margin-top: $spacer;
-      margin-right: auto;
-      margin-bottom: $spacer;
+      position: absolute;
+      top: auto;
+      left: auto;
+      margin: 0;
+      transform: none;
+
+      width: 40px;
+      height: 28px;
     }
 
-    .footer-nav {
+    .footer-nav-container {
       justify-content: flex-start;
-      min-width: 320px;
+      min-width: 300px;
+    }
+
+    nav {
+      min-width: 240px;
+      margin-left: 35px;
     }
 
     .footer-data {
       justify-content: flex-end;
+    }
+
+
+    .footer-tout {
+      // shown in header on right side, only for homepage
+      // justify-content: space-between;
+      // position: relative;
+      // margin-top: $spacer*1.125; // push content to the baseline of the title
+
+      i.icon {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      span {
+        display: inline-block;
+        width: calc(100% - 60px);
+        margin-top: 0;
+        margin-left: 10px;
+        vertical-align: top;
+        text-align: left;
+      }
+    }
+
+    .main-nav-list {
+      line-height: 2.2rem;
+
+      li {
+        width: auto;
+
+        &:nth-child(even) {
+          margin-left: 0;
+          text-align: left;
+        }
+
+        &:nth-child(odd) {
+          margin-right: 0;
+          text-align: left;
+        }
+
+      }
+    }
+
+    #manikrathee {
+      display: block;
+    }
+
+    #snapchat {
+      margin: 0;
     }
   }
 
@@ -205,9 +297,16 @@
   [id=main-footer] {
     width: calc(100% + 160px);
     margin-left: -80px;
-    padding: 10rem;
+    padding: 10rem 8rem;
+  }
+
+  #manikrathee {
+    top: 220px;
+    left: 25px;
+    opacity: 0.3;
   }
 }
+
 
 
 

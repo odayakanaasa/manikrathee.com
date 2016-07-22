@@ -2,6 +2,68 @@
 @import "imports/_all";
 
 
-#home{
-}
+#home {
+  .row {
 
+    &-tout{
+      margin-bottom: 4rem;
+    }
+  }
+
+  .social {
+    margin: ($spacer * 1.5) 0;
+
+    h3 {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    &--list {
+      display: inline-block;
+
+      li {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    &--list--item {
+      display: block;
+    }
+
+    .spotify {}
+    .fivehundredpx {
+      @include size(30px, 10px);
+      background-image: '../svg/500px.svg';
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .twitter {
+      @include size(30px, 30px);
+      background-image: '../svg/twitter.svg';
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+  }
+
+  .row-tout-list {
+    list-style-type: none;
+
+    li {
+
+      & + li {
+        margin-top: $base-unit * 4;
+      }
+
+      .more-items {
+        margin-top: $base-unit * 6;
+      }
+    }
+  }
+
+  .more-items {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

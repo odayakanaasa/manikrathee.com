@@ -58,12 +58,12 @@ var LastFMStatus = {
   updateView: function() {
     var status, message,
     userlink = ' ( <a target="__blank" href="http://www.last.fm/user/' + this.username + '">last.fm</a> )';
-    var statusBox = document.getElementById('spotify');
+    var statusBox = document.getElementById('spotify-api-bar');
     if (!statusBox) {
       var view = document.createElement('div');
-      view.id  = "spotify";
+      view.id  = "spotify-api-bar";
       document.getElementById('main-footer').appendChild(view);
-      statusBox = document.getElementById('spotify');
+      statusBox = document.getElementById('spotify-api-bar');
     }
     if (this.trackInfo.error) {
       status   = "Error: ";
