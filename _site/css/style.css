@@ -1786,8 +1786,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [id=inner-container] {
   width: 100%;
   overflow: hidden;
-  padding-top: 6rem;
-  padding-bottom: 6rem; }
+  padding-top: 12rem;
+  padding-bottom: 12rem; }
 
 .logo,
 .mountain-monday,
@@ -2133,14 +2133,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       -ms-flex-pack: start;
           justify-content: flex-start;
   overflow: hidden; }
-  @media (min-width: 768px) {
-    [id="page-header"] {
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between; } }
   [id="page-header"] .global-header {
     opacity: 0.7;
     transition: opacity 0.25s ease-in-out; }
@@ -2169,12 +2161,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   line-height: 1.6;
   border-top: 2px dotted rgba(0, 0, 0, 0.1);
   border-bottom: 2px dotted rgba(0, 0, 0, 0.1); }
-  @media (min-width: 768px) {
-    [id="who-is"] {
-      margin-top: 45px;
-      margin-bottom: 0;
-      padding: 0;
-      border: none; } }
   [id="who-is"] .current-title {
     font-weight: 500;
     font-size: 18px;
@@ -2199,8 +2185,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         margin-bottom: 0.4rem; } }
   [id="who-is"] .previous-positions li,
   [id="who-is"] .previous-positions a {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 100; }
   [id="who-is"] i {
     display: block; }
@@ -2217,11 +2203,32 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   line-height: 1.1; }
   @media (min-width: 800px) {
     [id="page-title"] {
+      width: 100%;
+      margin: 120px 0 0 0;
       font-size: 50px;
       font-size: 5rem;
-      text-align: right;
-      margin: 120px 0 0 0; } }
+      text-align: center; } }
 
+@media (min-width: 768px) {
+  [id="page-header"] {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    [id="page-header"] .global-header {
+      width: 50%; }
+
+  [id="who-is"] {
+    margin-top: 45px;
+    margin-bottom: 0;
+    padding: 0;
+    border: none; } }
+@media (min-width: 1100px) {
+  [id="page-header"] {
+    background: #fbfbfb;
+    padding: 4px; } }
 .main-nav-list {
   font-size: 16px;
   font-size: 1.6rem;
@@ -2639,59 +2646,64 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       [id=main-footer] .main-nav-list li:nth-child(odd) {
         margin-right: 20px;
         text-align: right; }
-  [id=main-footer] #snapchat {
+
+#snapchat {
+  display: block;
+  background-image: url("../img/snapchat.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 78px;
+  height: 78px;
+  border-radius: 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.footer-tout {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-top: 4.5rem; }
+  .footer-tout:first-child {
+    margin-top: 0; }
+  .footer-tout i.icon {
     display: block;
-    background-image: url("../img/snapchat.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 78px;
-    height: 78px;
-    border-radius: 0;
     margin-left: auto;
     margin-right: auto; }
-  [id=main-footer] .footer-tout {
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    position: relative;
-    margin-top: 4.5rem; }
-    [id=main-footer] .footer-tout:first-child {
-      margin-top: 0; }
-    [id=main-footer] .footer-tout i.icon {
-      display: block;
-      margin-left: auto;
-      margin-right: auto; }
-    [id=main-footer] .footer-tout span {
-      display: block;
-      margin-top: 10px;
-      text-align: center; }
-  [id=main-footer] #photo-metadata {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out; }
-    [id=main-footer] #photo-metadata.is-visible {
-      opacity: 1;
-      visibility: visible; }
-  [id=main-footer] #manikrathee {
-    display: none;
-    position: absolute;
-    top: 160px;
-    left: -40px;
-    -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-    letter-spacing: 7px;
-    text-transform: uppercase;
-    opacity: 0.55;
-    pointer-events: none; }
-  [id=main-footer] .footer-photo-story-link {
-    width: 100%;
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 2px dotted rgba(0, 0, 0, 0.1); }
-    [id=main-footer] .footer-photo-story-link a:hover {
-      color: #fff; }
+  .footer-tout span {
+    display: block;
+    margin-top: 10px;
+    text-align: center; }
+
+#photo-metadata {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out; }
+  #photo-metadata.is-visible {
+    opacity: 1;
+    visibility: visible; }
+
+#manikrathee {
+  display: none;
+  position: absolute;
+  top: 160px;
+  left: -40px;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  opacity: 0.55;
+  pointer-events: none; }
+
+.footer-photo-story-link {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px dotted rgba(0, 0, 0, 0.1); }
+  .footer-photo-story-link a:hover {
+    color: #fff; }
 
 @media (min-width: 500px) {
   [id=main-footer] {
@@ -2717,17 +2729,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       width: 40px;
       height: 28px; }
     [id=main-footer] .footer-nav-container {
-      -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      min-width: 300px; }
+      width: 50%; }
     [id=main-footer] nav {
       min-width: 240px;
       margin-left: 35px; }
-    [id=main-footer] .footer-data {
-      -webkit-justify-content: flex-end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; }
     [id=main-footer] .footer-tout i.icon {
       display: inline-block;
       vertical-align: top; }
@@ -3108,6 +3113,383 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   height: 164px;
   width: 69px;
   z-index: 100; }
+
+/* Mixins */
+/*
+ * Provide a hover effect for non-touch devices, turn it into an Active state for mobile, and maintain a fallback.
+ * @requires Modernizr as a JS dependency to get .no-touch classes
+ * Adds styles via @content
+ */
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background-size: cover;
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+.icon--photography {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMzRweCIgaGVpZ2h0PSIzNHB4IiB2aWV3Qm94PSIwIDAgMzQgMzQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+R3JvdXA8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoIEJldGEuPC9kZXNjPiAgICA8ZGVmcz4gICAgICAgIDxjaXJjbGUgaWQ9InBhdGgtMSIgY3g9IjE3IiBjeT0iMTciIHI9IjE3Ij48L2NpcmNsZT4gICAgICAgIDxtYXNrIGlkPSJtYXNrLTIiIG1hc2tDb250ZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBtYXNrVW5pdHM9Im9iamVjdEJvdW5kaW5nQm94IiB4PSIwIiB5PSIwIiB3aWR0aD0iMzQiIGhlaWdodD0iMzQiIGZpbGw9IndoaXRlIj4gICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPiAgICAgICAgPC9tYXNrPiAgICA8L2RlZnM+ICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJGb290ZXIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04MjYuMDAwMDAwLCAtMzkzLjAwMDAwMCkiPiAgICAgICAgICAgIDxnIGlkPSJGb290ZXIrSW1nIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNzAuMDAwMDAwLCA4Ni4wMDAwMDApIj4gICAgICAgICAgICAgICAgPGcgaWQ9Im1haWwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY1Ni4wMDAwMDAsIDMwNy4wMDAwMDApIj4gICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cCI+ICAgICAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjM0IiBoZWlnaHQ9IjM0Ij48L3JlY3Q+ICAgICAgICAgICAgICAgICAgICAgICAgPHVzZSBpZD0iT3ZhbCIgc3Ryb2tlPSIjRkZGRkZGIiBtYXNrPSJ1cmwoI21hc2stMikiIHN0cm9rZS13aWR0aD0iNCIgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+ICAgICAgICAgICAgICAgICAgICAgICAgPHRleHQgaWQ9ImNhbWVyYSIgZm9udC1mYW1pbHk9IlNTU3RhbmRhcmQsIFNTIFN0YW5kYXJkIiBmb250LXNpemU9IjE3IiBmb250LXdlaWdodD0ibm9ybWFsIiBmaWxsPSIjRkZGRkZGIj4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRzcGFuIHg9IjgiIHk9IjI1Ij5jYW1lcmE8L3RzcGFuPiAgICAgICAgICAgICAgICAgICAgICAgIDwvdGV4dD4gICAgICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg=="); }
+.icon--weeklyreads {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMzRweCIgaGVpZ2h0PSIzNHB4IiB2aWV3Qm94PSIwIDAgMzQgMzQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+bWFpbDwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2ggQmV0YS48L2Rlc2M+ICAgIDxkZWZzPiAgICAgICAgPGNpcmNsZSBpZD0icGF0aC0xIiBjeD0iMTciIGN5PSIxNyIgcj0iMTciPjwvY2lyY2xlPiAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgbWFza0NvbnRlbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIG1hc2tVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHg9IjAiIHk9IjAiIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCIgZmlsbD0id2hpdGUiPiAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+ICAgICAgICA8L21hc2s+ICAgIDwvZGVmcz4gICAgPGcgaWQ9IlN5bWJvbHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9IkZvb3RlciIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTgyNi4wMDAwMDAsIC0yMzAuMDAwMDAwKSI+ICAgICAgICAgICAgPGcgaWQ9IkZvb3RlcitJbWciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3MC4wMDAwMDAsIDg2LjAwMDAwMCkiPiAgICAgICAgICAgICAgICA8ZyBpZD0iV2Vla2x5UmVhZHMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY1Ni4wMDAwMDAsIDE0NC4wMDAwMDApIj4gICAgICAgICAgICAgICAgICAgIDxnIGlkPSJtYWlsIj4gICAgICAgICAgICAgICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMzQiIGhlaWdodD0iMzQiPjwvcmVjdD4gICAgICAgICAgICAgICAgICAgICAgICA8dXNlIGlkPSJPdmFsIiBzdHJva2U9IiNGRkZGRkYiIG1hc2s9InVybCgjbWFzay0yKSIgc3Ryb2tlLXdpZHRoPSI0IiB4bGluazpocmVmPSIjcGF0aC0xIj48L3VzZT4gICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTAuMTMxNjUwNywxNC42MjkyMDkxIEMxMC4zNDY3MTIzLDE0Ljc2OTY0MzcgMTAuOTk0OTI0NywxNS4xODY4NTIgMTIuMDc2NDA0MSwxNS44ODA1MTA3IEMxMy4xNTc4ODM2LDE2LjU3NDE2OTQgMTMuOTg2MzQyNSwxNy4xMDgzMTY4IDE0LjU2MTg5NzMsMTcuNDgyODQ1MSBDMTQuNjI1MTIzMywxNy41MjM5MDg1IDE0Ljc1OTQ5MzIsMTcuNjEzMTQ4NiAxNC45NjUwMDY4LDE3Ljc1MDY3MzIgQzE1LjE3MDUyMDUsMTcuODg4MzA1NiAxNS4zNDEzMzU2LDE3Ljk5OTY0MDIgMTUuNDc3MjE5MiwxOC4wODQ0NjE0IEMxNS42MTMyMTkyLDE4LjE2OTI4MjcgMTUuNzc3NjMwMSwxOC4yNjQ0NTA2IDE1Ljk3MDU2ODUsMTguMzY5NzQ5NiBDMTYuMTYzNTA2OCwxOC40NzUwNDg2IDE2LjM0NTM4MzYsMTguNTU0MTU3NiAxNi41MTYwODIyLDE4LjYwNjY0NTUgQzE2LjY4Njg5NzMsMTguNjU5NDU2NiAxNi44NDUwMjA1LDE4LjY4NTY0NjcgMTYuOTkwNDUyMSwxOC42ODU2NDY3IEwxNywxOC42ODU2NDY3IEwxNy4wMDk1NDc5LDE4LjY4NTY0NjcgQzE3LjE1NDk3OTUsMTguNjg1NjQ2NyAxNy4zMTMxMDI3LDE4LjY1OTQ1NjYgMTcuNDgzOTE3OCwxOC42MDY2NDU1IEMxNy42NTQ2MTY0LDE4LjU1NDE1NzYgMTcuODM2NjA5NiwxOC40NzQ5NDA4IDE4LjAyOTQzMTUsMTguMzY5NzQ5NiBDMTguMjIyMjUzNCwxOC4yNjQzNDI4IDE4LjM4NjY2NDQsMTguMTY5MjgyNyAxOC41MjI2NjQ0LDE4LjA4NDQ2MTQgQzE4LjY1ODY2NDQsMTcuOTk5NjQwMiAxOC44MjkzNjMsMTcuODg4MzA1NiAxOS4wMzQ4NzY3LDE3Ljc1MDY3MzIgQzE5LjI0MDM5MDQsMTcuNjEzMDQwOCAxOS4zNzQ4NzY3LDE3LjUyMzkwODUgMTkuNDM4MTAyNywxNy40ODI4NDUxIEMyMC4wMTk4Mjg4LDE3LjEwODIwOSAyMS40OTk4NzY3LDE2LjE1Njk2MTEgMjMuODc3NzgwOCwxNC42Mjg5OTM1IEMyNC4zMzk0NTg5LDE0LjMzMDU1NjUgMjQuNzI1MTAyNywxMy45NzA0NzA0IDI1LjAzNTA2MTYsMTMuNTQ4OTUxIEMyNS4zNDUxMzcsMTMuMTI3NjQ3MSAyNS41LDEyLjY4NTY0OTggMjUuNSwxMi4yMjMxNzQ4IEMyNS41LDExLjgzNjc5MDkgMjUuMzQ5Njc4MSwxMS41MDYwMjA1IDI1LjA0OTI2NzEsMTEuMjMwODYzNSBDMjQuNzQ4ODU2MiwxMC45NTU3MDY0IDI0LjM5MzAyMDUsMTAuODE4MTgxOCAyMy45ODIxMDk2LDEwLjgxODE4MTggTDEwLjAxNzc3NCwxMC44MTgxODE4IEM5LjUzMDgyODc3LDEwLjgxODE4MTggOS4xNTYxMzAxNCwxMC45NzAzNjQyIDguODkzNjc4MDgsMTEuMjc0NzI5MSBDOC42MzEyMjYwMywxMS41NzkyMDE3IDguNSwxMS45NTk3NjU2IDguNSwxMi40MTYzMTI4IEM4LjUsMTIuNzg1MTI4OSA4LjY3Mzk1ODksMTMuMTg0NzY5NCA5LjAyMTc2MDI3LDEzLjYxNTAxODkgQzkuMzY5NTYxNjQsMTQuMDQ1MjY4MyA5LjczOTYwMjc0LDE0LjM4MzM2NzYgMTAuMTMxNjUwNywxNC42MjkyMDkxIFogTTI0LjU1MTI2MDMsMTUuNTY4NzA5MiBDMjIuNDc3MDI3NCwxNi44NjgxODc2IDIwLjkwMjA4MjIsMTcuODc4MDY2NyAxOS44MjcxMjMzLDE4LjU5ODEzMSBDMTkuNDY2NjMwMSwxOC44NDM5NzI0IDE5LjE3NDEzNywxOS4wMzU4MTcxIDE4Ljk0OTUyNzQsMTkuMTczMjM0IEMxOC43MjUwMzQyLDE5LjMxMDg2NjQgMTguNDI2MjUzNCwxOS40NTEzMDEgMTguMDUzMDY4NSwxOS41OTQ3NTM0IEMxNy42OCwxOS43MzgyMDU4IDE3LjMzMjE5ODYsMTkuODA5ODc4MiAxNy4wMDk2NjQ0LDE5LjgwOTg3ODIgTDE3LDE5LjgwOTg3ODIgTDE2Ljk5MDQ1MjEsMTkuODA5ODc4MiBDMTYuNjY3OTE3OCwxOS44MDk4NzgyIDE2LjMyLDE5LjczODIwNTggMTUuOTQ2OTMxNSwxOS41OTQ3NTM0IEMxNS41NzM4NjMsMTkuNDUxMzAxIDE1LjI3NDk2NTgsMTkuMzEwODY2NCAxNS4wNTA0NzI2LDE5LjE3MzIzNCBDMTQuODI1OTc5NSwxOS4wMzU4MTcxIDE0LjUzMzQ4NjMsMTguODQzOTcyNCAxNC4xNzI5OTMyLDE4LjU5ODEzMSBDMTMuMzE5MTUwNywxOC4wMTg2MDkxIDExLjc0NzU4MjIsMTcuMDA4NzMgOS40NTgxNzEyMywxNS41Njg3MDkyIEM5LjA5NzY3ODA4LDE1LjM0NjM2MzQgOC43NzgyODc2NywxNS4wOTE1NzY0IDguNSwxNC44MDQ3NzkzIEw4LjUsMjEuNzc2NzE3NCBDOC41LDIyLjE2MzIwOTEgOC42NDg1NzUzNCwyMi40OTM4NzE3IDguOTQ1ODQyNDcsMjIuNzY5MDI4NyBDOS4yNDMxMDk1OSwyMy4wNDQyOTM2IDkuNjAwNDU4OSwyMy4xODE4MTgyIDEwLjAxNzg5MDQsMjMuMTgxODE4MiBMMjMuOTgyMjI2LDIzLjE4MTgxODIgQzI0LjM5OTU0MTEsMjMuMTgxODE4MiAyNC43NTY4OTA0LDIzLjA0NDI5MzYgMjUuMDU0MTU3NSwyMi43NjkwMjg3IEMyNS4zNTE1NDExLDIyLjQ5Mzc2MzkgMjUuNSwyMi4xNjMyMDkxIDI1LjUsMjEuNzc2NzE3NCBMMjUuNSwxNC44MDQ3NzkzIEMyNS4yMjgsMTUuMDg1NjQ4NiAyNC45MTE4Njk5LDE1LjM0MDQzNTYgMjQuNTUxMjYwMywxNS41Njg3MDkyIFoiIGlkPSJTaGFwZSIgZmlsbD0iI0Y3RjdGNyI+PC9wYXRoPiAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICA8L2c+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+"); }
+
+/*
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    opacity: 1; } }
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+            transform: perspective(400px) rotateX(90deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+            transform: perspective(400px) rotateX(0deg);
+    opacity: 1; } }
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    opacity: 0; }
+  40% {
+    -webkit-transform: perspective(400px) rotateY(-10deg); }
+  70% {
+    -webkit-transform: perspective(400px) rotateY(10deg); }
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    opacity: 1; } }
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+            transform: perspective(400px) rotateY(90deg);
+    opacity: 0; }
+  40% {
+    -webkit-transform: perspective(400px) rotateY(-10deg);
+            transform: perspective(400px) rotateY(-10deg); }
+  70% {
+    -webkit-transform: perspective(400px) rotateY(10deg);
+            transform: perspective(400px) rotateY(10deg); }
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+            transform: perspective(400px) rotateY(0deg);
+    opacity: 1; } }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0); } }
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0); } }
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px); } }
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); } }
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px); } }
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px); } }
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); } }
+@-webkit-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px); } }
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); } }
+/*  Custom Animations  */
+/* Rotate = Loader Animation */
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@-webkit-keyframes slideUpLeft {
+  0% {
+    -webkit-transform: translateX(-50%); }
+  100% {
+    -webkit-transform: translateX(-100%); } }
+@keyframes slideUpLeft {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); } }
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(0); } }
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
+    -ms-filter: none !important; }
+
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr, img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100%; }
+
+  @page {
+    margin: 0.5cm; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2, h3 {
+    page-break-after: avoid; } }
+.spotify {
+  background-image: url("../svg/spotify.svg");
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.fivehundredpx {
+  background-image: url("../svg/fivehundredpx.svg");
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.twitter {
+  background-image: url("../svg/twitter.svg");
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.github {
+  background-image: url("../svg/github.svg");
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.dribbble {
+  background-image: url("../svg/dribbble.svg");
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.tumblr {
+  background-image: url("../svg/tumblr.svg");
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.pocket {
+  background-image: url("../svg/pocket.svg");
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.spotify {
+  width: 32px;
+  height: 32px;
+  border-radius: 0; }
+
+.fivehundredpx {
+  width: 32px;
+  height: 28px;
+  border-radius: 0; }
+
+.twitter {
+  width: 32px;
+  height: 32px;
+  border-radius: 0; }
+
+.github {
+  width: 32px;
+  height: 32px;
+  border-radius: 0; }
+
+.dribbble {
+  width: 45px;
+  height: 28px;
+  border-radius: 0; }
+
+.tumblr {
+  width: 45px;
+  height: 28px;
+  border-radius: 0; }
+
+.pocket {
+  width: 32px;
+  height: 32px;
+  border-radius: 0; }
 
 /* Mixins */
 /*
@@ -4856,6 +5238,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .blog {
   background: red; }
 
+pre {
+  background: #333;
+  border-radius: 6px 0 0 6px;
+  margin-right: -100px;
+  width: 50%;
+  float: right;
+  margin-right: -8rem; }
+
 /* Mixins */
 /*
  * Provide a hover effect for non-touch devices, turn it into an Active state for mobile, and maintain a fallback.
@@ -5572,32 +5962,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     page-break-after: avoid; } }
 #home .row-tout {
   margin-bottom: 4rem; }
-#home .social {
-  margin: 6rem 0; }
-  #home .social h3 {
-    display: inline-block;
-    margin-right: 10px; }
-  #home .social--list {
-    display: inline-block; }
-    #home .social--list li {
-      display: inline-block;
-      vertical-align: middle; }
-  #home .social--list--item {
-    display: block; }
-  #home .social .fivehundredpx {
-    width: 30px;
-    height: 10px;
-    border-radius: 0;
-    background-image: '../svg/500px.svg';
-    background-repeat: no-repeat;
-    background-size: contain; }
-  #home .social .twitter {
-    width: 30px;
-    height: 30px;
-    border-radius: 0;
-    background-image: '../svg/twitter.svg';
-    background-repeat: no-repeat;
-    background-size: contain; }
 #home .row-tout-list {
   list-style-type: none; }
   #home .row-tout-list li + li {
@@ -5607,7 +5971,46 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #home .more-items {
   text-transform: uppercase;
   font-weight: bold; }
+#home .social h3 {
+  display: inline-block;
+  margin-right: 10px; }
+#home .social--list {
+  display: inline-block;
+  color: red; }
+  #home .social--list li {
+    display: inline-block;
+    vertical-align: middle; }
+#home .social--list--item {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
 
+@media (min-width: 700px) {
+  #home .row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    #home .row + .row {
+      padding-top: 8rem; }
+    #home .row-tout {
+      width: 50%;
+      box-sizing: border-box; }
+      #home .row-tout:first-child {
+        padding-right: 4rem; }
+      #home .row-tout:last-child {
+        padding-right: 4rem; } }
 /* Mixins */
 /*
  * Provide a hover effect for non-touch devices, turn it into an Active state for mobile, and maintain a fallback.

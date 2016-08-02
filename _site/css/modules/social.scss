@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "imports/_all";
+
+
+$social-accounts: spotify fivehundredpx twitter github dribbble tumblr pocket;
+
+@each $account in $social-accounts {
+  .#{$account} {
+    background-image: url('../svg/#{$account}.svg');
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+.spotify {
+  @include size(32px, 32px);
+}
+.fivehundredpx {
+  @include size(32px, 28px);
+}
+.twitter {
+  @include size(32px, 32px);
+}
+.github {
+  @include size(32px, 32px);
+}
+.dribbble {
+  @include size(45px, 28px);
+}
+.tumblr {
+  @include size(45px, 28px);
+}
+.pocket {
+  @include size(32px, 32px);
+}

@@ -27,6 +27,10 @@ Redirect /exposure http://photos.manikrathee.com/
 Redirect /ios http://www.manikrathee.com/catalyst
 Redirect /iOS http://www.manikrathee.com/catalyst
 
+Redirect /shop https://marketplace.500px.com/manikrathee
+Redirect /500pxshop https://marketplace.500px.com/manikrathee
+Redirect /society6 https://society6.com/manikrathee
+
 Redirect /tumblr http://manikrathee.tumblr.com
 Redirect /twitter http://www.twitter.com/manikrathee
 Redirect /reading https://www.reading.am/ManikRathee/

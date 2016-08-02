@@ -90,80 +90,80 @@
     }
   }
 
+}
 
-  #snapchat {
+
+#snapchat {
+  display: block;
+  background-image: url('../img/snapchat.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include size(78px, 78px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.footer-tout {
+  // shown in header on right side, only for homepage
+  justify-content: space-between;
+  position: relative;
+  margin-top: $spacer*1.125; // push content to the baseline of the title
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  i.icon {
     display: block;
-    background-image: url('../img/snapchat.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    @include size(78px, 78px);
     margin-left: auto;
     margin-right: auto;
   }
 
+  span {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
 
-  .footer-tout {
-    // shown in header on right side, only for homepage
-    justify-content: space-between;
-    position: relative;
-    margin-top: $spacer*1.125; // push content to the baseline of the title
+#photo-metadata {
+  opacity: 0;
+  visibility: hidden;
+  @include transition( (opacity 1s ease-in-out),(visibility 1s ease-in-out) );
 
-    &:first-child {
-      margin-top: 0;
-    }
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
-    i.icon {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
+#manikrathee {
+  display: none;
+  position: absolute;
+  top: 160px;
+  left: -40px;
+  transform: rotate(-90deg);
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  opacity: 0.55;
+  pointer-events: none;
+}
 
-    span {
-      display: block;
-      margin-top: 10px;
-      text-align: center;
+.footer-photo-story-link {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: $border;
+
+  a {
+    &:hover {
+      color: $white;
     }
   }
+}
 
-  #photo-metadata {
-    opacity: 0;
-    visibility: hidden;
-    @include transition( (opacity 1s ease-in-out),(visibility 1s ease-in-out) );
-
-    &.is-visible {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-
-  #manikrathee {
-    display: none;
-    position: absolute;
-    top: 160px;
-    left: -40px;
-    // left: -75px;
-    transform: rotate(-90deg);
-    letter-spacing: 7px;
-    text-transform: uppercase;
-    opacity: 0.55;
-    pointer-events: none;
-  }
-
-  .footer-photo-story-link {
-    width: 100%;
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: $border;
-
-    a {
-      &:hover {
-        color: $white;
-      }
-    }
-  }
-
-} // #page-header
 
 
 
@@ -210,8 +210,7 @@
     }
 
     .footer-nav-container {
-      justify-content: flex-start;
-      min-width: 300px;
+      width: 50%;
     }
 
     nav {
@@ -220,7 +219,6 @@
     }
 
     .footer-data {
-      justify-content: flex-end;
     }
 
 

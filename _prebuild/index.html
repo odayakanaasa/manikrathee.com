@@ -10,15 +10,19 @@ section: home
 ---
 
 
-<section id="row">
+<section class="row">
   <div class="row-tout recent-photos">
     <h3 class="medium-heading">Photography &amp; Fashion</h3>
+
     <ul class="row-tout-list recent-photos-list">
+      {% for post in site.categories.photo %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
       <li>
         <a href="%|" title="" itemprop="url">
           Post title
-          <span>, Something 2015</span>
         </a>
+        <span>, Something 2015</span>
       </li>
       <li>
         <a href="%|" title="" itemprop="url">
@@ -32,14 +36,98 @@ section: home
       <li>
         <a href="%|" title="" itemprop="url">
           Post title
-          <span>, Something 2015</span>
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li class="more-items">
+        <a class="more-posts--link" href="/photos/" title="" itemprop="url">
+          More Photography
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="row-tout recent-writing">
+    <h3 class="medium-heading">Writing</h3>
+    {% for post in site.categories.writing %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span>, {{ page.date | date: '%B %d, %Y' }}</span>
+    {% endfor %}
+    <ul class="row-tout-list recent-writing-list">
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, for </span>
+        <a href="%|" class="" title="" itemprop="url">
+          LovelySunday
         </a>
       </li>
       <li>
         <a href="%|" title="" itemprop="url">
           Post title
-          <span>, Something 2015</span>
         </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li class="more-items">
+        <a class="more-posts--link" href="/blog/" title="" itemprop="url">
+          More Writing
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="row">
+  <div class="row-tout recent-publications">
+    <h3 class="medium-heading">Publications, Interviews, etc</h3>
+    <ul class="row-tout-list recent-publications-list">
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, for </span>
+        <a href="%|" class="" title="" itemprop="url">
+          LovelySunday
+        </a>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
       </li>
       <li class="more-items">
         <a class="more-posts--link" href="%|" title="" itemprop="url">
@@ -49,88 +137,40 @@ section: home
     </ul>
   </div>
 
-  <div class="row-tout recent-writing">
-    <h3 class="medium-heading">Writing &amp; Guides</h3>
-    <ul class="home-list">
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-          <span>, Something 2015</span>
-        </a>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-          <span>, Something 2015</span>
-        </a>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-          <span>, Something 2015</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>
 
-
-<section id="row">
-  <div class="row-tout publications-and-interviews">
-    <h3 class="medium-heading">Publications, Interviews, etc</h3>
-    <ul class="home-list">
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-          <span>, Something 2015</span>
-        </a>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-          <span>, Something 2015</span>
-        </a>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-          <span>, Something 2015</span>
-        </a>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-          <span>, Something 2015</span>
-        </a>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-          <span>, Something 2015</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="row-tout recent-writing">
+  <div class="row-tout recent-speaking">
     <h3 class="medium-heading">Speaking</h3>
-    <ul class="home-list">
+    <ul class="row-tout-list recent-speaking-list">
       <li>
         <a href="%|" title="" itemprop="url">
           Post title
-          <span>, Something 2015</span>
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, for </span>
+        <a href="%|" class="" title="" itemprop="url">
+          LovelySunday
         </a>
       </li>
       <li>
         <a href="%|" title="" itemprop="url">
           Post title
-          <span>, Something 2015</span>
         </a>
+        <span>, Something 2015</span>
       </li>
       <li>
         <a href="%|" title="" itemprop="url">
           Post title
-          <span>, Something 2015</span>
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li class="more-items">
+        <a class="more-posts--link" href="%|" title="" itemprop="url">
+          More Photography
         </a>
       </li>
     </ul>
@@ -139,14 +179,18 @@ section: home
 
 
 
-<section class="social">
+
+
+
+
+<section class="row social">
 
   <h3 class="small-heading">Online:</h3>
 
   <ul class="social--list">
     <li>
       <a class="social--list--item spotify" href="%|" title="" itemprop="url">
-        Spotify WHY ISNT THIS SVG SHOWING?? P1
+        Spotify
       </a>
     </li>
     <li>
@@ -160,13 +204,23 @@ section: home
       </a>
     </li>
     <li>
-      <a href="%|" title="" itemprop="url">
+      <a class="social--list--item github" href="%|" title="" itemprop="url">
         GitHub
       </a>
     </li>
     <li>
-      <a href="%|" title="" itemprop="url">
+      <a class="social--list--item dribbble" href="%|" title="" itemprop="url">
         dribbble
+      </a>
+    </li>
+    <li>
+      <a class="social--list--item tumblr" href="%|" title="" itemprop="url">
+        tumblr
+      </a>
+    </li>
+    <li>
+      <a class="social--list--item pocket" href="%|" title="" itemprop="url">
+        pocket
       </a>
     </li>
   </ul>

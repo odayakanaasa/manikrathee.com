@@ -5,46 +5,9 @@
 #home {
   .row {
 
-    &-tout{
+    &-tout {
       margin-bottom: 4rem;
     }
-  }
-
-  .social {
-    margin: ($spacer * 1.5) 0;
-
-    h3 {
-      display: inline-block;
-      margin-right: 10px;
-    }
-
-    &--list {
-      display: inline-block;
-
-      li {
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-
-    &--list--item {
-      display: block;
-    }
-
-    .spotify {}
-    .fivehundredpx {
-      @include size(30px, 10px);
-      background-image: '../svg/500px.svg';
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-    .twitter {
-      @include size(30px, 30px);
-      background-image: '../svg/twitter.svg';
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
   }
 
   .row-tout-list {
@@ -65,5 +28,66 @@
   .more-items {
     text-transform: uppercase;
     font-weight: bold;
+  }
+
+
+  .social {
+    // margin: ($spacer * 3) 0;
+
+    h3 {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    &--list { // ul
+      display: inline-block;
+      color: red;
+
+      li { // li
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    &--list--item { // a
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include ir;
+    }
+  }
+
+}
+
+
+
+
+
+
+@include mq(700px) {
+
+  #home {
+    .row {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+      & + .row {
+        padding-top: $spacer * 2;
+      }
+
+
+      &-tout {
+        width: 50%;
+        @include box;
+
+        &:first-child { // 50/50 touts on the homepage
+          padding-right: $spacer;
+        }
+        &:last-child {
+          padding-right: $spacer;
+        }
+      }
+    }
   }
 }
