@@ -20,7 +20,7 @@
   <meta name="robots" content="index,follow,archive">
   
     
-  <meta name="twitter:title"  property="og:title" content='Blog - Manik Rathee | Designer, Engineer, Photographer' />
+  <meta name="twitter:title"  property="og:title" content='Photography - Manik Rathee | Designer, Engineer, Photographer' />
   
   
 
@@ -81,13 +81,6 @@ https://github.com/manikrathee/manikrathee.com
 	<body
     
     
-      class="
-        dark
-        
-        blog blog-post
-        
-      "
-    
   >
 
     <div id="main" class="container" role="main">
@@ -145,7 +138,7 @@ https://github.com/manikrathee/manikrathee.com
     
     <div class="page-title-container">
       <h1 id="page-title">
-        Blog
+        Photography
       </h1>
     </div>
     
@@ -157,26 +150,10 @@ https://github.com/manikrathee/manikrathee.com
       <section id="inner-container" class="">
 
         
-        <figure>
-          <img src="" alt="">
-        </figure>
-
-        <picture>
-         <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
-         <img src="mdn-logo-narrow.png" alt="MDN">
+        <picture class="main-photo">
+         <source srcset="img/photos/root-header-image.jpg" media="(min-width: 600px)">
+         <img src="img/photos/root-header-image.jpg" alt="Photography">
         </picture>
-
-
-        <!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
-        <div id="feature" data-picture data-alt="">
-          <div itemprop="image" data-src=""></div>
-          <div itemprop="image" data-src="" data-media="(min-width: 400px)"></div>
-          <div itemprop="image" data-src="" data-media="(min-width: 800px)"></div>
-          <div itemprop="image" data-src="" data-media="(min-width: 1000px)"></div>
-
-          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-          <noscript><img itemprop="image" src="" alt=""></noscript>
-        </div>
         
 
 
@@ -184,466 +161,24 @@ https://github.com/manikrathee/manikrathee.com
         <article id="main-article">
         
 
-          
-  <li><a name="blog">blog</a>
-    <ul>
-    
-      
-        <li><a href=""></a></li>
-      
-    
-      
-        <li><a href="/blog/2015-03-12-how-i-use-textexpander.html"></a></li>
-      
-        <li><a href="/blog/photo-post.html">Hello World Photo</a></li>
-      
-        <li><a href="/blog/wanderlust-big-sur.html">Wanderlust</a></li>
-      
-        <li><a href="/blog/why-uber-threatens-taxi-labor-groups.html">Uber vs Taxis</a></li>
-      
-        <li><a href="/blog/sublime-text-preferences.html">Sublime Text</a></li>
-      
-        <li><a href="/blog/building-obama.html">Building Obama</a></li>
-      
-        <li><a href="/blog/on-disconnecting.html">On Disconnecting</a></li>
-      
-        <li><a href="/blog/quality-in-startup-mvps.html">Quality & Minimum Viable Products</a></li>
-      
-        <li><a href="/blog/president-barack-obama-the-tech-president.html">The Tech President</a></li>
-      
-        <li><a href="/blog/brad-frost-future-friendly-web.html">The Future Friendly Web</a></li>
-      
-        <li><a href="/blog/iphone-5-changing-devices-and-the-web.html">Changing Devices &amp; The Web</a></li>
-      
-        <li><a href="/blog/rework.html">Rework Redesign Rebuild</a></li>
-      
-        <li><a href="/blog/vsco.html">VSCO</a></li>
-      
-        <li><a href="/blog/pride.html">Pride</a></li>
-      
-        <li><a href="/blog/interaction-and-innovation.html">Interaction & Innovation</a></li>
-      
-        <li><a href="/blog/windy-city.html">Windy City</a></li>
-      
-        <li><a href="/blog/changes-obama-for-america.html">Changes & Obama For America</a></li>
-      
-        <li><a href="/blog/experiments-responsive-design.html">Experiments, Responsive Design & General Merryment</a></li>
-      
-    
-    </ul>
-  </li>
-
-  <li><a name="writing">writing</a>
-    <ul>
-    
-      
-        <li><a href=""></a></li>
-      
-    
-      
-        <li><a href="/blog/on-disconnecting.html">On Disconnecting</a></li>
-      
-    
-    </ul>
-  </li>
-
-  <li><a name="photos">photos</a>
-    <ul>
-    
-      
-        <li><a href=""></a></li>
-      
-    
-      
-        <li><a href="/blog/photo-post.html">Hello World Photo</a></li>
-      
-    
-    </ul>
-  </li>
-
-  <li><a name="photo">photo</a>
-    <ul>
-    
-      
-        <li><a href=""></a></li>
-      
-    
-      
-        <li><a href="/blog/photo-post.html">Hello World Photo</a></li>
-      
-    
-    </ul>
-  </li>
-
-
-
-
-
-We want to split the posts out by photos and blog so we can use 1 posts dir for the double blog setup I want.
-
-
-  	<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
-  <meta name="HandheldFriendly" content="true" />
-  <meta name="p:domain_verify" content="442914185983bc4fa55ed98fd101a62f"/>
-  <meta http-equiv="x-dns-prefetch-control" content="on">
-
-  <meta name="author" itemprop="name" content="Manik Rathee">
-  <meta property="og:type" content='website' />
-  <meta name="url" property="og:url" content="http://www.manikrathee.com/" />
-  <meta name="twitter:creator" content="@manikrathee">
-  <meta name="twitter:site" content="@manikrathee">
-  <meta name="description" property="og:description" itemprop="description" content="Manik Rathee is a designer, developer and user-experience engineer based in California">
-  <meta itemprop="image" property="og:image" content="/img/root/apple-touch-icon.png">
-  <meta name="keyword" content="manik, rathee, manik rathee, designer, google, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
-  <meta name="robots" content="index,follow,archive">
-  
-    
-  <meta name="twitter:title"  property="og:title" content='Hello World Photo - a post by Manik Rathee | Designer, Engineer, Photographer' />
-    
-  
-
-  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-  <link rel="preconnect" href="//cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="//www.google-analytics.com">
-  <link rel="dns-prefetch" href="//ajax.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="preconnect" href="//fonts.googleapis.com">
-  
-
-  <title>
-  
-    
-      Hello World Photo - a post by Manik Rathee | Designer, Photographer
-    
-  
-  </title>
-
-  
-
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-  
-
-
-  <script src="/js/libs/modernizr.min.js"></script>
-
-
-
-  <link rel="author" href="humans.txt">
-  <link rel="shortcut icon" href="/img/root/favicon.ico">
-  <link rel="apple-touch-icon-precomposed" href="/img/root/apple-touch-icon-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/root/apple-touch-icon-57x57-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/root/apple-touch-icon-72x72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/root/apple-touch-icon-114x114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/root/apple-touch-icon-144x144-precomposed.png">
-
-
-  
-    
-    <style type="text/css">
-      /*#body a, .body a, footer a{
-        color: #00a0c8;
-      }
-      @media (min-width: 768px) {
-        #body:hover a, .body:hover a, footer:hover a{
-          color: #00a0c8;
-        }
-        #body:hover a:hover, .body:hover a:hover, footer:hover a:hover{
-          color: #004e62;
-        }
-      }*/
-    </style>
-    
-  
-</head>
-
-<!--
-    __  ___            _ __      ____        __  __
-   /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
-  / /|_/ / __ `/ __ \/ / //_/  / /_/ / __ `/ __/ __ \/ _ \/ _ \
- / /  / / /_/ / / / / / ,\    / _, _/ /_/ / /_/ / / /  __/  __/
-/_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/
-
-The site is static, compiled with Jekyll and managed with Grunt. Take a look inside the build on GitHub:
-https://github.com/manikrathee/manikrathee.com
--->
-
-
-	<body
-    
-    
-      class="
-        light
-        
-        blog blog-post
-        
-      "
-    
-  >
-
-    <div id="main" class="container" role="main">
-
-        <header id="page-header" role="banner">
-
-    <div class="global-header">
-
-      <h2 class="animated-logo">
-        <a class="mountain-monday" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
-          MountainMonday 🍻
-        </a>
-      </h2>
-      <hgroup id="site-title">
-        <h1 id="name">Manik Rathee</h1>
-        <p id="greeting">Designer, Photographer</p>
-      </hgroup>
-
-      <nav class="main-nav" role="navigation">
-  <ul class="main-nav-list">
-    <li>
-      <a itemprop="url" href="/" title="manikrathee.com">Home</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/about" title="About">About</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/photos" title="Photo Stories">Photos</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/blog" title="Blog">Blog</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/shop" title="Shop">Shop</a>
-    </li>
-    <li class="nav-work-case-studies">
-      <a itemprop="url" href="/work" title="Case Studies and Projects">Work<span> &amp; Case Studies</span></a>
-    </li>
-    <li>
-      <a itemprop="url" href="/library" title="Library and Recommendations">Library</a>
-    </li>
-    <li class="nav-weekly-reads">
-      <a itemprop="url" href="/weeklyreads" title="WeeklyReads: An email with the best design, photography and inspiration links of the week">WeeklyReads</a><span> <i>Email Subscription</i></span>
-    </li>
-    <li>
-      <a itemprop="url" href="/resources" title="Resources">Resources</a>
-    </li>
-  </ul>
-</nav>
-
-    </div>
-
-    
-
-    
-    <div class="page-title-container">
-      <h1 id="page-title">
-        Hello World Photo
-      </h1>
-    </div>
-    
-  </header>
-
-  
-
-
-      <section id="inner-container" class="">
-
-        
-        <figure>
-          <img src="" alt="">
-        </figure>
-
-        <picture>
-         <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
-         <img src="mdn-logo-narrow.png" alt="MDN">
-        </picture>
-
-
-        <!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
-        <div id="feature" data-picture data-alt="">
-          <div itemprop="image" data-src=""></div>
-          <div itemprop="image" data-src="" data-media="(min-width: 400px)"></div>
-          <div itemprop="image" data-src="" data-media="(min-width: 800px)"></div>
-          <div itemprop="image" data-src="" data-media="(min-width: 1000px)"></div>
-
-          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-          <noscript><img itemprop="image" src="" alt=""></noscript>
-        </div>
-        
-
-
-        
-        <article id="main-article">
-        
-
-          <h1>HELLO WORLD</h1>
-<h1>HELLO WORLD</h1>
-<h1>HELLO WORLD</h1>
-<h1>HELLO WORLD</h1>
-<h1>HELLO WORLD</h1>
-<h1>HELLO WORLD</h1>
-
-
-        
-        </article>
-
-          OTHER POSTS
-          
-
-<p class="pre-heading">Next Post</p>
-<a href="/blog/2015-03-12-how-i-use-textexpander.html" title="next Post: " itemprop="url">
-  <h3></h3>
-  <p></p>
-  <p class="date">August 02 2016</p>
-</a>
-
-
-
-
-          
-        
-
-      </section>
-
-    </div>
-
-    
-  <footer id="main-footer" role="contentinfo">
-
-    <span class="mountain-monday mountain-monday--inverse"></span>
-
-    <section class="footer-nav-container">
-      <span id="manikrathee">Manik Rathee</span>
-      <nav class="main-nav" role="navigation">
-  <ul class="main-nav-list">
-    <li>
-      <a itemprop="url" href="/" title="manikrathee.com">Home</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/about" title="About">About</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/photos" title="Photo Stories">Photos</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/blog" title="Blog">Blog</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/shop" title="Shop">Shop</a>
-    </li>
-    <li class="nav-work-case-studies">
-      <a itemprop="url" href="/work" title="Case Studies and Projects">Work<span> &amp; Case Studies</span></a>
-    </li>
-    <li>
-      <a itemprop="url" href="/library" title="Library and Recommendations">Library</a>
-    </li>
-    <li class="nav-weekly-reads">
-      <a itemprop="url" href="/weeklyreads" title="WeeklyReads: An email with the best design, photography and inspiration links of the week">WeeklyReads</a><span> <i>Email Subscription</i></span>
-    </li>
-    <li>
-      <a itemprop="url" href="/resources" title="Resources">Resources</a>
-    </li>
-  </ul>
-</nav>
-
-
-      <figure id="snapchat"></figure>
-    </section>
-
-
-    <section class="footer-data">
-      <div id="weekly-reads-tout" class="footer-tout">
-        <i class="icon icon--weeklyreads">WeeklyReads: an email list for design and inspiration.</i>
-        <span>WeeklyReads: an email list for design and inspiration.</span>
-      </div>
-
-      <div id="photo-metadata" class="footer-tout is-visible">
-        <!-- To Do:
-              Hook this up to be a random set of favorite posts
-          -->
-        <a href="%|" title="" itemprop="url">
-          <i class="icon icon--photography">Photo information</i>
-          <span>
-            LEICA Q — 25mm f1.8 200/s 200ISO
-            <br/>
-            Big Sur, California, USA
-          </span>
-        </a>
-      </div>
-    </section>
-
-  </footer>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/js/libs/jquery-2.1.1.min.js"><\/script>')</script>
-
-  <script src="/js/script.js"></script>
-
-
-<!--
-
- -->
-
-
-  
-
-
-  </body>
-
-</html>
-
-
-
-<hr>
-
-
-
-    <h3>blog</h3>
-    
-
-    <h3>writing</h3>
-    
-
-    <h3>photos</h3>
-    
-
-    <h3>photo</h3>
-    
-
-
-<hr>
-
-
-<p>Posts in category "basic" are:</p>
-
-<ul>
-  
-</ul>
-
-<hr>
-
-
-<BR><BR><BR><BR>
-  <BR><BR><BR><BR>
-    <BR><BR><BR><BR>
-      <BR><BR><BR><BR>
-
-
-
-<ul id="blog-list">
+          <ul id="photo-list">
   
   <li>
     <a id="photo-post" class="post" href="/blog/photo-post.html" title="Hello World Photo">
       <p class="post-date info date">July 07, 2016</p>
       <p class="post-title">
         Hello World Photo
-        <span class="post-subtitle info subtitle">subtitle</span>
+        <span class="post-subtitle info subtitle"></span>
+      </p>
+    </a>
+  </li>
+  
+  <li>
+    <a id="vsco" class="post" href="/blog/vsco.html" title="VSCO: The world through a viewfinder">
+      <p class="post-date info date">July 18, 2012</p>
+      <p class="post-title">
+        VSCO: The world through a viewfinder
+        <span class="post-subtitle info subtitle"></span>
       </p>
     </a>
   </li>

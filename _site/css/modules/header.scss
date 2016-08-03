@@ -123,14 +123,16 @@
   line-height: 1.1;
 
   @include mq(800px) {
+
     width: 100%;
-    margin: 120px 0 0 0;
     @include font-size(50);
     text-align: center;
+
+    // align to the bottom now -- not margin, but ahve it sit at the bottom and expand upwards
+    // margin: 120px 0 0 0;
+
   }
 }
-
-
 
 
 

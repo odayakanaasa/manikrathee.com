@@ -1,28 +1,20 @@
 ---
 layout: default
 
-title: Blog
+title: "Blog &amp; Writing"
 
 page-type: blog
 page-subtype: blog-index
-
-body-class: 'dark'
-
-sitemap:
-  lastmod: {{ post.date }}
-  priority: 0.7
-  changefreq: monthly
-  exclude: 'no'
 ---
 
 <ul id="blog-list">
   {% for posts in site.categories.writing %}
   <li>
-    <a id="{{ post.slug }}" class="post" href="{{ post.url }}" title="{{ post.title }}">
-      <p class="post-date info date">{{ post.date | date: "%B %d, %Y" }}</p>
+    <a id="{{ posts.slug }}" class="post" href="{{ posts.url }}" title="{{ posts.title }}">
+      <p class="post-date info date">{{ posts.date | date: "%B %d, %Y" }}</p>
       <p class="post-title">
-        {{ post.title }}
-        <span class="post-subtitle info subtitle">{{ post.subtitle }}</span>
+        {{ posts.title }}
+        <span class="post-subtitle info subtitle">{{ posts.subtitle }}</span>
       </p>
     </a>
   </li>

@@ -1786,8 +1786,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [id=inner-container] {
   width: 100%;
   overflow: hidden;
-  padding-top: 12rem;
-  padding-bottom: 12rem; }
+  padding-top: 8rem;
+  padding-bottom: 8rem; }
+
+#main-article {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  @media (min-width: 700px) {
+    #main-article {
+      padding-left: 10rem;
+      padding-right: 20rem; } }
+
+picture.main-photo {
+  display: block;
+  margin-bottom: 8rem; }
 
 .logo,
 .mountain-monday,
@@ -2213,7 +2225,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   @media (min-width: 800px) {
     [id="page-title"] {
       width: 100%;
-      margin: 120px 0 0 0;
       font-size: 50px;
       font-size: 5rem;
       text-align: center; } }
@@ -5241,14 +5252,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* Blog Styles */
 .blog {
   background: red; }
-
-#main-article {
-  padding-left: 2rem;
-  padding-right: 2rem; }
-  @media (min-width: 700px) {
-    #main-article {
-      padding-left: 6rem;
-      padding-right: 6rem; } }
 
 pre {
   background: #333;

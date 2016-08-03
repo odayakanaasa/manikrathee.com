@@ -50,13 +50,25 @@
   // main content container
   width: 100%;
   overflow: hidden;
-  padding-top: $spacer * 3;
-  padding-bottom: $spacer * 3;
+  padding-top: $spacer * 2;
+  padding-bottom: $spacer * 2;
+}
+
+#main-article {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include mq(700px) {
+    padding-left: 10rem;
+    padding-right: 20rem;
+  }
 }
 
 
-
-
+picture.main-photo {
+  display: block;
+  margin-bottom: 8rem;
+}
 
 
 

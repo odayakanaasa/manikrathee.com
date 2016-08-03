@@ -6,15 +6,7 @@
   background: red;
 }
 
-#main-article {
-  padding-left: 2rem;
-  padding-right: 2rem;
 
-  @include mq(700px) {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-}
 
 pre {
   background: #333;

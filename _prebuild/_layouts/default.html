@@ -21,26 +21,10 @@
       <section id="inner-container" class="{{page.section}}">
 
         {% if page.page-type == 'blog' %}
-        <figure>
-          <img src="" alt="">
-        </figure>
-
-        <picture>
-         <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
-         <img src="mdn-logo-narrow.png" alt="MDN">
+        <picture class="main-photo">
+         <source srcset="{{ page.img }}" media="(min-width: 600px)">
+         <img src="{{ page.img }}" alt="{{ page.title }}">
         </picture>
-
-
-        <!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
-        <div id="feature" data-picture data-alt="{% if page.featured-alt %}{{ page.featured-alt }}{else}blog- manikrathee{% endif %}">
-          <div itemprop="image" data-src="{{ page.featured-image-s }}"></div>
-          <div itemprop="image" data-src="{{ page.featured-image-m }}" data-media="(min-width: 400px)"></div>
-          <div itemprop="image" data-src="{{ page.featured-image-l }}" data-media="(min-width: 800px)"></div>
-          <div itemprop="image" data-src="{{ page.featured-image-x }}" data-media="(min-width: 1000px)"></div>
-
-          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-          <noscript><img itemprop="image" src="{{ page.featured-image-s }}" alt="{% if page.featured-alt %}{{ page.featured-alt }}{else}blog- manikrathee{% endif %}"></noscript>
-        </div>
         {% endif%}
 
 
