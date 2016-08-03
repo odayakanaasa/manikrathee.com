@@ -6,14 +6,17 @@
   background: red;
 }
 
+#main-article {
+  padding-left: 2rem;
+  padding-right: 2rem;
 
+  @include mq(700px) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
 
 pre {
   background: #333;
   border-radius: 6px 0 0 6px;
-  margin-right: -100px;
-  width: 50%;
-  float: right;
-  margin-right: -8rem;
-  // needs a clearfloat
 }

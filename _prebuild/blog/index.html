@@ -15,67 +15,9 @@ sitemap:
   exclude: 'no'
 ---
 
-{% for category in site.categories %}
-  <li><a name="{{ category | first }}">{{ category | first }}</a>
-    <ul>
-    {% for posts in category %}
-      {% for post in posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    {% endfor %}
-    </ul>
-  </li>
-{% endfor %}
-
-
-
-
-We want to split the posts out by photos and blog so we can use 1 posts dir for the double blog setup I want.
-
-{% for photos in site.categories.photos %}
-  {{ photos.output }}
-  {% for posts in category %}
-    {% for post in posts %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  {% endfor %}
-{% endfor %}
-
-<hr>
-
-
-{% for category in site.categories %}
-    <h3>{{ category | first }}</h3>
-    {% for post in page.categories.category %}
-      {{ post.title }}<br>
-    {% endfor %}
-{% endfor %}
-
-<hr>
-
-
-<p>Posts in category "basic" are:</p>
-
-<ul>
-  {% for post in site.categories.basic %}
-    {% if post.url %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endif %}
-  {% endfor %}
-</ul>
-
-<hr>
-
-
-<BR><BR><BR><BR>
-  <BR><BR><BR><BR>
-    <BR><BR><BR><BR>
-      <BR><BR><BR><BR>
-
-
-
 <ul id="blog-list">
   {% for post in site.categories.writing %}
+  {% for post in posts %}
   <li>
     <a id="{{ post.slug }}" class="post" href="{{ post.url }}" title="{{ post.title }}">
       <p class="post-date info date">{{ post.date | date: "%B %d, %Y" }}</p>
@@ -85,5 +27,6 @@ We want to split the posts out by photos and blog so we can use 1 posts dir for 
       </p>
     </a>
   </li>
+  {% endfor %}
   {% endfor %}
 </ul>

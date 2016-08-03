@@ -168,12 +168,17 @@ https://github.com/manikrathee/manikrathee.com
   
 
 
-      <section id="inner-container" class="" >
+      <section id="inner-container" class="">
 
         
         <figure>
           <img src="" alt="">
         </figure>
+
+        <picture>
+         <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+         <img src="mdn-logo-narrow.png" alt="MDN">
+        </picture>
 
 
         <!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
@@ -188,7 +193,12 @@ https://github.com/manikrathee/manikrathee.com
         </div>
         
 
-  	   <style>
+
+        
+        <article id="main-article">
+        
+
+          <style>
 	@media screen and (min-width: 768px){
 		#post-title {
 			margin-top: 142px;
@@ -255,6 +265,8 @@ https://github.com/manikrathee/manikrathee.com
 
 
         
+        </article>
+
           OTHER POSTS
           
 
@@ -326,18 +338,19 @@ https://github.com/manikrathee/manikrathee.com
       </div>
 
       <div id="photo-metadata" class="footer-tout is-visible">
-        <i class="icon icon--photography">Photo information</i>
-        <span>
-          LEICA Q — 25mm f1.8 200/s 200ISO
-          <br/>
-          Big Sur, California, USA
-        </span>
+        <!-- To Do:
+              Hook this up to be a random set of favorite posts
+          -->
+        <a href="%|" title="" itemprop="url">
+          <i class="icon icon--photography">Photo information</i>
+          <span>
+            LEICA Q — 25mm f1.8 200/s 200ISO
+            <br/>
+            Big Sur, California, USA
+          </span>
+        </a>
       </div>
     </section>
-
-    <div class="footer-photo-story-link">
-      <a href="/#" title="" itemprop="url">View Photo Story</a>
-    </div>
 
   </footer>
 
@@ -353,7 +366,6 @@ https://github.com/manikrathee/manikrathee.com
 
 
   
-
 
 
   </body>

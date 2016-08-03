@@ -42,7 +42,7 @@ body {
   }
 
   @include mq(500px) {
-    padding: $spacer $spacer 0 $spacer;
+    padding: $spacer $spacer 70px $spacer;
 
     &:after {
       opacity: 1;
@@ -51,7 +51,7 @@ body {
 
 
   @include mq(960px) {
-    padding: ($spacer * 2) ($spacer * 2) 0 ($spacer * 2);
+    padding: ($spacer * 2) ($spacer * 2) 70px ($spacer * 2);
   }
 
 }

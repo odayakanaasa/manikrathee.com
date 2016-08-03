@@ -168,12 +168,17 @@ https://github.com/manikrathee/manikrathee.com
   
 
 
-      <section id="inner-container" class="" >
+      <section id="inner-container" class="">
 
         
         <figure>
           <img src="" alt="">
         </figure>
+
+        <picture>
+         <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+         <img src="mdn-logo-narrow.png" alt="MDN">
+        </picture>
 
 
         <!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
@@ -188,7 +193,12 @@ https://github.com/manikrathee/manikrathee.com
         </div>
         
 
-  	   <p>This is a very exciting time for the web. People are designing using new and innovative techniques, websites are evolving from "eye-candy with a little bit of content" to <em>content-focused, device-agnostic experiences.</em> UX has erupted and spilled over to the web, and while others may argue, I say it is for the best.</p>
+
+        
+        <article id="main-article">
+        
+
+          <p>This is a very exciting time for the web. People are designing using new and innovative techniques, websites are evolving from "eye-candy with a little bit of content" to <em>content-focused, device-agnostic experiences.</em> UX has erupted and spilled over to the web, and while others may argue, I say it is for the best.</p>
 
 <p>Lately, I have been tackling an almost excessive amount of projects. I have very little spare time so the fact that I am trying multiple projects is pretty stupid to begin with, but I do it anyway. Because... well.. why not? I've redesigned <a href="http://www.manikrathee.com" target="_blank" title="Manik Rathee dot com">my personal home page</a>, started <a href="http://manikrathee.tumblr.com" target="_blank" title="Manik Rathee's Tumblr">a tumblr</a>, redesigned <a href="http://manikrathee.tumblr.com" target="_blank" title="Manik Rathee's Tumblr">that same tumblr with my first ever theme (and made it responsive)</a>, created a <a href="http://hopewillseeusthrough.tumblr.com" target="_blank" title="Hope Will See Us Through">type project based on lyrics from my favorite songs</a>, and even designed a <a href="http://manikrathee.com/iOS/" target="_blank" title="Catalyst iOS Theme">completely custom ui &amp; iphone theme called CATALYST</a>. Point being, there are so many options in our fields that, in my opinion, it is almost ignorant not to experiment. This isn't to say that people should focus on all of these variations to develop their skills permanently, but why not experiment with one or two projects?</p>
 
@@ -223,6 +233,8 @@ https://github.com/manikrathee/manikrathee.com
 
 
         
+        </article>
+
           OTHER POSTS
           
 
@@ -294,18 +306,19 @@ https://github.com/manikrathee/manikrathee.com
       </div>
 
       <div id="photo-metadata" class="footer-tout is-visible">
-        <i class="icon icon--photography">Photo information</i>
-        <span>
-          LEICA Q — 25mm f1.8 200/s 200ISO
-          <br/>
-          Big Sur, California, USA
-        </span>
+        <!-- To Do:
+              Hook this up to be a random set of favorite posts
+          -->
+        <a href="%|" title="" itemprop="url">
+          <i class="icon icon--photography">Photo information</i>
+          <span>
+            LEICA Q — 25mm f1.8 200/s 200ISO
+            <br/>
+            Big Sur, California, USA
+          </span>
+        </a>
       </div>
     </section>
-
-    <div class="footer-photo-story-link">
-      <a href="/#" title="" itemprop="url">View Photo Story</a>
-    </div>
 
   </footer>
 
@@ -321,7 +334,6 @@ https://github.com/manikrathee/manikrathee.com
 
 
   
-
 
 
   </body>

@@ -168,12 +168,17 @@ https://github.com/manikrathee/manikrathee.com
   
 
 
-      <section id="inner-container" class="" >
+      <section id="inner-container" class="">
 
         
         <figure>
           <img src="" alt="">
         </figure>
+
+        <picture>
+         <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+         <img src="mdn-logo-narrow.png" alt="MDN">
+        </picture>
 
 
         <!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
@@ -188,7 +193,12 @@ https://github.com/manikrathee/manikrathee.com
         </div>
         
 
-  	   <p>This planet is beautiful and life is short. The realization of those two things often leads to a desire to explore, to find new things, and to truly experience life.</p>
+
+        
+        <article id="main-article">
+        
+
+          <p>This planet is beautiful and life is short. The realization of those two things often leads to a desire to explore, to find new things, and to truly experience life.</p>
 
 <p>Aileen and I have started to do exactly that, and we are documenting all of it. </p>
 
@@ -213,14 +223,16 @@ https://github.com/manikrathee/manikrathee.com
 
 
         
+        </article>
+
           OTHER POSTS
           
 
 <p class="pre-heading">Next Post</p>
-<a href="/blog/how-i-use-text-expander.html" title="next Post: TextExpander" itemprop="url">
-  <h3>TextExpander</h3>
-  <p>'How I Use' Series</p>
-  <p class="date">March 12 2015</p>
+<a href="/blog/photo-post.html" title="next Post: Hello World Photo" itemprop="url">
+  <h3>Hello World Photo</h3>
+  <p>subtitle</p>
+  <p class="date">July 07 2016</p>
 </a>
 
 
@@ -284,18 +296,19 @@ https://github.com/manikrathee/manikrathee.com
       </div>
 
       <div id="photo-metadata" class="footer-tout is-visible">
-        <i class="icon icon--photography">Photo information</i>
-        <span>
-          LEICA Q — 25mm f1.8 200/s 200ISO
-          <br/>
-          Big Sur, California, USA
-        </span>
+        <!-- To Do:
+              Hook this up to be a random set of favorite posts
+          -->
+        <a href="%|" title="" itemprop="url">
+          <i class="icon icon--photography">Photo information</i>
+          <span>
+            LEICA Q — 25mm f1.8 200/s 200ISO
+            <br/>
+            Big Sur, California, USA
+          </span>
+        </a>
       </div>
     </section>
-
-    <div class="footer-photo-story-link">
-      <a href="/#" title="" itemprop="url">View Photo Story</a>
-    </div>
 
   </footer>
 
@@ -311,7 +324,6 @@ https://github.com/manikrathee/manikrathee.com
 
 
   
-
 
 
   </body>

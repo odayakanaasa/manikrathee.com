@@ -18,12 +18,17 @@
 
       {% include global-page-header.html %}
 
-      <section id="inner-container" class="{{page.section}}" >
+      <section id="inner-container" class="{{page.section}}">
 
         {% if page.page-type == 'blog' %}
         <figure>
           <img src="" alt="">
         </figure>
+
+        <picture>
+         <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+         <img src="mdn-logo-narrow.png" alt="MDN">
+        </picture>
 
 
         <!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
@@ -38,9 +43,16 @@
         </div>
         {% endif%}
 
-  	   {{ content }}
 
         {% if page.page-type == 'blog' %}
+        <article id="main-article">
+        {% endif%}
+
+          {{ content }}
+
+        {% if page.page-type == 'blog' %}
+        </article>
+
           OTHER POSTS
           {% include blog-pagination.html %}
 
@@ -54,7 +66,6 @@
     </div>
 
     {% include global-footer.html %}
-
   </body>
 
 </html>

@@ -50,9 +50,8 @@
     top: 30px;
     left: 50%;
     transform: translate(-50%, 0);
-
-    width: 70px;
-    height: 50px;
+    width: 46px;
+    height: 30px;
     background-size: contain;
   }
 
@@ -99,7 +98,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  @include size(78px, 78px);
+  @include size(48px, 48px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -150,21 +149,6 @@
   opacity: 0.55;
   pointer-events: none;
 }
-
-.footer-photo-story-link {
-  width: 100%;
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: $border;
-
-  a {
-    &:hover {
-      color: $white;
-    }
-  }
-}
-
-
 
 
 
@@ -267,7 +251,8 @@
     }
 
     #snapchat {
-      margin: 0;
+      @include size(78px, 78px);
+      margin: 0 0 0 32px;
     }
   }
 
@@ -300,7 +285,7 @@
 
   #manikrathee {
     top: 220px;
-    left: 25px;
+    left: 0;
     opacity: 0.3;
   }
 }

@@ -168,12 +168,17 @@ https://github.com/manikrathee/manikrathee.com
   
 
 
-      <section id="inner-container" class="" >
+      <section id="inner-container" class="">
 
         
         <figure>
           <img src="" alt="">
         </figure>
+
+        <picture>
+         <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+         <img src="mdn-logo-narrow.png" alt="MDN">
+        </picture>
 
 
         <!-- Data attr setup for Scott Jehl's Picturefill / https://github.com/scottjehl/picturefill/ -->
@@ -188,7 +193,12 @@ https://github.com/manikrathee/manikrathee.com
         </div>
         
 
-  	   <p class="intro">"Beauty can be seen in all things, seeing and composing the beauty is what separates the snapshot from the photograph."</p>
+
+        
+        <article id="main-article">
+        
+
+          <p class="intro">"Beauty can be seen in all things, seeing and composing the beauty is what separates the snapshot from the photograph."</p>
 
 <p>Carrying a camera opens up your mind to true perception. With a camera in hand, a walk stops being the motion from point A to point B - it becomes a visual journey full of colors and compositions. A building that you walk by every day could seem bland or stale to you since you've passed it hundreds of times, but have you ever stopped and really looked at it? Have you ever taken a few steps in a new direction to see it in a different way? Keeping a camera with you can make you do that. Considering the composition of a photograph the entire time you are outside allows you to really enjoy the outside world in a different way.</p>
 
@@ -217,6 +227,8 @@ https://github.com/manikrathee/manikrathee.com
 
 
         
+        </article>
+
           OTHER POSTS
           
 
@@ -288,18 +300,19 @@ https://github.com/manikrathee/manikrathee.com
       </div>
 
       <div id="photo-metadata" class="footer-tout is-visible">
-        <i class="icon icon--photography">Photo information</i>
-        <span>
-          LEICA Q — 25mm f1.8 200/s 200ISO
-          <br/>
-          Big Sur, California, USA
-        </span>
+        <!-- To Do:
+              Hook this up to be a random set of favorite posts
+          -->
+        <a href="%|" title="" itemprop="url">
+          <i class="icon icon--photography">Photo information</i>
+          <span>
+            LEICA Q — 25mm f1.8 200/s 200ISO
+            <br/>
+            Big Sur, California, USA
+          </span>
+        </a>
       </div>
     </section>
-
-    <div class="footer-photo-story-link">
-      <a href="/#" title="" itemprop="url">View Photo Story</a>
-    </div>
 
   </footer>
 
@@ -315,7 +328,6 @@ https://github.com/manikrathee/manikrathee.com
 
 
   
-
 
 
   </body>
