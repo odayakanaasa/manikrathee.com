@@ -248,7 +248,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('w',
     [
-      'sass','autoprefixer','concat','watch'
+      'jekyll','sass','autoprefixer','concat','watch'
     ]
   );
 

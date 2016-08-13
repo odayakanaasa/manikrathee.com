@@ -5,9 +5,7 @@
 [id=main] { // shadow-container
   display: block;
   max-width: 1440px;
-  // justify-content: space-between;
-  // align-items: center;
-  // flex-wrap: wrap;
+
 
   position: relative;
   background-color: #fff;
@@ -16,7 +14,7 @@
   // background-position: center top;
   margin-left: auto;
   margin-right: auto;
-  padding: $spacer / 2;
+  padding: $spacer / 1.3;
   border-radius: 3px;
   @include box;
   @include transition(padding 0.25s ease-in-out);
@@ -50,19 +48,26 @@
   // main content container
   width: 100%;
   overflow: hidden;
-  padding-top: $spacer * 2;
-  padding-bottom: $spacer * 2;
-}
-
-#main-article {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-bottom: $spacer;
 
   @include mq(700px) {
-    padding-left: 10rem;
-    padding-right: 20rem;
+    padding-top: $spacer * 2;
+    padding-bottom: $spacer * 2;
   }
 }
+
+// #main-article {
+
+//   @include mq(768px) {
+//     padding-left: 5rem;
+//     padding-right: 5rem;
+//   }
+
+//   @include mq(1000px) {
+//     padding-left: 5rem;
+//     padding-right: 30rem;
+//   }
+// }
 
 
 picture.main-photo {

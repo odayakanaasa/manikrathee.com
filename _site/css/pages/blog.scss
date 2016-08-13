@@ -1,14 +1,58 @@
 @charset "UTF-8";
 @import "imports/_all";
 
-/* Blog Styles */
+
+//************************************
+//************************************
+// Blog Root
+//************************************
+//************************************
+
 .blog {
   background: red;
 }
 
 
+#blog-posts {
+}
+
+.creation-cross-share {
+  @include box;
+}
+
+@include mq(768px) {
+
+  #blog-posts {
+    width: 70%;
+    float: right;
+  }
+
+  .creation-cross-share {
+    width: 30%;
+    padding-right: $spacer;
+    border-right: $border;
+    text-align: right;
+    @include box;
+  }
+}
+
+
+//************************************
+//************************************
+// Blog Post
+//************************************
+//************************************
 
 pre {
   background: #333;
   border-radius: 6px 0 0 6px;
+}
+
+
+.sidebar-asset { // blockquote, pre
+  @include mq(1000px) {
+    position: absolute;
+    right: -90px;
+    width: calc(100% - 35rem);
+  }
 }

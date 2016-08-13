@@ -8,7 +8,10 @@
       class="
         {{ page.body-class }}
         {% if page.page-type == 'blog' %}
-        blog blog-post
+        blog
+        {% endif %}
+        {% if page.page-subtype == 'blog-index' %}
+        blog-index
         {% endif %}
       "
     {% endif %}
@@ -20,16 +23,26 @@
 
       <section id="inner-container" class="{{page.section}}">
 
-        {% if page.page-type == 'blog' %}
-        <picture class="main-photo">
-         <source srcset="{{ page.img }}" media="(min-width: 600px)">
-         <img src="{{ page.img }}" alt="{{ page.title }}">
-        </picture>
+        {% if page.page-subtype == 'blog-post' %}
+          {% if page.page.img %}
+            <picture class="main-photo">
+             <source srcset="{{ page.img }}" media="(min-width: 600px)">
+             <img src="{{ page.img }}" alt="{{ page.title }}">
+            </picture>
+          {% endif%}
         {% endif%}
 
 
         {% if page.page-type == 'blog' %}
         <article id="main-article">
+          <div id="light-dark-mode">
+            Put a sun/moon icon here
+            expand with someting like this:
+            <!-- http://tympanus.net/Tutorials/AnimatedBorderMenus/index3.html
+            and a bigger icon set fading in.
+
+            make this a partial -->
+          </div>
         {% endif%}
 
           {{ content }}

@@ -1,6 +1,6 @@
 {
   "name": "manikrathee",
-  "tags_updated": "20160803",
+  "updated": "20160803",
   "tags": [
     "app",
     "big sur",
@@ -25,5 +25,12 @@
     "video",
     "wanderlust",
     "web"
+  ],
+  "categories": [
+    "blog",
+    "shortform",
+    "longform",
+    "writing",
+    "engineering"
   ]
 }

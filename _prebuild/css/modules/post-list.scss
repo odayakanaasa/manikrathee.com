@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import "./imports/all";
+
+.post-list { // ol, ul
+  list-style-type: none;
+}
+
+.post-list--item { // li
+
+  & + & {
+    margin-top: $spacer * 3; // 32
+  }
+}
+
+.post-list--link { // a
+
+}
+
+.post-list--date {
+  @include font-size(14);
+  color: $grey;
+  margin-bottom: 0;
+}
+
+.post-list--title {
+  transition: font-weight 0.35s ease-in-out;
+}
+
+
+
+.no-touch {
+
+  .post-list--item { // li
+
+    .post-list--title {
+      font-weight: bold;
+    }
+  }
+}
+

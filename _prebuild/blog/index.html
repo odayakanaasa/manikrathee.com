@@ -1,22 +1,36 @@
 ---
 layout: default
-
-title: "Blog &amp; Writing"
-
 page-type: blog
 page-subtype: blog-index
+
+title: "Blog &amp; Writing"
 ---
 
-<ul id="blog-list">
+<ol id="blog-posts" class="post-list">
   {% for posts in site.categories.writing %}
-  <li>
-    <a id="{{ posts.slug }}" class="post" href="{{ posts.url }}" title="{{ posts.title }}">
-      <p class="post-date info date">{{ posts.date | date: "%B %d, %Y" }}</p>
-      <p class="post-title">
+  <li class="post-list--item">
+    <a id="{{ posts.slug }}" class="post-list--link" href="{{ posts.url }}" title="{{ posts.title }}" itemprop="url">
+      <p class="post-list--date">{{ posts.date | date: "%B %d, %Y" }}</p>
+      <h2 class="post-list--title">
         {{ posts.title }}
-        <span class="post-subtitle info subtitle">{{ posts.subtitle }}</span>
+      </h2>
+      <p class="post-list-description">
+        <span class="post-list--description">
+          {{ posts.content | strip_html | truncatewords:75 }}
+        </span>
       </p>
+
+      <button class="expand-content read-more mobile-cta">
+        Read more
+      </button>
     </a>
   </li>
   {% endfor %}
-</ul>
+</ol>
+
+<div class="creation-cross-share">
+  you are here
+  Writing
+
+  Looking for photography &amp; fashion?
+</div>

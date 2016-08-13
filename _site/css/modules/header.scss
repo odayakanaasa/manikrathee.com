@@ -56,9 +56,14 @@
   border-bottom: $border;
 
   .current-title {
+    font-family: $sans;
     font-weight: 500;
     @include font-size(18);
     margin-bottom: $spacer;
+
+    i {
+      font-family: $serif;
+    }
   }
 
   .previous-container {
@@ -109,28 +114,24 @@
 .page-title-container {
   @include mq(800px) {
     // width: 50%;
-    flex-grow: 1;
-    // align-self: flex-end;
-    align-self: stretch;
+    padding-left: 50px;
+    align-self: flex-end;
   }
 }
 
 [id="page-title"] {
-  margin: $spacer 0;
+  margin: ($spacer * 1.5) 0;
   font-family: $serif;
-  @include font-size(25);
+  @include font-size(28);
   font-weight: 600;
-  line-height: 1.1;
+  line-height: 1.25;
 
   @include mq(800px) {
-
     width: 100%;
+    margin: 0;
     @include font-size(50);
-    text-align: center;
-
-    // align to the bottom now -- not margin, but ahve it sit at the bottom and expand upwards
-    // margin: 120px 0 0 0;
-
+    line-height: 1.1;
+    text-align: right;
   }
 }
 
@@ -149,6 +150,7 @@
 
     .global-header {
       width: 30%;
+      min-width: 200px;
     }
   } // #page-header
 
@@ -163,10 +165,5 @@
 
 
 @include mq(1100px) {
-
-  [id="page-header"] {
-    background: #fbfbfb;
-    padding: 4px;
-  } // #page-header
 
 }

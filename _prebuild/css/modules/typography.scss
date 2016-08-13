@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import "imports/_all";
 
+// Base el properties
 h1,
 h2,
 h3,
@@ -23,26 +24,28 @@ h3,
 h4,
 h5,
 h6 {
-  // font-family: $serif;
   font-weight: 500;
   line-height: 1.6;
 }
 
-.large-heading {
-  @include font-size(26);
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif;
+  // margin-bottom: 2.2rem;
 }
 
-.medium-heading {
-  @include font-size(22);
-}
-
-.small-heading {
-  @include font-size(18);
-  font-weight: 700;
-}
 
 p {
-  @include font-size(15);
+  @include font-size(17);
+  margin-bottom: 1.8rem;
+
+  @include mq(800px) {
+    @include font-size(15);
+  }
 }
 
 em {
@@ -55,4 +58,20 @@ em {
 
 i {
   font-style: normal;
+}
+
+
+
+// Type system
+.large-heading {
+  @include font-size(26);
+}
+
+.medium-heading {
+  @include font-size(22);
+}
+
+.small-heading {
+  @include font-size(18);
+  font-weight: 700;
 }

@@ -22,7 +22,7 @@ html {
 // }
 
 body {
-  background: $grey;
+  background: $light-grey;
   font-family: $sans;
   @include font-size(15);
   color: #444444;
@@ -75,3 +75,8 @@ a {
   }
 }
 
+.mobile-cta {
+  @include mq(768px) {
+    display: none;
+  }
+}
