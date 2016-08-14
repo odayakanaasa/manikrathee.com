@@ -66,6 +66,10 @@
 
     </div>
 
+    {% if page.page-type == 'blog' %}
+      {% include photoswipe.html %}
+    {% endif%}
+
     {% include global-footer.html %}
   </body>
 

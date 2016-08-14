@@ -4,7 +4,7 @@ layout: default
 page-type: blog
 page-subtype: blog-post
 
-category: ['blog', 'photo']
+category: 'photo'
 tags: ['photography']
 
 date: August 13, 2016
@@ -44,17 +44,19 @@ data: 0
 
 
 <h1>this is the loop</h1>
-<ul class="photoset" data-layout="{{ post.photo_layout }}">
+<ul class="photoset">
 {% for post in site.data.photoblog %}
   <li>
     <h2>{{ post.title }}</h2>
   {% for url in post.photos %}
-    <img src="/img/blog/{{ post.title }}/{{ url }}" alt="{{ url }}">
+    <img
+      src="/img/blog/{{ post.title }}/{{ url }}.jpg"
+      data-highres="/img/blog/{{ post.title }}/{{ url }}@2x.jpg"
+      alt="{{ url }}">
   {% endfor %}
   </li>
 {% endfor %}
 </ul>
-
 
 
 
