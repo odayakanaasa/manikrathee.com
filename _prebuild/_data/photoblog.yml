@@ -1,0 +1,41 @@
+- post:
+  title: "20160813" # used for photo path in build
+  photo_layout: "2331" #1st row has 2 images, 2nd row has 3 images, 3rd row has 3 images, and 4th row has 1 image. Total of 9 images.
+  photos:
+    - "amalfi-coast-italy-1.jpg"
+    - "amalfi-coast-italy-2.jpg"
+    - "amalfi-coast-italy-3.jpg"
+    - "amalfi-coast-italy-4.jpg"
+    - "amalfi-coast-italy-5.jpg"
+    - "amalfi-coast-italy-6.jpg"
+    - "amalfi-coast-italy-7.jpg"
+    - "amalfi-coast-italy-8.jpg"
+    - "amalfi-coast-italy-9.jpg"
+    - "amalfi-coast-italy-10.jpg"
+    - "amalfi-coast-italy-11.jpg"
+
+# post:
+#   title: "20160814" # used for photo path in build
+#   gallery_settings:
+#     display: "single-row"
+#   photos:
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"
+#     - "amalfi-coast-italy-001.jpg"

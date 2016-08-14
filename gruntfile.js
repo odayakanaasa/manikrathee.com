@@ -215,7 +215,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-newer');
+  // grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-pagespeed');
 
   var critical = require('critical');
@@ -227,7 +227,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default',
     [
-      'sass','concat'
+      'jekyll','sass','concat'
     ]
   );
 

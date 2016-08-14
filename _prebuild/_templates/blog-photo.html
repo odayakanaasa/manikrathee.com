@@ -1,0 +1,63 @@
+---
+
+layout: default
+page-type: blog
+page-subtype: blog-post
+
+category: ['blog', 'photo']
+tags: ['photography']
+
+date: August 13, 2016
+slug: something-here
+title: "Something Here"
+
+#img:
+#script:
+
+comments: 0
+code: 0
+data: 0
+
+---
+
+<!--
+for seo
+- how to revert a git tag
+- how to revert a tag in git
+- how to delete a remote git tag
+- how to delete a local git tag
+- how to delete a local and remote tag
+- how to delete a local and remove git tag
+- how to push a deleted tag
+-->
+
+<p>If you use tags in your projects, you probably have encountered some issue (typos, perhaps) that forced you to remove the tag. Here are a few steps that will help you navigate the problems associated with local/remote tags and managing instances of each, along with a few steps help get you familiar with tags in general.</p>
+
+<p>For our code examples, lets use <pre>released/aug2016</pre> the tag name.</p>
+
+<h3>To create your tag:</h3>
+<pre><code class="json">
+  git tag released/aug2016
+</code></pre>
+
+<h4>To push local tags to remote:</h4>
+<pre><code class="git">git push --tags</code></pre>
+
+<blockqoute>
+  <p>Another option, <a href="http://stackoverflow.com/questions/5195859/push-a-tag-to-a-remote-repository-using-git" title="StackOverflow: Push a tag to a remote repository using Git?" itemprop="url">as noted on StackOverflow</a>, links local and remote tags:</p>
+  <pre><code class="git">git push --follow-tags</code></pre>
+</blockqoute>
+
+<h4>To delete a local tag:</h4>
+<pre><code class="git">
+  git tag -d released/aug2016
+</code></pre>
+
+<h4>To delete a remote tag:</h4>
+<p><em>Delete the tag locally, like above</em></p>
+
+<pre><code class="git">
+  git tag -d released/aug2016
+  git push origin :refs/tags/released/aug2016
+</code></pre>
+

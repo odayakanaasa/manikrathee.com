@@ -4,7 +4,6 @@
     {% if page.body-id %}
       id="{{ page.body-id }}"
     {% endif %}
-    {% if page.body-class %}
       class="
         {{ page.body-class }}
         {% if page.page-type == 'blog' %}
@@ -13,8 +12,10 @@
         {% if page.page-subtype == 'blog-index' %}
         blog-index
         {% endif %}
+        {% if page.category == 'photo' %}
+        photo-blog photo-blog-post
+        {% endif %}
       "
-    {% endif %}
   >
 
     <div id="main" class="container" role="main">

@@ -4,7 +4,65 @@ LastFMStatus.init({
     username: "mrathee"
 });
 
+var $body = $('body');
 
+if ( $body.hasClass('') {
+
+  // init photoset
+  $('.photoset').photosetGrid({
+    // Set the gutter between columns and rows
+    gutter: '5px',
+    // Manually set the grid layout
+    layout: '21',
+    // Wrap the images in links
+    highresLinks: true,
+    // Asign a common rel attribute
+    rel: 'print-gallery',
+
+    onInit: function(){},
+    onComplete: function(){
+      // Show the grid after it renders
+      $('.photoset-grid-custom').attr('style', '');
+    }
+  });
+}
+
+
+
+/// SET UP SCROLL DEPTH ANIMATION
+
+// $(function(){
+
+//   // 1. Set up SVG animation
+//   // see http://jakearchibald.com/2013/animated-line-drawing-svg/
+//   var progressPath = document.querySelector('.progress path');
+//   var pathLength = progressPath.getTotalLength();
+//   progressPath.style.transition = progressPath.style.WebkitTransition =
+//     'none';
+//   progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+//   progressPath.style.strokeDashoffset = pathLength;
+//   progressPath.getBoundingClientRect();
+//   progressPath.style.transition = progressPath.style.WebkitTransition =
+//     'stroke-dashoffset 300ms linear';
+
+//   // 2. Define updateProgress function
+//   var updateProgress = function () {
+//     // calculate values
+//     var scroll = $(window).scrollTop();
+//     var height = $(document).height() - $(window).height();
+//     var percent = Math.round(scroll * 100 / height);
+//     var progress = pathLength - (scroll * pathLength / height);
+//     // update dashOffset
+//     progressPath.style.strokeDashoffset = progress;
+//     // update progress count
+//     $('.percent').text(percent+"%");
+//   }
+
+//   // 3. trigger updateProgress once on load and then on scroll
+//   updateProgress();
+//   $(window).scroll(updateProgress);
+
+// });
 
 
 
