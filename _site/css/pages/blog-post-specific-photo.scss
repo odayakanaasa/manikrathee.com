@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@import "imports/_all";
+
+
+//************************************
+//************************************
+// Photo Blog Posts
+//************************************
+//************************************
+
+.photo-stat-sidebar {
+  // blindly coded
+  width: 150px;
+  float: left;
+  background: $light-grey;
+  border-right: $border;
+  border-bottom: $border;
+
+  ul {
+    list-style-type: none;
+    text-align: center;
+  }
+
+}

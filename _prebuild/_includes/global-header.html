@@ -19,15 +19,15 @@
   <meta name="keyword" content="manik, rathee, manik rathee, designer, google, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
   <meta name="robots" content="index,follow,archive">
   {% if page.home %}
-  <meta name="twitter:title"  property="og:title" content='Manik Rathee | Designer, Engineer, Photographer' />
+    <meta name="twitter:title"  property="og:title" content='Manik Rathee | Designer, Engineer, Photographer' />
   {% elsif page.page-type == 'blog' %}
     {% if page.page-subtype == 'blog-index' %}
-  <meta name="twitter:title"  property="og:title" content='{{ page.title }} - Manik Rathee | Designer, Engineer, Photographer' />
-  {% else %}
-  <meta name="twitter:title"  property="og:title" content='{{ page.title }} - a post by Manik Rathee | Designer, Engineer, Photographer' />
+      <meta name="twitter:title"  property="og:title" content='{{ page.title }} - Manik Rathee | Designer, Engineer, Photographer' />
+    {% else %}
+      <meta name="twitter:title"  property="og:title" content='{{ page.title }} - a post by Manik Rathee | Designer, Engineer, Photographer' />
     {% endif%}
   {% else %}
-  <meta name="twitter:title"  property="og:title" content='{{ page.title }} | Manik Rathee, Designer, Engineer, Photographer' />
+    <meta name="twitter:title"  property="og:title" content='{{ page.title }} | Manik Rathee, Designer, Engineer, Photographer' />
   {% endif%}
 
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
@@ -37,8 +37,8 @@
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="preconnect" href="//fonts.googleapis.com">
   {% if site.data.build.optimizely == true %}
-  <link rel="dns-prefetch" href="//cdn.optimizely.com/js/2688330005.js">
-
+    <link rel="dns-prefetch" href="//cdn.optimizely.com/js/2688330005.js">
+  {% endif %}
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="M">
@@ -46,7 +46,7 @@
   <!-- The URL of the web version of your article -->
   <link rel="canonical" href="http://www.manikrathee.com">
 
-  {% endif %}
+
 
   <title>
   {% if page.home %}
@@ -68,9 +68,6 @@
 
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/style.css" type="text/css">
-  {% if page.stylesheet %}
-  <link rel="stylesheet" href="/css/{{ page.stylesheet }}" type="text/css">
-  {% endif %}
   {% if page.code %}
   <link rel="stylesheet" href="/css/styles/code-highlighting-tomorrow-night-eighties.css" type="text/css" media="screen" />
   {% endif %}

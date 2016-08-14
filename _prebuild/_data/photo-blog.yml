@@ -1,0 +1,25 @@
+post: 20160813 # used for photo path in build
+  gallery_settings:
+    display: "single-row"
+  photos:
+    1: "amalfi-coast-italy-001.jpg"
+    2: "amalfi-coast-italy-001.jpg"
+    3: "amalfi-coast-italy-001.jpg"
+    4: "amalfi-coast-italy-001.jpg"
+    5: "amalfi-coast-italy-001.jpg"
+    6: "amalfi-coast-italy-001.jpg"
+    7: "amalfi-coast-italy-001.jpg"
+    8: "amalfi-coast-italy-001.jpg"
+    9: "amalfi-coast-italy-001.jpg"
+    10: "amalfi-coast-italy-001.jpg"
+    11: "amalfi-coast-italy-001.jpg"
+    12: "amalfi-coast-italy-001.jpg"
+    13: "amalfi-coast-italy-001.jpg"
+    14: "amalfi-coast-italy-001.jpg"
+    15: "amalfi-coast-italy-001.jpg"
+    16: "amalfi-coast-italy-001.jpg"
+    17: "amalfi-coast-italy-001.jpg"
+    18: "amalfi-coast-italy-001.jpg"
+    19: "amalfi-coast-italy-001.jpg"
+    20: "amalfi-coast-italy-001.jpg"
+
