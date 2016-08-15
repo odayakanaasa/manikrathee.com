@@ -24,16 +24,15 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
     <h3 class="medium-heading">Photography &amp; Fashion</h3>
 
     <ul class="row-tout-list recent-photos-list">
-      {% for post in site.categories.photo %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
+      {% for post in site.categories.photo | limit:6 %}
       <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
+        <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+          {{ post.title | strip_html }}
         </a>
         <span>, Something 2015</span>
       </li>
-      <li>
+      {% endfor %}
+      <!-- <li>
         <a href="%|" title="" itemprop="url">
           Post title
         </a>
@@ -41,19 +40,7 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
         <a href="%|" class="" title="" itemprop="url">
           LovelySunday
         </a>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
-      </li>
+      </li> -->
       <li class="more-items">
         <a class="more-posts--link" href="/photos/" title="" itemprop="url">
           More Photography
@@ -65,38 +52,16 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
 
   <div class="row-tout recent-writing">
     <h3 class="medium-heading">Writing</h3>
-    {% for post in site.categories.writing %}
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span>, {{ page.date | date: '%B %d, %Y' }}</span>
-    {% endfor %}
     <ul class="row-tout-list recent-writing-list">
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, for </span>
-        <a href="%|" class="" title="" itemprop="url">
-          LovelySunday
-        </a>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
-      </li>
+      {% for post in site.categories.writing | limit:4 %}
+          <!-- <span>, {{ page.date | date: '%B %d, %Y' }}</span> -->
+        <li>
+          <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+            {{ post.title | strip_html }}
+          </a>
+          <span>, {{ page.date | date: '%B %Y' }}</span>
+        </li>
+      {% endfor %}
       <li class="more-items">
         <a class="more-posts--link" href="/blog/" title="" itemprop="url">
           More Writing
