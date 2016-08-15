@@ -19,10 +19,11 @@
 .post-list--date {
   @include font-size(14);
   color: $grey;
-  margin-bottom: 0;
+  margin-bottom: 0.6rem;
 }
 
 .post-list--title {
+  margin-bottom: 0.6rem;
   transition: font-weight 0.35s ease-in-out;
 }
 

@@ -5,7 +5,6 @@
 ::selection  { background: #999; color: #fff; text-shadow: none; }
 
 
-
 html {
   background-color: $peak-color;
   font-size: 62.5%; // Base 10 for REM sizing
@@ -16,18 +15,17 @@ html {
   -webkit-backface-visibility: hidden;
 }
 
-// html,
-// body {
-//   height: 100%;
-// }
 
 body {
   background: $light-grey;
   font-family: $sans;
   @include font-size(15);
-  color: #444444;
+  color: $dark-grey;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
+  transition:
+    background $transition,
+    color $transition;
 
   &:after {
     position: fixed;
@@ -39,6 +37,11 @@ body {
     background-position: bottom center;
     background-repeat: no-repeat;
     border: 1px solid yellow;
+  }
+
+  &.view-mode--dark {
+    background: $invert-body;
+    color: $invert-copy;
   }
 
   @include mq(500px) {
@@ -54,12 +57,19 @@ body {
     padding: ($spacer * 2) ($spacer * 2) 70px ($spacer * 2);
   }
 
+
 }
+
+
+
 
 dl, menu, ol, ul {
     margin: 0;
     padding: 0;
 }
+
+
+
 
 a {
   color: $dark-grey;
@@ -73,7 +83,20 @@ a {
     color: #000;
     border-color: #000;
   }
+
+  .view-mode--dark & {
+    color: $invert-copy;
+    border-color: darken($invert-copy, 2%);
+
+    @include touch-hover() {
+      color: $white;
+      border-color: $white;
+    }
+
+  }
 }
+
+
 
 .mobile-cta {
   @include mq(768px) {
@@ -81,6 +104,85 @@ a {
   }
 }
 
+
+
 img {
   max-width: 100%;
 }
+
+
+
+[id=main] { // shadow-container
+  display: block;
+  max-width: 1440px;
+
+  position: relative;
+  background-color: $white;
+  // background-image: url('../img/bg.png');
+  // background-repeat: repeat;
+  // background-position: center top;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $spacer / 1.3;
+  border-radius: 3px;
+  transition:
+    background $transition,
+    padding $transition,
+    color $transition;
+  @include box;
+
+  @include mq(500px) {
+    padding: $spacer;
+  }
+
+  @include mq(960px) {
+    padding: $spacer * 2;
+  }
+
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    @include size(100%,100%);
+    border-radius: 3px;
+    box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .view-mode--dark & {
+    background-color: $invert-container;
+  }
+
+} // main
+
+
+[id=inner-container] {
+  // main content container
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: $spacer;
+
+  @include mq(700px) {
+    padding-top: $spacer * 2;
+    padding-bottom: $spacer * 2;
+  }
+}
+
+
+picture.main-photo {
+  display: block;
+  margin-bottom: 8rem;
+}
+
+
+
+
+
+
+
+
+

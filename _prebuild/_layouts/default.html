@@ -34,19 +34,8 @@
         {% endif%}
 
 
-        {% if page.page-type == 'blog' %}
-        <article id="main-article">
-          <div id="light-dark-mode">
-            Put a sun/moon icon here
-            expand with someting like this:
-            <!-- http://tympanus.net/Tutorials/AnimatedBorderMenus/index3.html
-            and a bigger icon set fading in.
+        {{ content }}
 
-            make this a partial -->
-          </div>
-        {% endif%}
-
-          {{ content }}
 
         {% if page.page-type == 'blog' %}
         </article>

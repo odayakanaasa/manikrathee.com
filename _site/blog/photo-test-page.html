@@ -52,14 +52,8 @@
 
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-  <link rel="stylesheet" href="/css/styles/code-highlighting-tomorrow-night-eighties.css" type="text/css" media="screen" />
-  
-
 
   <script src="/js/libs/modernizr.min.js"></script>
-
-
 
   <link rel="author" href="humans.txt">
   <link rel="shortcut icon" href="/img/root/favicon.ico">
@@ -151,6 +145,17 @@ https://github.com/manikrathee/manikrathee.com
 
     </div>
 
+    <div id="view-mode">
+  <radiogroup id="view-mode--toggle">
+    <label class="view-mode--toggle-label" for="view-mode--light">light mode</label>
+    <input id="view-mode--light" class="view-mode--toggle-button" type="radio" name="radio" checked="checked" />
+
+    <label class="view-mode--toggle-label" for="view-mode--dark">dark mode</label>
+    <input id="view-mode--dark" class="view-mode--toggle-button" type="radio" name="radio" />
+  </radiogroup>
+</div>
+
+
     
 
     
@@ -172,19 +177,7 @@ https://github.com/manikrathee/manikrathee.com
         
 
 
-        
-        <article id="main-article">
-          <div id="light-dark-mode">
-            Put a sun/moon icon here
-            expand with someting like this:
-            <!-- http://tympanus.net/Tutorials/AnimatedBorderMenus/index3.html
-            and a bigger icon set fading in.
-
-            make this a partial -->
-          </div>
-        
-
-          <div class="photo-stat-sidebar">
+        <div class="photo-stat-sidebar">
   <ul>
     <li>25<br>photos taken</li>
     <li>499<br>something something</li>
@@ -292,6 +285,7 @@ https://github.com/manikrathee/manikrathee.com
 <p>Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.</p>
 
 
+
         
         </article>
 
@@ -302,8 +296,8 @@ https://github.com/manikrathee/manikrathee.com
           
 
 <p class="pre-heading">Previous Post</p>
-<a href="/blog/how-to-delete-a-remote-git-tag.html" title="Previous Post: How to delete a Git tag" itemprop="url">
-  <h3>How to delete a Git tag</h3>
+<a href="/blog/how-to-delete-a-remote-git-tag.html" title="Previous Post: How to delete a&nbsp;Git&nbsp;tag" itemprop="url">
+  <h3>How to delete a&nbsp;Git&nbsp;tag</h3>
   <p></p>
   <p class="date">August 03 2016</p>
 </a>
@@ -468,13 +462,14 @@ https://github.com/manikrathee/manikrathee.com
   
     
       <script type="text/javascript">
-    var disqus_shortname = 'blogmanikratheecom'; 
+    var disqus_shortname = 'blogmanikratheecom';
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
+
     
   
 

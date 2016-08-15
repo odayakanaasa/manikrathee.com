@@ -49,6 +49,8 @@ pre {
 }
 
 
+blockqoute,
+pre,
 .sidebar-asset { // blockquote, pre
   @include mq(1000px) {
     position: absolute;

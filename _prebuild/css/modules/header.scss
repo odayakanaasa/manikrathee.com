@@ -14,9 +14,9 @@
 
   .global-header {
     opacity: 0.7;
-    @include transition(opacity 0.25s ease-in-out);
+    @include transition(opacity #{$transition});
 
-    &:hover & {
+    &:hover {
       opacity: 1;
     }
 

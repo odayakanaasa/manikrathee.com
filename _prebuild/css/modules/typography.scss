@@ -11,11 +11,10 @@ h6,
 p,
 blockqoute {
   margin: 0 0 $base-unit 0;
-  line-height: 1.6;
+  line-height: 1.2;
   -webkit-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures;
 }
-
 
 
 h1,
@@ -42,9 +41,10 @@ h6 {
 p {
   @include font-size(17);
   margin-bottom: 1.8rem;
+  line-height: 1.6;
 
   @include mq(800px) {
-    @include font-size(15);
+    @include font-size(16);
   }
 }
 
