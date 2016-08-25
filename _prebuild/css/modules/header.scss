@@ -55,15 +55,16 @@
   border-top: $border;
   border-bottom: $border;
 
+  .view-mode--dark & {
+    border-top: $invert-border;
+    border-bottom: $invert-border;
+  }
+
   .current-title {
     font-family: $sans;
     font-weight: 500;
     @include font-size(18);
     margin-bottom: $spacer;
-
-    i {
-      font-family: $serif;
-    }
   }
 
   .previous-container {
@@ -71,14 +72,10 @@
   }
 
   .previous-heading {
-    margin: 0;
+    margin: 0 0 0.5rem 0;
     text-transform: uppercase;
     @include font-size(12);
     line-height: 1;
-
-    @include mq(768px) {
-      margin: 0 0 0.5rem 0;
-    }
   }
 
   .previous-positions { //ul
@@ -87,8 +84,16 @@
       list-style-type: none;
       margin-bottom: $base-unit * 6;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       @include mq(800px) {
         margin-bottom: $base-unit * 2;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 

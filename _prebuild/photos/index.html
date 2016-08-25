@@ -1,8 +1,7 @@
 ---
 layout: default
 
-title: Photos
-
+title: "Photography & Fashion"
 page-type: blog
 page-subtype: blog-index
 
@@ -22,3 +21,34 @@ img: 'img/photos/root-header-image.jpg'
   </li>
   {% endfor %}
 </ul>
+
+
+
+<ol id="photo-posts" class="post-list">
+  {% for posts in site.categories.photos %}
+  <li class="post-list--item">
+    <a id="{{ posts.slug }}" class="post-list--link" href="{{ posts.url }}" title="{{ posts.title }}" itemprop="url">
+      <p class="post-list--date">{{ posts.date | date: "%B %d, %Y" }}</p>
+      <h2 class="post-list--title">
+        {{ posts.title }}
+      </h2>
+      <p class="post-list-description">
+        <span class="post-list--description">
+          {{ posts.content | strip_html | truncatewords:40 }}
+        </span>
+      </p>
+
+      <button class="expand-content read-more mobile-cta">
+        Read more
+      </button>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+
+<div class="cross-share">
+  you are here
+  photography
+
+  Looking for writing?
+</div>

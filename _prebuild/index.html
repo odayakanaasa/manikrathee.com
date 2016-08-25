@@ -9,40 +9,31 @@ section: home
 #script:
 ---
 
-add a star/night icon, dark mode with a cookie
-cookie in v2
-
-change to dark mode with easier reading, toggle with a fun animation, maybe an explosio with mo.js
-
-<hr>
-
-<BR><BR><BR>
-
-
-<section class="row">
-  <div class="row-tout recent-photos">
+<section class="row ↔️">
+  <div class="row-tout recent-photos ↕️">
     <h3 class="medium-heading">Photography &amp; Fashion</h3>
 
     <ul class="row-tout-list recent-photos-list">
       {% for post in site.categories.photo | limit:6 %}
       <li>
-        <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
-          {{ post.title | strip_html }}
-        </a>
-        <span>, Something 2015</span>
+        <p class="condensed">
+          <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+            {{ post.title | strip_html }}
+          </a>
+
+
+          {{ post.lovelySundayLink }}
+            <span class="for-lovely-sunday">
+              , for
+              <a href="{{ post.lovelySundayLink }}" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+                LovelySunday
+              </a>
+            </span>
+        </p>
       </li>
       {% endfor %}
-      <!-- <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, for </span>
-        <a href="%|" class="" title="" itemprop="url">
-          LovelySunday
-        </a>
-      </li> -->
       <li class="more-items">
-        <a class="more-posts--link" href="/photos/" title="" itemprop="url">
+        <a class="more-items--link" href="/photos/" title="" itemprop="url">
           More Photography
         </a>
       </li>
@@ -50,20 +41,21 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
   </div>
 
 
-  <div class="row-tout recent-writing">
+  <div class="row-tout recent-writing ↕️">
     <h3 class="medium-heading">Writing</h3>
     <ul class="row-tout-list recent-writing-list">
-      {% for post in site.categories.writing | limit:4 %}
-          <!-- <span>, {{ page.date | date: '%B %d, %Y' }}</span> -->
-        <li>
+      {% for post in site.categories.writing | limit:6 %}
+      <li>
+        <p class="condensed">
           <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
-            {{ post.title | strip_html }}
+            {{ post.title | strip_html }},
+            <span>{{ page.date | date: '%B %Y' }}</span>
           </a>
-          <span>, {{ page.date | date: '%B %Y' }}</span>
-        </li>
+        </p>
+      </li>
       {% endfor %}
       <li class="more-items">
-        <a class="more-posts--link" href="/blog/" title="" itemprop="url">
+        <a class="more-items--link" href="/blog/" title="" itemprop="url">
           More Writing
         </a>
       </li>
@@ -72,8 +64,8 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
 </section>
 
 
-<section class="row">
-  <div class="row-tout recent-publications">
+<section class="row ↔️">
+  <div class="row-tout recent-publications ↕️">
     <h3 class="medium-heading">Publications, Interviews, etc</h3>
     <ul class="row-tout-list recent-publications-list">
       <li>
@@ -104,7 +96,7 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
         <span>, Something 2015</span>
       </li>
       <li class="more-items">
-        <a class="more-posts--link" href="%|" title="" itemprop="url">
+        <a class="more-items--link" href="%|" title="" itemprop="url">
           More Photography
         </a>
       </li>
@@ -112,7 +104,7 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
   </div>
 
 
-  <div class="row-tout recent-speaking">
+  <div class="row-tout recent-speaking  ↕️">
     <h3 class="medium-heading">Speaking</h3>
     <ul class="row-tout-list recent-speaking-list">
       <li>
@@ -143,7 +135,7 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
         <span>, Something 2015</span>
       </li>
       <li class="more-items">
-        <a class="more-posts--link" href="%|" title="" itemprop="url">
+        <a class="more-items--link" href="%|" title="" itemprop="url">
           More Photography
         </a>
       </li>

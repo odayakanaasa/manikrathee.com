@@ -267,13 +267,10 @@ if ( $body.hasClass('photo-blog-post') ) {
 
 
 // add tweens to timeline:
-// if (el.length && interiorLogo.length) {
+if (el.length && interiorLogo.length) {
   timeline.add(tween1, tween2, tween3);
   timeline.start();
-// }
-
-
-
+}
 
 
 

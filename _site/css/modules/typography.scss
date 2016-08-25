@@ -46,6 +46,16 @@ p {
   @include mq(800px) {
     @include font-size(16);
   }
+
+  &.condensed {
+    @include font-size(15);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+
+    @include mq(800px) {
+      @include font-size(16);
+    }
+  }
 }
 
 em {
@@ -63,15 +73,26 @@ i {
 
 
 // Type system
+[class*="heading"] {
+  font-family: $sans;
+}
+
+[class*="heading-serif"] {
+  font-family: $serif;
+}
+
 .large-heading {
   @include font-size(26);
+  margin-bottom: 1.75rem;
 }
 
 .medium-heading {
   @include font-size(22);
+  margin-bottom: 1.15rem;
 }
 
 .small-heading {
   @include font-size(18);
   font-weight: 700;
+  margin-bottom: 1rem;
 }

@@ -13,7 +13,29 @@
 }
 
 .post-list--link { // a
+  text-decoration: none; // remove standard anchor style
 
+  @include mq(768px) {
+    display: block;
+    padding: $spacer;
+
+    &:after {
+      content: '';
+      // display: inline-block;
+      box-shadow: 0 2px 65px 5px rgba(0,0,0,0.1);
+      opacity: 0;
+      // visibility: hidden;
+      // @include transition( (opacity $transition), (visibility $transition);
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+        // visibility: visible;
+      }
+    }
+  }
 }
 
 .post-list--date {
@@ -24,18 +46,7 @@
 
 .post-list--title {
   margin-bottom: 0.6rem;
+  font-weight: bold;
   transition: font-weight 0.35s ease-in-out;
-}
-
-
-
-.no-touch {
-
-  .post-list--item { // li
-
-    .post-list--title {
-      font-weight: bold;
-    }
-  }
 }
 

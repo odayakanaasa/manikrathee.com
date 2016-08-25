@@ -94,7 +94,7 @@ https://github.com/manikrathee/manikrathee.com
     <div class="global-header">
 
       <h2 class="animated-logo">
-        <a class="mountain-monday" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
+        <a class="header-logo mountain-monday" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
           MountainMonday 🍻
         </a>
       </h2>
@@ -137,14 +137,11 @@ https://github.com/manikrathee/manikrathee.com
 
     </div>
 
-    <div id="view-mode">
-  <radiogroup id="view-mode--toggle">
-    <label class="view-mode--toggle-label" for="view-mode--light">light mode</label>
-    <input id="view-mode--light" class="view-mode--toggle-button" type="radio" name="radio" checked="checked" />
-
-    <label class="view-mode--toggle-label" for="view-mode--dark">dark mode</label>
-    <input id="view-mode--dark" class="view-mode--toggle-button" type="radio" name="radio" />
-  </radiogroup>
+    <div id="view-mode--container">
+  <input id="view-mode--toggle" type="checkbox" />
+  <label class="view-mode--toggle-label" for="view-mode--toggle">
+    <i class="view-mode--icon">Light Mode</i>
+  </label>
 </div>
 
 
@@ -191,54 +188,65 @@ https://github.com/manikrathee/manikrathee.com
         
 
 
-        add a star/night icon, dark mode with a cookie
-cookie in v2
-
-change to dark mode with easier reading, toggle with a fun animation, maybe an explosio with mo.js
-
-<hr>
-
-<BR><BR><BR>
-
-
-<section class="row">
-  <div class="row-tout recent-photos">
+        <section class="row ↔️">
+  <div class="row-tout recent-photos ↕️">
     <h3 class="medium-heading">Photography &amp; Fashion</h3>
 
     <ul class="row-tout-list recent-photos-list">
       
       <li>
-        <a href="/blog/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
-          Photo Test Page For New Features
-        </a>
-        <span>, Something 2015</span>
+        <p class="condensed">
+          <a href="/blog/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
+            Photo Test Page For New Features
+          </a>
+
+
+          http://www.google.com
+            <span class="for-lovely-sunday">
+              , for
+              <a href="http://www.google.com" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+                LovelySunday
+              </a>
+            </span>
+        </p>
       </li>
       
       <li>
-        <a href="/blog/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
-          Wanderlust: Big Sur
-        </a>
-        <span>, Something 2015</span>
+        <p class="condensed">
+          <a href="/blog/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
+            Wanderlust: Big Sur
+          </a>
+
+
+          
+            <span class="for-lovely-sunday">
+              , for
+              <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+                LovelySunday
+              </a>
+            </span>
+        </p>
       </li>
       
       <li>
-        <a href="/blog/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
-          VSCO: The world through a viewfinder
-        </a>
-        <span>, Something 2015</span>
+        <p class="condensed">
+          <a href="/blog/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
+            VSCO: The world through a viewfinder
+          </a>
+
+
+          
+            <span class="for-lovely-sunday">
+              , for
+              <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+                LovelySunday
+              </a>
+            </span>
+        </p>
       </li>
       
-      <!-- <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, for </span>
-        <a href="%|" class="" title="" itemprop="url">
-          LovelySunday
-        </a>
-      </li> -->
       <li class="more-items">
-        <a class="more-posts--link" href="/photos/" title="" itemprop="url">
+        <a class="more-items--link" href="/photos/" title="" itemprop="url">
           More Photography
         </a>
       </li>
@@ -246,44 +254,66 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
   </div>
 
 
-  <div class="row-tout recent-writing">
+  <div class="row-tout recent-writing ↕️">
     <h3 class="medium-heading">Writing</h3>
     <ul class="row-tout-list recent-writing-list">
       
-          <!-- <span>, </span> -->
-        <li>
+      <li>
+        <p class="condensed">
           <a href="/blog/how-to-delete-a-remote-git-tag.html" title="How to delete a&nbsp;Git&nbsp;tag" itemprop="url">
-            How to delete a&nbsp;Git&nbsp;tag
+            How to delete a&nbsp;Git&nbsp;tag,
+            <span></span>
           </a>
-          <span>, </span>
-        </li>
+        </p>
+      </li>
       
-          <!-- <span>, </span> -->
-        <li>
+      <li>
+        <p class="condensed">
           <a href="/blog/how-i-use-text-expander.html" title="How I Use: TextExpander" itemprop="url">
-            How I Use: TextExpander
+            How I Use: TextExpander,
+            <span></span>
           </a>
-          <span>, </span>
-        </li>
+        </p>
+      </li>
       
-          <!-- <span>, </span> -->
-        <li>
+      <li>
+        <p class="condensed">
           <a href="/blog/why-uber-threatens-taxi-labor-groups.html" title="Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups" itemprop="url">
-            Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups
+            Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups,
+            <span></span>
           </a>
-          <span>, </span>
-        </li>
+        </p>
+      </li>
       
-          <!-- <span>, </span> -->
-        <li>
+      <li>
+        <p class="condensed">
           <a href="/blog/sublime-text-preferences.html" title="Sublime Text: Customizing Your Workflow" itemprop="url">
-            Sublime Text: Customizing Your Workflow
+            Sublime Text: Customizing Your Workflow,
+            <span></span>
           </a>
-          <span>, </span>
-        </li>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/blog/building-obama.html" title="Building Obama" itemprop="url">
+            Building Obama,
+            <span></span>
+          </a>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/blog/on-disconnecting.html" title="On Disconnecting: Escaping the tech that surrounds us" itemprop="url">
+            On Disconnecting: Escaping the tech that surrounds us,
+            <span></span>
+          </a>
+        </p>
+      </li>
       
       <li class="more-items">
-        <a class="more-posts--link" href="/blog/" title="" itemprop="url">
+        <a class="more-items--link" href="/blog/" title="" itemprop="url">
           More Writing
         </a>
       </li>
@@ -292,8 +322,8 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
 </section>
 
 
-<section class="row">
-  <div class="row-tout recent-publications">
+<section class="row ↔️">
+  <div class="row-tout recent-publications ↕️">
     <h3 class="medium-heading">Publications, Interviews, etc</h3>
     <ul class="row-tout-list recent-publications-list">
       <li>
@@ -324,7 +354,7 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
         <span>, Something 2015</span>
       </li>
       <li class="more-items">
-        <a class="more-posts--link" href="%|" title="" itemprop="url">
+        <a class="more-items--link" href="%|" title="" itemprop="url">
           More Photography
         </a>
       </li>
@@ -332,7 +362,7 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
   </div>
 
 
-  <div class="row-tout recent-speaking">
+  <div class="row-tout recent-speaking  ↕️">
     <h3 class="medium-heading">Speaking</h3>
     <ul class="row-tout-list recent-speaking-list">
       <li>
@@ -363,7 +393,7 @@ change to dark mode with easier reading, toggle with a fun animation, maybe an e
         <span>, Something 2015</span>
       </li>
       <li class="more-items">
-        <a class="more-posts--link" href="%|" title="" itemprop="url">
+        <a class="more-items--link" href="%|" title="" itemprop="url">
           More Photography
         </a>
       </li>
