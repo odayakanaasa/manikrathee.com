@@ -20,7 +20,7 @@
   <meta name="robots" content="index,follow,archive">
   
     
-      <meta name="twitter:title"  property="og:title" content='Photography & Fashion - Manik Rathee | Designer, Engineer, Photographer' />
+      <meta name="twitter:title"  property="og:title" content='Photography & Fashion - a post by Manik Rathee | Designer, Engineer, Photographer' />
     
   
 
@@ -43,7 +43,7 @@
   <title>
   
     
-      Writing - Manik Rathee—Designer, Photographer.
+      Photos - Manik Rathee—Designer, Photographer.
     
   
   </title>
@@ -89,7 +89,8 @@ https://github.com/manikrathee/manikrathee.com
         blog
         
         
-        blog-index
+        
+        photo-index
         
         
       "
@@ -174,63 +175,18 @@ https://github.com/manikrathee/manikrathee.com
         
 
 
-        <ul id="photo-list">
-  
-  <li>
-    <a id="photo-test-page" class="post" href="/blog/photo-test-page.html" title="Photo Test Page For New Features">
-      <p class="post-date info date">August 13, 2016</p>
-      <p class="post-title">
-        Photo Test Page For New Features
-        <span class="post-subtitle info subtitle"></span>
-      </p>
-    </a>
-  </li>
-  
-  <li>
-    <a id="wanderlust-big-sur" class="post" href="/blog/wanderlust-big-sur.html" title="Wanderlust: Big Sur">
-      <p class="post-date info date">November 05, 2013</p>
-      <p class="post-title">
-        Wanderlust: Big Sur
-        <span class="post-subtitle info subtitle"></span>
-      </p>
-    </a>
-  </li>
-  
-  <li>
-    <a id="vsco" class="post" href="/blog/vsco.html" title="VSCO: The world through a viewfinder">
-      <p class="post-date info date">July 18, 2012</p>
-      <p class="post-title">
-        VSCO: The world through a viewfinder
-        <span class="post-subtitle info subtitle"></span>
-      </p>
-    </a>
-  </li>
-  
-  <li>
-    <a id="pride" class="post" href="/blog/pride.html" title="Pride">
-      <p class="post-date info date">June 24, 2012</p>
-      <p class="post-title">
-        Pride
-        <span class="post-subtitle info subtitle">Chicago, Illinois</span>
-      </p>
-    </a>
-  </li>
-  
-</ul>
-
-
-
-<ol id="photo-posts" class="post-list">
+        <ol id="photo-posts" class="post-list">
   
   <li class="post-list--item">
-    <a id="photo-test-page" class="post-list--link" href="/blog/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
+    <img class="post-list--photo" src="img/photos/root-header-image.jpg" alt="Photo Test Page For New Features">
+    <a id="photo-test-page" class="post-list--link no-border" href="/blog/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
       <p class="post-list--date">August 13, 2016</p>
       <h2 class="post-list--title">
         Photo Test Page For New Features
       </h2>
       <p class="post-list-description">
         <span class="post-list--description">
-          25photos taken 499something something travel typeflight-icon 79,000steps taken 4 days3 nights augustseason icon overall trip 12 cities 4 countries this is the loop 20160813 Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa....
+          this is the loop {% for post in site.data.photoblog %} {{ post.title }} {% for url in post.photos %} {% endfor %} {% endfor %} 25photos taken 499something something travel typeflight-icon 79,000steps taken 4 days3 nights augustseason icon overall trip...
         </span>
       </p>
 
@@ -241,7 +197,8 @@ https://github.com/manikrathee/manikrathee.com
   </li>
   
   <li class="post-list--item">
-    <a id="wanderlust-big-sur" class="post-list--link" href="/blog/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
+    <img class="post-list--photo" src="img/photos/root-header-image.jpg" alt="Wanderlust: Big Sur">
+    <a id="wanderlust-big-sur" class="post-list--link no-border" href="/blog/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
       <p class="post-list--date">November 05, 2013</p>
       <h2 class="post-list--title">
         Wanderlust: Big Sur
@@ -259,7 +216,8 @@ https://github.com/manikrathee/manikrathee.com
   </li>
   
   <li class="post-list--item">
-    <a id="vsco" class="post-list--link" href="/blog/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
+    <img class="post-list--photo" src="img/photos/root-header-image.jpg" alt="VSCO: The world through a viewfinder">
+    <a id="vsco" class="post-list--link no-border" href="/blog/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
       <p class="post-list--date">July 18, 2012</p>
       <h2 class="post-list--title">
         VSCO: The world through a viewfinder
@@ -277,7 +235,8 @@ https://github.com/manikrathee/manikrathee.com
   </li>
   
   <li class="post-list--item">
-    <a id="pride" class="post-list--link" href="/blog/pride.html" title="Pride" itemprop="url">
+    <img class="post-list--photo" src="img/photos/root-header-image.jpg" alt="Pride">
+    <a id="pride" class="post-list--link no-border" href="/blog/pride.html" title="Pride" itemprop="url">
       <p class="post-list--date">June 24, 2012</p>
       <h2 class="post-list--title">
         Pride

@@ -6,6 +6,7 @@
   $light-grey: #EFF0F0;
   $grey: #9E9E9E;
   $dark-grey: #505050;
+  $black: #000;
 
   $invert-body: #1f1f1f;
   $invert-container: #2b2b2b;
@@ -18,11 +19,13 @@
   $highlight-blue: #4cc9f9;
 
   $copy: $dark-grey;
-  $subcopy: $off-white;
 
   $border: 2px dotted rgba(0,0,0,0.1);
 
+  $shadow: 0 50px 65px 5px rgba(0, 0, 0, 0.1);
+
   $transition: 0.35s ease-in-out;
+  $shadowTransition: 1.25s cubic-bezier(0.19, 1, 0.22, 1);
 
   // API
   // Todo delete me if it doesnt come back in use for the API

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "./imports/all";
+@import "../imports/all";
 
 .post-list { // ol, ul
   list-style-type: none;
@@ -13,26 +13,33 @@
 }
 
 .post-list--link { // a
+  position: relative;
   text-decoration: none; // remove standard anchor style
 
   @include mq(768px) {
     display: block;
     padding: $spacer;
+    @include transition( color #{$shadowTransition}, opacity #{$shadowTransition} );
 
     &:after {
       content: '';
-      // display: inline-block;
-      box-shadow: 0 2px 65px 5px rgba(0,0,0,0.1);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: $shadow;
+      transform: translate(0, -10%);
+
       opacity: 0;
-      // visibility: hidden;
-      // @include transition( (opacity $transition), (visibility $transition);
-      transition: opacity 0.3s ease-in-out;
+      @include transition( opacity #{$shadowTransition}, transform #{$shadowTransition} );
     }
 
-    &:hover {
+    @include touch-hover() {
       &:after {
         opacity: 1;
-        // visibility: visible;
+        transform: translate(0, 0);
       }
     }
   }

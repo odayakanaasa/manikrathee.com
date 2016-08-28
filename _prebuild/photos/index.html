@@ -3,31 +3,16 @@ layout: default
 
 title: "Photography & Fashion"
 page-type: blog
-page-subtype: blog-index
+page-subtype: photo-index
 
 img: 'img/photos/root-header-image.jpg'
 ---
 
-<ul id="photo-list">
-  {% for posts in site.categories.photos %}
-  <li>
-    <a id="{{ posts.slug }}" class="post" href="{{ posts.url }}" title="{{ posts.title }}">
-      <p class="post-date info date">{{ posts.date | date: "%B %d, %Y" }}</p>
-      <p class="post-title">
-        {{ posts.title }}
-        <span class="post-subtitle info subtitle">{{ posts.subtitle }}</span>
-      </p>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
-
-
-
 <ol id="photo-posts" class="post-list">
   {% for posts in site.categories.photos %}
   <li class="post-list--item">
-    <a id="{{ posts.slug }}" class="post-list--link" href="{{ posts.url }}" title="{{ posts.title }}" itemprop="url">
+    <img class="post-list--photo" src="{{ posts.img }}" alt="{{ posts.title }}">
+    <a id="{{ posts.slug }}" class="post-list--link no-border" href="{{ posts.url }}" title="{{ posts.title }}" itemprop="url">
       <p class="post-list--date">{{ posts.date | date: "%B %d, %Y" }}</p>
       <h2 class="post-list--title">
         {{ posts.title }}
