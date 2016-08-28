@@ -1,0 +1,76 @@
+---
+layout: default
+
+title: The Library
+
+sitemap:
+  lastmod: {{ post.date }}
+  priority: 0.7
+  changefreq: monthly
+  exclude: 'no'
+---
+
+
+<section class="row ↔️">
+  <div class="row-tout recent-photos ↕️">
+    <h3 class="medium-heading">Magazines for Inspiration</h3>
+
+    <ul class="row-tout-list magazines-list">
+      {% for post in site.data.library.magazines %}
+        <li>
+          <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
+            {{ post.heading }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="row-tout recent-photos ↕️">
+    <h3 class="medium-heading">Other Prints &amp; Publications</h3>
+
+    <ul class="row-tout-list publications">
+
+      {% for post in site.data.library.publications %}
+        <li>
+          <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
+            {{ post.heading }}
+          </a>
+        </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</section>
+
+<section class="row book-excerpts">
+
+  <h3 class="medium-heading">Books</h3>
+
+  {% for post in site.data.library.books %}
+    <div class="book book--{{ post.slug }}">
+
+      <header class="book--header">
+        <img src="{{ post.slug }}" alt="{{ post.title }}">
+        <h4 class="small-heading">{{ post.title }}</h3>
+        {% if post.author %}
+        <p>{{ post.author }}</p>
+        {% endif %}
+        <p>{{ post.buy }}</p>
+      </header>
+
+      <ol>
+      {% for quote in post.quotes %}
+        <li>
+          {{ quote }}
+        </li>
+      {% endfor %}
+      </ol>
+
+    </div>
+  {% endfor %}
+
+
+
+</section>
+

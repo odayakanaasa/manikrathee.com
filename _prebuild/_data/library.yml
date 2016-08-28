@@ -1,0 +1,55 @@
+magazines:
+  - heading: The Great Discontent
+    url: https://thegreatdiscontent.com/
+
+  - heading: Offscreen Magazine
+    url: https://www.offscreenmag.com/
+
+  - heading: Trouve
+    url:  https://www.trouvemag.com/
+
+  - heading: Darling
+    url: https://darlingmagazine.org/
+
+  - heading: Another Escape
+    url: https://anotherescape.com/
+
+publications:
+  - heading: A List Apart
+    url: https://alistapart.com/
+
+  - heading: California Sunday
+    url: https://www.californiasunday.com/
+
+  - heading: Google Design, on Medium
+    url: https://medium.com/google-design/
+
+  - heading: The Year of the Looking Glass — Julie Zhuo
+    url: https://medium.com/the-year-of-the-looking-glass/
+
+  - heading: Signal v. Noise — Basecamp
+    url: https://m.signalvnoise.com/
+
+  - heading: Vantage, on Medium
+    url: https://medium.com/vantage/
+
+books:
+
+  - title: "The Design of Everyday Things"
+    author: "Don Norman"
+    buy: "Get it on amazon or ituneshttps://itun.es/us/TwCxO.l"
+    slug: design-of-everyday-things
+    quotes:
+      - "For designers, the most critical aspect of the behavioral level is that every action is associated with an expectation. Expect a positive outcome and the result is a positive affective response (a &ldquo;positive valence,&rdquo; in the scientific literature). Expect a negative outcome and the result is a negative affective response (a negative valence): dread and hope, anxiety and anticipation. The information in the feedback loop of evaluation confirms or disconfirms the expectations, resulting in satisfaction or relief, disappointment or frustration."
+      - "The most basic level of processing is called visceral. This is sometimes referred to as &ldquo;the lizard brain.&rdquo; All people have the same basic visceral responses. These are part of the basic protective mechanisms of the human affective system, making quick judgments about the environment: good or bad, safe or dangerous."
+      - "Cognition provides understanding: emotion provides value judgments."
+      - "Because we are only aware of the reflective level of conscious processing, we tend to believe that all human thought is conscious. But it isn’t. We also tend to believe that thought can be separated from emotion. This is also false. Cognition and emotion cannot be separated. Cognitive thoughts lead to emotions: emotions drive cognitive thoughts. The brain is structured to act upon the world, and every action carries with it expectations, and these expectations drive emotions. That is why much of language is based on physical metaphors, why the body and its interaction with the environment are essential components of human thought."
+
+  - title: "The Manual: Issue 4"
+    buy: "Read more at themanual.org."
+    slug: the-manual-issue-4
+    quotes:
+      - "With digital interfaces, there’s only so much we can do to make our products more durable. We’re limited by the ephemeral nature of our materials. And we’ve learned to work in a way that takes advantage of the fact that digital material is so easily disposable. We try things; we learn something; we erase things, and we try again."
+      - "But the process, the way we got there, has a longer lifespan. The process is the sediment, the deep root system where we store up knowledge over time. Each product we create is just what surfaces above ground, a crystallization of the sum total of everything we’ve learned up to that point."
+      - "His rule of being nothing from everywhere allowed him to shapeshift to anyone always."
+      - "This is the most interesting thing about typography: it’s a chain reaction of time and place with you as the catalyst. The intention of a text depends on its presentation, but it needs you to give it meaning through reading."

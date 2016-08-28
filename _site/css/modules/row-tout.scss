@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import "../imports/_all";
+
+
+.row {
+
+  &-tout {
+    margin-top: 8rem;
+
+    &:first-child {
+      margin-top: 4rem;
+    }
+
+  }
+}
+
+.row-tout-list {
+  list-style-type: none;
+
+  li {
+
+    & + li {
+      margin-top: $base-unit * 4;
+    }
+  }
+}
+
+.more-items {
+  margin-top: $base-unit * 6;
+  @include font-size(12);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.more-items--link {
+  will-change: transform;
+  @include transition(
+    (transform 0.5s ease-in-out)
+  );
+
+  &:hover {
+    transform: rotate(5deg);
+  }
+
+}
+
+.social {
+  // margin: ($spacer * 3) 0;
+
+  h3 {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &--list { // ul
+    display: inline-block;
+    color: red;
+
+    li { // li
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &--list--item { // a
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include ir;
+  }
+}
+
+
+
+
+
+
+@include mq(700px) {
+
+
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    & + .row {
+      padding-top: $spacer * 2;
+    }
+
+
+    &-tout {
+      width: 50%;
+      margin-top: 0;
+      @include box;
+
+      &:first-child { // 50/50 touts on the homepage
+        margin-top: 0;
+        padding-right: $spacer;
+      }
+      &:last-child {
+        padding-right: $spacer;
+      }
+    }
+  }
+
+}
