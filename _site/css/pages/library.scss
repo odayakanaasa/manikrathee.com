@@ -2,3 +2,124 @@
 @import "../imports/_all";
 
 /* Library */
+
+.book-excerpts {}
+
+.book {
+
+  & + .book {
+    margin-top: ($spacer * 2);
+  }
+}
+
+.book--header {
+  background: #f7f7f7;
+  padding: 1rem;
+  text-align: center;
+
+  @include mq(500px) {
+    position: relative;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.book--cover {
+  $width-mobile: 5rem;
+  $height-mobile: 7rem;
+  $width: 7rem;
+  $height: 10rem;
+
+  position: relative;
+  z-index: 0;
+  background-color: $light-grey;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  @include size($width-mobile, $height-mobile);
+  @include ir;
+
+  @include mq(500px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: $width, $height;
+    margin: 0;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    z-index: 2;
+    background: $light-grey;
+    opacity: 0.1;
+    @include size($width-mobile, $height-mobile);
+
+
+    @include mq(500px) {
+      @include size($width, $height);
+    }
+  }
+}
+
+.book--title,
+.book--author,
+.book--link {
+  @include mq(500px) {
+    position: relative;
+    margin-left: 100px;
+  }
+}
+
+.book--title {
+  @include font-size(22);
+
+  @include mq-max(500px) {
+    margin-bottom: 0;
+  }
+
+  @include mq(800px) {
+    @include font-size(26);
+
+  }
+}
+
+.book--author {
+  @include font-size(16);
+  font-weight: 300;
+}
+
+.book--link {
+  @include font-size(14);
+}
+
+// Book Covers
+// .book--design-of-everyday-things {
+//   .book-cover {
+//     background-image: url('../img/library/books/design-of-everyday-things.jpg');
+//   }
+// }
+
+
+$books:
+  design-of-everyday-things
+  the-manual-issue-4
+  ;
+
+@each $title in $books {
+  .book--#{$title} {
+    .book--cover {
+      background-image: url('../img/library/books/#{$title}.jpg');
+    }
+
+    .blockquote-list .blockquote-list--item {
+      border-color: #{$title};   // fix colors, this outputs the var name not the name-var-color
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "../imports/_all";
+
+.blockquote-list {
+  list-style-type: none;
+
+  li + li {
+    margin-bottom: $spacer;
+  }
+
+  &--item { // li
+    padding-left: ($spacer / 2);
+    border-left: 1rem solid #fff; // invisible border by default since this is on a white bg colors are set via @each loop in library.scss
+  }
+}

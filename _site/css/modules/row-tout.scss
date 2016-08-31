@@ -4,11 +4,15 @@
 
 .row {
 
+  & + .row {
+    margin-top: $spacer * 2;
+  }
+
   &-tout {
-    margin-top: 8rem;
+    margin-top: $spacer * 2;
 
     &:first-child {
-      margin-top: 4rem;
+      margin-top: 0;
     }
 
   }
@@ -82,10 +86,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-
-    & + .row {
-      padding-top: $spacer * 2;
-    }
 
 
     &-tout {
