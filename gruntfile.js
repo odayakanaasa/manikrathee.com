@@ -209,14 +209,13 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.loadNpmTasks("grunt-remove-logging");
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks("grunt-remove-logging");
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  // grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-critical');
@@ -226,9 +225,7 @@ module.exports = function(grunt) {
 
   var critical = require('critical');
 
-  // Consider moving to gulp -- enough time has passed that data and support comparisons should be stable.
-
-//  fix cirtical css which isnt working right
+  // TODO  fix cirtical css which isnt working right
 
 
   grunt.registerTask('default',
