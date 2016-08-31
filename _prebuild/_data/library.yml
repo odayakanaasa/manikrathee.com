@@ -34,7 +34,6 @@ publications:
     url: https://medium.com/vantage/
 
 books:
-
   - title: "The Design of Everyday Things"
     author: "Don Norman"
     buy: "Get it on amazon or ituneshttps://itun.es/us/TwCxO.l"
@@ -46,7 +45,8 @@ books:
       - "Because we are only aware of the reflective level of conscious processing, we tend to believe that all human thought is conscious. But it isn’t. We also tend to believe that thought can be separated from emotion. This is also false. Cognition and emotion cannot be separated. Cognitive thoughts lead to emotions: emotions drive cognitive thoughts. The brain is structured to act upon the world, and every action carries with it expectations, and these expectations drive emotions. That is why much of language is based on physical metaphors, why the body and its interaction with the environment are essential components of human thought."
 
   - title: "The Manual: Issue 4"
-    buy: "Read more at themanual.org."
+    author: "Craig Mod, Wilson Miner, Diana Kimball, Jennifer Brook, <a href='https://themanual.org/read/issues/4' title='See the full contributor list for The Manual Issue 4' itemprop='url'>and more</a>."
+    buy: "Read more at <a href='https://themanual.org/' title='TheManual.org' itemprop='url'>themanual.org</a>."
     slug: the-manual-issue-4
     quotes:
       - "With digital interfaces, there’s only so much we can do to make our products more durable. We’re limited by the ephemeral nature of our materials. And we’ve learned to work in a way that takes advantage of the fact that digital material is so easily disposable. We try things; we learn something; we erase things, and we try again."
