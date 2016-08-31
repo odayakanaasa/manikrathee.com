@@ -27,7 +27,7 @@ sitemap:
   </div>
 
   <div class="row-tout recent-photos ↕️">
-    <h3 class="medium-heading">Other Prints &amp; Publications</h3>
+    <h3 class="medium-heading">Other Publications</h3>
 
     <ul class="row-tout-list publications">
 
@@ -45,21 +45,23 @@ sitemap:
 
 <section class="row book-excerpts">
 
-  <h3 class="medium-heading">Books</h3>
+  <h3 class="medium-heading">Books &amp; Excerpts</h3>
 
   {% for post in site.data.library.books %}
     <div class="book book--{{ post.slug }}">
 
       <header class="book--header">
-        <img src="{{ post.slug }}" alt="{{ post.title }}">
-        <h4 class="small-heading">{{ post.title }}</h3>
+        <div class="book--cover" data-src="/img/library/books/{{ post.slug }}.jpg">
+          {{ post.title }} - Book Cover
+        </div>
+        <h4 class="large-heading book--title">{{ post.title | widont }}</h3>
         {% if post.author %}
         <p>{{ post.author }}</p>
         {% endif %}
         <p>{{ post.buy }}</p>
       </header>
 
-      <ol>
+      <ol class="blockquote-list">
       {% for quote in post.quotes %}
         <li>
           {{ quote }}
