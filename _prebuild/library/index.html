@@ -19,7 +19,7 @@ sitemap:
       {% for post in site.data.library.magazines %}
         <li>
           <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
-            {{ post.heading }}
+            {{ post.heading | widont }}
           </a>
         </li>
       {% endfor %}
@@ -34,7 +34,7 @@ sitemap:
       {% for post in site.data.library.publications %}
         <li>
           <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
-            {{ post.heading }}
+            {{ post.heading | widont }}
           </a>
         </li>
       {% endfor %}
@@ -56,15 +56,15 @@ sitemap:
         </div>
         <h4 class="large-heading book--title">{{ post.title | widont }}</h3>
         {% if post.author %}
-        <p>{{ post.author }}</p>
+        <p class="book--author">{{ post.author | widont }}</p>
         {% endif %}
-        <p>{{ post.buy }}</p>
+        <p class="book--link">{{ post.buy | widont }}</p>
       </header>
 
       <ol class="blockquote-list">
       {% for quote in post.quotes %}
-        <li>
-          {{ quote }}
+        <li class="blockquote-list--item">
+          <p>{{ quote | widont }}</p>
         </li>
       {% endfor %}
       </ol>

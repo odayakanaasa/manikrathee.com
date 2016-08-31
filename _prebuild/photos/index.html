@@ -15,11 +15,11 @@ img: 'img/photos/root-header-image.jpg'
     <a id="{{ posts.slug }}" class="post-list--link no-border" href="{{ posts.url }}" title="{{ posts.title }}" itemprop="url">
       <p class="post-list--date">{{ posts.date | date: "%B %d, %Y" }}</p>
       <h2 class="post-list--title">
-        {{ posts.title }}
+        {{ posts.title | widont }}
       </h2>
       <p class="post-list-description">
         <span class="post-list--description">
-          {{ posts.content | strip_html | truncatewords:40 }}
+          {{ posts.content | strip_html | truncatewords:40 | widont }}
         </span>
       </p>
 
