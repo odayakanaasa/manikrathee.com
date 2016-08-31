@@ -6,6 +6,12 @@
   }
 }
 
+@mixin mq-max($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
 // RGBa colors with fallbacks
 // Usage
 //  @include rgba(#333, 0.5);
