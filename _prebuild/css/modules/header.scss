@@ -16,7 +16,7 @@
     opacity: 0.7;
     @include transition(opacity #{$transition});
 
-    &:hover {
+    @include touch-hover() {
       opacity: 1;
     }
 
@@ -49,11 +49,12 @@
 
 
 [id="who-is"] { // shown in header on right side, only for homepage
-  margin: ($spacer * 1.15) 0 0 0; // push content to the baseline of the title
-  padding: ($spacer * 1.15) 0;
+  padding: ($spacer * 2) 0;
   line-height: 1.6;
-  border-top: $border;
-  border-bottom: $border;
+
+  @include mq(800px) {
+    margin: ($spacer * 1.15) 0 0 0; // push content to the baseline of the title
+  }
 
   .view-mode--dark & {
     border-top: $invert-border;
