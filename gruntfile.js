@@ -165,35 +165,35 @@ module.exports = function(grunt) {
 
 
     watch: {
-      // template: {
-      //   files: '_prebuild/**/*.html',
-      //   tasks: ['jekyll', 'sass', 'concat'],
-      //   options: {
-      //     debounceDelay: 450,
-      //   },
-      // },
-      main: {
-        files: '_prebuild/**/*',
-        tasks: ['jekyll','sass','autoprefixer','concat'],
-        // tasks: ['sass','autoprefixer','concat'],
+      template: {
+        files: '_prebuild/**/*.html',
+        tasks: ['jekyll', 'sass', 'concat'],
         options: {
-          debounceDelay: 550,
+          debounceDelay: 450,
         },
       },
-      // css: {
+      // main: {
       //   files: '_prebuild/**/*',
-      //   tasks: ['sass'],
+      //   tasks: ['jekyll','sass','autoprefixer','concat'],
+      //   // tasks: ['sass','autoprefixer','concat'],
       //   options: {
-      //     debounceDelay: 450,
+      //     debounceDelay: 550,
       //   },
       // },
-      // scripts: {
-      //   files: '_prebuild/**/*.html','_prebuild/js/**/*',
-      //   tasks: ['concat'],
-      //   options: {
-      //     debounceDelay: 450,
-      //   },
-      // },
+      css: {
+        files: '_prebuild/css/**/*.scss',
+        tasks: ['sass'],
+        options: {
+          debounceDelay: 450,
+        },
+      },
+      scripts: {
+        files: '_prebuild/js/**/*.js',
+        tasks: ['concat'],
+        options: {
+          debounceDelay: 450,
+        },
+      },
     },
 
     pagespeed: {
