@@ -49,7 +49,7 @@ sitemap:
 
   {% for post in site.data.library.books %}
     <div class="book book--{{ post.slug }}">
-
+`
       <header class="book--header">
         <div class="book--cover" data-src="/img/library/books/{{ post.slug }}.jpg">
           <span>{{ post.title }} - Book Cover</span>
@@ -88,21 +88,19 @@ sitemap:
       {% endfor %}
     </ul>
   </div>
-<!--
-  <div class="row-tout recent-photos ↕️">
-    <h3 class="medium-heading">Other Publications</h3>
 
-    <ul class="row-tout-list publications">
+  <div class="row-tout shadow-container ↕️">
 
-      {% for post in site.data.library.publications %}
-        <li>
-          <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
-            {{ post.heading | widont }}
-          </a>
-        </li>
-      {% endfor %}
+    <div class="shadow-tout pocket-tout">
+      <i class="icon pocket-brand"></i>
 
-    </ul>
-  </div> -->
+      <p>
+        For articles and quick-read recommendations,
+        <a href="https://getpocket.com/@Mrathee" title="Follow @mrathee on Pocket" itemprop="url">follow me on Pocket</a>.
+      </p>
+    </div>
+
+
+  </div>
 </section>
 

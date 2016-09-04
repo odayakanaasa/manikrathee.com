@@ -26,8 +26,3 @@
     border-left: 0.5rem solid $light-grey; // invisible border by default since this is on a white bg colors are set via @each loop in library.scss
   }
 }
-
-
-@include mq(768px) {
-
-}

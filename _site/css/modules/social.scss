@@ -2,7 +2,7 @@
 @import "../imports/_all";
 
 
-$social-accounts: spotify fivehundredpx twitter github dribbble tumblr pocket;
+$social-accounts: spotify fivehundredpx twitter github dribbble tumblr pocket pocket-brand;
 
 @each $account in $social-accounts {
   .#{$account} {
@@ -12,6 +12,7 @@ $social-accounts: spotify fivehundredpx twitter github dribbble tumblr pocket;
   }
 }
 
+// FIXME these are not correct sizes
 .spotify {
   @include size(32px, 32px);
 }
@@ -31,5 +32,8 @@ $social-accounts: spotify fivehundredpx twitter github dribbble tumblr pocket;
   @include size(45px, 28px);
 }
 .pocket {
+  @include size(32px, 32px);
+}
+.pocket-brand {
   @include size(32px, 32px);
 }

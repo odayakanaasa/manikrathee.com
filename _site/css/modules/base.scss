@@ -90,7 +90,7 @@ a {
 
   .view-mode--dark & {
     color: $invert-copy;
-    border-color: darken($invert-copy, 2%);
+    border-color: darken($invert-copy, 15%);
 
     @include touch-hover() {
       color: $white;

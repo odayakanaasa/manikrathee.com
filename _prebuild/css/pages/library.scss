@@ -124,6 +124,8 @@
 $books:
     design-of-everyday-things "#bcce0c"
   , the-manual-issue-4 "#02B7C1"
+  , creativity-inc-overcoming-unseen-inspiration "#dc252d"
+  , responsible-responsive-design "#04c4b4"
   , on-web-typography "#E86160"
   ;
 
@@ -142,3 +144,41 @@ $books:
   }
 }
 
+
+
+
+.pocket-tout {
+  position: relative;
+  padding: 0;
+  @include box;
+
+  &:after {
+    display: none; // hide shadow on mobile
+  }
+
+  @include mq(800px) {
+    padding: 5rem 7rem;
+    max-width: 35rem;
+
+    &:after {
+      display: block;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    background-size: 1.5rem;
+    background-position: 50% 52%;
+    background-repeat: no-repeat;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 10px;
+    border-radius: 100%;
+    border: 3px solid $pocket;
+
+    @include mq(800px) {
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+}

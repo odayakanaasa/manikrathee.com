@@ -14,19 +14,24 @@
 
 .book--header {
   background: #f7f7f7;
+  margin-bottom: 2rem;
   padding: 1rem;
   text-align: center;
 
   @include mq(500px) {
     position: relative;
     background: transparent;
-    padding: 0;
+    margin-bottom: 5rem; // push quote below absolutely positioned book cover
+    padding: 24px 0 0 0;
     text-align: left;
   }
 
   @include mq(800px) {
-    margin-bottom: 5rem; // push quote below absolutely positioned book cover
-    padding-top: 48px; // push heading down to top of book
+    padding-top: 44px; // push heading down to top of book
+  }
+
+  .view-mode--dark & {
+    background: darken($dark-grey, 20%);
   }
 }
 
@@ -40,6 +45,10 @@
   margin: 0 auto 2rem;
   padding: 2rem;
   @include size(5rem, 7rem);
+
+  span { // contains text for accessibility
+    @include ir;
+  }
 
   @include mq(500px) {
     position: absolute;
@@ -55,15 +64,18 @@
   }
 
   &:after {
-    content: '';
     display: block;
     position: absolute;
     top: -2rem;
     left: -2rem;
     z-index: 2;
-    background: $highlight-mint;
-    opacity: 0.2;
+    background: $light-grey;
+    opacity: 0.4;
     @include size(8rem, 12rem);
+
+    @include mq(500px) {
+      content: '';
+    }
   }
 }
 
@@ -72,7 +84,7 @@
 .book--link {
   @include mq(500px) {
     position: relative;
-    margin-left: 100px;
+    margin-left: 13rem;
   }
 
   @include mq(800px) {
@@ -112,6 +124,8 @@
 $books:
     design-of-everyday-things "#bcce0c"
   , the-manual-issue-4 "#02B7C1"
+  , creativity-inc-overcoming-unseen-inspiration "#dc252d"
+  , responsible-responsive-design "#04c4b4"
   , on-web-typography "#E86160"
   ;
 
@@ -130,3 +144,41 @@ $books:
   }
 }
 
+
+
+
+.pocket-tout {
+  position: relative;
+  padding: 0;
+  @include box;
+
+  &:after {
+    display: none; // hide shadow on mobile
+  }
+
+  @include mq(800px) {
+    padding: 5rem 7rem;
+    max-width: 35rem;
+
+    &:after {
+      display: block;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    background-size: 1.5rem;
+    background-position: 50% 52%;
+    background-repeat: no-repeat;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 10px;
+    border-radius: 100%;
+    border: 3px solid $pocket;
+
+    @include mq(800px) {
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+}

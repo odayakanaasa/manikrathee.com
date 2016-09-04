@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import "../imports/_all";
+
+
+.shadow-tout {
+  position: relative;
+  padding: 4rem;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: $shadow;
+    opacity: 0.8;
+    @include transition( opacity #{$shadowTransition});
+  }
+
+  @include touch-hover() {
+    &:after {
+      opacity: 1;
+    }
+  }
+}

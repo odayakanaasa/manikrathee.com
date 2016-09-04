@@ -36,7 +36,7 @@ publications:
 books:
   - title: "The Design of Everyday Things"
     author: "Don Norman"
-    buy: "Get it on <a href='https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654/ref=sr_1_1?ie=UTF8&qid=1473004717&sr=8-1&keywords=don+norman+the+design+of+everyday+things' title='The Design of Everyday Things, by Don Norman on Amazon' itemprop='url'>amazon</a> or <a href='https://itun.es/us/TwCxO.l' title='The Design of Everyday Things, by Don Norman on iTunes' itemprop='url'>iTunes</a>"
+    buy: "Get it on <a href='https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654/' title='The Design of Everyday Things, by Don Norman on Amazon' itemprop='url'>Amazon</a> or <a href='https://itun.es/us/TwCxO.l' title='The Design of Everyday Things, by Don Norman on iTunes' itemprop='url'>iTunes</a>."
     slug: design-of-everyday-things
     quotes:
       - "For designers, the most critical aspect of the behavioral level is that every action is associated with an expectation. Expect a positive outcome and the result is a positive affective response (a &ldquo;positive valence,&rdquo; in the scientific literature). Expect a negative outcome and the result is a negative affective response (a negative valence): dread and hope, anxiety and anticipation. The information in the feedback loop of evaluation confirms or disconfirms the expectations, resulting in satisfaction or relief, disappointment or frustration."
@@ -53,3 +53,23 @@ books:
       - "But the process, the way we got there, has a longer lifespan. The process is the sediment, the deep root system where we store up knowledge over time. Each product we create is just what surfaces above ground, a crystallization of the sum total of everything we’ve learned up to that point."
       - "His rule of being nothing from everywhere allowed him to shapeshift to anyone always."
       - "This is the most interesting thing about typography: it’s a chain reaction of time and place with you as the catalyst. The intention of a text depends on its presentation, but it needs you to give it meaning through reading."
+
+  - title: "Creativity, Inc"
+    author: "Ed Catmull"
+    buy: "Read more at <a href='https://www.amazon.com/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0812993012' title='Creativity, Inc on Amazon.com' itemprop='url'>amazon.com</a>."
+    slug: creativity-inc-overcoming-unseen-inspiration
+    quotes:
+      - "As Trent Walton says in his essay &ldquo;Device Agnostic&rdquo;: Like cars designed to perform in extreme heat or on icy roads, websites should be built to face the reality of the web’s inherent variability"
+      - "Not every mobile browser supports the CSS we rely on, like floats, positioning, or animation. If your styles for a small-screen experience are significantly complex, you might consider broadly qualifying their application to newer, media-query-supporting browsers. Wrapping the mobile-first styles in a media query such as only all is one reliable way to do this."
+      - "Given this ever-increasing page size, we should attend to the amount of data we’re asking our users to download, rather than simply squishing down massive images to fit smaller screens. Now, to be clear: &ldquo;small screen&rdquo; does not imply &ldquo;slow connection.&rdquo; Far from it. In fact, there is no correlation between the width of a screen and the amount of bandwidth available to it."
+      - "The absence of support for @media queries is in fact the first @media query."
+
+  - title: "Responsible Responsive Design"
+    author: "Scott Jehl, forward by Ethan Marcotte"
+    buy: "Read more at <a href='https://abookapart.com/products/responsible-responsive-design' title='Responsible Responsive Design at abookapart.com' itemprop='url'>abookapart.com</a>."
+    slug: responsible-responsive-design
+    quotes:
+      - "As Trent Walton says in his essay &ldquo;Device Agnostic&rdquo;: Like cars designed to perform in extreme heat or on icy roads, websites should be built to face the reality of the web’s inherent variability"
+      - "Not every mobile browser supports the CSS we rely on, like floats, positioning, or animation. If your styles for a small-screen experience are significantly complex, you might consider broadly qualifying their application to newer, media-query-supporting browsers. Wrapping the mobile-first styles in a media query such as only all is one reliable way to do this."
+      - "Given this ever-increasing page size, we should attend to the amount of data we’re asking our users to download, rather than simply squishing down massive images to fit smaller screens. Now, to be clear: &ldquo;small screen&rdquo; does not imply &ldquo;slow connection.&rdquo; Far from it. In fact, there is no correlation between the width of a screen and the amount of bandwidth available to it."
+      - "The absence of support for @media queries is in fact the first @media query."
