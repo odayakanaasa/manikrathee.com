@@ -15727,6 +15727,12 @@ a.pswp__share--download:hover {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
+.icon {
+  display: inline-block;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat; }
+
 .spotify {
   width: 32px;
   height: 32px;

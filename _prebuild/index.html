@@ -21,14 +21,12 @@ section: home
             {{ post.title | strip_html }}
           </a>
 
-
-          {{ post.lovelySundayLink }}
-            <span class="for-lovely-sunday">
-              , for
-              <a href="{{ post.lovelySundayLink }}" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
-                LovelySunday
-              </a>
-            </span>
+          <span class="for-lovely-sunday">
+            , for
+            <a href="{{ post.lovelySundayLink }}" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+              LovelySunday
+            </a>
+          </span>
         </p>
       </li>
       {% endfor %}
