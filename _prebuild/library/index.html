@@ -12,7 +12,7 @@ sitemap:
 
 
 <section class="row ↔️">
-  <div class="row-tout recent-photos ↕️">
+  <div class="row-tout magazines-container ↕️">
     <h3 class="medium-heading">Magazines for Inspiration</h3>
 
     <ul class="row-tout-list magazines-list">
@@ -26,7 +26,7 @@ sitemap:
     </ul>
   </div>
 
-  <div class="row-tout recent-photos ↕️">
+  <div class="row-tout publications-container ↕️">
     <h3 class="medium-heading">Other Publications</h3>
 
     <ul class="row-tout-list publications">
@@ -52,7 +52,7 @@ sitemap:
 
       <header class="book--header">
         <div class="book--cover" data-src="/img/library/books/{{ post.slug }}.jpg">
-          {{ post.title }} - Book Cover
+          <span>{{ post.title }} - Book Cover</span>
         </div>
         <h4 class="large-heading book--title">{{ post.title | widont }}</h3>
         {% if post.author %}
@@ -71,8 +71,38 @@ sitemap:
 
     </div>
   {% endfor %}
+</section>
 
 
+<section class="row ↔️">
+  <div class="row-tout books-container ↕️">
+    <h3 class="medium-heading">More books</h3>
 
+    <ul class="row-tout-list magazines-list">
+      {% for post in site.data.library.magazines %}
+        <li>
+          <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
+            {{ post.heading | widont }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+<!--
+  <div class="row-tout recent-photos ↕️">
+    <h3 class="medium-heading">Other Publications</h3>
+
+    <ul class="row-tout-list publications">
+
+      {% for post in site.data.library.publications %}
+        <li>
+          <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
+            {{ post.heading | widont }}
+          </a>
+        </li>
+      {% endfor %}
+
+    </ul>
+  </div> -->
 </section>
 

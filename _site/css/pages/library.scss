@@ -23,14 +23,14 @@
     padding: 0;
     text-align: left;
   }
+
+  @include mq(800px) {
+    margin-bottom: 5rem; // push quote below absolutely positioned book cover
+    padding-top: 48px; // push heading down to top of book
+  }
 }
 
 .book--cover {
-  $width-mobile: 5rem;
-  $height-mobile: 7rem;
-  $width: 7rem;
-  $height: 10rem;
-
   position: relative;
   z-index: 0;
   background-color: $light-grey;
@@ -39,32 +39,31 @@
   background-position: 50%;
   margin: 0 auto 2rem;
   padding: 2rem;
-  @include size($width-mobile, $height-mobile);
-  @include ir;
+  @include size(5rem, 7rem);
 
   @include mq(500px) {
     position: absolute;
     top: 0;
     left: 0;
-    background-size: $width, $height;
+    background-size: 7rem, 10rem;
+    @include size(8rem, 12rem);
     margin: 0;
+  }
+
+  @include mq(800px) {
+    @include size(12rem, 16rem);
   }
 
   &:after {
     content: '';
     display: block;
     position: absolute;
-    top: -1rem;
-    left: -1rem;
+    top: -2rem;
+    left: -2rem;
     z-index: 2;
-    background: $light-grey;
-    opacity: 0.1;
-    @include size($width-mobile, $height-mobile);
-
-
-    @include mq(500px) {
-      @include size($width, $height);
-    }
+    background: $highlight-mint;
+    opacity: 0.2;
+    @include size(8rem, 12rem);
   }
 }
 
@@ -74,6 +73,10 @@
   @include mq(500px) {
     position: relative;
     margin-left: 100px;
+  }
+
+  @include mq(800px) {
+    margin-left: 130px;
   }
 }
 
@@ -105,7 +108,7 @@
 
 
 
-// Book Covers
+// Book Covers, Titles & Colors
 $books:
     design-of-everyday-things "#bcce0c"
   , the-manual-issue-4 "#02B7C1"
@@ -113,7 +116,6 @@ $books:
   ;
 
 @each $book in $books {
-
   $book-title: nth($book, 1);
   $book-color: nth($book, 2);
 
@@ -123,7 +125,7 @@ $books:
     }
 
     .blockquote-list .blockquote-list--item {
-      border-color: #{$book-title};   // fix colors, this outputs the var name not the name-var-color
+      border-color: #{$book-color};
     }
   }
 }

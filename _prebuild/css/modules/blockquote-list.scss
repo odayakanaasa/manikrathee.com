@@ -4,8 +4,21 @@
 .blockquote-list {
   list-style-type: none;
 
+  @include mq(800px) {
+    columns: 2;
+
+    li {
+      @include box;
+      padding-right: 1rem;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
   li + li {
-    margin-bottom: $spacer;
+    margin-top: $spacer;
   }
 
   &--item { // li

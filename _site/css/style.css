@@ -2902,7 +2902,7 @@ a {
     border: none; }
   .view-mode--dark a {
     color: #c7c7c7;
-    border-color: #c2c2c2; }
+    border-color: #a1a1a1; }
     .no-js .view-mode--dark a:hover,
     .no-js .view-mode--dark a:focus,
     .js.no-touch .view-mode--dark a:hover,
@@ -11973,8 +11973,16 @@ a.pswp__share--download:hover {
 
 .blockquote-list {
   list-style-type: none; }
+  @media (min-width: 800px) {
+    .blockquote-list {
+      columns: 2; }
+      .blockquote-list li {
+        box-sizing: border-box;
+        padding-right: 1rem; }
+        .blockquote-list li:last-child {
+          padding-right: 0; } }
   .blockquote-list li + li {
-    margin-bottom: 4rem; }
+    margin-top: 4rem; }
   .blockquote-list--item {
     padding-left: 2rem;
     border-left: 0.5rem solid #EFF0F0; }
@@ -26970,14 +26978,21 @@ a.pswp__share--download:hover {
 
 .book--header {
   background: #f7f7f7;
+  margin-bottom: 2rem;
   padding: 1rem;
   text-align: center; }
   @media (min-width: 500px) {
     .book--header {
       position: relative;
       background: transparent;
-      padding: 0;
+      margin-bottom: 5rem;
+      padding: 24px 0 0 0;
       text-align: left; } }
+  @media (min-width: 800px) {
+    .book--header {
+      padding-top: 44px; } }
+  .view-mode--dark .book--header {
+    background: #1d1d1d; }
 
 .book--cover {
   position: relative;
@@ -26990,44 +27005,56 @@ a.pswp__share--download:hover {
   padding: 2rem;
   width: 5rem;
   height: 7rem;
-  border-radius: 0;
-  display: block;
-  text-indent: -999em;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr; }
+  border-radius: 0; }
+  .book--cover span {
+    display: block;
+    text-indent: -999em;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    text-align: left;
+    direction: ltr; }
   @media (min-width: 500px) {
     .book--cover {
       position: absolute;
       top: 0;
       left: 0;
       background-size: 7rem, 10rem;
+      width: 8rem;
+      height: 12rem;
+      border-radius: 0;
       margin: 0; } }
+  @media (min-width: 800px) {
+    .book--cover {
+      width: 12rem;
+      height: 16rem;
+      border-radius: 0; } }
   .book--cover:after {
-    content: '';
     display: block;
     position: absolute;
-    top: -1rem;
-    left: -1rem;
+    top: -2rem;
+    left: -2rem;
     z-index: 2;
     background: #EFF0F0;
-    opacity: 0.1;
-    width: 5rem;
-    height: 7rem;
+    opacity: 0.4;
+    width: 8rem;
+    height: 12rem;
     border-radius: 0; }
     @media (min-width: 500px) {
       .book--cover:after {
-        width: 7rem;
-        height: 10rem;
-        border-radius: 0; } }
+        content: ''; } }
 
 @media (min-width: 500px) {
   .book--title,
   .book--author,
   .book--link {
     position: relative;
-    margin-left: 100px; } }
+    margin-left: 13rem; } }
+
+@media (min-width: 800px) {
+  .book--title,
+  .book--author,
+  .book--link {
+    margin-left: 130px; } }
 
 .book--title {
   font-size: 22px;
