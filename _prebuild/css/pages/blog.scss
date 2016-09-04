@@ -8,15 +8,10 @@
 //************************************
 //************************************
 
-.blog {
-  background: red;
-}
-
-
 #blog-posts {
 }
 
-.creation-cross-share {
+.cross-share {
   @include box;
 }
 
@@ -24,10 +19,10 @@
 
   #blog-posts {
     width: 80%;
-    float: right;
+    margin-left: 20%;
   }
 
-  .creation-cross-share {
+  .cross-share {
     width: 30%;
     padding-right: $spacer;
     border-right: $border;

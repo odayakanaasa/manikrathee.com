@@ -10741,7 +10741,7 @@ a.pswp__share--download:hover {
   list-style-type: none; }
 
 .post-list--item + .post-list--item {
-  margin-top: 12rem; }
+  margin-top: 8rem; }
 
 .post-list--link {
   position: relative;
@@ -23246,17 +23246,14 @@ a.pswp__share--download:hover {
 .pswp--minimal--dark .pswp__top-bar {
   background: none; }
 
-.blog {
-  background: red; }
-
-.creation-cross-share {
+.cross-share {
   box-sizing: border-box; }
 
 @media (min-width: 768px) {
   #blog-posts {
     width: 80%;
-    float: right; }
-  .creation-cross-share {
+    margin-left: 20%; }
+  .cross-share {
     width: 30%;
     padding-right: 4rem;
     border-right: 2px dotted rgba(0, 0, 0, 0.1);

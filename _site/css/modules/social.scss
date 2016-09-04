@@ -12,9 +12,18 @@ $social-accounts: spotify fivehundredpx twitter github dribbble tumblr pocket po
   }
 }
 
+.icon {
+  display: inline-block;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+
 // FIXME these are not correct sizes
 .spotify {
   @include size(32px, 32px);
+
 }
 .fivehundredpx {
   @include size(32px, 28px);
