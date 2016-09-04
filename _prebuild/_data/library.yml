@@ -33,6 +33,22 @@ publications:
   - heading: Vantage, on Medium
     url: https://medium.com/vantage/
 
+more_books:
+  - heading: Between the World and Me
+    url: https://www.amazon.com/Between-World-Me-Ta-Nehisi-Coates/dp/0812993543
+  - heading: The New Jim Crow
+    url: http://newjimcrow.com/
+  - heading: Seven Brief Lessons on Physics
+    url: https://www.amazon.com/Seven-Brief-Lessons-Physics-Rovelli/dp/0399184414/
+  - heading: The Crossroads of Should and Must
+    url: http://choosemust.com/
+  - heading: A Book Apart series
+    url: https://abookapart.com/
+  - heading: The Shape of Design
+    url: http://shapeofdesignbook.com/
+  - heading: Draplin Design Co.
+    url: http://www.draplin.com/ddc_book/
+
 books:
   - title: "The Design of Everyday Things"
     author: "Don Norman"
