@@ -149,19 +149,25 @@ $books:
 
 .pocket-tout {
   position: relative;
-  padding: 0;
+  padding: 0 0 2rem 2rem; // pad the bottom left area so the directional shadow looks ok
+  text-align: right;
   @include box;
 
-  &:after {
-    display: none; // hide shadow on mobile
+  @include mq(700px) {
+    max-width: 35rem;
+    padding: 0 5rem 4rem;
+    text-align: left;
   }
 
-  @include mq(800px) {
-    padding: 5rem 7rem;
-    max-width: 35rem;
+  @include mq(1000px) {
+    padding: 0 7rem 5rem;
+  }
 
-    &:after {
-      display: block;
+  &:after {
+    box-shadow: $shadow-bottom-left;
+
+    @include mq(700px) {
+      box-shadow: $shadow;
     }
   }
 
@@ -172,13 +178,18 @@ $books:
     background-repeat: no-repeat;
     height: 1.5rem;
     width: 1.5rem;
+    margin-bottom: 2rem;
     padding: 10px;
     border-radius: 100%;
     border: 3px solid $pocket;
 
     @include mq(800px) {
       display: block;
-      margin-bottom: 2rem;
     }
+  }
+
+  .icon,
+  p {
+    position: relative;
   }
 }

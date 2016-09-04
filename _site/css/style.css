@@ -28345,16 +28345,22 @@ a.pswp__share--download:hover {
 
 .pocket-tout {
   position: relative;
-  padding: 0;
+  padding: 0 0 2rem 2rem;
+  text-align: right;
   box-sizing: border-box; }
-  .pocket-tout:after {
-    display: none; }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     .pocket-tout {
-      padding: 5rem 7rem;
-      max-width: 35rem; }
+      max-width: 35rem;
+      padding: 0 5rem 4rem;
+      text-align: left; } }
+  @media (min-width: 1000px) {
+    .pocket-tout {
+      padding: 0 7rem 5rem; } }
+  .pocket-tout:after {
+    box-shadow: -30px 40px 65px 5px rgba(0, 0, 0, 0.1); }
+    @media (min-width: 700px) {
       .pocket-tout:after {
-        display: block; } }
+        box-shadow: 0 50px 65px 5px rgba(0, 0, 0, 0.1); } }
   .pocket-tout .icon {
     display: inline-block;
     background-size: 1.5rem;
@@ -28362,13 +28368,17 @@ a.pswp__share--download:hover {
     background-repeat: no-repeat;
     height: 1.5rem;
     width: 1.5rem;
+    margin-bottom: 2rem;
     padding: 10px;
     border-radius: 100%;
     border: 3px solid #EF4056; }
     @media (min-width: 800px) {
       .pocket-tout .icon {
-        display: block;
-        margin-bottom: 2rem; } }
+        display: block; } }
+  .pocket-tout .icon,
+  .pocket-tout p {
+    position: relative;
+    z-index: 1; }
 
 /* Mixins */
 /*
