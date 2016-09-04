@@ -18,27 +18,21 @@
   $highlight-mint: #82e17c;
   $highlight-blue: #4cc9f9;
 
+  // Util Color
   $copy: $dark-grey;
+  $anchor-hover-transition: 0.15s ease-in-out;
 
   $border: 2px dotted rgba(0,0,0,0.1);
+  $transition: 0.35s ease-in-out;
 
   $shadow: 0 50px 65px 5px rgba(0, 0, 0, 0.1);
   $shadow-bottom-left: -30px 40px 65px 5px rgba(0, 0, 0, 0.1);
-
-  $transition: 0.35s ease-in-out;
   $shadowTransition: 1.25s cubic-bezier(0.19, 1, 0.22, 1);
 
-  // API
-  $twitter: #5dc5f7;
-  $instagram: #3f729d;
-  // $rdio:  #008fd6; // RIP
-  // $readmill: #81ce2c; // RIP
-  $pocket: #EF4056;
 
 
-  // ******
-  // Base Type
-  // ******
+
+  // Typography
   $sans: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
   $serif: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif;
 
@@ -54,3 +48,10 @@
 
 
 
+
+  // API
+  $twitter: #5dc5f7;
+  $instagram: #3f729d;
+  // $rdio:  #008fd6; // RIP
+  // $readmill: #81ce2c; // RIP
+  $pocket: #EF4056;

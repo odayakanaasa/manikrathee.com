@@ -77,11 +77,22 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #CBCBCB;
   -webkit-tap-highlight-color: $dark-grey;
-  @include transition( (color 0.15s ease-in-out),(border 0.15s ease-in-out) );
+  @include transition( (color $anchor-hover-transition),(border $anchor-hover-transition) );
 
   @include touch-hover() {
     color: $black;
     border-color: $black;
+  }
+
+  .invert {
+    color: $off-white;
+  }
+
+  &.invert-hover  {
+    @include touch-hover() {
+      color: $white;
+      border-color: $white;
+    }
   }
 
   &.no-border {
@@ -96,7 +107,6 @@ a {
       color: $white;
       border-color: $white;
     }
-
   }
 }
 

@@ -4,7 +4,7 @@
 // Main footer
 // Shared with all pages
 
-[id=main-footer] {
+#main-footer {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,29 +19,15 @@
     mix-blend-mode: difference;
   }
 
-  // &.light-copy {
-  //   color: $dark-grey;
-  //   p,
-  //   a {
-  //     color: $dark-grey;
-  //   }
-
-  //   a {
-  //     &:hover {
-  //       color: $light-grey;
-  //     }
-  //   }
-  // }
-
-  p {
-    color: #fff;
+  p,
+  a {
+    color: $white;
   }
 
   a {
-    color: #fff;
-    &:hover {
-      color: #7D7D7D;
-      border-bottom: #7D7D7D;
+    @include touch-hover() {
+      color: $off-white;
+      border-color: $off-white;
     }
   }
 
@@ -138,6 +124,7 @@
     opacity: 1;
     visibility: visible;
   }
+
 }
 
 #manikrathee {
@@ -161,7 +148,7 @@
 
 
 @include mq(500px) {
-  [id=main-footer] {
+  #main-footer {
     width: calc(100% + 40px + 4rem);
     margin-left: -40px;
   }
@@ -179,7 +166,7 @@
 
 @include mq(768px) {
 
-  [id=main-footer] {
+  #main-footer {
     flex-direction: row;
     flex-wrap: wrap; // force photo story link to it's own line
     margin-left: -40px;
@@ -214,9 +201,11 @@
       // position: relative;
       // margin-top: $spacer*1.125; // push content to the baseline of the title
 
-      i.icon {
+      .icon {
         display: inline-block;
         vertical-align: top;
+
+        @include transition(opacity $anchor-hover-transition);
       }
 
       span {
@@ -226,6 +215,16 @@
         margin-left: 10px;
         vertical-align: top;
         text-align: left;
+      }
+
+      a {
+        border: none;
+
+        &:hover {
+          .icon {
+            opacity: 0.3; // mimic anchor hover color
+          }
+        }
       }
     }
 
@@ -279,7 +278,7 @@
 
 
 @include mq(960px) {
-  [id=main-footer] {
+  #main-footer {
     width: calc(100% + 160px);
     margin-left: -80px;
     padding: ($spacer * 2.5) ($spacer * 2);
@@ -308,7 +307,7 @@
 
 
 @include mq(1300px) {
-  [id=main-footer] {
+  #main-footer {
     width: calc(100% + 120px);
     margin-left: -60px;
   }
