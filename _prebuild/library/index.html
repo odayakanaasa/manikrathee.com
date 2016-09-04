@@ -16,10 +16,10 @@ sitemap:
     <h3 class="medium-heading">Magazines for Inspiration</h3>
 
     <ul class="row-tout-list magazines-list">
-      {% for post in site.data.library.magazines %}
+      {% for mag in site.data.library.magazines %}
         <li>
-          <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
-            {{ post.heading | widont }}
+          <a href="{{ mag.url }}" title="Visit {{ mag.heading }}" itemprop="url">
+            {{ mag.heading | widont }}
           </a>
         </li>
       {% endfor %}
@@ -31,10 +31,10 @@ sitemap:
 
     <ul class="row-tout-list publications">
 
-      {% for post in site.data.library.publications %}
+      {% for pub in site.data.library.publications %}
         <li>
-          <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
-            {{ post.heading | widont }}
+          <a href="{{ pub.url }}" title="Visit {{ pub.heading }}" itemprop="url">
+            {{ pub.heading | widont }}
           </a>
         </li>
       {% endfor %}
@@ -47,22 +47,22 @@ sitemap:
 
   <h3 class="medium-heading">Books &amp; Excerpts</h3>
 
-  {% for post in site.data.library.books %}
-    <div class="book book--{{ post.slug }}">
+  {% for book in site.data.library.books %}
+    <div class="book book--{{ book.slug }}">
 `
       <header class="book--header">
-        <div class="book--cover" data-src="/img/library/books/{{ post.slug }}.jpg">
-          <span>{{ post.title }} - Book Cover</span>
+        <div class="book--cover" data-src="/img/library/books/{{ book.slug }}.jpg">
+          <span>{{ book.title }} - Book Cover</span>
         </div>
-        <h4 class="large-heading book--title">{{ post.title | widont }}</h3>
-        {% if post.author %}
-        <p class="book--author">{{ post.author | widont }}</p>
+        <h4 class="large-heading book--title">{{ book.title | widont }}</h3>
+        {% if book.author %}
+        <p class="book--author">{{ book.author | widont }}</p>
         {% endif %}
-        <p class="book--link">{{ post.buy | widont }}</p>
+        <p class="book--link">{{ book.buy | widont }}</p>
       </header>
 
       <ol class="blockquote-list">
-      {% for quote in post.quotes %}
+      {% for quote in book.quotes %}
         <li class="blockquote-list--item">
           <p>{{ quote | widont }}</p>
         </li>
@@ -79,10 +79,10 @@ sitemap:
     <h3 class="medium-heading">More books</h3>
 
     <ul class="row-tout-list magazines-list">
-      {% for post in site.data.library.magazines %}
+      {% for book in site.data.library.more_books %}
         <li>
-          <a href="{{ post.url }}" title="Visit {{ post.heading }}" itemprop="url">
-            {{ post.heading | widont }}
+          <a href="{{ book.url }}" title="Visit {{ book.heading }}" itemprop="url">
+            {{ book.heading | widont }}
           </a>
         </li>
       {% endfor %}
@@ -96,7 +96,7 @@ sitemap:
 
       <p>
         For articles and quick-read recommendations,
-        <a href="https://getpocket.com/@Mrathee" title="Follow @mrathee on Pocket" itemprop="url">follow me&nbsp;on&nbsp;Pocket</a>.
+        <a href="https://getpocket.com/@Mrathee" title="Follow @mrathee on Pocket" target="_blank" rel="nofollow" itemprop="url">follow me&nbsp;on&nbsp;Pocket</a>.
       </p>
     </div>
 
