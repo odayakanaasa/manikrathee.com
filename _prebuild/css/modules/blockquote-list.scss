@@ -10,6 +10,6 @@
 
   &--item { // li
     padding-left: ($spacer / 2);
-    border-left: 1rem solid #fff; // invisible border by default since this is on a white bg colors are set via @each loop in library.scss
+    border-left: 0.5rem solid $light-grey; // invisible border by default since this is on a white bg colors are set via @each loop in library.scss
   }
 }

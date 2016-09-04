@@ -11977,7 +11977,7 @@ a.pswp__share--download:hover {
     margin-bottom: 4rem; }
   .blockquote-list--item {
     padding-left: 2rem;
-    border-left: 1rem solid #fff; }
+    border-left: 0.5rem solid #EFF0F0; }
 
 /* Mixins */
 /*
@@ -27053,13 +27053,19 @@ a.pswp__share--download:hover {
   background-image: url("../img/library/books/design-of-everyday-things.jpg"); }
 
 .book--design-of-everyday-things .blockquote-list .blockquote-list--item {
-  border-color: design-of-everyday-things; }
+  border-color: #bcce0c; }
 
 .book--the-manual-issue-4 .book--cover {
   background-image: url("../img/library/books/the-manual-issue-4.jpg"); }
 
 .book--the-manual-issue-4 .blockquote-list .blockquote-list--item {
-  border-color: the-manual-issue-4; }
+  border-color: #02B7C1; }
+
+.book--on-web-typography .book--cover {
+  background-image: url("../img/library/books/on-web-typography.jpg"); }
+
+.book--on-web-typography .blockquote-list .blockquote-list--item {
+  border-color: #E86160; }
 
 /* Mixins */
 /*

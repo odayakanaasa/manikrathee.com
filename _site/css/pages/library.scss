@@ -99,27 +99,32 @@
   @include font-size(14);
 }
 
+
+
+
+
+
+
 // Book Covers
-// .book--design-of-everyday-things {
-//   .book-cover {
-//     background-image: url('../img/library/books/design-of-everyday-things.jpg');
-//   }
-// }
-
-
 $books:
-  design-of-everyday-things
-  the-manual-issue-4
+    design-of-everyday-things "#bcce0c"
+  , the-manual-issue-4 "#02B7C1"
+  , on-web-typography "#E86160"
   ;
 
-@each $title in $books {
-  .book--#{$title} {
+@each $book in $books {
+
+  $book-title: nth($book, 1);
+  $book-color: nth($book, 2);
+
+  .book--#{$book-title} {
     .book--cover {
-      background-image: url('../img/library/books/#{$title}.jpg');
+      background-image: url('../img/library/books/#{$book-title}.jpg');
     }
 
     .blockquote-list .blockquote-list--item {
-      border-color: #{$title};   // fix colors, this outputs the var name not the name-var-color
+      border-color: #{$book-title};   // fix colors, this outputs the var name not the name-var-color
     }
   }
 }
+

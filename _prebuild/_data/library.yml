@@ -36,7 +36,7 @@ publications:
 books:
   - title: "The Design of Everyday Things"
     author: "Don Norman"
-    buy: "Get it on amazon or ituneshttps://itun.es/us/TwCxO.l"
+    buy: "Get it on <a href='https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654/ref=sr_1_1?ie=UTF8&qid=1473004717&sr=8-1&keywords=don+norman+the+design+of+everyday+things' title='The Design of Everyday Things, by Don Norman on Amazon' itemprop='url'>amazon</a> or <a href='https://itun.es/us/TwCxO.l' title='The Design of Everyday Things, by Don Norman on iTunes' itemprop='url'>iTunes</a>"
     slug: design-of-everyday-things
     quotes:
       - "For designers, the most critical aspect of the behavioral level is that every action is associated with an expectation. Expect a positive outcome and the result is a positive affective response (a &ldquo;positive valence,&rdquo; in the scientific literature). Expect a negative outcome and the result is a negative affective response (a negative valence): dread and hope, anxiety and anticipation. The information in the feedback loop of evaluation confirms or disconfirms the expectations, resulting in satisfaction or relief, disappointment or frustration."
