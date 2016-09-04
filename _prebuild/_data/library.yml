@@ -57,7 +57,7 @@ books:
   - title: "Creativity, Inc"
     author: "Ed Catmull"
     buy: "Read more at <a href='https://www.amazon.com/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0812993012' title='Creativity, Inc on Amazon.com' itemprop='url'>amazon.com</a>."
-    slug: creativity-inc-overcoming-unseen-inspiration
+    slug: creativity-inc
     quotes:
       - "As Trent Walton says in his essay &ldquo;Device Agnostic&rdquo;: Like cars designed to perform in extreme heat or on icy roads, websites should be built to face the reality of the web’s inherent variability"
       - "Not every mobile browser supports the CSS we rely on, like floats, positioning, or animation. If your styles for a small-screen experience are significantly complex, you might consider broadly qualifying their application to newer, media-query-supporting browsers. Wrapping the mobile-first styles in a media query such as only all is one reliable way to do this."
