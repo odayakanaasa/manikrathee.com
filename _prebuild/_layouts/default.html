@@ -28,10 +28,10 @@
       <section id="inner-container" class="{{page.section}}">
 
         {% if page.page-type == 'blog' %}
-          {% if page.page.img %}
-            <picture class="main-photo">
-             <source srcset="{{ page.img }}" media="(min-width: 600px)">
-             <img src="{{ page.img }}" alt="{{ page.title }}">
+          {% if page.img %}
+            <picture class="page-photo">
+             <source srcset="/img/blog/{{ page.img }}/feature.jpg" media="(min-width: 600px)">
+             <img src="/img/blog/{{ page.img }}/feature.jpg" alt="{{ page.title }}">
             </picture>
           {% endif%}
         {% endif%}

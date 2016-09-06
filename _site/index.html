@@ -63,6 +63,8 @@
   
 </head>
 
+
+
 <!--
     __  ___            _ __      ____        __  __
    /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
@@ -73,6 +75,13 @@
 The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
 https://github.com/manikrathee/manikrathee.com
 -->
+
+
+<script type="text/javascript">
+  var postURL = ["/photos/photo/photo-test-page.html","/photos/photo/wanderlust-big-sur.html","/photos/photo/vsco.html","/photos/pride.html"];
+  var postTitle = ["Photo Test Page For New Features","Wanderlust: Big Sur","VSCO: The world through a viewfinder","Pride"];
+  var postImage = ["img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg"];
+</script>
 
 
 	<body
@@ -94,15 +103,21 @@ https://github.com/manikrathee/manikrathee.com
 
     <div class="global-header">
 
-      <h2 class="animated-logo">
-        <a class="header-logo mountain-monday" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
+      <a class="header-logo"
+         href="/"
+         title="manikrathee.com"
+         alt="MountainMonday 🍻"
+         itemprop="url"
+      >
+        <h2 class="animated-logo mountain-monday">
           MountainMonday 🍻
-        </a>
-      </h2>
-      <hgroup id="site-title">
-        <h1 id="name">Manik Rathee</h1>
-        <p id="greeting">Designer, Photographer</p>
-      </hgroup>
+        </h2>
+
+        <hgroup id="site-title">
+          <h1 id="name">Manik Rathee</h1>
+          <p id="greeting">Designer, Photographer</p>
+        </hgroup>
+      </a>
 
       <nav class="main-nav" role="navigation">
   <ul class="main-nav-list">
@@ -197,12 +212,11 @@ https://github.com/manikrathee/manikrathee.com
       
       <li>
         <p class="condensed">
-          <a href="/blog/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
+          <a href="/photos/photo/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
             Photo Test Page For New Features
-          </a>
+          </a><!--
 
-          <span class="for-lovely-sunday">
-            , for
+          --><span class="for-lovely-sunday">, for
             <a href="http://www.google.com" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
               LovelySunday
             </a>
@@ -212,12 +226,11 @@ https://github.com/manikrathee/manikrathee.com
       
       <li>
         <p class="condensed">
-          <a href="/blog/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
+          <a href="/photos/photo/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
             Wanderlust: Big Sur
-          </a>
+          </a><!--
 
-          <span class="for-lovely-sunday">
-            , for
+          --><span class="for-lovely-sunday">, for
             <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
               LovelySunday
             </a>
@@ -227,12 +240,11 @@ https://github.com/manikrathee/manikrathee.com
       
       <li>
         <p class="condensed">
-          <a href="/blog/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
+          <a href="/photos/photo/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
             VSCO: The world through a viewfinder
-          </a>
+          </a><!--
 
-          <span class="for-lovely-sunday">
-            , for
+          --><span class="for-lovely-sunday">, for
             <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
               LovelySunday
             </a>
@@ -462,8 +474,15 @@ https://github.com/manikrathee/manikrathee.com
 
     
 
-    
-  <footer id="main-footer" role="contentinfo">
+      <footer id="main-footer" role="contentinfo">
+
+    <ul class="footer-bg-photo-posts">
+      <li id="something"></li>
+      <li id="something-2"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
     <span class="mountain-monday mountain-monday--inverse"></span>
 
@@ -542,7 +561,7 @@ https://github.com/manikrathee/manikrathee.com
 
   
 
-  
+
 
   </body>
 

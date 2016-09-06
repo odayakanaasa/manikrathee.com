@@ -52,6 +52,7 @@
 }
 
 .post-list--title {
+  margin-top: 0; // remove typography spacing that's for regular copy blocks
   margin-bottom: 0.6rem;
   font-weight: bold;
   transition: font-weight 0.35s ease-in-out;

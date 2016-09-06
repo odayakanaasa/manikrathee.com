@@ -34,7 +34,17 @@ h4,
 h5,
 h6 {
   font-family: $serif;
-  // margin-bottom: 2.2rem;
+}
+
+p { // for long copy, heading should have better hierarchy
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6 {
+    margin-top: $spacer * 1.5;
+  }
 }
 
 
@@ -96,3 +106,48 @@ i {
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
+
+pre {
+  background: $dark-grey;
+  color: $off-white;
+  border-radius: $border-radius;
+  @include transition( background $transition, color $transition);
+
+  .view-mode--dark & {
+    background: $off-white;
+    color: $dark-grey;
+  }
+}
+
+
+blockqoute {
+
+}
+
+
+
+
+    pre {
+      display: inline-block;
+      margin-bottom: $spacer;
+      line-height: 3rem;
+      white-space: pre;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -o-pre-wrap;
+
+      &.inline {
+        display: inline;
+        padding: 0 1rem;
+      }
+    }
+
+    code {
+      display: block;
+      line-height: 1.5rem;
+      white-space: pre;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -o-pre-wrap;
+    }

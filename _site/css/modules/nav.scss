@@ -52,8 +52,8 @@
 
   a {
     @include touch-hover() {
-      color: $off-white;
-      border-color: $off-white;
+      color: $medium-grey;
+      border-color: $medium-grey;
     }
   }
 }

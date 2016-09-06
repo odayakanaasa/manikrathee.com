@@ -297,11 +297,11 @@ $(document).ready(function() {
   var body = $('body');
 
   // Reading Time
-  $(".time").text(function (index, value) {
-    return Math.round(parseFloat(value));
-  });
+  // $(".time").text(function (index, value) {
+  //   return Math.round(parseFloat(value));
+  // });
 
-  if ( body.data('lazyload') ) {
+  if ( body.find('#loader') ) {
     $('#loader li img').lazyload({
       effect : "fadeIn",
       threshold : 50

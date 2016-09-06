@@ -2,8 +2,8 @@
 layout: default
 page-type: blog
 page-subtype: blog-post
-category: ['blog', 'writing', 'engineering']
-tags: ['engineering', 'productivity', 'git', 'settings']
+category: ['blog']
+tags: ['engineering', 'productivity', 'git', 'settings', 'writing']
 
 date: August 3, 2016
 slug: how-to-delete-a-tag-in-git
@@ -32,15 +32,14 @@ for seo
 
 <p>If you use tags in your projects, you probably have encountered some issue (typos, perhaps) that forced you to remove the tag. Here are a few steps that will help you navigate the problems associated with local/remote tags and managing instances of each, along with a few steps help get you familiar with tags in general.</p>
 
-<p>For our code examples, lets use <pre>released/aug2016</pre> the tag name.</p>
+<p>For our code examples, let's use <pre class="inline">released/aug2016</pre> the tag name.</p>
 
-<h3>To create your tag:</h3>
+<h3 class="medium-heading">To create your&nbsp;tag:</h3>
 <pre><code class="json">
   git tag released/aug2016
-
 </code></pre>
 
-<h4>To push local tags to remote:</h4>
+<h3 class="medium-heading">To push local tags&nbsp;to&nbsp;remote:</h3>
 <pre><code class="git">
   git push --tags
 
@@ -54,13 +53,13 @@ for seo
   </code></pre>
 </blockqoute>
 
-<h4>To delete a local tag:</h4>
+<h3 class="medium-heading">To delete a local&nbsp;tag:</h3>
 <pre><code class="git">
   git tag -d released/aug2016
 
 </code></pre>
 
-<h4>To delete a remote tag:</h4>
+<h3 class="medium-heading">To delete a remote&nbsp;tag:</h3>
 <p><em>Delete the tag locally, like above</em></p>
 
 <pre><code class="git">

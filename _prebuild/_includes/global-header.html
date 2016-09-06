@@ -101,6 +101,8 @@
   {% endif %}
 </head>
 
+
+
 <!--
     __  ___            _ __      ____        __  __
    /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
@@ -111,3 +113,10 @@
 The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
 https://github.com/manikrathee/manikrathee.com
 -->
+
+
+<script type="text/javascript">
+  var postURL = [{% for post in site.categories.photos %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var postTitle = [{% for post in site.categories.photos %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var postImage = [{% for post in site.categories.photos %}"{{ post.img }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+</script>

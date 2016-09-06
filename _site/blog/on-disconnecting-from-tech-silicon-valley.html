@@ -69,6 +69,8 @@
   
 </head>
 
+
+
 <!--
     __  ___            _ __      ____        __  __
    /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
@@ -79,6 +81,13 @@
 The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
 https://github.com/manikrathee/manikrathee.com
 -->
+
+
+<script type="text/javascript">
+  var postURL = ["/photos/photo/photo-test-page.html","/photos/photo/wanderlust-big-sur.html","/photos/photo/vsco.html","/photos/pride.html"];
+  var postTitle = ["Photo Test Page For New Features","Wanderlust: Big Sur","VSCO: The world through a viewfinder","Pride"];
+  var postImage = ["img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg"];
+</script>
 
 
 	<body
@@ -100,15 +109,21 @@ https://github.com/manikrathee/manikrathee.com
 
     <div class="global-header">
 
-      <h2 class="animated-logo">
-        <a class="header-logo mountain-monday" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
+      <a class="header-logo"
+         href="/"
+         title="manikrathee.com"
+         alt="MountainMonday 🍻"
+         itemprop="url"
+      >
+        <h2 class="animated-logo mountain-monday">
           MountainMonday 🍻
-        </a>
-      </h2>
-      <hgroup id="site-title">
-        <h1 id="name">Manik Rathee</h1>
-        <p id="greeting">Designer, Photographer</p>
-      </hgroup>
+        </h2>
+
+        <hgroup id="site-title">
+          <h1 id="name">Manik Rathee</h1>
+          <p id="greeting">Designer, Photographer</p>
+        </hgroup>
+      </a>
 
       <nav class="main-nav" role="navigation">
   <ul class="main-nav-list">
@@ -170,37 +185,42 @@ https://github.com/manikrathee/manikrathee.com
 
         
           
+            <picture class="page-photo">
+             <source srcset="/img/blog/20130408/feature.jpg" media="(min-width: 600px)">
+             <img src="/img/blog/20130408/feature.jpg" alt="On Disconnecting: Escaping the tech that surrounds us">
+            </picture>
+          
         
 
 
         <style>
   #post-title {
-    @include font-size(40);
+    font-size: 4.0rem;
   }
   @media (min-width: 768px) {
     #post-title {
-      @include font-size(70);
+      font-size: 7.0rem;
     }
   }
 </style>
 
-"The pedal inched closer to the floor as my eyes glazed over. I turned the knob up to 45, music drowning out the wind from the open windows. Hard curves, cliffs and walls of stone – the amazing landscape of the coast produced nothing but inspiration and awe. Route 1 gave me a much needed day of escape. But it re-enforced something that I was just beginning to discover: the technology in my life, from my iPhone to my painstakingly pieced-together media center, was far from a necessity."
+<p>The pedal inched closer to the floor as my eyes glazed over. I turned the knob up to 45, music drowning out the wind from the open windows. Hard curves, cliffs and walls of stone – the amazing landscape of the coast produced nothing but inspiration and awe. Route 1 gave me a much needed day of escape. But it re-enforced something that I was just beginning to discover: the technology in my life, from my iPhone to my painstakingly pieced-together media center, was far from a necessity.</p>
 
 <p>A few weeks ago, Sam Soffes wrote <a href="http://samsoff.es/hello-world" title="Hello World, by Sam Soffes" itemprop="url">a blog post</a> about his decision to shut off his phone's push notifications. The photo in his post was a shot from the Vatican during conclave, comparing the simple crowd in 2005 to the plugged-in-and-recording-everything crowd of 2013.</p>
 
-<p>This short post was a wake up call for me.</p>
+<p>This short post was a wake up call&nbsp;for&nbsp;me.</p>
 
 <p>Over the years, I have heard quite a few people tell me that dismissing technology was freeing. Somehow, getting away from something that essentially created my profession was supposed to be freeing. I couldn't wrap my head around the idea. How could leaving a phone at home be freeing? What if I needed to check some recent files? And shut off notifications? What if I got an e-mail for some great job op?</p>
 
 <p>Turns out, they were all right. None of those things mattered in reality&mdash;I just had to be at the right place in my life to realize it.</p>
 
-<h4>Learning Enough To Be Aware</h4>
+<h2 class="large-heading">Learning Enough To&nbsp;Be&nbsp;Aware</h2>
 
 <p>I spent last year in Chicago working for President Barack Obama. It was an absolutely amazing experience that helped me grow in more ways than I though was even possible. It was also the most difficult year of my life.</p>
 
 <p>My, at the time, soon-to-be fianc&eacute;e (Aileen) couldn't risk leaving her job in New Jersey for the temporary relocation so I moved out to Chicago alone. We both worked 12+ hours a day, with mine easily breaking 16 hours a few times a week. Our promised facetime and voice calls started to become less and less possible leaving us with text-messages as our only communication. The year went by successfully, life continued, and after winning the election, I was back home with the people that I loved. But, my habits hadn't changed: I would still sit on the couch with Aileen and our dog Roma, but I would have my iPhone in my hand with twitter, svpply or some other app open, scrolling away. I solved the issue of being a thousand miles away from my family, but I hadn't solved, or even acknowledged, the problem of not really living my life.</p>
 
-<h4>Fast forward a few months:</h4>
+<h2 class="large-heading">Fast forward a&nbsp;few&nbsp;months:</h2>
 
 <p>We moved to a new city, San Francisco, and I am now working for Fluence, while still designing a bit on some side projects in my spare time. I shut my computer at two or three o'clock in the morning, relax into the couch and pull out my iPhone again. Nothing changed.</p>
 
@@ -208,7 +228,7 @@ https://github.com/manikrathee/manikrathee.com
 
 <p><em>Shit.</em></p>
 
-<p>I would definitely be holding my iPhone up trying to hold it steady while recording history. When I get home, I would unload the videos and photos to my computer and subsequently get it onto Flickr. Maybe I would look at it again in a year, maybe in two, maybe never. </p>
+<p>I would definitely be holding my iPhone up trying to hold it steady while recording history. When I get home, I would unload the videos and photos to my computer and subsequently get it backed up. Maybe I would look at it again in a year, maybe in two, maybe never. </p>
 
 <p>I would have wasted a once-in-a-lifetime experience on expanding my online video repository by a few minutes. What the hell is the matter with me? </p>
 
@@ -218,7 +238,7 @@ https://github.com/manikrathee/manikrathee.com
 
 <p>I would be insane to continue wasting away precious moments by scanning twitter on the couch instead of going for a walk on a seventy degree day with my family. I would be an idiot to get up from my computer after a long day, only to pick up my iPad instead of rolling around the floor with our tiny, adorable puppy, tugging on her toy while she playfully growled and tried to win our battle.</p>
 
-<h4>Notice a problem and make a change.</h4>
+<h2 class="large-heading">Notice a problem and&nbsp;make&nbsp;a&nbsp;change.</h2>
 
 <p>I shut off all of the notifications on my phone except for calls and text-message alerts for VIPs. I get about one phone-call a week, normally from my parents in New Jersey, and my text-message VIPs are all my family members on the east coast - all the people that matter. </p>
 
@@ -226,9 +246,9 @@ https://github.com/manikrathee/manikrathee.com
 
 <p>But, despite how crazy it sounded to people that knew me, it was true. Facebook no longer pops up alerts for likes and comments, or emails me when someone tagged me in a post. Twitter doesn't disrupt my day with mentions and follow alerts. Instagram doesn't slide down a notification on my phone every time someone likes a photo.</p>
 
-<p><em>You get the idea.</em></p>
+<p><em>You get the&nbsp;idea.</em></p>
 
-<p>I was free.</p>
+<p>I&nbsp;was&nbsp;free.</p>
 
 <p>My phone is rarely in my hand anymore unless I'm turning on the lights in my apartment or pulling up the map while we explore new parts of the city. No notifications, no e-mails, no constant data feeds. And, most importantly, my weekends are now computer-free. I shut my computer on Friday night and, provided there are no extreme emergencies at work, it stays closed until Monday morning.</p>
 
@@ -236,28 +256,28 @@ https://github.com/manikrathee/manikrathee.com
 
 <p>Now, we have 'disconnecting' weekends; weekends where we get away from our apartment and sometimes even the city and explore something brand new and outside our comfort zone. </p>
 
-<h4>Awake.</h4>
+<h2 class="large-heading">Awake.</h2>
 
 <p>I am lucky as hell. I'm 24 years old, engaged to the love of my life, living in a city that I have dreamed about since I was eight, all while working in a field that I am incredibly passionate about. I have worked at an agency, started a freelance business and a wedding photography company and, after working at OFA for a year with some of the most talented people on the planet, I got a <a href="http://www.manikrathee.com/potus-handshake.jpg" title="Manik and POTUS, Handshake" itemprop="url">handshake</a> and a <a href="http://www.manikrathee.com/potus-hug.jpg" title="Manik and POTUS, hug" itemprop="url">hug</a> from the President of the United States. </p>
 
 <p>And, while I am eternally grateful for each and every one of those successes as well as the struggles that came before them, I now know how important it is to limit their reach and their control over my life.</p>
 
-<h4>Moral of the story?</h4>
+<h2 class="large-heading">Moral of the&nbsp;story?</h2>
 
 <p>Try to learn something through challenges you face. If you pay attention, it might make you aware of how incredible your life <em>could be</em>.</p>
 
-<ul id="loader">
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-01.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-05.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-06.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-07.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-08.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-11.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-12.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-22.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-18.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-21.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
-    <li><img data-original="/img/blog/20130408/gallery/big-sur-20.jpg" src="/img/blog/global/holder.gif" alt="Big Sur, Manik Rathee"></li>
+<ul id="loader" class="post-list">
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-01.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-05.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-06.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-07.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-08.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-11.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-12.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-22.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-18.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-21.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
+    <li><img data-original="/img/blog/20130408/gallery/big-sur-20.jpg" src="/img/spinner.gif" alt="Big Sur, Manik Rathee"></li>
 </ul>
 
 
@@ -357,8 +377,15 @@ https://github.com/manikrathee/manikrathee.com
 
     
 
-    
-  <footer id="main-footer" role="contentinfo">
+      <footer id="main-footer" role="contentinfo">
+
+    <ul class="footer-bg-photo-posts">
+      <li id="something"></li>
+      <li id="something-2"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
     <span class="mountain-monday mountain-monday--inverse"></span>
 
@@ -439,9 +466,7 @@ https://github.com/manikrathee/manikrathee.com
 
   
 
-  
-    
-  
+
 
   </body>
 

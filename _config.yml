@@ -12,7 +12,7 @@ port           : 4000
 source         : _prebuild/
 # permalink    : /blog/posts/:year/:month/:day/:title.html
 # permalink    : /blog/:title.html
-permalink      : /blog/:slug.html
+permalink      : /:categories/:slug.html
 verbose        : false
 incremental    : false
 quiet          : false

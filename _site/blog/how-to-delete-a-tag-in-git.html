@@ -69,6 +69,8 @@
   
 </head>
 
+
+
 <!--
     __  ___            _ __      ____        __  __
    /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
@@ -79,6 +81,13 @@
 The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
 https://github.com/manikrathee/manikrathee.com
 -->
+
+
+<script type="text/javascript">
+  var postURL = ["/photos/photo/photo-test-page.html","/photos/photo/wanderlust-big-sur.html","/photos/photo/vsco.html","/photos/pride.html"];
+  var postTitle = ["Photo Test Page For New Features","Wanderlust: Big Sur","VSCO: The world through a viewfinder","Pride"];
+  var postImage = ["img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg"];
+</script>
 
 
 	<body
@@ -100,15 +109,21 @@ https://github.com/manikrathee/manikrathee.com
 
     <div class="global-header">
 
-      <h2 class="animated-logo">
-        <a class="header-logo mountain-monday" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
+      <a class="header-logo"
+         href="/"
+         title="manikrathee.com"
+         alt="MountainMonday 🍻"
+         itemprop="url"
+      >
+        <h2 class="animated-logo mountain-monday">
           MountainMonday 🍻
-        </a>
-      </h2>
-      <hgroup id="site-title">
-        <h1 id="name">Manik Rathee</h1>
-        <p id="greeting">Designer, Photographer</p>
-      </hgroup>
+        </h2>
+
+        <hgroup id="site-title">
+          <h1 id="name">Manik Rathee</h1>
+          <p id="greeting">Designer, Photographer</p>
+        </hgroup>
+      </a>
 
       <nav class="main-nav" role="navigation">
   <ul class="main-nav-list">
@@ -186,15 +201,14 @@ for seo
 
 <p>If you use tags in your projects, you probably have encountered some issue (typos, perhaps) that forced you to remove the tag. Here are a few steps that will help you navigate the problems associated with local/remote tags and managing instances of each, along with a few steps help get you familiar with tags in general.</p>
 
-<p>For our code examples, lets use <pre>released/aug2016</pre> the tag name.</p>
+<p>For our code examples, let's use <pre class="inline">released/aug2016</pre> the tag name.</p>
 
-<h3>To create your tag:</h3>
+<h3 class="medium-heading">To create your&nbsp;tag:</h3>
 <pre><code class="json">
   git tag released/aug2016
-
 </code></pre>
 
-<h4>To push local tags to remote:</h4>
+<h3 class="medium-heading">To push local tags&nbsp;to&nbsp;remote:</h3>
 <pre><code class="git">
   git push --tags
 
@@ -208,13 +222,13 @@ for seo
   </code></pre>
 </blockqoute>
 
-<h4>To delete a local tag:</h4>
+<h3 class="medium-heading">To delete a local&nbsp;tag:</h3>
 <pre><code class="git">
   git tag -d released/aug2016
 
 </code></pre>
 
-<h4>To delete a remote tag:</h4>
+<h3 class="medium-heading">To delete a remote&nbsp;tag:</h3>
 <p><em>Delete the tag locally, like above</em></p>
 
 <pre><code class="git">
@@ -237,7 +251,7 @@ for seo
           
 
 <p class="pre-heading">Next Post</p>
-<a href="/blog/photo-test-page.html" title="next Post: Photo Test Page For New Features" itemprop="url">
+<a href="/photos/photo/photo-test-page.html" title="next Post: Photo Test Page For New Features" itemprop="url">
   <h3>Photo Test Page For New Features</h3>
   <p></p>
   <p class="date">August 13 2016</p>
@@ -322,8 +336,15 @@ for seo
 
     
 
-    
-  <footer id="main-footer" role="contentinfo">
+      <footer id="main-footer" role="contentinfo">
+
+    <ul class="footer-bg-photo-posts">
+      <li id="something"></li>
+      <li id="something-2"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
     <span class="mountain-monday mountain-monday--inverse"></span>
 
@@ -404,19 +425,7 @@ for seo
 
   
 
-  
-    
-      <script type="text/javascript">
-    var disqus_shortname = 'blogmanikratheecom';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
 
-    
-  
 
   </body>
 

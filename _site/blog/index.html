@@ -69,6 +69,8 @@
   
 </head>
 
+
+
 <!--
     __  ___            _ __      ____        __  __
    /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
@@ -79,6 +81,13 @@
 The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
 https://github.com/manikrathee/manikrathee.com
 -->
+
+
+<script type="text/javascript">
+  var postURL = ["/photos/photo/photo-test-page.html","/photos/photo/wanderlust-big-sur.html","/photos/photo/vsco.html","/photos/pride.html"];
+  var postTitle = ["Photo Test Page For New Features","Wanderlust: Big Sur","VSCO: The world through a viewfinder","Pride"];
+  var postImage = ["img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg"];
+</script>
 
 
 	<body
@@ -102,15 +111,21 @@ https://github.com/manikrathee/manikrathee.com
 
     <div class="global-header">
 
-      <h2 class="animated-logo">
-        <a class="header-logo mountain-monday" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
+      <a class="header-logo"
+         href="/"
+         title="manikrathee.com"
+         alt="MountainMonday 🍻"
+         itemprop="url"
+      >
+        <h2 class="animated-logo mountain-monday">
           MountainMonday 🍻
-        </a>
-      </h2>
-      <hgroup id="site-title">
-        <h1 id="name">Manik Rathee</h1>
-        <p id="greeting">Designer, Photographer</p>
-      </hgroup>
+        </h2>
+
+        <hgroup id="site-title">
+          <h1 id="name">Manik Rathee</h1>
+          <p id="greeting">Designer, Photographer</p>
+        </hgroup>
+      </a>
 
       <nav class="main-nav" role="navigation">
   <ul class="main-nav-list">
@@ -176,258 +191,6 @@ https://github.com/manikrathee/manikrathee.com
 
 
         <ol id="blog-posts" class="post-list">
-  
-  <li class="post-list--item">
-    <a id="how-to-delete-a-tag-in-git" class="post-list--link no-border" href="/blog/how-to-delete-a-tag-in-git.html" title="How to delete a&nbsp;Git&nbsp;tag" itemprop="url">
-      <p class="post-list--date">August 03, 2016</p>
-      <h2 class="post-list--title">
-        How to delete a&nbsp;Git&nbsp;tag
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          If you use tags in your projects, you probably have encountered some issue (typos, perhaps) that forced you to remove the tag. Here are a few steps that will help you navigate the problems associated with local/remote tags and managing...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="text-expander-tips" class="post-list--link no-border" href="/blog/text-expander-tips.html" title="How I Use: TextExpander" itemprop="url">
-      <p class="post-list--date">March 12, 2015</p>
-      <h2 class="post-list--title">
-        How I Use: TextExpander
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          This is the first post in the 'How I Use' series. When I buy a new machine, the very first things I install are: Alfred, Dropbox(&percnt;r) and TextExpander. All of these apps are crucial to my day-to-day work, but only...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="uber-vs-cabs" class="post-list--link no-border" href="/blog/uber-vs-cabs.html" title="Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups" itemprop="url">
-      <p class="post-list--date">July 31, 2013</p>
-      <h2 class="post-list--title">
-        Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          The San Francisco Taxi Labor Union is on strike. They are unhappy with Uber, RideShare and Lyft taking away their business. But it begs the question - if customers are leaving, are these new innovators to blame? From my perspective,...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="sublime-text-preferences" class="post-list--link no-border" href="/blog/sublime-text-preferences.html" title="Sublime Text: Customizing Your Workflow" itemprop="url">
-      <p class="post-list--date">July 27, 2013</p>
-      <h2 class="post-list--title">
-        Sublime Text: Customizing Your Workflow
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          I have used a long list of code editors over the years, ranging from notepad on windows to Espresso on mac, to textmate and Sublime Text. Ultimately, SublimeText 2 came out in front because it is so simple to use...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="building-president-obama" class="post-list--link no-border" href="/blog/building-president-obama.html" title="Building Obama" itemprop="url">
-      <p class="post-list--date">May 29, 2013</p>
-      <h2 class="post-list--title">
-        Building Obama
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          Keynote Address at Thinking Creatively Conference In April of this year, I had the pleasure of giving the opening keynote at the Thinking Creatively Conference 10th Anniversary. Naturally, I was asked to speak about my experience on the Obama campaign...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="on-disconnecting-from-tech-silicon-valley" class="post-list--link no-border" href="/blog/on-disconnecting-from-tech-silicon-valley.html" title="On Disconnecting: Escaping the tech that surrounds us" itemprop="url">
-      <p class="post-list--date">April 08, 2013</p>
-      <h2 class="post-list--title">
-        On Disconnecting: Escaping the tech that surrounds us
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          "The pedal inched closer to the floor as my eyes glazed over. I turned the knob up to 45, music drowning out the wind from the open windows. Hard curves, cliffs and walls of stone – the amazing landscape of...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="quality-in-startup-minimum-viable-products" class="post-list--link no-border" href="/blog/quality-in-startup-minimum-viable-products.html" title="Quality &amp; Minimum Viable Products" itemprop="url">
-      <p class="post-list--date">February 26, 2013</p>
-      <h2 class="post-list--title">
-        Quality &amp; Minimum Viable Products
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          ": The Place For Design And UX In Startup Products" This was originally posted on Medium Creators. Makers. Designers. Engineers. Regardless of title, we all have a sense of pride in creating something of quality. We slave over our respective...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="president-barack-obama-the-tech-president" class="post-list--link no-border" href="/blog/president-barack-obama-the-tech-president.html" title="The Tech President: Obama's Digital Powerhouse" itemprop="url">
-      <p class="post-list--date">November 16, 2012</p>
-      <h2 class="post-list--title">
-        The Tech President: Obama's Digital Powerhouse
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          Edit: More articles &amp; a readlist set has been added at the bottom of this post. "President Barack Obama's re-election campaign was the most digitally advanced campaign in the history of modern politics. Some of the best developers, engineers and...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="brad-frost-future-friendly-web" class="post-list--link no-border" href="/blog/brad-frost-future-friendly-web.html" title="The Future Friendly Web, Brad Frost" itemprop="url">
-      <p class="post-list--date">September 28, 2012</p>
-      <h2 class="post-list--title">
-        The Future Friendly Web, Brad Frost
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          "Notes from Brad Frost's Talk at Web Visions 2012" "We want to make things that are future friendly. By anticipating what's next, we can react to today's concerns but also build long-term value for people and businesses. The following ideas...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="iphone-5-and-the-web" class="post-list--link no-border" href="/blog/iphone-5-and-the-web.html" title="Changing Devices &amp; The Web" itemprop="url">
-      <p class="post-list--date">September 15, 2012</p>
-      <h2 class="post-list--title">
-        Changing Devices &amp; The Web
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          How does the new iPhone affect web designers and developers? It doesn't. Seriously, it doesn't. The only change in recent devices to affect web designers and developers was the retina screen from Apple and subsequent hi-dpi screens from Samsung et...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="rework-redesign-rebuild-iteration" class="post-list--link no-border" href="/blog/rework-redesign-rebuild-iteration.html" title="Rework </br> Redesign </br>Rebuild" itemprop="url">
-      <p class="post-list--date">August 18, 2012</p>
-      <h2 class="post-list--title">
-        Rework </br> Redesign </br>Rebuild
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          Why iterative design, destruction and rebuilding are critical processes A king brings six men into a dark building. They cannot see anything. The king says to them, "I have bought this animal from the wild lands to the East. It...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="interaction-and-innovation-for-ios" class="post-list--link no-border" href="/blog/interaction-and-innovation-for-ios.html" title="Interaction &amp; Innovation" itemprop="url">
-      <p class="post-list--date">January 31, 2012</p>
-      <h2 class="post-list--title">
-        Interaction &amp; Innovation
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          This is a time of drastic change. With Windows and personal computers over the last decade, the actions of clicking, double clicking and dragging have become second nature. However, a few years back, Apple introduced the iPhone, and even more...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="chicago-windy-city" class="post-list--link no-border" href="/blog/chicago-windy-city.html" title="Windy City" itemprop="url">
-      <p class="post-list--date">January 30, 2012</p>
-      <h2 class="post-list--title">
-        Windy City
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          If you've been keeping up, you know that I recently left my position with RevSystems, Inc in New Jersey to join the incredible digital team at Obama For America in Chicago. After two weeks with the development team, I can...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
-  
-  <li class="post-list--item">
-    <a id="working-for-president-obama" class="post-list--link no-border" href="/blog/working-for-president-obama.html" title="Changes &amp; Obama For America: Working for the Greater Good" itemprop="url">
-      <p class="post-list--date">December 12, 2011</p>
-      <h2 class="post-list--title">
-        Changes &amp; Obama For America: Working for the Greater Good
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          The time has come for a change. For those of you that don't know, I have been the Graphic / UI Design Lead at RevSystems, Inc for just over a year now. I have thoroughly enjoyed my time working with...
-        </span>
-      </p>
-
-      <button class="expand-content read-more mobile-cta">
-        Read more
-      </button>
-    </a>
-  </li>
   
 </ol>
 
@@ -526,8 +289,15 @@ https://github.com/manikrathee/manikrathee.com
 
     
 
-    
-  <footer id="main-footer" role="contentinfo">
+      <footer id="main-footer" role="contentinfo">
+
+    <ul class="footer-bg-photo-posts">
+      <li id="something"></li>
+      <li id="something-2"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
     <span class="mountain-monday mountain-monday--inverse"></span>
 
@@ -608,9 +378,7 @@ https://github.com/manikrathee/manikrathee.com
 
   
 
-  
-    
-  
+
 
   </body>
 

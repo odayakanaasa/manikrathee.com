@@ -26,8 +26,8 @@
 
   a {
     @include touch-hover() {
-      color: $off-white;
-      border-color: $off-white;
+      color: $medium-grey;
+      border-color: $medium-grey;
     }
   }
 
@@ -76,9 +76,18 @@
 
     }
   }
-
 }
 
+.footer-bg-photo-posts {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50%;
+}
 
 #snapchat {
   display: block;
@@ -192,6 +201,8 @@
     }
 
     .footer-data {
+      width: 50%;
+      margin-top: 4rem;
     }
 
 
@@ -282,6 +293,11 @@
     width: calc(100% + 160px);
     margin-left: -80px;
     padding: ($spacer * 2.5) ($spacer * 2);
+
+    .mountain-monday {
+      top: 50px;
+      left: 50%;
+    }
   }
 
   #manikrathee {
@@ -310,5 +326,10 @@
   #main-footer {
     width: calc(100% + 120px);
     margin-left: -60px;
+    padding: ($spacer * 2.5) ($spacer * 3.5);
+  }
+
+  #manikrathee {
+    left: 55px;
   }
 }
