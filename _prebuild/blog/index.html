@@ -8,16 +8,16 @@ page-subtype: blog-index
 ---
 
 <ol id="blog-posts" class="post-list">
-  {% for posts in site.categories.writing %}
+  {% for post in site.categories.writing %}
   <li class="post-list--item">
-    <a id="{{ posts.slug }}" class="post-list--link no-border" href="{{ posts.url }}" title="{{ posts.title }}" itemprop="url">
-      <p class="post-list--date">{{ posts.date | date: "%B %d, %Y" }}</p>
+    <a id="{{ post.slug }}" class="post-list--link no-border" href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+      <p class="post-list--date">{{ post.date | date: "%B %d, %Y" }}</p>
       <h2 class="post-list--title">
-        {{ posts.title | widont }}
+        {{ post.title | widont }}
       </h2>
       <p class="post-list-description">
         <span class="post-list--description">
-          {{ posts.content | strip_html | truncatewords:40 | widont }}
+          {{ post.content | strip_html | truncatewords:40 | widont }}
         </span>
       </p>
 

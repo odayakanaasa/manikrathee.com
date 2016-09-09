@@ -2,38 +2,49 @@
 <html lang="en" class="no-js">
 <head>
 
-  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="//www.google-analytics.com">
-  <link rel="dns-prefetch" href="//ajax.googleapis.com">
-  <link rel="dns-prefetch" href="//cdn.optimizely.com/js/2688330005.js">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
   <meta name="HandheldFriendly" content="true">
   <meta name="p:domain_verify" content="442914185983bc4fa55ed98fd101a62f">
   <meta http-equiv="x-dns-prefetch-control" content="on">
 
   <meta name="author" itemprop="name" content="Manik Rathee">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.manikrathee.com/">
+  <meta name="url" property="og:url" content="http://www.manikrathee.com/">
   <meta name="twitter:creator" content="@manikrathee">
+  <meta name="twitter:site" content="@manikrathee">
   <meta name="description" property="og:description" itemprop="description" content="Manik Rathee is a designer, developer and user-experience engineer based in California">
   <meta itemprop="image" property="og:image" content="/img/root/apple-touch-icon.png">
   <meta name="keyword" content="manik, rathee, manik rathee, designer, google, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
   <meta name="robots" content="index,follow,archive">
   
-  <meta property="og:title" content="Manik Rathee | Designer, Engineer, Photographer">
+    <meta name="twitter:title" property="og:title" content="Manik Rathee | Designer, Engineer, Photographer">
   
+
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="//fonts.googleapis.com">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="M">
+
+  <!-- The URL of the web version of your article -->
+  <link rel="canonical" href="http://www.manikrathee.com">
+
+
 
   <title>
   
-  Manik Rathee—Designer, Photographer. Prototyping and engineering at Nest.
+    Manik Rathee — Designer, Photographer. Prototyping and Engineering at Nest.
   
   </title>
 
-  <script src="//cdn.optimizely.com/js/2688330005.js"></script>
+  
 
   <style type="text/css">
 header,
@@ -63,6 +74,11 @@ body {
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
 ::-moz-selection {
   background: #999;
   color: #fff;
@@ -72,9 +88,6 @@ h1 {
   background: #999;
   color: #fff;
   text-shadow: none; }
-
-a:link {
-  -webkit-tap-highlight-color: #999; }
 
 html {
   background-color: #364E6B;
@@ -90,56 +103,56 @@ body {
   font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
-  color: #444444;
+  color: #505050;
   text-rendering: optimizeLegibility;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;
+  transition: background 0.35s ease-in-out, color 0.35s ease-in-out; }
   body:after {
     position: fixed;
     bottom: 0;
     left: 50%;
     translate: transform3d(-50%, 0, 0);
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODYuMiA0NDAuNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+ICA8cGF0aCBjbGFzcz0ibW91bnRhaW4tMSIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlPSIjZmZmIiBkPSJNMzc0LjEgMjIyLjhsMTIxLjcgMjEwLjctMjQzLjQuMUg5bDEyMS43LTIxMC44TDI1Mi4zIDEyeiIvPiAgPHBhdGggY2xhc3M9Im1vdW50YWluLTIiIGZpbGw9Im5vbmUiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlPSIjZmZmIiBkPSJNNTY2LjMgMjIwLjdsMTIzLjUgMjEzLjctMjQ2LjEtLjQtMjQ2LS40IDEyMi42LTIxMy40TDQ0Mi44IDYuOXoiLz48L3N2Zz4=");
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMzNweCIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMzMgMjIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+TW91bnRhaW5Nb25kYXk8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoIEJldGEuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJNb3VudGFpbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIuMDAwMDAwLCAyLjAwMDAwMCkiIHN0cm9rZT0iIzUwNTA1MCI+ICAgICAgICAgICAgPGcgaWQ9Ik1vdW50YWluTW9uZGF5Ij4gICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBzdHJva2Utd2lkdGg9IjIiIHBvaW50cz0iMTYuMDQxNDcyOCA5LjYzNTE1NDU2IDIxLjMxMTE2OTMgMTguNzU2OTkxNSAxMC43NzE3NzY0IDE4Ljc2MTMyMDggMC4yMzIzODMzODMgMTguNzYxMzIwOCA1LjUwMjA3OTg3IDkuNjM1MTU0NTYgMTAuNzY3NDQ2MyAwLjUwODk4ODM2OSI+PC9wb2x5Z29uPiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIHBvaW50cz0iMjQuMzYzODY5NCA5LjU0NDIzOTI0IDI5LjcxMTUwNzIgMTguNzk1OTU1MiAxOS4wNTUyMDIzIDE4Ljc3ODYzOCA4LjQwMzIyNzQ4IDE4Ljc2MTMyMDggMTMuNzExODk0NiA5LjUyMjU5Mjc0IDE5LjAxNjIzMTcgMC4yODgxOTQwMjUiPjwvcG9seWdvbj4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=");
     background-size: 50px 50px;
     background-position: bottom center;
     background-repeat: no-repeat;
     border: 1px solid yellow; }
   @media (min-width: 500px) {
     body {
-      padding: 4rem; }
+      padding: 4rem 4rem 70px 4rem; }
       body:after {
         opacity: 1; } }
-  @media (min-width: 800px) {
+  @media (min-width: 960px) {
     body {
-      padding: 6rem; } }
+      padding: 8rem 8rem 70px 8rem; } }
 
 a {
-  color: #444444;
+  color: #505050;
   padding-bottom: 0;
   text-decoration: none;
   border-bottom: 1px solid #CBCBCB;
-  transition: color 0.15s ease-in-out, bottom 0.15s ease-in-out; }
+  -webkit-tap-highlight-color: #505050;
+  transition: color 0.15s ease-in-out, border 0.15s ease-in-out; }
 
-h1{
-  margin: 0 0 0.2rem 0;
-  line-height: 1.6;
-  -webkit-font-variant-ligatures: common-ligatures;
-  font-variant-ligatures: common-ligatures; }
-
-h1{
-  line-height: 1.6; }
 [id=main] {
   display: block;
+  max-width: 1140px;
   position: relative;
   background-color: #fff;
-  background-image: url("/_site/img/bg.png");
   background-repeat: repeat;
   background-position: center top;
   margin-left: auto;
   margin-right: auto;
-  padding: 4rem;
+  padding: 3.0769230769rem;
   border-radius: 3px;
-  box-sizing: border-box;
-  transition: padding 0.25s ease-in-out; }
+  transition: background 0.35s ease-in-out, padding 0.35s ease-in-out, color 0.35s ease-in-out;
+  box-sizing: border-box; }
+  @media (min-width: 500px) {
+    [id=main] {
+      padding: 4rem; } }
+  @media (min-width: 960px) {
+    [id=main] {
+      padding: 8rem; } }
   [id=main]:after {
     display: block;
     content: '';
@@ -148,27 +161,29 @@ h1{
     left: 0;
     z-index: 0;
     pointer-events: none;
-    opacity: 0;
     width: 100%;
     height: 100%;
     border-radius: 0;
     border-radius: 3px;
-    box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05);
-    transition: opacity 1s ease-in-out; }
+    box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05); }
 
-@media (min-width: 500px) {
-  [id=main] {
-    padding: 4rem 8rem; }
-    [id=main]:after {
-      opacity: 1; } }
-@media (min-width: 800px) {
-  [id=main] {
-    max-width: 1140px;
-    padding: 6rem; } }
+h1,
+h2{
+  margin: 0 0 0.2rem 0;
+  line-height: 1.2;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures; }
+
+h1,
+h2{
+  font-weight: 500;
+  line-height: 1.3; }
+
+h2{
+  font-family: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif; }
 .mountain-monday{
   display: block;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODYuMiA0NDAuNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+ICA8cGF0aCBjbGFzcz0ibW91bnRhaW4tMSIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlPSIjZmZmIiBkPSJNMzc0LjEgMjIyLjhsMTIxLjcgMjEwLjctMjQzLjQuMUg5bDEyMS43LTIxMC44TDI1Mi4zIDEyeiIvPiAgPHBhdGggY2xhc3M9Im1vdW50YWluLTIiIGZpbGw9Im5vbmUiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlPSIjZmZmIiBkPSJNNTY2LjMgMjIwLjdsMTIzLjUgMjEzLjctMjQ2LjEtLjQtMjQ2LS40IDEyMi42LTIxMy40TDQ0Mi44IDYuOXoiLz48L3N2Zz4=");
-  margin-bottom: 0.4rem;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMzNweCIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMzMgMjIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+TW91bnRhaW5Nb25kYXk8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoIEJldGEuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJNb3VudGFpbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIuMDAwMDAwLCAyLjAwMDAwMCkiIHN0cm9rZT0iIzUwNTA1MCI+ICAgICAgICAgICAgPGcgaWQ9Ik1vdW50YWluTW9uZGF5Ij4gICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBzdHJva2Utd2lkdGg9IjIiIHBvaW50cz0iMTYuMDQxNDcyOCA5LjYzNTE1NDU2IDIxLjMxMTE2OTMgMTguNzU2OTkxNSAxMC43NzE3NzY0IDE4Ljc2MTMyMDggMC4yMzIzODMzODMgMTguNzYxMzIwOCA1LjUwMjA3OTg3IDkuNjM1MTU0NTYgMTAuNzY3NDQ2MyAwLjUwODk4ODM2OSI+PC9wb2x5Z29uPiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIHBvaW50cz0iMjQuMzYzODY5NCA5LjU0NDIzOTI0IDI5LjcxMTUwNzIgMTguNzk1OTU1MiAxOS4wNTUyMDIzIDE4Ljc3ODYzOCA4LjQwMzIyNzQ4IDE4Ljc2MTMyMDggMTMuNzExODk0NiA5LjUyMjU5Mjc0IDE5LjAxNjIzMTcgMC4yODgxOTQwMjUiPjwvcG9seWdvbj4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=");
   border-bottom: none;
   width: 40px;
   height: 28px;
@@ -179,7 +194,8 @@ h1{
   background-repeat: no-repeat;
   text-align: left;
   direction: ltr; }
-[id=page-header] {
+
+[id="page-header"] {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -193,28 +209,33 @@ h1{
       -ms-flex-pack: start;
           justify-content: flex-start;
   overflow: hidden; }
-  @media (min-width: 768px) {
-    [id=page-header] {
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between; } }
-  [id=page-header] .main-header {
+  [id="page-header"] .global-header {
     opacity: 0.7;
-    transition: opacity 0.25s ease-in-out; }
-    #home [id=page-header] .main-header {
+    transition: opacity 0.35s ease-in-out; }
+    #home [id="page-header"] .global-header {
       opacity: 1; }
-  [id=page-header] [id=page-title] {
-    margin-bottom: 4rem; }
-    [id=page-header] [id=page-title] > * {
-      display: block;
-      line-height: 1; }
-    [id=page-header] [id=page-title] [id=name] {
-      font-size: 22px;
-      font-size: 2.2rem;
-      font-weight: 700; }
+
+[id="site-title"] {
+  margin-bottom: 4rem; }
+  [id="site-title"] > * {
+    display: block;
+    line-height: 1; }
+  [id="site-title"] [id=name] {
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: 600; }
+
+@media (min-width: 768px) {
+  [id="page-header"] {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    [id="page-header"] .global-header {
+      width: 30%;
+      min-width: 200px; } }
 </style>
 <script>
 (function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700','/css/style.css']));
@@ -224,13 +245,8 @@ h1{
 <link rel="stylesheet" href="/css/style.css" type="text/css">
 </noscript>
   
-  
-  
-
 
   <script src="/js/libs/modernizr.min.js"></script>
-
-
 
   <link rel="author" href="humans.txt">
   <link rel="shortcut icon" href="/img/root/favicon.ico">
@@ -244,6 +260,8 @@ h1{
   
 </head>
 
+
+
 <!--
     __  ___            _ __      ____        __  __
    /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
@@ -251,140 +269,43 @@ h1{
  / /  / / /_/ / / / / / ,\    / _, _/ /_/ / /_/ / / /  __/  __/
 /_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/
 
-The site is static, compiled with Jekyll and managed with Grunt. Take a look inside the build on GitHub:
+The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
 https://github.com/manikrathee/manikrathee.com
 -->
+
+
+<script type="text/javascript">
+  var postURL = ["/photos/photo/photo-test-page.html","/photos/photo/wanderlust-big-sur.html","/photos/photo/vsco.html","/photos/pride.html"];
+  var postTitle = ["Photo Test Page For New Features","Wanderlust: Big Sur","VSCO: The world through a viewfinder","Pride"];
+  var postImage = ["img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg"];
+</script>
 
 
 	<body id="home" class="
         light
         
+        
+        
+        
       ">
 
     <div id="main" class="container" role="main">
 
-      
-      <header id="page-header" role="banner">
+        <header id="page-header" role="banner">
 
-        <div class="main-header">
-          <a class="mountain-monday" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
-            MountainMonday 🍻
-          </a>
-          <hgroup id="page-title">
-            <h1 id="name">Manik Rathee</h1>
-            <p id="greeting">Designer, Photographer</p>
-          </hgroup>
+    <div class="global-header">
 
-          <nav class="main-nav" role="navigation">
-  <ul class="main-nav-list">
-    <li>
-      <a itemprop="url" href="/" title="manikrathee.com">Home</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/about" title="About">About</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/photos" title="Photo Stories">Photos</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/blog" title="Blog">Blog</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/work" title="Case Studies and Projects">Work &amp; Case Studies</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/library" title="Library and Recommendations">Library</a>
-    </li>
-    <li>
-      <a itemprop="url" href="/weeklyreads" title="WeeklyReads: An email with the best design, photography and inspiration links of the week">WeeklyReads <i>Email Subscription</i></a>
-    </li>
-    <li>
-      <a itemprop="url" href="/resources" title="Resources">Resources</a>
-    </li>
-  </ul>
-</nav>
+      <a class="header-logo" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
+        <h2 class="animated-logo mountain-monday">
+          MountainMonday 🍻
+        </h2>
 
-        </div>
+        <hgroup id="site-title">
+          <h1 id="name">Manik Rathee</h1>
+          <p id="greeting">Designer, Photographer</p>
+        </hgroup>
+      </a>
 
-        
-        <div id="who-is">
-          <h3 class="current-title">Prototyping &amp; Engineering @ <a href="https://nest.com/" title="Nest Labs, an Alphabet Company" itemprop="url">Nest</a> / Google</h3>
-
-
-
-          <p class="previous-heading">Previously</p>
-          <ul class="previous">
-            <li>
-              User Experience Engineer for <a href="http://www.manikrathee.com/barack-obama-contribute.html" title="Barack Obama's 2012 Re-Election Campaign" itemprop="url">President Barack Obama</a>
-            </li>
-            <li>
-              Design Lead for <a href="https://www.continu.co/" title="Continu: Beautifully Simple Learning" itemprop="url">Continu</a>
-            </li>
-          </ul>
-        </div>
-        
-
-        
-
-      </header>
-
-  
-
-
-      <section id="inner-container" class="home">
-
-        
-
-  	   <h2 class="animated-logo">
-  <a class="mountain-monday" href="/" title="manikrathee.com" itemprop="url"></a>
-</h2>
-
-
-
-<!-- <button class="animated-logo icobutton icobutton--microphone"><span class=
-  "fa fa-microphone" style="
-    display: block;
-    height: 100px;
-    width: 100px;
-    background: #000;
-    position: relative;"></span>
-  <div style=
-  "position: absolute; top: 50%; left: 50%; width: 290px; height: 290px; margin-left: -145px; margin-top: -145px; opacity: 0.4; display: none;  transform: translate(0px, 0px);">
-    <svg style="position: absolute; width: 100%; height: 100%;">
-      <ellipse cx="145" cy="145" fill="transparent" fill-opacity=
-      "transparent" rx="0" ry="0" stroke="#C0C1C3" stroke-dasharray
-      stroke-dashoffset stroke-linecap stroke-opacity="1" stroke-width="50"
-      transform="rotate(0,145,145)"></ellipse>
-    </svg>
-  </div>
-  <div style=
-  "position: absolute; top: 50%; left: 50%; width: 240px; height: 240px; margin-left: -120px; margin-top: -120px; opacity: 0.2; display: none; transform: translate(0px, 0px);">
-    <svg style="position: absolute; width: 100%; height: 100%;">
-      <ellipse cx="120" cy="120" fill="transparent" fill-opacity=
-      "transparent" rx="0" ry="0" stroke="#C0C1C3" stroke-dasharray
-      stroke-dashoffset stroke-linecap stroke-opacity="1" stroke-width="40"
-      transform="rotate(0,120,120)"></ellipse>
-    </svg>
-  </div>
-</button> -->
-
-
-
-
-<h1>hello world</h1>
-<p>Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.</p>
-
-
-        
-
-      </section>
-
-      
-  <footer id="main-footer" role="contentinfo">
-
-    <span class="mountain-monday--dark"></span>
-
-    <section class="footer-nav">
       <nav class="main-nav" role="navigation">
   <ul class="main-nav-list">
     <li>
@@ -399,58 +320,430 @@ https://github.com/manikrathee/manikrathee.com
     <li>
       <a itemprop="url" href="/blog" title="Blog">Blog</a>
     </li>
-    <li>
-      <a itemprop="url" href="/work" title="Case Studies and Projects">Work &amp; Case Studies</a>
-    </li>
+    <!-- <li class="nav-work-case-studies">
+      <a itemprop="url" href="/work" title="Case Studies and Projects">Work<span> &amp; Case Studies</span></a>
+    </li> -->
     <li>
       <a itemprop="url" href="/library" title="Library and Recommendations">Library</a>
     </li>
-    <li>
-      <a itemprop="url" href="/weeklyreads" title="WeeklyReads: An email with the best design, photography and inspiration links of the week">WeeklyReads <i>Email Subscription</i></a>
+    <li class="nav-weekly-reads">
+      <a itemprop="url" href="/weeklyreads" title="WeeklyReads: An email with the best design, photography and inspiration links of the week">WeeklyReads</a><span> <i>Email Subscription</i></span>
     </li>
     <li>
       <a itemprop="url" href="/resources" title="Resources">Resources</a>
+    </li>
+    <li>
+      <a itemprop="url" href="https://500px.com/search?q=manikrathee&type=market" title="Shop">Shop</a>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+
+    <div id="view-mode--container">
+  <input id="view-mode--toggle" type="checkbox">
+  <label class="view-mode--toggle-label" for="view-mode--toggle">
+    <i class="view-mode--icon">Light Mode</i>
+  </label>
+</div>
+
+
+    
+    <div id="who-is">
+      <h3 class="current-title">
+        Prototyping &amp; Engineering
+        <i>
+          @
+          <a href="https://nest.com/" title="Nest Labs, an Alphabet Company" itemprop="url">Nest / Google</a>
+        </i>
+      </h3>
+
+      <div class="previous-container">
+        <p class="previous-heading">Previously</p>
+        <ul class="previous-positions">
+          <li>
+            User Experience Engineer
+            <i>
+              for
+              <a href="http://www.manikrathee.com/barack-obama-contribute.html" title="Barack Obama's 2012 Re-Election Campaign" itemprop="url">President Barack Obama</a>
+            </i>
+          </li>
+          <li>
+            Design Lead
+            <i>
+              for
+              <a href="https://www.continu.co/" title="Continu: Beautifully Simple Learning" itemprop="url">Continu</a>
+            </i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+
+    
+  </header>
+
+  
+
+
+      <section id="inner-container" class="home">
+
+        
+
+
+        <section class="row ↔️">
+  <div class="row-tout recent-photos ↕️">
+    <h3 class="medium-heading">Photography &amp; Fashion</h3>
+
+    <ul class="row-tout-list recent-photos-list">
+      
+      <li>
+        <p class="condensed">
+          <a href="/photos/photo/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
+            Photo Test Page For New Features
+          </a><!--
+
+          --><span class="for-lovely-sunday">, for
+            <a href="http://www.google.com" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+              LovelySunday
+            </a>
+          </span>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/photos/photo/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
+            Wanderlust: Big Sur
+          </a><!--
+
+          --><span class="for-lovely-sunday">, for
+            <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+              LovelySunday
+            </a>
+          </span>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/photos/photo/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
+            VSCO: The world through a viewfinder
+          </a><!--
+
+          --><span class="for-lovely-sunday">, for
+            <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+              LovelySunday
+            </a>
+          </span>
+        </p>
+      </li>
+      
+      <li class="more-items">
+        <a class="more-items--link" href="/photos/" title="" itemprop="url">
+          More Photography
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="row-tout recent-writing ↕️">
+    <h3 class="medium-heading">Writing</h3>
+    <ul class="row-tout-list recent-writing-list">
+      
+      <li>
+        <p class="condensed">
+          <a href="/blog/how-to-delete-a-tag-in-git.html" title="How to delete a&nbsp;Git&nbsp;tag" itemprop="url">
+            How to delete a&nbsp;Git&nbsp;tag,
+            <span></span>
+          </a>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/blog/text-expander-tips.html" title="How I Use: TextExpander" itemprop="url">
+            How I Use: TextExpander,
+            <span></span>
+          </a>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/blog/uber-vs-cabs.html" title="Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups" itemprop="url">
+            Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups,
+            <span></span>
+          </a>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/blog/sublime-text-preferences.html" title="Sublime Text: Customizing Your Workflow" itemprop="url">
+            Sublime Text: Customizing Your Workflow,
+            <span></span>
+          </a>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/blog/building-president-obama.html" title="Building Obama" itemprop="url">
+            Building Obama,
+            <span></span>
+          </a>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/blog/on-disconnecting-from-tech-silicon-valley.html" title="On Disconnecting: Escaping the tech that surrounds us" itemprop="url">
+            On Disconnecting: Escaping the tech that surrounds us,
+            <span></span>
+          </a>
+        </p>
+      </li>
+      
+      <li class="more-items">
+        <a class="more-items--link" href="/blog/" title="" itemprop="url">
+          More Writing
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="row ↔️">
+  <div class="row-tout recent-publications ↕️">
+    <h3 class="medium-heading">Publications, Interviews, etc</h3>
+    <ul class="row-tout-list recent-publications-list">
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, for </span>
+        <a href="%|" class="" title="" itemprop="url">
+          LovelySunday
+        </a>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li class="more-items">
+        <a class="more-items--link" href="%|" title="" itemprop="url">
+          More Photography
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="row-tout recent-speaking  ↕️">
+    <h3 class="medium-heading">Speaking</h3>
+    <ul class="row-tout-list recent-speaking-list">
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, for </span>
+        <a href="%|" class="" title="" itemprop="url">
+          LovelySunday
+        </a>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li>
+        <a href="%|" title="" itemprop="url">
+          Post title
+        </a>
+        <span>, Something 2015</span>
+      </li>
+      <li class="more-items">
+        <a class="more-items--link" href="%|" title="" itemprop="url">
+          More Photography
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="row social">
+
+  <h3 class="small-heading">Online:</h3>
+
+  <ul class="social-list">
+    <li>
+      <a class="social-list--item icon spotify" href="%|" title="" itemprop="url">
+        Spotify
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon fivehundredpx" href="%|" title="" itemprop="url">
+        500px
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon twitter" href="%|" title="" itemprop="url">
+        twitter
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon github" href="%|" title="" itemprop="url">
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon dribbble" href="%|" title="" itemprop="url">
+        dribbble
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon tumblr" href="%|" title="" itemprop="url">
+        tumblr
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon pocket" href="%|" title="" itemprop="url">
+        pocket
+      </a>
+    </li>
+  </ul>
+</section>
+
+
+<section class="api">
+
+  <div id="spotify-api-bar"></div>
+  <div id="twitter-api-bar"></div>
+
+</section>
+
+
+
+
+
+
+
+        
+
+      </section>
+
+    </div>
+
+    
+
+      <footer id="main-footer" role="contentinfo">
+
+    <!-- TODO CHange this to use a data yml file, output an image with a background position at certain breakpoints. then render out that size into css -->
+    <div class="footer-bg-photo-posts"><span></span></div>
+
+    <span class="mountain-monday mountain-monday--inverse"></span>
+
+    <section class="footer-nav-container">
+      <span id="manikrathee">Manik Rathee</span>
+      <nav class="main-nav" role="navigation">
+  <ul class="main-nav-list">
+    <li>
+      <a itemprop="url" href="/" title="manikrathee.com">Home</a>
+    </li>
+    <li>
+      <a itemprop="url" href="/about" title="About">About</a>
+    </li>
+    <li>
+      <a itemprop="url" href="/photos" title="Photo Stories">Photos</a>
+    </li>
+    <li>
+      <a itemprop="url" href="/blog" title="Blog">Blog</a>
+    </li>
+    <!-- <li class="nav-work-case-studies">
+      <a itemprop="url" href="/work" title="Case Studies and Projects">Work<span> &amp; Case Studies</span></a>
+    </li> -->
+    <li>
+      <a itemprop="url" href="/library" title="Library and Recommendations">Library</a>
+    </li>
+    <li class="nav-weekly-reads">
+      <a itemprop="url" href="/weeklyreads" title="WeeklyReads: An email with the best design, photography and inspiration links of the week">WeeklyReads</a><span> <i>Email Subscription</i></span>
+    </li>
+    <li>
+      <a itemprop="url" href="/resources" title="Resources">Resources</a>
+    </li>
+    <li>
+      <a itemprop="url" href="https://500px.com/search?q=manikrathee&type=market" title="Shop">Shop</a>
     </li>
   </ul>
 </nav>
 
 
       <figure id="snapchat"></figure>
-
-      <a id="top" href="#" title="Back To The Top">Back to the top -- should I evne have this?</a>
     </section>
 
 
     <section class="footer-data">
-      <div id="weekly-reads-tout">
-        <i class="icon icon--weeklyreads">WeeklyReads: an email list for design and inspiration.</i>
-        something w/ link
+      <div id="weekly-reads-tout" class="footer-tout">
+        <a href="%|" class="invert-hover" title="" itemprop="url">
+          <i class="icon icon--weeklyreads">WeeklyReads: an email list for design and inspiration.</i>
+          <span>
+            WeeklyReads: an email list for design and inspiration.
+          </span>
+        </a>
       </div>
 
-      <div id="photo-metadata" class="is-visible">
-        <i class="icon icon--photography">Photo information</i>
-        LEICA Q — 25mm f1.8 200/s 200ISO
-        Big Sur, California, USA
+      <div id="photo-metadata" class="footer-tout is-visible">
+        <!-- To Do:
+              Hook this up to be a random set of favorite posts
+          -->
+        <a href="%|" class="invert-hover" title="" itemprop="url">
+          <i class="icon icon--photography">Photo information</i>
+          <span>
+            LEICA Q — 25mm f1.8 200/s 200ISO
+            <br>
+            Big Sur, California, USA
+          </span>
+        </a>
       </div>
     </section>
-
 
   </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/js/libs/jquery-2.1.1.min.js"><\/script>')</script>
 
+  
+
   <script src="/js/script.js"></script>
 
-
-<!--
-
- -->
+  
 
 
-
-
-    </div>
 
   </body>
 

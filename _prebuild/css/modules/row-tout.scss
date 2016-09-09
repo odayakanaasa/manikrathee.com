@@ -37,19 +37,9 @@
 }
 
 .more-items--link {
-  will-change: transform;
-  @include transition(
-    (transform 0.5s ease-in-out)
-  );
-
-  &:hover {
-    transform: rotate(5deg);
-  }
-
 }
 
 .social {
-  // margin: ($spacer * 3) 0;
 
   h3 {
     display: inline-block;

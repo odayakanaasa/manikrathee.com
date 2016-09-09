@@ -5,21 +5,20 @@ title: "Photography & Fashion"
 page-type: blog
 page-subtype: photo-index
 
-img: 'img/photos/root-header-image.jpg'
 ---
 
 <ol id="photo-posts" class="post-list">
-  {% for posts in site.categories.photos %}
+  {% for post in site.categories.photos %}
   <li class="post-list--item">
-    <img class="post-list--photo" src="{{ posts.img }}" alt="{{ posts.title }}">
-    <a id="{{ posts.slug }}" class="post-list--link no-border" href="{{ posts.url }}" title="{{ posts.title }}" itemprop="url">
-      <p class="post-list--date">{{ posts.date | date: "%B %d, %Y" }}</p>
+    <img class="post-list--photo" src="{{ post.img }}" alt="{{ post.title }}">
+    <a id="{{ post.slug }}" class="post-list--link no-border" href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+      <p class="post-list--date">{{ post.date | date: "%B %d, %Y" }}</p>
       <h2 class="post-list--title">
-        {{ posts.title | widont }}
+        {{ post.title | widont }}
       </h2>
       <p class="post-list-description">
         <span class="post-list--description">
-          {{ posts.content | strip_html | truncatewords:40 | widont }}
+          {{ post.content | strip_html | truncatewords:40 | widont }}
         </span>
       </p>
 

@@ -127,7 +127,7 @@ module.exports = function(grunt) {
           '_site/css/style.css',
         ],
         width: 320,
-        height: 70
+        height: 800
       },
       src: '_site/index.html',
       dest: '_site/index.html',
