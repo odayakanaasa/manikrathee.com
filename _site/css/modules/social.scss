@@ -14,28 +14,30 @@ $social-accounts: spotify fivehundredpx twitter github dribbble tumblr pocket po
 
 .icon {
   display: inline-block;
-  background-size: cover;
+  background-size: 100%;
   background-position: 50%;
   background-repeat: no-repeat;
+}
+a.icon {
+  border: none;
 }
 
 
 // FIXME these are not correct sizes
 .spotify {
-  @include size(32px, 32px);
-
+  @include size(20px, 20px);
 }
 .fivehundredpx {
-  @include size(32px, 28px);
+  @include size(20px, 30px);
 }
 .twitter {
-  @include size(32px, 32px);
+  @include size(20px, 20px);
 }
 .github {
-  @include size(32px, 32px);
+  @include size(20px, 20px);
 }
 .dribbble {
-  @include size(28px, 28px);
+  @include size(20px, 20px);
 }
 .tumblr {
   @include size(45px, 28px);
@@ -45,4 +47,12 @@ $social-accounts: spotify fivehundredpx twitter github dribbble tumblr pocket po
 }
 .pocket-brand {
   @include size(32px, 32px);
+}
+
+
+.social-list {
+// use flex here
+  &--item {
+
+  }
 }

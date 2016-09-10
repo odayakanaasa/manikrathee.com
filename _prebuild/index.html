@@ -17,14 +17,16 @@ section: home
       <li>
         <p class="condensed">
           <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
-            {{ post.title | strip_html }}
-          </a><!--
+            {{ post.title | strip_html }}<!--
+          --></a><!--
 
-          --><span class="for-lovely-sunday">, for
+          -->{% if post.isForLovelySunday %}<!--
+        --><span class="for-lovely-sunday">, for
             <a href="{{ post.lovelySundayLink }}" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
               LovelySunday
             </a>
           </span>
+          {% endif %}
         </p>
       </li>
       {% endfor %}
@@ -44,9 +46,8 @@ section: home
       <li>
         <p class="condensed">
           <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
-            {{ post.title | strip_html }},
-            <span>{{ page.date | date: '%B %Y' }}</span>
-          </a>
+            {{ post.title | strip_html }}<!--
+        --></a><span>, {{ post.date | date: '%B %Y' }}</span>
         </p>
       </li>
       {% endfor %}
@@ -67,8 +68,8 @@ section: home
       <li>
         <a href="%|" title="" itemprop="url">
           Post title
-        </a>
-        <span>, Something 2015</span>
+        </a><span>, Something 2015</span>
+
       </li>
       <li>
         <a href="%|" title="" itemprop="url">
@@ -142,7 +143,7 @@ section: home
 
 <section class="row social">
 
-  <h3 class="small-heading">Online:</h3>
+  <h3 class="medium-heading">Online:</h3>
 
   <ul class="social-list">
     <li>

@@ -53,7 +53,10 @@
   line-height: 1.6;
 
   @include mq(800px) {
-    margin: ($spacer * 1.15) 0 0 0; // push content to the baseline of the title
+    // margin-top: 4.5rem; // align copy to heading and nav
+    margin: ($spacer * 1.125) 0 0 0; // push content to the baseline of the title
+    padding: 0;
+    border: none;
   }
 
   .view-mode--dark & {
@@ -160,16 +163,5 @@
     }
   } // #page-header
 
-  [id="who-is"] { // shown in header on right side, only for homepage
-    margin-top: 45px; // align copy to heading and nav
-    margin-bottom: 0;
-    padding: 0;
-    border: none;
-  }
-
-}
-
-
-@include mq(1100px) {
 
 }

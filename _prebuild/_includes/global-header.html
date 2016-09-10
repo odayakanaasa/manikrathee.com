@@ -119,4 +119,6 @@ https://github.com/manikrathee/manikrathee.com
   var postURL = [{% for post in site.categories.photos %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
   var postTitle = [{% for post in site.categories.photos %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
   var postImage = [{% for post in site.categories.photos %}"{{ post.img }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var postMeta = [{% for post in site.categories.photos %}"{{ post.meta }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var postGeo = [{% for post in site.categories.photos %}"{{ post.geo }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
 </script>
