@@ -6,6 +6,7 @@
 
 #main-footer {
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -17,11 +18,16 @@
   & > * {
     // set difference on children only, so the background image remains safe
     mix-blend-mode: difference;
+    // for light colors:
+    // mix-blend-mode: color-dodge;
+    // for dark colors:
+    // mix-blend-mode: multiply;
   }
 
   p,
   a {
-    color: $white;
+    // color: $white;
+    color: $dark-grey;
   }
 
   a {
@@ -86,7 +92,21 @@
     bottom: 0;
     background-size: cover;
     background-position: 50%;
-    mix-blend-mode: normal;
+    will-change:
+      mix-blend-mode,
+      transform,
+      opacity;
+    mix-blend-mode: luminosity;
+    opacity: 0;
+    backface-visibility: hidden;
+    transform: scale(1.05) translate3d(0,0,0);
+    @include transition(opacity 4s ease-in-out,transform 2.5s ease-out, mix-blend-mode 6s ease-in-out);
+
+    &.is-visible {
+      opacity: 1;
+      transform: scale(1) translate3d(0,0,0);
+      mix-blend-mode: normal;
+    }
 
     span {
       display: block;
@@ -95,7 +115,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0,0,0,0.7);
+      // background: rgba(0,0,0,0.7);
+      background: rgba(255, 255, 255, 0.7);
     }
   }
 }
@@ -129,7 +150,7 @@
     margin-right: auto;
   }
 
-  span {
+  figcaption {
     display: block;
     margin-top: 10px;
     text-align: center;
@@ -138,12 +159,10 @@
 
 #photo-metadata {
   opacity: 0;
-  visibility: hidden;
-  @include transition( (opacity 1s ease-in-out),(visibility 1s ease-in-out) );
+  @include transition( opacity 1s ease-in-out );
 
   &.is-visible {
     opacity: 1;
-    visibility: visible;
   }
 
 }
@@ -231,7 +250,7 @@
         @include transition(opacity $anchor-hover-transition);
       }
 
-      span {
+      figcaption {
         display: inline-block;
         width: calc(100% - 60px);
         margin-top: 0;

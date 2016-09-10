@@ -8,7 +8,7 @@ page-subtype: blog-index
 ---
 
 <ol id="blog-posts" class="post-list">
-  {% for post in site.categories.writing %}
+  {% for post in site.categories.blog %}
   <li class="post-list--item">
     <a id="{{ post.slug }}" class="post-list--link no-border" href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
       <p class="post-list--date">{{ post.date | date: "%B %d, %Y" }}</p>

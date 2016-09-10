@@ -473,7 +473,7 @@ if ( $('body').attr('id') === 'home' ){
     template: '<div class="photo" data="{{id}}"><p><a id="instagram-link" href="{{link}}" title="View my latest Instagram Shot">{{caption}}</a></p></div>'
  });
 
- feed.run();
+ // feed.run();
 
   // Set instagramActive to true so logofyAPI and activate API can fire
   // instagramActive = true;
@@ -850,12 +850,28 @@ viewModeToggle[0].addEventListener('click', function (e) {
 });
 
 ;$(function(e){
-  var imageContainer = $('.footer-bg-photo-posts');
-  var randomIndex = Math.floor(Math.random() * postURL.length);
-  var img = postImage[randomIndex];
-  var completePath = "/img/photos/" + img;
+  var arrayIndex = Math.floor(Math.random() * postURL.length); // random number within array count
 
-  imageContainer.css('background-image', 'url(' + completePath + ')');
+  // pull relevant values from photo posts
+  var img = postImage[arrayIndex];
+  var cam = postMeta[arrayIndex];
+  var geo = postGeo[arrayIndex];
+
+  var imgCompletePath = "/img/photos/" + img;
+
+  // define destination containers
+  var metadataContainer = $('#photo-metadata');
+  var imageContainer = $('.footer-bg-photo-posts');
+  var cameraContainer = $('.photo-metadata--camera');
+  var geoContainer = $('.photo-metadata--geo');
+
+  // deliver content
+  imageContainer.css('background-image', 'url(' + imgCompletePath + ')').addClass('is-visible');
+  cameraContainer.text(cam);
+  geoContainer.text(geo);
+
+  // display
+  metadataContainer.addClass('is-visible');
 });
 
 ;
