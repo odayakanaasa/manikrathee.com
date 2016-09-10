@@ -1,6 +1,5 @@
 .logo,
-.mountain-monday,
-.mountain-monday--inverse {
+.mountain-monday {
   display: block;
   background-image: url($logo-svg-encoded);
   border-bottom: none;
@@ -15,6 +14,6 @@
 
 
 
-.mountain-monday--light {
+.mountain-monday--inverse {
   background-image: url($logo-svg-encoded-inverse);
 }
