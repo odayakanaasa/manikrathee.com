@@ -13,8 +13,9 @@
   }
 
   @include mq(800px) {
-    width: 550px;
-    height: 275px;
+    overflow: hidden;
+    width: 750px;
+    height: 345px;
     margin-left: -8rem;
   }
 

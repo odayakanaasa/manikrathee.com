@@ -1921,6 +1921,18 @@ h5,
 h6 {
   font-family: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif; }
 
+ul + h1,
+ul + h2,
+ul + h3,
+ul + h4,
+ul + h5,
+ul + h6,
+a + h1,
+a + h2,
+a + h3,
+a + h4,
+a + h5,
+a + h6,
 p + h1,
 p + h2,
 p + h3,
@@ -1928,6 +1940,11 @@ p + h4,
 p + h5,
 p + h6 {
   margin-top: 6rem; }
+
+ul.text-list {
+  margin: 0 0 0 5rem; }
+  ul.text-list li + li {
+    margin-top: 0.4rem; }
 
 p {
   font-size: 17px;
@@ -2530,8 +2547,9 @@ code {
       margin-bottom: 6rem; } }
   @media (min-width: 800px) {
     .page-photo {
-      width: 550px;
-      height: 275px;
+      overflow: hidden;
+      width: 750px;
+      height: 345px;
       margin-left: -8rem; } }
 
 .blog-index .page-photo,
