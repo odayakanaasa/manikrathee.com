@@ -16,8 +16,6 @@ $social-accounts:
 @each $account in $social-accounts {
   .#{$account} {
     background-image: url('../svg/#{$account}.svg');
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
   }
 }
 

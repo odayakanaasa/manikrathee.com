@@ -1,5 +1,3 @@
-// icons
-
 .icon {
   display: inline-block;
   // display: block;
@@ -8,6 +6,8 @@
   background-size: 100%;
   background-position: 50%;
   background-repeat: no-repeat;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   @include ir;
 }
 a.icon {

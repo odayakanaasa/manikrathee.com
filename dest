@@ -48,7 +48,9 @@
 
   <style type="text/css">
 header,
-hgroup{
+hgroup,
+nav,
+section{
   display: block; }
 
 
@@ -62,7 +64,8 @@ html {
    }
 
 
-html{
+html,
+input{
   font-family: sans-serif; }
 
 
@@ -78,6 +81,49 @@ h1 {
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+
+p{
+  margin: 1em 0; }
+ul {
+  margin: 1em 0; }
+ul {
+  padding: 0 0 0 40px; }
+
+
+nav ul{
+  list-style: none;
+  list-style-image: none; }
+input{
+  font-size: 100%;
+  
+  margin: 0;
+  
+  vertical-align: baseline;
+  
+  *vertical-align: middle;
+   }
+input {
+  line-height: normal;
+   }
+
+
+input[type="checkbox"]{
+  box-sizing: border-box;
+  
+  padding: 0;
+  
+  *height: 13px;
+  
+  *width: 13px;
+   }
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
 
 ::-moz-selection {
   background: #999;
@@ -124,7 +170,9 @@ body {
         opacity: 1; } }
   @media (min-width: 960px) {
     body {
-      padding: 8rem 8rem 70px 8rem; } }
+      padding: 8rem 8rem 70px 8rem; } } ul {
+  margin: 0;
+  padding: 0; }
 
 a {
   color: #505050;
@@ -136,7 +184,7 @@ a {
 
 [id=main] {
   display: block;
-  max-width: 1140px;
+  max-width: 1280px;
   position: relative;
   background-color: #fff;
   background-repeat: repeat;
@@ -167,20 +215,68 @@ a {
     border-radius: 3px;
     box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05); }
 
+[id=inner-container] {
+  width: 100%;
+  padding-bottom: 4rem;
+  zoom: 1; }
+  [id=inner-container]:before, [id=inner-container]:after {
+    content: "";
+    display: table; }
+  [id=inner-container]:after {
+    clear: both; }
+  @media (min-width: 800px) {
+    [id=inner-container] {
+      padding-top: 8rem;
+      padding-bottom: 8rem; } }
+
 h1,
-h2{
+h2,
+h3,
+p{
   margin: 0 0 0.2rem 0;
   line-height: 1.2;
   -webkit-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures; }
 
 h1,
-h2{
+h2,
+h3{
   font-weight: 500;
   line-height: 1.3; }
 
-h2{
+h2,
+h3{
   font-family: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif; }
+
+p {
+  font-size: 17px;
+  font-size: 1.7rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.6; }
+  @media (min-width: 800px) {
+    p {
+      font-size: 16px;
+      font-size: 1.6rem; } }
+  p.condensed {
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.3; }
+    @media (min-width: 800px) {
+      p.condensed {
+        font-size: 16px;
+        font-size: 1.6rem; } }
+
+i {
+  font-style: normal; }
+
+[class*="heading"] {
+  font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif; }
+
+.medium-heading {
+  font-size: 22px;
+  font-size: 2.2rem;
+  margin-bottom: 1.15rem; }
 .mountain-monday{
   display: block;
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMzNweCIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMzMgMjIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+TW91bnRhaW5Nb25kYXk8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoIEJldGEuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJNb3VudGFpbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIuMDAwMDAwLCAyLjAwMDAwMCkiIHN0cm9rZT0iIzUwNTA1MCI+ICAgICAgICAgICAgPGcgaWQ9Ik1vdW50YWluTW9uZGF5Ij4gICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBzdHJva2Utd2lkdGg9IjIiIHBvaW50cz0iMTYuMDQxNDcyOCA5LjYzNTE1NDU2IDIxLjMxMTE2OTMgMTguNzU2OTkxNSAxMC43NzE3NzY0IDE4Ljc2MTMyMDggMC4yMzIzODMzODMgMTguNzYxMzIwOCA1LjUwMjA3OTg3IDkuNjM1MTU0NTYgMTAuNzY3NDQ2MyAwLjUwODk4ODM2OSI+PC9wb2x5Z29uPiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIHBvaW50cz0iMjQuMzYzODY5NCA5LjU0NDIzOTI0IDI5LjcxMTUwNzIgMTguNzk1OTU1MiAxOS4wNTUyMDIzIDE4Ljc3ODYzOCA4LjQwMzIyNzQ4IDE4Ljc2MTMyMDggMTMuNzExODk0NiA5LjUyMjU5Mjc0IDE5LjAxNjIzMTcgMC4yODgxOTQwMjUiPjwvcG9seWdvbj4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=");
@@ -224,6 +320,53 @@ h2{
     font-size: 22px;
     font-size: 2.2rem;
     font-weight: 600; }
+  [id="site-title"] [id=greeting] {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 300; }
+
+[id="who-is"] {
+  padding: 8rem 0;
+  line-height: 1.6; }
+  @media (min-width: 800px) {
+    [id="who-is"] {
+      margin: 4.5rem 0 0 0;
+      padding: 0;
+      border: none; } }
+  [id="who-is"] .current-title {
+    font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 4rem; }
+  [id="who-is"] .previous-container {
+    color: #505050; }
+  [id="who-is"] .previous-heading {
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1; }
+  [id="who-is"] .previous-positions li {
+    list-style-type: none;
+    margin-bottom: 1.2rem; }
+    [id="who-is"] .previous-positions li:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 800px) {
+      [id="who-is"] .previous-positions li {
+        margin-bottom: 0.4rem; }
+        [id="who-is"] .previous-positions li:last-child {
+          margin-bottom: 0; } }
+  [id="who-is"] .previous-positions li,
+  [id="who-is"] .previous-positions a {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 100; }
+  [id="who-is"] i {
+    display: block; }
+    @media (min-width: 540px) {
+      [id="who-is"] i {
+        display: inline; } }
 
 @media (min-width: 768px) {
   [id="page-header"] {
@@ -236,6 +379,102 @@ h2{
     [id="page-header"] .global-header {
       width: 30%;
       min-width: 200px; } }
+
+.main-nav-list {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding-bottom: 1px; }
+  @media (min-width: 768px) {
+    .main-nav-list {
+      line-height: 2.6rem; } }
+  .main-nav-list li,
+  .main-nav-list a,
+  .main-nav-list i {
+    font-size: inherit;
+    line-height: inherit; }
+  .main-nav-list li {
+    width: 50%;
+    float: left;
+    margin-bottom: 1.5rem; }
+    .main-nav-list li:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 768px) {
+      .main-nav-list li {
+        width: auto;
+        float: none;
+        margin-bottom: 0; } }
+  .main-nav-list i {
+    margin-left: 10px;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: 200; }
+.nav-weekly-reads span {
+  display: none; }
+
+@media (min-width: 768px) {
+  .nav-weekly-reads span {
+    display: inline; } }
+
+.row-tout {
+  margin-top: 8rem; }
+  .row-tout:first-child {
+    margin-top: 0; }
+
+.row-tout-list {
+  list-style-type: none; }
+  .row-tout-list li + li {
+    margin-top: 0.8rem; }
+
+.more-items {
+  margin-top: 1.2rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+@media (min-width: 700px) {
+  .row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .row-tout {
+      width: 50%;
+      margin-top: 0;
+      box-sizing: border-box; }
+      .row-tout:first-child {
+        margin-top: 0;
+        padding-right: 4rem; }
+      .row-tout:last-child {
+        padding-right: 4rem; } }
+
+#view-mode--container {
+  position: absolute;
+  right: 10px;
+  outline: 1px solid red; }
+
+.view-mode--icon {
+  display: block;
+  height: 60px;
+  width: 60px;
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+#view-mode--toggle {
+  position: absolute;
+  left: -9999em;
+  opacity: 0;
+  visibility: hidden; }
 </style>
 <script>
 (function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700','/css/style.css']));
@@ -275,9 +514,11 @@ https://github.com/manikrathee/manikrathee.com
 
 
 <script type="text/javascript">
-  var postURL = ["/photos/photo/photo-test-page.html","/photos/photo/wanderlust-big-sur.html","/photos/photo/vsco.html","/photos/pride.html"];
+  var postURL = ["/photo-test-page.html","/wanderlust-big-sur.html","/vsco.html","/pride-chicago-2012.html"];
   var postTitle = ["Photo Test Page For New Features","Wanderlust: Big Sur","VSCO: The world through a viewfinder","Pride"];
-  var postImage = ["img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg","img/photos/root-header-image.jpg"];
+  var postImage = ["/20160710/feature.jpg","/20131105/feature.jpg","/20120724/feature.jpg","/20120624/feature.jpg"];
+  var postMeta = ["LEICA Q — 25mm f1.8 200/s 200ISO","CANON 5DMKII — 24mm f16","CANON 5DMKII — 24mm f2.8 600/s","CANON 5DMKII — 50mm f1.4"];
+  var postGeo = ["Firenze, Italy","Big Sur, California, USA","16th arrondissement, Paris, France","Chicago, Illinois, USA"];
 </script>
 
 
@@ -399,43 +640,37 @@ https://github.com/manikrathee/manikrathee.com
       
       <li>
         <p class="condensed">
-          <a href="/photos/photo/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
-            Photo Test Page For New Features
-          </a><!--
+          <a href="/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
+            Photo Test Page For New Features<!--
+          --></a><!--
 
-          --><span class="for-lovely-sunday">, for
-            <a href="http://www.google.com" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+          --><!--
+        --><span class="for-lovely-sunday">, for
+            <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
               LovelySunday
             </a>
           </span>
+          
         </p>
       </li>
       
       <li>
         <p class="condensed">
-          <a href="/photos/photo/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
-            Wanderlust: Big Sur
-          </a><!--
+          <a href="/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
+            Wanderlust: Big Sur<!--
+          --></a><!--
 
-          --><span class="for-lovely-sunday">, for
-            <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
-              LovelySunday
-            </a>
-          </span>
+          -->
         </p>
       </li>
       
       <li>
         <p class="condensed">
-          <a href="/photos/photo/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
-            VSCO: The world through a viewfinder
-          </a><!--
+          <a href="/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
+            VSCO: The world through a viewfinder<!--
+          --></a><!--
 
-          --><span class="for-lovely-sunday">, for
-            <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
-              LovelySunday
-            </a>
-          </span>
+          -->
         </p>
       </li>
       
@@ -454,55 +689,49 @@ https://github.com/manikrathee/manikrathee.com
       
       <li>
         <p class="condensed">
-          <a href="/blog/how-to-delete-a-tag-in-git.html" title="How to delete a&nbsp;Git&nbsp;tag" itemprop="url">
-            How to delete a&nbsp;Git&nbsp;tag,
-            <span></span>
-          </a>
+          <a href="/how-to-delete-a-tag-in-git.html" title="How to delete a&nbsp;Git&nbsp;tag" itemprop="url">
+            How to delete a&nbsp;Git&nbsp;tag<!--
+        --></a><span>, August 2016</span>
         </p>
       </li>
       
       <li>
         <p class="condensed">
-          <a href="/blog/text-expander-tips.html" title="How I Use: TextExpander" itemprop="url">
-            How I Use: TextExpander,
-            <span></span>
-          </a>
+          <a href="/text-expander-tips.html" title="How I Use: TextExpander" itemprop="url">
+            How I Use: TextExpander<!--
+        --></a><span>, March 2015</span>
         </p>
       </li>
       
       <li>
         <p class="condensed">
-          <a href="/blog/uber-vs-cabs.html" title="Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups" itemprop="url">
-            Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups,
-            <span></span>
-          </a>
+          <a href="/uber-vs-cabs.html" title="Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups" itemprop="url">
+            Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups<!--
+        --></a><span>, July 2013</span>
         </p>
       </li>
       
       <li>
         <p class="condensed">
-          <a href="/blog/sublime-text-preferences.html" title="Sublime Text: Customizing Your Workflow" itemprop="url">
-            Sublime Text: Customizing Your Workflow,
-            <span></span>
-          </a>
+          <a href="/sublime-text-preferences.html" title="Sublime Text: Customizing Your Workflow" itemprop="url">
+            Sublime Text: Customizing Your Workflow<!--
+        --></a><span>, July 2013</span>
         </p>
       </li>
       
       <li>
         <p class="condensed">
-          <a href="/blog/building-president-obama.html" title="Building Obama" itemprop="url">
-            Building Obama,
-            <span></span>
-          </a>
+          <a href="/building-president-obama.html" title="Building Obama" itemprop="url">
+            Building Obama<!--
+        --></a><span>, May 2013</span>
         </p>
       </li>
       
       <li>
         <p class="condensed">
-          <a href="/blog/on-disconnecting-from-tech-silicon-valley.html" title="On Disconnecting: Escaping the tech that surrounds us" itemprop="url">
-            On Disconnecting: Escaping the tech that surrounds us,
-            <span></span>
-          </a>
+          <a href="/on-disconnecting-from-tech-silicon-valley.html" title="On Disconnecting: Escaping the tech that surrounds us" itemprop="url">
+            On Disconnecting: Escaping the tech that surrounds us<!--
+        --></a><span>, April 2013</span>
         </p>
       </li>
       
@@ -518,13 +747,13 @@ https://github.com/manikrathee/manikrathee.com
 
 <section class="row ↔️">
   <div class="row-tout recent-publications ↕️">
-    <h3 class="medium-heading">Publications, Interviews, etc</h3>
+    <h3 class="medium-heading">Magazines, Podcasts, etc</h3>
     <ul class="row-tout-list recent-publications-list">
       <li>
         <a href="%|" title="" itemprop="url">
           Post title
-        </a>
-        <span>, Something 2015</span>
+        </a><span>, Something 2015</span>
+
       </li>
       <li>
         <a href="%|" title="" itemprop="url">
@@ -598,41 +827,46 @@ https://github.com/manikrathee/manikrathee.com
 
 <section class="row social">
 
-  <h3 class="small-heading">Online:</h3>
+  <h3 class="medium-heading">Online:</h3>
 
   <ul class="social-list">
     <li>
-      <a class="social-list--item icon spotify" href="%|" title="" itemprop="url">
+      <a class="social-list--item icon icon--spotify-dark" href="%|" title="" itemprop="url">
         Spotify
       </a>
     </li>
     <li>
-      <a class="social-list--item icon fivehundredpx" href="%|" title="" itemprop="url">
+      <a class="social-list--item icon icon--fivehundredpx-dark" href="%|" title="" itemprop="url">
         500px
       </a>
     </li>
     <li>
-      <a class="social-list--item icon twitter" href="%|" title="" itemprop="url">
+      <a class="social-list--item icon icon--instagram-dark" href="%|" title="" itemprop="url">
+        Instagram
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon icon--twitter-dark" href="%|" title="" itemprop="url">
         twitter
       </a>
     </li>
     <li>
-      <a class="social-list--item icon github" href="%|" title="" itemprop="url">
+      <a class="social-list--item icon icon--github-dark" href="%|" title="" itemprop="url">
         GitHub
       </a>
     </li>
     <li>
-      <a class="social-list--item icon dribbble" href="%|" title="" itemprop="url">
+      <a class="social-list--item icon icon--dribbble-dark" href="%|" title="" itemprop="url">
         dribbble
       </a>
     </li>
     <li>
-      <a class="social-list--item icon tumblr" href="%|" title="" itemprop="url">
+      <a class="social-list--item icon icon--tumblr-dark" href="%|" title="" itemprop="url">
         tumblr
       </a>
     </li>
     <li>
-      <a class="social-list--item icon pocket" href="%|" title="" itemprop="url">
+      <a class="social-list--item icon icon--pocket-dark" href="%|" title="" itemprop="url">
         pocket
       </a>
     </li>
@@ -717,17 +951,14 @@ https://github.com/manikrathee/manikrathee.com
         </a>
       </div>
 
-      <div id="photo-metadata" class="footer-tout is-visible">
-        <!-- To Do:
-              Hook this up to be a random set of favorite posts
-          -->
-        <a href="%|" class="invert-hover" title="" itemprop="url">
-          <i class="icon icon--photography">Photo information</i>
-          <span>
-            LEICA Q — 25mm f1.8 200/s 200ISO
+      <div id="photo-metadata" class="footer-tout">
+        <a href="%|" class="photo-metadata--link invert-hover" title="" itemprop="url">
+          <i class="icon icon--photography">Photo Information</i>
+          <figcaption>
+            <span class="photo-metadata--camera"></span>
             <br>
-            Big Sur, California, USA
-          </span>
+            <span class="photo-metadata--geo"></span>
+          </figcaption>
         </a>
       </div>
     </section>
