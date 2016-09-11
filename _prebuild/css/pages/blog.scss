@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
 
-#blog-posts {
+#blog-posts,
+#post-container {
   @include mq(768px) {
-    width: 80%;
-    margin-left: auto;
+    width: auto;
+    margin-left: 20%;
   }
 }
 

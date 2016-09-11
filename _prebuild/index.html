@@ -13,7 +13,7 @@ section: home
     <h3 class="medium-heading">Photography &amp; Fashion</h3>
 
     <ul class="row-tout-list recent-photos-list">
-      {% for post in site.categories.photo | limit:6 %}
+      {% for post in site.categories.photos | limit:6 %}
       <li>
         <p class="condensed">
           <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">

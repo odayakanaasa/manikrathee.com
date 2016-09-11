@@ -854,10 +854,12 @@ viewModeToggle[0].addEventListener('click', function (e) {
 
   // pull relevant values from photo posts
   var link = postURL[arrayIndex];
+  var title = postTitle[arrayIndex];
   var img = postImage[arrayIndex];
   var cam = postMeta[arrayIndex];
   var geo = postGeo[arrayIndex];
 
+  // build image path
   var imgCompletePath = "/img/photos/" + img;
 
   // define destination containers
@@ -868,12 +870,13 @@ viewModeToggle[0].addEventListener('click', function (e) {
   var geoContainer = $('.photo-metadata--geo');
 
   // deliver content
-  imageContainer.css('background-image', 'url(' + imgCompletePath + ')').addClass('is-visible');
-  linkContainer.prop('href',link);
+  imageContainer.css('background-image', 'url(' + imgCompletePath + ')');
+  linkContainer.prop('href', link).prop('title', title);
   cameraContainer.text(cam);
   geoContainer.text(geo);
 
   // display
+  imageContainer.addClass('is-visible');
   metadataContainer.addClass('is-visible');
 });
 

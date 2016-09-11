@@ -55,7 +55,6 @@
     overflow: hidden;
     margin-top: $spacer;
     padding-bottom: 5px;
-    transform: translate3d(0, 0, 0);
 
     li {
       width: calc(50% - 20px);
@@ -111,9 +110,9 @@
 
 
   .main-nav-list,
-  #snapchat,
-  #top {
+  #snapchat {
     margin-bottom: $spacer;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -154,12 +153,17 @@
   }
 }
 
+
 #photo-metadata {
   opacity: 0;
   @include transition( opacity 1s ease-in-out );
 
   &.is-visible {
     opacity: 1;
+  }
+
+  .photo-metadata--link {
+    border: none;
   }
 
 }

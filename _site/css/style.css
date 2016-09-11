@@ -1938,13 +1938,21 @@ p + h2,
 p + h3,
 p + h4,
 p + h5,
-p + h6 {
+p + h6,
+blockqoute + h1,
+blockqoute + h2,
+blockqoute + h3,
+blockqoute + h4,
+blockqoute + h5,
+blockqoute + h6 {
   margin-top: 6rem; }
 
 ul.text-list {
   margin: 0 0 0 5rem; }
   ul.text-list li + li {
     margin-top: 0.4rem; }
+  ul.text-list--expanded li + li {
+    margin-top: 1rem; }
 
 p {
   font-size: 17px;
@@ -1966,8 +1974,7 @@ p {
         font-size: 1.6rem; } }
 
 em {
-  font-style: italic;
-  opacity: 0.75; }
+  font-style: italic; }
 
 i {
   font-style: normal; }
@@ -1975,7 +1982,7 @@ i {
 [class*="heading"] {
   font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif; }
 
-[class*="heading-serif"] {
+[class*="serif"] {
   font-family: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif; }
 
 .large-heading {
@@ -2002,6 +2009,51 @@ pre {
   .view-mode--dark pre {
     background: #F7F7F7;
     color: #505050; }
+
+blockquote {
+  display: inline-block;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 3rem 2rem 0;
+  font-family: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.6;
+  box-shadow: 5rem 5rem 65px 5px rgba(0, 0, 0, 0.05);
+  transform: translate3d(0, 0, 0);
+  will-change: box-shadow;
+  transition: box-shadow 4s ease-in-out; }
+  @media (min-width: 500px) {
+    blockquote {
+      background: #fff;
+      padding: 0 8rem 2rem 0; } }
+  @media (min-width: 800px) {
+    blockquote {
+      width: auto;
+      margin: 4rem 0 4rem -15%;
+      font-size: 22px;
+      font-size: 2.2rem;
+      font-weight: 100;
+      line-height: 1.5;
+      box-shadow: 30px 40px 65px 5px rgba(0, 0, 0, 0.1); } }
+  .view-mode--dark blockquote {
+    background: transparent; }
+  blockquote cite {
+    display: block;
+    margin-top: 2rem 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase; }
+    @media (min-width: 800px) {
+      blockquote cite {
+        margin-top: 1rem;
+        margin-left: -5rem; } }
+  blockquote a {
+    border: none; }
 
 pre {
   display: inline-block;
@@ -2248,8 +2300,7 @@ code {
   #main-footer .main-nav-list {
     overflow: hidden;
     margin-top: 4rem;
-    padding-bottom: 5px;
-    transform: translate3d(0, 0, 0); }
+    padding-bottom: 5px; }
     #main-footer .main-nav-list li {
       width: calc(50% - 20px); }
       #main-footer .main-nav-list li:nth-child(even) {
@@ -2286,9 +2337,9 @@ code {
       bottom: 0;
       background: rgba(0, 0, 0, 0.5); }
   #main-footer .main-nav-list,
-  #main-footer #snapchat,
-  #main-footer #top {
-    margin-bottom: 4rem; }
+  #main-footer #snapchat {
+    margin-bottom: 4rem;
+    transform: translate3d(0, 0, 0); }
 
 #snapchat {
   display: block;
@@ -2325,6 +2376,8 @@ code {
   transition: opacity 1s ease-in-out; }
   #photo-metadata.is-visible {
     opacity: 1; }
+  #photo-metadata .photo-metadata--link {
+    border: none; }
 
 #manikrathee {
   display: none;
@@ -2476,9 +2529,31 @@ code {
 
 .post-list {
   list-style-type: none; }
+  @media (min-width: 400px) {
+    .post-list {
+      margin-left: -3.1rem;
+      width: calc(100% + 6.2rem); } }
+  @media (min-width: 500px) {
+    .post-list {
+      margin-left: -4rem;
+      width: calc(100% + 8rem); } }
+  @media (min-width: 768px) {
+    .post-list {
+      margin-left: calc(40% - 73%);
+      width: 140%; } }
+  @media (min-width: 960px) {
+    .post-list {
+      margin-left: -20%;
+      width: 100%; } }
 
-.post-list--item + .post-list--item {
-  margin-top: 8rem; }
+.post-list--item {
+  display: block;
+  width: 100%; }
+  .post-list--item + .post-list--item {
+    margin-top: 8rem; }
+  .post-list--item img {
+    display: block;
+    width: 100%; }
 
 .post-list--link {
   position: relative;
@@ -2551,6 +2626,10 @@ code {
       width: 750px;
       height: 345px;
       margin-left: -8rem; } }
+  .page-photo img {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%; }
 
 .blog-index .page-photo,
 .photo-index .page-photo {
@@ -2859,9 +2938,10 @@ code {
     background: #35383D url(../img/about-heading-large.jpg) no-repeat 50% 50%; } }
 
 @media (min-width: 768px) {
-  #blog-posts {
-    width: 80%;
-    margin-left: auto; } }
+  #blog-posts,
+  #post-container {
+    width: auto;
+    margin-left: 20%; } }
 
 .cross-share {
   box-sizing: border-box; }

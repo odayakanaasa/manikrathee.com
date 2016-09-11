@@ -37,7 +37,8 @@ h6 {
 
 ul,
 a,
-p { // heading hierarchy
+p,
+blockqoute { // heading hierarchy
   & + h1,
   & + h2,
   & + h3,
@@ -51,6 +52,21 @@ p { // heading hierarchy
 ul {
   &.text-list {
     margin: 0 0 0 5rem;
+
+    li {
+      & + li {
+        margin-top: 0.4rem;
+      }
+    }
+
+    &--expanded {
+
+      li {
+        & + li {
+          margin-top: 1rem;
+        }
+      }
+    }
   }
 }
 
@@ -75,10 +91,7 @@ p {
 }
 
 em {
-  // font-family: $serif;
   font-style: italic;
-  // font-weight: 300;
-  opacity: 0.75;
 }
 
 
@@ -93,7 +106,7 @@ i {
   font-family: $sans;
 }
 
-[class*="heading-serif"] {
+[class*="serif"] {
   font-family: $serif;
 }
 
@@ -127,8 +140,56 @@ pre {
 }
 
 
-blockqoute {
+blockquote {
+  display: inline-block;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 3rem 2rem 0;
+  font-family: $serif;
+  @include font-size(18);
+  font-weight: 700;
+  line-height: 1.6;
+  box-shadow: $shadow-bottom-far-right;
+  transform: translate3d(0,0,0);
+  will-change: box-shadow;
+  @include transition(box-shadow 4s ease-in-out);
 
+  @include mq(500px) {
+    background: $white;
+    padding: 0 8rem 2rem 0;
+  }
+
+  @include mq(800px) {
+    width: auto;
+    margin: 4rem 0 4rem -15%;
+    @include font-size(22);
+    font-weight: 100;
+    line-height: 1.5;
+    box-shadow: $shadow-bottom-right;
+  }
+
+  .view-mode--dark & {
+    background: transparent;
+  }
+
+  cite {
+    display: block;
+    margin-top: 2rem 0;
+    @include font-size(14);
+    font-family: $sans;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include mq(800px) {
+      margin-top: 1rem;
+      margin-left: -5rem;
+    }
+  }
+
+  a {
+    border: none;
+  }
 }
 
 
