@@ -2344,7 +2344,7 @@ code {
     height: 100%;
     border-radius: 0;
     border-radius: 3px;
-    box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05); }
+    box-shadow: 0px 50px 65px 5px rgba(0, 0, 0, 0.175); }
   #main-footer p,
   #main-footer a {
     color: #fff; }
