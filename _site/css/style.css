@@ -2682,7 +2682,8 @@ code {
       overflow: hidden;
       width: 750px;
       height: 345px;
-      margin-left: -8rem; } }
+      margin-left: -8rem;
+      margin-bottom: 8rem; } }
   .page-photo img {
     max-width: 100%;
     min-width: 100%;
