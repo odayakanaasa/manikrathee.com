@@ -1853,6 +1853,8 @@ img {
     background-color: #2b2b2b; }
 
 [id=inner-container] {
+  position: relative;
+  z-index: 2;
   width: 100%;
   padding-bottom: 4rem;
   zoom: 1; }
@@ -1979,7 +1981,8 @@ em {
 i {
   font-style: normal; }
 
-[class*="heading"] {
+[class*="heading"],
+[class*="sans"] {
   font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif; }
 
 [class*="serif"] {
@@ -2024,6 +2027,8 @@ blockquote {
   transform: translate3d(0, 0, 0);
   will-change: box-shadow;
   transition: box-shadow 4s ease-in-out; }
+  blockquote.sans {
+    font-weight: 600; }
   @media (min-width: 500px) {
     blockquote {
       background: #fff;
@@ -2103,6 +2108,7 @@ code {
   justify-content: flex-start;
   overflow: hidden; }
   [id="page-header"] .global-header {
+    z-index: 2;
     opacity: 0.7;
     transition: opacity 0.35s ease-in-out; }
     .no-js [id="page-header"] .global-header:hover,
@@ -2179,7 +2185,58 @@ code {
     padding-left: 50px;
     align-self: flex-end; } }
 
+#header-bar {
+  position: absolute;
+  top: 140px;
+  left: -60px;
+  z-index: 0;
+  width: 100%;
+  -webkit-animation: 1s ease;
+  -moz-animation: 1s ease;
+  -ms-animation: 1s ease;
+  -o-animation: 1s ease;
+  animation: 1s ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight; }
+  @media (min-width: 800px) {
+    #header-bar {
+      -webkit-animation: 4s ease;
+      -moz-animation: 4s ease;
+      -ms-animation: 4s ease;
+      -o-animation: 4s ease;
+      animation: 4s ease;
+      -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+      -o-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-delay: 1s;
+      -moz-animation-delay: 1s;
+      -webkit-animation-name: fadeInDown;
+      -moz-animation-name: fadeInDown;
+      -o-animation-name: fadeInDown;
+      animation-name: fadeInDown; } }
+  #header-bar path {
+    stroke: #82e17c; }
+
+.blog-index #header-bar path {
+  stroke: #daa838; }
+
+.photo-index #header-bar path {
+  stroke: #b9ff47; }
+
 [id="page-title"] {
+  position: relative;
+  z-index: 2;
   margin: 6rem 0;
   font-family: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif;
   font-size: 28px;

@@ -12,6 +12,7 @@
   overflow: hidden;
 
   .global-header {
+    z-index: 2;
     opacity: 0.7;
     @include transition(opacity #{$transition});
 
@@ -127,7 +128,42 @@
   }
 }
 
+#header-bar {
+  //svg
+  position: absolute;
+  top: 140px;
+  left: -60px;
+  z-index: 0;
+  width: 100%;
+  @include animate-custom(1s);
+  @include fadeInRight;
+
+  @include mq(800px) {
+    @include animate-custom(4s);
+    @include fadeInDown;
+  }
+
+  path {
+      stroke: $highlight-mint;
+  }
+
+}
+
+.blog-index {
+  #header-bar path {
+    stroke: $highlight-orange;
+  }
+}
+.photo-index {
+  #header-bar path {
+    stroke: $highlight-neon-yellow;
+  }
+}
+
+
 [id="page-title"] {
+  position: relative;
+  z-index: 2;
   margin: ($spacer * 1.5) 0;
   font-family: $serif;
   @include font-size(28);

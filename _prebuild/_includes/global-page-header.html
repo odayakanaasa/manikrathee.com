@@ -57,13 +57,16 @@
 
     {% if page.title %}
     <div class="page-title-container">
+      {% if page.page-type == 'blog' %}
+      <svg id="header-bar" viewBox="0 0 269 419" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 402.5l236-386" stroke="#7393CA" stroke-width="24" fill="currentColor" fill-rule="evenodd" stroke-linecap="square" opacity=".2"/></svg>
+      {% endif %}
       <h1 id="page-title">
-        {{ page.title }}
+        {{ page.title | widont }}
       </h1>
     </div>
-    {% endif%}
+    {% endif %}
   </header>
 
   {% if page.project %}
   <p id="current">{{ page.project }}</p>
-  {% endif%}
+  {% endif %}

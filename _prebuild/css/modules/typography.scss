@@ -102,7 +102,8 @@ i {
 
 
 // Type system
-[class*="heading"] {
+[class*="heading"],
+[class*="sans"] {
   font-family: $sans;
 }
 
@@ -153,6 +154,12 @@ blockquote {
   transform: translate3d(0,0,0);
   will-change: box-shadow;
   @include transition(box-shadow 4s ease-in-out);
+
+  &.sans {
+    // .sans is set as a wildcard type class. This is an additional style that makes it fit the blog design better. Do not set fonts here.
+    font-weight: 600;
+  }
+
 
   @include mq(500px) {
     background: $white;
