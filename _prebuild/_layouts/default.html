@@ -1,11 +1,14 @@
 	{% include global-header.html %}
 
 	<body{% if page.body-id %} id="{{ page.body-id }}"{% endif %}
-      class="{{ page.body-class }}
+      class="
+        {{ page.body-class }}
         {% if page.page-type == 'blog' %}blog{% endif %}
         {% if page.page-subtype == 'blog-index' %}blog-index{% endif %}
+        {% if page.page-subtype == 'blog-post' %}blog-post{% endif %}
         {% if page.page-subtype == 'photo-index' %}photo-index{% endif %}
         {% if page.category == 'photo' %}photo-blog photo-blog-post{% endif %}
+        {{ page.title | slugify }}
       ">
 
     <div id="main" class="container" role="main">
@@ -20,9 +23,9 @@
              <source srcset="/img/{{ page.category }}{{ page.img }}" media="(min-width: 600px)">
              <img src="/img/{{ page.category }}{{ page.img }}" alt="{{ page.title }}">
             </picture>
-          {% endif%}
+          {% endif %}
           <article id="post-container">
-        {% endif%}
+        {% endif %}
 
 
         {{ content }}
@@ -41,8 +44,10 @@
 
     </div>
 
-    {% if page.page-type == 'blog' %}
-      {% include photoswipe.html %}
+    {% if false  %}
+      {% if page.page-type == 'blog' %}
+        {% include photoswipe.html %}
+      {% endif%}
     {% endif%}
 
     {% include global-footer.html %}

@@ -46,55 +46,55 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -moz-animation-delay: $time;
 }
 
-// @mixin bloop {
-//   -webkit-animation-name: bloop;
-//   -moz-animation-name: bloop;
-//   -ms-animation-name: bloop;
-//   -o-animation-name: bloop;
-//   animation-name: bloop;
-// }
+@mixin bloop {
+  -webkit-animation-name: bloop;
+  -moz-animation-name: bloop;
+  -ms-animation-name: bloop;
+  -o-animation-name: bloop;
+  animation-name: bloop;
+}
 
 
 
-// @-webkit-keyframes bloop {
-//     0% {-webkit-transform: scale(0), opacity(0);}
-//     10%, 20% {-webkit-transform: scale(0.2);}
-//     30% {-webkit-transform: scale(0.8), opacity(1);}
-//     40%, 50% {-webkit-transform: scale(1.05);}
-//     60%{-webkit-transform: scale(1.1);}
-//     70%, 80% {-webkit-transform: scale(1.05);}
-//     90%, 100% {-webkit-transform: scale(1);}
-// }
+@-webkit-keyframes bloop {
+    0% {-webkit-transform: scale(0), opacity(0);}
+    10%, 20% {-webkit-transform: scale(0.2);}
+    30% {-webkit-transform: scale(0.8), opacity(1);}
+    40%, 50% {-webkit-transform: scale(1.05);}
+    60%{-webkit-transform: scale(1.1);}
+    70%, 80% {-webkit-transform: scale(1.05);}
+    90%, 100% {-webkit-transform: scale(1);}
+}
 
-// @-moz-keyframes bloop {
-//     0% {-moz-transform: scale(0), opacity(0);}
-//     10%, 20% {-moz-transform: scale(0.2);}
-//     30% {-moz-transform: scale(0.8), opacity(1);}
-//     40%, 50% {-moz-transform: scale(1.05);}
-//     60%{-moz-transform: scale(1.1);}
-//     70%, 80% {-moz-transform: scale(1.05);}
-//     90%, 100% {-moz-transform: scale(1);}
-// }
+@-moz-keyframes bloop {
+    0% {-moz-transform: scale(0), opacity(0);}
+    10%, 20% {-moz-transform: scale(0.2);}
+    30% {-moz-transform: scale(0.8), opacity(1);}
+    40%, 50% {-moz-transform: scale(1.05);}
+    60%{-moz-transform: scale(1.1);}
+    70%, 80% {-moz-transform: scale(1.05);}
+    90%, 100% {-moz-transform: scale(1);}
+}
 
-// @-o-keyframes bloop {
-//     0% {-o-transform: scale(0), opacity(0);}
-//     10%, 20% {-o-transform: scale(0.2);}
-//     30% {-o-transform: scale(0.8), opacity(1);}
-//     40%, 50% {-o-transform: scale(1.05);}
-//     60%{-o-transform: scale(1.1);}
-//     70%, 80% {-o-transform: scale(1.05);}
-//     90%, 100% {-o-transform: scale(1);}
-// }
+@-o-keyframes bloop {
+    0% {-o-transform: scale(0), opacity(0);}
+    10%, 20% {-o-transform: scale(0.2);}
+    30% {-o-transform: scale(0.8), opacity(1);}
+    40%, 50% {-o-transform: scale(1.05);}
+    60%{-o-transform: scale(1.1);}
+    70%, 80% {-o-transform: scale(1.05);}
+    90%, 100% {-o-transform: scale(1);}
+}
 
-// @keyframes bloop {
-//     0% {transform: scale(0), opacity(0);}
-//     10%, 20% {transform: scale(0.2);}
-//     30% {transform: scale(0.8), opacity(1);}
-//     40%, 50% {transform: scale(1.05);}
-//     60%{transform: scale(1.1);}
-//     70%, 80% {transform: scale(1.05);}
-//     90%, 100% {transform: scale(1);}
-// }
+@keyframes bloop {
+    0% {transform: scale(0), opacity(0);}
+    10%, 20% {transform: scale(0.2);}
+    30% {transform: scale(0.8), opacity(1);}
+    40%, 50% {transform: scale(1.05);}
+    60%{transform: scale(1.1);}
+    70%, 80% {transform: scale(1.05);}
+    90%, 100% {transform: scale(1);}
+}
 
 
 

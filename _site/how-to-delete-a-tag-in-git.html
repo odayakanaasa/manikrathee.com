@@ -94,10 +94,13 @@ https://github.com/manikrathee/manikrathee.com
 
 	<body
       class="
+        
         blog
         
+        blog-post
         
         
+        how-to-delete-a-nbsp-git-nbsp-tag
       ">
 
     <div id="main" class="container" role="main">
@@ -202,43 +205,52 @@ for seo
 
 <p>If you use tags in your projects, you probably have encountered some issue (typos, perhaps) that forced you to remove the tag. Here are a few steps that will help you navigate the problems associated with local/remote tags and managing instances of each, along with a few steps help get you familiar with tags in general.</p>
 
-<p>For our code examples, let's use <pre class="inline">released/aug2016</pre> the tag name.</p>
+<p>For our code examples, let's use <pre class="set--inline">released/aug2016</pre> the tag name.</p>
 
 <h3 class="medium-heading">To create your&nbsp;tag:</h3>
-<pre><code class="json">
+<pre>
+  <code class="json">
   git tag released/aug2016
-</code></pre>
+  </code>
+</pre>
 
 <h3 class="medium-heading">To push local tags&nbsp;to&nbsp;remote:</h3>
-<pre><code class="git">
+<pre>
+  <code class="git">
   git push --tags
+  </code>
+</pre>
 
-</code></pre>
-
-<blockqoute>
-  <p>Another option, <a href="http://stackoverflow.com/questions/5195859/push-a-tag-to-a-remote-repository-using-git" title="StackOverflow: Push a tag to a remote repository using Git?" itemprop="url">as noted on StackOverflow</a>, links local and remote tags:</p>
-  <pre><code class="git">
-    git push --follow-tags
-
-  </code></pre>
-</blockqoute>
+<p>Another option, <a href="http://stackoverflow.com/questions/5195859/push-a-tag-to-a-remote-repository-using-git" title="StackOverflow: Push a tag to a remote repository using Git?" itemprop="url">as noted on StackOverflow</a>, links local and remote tags:</p>
+<pre>
+  <code class="git">
+  git push --follow-tags
+  </code>
+</pre>
 
 <h3 class="medium-heading">To delete a local&nbsp;tag:</h3>
-<pre><code class="git">
+<pre>
+  <code class="git">
   git tag -d released/aug2016
-
-</code></pre>
+  </code>
+</pre>
 
 <h3 class="medium-heading">To delete a remote&nbsp;tag:</h3>
 <p><em>Delete the tag locally, like above</em></p>
 
-<pre><code class="git">
+<pre>
+  <code class="git">
   git tag -d released/aug2016
 
   git push origin :refs/tags/released/aug2016
+  </code>
+</pre>
 
-</code></pre>
-
+<aside class="recommendation-card recommendation--a-book-apart-git-for-humans">
+  <img class="recommendation-card--image" src="/img/library/books/git-for-humans.jpg" alt="Git for Humans">
+  <h4 class="small-heading">Interested in learning more about&nbsp;git?</h4>
+  <p>Check out "<a href="https://abookapart.com/products/git-for-humans" title="Git for Humans" itemprop="url">Git for Humans</a>," by <a href="https://twitter.com/ddemaree" title="David Demaree on Twitter: @ddemaree" itemprop="url">David Demaree</a> and <a href="https://twitter.com/abookapart" title="A Book Apart on Twitter: @abookapart" itemprop="url">A&nbsp;Book&nbsp;Apart</a></p>
+</aside>
 
 
 
@@ -268,73 +280,6 @@ also, add "writing" or  "photos" category to the post title in these next/previo
 
       </section>
 
-    </div>
-
-    
-      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-
-        <!-- Background of PhotoSwipe.
-             It's a separate element as animating opacity is faster than rgba(). -->
-        <div class="pswp__bg"></div>
-
-        <!-- Slides wrapper with overflow:hidden. -->
-        <div class="pswp__scroll-wrap">
-
-            <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-            <div class="pswp__ui pswp__ui--hidden">
-
-                <div class="pswp__top-bar">
-
-                    <!--  Controls are self-explanatory. Order can be changed. -->
-
-                    <div class="pswp__counter"></div>
-
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                    <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                    <!-- element will get class pswp__preloader--active when preloader is running -->
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                          <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div>
-
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                </button>
-
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                </button>
-
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-
-            </div>
-
-        </div>
     </div>
 
     

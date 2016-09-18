@@ -1,11 +1,23 @@
 @charset "UTF-8";
 
 
-#blog-posts,
 #post-container {
   @include mq(768px) {
     width: auto;
+    max-width: 775px;
     margin-left: 20%;
+  }
+
+  @include mq(960px) {
+    margin-left: 25%;
+  }
+
+  @include mq(1140px) {
+    margin-left: 30%;
+  }
+
+  @include mq(1240px) {
+    margin-left: 35%;
   }
 }
 

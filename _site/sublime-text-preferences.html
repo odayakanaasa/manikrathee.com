@@ -20,7 +20,7 @@
   <meta name="robots" content="index,follow,archive">
   
     
-      <meta name="twitter:title"  property="og:title" content='Sublime Text: Customizing Your Workflow - a post by Manik Rathee | Designer, Engineer, Photographer' />
+      <meta name="twitter:title"  property="og:title" content='Sublime Text:<BR>Customizing Your&nbsp;Workflow - a post by Manik Rathee | Designer, Engineer, Photographer' />
     
   
 
@@ -43,7 +43,7 @@
   <title>
   
     
-      Sublime Text: Customizing Your Workflow - a post by Manik Rathee | Designer, Photographer
+      Sublime Text:<BR>Customizing Your&nbsp;Workflow - a post by Manik Rathee | Designer, Photographer
     
   
   </title>
@@ -94,10 +94,13 @@ https://github.com/manikrathee/manikrathee.com
 
 	<body
       class="
+        
         blog
         
+        blog-post
         
         
+        sublime-text-br-customizing-your-nbsp-workflow
       ">
 
     <div id="main" class="container" role="main">
@@ -172,7 +175,7 @@ https://github.com/manikrathee/manikrathee.com
       <svg id="header-bar" viewBox="0 0 269 419" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 402.5l236-386" stroke="#7393CA" stroke-width="24" fill="currentColor" fill-rule="evenodd" stroke-linecap="square" opacity=".2"/></svg>
       
       <h1 id="page-title">
-        Sublime Text: Customizing Your Workflow
+        Sublime Text:<BR>Customizing Your&nbsp;Workflow
       </h1>
     </div>
     
@@ -187,31 +190,23 @@ https://github.com/manikrathee/manikrathee.com
           
             <picture class="page-photo">
              <source srcset="/img/blog/20130727/feature.jpg" media="(min-width: 600px)">
-             <img src="/img/blog/20130727/feature.jpg" alt="Sublime Text: Customizing Your Workflow">
+             <img src="/img/blog/20130727/feature.jpg" alt="Sublime Text:<BR>Customizing Your&nbsp;Workflow">
             </picture>
           
           <article id="post-container">
         
 
 
-        <style>
-  @media (min-width: 768px) {
-    #post-title-container {
-      margin: -308px auto 182px auto;
-    }
-  }
-</style>
-
-<p>I have used a long list of code editors over the years, ranging from notepad on windows to Espresso on mac, to textmate and Sublime Text. Ultimately, SublimeText 2 came out in front because it is so simple to use and so exceptionally customizable.</p>
+        <p>I have used a long list of code editors over the years, ranging from notepad on windows to Espresso on mac, to textmate and Sublime Text. Ultimately, SublimeText 2 came out in front because it is so simple to use and so exceptionally customizable.</p>
 
 <p>With a field as broad as development, every individual's personal preferences can yeild varying effects on speed and productivity. I research quite a bit about improving my workflow and have built my SublimeText preference file up to be a pretty solid starting point for most people.</p>
 
-<h4>Favorite Snippets</h4>
+<h3 class="large-heading">Favorite Snippets</h3>
 
 <p><strong>Close_windows_when_empty</strong>  —  Closes the whole window if there are only empty tabs open when you hit cmd + w.
   <pre>
     <code class="json">
-      "close_windows_when_empty": true
+"close_windows_when_empty": true
     </code>
   </pre>
 </p>
@@ -219,7 +214,7 @@ https://github.com/manikrathee/manikrathee.com
 <p><strong>Color_scheme</strong>  —  Set a path to use a custom downloaded theme like <a href="https://github.com/manikrathee/appealr" title="Appealr, color scheme for Sublime Text" itemprop="url">Appealr</a>.
   <pre>
     <code class="json">
-      "color_scheme": "Packages/Appealr Color Scheme/appealr-color-scheme.tmTheme"
+"color_scheme": "Packages/Appealr Color Scheme/appealr-color-scheme.tmTheme"
     </code>
   </pre>
 </p>
@@ -227,14 +222,13 @@ https://github.com/manikrathee/manikrathee.com
 <p><strong>Folder_exclude_patterns</strong>  —  Set up folder exclusion for commonly used directories in your projects.
   <pre>
     <code class="json">
-      "folder_exclude_patterns":
-      [
-        ".git",
-        ".bundle",
-        ".sass-cache",
-        ".svn",
-        ".hg"
-      ]
+"folder_exclude_patterns": [
+  ".git",
+  ".bundle",
+  ".sass-cache",
+  ".svn",
+  ".hg"
+]
     </code>
   </pre>
 </p>
@@ -242,8 +236,8 @@ https://github.com/manikrathee/manikrathee.com
 <p><strong>Font_</strong>  —  Set type preferences for readability. Obviously, a monospaced font like <a href="http://blogs.adobe.com/typblography/2012/09/source-code-pro.html" title="Source Code pro" itemprop="url">Source Code Pro from Adobe</a> would be best.
   <pre>
     <code class="json">
-      "font_face": "Source Code Pro",
-      "font_size": 12.0
+"font_face": "Source Code Pro",
+"font_size": 12.0
     </code>
   </pre>
 </p>
@@ -251,7 +245,7 @@ https://github.com/manikrathee/manikrathee.com
 <p><strong>Highlight_line</strong>  —  Highlights the currently selected line based on styles in your theme. Incredibly useful if you use <a href="https://a248.e.akamai.net/camo.github.com/d15ec3fd5cce53bb1e95d738ab1fe81a4f5e91ac/687474703a2f2f662e636c2e6c792f6974656d732f31783175304e336a32553356334f33493031316c2f53637265656e25323053686f74253230323031332d30342d3233253230617425323031312e35372e3039253230414d2e706e67" title="Multipane screenshot" itemprop="url">multi-pane layouts</a>.
   <pre>
     <code class="json">
-      "highlight_line": true
+"highlight_line": true
     </code>
   </pre>
 </p>
@@ -259,7 +253,7 @@ https://github.com/manikrathee/manikrathee.com
 <p><strong>Highlight_modified_tabs</strong>  —  Another theme-based preference, but still useful. If you have multiple tabs open, one with un-saved changes will be highlighted.
   <pre>
     <code class="json">
-      "highlight_modified_tabs": true
+"highlight_modified_tabs": true
     </code>
   </pre>
 </p>
@@ -267,11 +261,11 @@ https://github.com/manikrathee/manikrathee.com
 <p><strong>Match_</strong>  —  On creation of an opening bracket/brace/etc, a closing one is inserted.
   <pre>
     <code class="json">
-      "match_brackets": true,
-      "match_brackets_angle": true,
-      "match_brackets_braces": true,
-      "match_brackets_content": true,
-      "match_brackets_square": true,
+"match_brackets": true,
+"match_brackets_angle": true,
+"match_brackets_braces": true,
+"match_brackets_content": true,
+"match_brackets_square": true,
     </code>
   </pre>
 </p>
@@ -279,8 +273,8 @@ https://github.com/manikrathee/manikrathee.com
 <p><strong>Scroll_</strong>  —  Allows you to scroll past the end of a file, which is necessary, especially if you hate extra empty lines at the end of a file like I do. Scroll speed to 2 is also helpful if you're impatient with large files.
   <pre>
     <code class="json">
-      "scroll_past_end": true,
-      "scroll_speed": 2,
+"scroll_past_end": true,
+"scroll_speed": 2,
     </code>
   </pre>
 </p>
@@ -288,66 +282,66 @@ https://github.com/manikrathee/manikrathee.com
 <p><strong>Translate_tabs_to_spaces</strong>  —  Simple. Add this. And if you're still using tabs in your code, quit it.
   <pre>
     <code class="json">
-      "translate_tabs_to_spaces": true
+"translate_tabs_to_spaces": true
     </code>
   </pre>
 </p>
 
-<h4>Complete Preferences:</h4>
+<h3 class="large-heading">Complete Preferences:</h3>
 <p>The <a href="https://github.com/manikrathee/sublime-text" title="ManikRathee's Sublime Text Preferences on GitHub" itemprop="url">full preferences file</a> is available on GitHub. My <a href="https://github.com/manikrathee/appealr" title="Appealr, color scheme for Sublime Text" itemprop="url">sublime text color scheme, Appealr,</a> is also available on GitHub.</p>
 
 <pre>
   <code class="json">
-    {
-      "bold_folder_labels": true,
-      "caret_style": "phase",
-      "close_windows_when_empty": true,
-      "color_scheme": "Packages/Appealr Color Scheme/appealr-color-scheme.tmTheme",
-      "draw_indent_guides": true,
-      "draw_white_space": "selection",
-      "file_exclude_patterns":
-      [
-        ".DS_Store",
-        "*.lib",
-        "*.log"
-      ],
-      "folder_exclude_patterns":
-      [
-        ".git",
-        ".bundle",
-        ".sass-cache",
-        ".svn",
-        ".hg"
-      ],
-      "font_face": "Source Code Pro",
-      "font_size": 12.0,
-      "highlight_line": true,
-      "highlight_modified_tabs": true,
-      "ignored_packages":
-      [
-        "Vintage",
-        "SublimeLinter"
-      ],
-      "line_padding_bottom": 3,
-      "line_padding_top": 3,
-      "match_brackets": true,
-      "match_brackets_angle": true,
-      "match_brackets_braces": true,
-      "match_brackets_content": true,
-      "match_brackets_square": true,
-      "open_files_in_new_window": false,
-      "remember_open_files": true,
-      "remember_open_folders": true,
-      "scroll_past_end": true,
-      "scroll_speed": 2,
-      "show_full_path": true,
-      "tab_size": 2,
-      "theme": "Nil.sublime-theme",
-      "translate_tabs_to_spaces": true,
-      "use_simple_full_screen": true,
-      "wide_caret": true,
-      "word_wrap": true
-    }
+{
+  "bold_folder_labels": true,
+  "caret_style": "phase",
+  "close_windows_when_empty": true,
+  "color_scheme": "Packages/Appealr Color Scheme/appealr-color-scheme.tmTheme",
+  "draw_indent_guides": true,
+  "draw_white_space": "selection",
+  "file_exclude_patterns":
+  [
+    ".DS_Store",
+    "*.lib",
+    "*.log"
+  ],
+  "folder_exclude_patterns":
+  [
+    ".git",
+    ".bundle",
+    ".sass-cache",
+    ".svn",
+    ".hg"
+  ],
+  "font_face": "Source Code Pro",
+  "font_size": 12.0,
+  "highlight_line": true,
+  "highlight_modified_tabs": true,
+  "ignored_packages":
+  [
+    "Vintage",
+    "SublimeLinter"
+  ],
+  "line_padding_bottom": 3,
+  "line_padding_top": 3,
+  "match_brackets": true,
+  "match_brackets_angle": true,
+  "match_brackets_braces": true,
+  "match_brackets_content": true,
+  "match_brackets_square": true,
+  "open_files_in_new_window": false,
+  "remember_open_files": true,
+  "remember_open_folders": true,
+  "scroll_past_end": true,
+  "scroll_speed": 2,
+  "show_full_path": true,
+  "tab_size": 2,
+  "theme": "Nil.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "use_simple_full_screen": true,
+  "wide_caret": true,
+  "word_wrap": true
+}
   </code>
 </pre>
 
@@ -379,73 +373,6 @@ also, add "writing" or  "photos" category to the post title in these next/previo
 
       </section>
 
-    </div>
-
-    
-      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-
-        <!-- Background of PhotoSwipe.
-             It's a separate element as animating opacity is faster than rgba(). -->
-        <div class="pswp__bg"></div>
-
-        <!-- Slides wrapper with overflow:hidden. -->
-        <div class="pswp__scroll-wrap">
-
-            <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-            <div class="pswp__ui pswp__ui--hidden">
-
-                <div class="pswp__top-bar">
-
-                    <!--  Controls are self-explanatory. Order can be changed. -->
-
-                    <div class="pswp__counter"></div>
-
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                    <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                    <!-- element will get class pswp__preloader--active when preloader is running -->
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                          <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div>
-
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                </button>
-
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                </button>
-
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-
-            </div>
-
-        </div>
     </div>
 
     

@@ -38,7 +38,11 @@ h6 {
 ul,
 a,
 p,
-blockqoute { // heading hierarchy
+pre,
+div,
+blockqoute,
+iframe,
+.video-wrapper { // heading hierarchy
   & + h1,
   & + h2,
   & + h3,
@@ -67,6 +71,11 @@ ul {
         }
       }
     }
+  }
+
+  ul {
+    // nested ULs
+    padding: 0.5rem 2rem;
   }
 }
 
@@ -127,18 +136,6 @@ i {
   margin-bottom: 1rem;
 }
 
-
-pre {
-  background: $dark-grey;
-  color: $off-white;
-  border-radius: $border-radius;
-  @include transition( background $transition, color $transition);
-
-  .view-mode--dark & {
-    background: $off-white;
-    color: $dark-grey;
-  }
-}
 
 
 blockquote {
@@ -202,26 +199,56 @@ blockquote {
 
 
 
-    pre {
-      display: inline-block;
-      margin-bottom: $spacer;
-      line-height: 3rem;
-      white-space: pre;
-      white-space: pre-wrap;
-      white-space: -moz-pre-wrap;
-      white-space: -o-pre-wrap;
+pre {
+  display: block;
+  width: auto;
+  margin: 0 0 $base-unit 0;
+  line-height: 1;
+  font-size: 0; // inline block fix
 
-      &.inline {
-        display: inline;
-        padding: 0 1rem;
-      }
-    }
+  @include mq(800px) {
+    width: 80%;
+    margin-left: -10rem;
+  }
 
-    code {
-      display: block;
-      line-height: 1.5rem;
-      white-space: pre;
-      white-space: pre-wrap;
-      white-space: -moz-pre-wrap;
-      white-space: -o-pre-wrap;
-    }
+  & + pre {
+    margin-top: $spacer * 1.5;
+  }
+}
+
+
+code {
+  display: block;
+  overflow-x: scroll;
+  width: 100%;
+  background: $dark-grey;
+  padding: 0 1rem;
+  @include font-size(12); // match p {}
+  line-height: 1.2;
+  color: $off-white;
+  white-space: pre-wrap;
+  white-space: pre;
+  border-radius: $border-radius;
+  @include box;
+  @include transition( background $transition, color $transition);
+
+  .view-mode--dark & {
+    background: $invert-body;
+    color: $invert-copy;
+  }
+
+  & + code {
+    margin-top: 1rem;
+    border-left: 2rem solid #454545;
+  }
+
+}
+
+figcaption,
+.code-subtext {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  @include font-size(14);
+}

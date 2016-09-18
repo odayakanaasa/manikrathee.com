@@ -131,6 +131,70 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+@-webkit-keyframes bloop {
+  0% {
+    -webkit-transform: scale(0), opacity(0); }
+  10%, 20% {
+    -webkit-transform: scale(0.2); }
+  30% {
+    -webkit-transform: scale(0.8), opacity(1); }
+  40%, 50% {
+    -webkit-transform: scale(1.05); }
+  60% {
+    -webkit-transform: scale(1.1); }
+  70%, 80% {
+    -webkit-transform: scale(1.05); }
+  90%, 100% {
+    -webkit-transform: scale(1); } }
+
+@-moz-keyframes bloop {
+  0% {
+    -moz-transform: scale(0), opacity(0); }
+  10%, 20% {
+    -moz-transform: scale(0.2); }
+  30% {
+    -moz-transform: scale(0.8), opacity(1); }
+  40%, 50% {
+    -moz-transform: scale(1.05); }
+  60% {
+    -moz-transform: scale(1.1); }
+  70%, 80% {
+    -moz-transform: scale(1.05); }
+  90%, 100% {
+    -moz-transform: scale(1); } }
+
+@-o-keyframes bloop {
+  0% {
+    -o-transform: scale(0), opacity(0); }
+  10%, 20% {
+    -o-transform: scale(0.2); }
+  30% {
+    -o-transform: scale(0.8), opacity(1); }
+  40%, 50% {
+    -o-transform: scale(1.05); }
+  60% {
+    -o-transform: scale(1.1); }
+  70%, 80% {
+    -o-transform: scale(1.05); }
+  90%, 100% {
+    -o-transform: scale(1); } }
+
+@keyframes bloop {
+  0% {
+    transform: scale(0), opacity(0); }
+  10%, 20% {
+    transform: scale(0.2); }
+  30% {
+    transform: scale(0.8), opacity(1); }
+  40%, 50% {
+    transform: scale(1.05); }
+  60% {
+    transform: scale(1.1); }
+  70%, 80% {
+    transform: scale(1.05); }
+  90%, 100% {
+    transform: scale(1); } }
+
 @-webkit-keyframes flipInX {
   0% {
     -webkit-transform: perspective(400px) rotateX(90deg);
@@ -1774,6 +1838,24 @@ dl, menu, ol, ul {
   margin: 0;
   padding: 0; }
 
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; }
+  @media (min-width: 1400px) {
+    .video-wrapper {
+      width: calc(100% + 20rem);
+      margin-left: -20rem;
+      padding-top: calc(56.35% + 20rem); } }
+
+iframe.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
+
 a {
   color: #505050;
   padding-bottom: 0;
@@ -1816,6 +1898,9 @@ a {
 
 img {
   max-width: 100%; }
+
+.set--inline {
+  display: inline; }
 
 [id=main] {
   display: block;
@@ -1941,12 +2026,36 @@ p + h3,
 p + h4,
 p + h5,
 p + h6,
+pre + h1,
+pre + h2,
+pre + h3,
+pre + h4,
+pre + h5,
+pre + h6,
+div + h1,
+div + h2,
+div + h3,
+div + h4,
+div + h5,
+div + h6,
 blockqoute + h1,
 blockqoute + h2,
 blockqoute + h3,
 blockqoute + h4,
 blockqoute + h5,
-blockqoute + h6 {
+blockqoute + h6,
+iframe + h1,
+iframe + h2,
+iframe + h3,
+iframe + h4,
+iframe + h5,
+iframe + h6,
+.video-wrapper + h1,
+.video-wrapper + h2,
+.video-wrapper + h3,
+.video-wrapper + h4,
+.video-wrapper + h5,
+.video-wrapper + h6 {
   margin-top: 6rem; }
 
 ul.text-list {
@@ -1955,6 +2064,9 @@ ul.text-list {
     margin-top: 0.4rem; }
   ul.text-list--expanded li + li {
     margin-top: 1rem; }
+
+ul ul {
+  padding: 0.5rem 2rem; }
 
 p {
   font-size: 17px;
@@ -2004,15 +2116,6 @@ i {
   font-weight: 700;
   margin-bottom: 1rem; }
 
-pre {
-  background: #505050;
-  color: #F7F7F7;
-  border-radius: 4px;
-  transition: background 0.35s ease-in-out, color 0.35s ease-in-out; }
-  .view-mode--dark pre {
-    background: #F7F7F7;
-    color: #505050; }
-
 blockquote {
   display: inline-block;
   width: 100%;
@@ -2061,24 +2164,48 @@ blockquote {
     border: none; }
 
 pre {
-  display: inline-block;
-  margin-bottom: 4rem;
-  line-height: 3rem;
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap; }
-  pre.inline {
-    display: inline;
-    padding: 0 1rem; }
+  display: block;
+  width: auto;
+  margin: 0 0 0.2rem 0;
+  line-height: 1;
+  font-size: 0; }
+  @media (min-width: 800px) {
+    pre {
+      width: 80%;
+      margin-left: -10rem; } }
+  pre + pre {
+    margin-top: 6rem; }
 
 code {
   display: block;
-  line-height: 1.5rem;
-  white-space: pre;
+  overflow-x: scroll;
+  width: 100%;
+  background: #505050;
+  padding: 0 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #F7F7F7;
   white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap; }
+  white-space: pre;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: background 0.35s ease-in-out, color 0.35s ease-in-out; }
+  .view-mode--dark code {
+    background: #1f1f1f;
+    color: #c7c7c7; }
+  code + code {
+    margin-top: 1rem;
+    border-left: 2rem solid #454545; }
+
+figcaption,
+.code-subtext {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-size: 14px;
+  font-size: 1.4rem; }
 
 .logo,
 .mountain-monday {
@@ -2105,8 +2232,7 @@ code {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-start;
-  overflow: hidden; }
+  justify-content: flex-start; }
   [id="page-header"] .global-header {
     z-index: 2;
     opacity: 0.7;
@@ -2180,17 +2306,28 @@ code {
       [id="who-is"] i {
         display: inline; } }
 
-@media (min-width: 800px) {
-  .page-title-container {
-    padding-left: 50px;
-    align-self: flex-end; } }
+.page-title-container {
+  position: relative; }
+  @media (min-width: 800px) {
+    .page-title-container {
+      max-width: 400px;
+      padding-left: 50px;
+      align-self: flex-end; } }
+  @media (min-width: 1200px) {
+    .page-title-container {
+      max-width: 100%;
+      padding-left: 25rem; } }
+  @media (min-width: 1240px) {
+    .page-title-container {
+      padding-left: 15rem; } }
 
 #header-bar {
   position: absolute;
-  top: 140px;
-  left: -60px;
   z-index: 0;
-  width: 100%;
+  top: 0rem;
+  right: 8rem;
+  z-index: 0;
+  width: 30rem;
   -webkit-animation: 1s ease;
   -moz-animation: 1s ease;
   -ms-animation: 1s ease;
@@ -2207,6 +2344,10 @@ code {
   -moz-animation-name: fadeInRight;
   -o-animation-name: fadeInRight;
   animation-name: fadeInRight; }
+  @media (min-width: 500px) {
+    #header-bar {
+      top: -14rem;
+      right: 19rem; } }
   @media (min-width: 800px) {
     #header-bar {
       -webkit-animation: 4s ease;
@@ -2221,12 +2362,16 @@ code {
       animation-fill-mode: both;
       -webkit-animation-delay: 1s;
       -moz-animation-delay: 1s;
-      -webkit-animation-name: fadeInDown;
-      -moz-animation-name: fadeInDown;
-      -o-animation-name: fadeInDown;
-      animation-name: fadeInDown; } }
+      -webkit-animation-name: flipInX;
+      -moz-animation-name: flipInX;
+      -o-animation-name: flipInX;
+      animation-name: flipInX; } }
   #header-bar path {
     stroke: #82e17c; }
+    .building-obama #header-bar path {
+      stroke: #157ba2; }
+    .wanderlust:-big-sur #header-bar path {
+      stroke: #ad901d; }
 
 .blog-index #header-bar path {
   stroke: #daa838; }
@@ -2247,12 +2392,20 @@ code {
     [id="page-title"] {
       width: 100%;
       margin: 0;
-      font-size: 50px;
-      font-size: 5rem;
+      font-size: 40px;
+      font-size: 4rem;
       line-height: 1.1;
       text-align: right; } }
+  @media (min-width: 1000px) {
+    [id="page-title"] {
+      font-size: 50px;
+      font-size: 5rem; } }
+  @media (min-width: 1200px) {
+    [id="page-title"] {
+      font-size: 60px;
+      font-size: 6rem; } }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   [id="page-header"] {
     flex-direction: row;
     justify-content: space-between; }
@@ -2265,7 +2418,7 @@ code {
   font-size: 1.6rem;
   line-height: 1;
   padding-bottom: 1px; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .main-nav-list {
       line-height: 2.6rem; } }
   .main-nav-list li,
@@ -2279,7 +2432,7 @@ code {
     margin-bottom: 1.5rem; }
     .main-nav-list li:last-child {
       margin-bottom: 0; }
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       .main-nav-list li {
         width: auto;
         float: none;
@@ -2297,7 +2450,7 @@ code {
     display: table; }
   .footer-nav:after {
     clear: both; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .footer-nav li {
       margin-bottom: 0.6rem; } }
   .no-js .footer-nav a:hover,
@@ -2312,7 +2465,7 @@ code {
 .nav-weekly-reads span {
   display: none; }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav-work-case-studies span,
   .nav-weekly-reads span {
     display: inline; } }
@@ -2597,21 +2750,25 @@ code {
         padding-right: 4rem; } }
 
 .post-list {
-  list-style-type: none; }
-  @media (min-width: 400px) {
+  list-style-type: none;
+  max-width: 550px; }
+  @media (min-width: 1140px) {
     .post-list {
+      max-width: 630px; } }
+  @media (min-width: 400px) {
+    .post-list--photo {
       margin-left: -3.1rem;
       width: calc(100% + 6.2rem); } }
   @media (min-width: 500px) {
-    .post-list {
+    .post-list--photo {
       margin-left: -4rem;
       width: calc(100% + 8rem); } }
   @media (min-width: 768px) {
-    .post-list {
+    .post-list--photo {
       margin-left: calc(40% - 73%);
       width: 140%; } }
   @media (min-width: 960px) {
-    .post-list {
+    .post-list--photo {
       margin-left: -20%;
       width: 100%; } }
 
@@ -2664,6 +2821,30 @@ code {
   font-weight: bold;
   transition: font-weight 0.35s ease-in-out; }
 
+.recommendation-card {
+  display: inline-block;
+  background: #F7F7F7;
+  margin-top: 8rem;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #EFF0F0;
+  border-radius: 4px; }
+  @media (min-width: 500px) {
+    .recommendation-card {
+      padding: 6rem;
+      text-align: left; } }
+  .recommendation-card p {
+    margin-bottom: 0; }
+
+.recommendation-card--image {
+  display: block;
+  background: #F7F7F7;
+  width: 100px;
+  margin: -6rem auto 2rem;
+  padding: 1rem;
+  border: 1px solid #EFF0F0;
+  border-radius: 4px; }
+
 .blockquote-list {
   list-style-type: none; }
   @media (min-width: 800px) {
@@ -2684,7 +2865,7 @@ code {
   display: block;
   width: 100%;
   max-width: 100%;
-  margin: 0 0 2rem 0; }
+  margin: 0 0 6rem 0; }
   @media (min-width: 500px) {
     .page-photo {
       margin-left: -4rem;
@@ -3008,10 +3189,22 @@ code {
     background: #35383D url(../img/about-heading-large.jpg) no-repeat 50% 50%; } }
 
 @media (min-width: 768px) {
-  #blog-posts,
   #post-container {
     width: auto;
+    max-width: 775px;
     margin-left: 20%; } }
+
+@media (min-width: 960px) {
+  #post-container {
+    margin-left: 25%; } }
+
+@media (min-width: 1140px) {
+  #post-container {
+    margin-left: 30%; } }
+
+@media (min-width: 1240px) {
+  #post-container {
+    margin-left: 35%; } }
 
 .cross-share {
   box-sizing: border-box; }
@@ -3033,64 +3226,64 @@ code {
   .blog-post.wanderlust-big-sur-20131105 #post-title-container {
     margin-bottom: 151px; } }
 
-.blog-post.uber-vs-taxis-20130731 .comparison, .blog-post.uber-vs-taxis-20130731 .question, .blog-post.uber-vs-taxis-20130731 .left, .blog-post.uber-vs-taxis-20130731 .right {
+.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .comparison, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.blog-post.uber-vs-taxis-20130731 .comparison {
+.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .comparison {
   max-width: 100%;
   overflow: hidden;
   clear: both; }
 
-.blog-post.uber-vs-taxis-20130731 .question {
+.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question {
   overflow: hidden;
   clear: both;
   padding: 75px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  .blog-post.uber-vs-taxis-20130731 .question:last-child {
+  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question:last-child {
     margin-bottom: 0;
     border-bottom: none; }
-  .blog-post.uber-vs-taxis-20130731 .question h4 {
+  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question h4 {
     font-size: 1.5em;
     width: 100%;
     margin: 0 0 10px 0;
     text-align: center; }
-  .blog-post.uber-vs-taxis-20130731 .question p {
+  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question p {
     margin: 0; }
-    .blog-post.uber-vs-taxis-20130731 .question p strong {
+    .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question p strong {
       margin: 1em 0 0 0;
       font-size: 1em;
       opacity: 0.7; }
 
-.blog-post.uber-vs-taxis-20130731 .left {
+.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left {
   float: left;
   line-height: 1.4; }
 
-.blog-post.uber-vs-taxis-20130731 .right {
+.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
   float: right;
   line-height: 1.4;
   margin-top: 35px; }
 
 @media (min-width: 767px) {
-  .blog-post.uber-vs-taxis-20130731 #post-title-container {
+  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups #post-title-container {
     margin: -300px auto 174px auto; }
-    .blog-post.uber-vs-taxis-20130731 #post-title-container #post-title {
+    .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups #post-title-container #post-title {
       font-size: 80px; }
-  .blog-post.uber-vs-taxis-20130731 .question {
+  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question {
     margin: 100px 0;
     padding: 0;
     border: none; }
-    .blog-post.uber-vs-taxis-20130731 .question h4 {
+    .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question h4 {
       font-size: 2em; }
-    .blog-post.uber-vs-taxis-20130731 .question:last-child {
+    .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question:last-child {
       margin-bottom: 50px; }
-  .blog-post.uber-vs-taxis-20130731 .left, .blog-post.uber-vs-taxis-20130731 .right {
+  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
     padding: 0 20px; }
-  .blog-post.uber-vs-taxis-20130731 .left {
+  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left {
     width: 50%;
     border-right: 1px solid rgba(0, 0, 0, 0.1); }
-  .blog-post.uber-vs-taxis-20130731 .right {
+  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
     width: 50%;
     margin-top: 0; } }
 

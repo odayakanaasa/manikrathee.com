@@ -20,7 +20,7 @@
   <meta name="robots" content="index,follow,archive">
   
     
-      <meta name="twitter:title"  property="og:title" content='How I Use: TextExpander - a post by Manik Rathee | Designer, Engineer, Photographer' />
+      <meta name="twitter:title"  property="og:title" content='How I Use:<br>TextExpander - a post by Manik Rathee | Designer, Engineer, Photographer' />
     
   
 
@@ -43,7 +43,7 @@
   <title>
   
     
-      How I Use: TextExpander - a post by Manik Rathee | Designer, Photographer
+      How I Use:<br>TextExpander - a post by Manik Rathee | Designer, Photographer
     
   
   </title>
@@ -94,10 +94,13 @@ https://github.com/manikrathee/manikrathee.com
 
 	<body
       class="
+        
         blog
         
+        blog-post
         
         
+        how-i-use-br-textexpander
       ">
 
     <div id="main" class="container" role="main">
@@ -172,7 +175,7 @@ https://github.com/manikrathee/manikrathee.com
       <svg id="header-bar" viewBox="0 0 269 419" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 402.5l236-386" stroke="#7393CA" stroke-width="24" fill="currentColor" fill-rule="evenodd" stroke-linecap="square" opacity=".2"/></svg>
       
       <h1 id="page-title">
-        How I Use: TextExpander
+        How I Use:<br>TextExpander
       </h1>
     </div>
     
@@ -187,7 +190,7 @@ https://github.com/manikrathee/manikrathee.com
           
             <picture class="page-photo">
              <source srcset="/img/blog/20150312/feature.jpg" media="(min-width: 600px)">
-             <img src="/img/blog/20150312/feature.jpg" alt="How I Use: TextExpander">
+             <img src="/img/blog/20150312/feature.jpg" alt="How I Use:<br>TextExpander">
             </picture>
           
           <article id="post-container">
@@ -203,7 +206,7 @@ https://github.com/manikrathee/manikrathee.com
 <p>Before we dive in, there's a really simple way to figure out if TextExpander is for you. I'm writing this blog post on my personal Mac Book Air, which I have owned for about a year. I installed TextExpander on day-one, so it is safe to assume that I have used it, on this machine, for a year as well. In that time, I have expanded upwards of <em>forty-eight thousand snippets</em> and saved <strong>~ 31 hours</strong> (Based on typing approx. 110 words&ndash;per&ndash;minute, which many typing race car games have confirmed to be accurate). If you were as blown away reading that stat as I was writing it, well, let's begin.</p>
 
 <p>After using this for several years, I found a few sources of truth:
-  <ul>
+  <ul class="text-list">
     <li>Group your snippets logically. Development related ones should be broken into tool groups and then scoped to expand only to that group.</li>
     <li>Utilities should be prefixed so they don't inadvertantly expand.</li>
     <li>Your prefixes and groups <em>will</em> change, so don't get too set on the first iteration.</li>
@@ -211,9 +214,9 @@ https://github.com/manikrathee/manikrathee.com
   </ul>
 </p>
 
-<h3 id="basics">The Basics</h3>
+<h3 class="large-heading" id="basics">The Basics</h3>
 
-<h4 id="core">Core</h4>
+<h3 class="medium-heading" id="core">Core</h3>
 <p>These are simple snippets for typos, addresses and more. Most snippets in this category are prefixed with 'c'. A few examples:</p>
 <pre>
   <code>
@@ -243,7 +246,7 @@ https://github.com/manikrathee/manikrathee.com
 </pre>
 
 
-<h4 class="dayone">DayOne</h4>
+<h3 class="medium-heading" class="dayone">DayOne</h3>
 <p>I use DayOne as a journal/scrapbook combination by saving screenshots, photos and bits of text every day. To help organize it and bring some structure, I created a few snippets that expand to a set of dynamic tags.</p>
 <pre>
   <code>
@@ -272,7 +275,7 @@ https://github.com/manikrathee/manikrathee.com
 </pre>
 <span class="code-subtext">The '&percnt;|' is where the cursor will jump after the snippet is completely expanded.</span>
 
-<h4 id="git">Git</h4>
+<h3 class="medium-heading" id="git">Git</h3>
 <p>I scope this to only expand in <em>Terminal</em>, and because of this application-specific scope, I can be more liberal with my snippet abbreviations.</p>
 <pre>
   <code>
@@ -300,7 +303,7 @@ https://github.com/manikrathee/manikrathee.com
   </code>
 </pre>
 
-<h4 id="characters">Characters</h4>
+<h3 class="medium-heading" id="characters">Characters</h3>
 <p>Sometimes you need to express yourself with intricate special characters. Instead of googling them every time, why not save them to TE and set phrases to create them?</p>
 <pre>
   <code>
@@ -336,7 +339,7 @@ https://github.com/manikrathee/manikrathee.com
 </pre>
 <span class="code-subtext">This is the symbol I use to denote referral links. Great for tweets, TinyLetters, etc.</span>
 
-<h4 id="development">Development</h4>
+<h3 class="medium-heading" id="development">Development</h3>
 <p>HTML, CSS, Javascript, Ruby, etc.</p>
 <pre>
   <code>
@@ -421,7 +424,7 @@ https://github.com/manikrathee/manikrathee.com
   </code>
 </pre>
 
-<h3 id="advanced">Advanced Snippets</h3>
+<h3 class="large-heading" id="advanced">Advanced Snippets</h3>
 <p>After getting an understanding of the snippets you need, the text you type repeatedly every day, the naming conventions for snippet abbreviations, etc, you'll start coming up with more clever uses.</p>
 <p>My first <em>clever</em> use was for canned emails when I was a freelancer. I was able to prepare canned paragraphs, but to make the emails custom, I needed to add text here and there after expansion. Instead of manually changing it each time, I created a snippet that uses the <em>fill in</em> attribute. This lets you add a custom input field for TextExpander to process.</p>
 <p>Code example? If you want to output a CSS 3 transition mixin for Sass, you can create a snippet like this:</p>
@@ -449,7 +452,7 @@ https://github.com/manikrathee/manikrathee.com
   <figcaption class="image-cap">Advanced Fill-In Window</figcaption>
 </p>
 
-<h4>Bottom line</h4>
+<h3 class="large-heading">Bottom line</h3>
 <p>If there's something you regularly type more than once, you should consider making a snippet out of it. The time you save with each snippet will add up faster than you think.</p>
 <p class="closing-notes"><em>You can see some of my snippets <a href="https://github.com/manikrathee/text-expander" title="Manik's TextExpander Snippets" itemprop="url">here</a>, but be warned: they haven't been updated in ages. Use them as a loose template.</em></p>
 
@@ -482,73 +485,6 @@ also, add "writing" or  "photos" category to the post title in these next/previo
 
       </section>
 
-    </div>
-
-    
-      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-
-        <!-- Background of PhotoSwipe.
-             It's a separate element as animating opacity is faster than rgba(). -->
-        <div class="pswp__bg"></div>
-
-        <!-- Slides wrapper with overflow:hidden. -->
-        <div class="pswp__scroll-wrap">
-
-            <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-            <div class="pswp__ui pswp__ui--hidden">
-
-                <div class="pswp__top-bar">
-
-                    <!--  Controls are self-explanatory. Order can be changed. -->
-
-                    <div class="pswp__counter"></div>
-
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                    <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                    <!-- element will get class pswp__preloader--active when preloader is running -->
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                          <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div>
-
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                </button>
-
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                </button>
-
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-
-            </div>
-
-        </div>
     </div>
 
     

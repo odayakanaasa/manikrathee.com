@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+.recommendation-card {
+  display: inline-block;
+  background: $off-white;
+  margin-top: 8rem;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid $light-grey;
+  border-radius: $border-radius;
+
+  @include mq(500px) {
+    padding: 6rem;
+    text-align: left;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.recommendation-card--image {
+  display: block;
+  background: $off-white;
+  width: 100px;
+  margin: -6rem auto 2rem;
+  padding: 1rem;
+  border: 1px solid $light-grey;
+  border-radius: $border-radius;
+}

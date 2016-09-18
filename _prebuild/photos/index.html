@@ -10,7 +10,7 @@ page-subtype: photo-index
 <ol id="photo-posts" class="post-list">
   {% for post in site.categories.photos %}
   <li class="post-list--item">
-    <img class="post-list--photo" src="{{ post.img }}" alt="{{ post.title }}">
+    <!-- <img class="post-list--photo" src="/img/{{ post.category }}{{ post.img }}" alt="{{ post.title }}"> -->
     <a id="{{ post.slug }}" class="post-list--link no-border" href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
       <p class="post-list--date">{{ post.date | date: "%B %d, %Y" }}</p>
       <h2 class="post-list--title">
@@ -23,16 +23,11 @@ page-subtype: photo-index
       </p>
 
       <button class="expand-content read-more mobile-cta">
-        Read more
+        Explore the post
       </button>
     </a>
   </li>
   {% endfor %}
 </ol>
 
-<div class="cross-share">
-  you are here
-  photography
-
-  Looking for writing?
-</div>
+<div class="cross-share"></div>

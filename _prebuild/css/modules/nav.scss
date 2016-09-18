@@ -5,7 +5,7 @@
   line-height: 1;
   padding-bottom: 1px;
 
-  @include mq(768px) {
+  @include mq(800px) {
     line-height: 2.6rem;
   }
 
@@ -26,7 +26,7 @@
       margin-bottom: 0;
     }
 
-    @include mq(768px) {
+    @include mq(800px) {
       width: auto;
       float: none;
       margin-bottom: 0;
@@ -45,7 +45,7 @@
   // shared styles with .main-nav-list > li above
   li {
 
-    @include mq(768px) {
+    @include mq(800px) {
       margin-bottom: $standard-unit;
     }
   }
@@ -65,7 +65,7 @@
     display: none;
   }
 
-  @include mq(768px) {
+  @include mq(800px) {
     span {
       display: inline;
     }

@@ -9,7 +9,6 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  overflow: hidden;
 
   .global-header {
     z-index: 2;
@@ -121,31 +120,63 @@
 
 
 .page-title-container {
+  position: relative;
+
   @include mq(800px) {
-    // width: 50%;
+    max-width: 400px;
     padding-left: 50px;
     align-self: flex-end;
+  }
+
+  @include mq(1200px) {
+    max-width: 100%;
+    padding-left: 25rem;
+  }
+
+  @include mq(1240px) {
+    padding-left: 15rem;
   }
 }
 
 #header-bar {
   //svg
   position: absolute;
-  top: 140px;
-  left: -60px;
   z-index: 0;
-  width: 100%;
+
+  top: 0rem;
+  right: 8rem;
+
+
+  z-index: 0;
+  width: 30rem;
   @include animate-custom(1s);
   @include fadeInRight;
 
+  @include mq(500px) {
+    top: -14rem;
+    right: 19rem;
+  }
+
   @include mq(800px) {
     @include animate-custom(4s);
-    @include fadeInDown;
+    @include flipInX;
   }
 
   path {
-      stroke: $highlight-mint;
+    stroke: $highlight-mint;
+
+    .building-obama & {
+      stroke: #157ba2;
+    }
+
+    .wanderlust:-big-sur & {
+      stroke: #ad901d;
+    }
+
+
   }
+
+
 
 }
 
@@ -173,9 +204,17 @@
   @include mq(800px) {
     width: 100%;
     margin: 0;
-    @include font-size(50);
+    @include font-size(40);
     line-height: 1.1;
     text-align: right;
+  }
+
+  @include mq(1000px) {
+    @include font-size(50);
+  }
+
+  @include mq(1200px) {
+    @include font-size(60);
   }
 }
 
@@ -185,7 +224,7 @@
 
 
 
-@include mq(768px) {
+@include mq(800px) {
 
 
   [id="page-header"] {

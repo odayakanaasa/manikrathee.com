@@ -167,10 +167,10 @@ module.exports = function(grunt) {
 
     watch: {
       template: {
-        files: '_prebuild/**/*.html',
+        files: ['_prebuild/**/*.html','_prebuild/js/**/*.js'], // includes scripts because they need to be moved then concat
         tasks: ['jekyll', 'sass', 'concat'],
         options: {
-          debounceDelay: 450,
+          debounceDelay: 250,
         },
       },
       // main: {
@@ -185,16 +185,16 @@ module.exports = function(grunt) {
         files: '_prebuild/css/**/*.scss',
         tasks: ['sass'],
         options: {
-          debounceDelay: 450,
+          debounceDelay: 200,
         },
       },
-      scripts: {
-        files: '_prebuild/js/**/*.js',
-        tasks: ['concat'],
-        options: {
-          debounceDelay: 450,
-        },
-      },
+      // scripts: {
+      //   files: '_prebuild/js/**/*.js',
+      //   tasks: ['concat'],
+      //   options: {
+      //     debounceDelay: 200,
+      //   },
+      // },
     },
 
     pagespeed: {
@@ -252,7 +252,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('w',
     [
-      'jekyll','sass','autoprefixer','concat','watch'
+      'jekyll','sass','autoprefixer','concat','pagespeed','watch'
     ]
   );
 

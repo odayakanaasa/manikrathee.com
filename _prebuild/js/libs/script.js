@@ -301,8 +301,8 @@ $(document).ready(function() {
   //   return Math.round(parseFloat(value));
   // });
 
-  if ( body.find('#loader') ) {
-    $('#loader li img').lazyload({
+  if ( body.find('.progressively-loaded') ) {
+    $('.progressively-loaded li img').lazyload({
       effect : "fadeIn",
       threshold : 50
     });
