@@ -14,15 +14,18 @@
     padding: 6rem;
     text-align: left;
   }
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .recommendation-card--image {
   display: block;
   background: $off-white;
-  padding: 1rem;
-  background: red;
   width: 100px;
   margin: -6rem auto 2rem;
+  padding: 1rem;
   border: 1px solid $light-grey;
   border-radius: $border-radius;
 }
