@@ -1862,21 +1862,13 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #CBCBCB;
   -webkit-tap-highlight-color: #505050;
-  transition: color 0.15s ease-in-out, border 0.15s ease-in-out; }
-  .no-js a:hover,
-  .no-js a:focus,
-  .js.no-touch a:hover,
-  .js.no-touch a:focus,
-  .js.touch a:active {
+  transition: color 0.35s ease-in-out, border 0.35s ease-in-out; }
+  a:hover {
     color: #000;
     border-color: #000; }
   a .invert {
     color: #A2A2A2; }
-  .no-js a.invert-hover:hover,
-  .no-js a.invert-hover:focus,
-  .js.no-touch a.invert-hover:hover,
-  .js.no-touch a.invert-hover:focus,
-  .js.touch a.invert-hover:active {
+  a.invert-hover:hover {
     color: #fff;
     border-color: #fff; }
   a.no-border {
@@ -1884,11 +1876,7 @@ a {
   .view-mode--dark a {
     color: #c7c7c7;
     border-color: #a1a1a1; }
-    .no-js .view-mode--dark a:hover,
-    .no-js .view-mode--dark a:focus,
-    .js.no-touch .view-mode--dark a:hover,
-    .js.no-touch .view-mode--dark a:focus,
-    .js.touch .view-mode--dark a:active {
+    .view-mode--dark a:hover {
       color: #fff;
       border-color: #fff; }
 
@@ -2232,11 +2220,7 @@ figcaption,
     z-index: 2;
     opacity: 0.7;
     transition: opacity 0.35s ease-in-out; }
-    .no-js [id="page-header"] .global-header:hover,
-    .no-js [id="page-header"] .global-header:focus,
-    .js.no-touch [id="page-header"] .global-header:hover,
-    .js.no-touch [id="page-header"] .global-header:focus,
-    .js.touch [id="page-header"] .global-header:active {
+    [id="page-header"] .global-header:hover {
       opacity: 1; }
     #home [id="page-header"] .global-header {
       opacity: 1; }
@@ -2448,11 +2432,7 @@ figcaption,
   @media (min-width: 800px) {
     .footer-nav li {
       margin-bottom: 0.6rem; } }
-  .no-js .footer-nav a:hover,
-  .no-js .footer-nav a:focus,
-  .js.no-touch .footer-nav a:hover,
-  .js.no-touch .footer-nav a:focus,
-  .js.touch .footer-nav a:active {
+  .footer-nav a:hover {
     color: #A2A2A2;
     border-color: #A2A2A2; }
 
@@ -2495,11 +2475,7 @@ figcaption,
   #main-footer p,
   #main-footer a {
     color: #fff; }
-  .no-js #main-footer a:hover,
-  .no-js #main-footer a:focus,
-  .js.no-touch #main-footer a:hover,
-  .js.no-touch #main-footer a:focus,
-  .js.touch #main-footer a:active {
+  #main-footer a:hover {
     color: #A2A2A2;
     border-color: #A2A2A2; }
   #main-footer .mountain-monday {
@@ -2642,7 +2618,7 @@ figcaption,
     #main-footer .footer-tout .icon {
       display: inline-block;
       vertical-align: top;
-      transition: opacity 0.15s ease-in-out; }
+      transition: opacity 0.35s ease-in-out; }
     #main-footer .footer-tout figcaption {
       display: inline-block;
       width: calc(100% - 60px);
@@ -2817,11 +2793,7 @@ figcaption,
         transform: translate(0, -10%);
         opacity: 0;
         transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1), transform 1.25s cubic-bezier(0.19, 1, 0.22, 1); }
-      .no-js .post-list--link:hover:after,
-      .no-js .post-list--link:focus:after,
-      .js.no-touch .post-list--link:hover:after,
-      .js.no-touch .post-list--link:focus:after,
-      .js.touch .post-list--link:active:after {
+      .post-list--link:hover:after {
         opacity: 1;
         transform: translate(0, 0); } }
 
@@ -2939,11 +2911,7 @@ figcaption,
     box-shadow: 0 50px 65px 5px rgba(0, 0, 0, 0.1);
     opacity: 0.8;
     transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1); }
-  .no-js .shadow-tout:hover:after,
-  .no-js .shadow-tout:focus:after,
-  .js.no-touch .shadow-tout:hover:after,
-  .js.no-touch .shadow-tout:focus:after,
-  .js.touch .shadow-tout:active:after {
+  .shadow-tout:hover:after {
     opacity: 1; }
 
 #net-awards {
@@ -5076,7 +5044,7 @@ body.error #form-fields ul#amounts .amount-cont {
 [id=subscription] input {
   display: block;
   border: 1px solid #b3b3b3;
-  transition: border 0.25s ease-in-out; }
+  transition: border 0.35s ease-in-out; }
   [id=subscription] input:focus, [id=subscription] input:active {
     border-bottom: 2px solid #b3b3b3; }
   [id=subscription] input:focus {

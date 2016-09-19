@@ -44,7 +44,7 @@
   input {
     display: block;
     border: 1px solid darken(#fff, 30%);
-    @include transition(border 0.25s ease-in-out);
+    @include transition(border $transition);
 
     &:focus, &:active {
       border-bottom: 2px solid darken(#fff, 30%);

@@ -96,9 +96,9 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #CBCBCB;
   -webkit-tap-highlight-color: $dark-grey;
-  @include transition( (color $anchor-hover-transition),(border $anchor-hover-transition) );
+  @include transition( (color $transition),(border $transition) );
 
-  @include touch-hover() {
+  &:hover {
     color: $black;
     border-color: $black;
   }
@@ -108,7 +108,7 @@ a {
   }
 
   &.invert-hover  {
-    @include touch-hover() {
+    &:hover {
       color: $white;
       border-color: $white;
     }
@@ -122,7 +122,7 @@ a {
     color: $invert-copy;
     border-color: darken($invert-copy, 15%);
 
-    @include touch-hover() {
+    &:hover {
       color: $white;
       border-color: $white;
     }

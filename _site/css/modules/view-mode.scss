@@ -3,8 +3,13 @@
 
 #view-mode--container {
   position: absolute;
-  right: 10px;
-  outline: 1px solid red;
+  top: 1rem;
+  right: 1rem;
+
+  @include mq(960px) {
+    top: -5.6rem;
+    right: 2rem;
+  }
 }
 
 .view-mode--toggle-label {
@@ -13,9 +18,13 @@
 
 .view-mode--icon {
   display: block;
-  @include size(30px, 30px);
+  @include size(25px, 25px);
   cursor: pointer;
   @include ir;
+
+  @include mq(960px) {
+    @include size(30px, 30px);
+  }
 
   &:hover {
     svg {
@@ -38,16 +47,11 @@
       @include transition( fill $transition );
 
       .view-mode--dark & {
-        fill: $grey;
+        // fill: $grey;
       }
     }
   }
 }
-
-#view-mode--toggle:checked + .view-mode--toggle-label {
-  background: red;
-}
-
 
 #view-mode--toggle { // radio input
   position: absolute;

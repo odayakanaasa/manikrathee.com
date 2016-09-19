@@ -268,7 +268,7 @@
         display: inline-block;
         vertical-align: top;
 
-        @include transition(opacity $anchor-hover-transition);
+        @include transition(opacity $transition);
       }
 
       figcaption {

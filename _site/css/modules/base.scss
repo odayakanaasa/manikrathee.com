@@ -96,7 +96,7 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #CBCBCB;
   -webkit-tap-highlight-color: $dark-grey;
-  @include transition( (color $anchor-hover-transition),(border $anchor-hover-transition) );
+  @include transition( (color $transition),(border $transition) );
 
   @include touch-hover() {
     color: $black;
