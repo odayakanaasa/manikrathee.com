@@ -1827,7 +1827,7 @@ body {
     color: #c7c7c7; }
   @media (min-width: 500px) {
     body {
-      padding: 4rem 4rem 70px 4rem; }
+      padding: 4rem 4rem 0; }
       body:after {
         opacity: 1; } }
   @media (min-width: 960px) {
@@ -2032,12 +2032,6 @@ pre + h3,
 pre + h4,
 pre + h5,
 pre + h6,
-div + h1,
-div + h2,
-div + h3,
-div + h4,
-div + h5,
-div + h6,
 blockqoute + h1,
 blockqoute + h2,
 blockqoute + h3,
@@ -2232,7 +2226,8 @@ figcaption,
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  padding-top: 4rem; }
   [id="page-header"] .global-header {
     z-index: 2;
     opacity: 0.7;
@@ -2268,9 +2263,6 @@ figcaption,
       margin: 4.5rem 0 0 0;
       padding: 0;
       border: none; } }
-  .view-mode--dark [id="who-is"] {
-    border-top: 2px dotted rgba(255, 255, 255, 0.1);
-    border-bottom: 2px dotted rgba(255, 255, 255, 0.1); }
   [id="who-is"] .current-title {
     font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
     font-weight: 500;
@@ -2279,6 +2271,8 @@ figcaption,
     margin-bottom: 4rem; }
   [id="who-is"] .previous-container {
     color: #505050; }
+    .view-mode--dark [id="who-is"] .previous-container {
+      color: #EFF0F0; }
   [id="who-is"] .previous-heading {
     margin: 0 0 0.5rem 0;
     text-transform: uppercase;
@@ -2408,7 +2402,8 @@ figcaption,
 @media (min-width: 800px) {
   [id="page-header"] {
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding-top: 0; }
     [id="page-header"] .global-header {
       width: 30%;
       min-width: 200px; } }
@@ -2593,6 +2588,12 @@ figcaption,
     margin-top: 10px;
     text-align: center; }
 
+#weekly-reads-tout {
+  display: block;
+  width: 230px;
+  margin: 1rem auto 0;
+  text-align: center; }
+
 #photo-metadata {
   opacity: 0;
   transition: opacity 1s ease-in-out; }
@@ -2656,7 +2657,9 @@ figcaption,
     #main-footer .main-nav-list {
       line-height: 2.2rem; }
       #main-footer .main-nav-list li {
-        width: auto; }
+        width: auto;
+        float: none;
+        margin-bottom: 0.45rem; }
         #main-footer .main-nav-list li:nth-child(even) {
           margin-left: 0;
           text-align: left; }
@@ -2669,7 +2672,15 @@ figcaption,
       width: 78px;
       height: 78px;
       border-radius: 0;
-      margin: 0 0 0 32px; } }
+      margin: 0 0 0 32px; }
+    #main-footer #weekly-reads-tout {
+      width: auto;
+      margin: 0;
+      text-align: left; }
+      #main-footer #weekly-reads-tout span {
+        display: inline-block;
+        width: 230px;
+        margin: 0 0 0 1rem; } }
 
 @media (min-width: 960px) {
   #main-footer {
@@ -2691,6 +2702,11 @@ figcaption,
     padding: 10rem 14rem; }
   #manikrathee {
     left: 55px; } }
+
+@media (min-width: 1680px) {
+  #main-footer {
+    max-width: 1500px;
+    margin: auto; } }
 
 .row + .row {
   margin-top: 8rem; }
@@ -2829,12 +2845,18 @@ figcaption,
   text-align: center;
   border: 1px solid #EFF0F0;
   border-radius: 4px; }
-  @media (min-width: 500px) {
+  @media (min-width: 650px) {
     .recommendation-card {
-      padding: 6rem;
+      padding: 3rem;
       text-align: left; } }
   .recommendation-card p {
     margin-bottom: 0; }
+  .view-mode--dark .recommendation-card {
+    background: #1f1f1f;
+    color: #c7c7c7;
+    border-color: #505050; }
+    .view-mode--dark .recommendation-card p, .view-mode--dark .recommendation-card a {
+      color: #c7c7c7; }
 
 .recommendation-card--image {
   display: block;
@@ -2844,6 +2866,23 @@ figcaption,
   padding: 1rem;
   border: 1px solid #EFF0F0;
   border-radius: 4px; }
+  @media (min-width: 650px) {
+    .recommendation-card--image {
+      background: transparent;
+      float: left;
+      margin: 0 3rem 0 -5rem;
+      border: none; } }
+  .view-mode--dark .recommendation-card--image {
+    background: #1f1f1f;
+    border-color: #505050; }
+    @media (min-width: 650px) {
+      .view-mode--dark .recommendation-card--image {
+        background: transparent;
+        border: none; } }
+
+@media (min-width: 650px) {
+  .recommendation-card--title {
+    margin-top: 4rem; } }
 
 .blockquote-list {
   list-style-type: none; }
@@ -2953,22 +2992,42 @@ figcaption,
 
 #view-mode--container {
   position: absolute;
-  right: 10px;
-  outline: 1px solid red; }
+  top: 1rem;
+  right: 1rem; }
+  @media (min-width: 960px) {
+    #view-mode--container {
+      top: -5.6rem;
+      right: 2rem; } }
 
 .view-mode--icon {
   display: block;
-  height: 60px;
-  width: 60px;
+  width: 25px;
+  height: 25px;
+  border-radius: 0;
+  cursor: pointer;
   display: block;
   text-indent: -999em;
   overflow: hidden;
   background-repeat: no-repeat;
   text-align: left;
   direction: ltr; }
-
-#view-mode--toggle:checked + .view-mode--toggle-label {
-  background: red; }
+  @media (min-width: 960px) {
+    .view-mode--icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 0; } }
+  .view-mode--icon:hover svg path {
+    fill: #505050; }
+    .view-mode--dark .view-mode--icon:hover svg path {
+      fill: #fff; }
+  .view-mode--icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0; }
+    .view-mode--icon svg path {
+      fill: #9E9E9E;
+      transition: fill 0.35s ease-in-out; }
 
 #view-mode--toggle {
   position: absolute;
@@ -3209,23 +3268,6 @@ figcaption,
 .cross-share {
   box-sizing: border-box; }
 
-.blog-post.wanderlust-big-sur-20131105 #post-title {
-  font-size: 50px; }
-
-.blog-post.wanderlust-big-sur-20131105 #subtitle {
-  font-size: 18px; }
-
-.blog-post.wanderlust-big-sur-20131105 .fluid-width-video-wrapper {
-  margin: 75px 0; }
-
-@media (min-width: 768px) {
-  .blog-post.wanderlust-big-sur-20131105 #post-title {
-    font-size: 80px; }
-  .blog-post.wanderlust-big-sur-20131105 #subtitle {
-    font-size: 28px; }
-  .blog-post.wanderlust-big-sur-20131105 #post-title-container {
-    margin-bottom: 151px; } }
-
 .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .comparison, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3265,7 +3307,7 @@ figcaption,
   line-height: 1.4;
   margin-top: 35px; }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups #post-title-container {
     margin: -300px auto 174px auto; }
     .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups #post-title-container #post-title {
@@ -3286,48 +3328,6 @@ figcaption,
   .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
     width: 50%;
     margin-top: 0; } }
-
-.blog-post.sublime-text-20150312 #feature {
-  max-height: 725px;
-  overflow: hidden; }
-
-.blog-post.sublime-text-20150312 #transition-modal {
-  display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: -999em;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out; }
-  .blog-post.sublime-text-20150312 #transition-modal .close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-family: proxima-nova; }
-
-.blog-post.sublime-text-20150312.transition-modal .blog-post.sublime-text-20150312 #transition-modal {
-  left: 0;
-  z-index: 99999;
-  opacity: 1;
-  -webkit-animation: 1s ease;
-  -moz-animation: 1s ease;
-  -ms-animation: 1s ease;
-  -o-animation: 1s ease;
-  animation: 1s ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn; }
 
 .photo-stat-sidebar {
   width: 150px;
@@ -3410,7 +3410,7 @@ figcaption,
     left: -2rem;
     z-index: 2;
     background: #EFF0F0;
-    opacity: 0.4;
+    opacity: 0.1;
     width: 8rem;
     height: 12rem;
     border-radius: 0; }
@@ -5039,186 +5039,91 @@ body.error #form-fields ul#amounts .amount-cont {
   .resources .upper {
     background: #000 url(../img/resources-heading-large.jpg) no-repeat 50% 50%; } }
 
-/* Subscribe, Tiny Letter */
-#subscribe {
-  background: #f0f0f0; }
-  #subscribe h1 {
-    font-size: 2.2em;
-    font-weight: 100;
-    text-transform: uppercase; }
-  #subscribe h2 {
-    margin: 20px auto;
-    font-size: 1.15em;
-    font-weight: 300; }
-  #subscribe .twitter-author {
-    font-size: 1.1em;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: 0.65;
-    color: #333; }
-    #subscribe .twitter-author:hover {
-      opacity: 1;
-      color: #000; }
-
-#overlay {
+[id=subscription] #tiny-credit {
   display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 250%;
-  width: 500%;
-  opacity: 0.9;
-  z-index: 1;
-  background: #1fc5b7;
-  background: -moz-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #1fc5b7), color-stop(49%, #007de1), color-stop(100%, #a81fc5));
-  background: -webkit-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
-  background: -o-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
-  background: -ms-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
-  background: linear-gradient(135deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fc5b7', endColorstr='#a81fc5',GradientType=1 );
-  -webkit-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: 30s ease;
-  -moz-animation: 30s ease;
-  -ms-animation: 30s ease;
-  -o-animation: 30s ease;
-  animation: 30s ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -webkit-animation-name: slideUpLeft;
-  -moz-animation-name: slideUpLeft;
-  -o-animation-name: slideUpLeft;
-  animation-name: slideUpLeft; }
-
-[id=subscription] {
-  position: relative;
-  z-index: 20;
-  max-width: 90%;
-  width: 725px;
-  overflow: hidden;
-  margin-top: 55px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  clear: both;
+  opacity: 0.75;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
   text-align: center;
-  box-sizing: border-box; }
-  [id=subscription] header,
-  [id=subscription] form,
-  [id=subscription] #tiny-credit,
-  [id=subscription] footer {
-    background: #fcfcfc;
-    padding: 30px 20px;
-    border-bottom: 1px solid #d9d9d9;
-    -webkit-animation: 1s ease;
-    -moz-animation: 1s ease;
-    -ms-animation: 1s ease;
-    -o-animation: 1s ease;
-    animation: 1s ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    -webkit-animation-name: slideInRight;
-    -moz-animation-name: slideInRight;
-    -o-animation-name: slideInRight;
-    animation-name: slideInRight; }
-  [id=subscription] header {
-    -webkit-animation-delay: 0.25s;
-    -moz-animation-delay: 0.25s; }
-  [id=subscription] form {
-    -webkit-animation-delay: 0.35s;
-    -moz-animation-delay: 0.35s; }
-  [id=subscription] #tiny-credit {
-    -webkit-animation-delay: 0.45s;
-    -moz-animation-delay: 0.45s; }
-  [id=subscription] footer {
-    -webkit-animation-delay: 0.55s;
-    -moz-animation-delay: 0.55s; }
-  [id=subscription] #tiny-credit {
-    display: block;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.25);
-    clear: both;
-    opacity: 0.75;
-    padding: 30px 0;
-    color: #fff;
-    font-size: 0.8em;
-    font-weight: 300;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    border: none; }
-    [id=subscription] #tiny-credit:hover {
-      opacity: 1; }
-  [id=subscription] form {
-    padding-top: 65px;
-    padding-bottom: 65px;
-    text-align: left; }
-  [id=subscription] label,
-  [id=subscription] input {
-    display: block;
-    width: auto; }
-  [id=subscription] label {
-    display: block;
-    font-size: 0.8em;
-    font-weight: 600;
-    text-align: left;
-    text-transform: uppercase; }
-  [id=subscription] input {
-    display: block;
-    border: 1px solid #b3b3b3;
-    transition: border 0.25s ease-in-out; }
-    [id=subscription] input:focus, [id=subscription] input:active {
-      border-bottom: 2px solid #b3b3b3; }
-    [id=subscription] input:focus {
-      outline: 0; }
-  [id=subscription] label,
-  [id=subscription] #tlemail,
-  [id=subscription] #submit {
-    display: block;
-    width: 100%;
-    margin: 0; }
-  [id=subscription] .form-fields {
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto; }
-    [id=subscription] .form-fields li {
-      list-style-type: none; }
-      [id=subscription] .form-fields li + li {
-        margin-top: 10px; }
-  [id=subscription] #tlemail {
-    padding-top: 6px; }
-  [id=subscription] #hidden {
-    position: absolute;
-    top: 0;
-    left: -999em;
-    visibility: hidden;
-    pointer-events: none; }
-  [id=subscription] .wrap {
-    width: 100%;
-    margin: 15px auto 10px; }
-  [id=subscription] #submit {
-    background: #1fc5b7;
-    max-width: 100%;
-    width: 100%;
-    padding: 8px 0;
-    font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    transition: background 0.15s linear; }
-    [id=subscription] #submit:hover {
-      background: #15decd;
-      background: #007de1; }
+  border: none; }
+  [id=subscription] #tiny-credit:hover {
+    opacity: 1; }
+
+[id=subscription] form {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  text-align: left; }
+
+[id=subscription] label,
+[id=subscription] input {
+  display: block;
+  width: auto; }
+
+[id=subscription] label {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase; }
+
+[id=subscription] input {
+  display: block;
+  border: 1px solid #b3b3b3;
+  transition: border 0.25s ease-in-out; }
+  [id=subscription] input:focus, [id=subscription] input:active {
+    border-bottom: 2px solid #b3b3b3; }
+  [id=subscription] input:focus {
+    outline: 0; }
+
+[id=subscription] label,
+[id=subscription] #tlemail,
+[id=subscription] #submit {
+  display: block;
+  width: 100%;
+  margin: 0; }
+
+[id=subscription] .form-fields {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto; }
+  [id=subscription] .form-fields li {
+    list-style-type: none; }
+    [id=subscription] .form-fields li + li {
+      margin-top: 10px; }
+
+[id=subscription] #tlemail {
+  padding-top: 6px; }
+
+[id=subscription] #hidden {
+  position: absolute;
+  top: 0;
+  left: -999em;
+  visibility: hidden;
+  pointer-events: none; }
+
+[id=subscription] .wrap {
+  width: 100%;
+  margin: 15px auto 10px; }
+
+[id=subscription] #submit {
+  background: #1fc5b7;
+  max-width: 100%;
+  width: 100%;
+  padding: 8px 0;
+  font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  transition: background 0.15s linear; }
+  [id=subscription] #submit:hover {
+    background: #15decd;
+    background: #007de1; }
 
 footer small {
   opacity: 0.7;
@@ -5237,54 +5142,10 @@ footer small {
 **********************
 */
 @media screen and (min-width: 768px) {
-  #subscribe {
-    overflow: hidden; }
-    #subscribe h1 {
-      font-size: 3em; }
-    #subscribe h2 {
-      width: 400px;
-      margin: 10px auto;
-      font-size: 1em; }
-    #subscribe .twitter-author {
-      font-size: 0.8em;
-      font-weight: 300;
-      text-decoration: none;
-      border: none; }
-      #subscribe .twitter-author:hover {
-        opacity: 1;
-        color: #000; }
   [id=subscription] {
     padding-left: 65px;
     padding-right: 65px;
     box-sizing: border-box; }
-    [id=subscription] header,
-    [id=subscription] form,
-    [id=subscription] #tiny-credit,
-    [id=subscription] footer {
-      -webkit-animation-name: flipInX;
-      -moz-animation-name: flipInX;
-      -o-animation-name: flipInX;
-      animation-name: flipInX; }
-      [id=subscription] header > *,
-      [id=subscription] form > *,
-      [id=subscription] #tiny-credit > *,
-      [id=subscription] footer > * {
-        -webkit-animation: 2s ease;
-        -moz-animation: 2s ease;
-        -ms-animation: 2s ease;
-        -o-animation: 2s ease;
-        animation: 2s ease;
-        -webkit-animation-fill-mode: both;
-        -moz-animation-fill-mode: both;
-        -ms-animation-fill-mode: both;
-        -o-animation-fill-mode: both;
-        animation-fill-mode: both;
-        -webkit-animation-delay: 1s;
-        -moz-animation-delay: 1s;
-        -webkit-animation-name: fadeInDown;
-        -moz-animation-name: fadeInDown;
-        -o-animation-name: fadeInDown;
-        animation-name: fadeInDown; }
     [id=subscription] .form-fields {
       overflow: hidden;
       clear: both; }

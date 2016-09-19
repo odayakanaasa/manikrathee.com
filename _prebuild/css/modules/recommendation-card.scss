@@ -10,13 +10,23 @@
   border: 1px solid $light-grey;
   border-radius: $border-radius;
 
-  @include mq(500px) {
-    padding: 6rem;
+  @include mq(650px) {
+    padding: 3rem;
     text-align: left;
   }
 
   p {
     margin-bottom: 0;
+  }
+
+  .view-mode--dark & {
+    background: $invert-body;
+    color: $invert-copy;
+    border-color: $dark-grey;
+
+    p, a {
+      color: $invert-copy;
+    }
   }
 }
 
@@ -28,4 +38,27 @@
   padding: 1rem;
   border: 1px solid $light-grey;
   border-radius: $border-radius;
+
+  @include mq(650px) {
+    background: transparent;
+    float: left;
+    margin: 0 3rem 0 -5rem;
+    border: none;
+  }
+
+  .view-mode--dark & {
+    background: $invert-body;
+    border-color: $dark-grey;
+
+    @include mq(650px) {
+      background: transparent;
+      border: none;
+    }
+  }
+}
+
+.recommendation-card--title {
+  @include mq(650px) {
+    margin-top: 4rem;
+  }
 }

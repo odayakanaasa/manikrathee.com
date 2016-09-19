@@ -44,7 +44,8 @@ body {
   }
 
   @include mq(500px) {
-    padding: $spacer $spacer 70px $spacer;
+    // padding: $spacer $spacer 70px $spacer; // restore me once the mountain monday logo is added below the footer -- engraved style
+    padding: 4rem 4rem 0;
 
     &:after {
       opacity: 1;

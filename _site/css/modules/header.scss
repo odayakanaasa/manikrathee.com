@@ -59,8 +59,6 @@
   }
 
   .view-mode--dark & {
-    border-top: $invert-border;
-    border-bottom: $invert-border;
   }
 
   .current-title {
@@ -72,6 +70,10 @@
 
   .previous-container {
     color: $dark-grey;
+
+    .view-mode--dark & {
+      color: $light-grey;
+    }
   }
 
   .previous-heading {

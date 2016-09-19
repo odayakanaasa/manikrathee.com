@@ -165,7 +165,7 @@ body {
     border: 1px solid yellow; }
   @media (min-width: 500px) {
     body {
-      padding: 4rem 4rem 70px 4rem; }
+      padding: 4rem 4rem 0; }
       body:after {
         opacity: 1; } }
   @media (min-width: 960px) {
@@ -216,6 +216,8 @@ a {
     box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05); }
 
 [id=inner-container] {
+  position: relative;
+  z-index: 2;
   width: 100%;
   padding-bottom: 4rem;
   zoom: 1; }
@@ -270,14 +272,14 @@ p {
 i {
   font-style: normal; }
 
-[class*="heading"] {
+[class*="heading"]{
   font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif; }
 
 .medium-heading {
   font-size: 22px;
   font-size: 2.2rem;
   margin-bottom: 1.15rem; }
-.mountain-monday{
+.mountain-monday {
   display: block;
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMzNweCIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMzMgMjIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+TW91bnRhaW5Nb25kYXk8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoIEJldGEuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJNb3VudGFpbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIuMDAwMDAwLCAyLjAwMDAwMCkiIHN0cm9rZT0iIzUwNTA1MCI+ICAgICAgICAgICAgPGcgaWQ9Ik1vdW50YWluTW9uZGF5Ij4gICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBzdHJva2Utd2lkdGg9IjIiIHBvaW50cz0iMTYuMDQxNDcyOCA5LjYzNTE1NDU2IDIxLjMxMTE2OTMgMTguNzU2OTkxNSAxMC43NzE3NzY0IDE4Ljc2MTMyMDggMC4yMzIzODMzODMgMTguNzYxMzIwOCA1LjUwMjA3OTg3IDkuNjM1MTU0NTYgMTAuNzY3NDQ2MyAwLjUwODk4ODM2OSI+PC9wb2x5Z29uPiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIHBvaW50cz0iMjQuMzYzODY5NCA5LjU0NDIzOTI0IDI5LjcxMTUwNzIgMTguNzk1OTU1MiAxOS4wNTUyMDIzIDE4Ljc3ODYzOCA4LjQwMzIyNzQ4IDE4Ljc2MTMyMDggMTMuNzExODk0NiA5LjUyMjU5Mjc0IDE5LjAxNjIzMTcgMC4yODgxOTQwMjUiPjwvcG9seWdvbj4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=");
   border-bottom: none;
@@ -303,9 +305,9 @@ i {
           flex-wrap: nowrap;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
-  overflow: hidden; }
+          justify-content: flex-start; }
   [id="page-header"] .global-header {
+    z-index: 2;
     opacity: 0.7;
     transition: opacity 0.35s ease-in-out; }
     #home [id="page-header"] .global-header {
@@ -368,7 +370,7 @@ i {
       [id="who-is"] i {
         display: inline; } }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   [id="page-header"] {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -385,7 +387,7 @@ i {
   font-size: 1.6rem;
   line-height: 1;
   padding-bottom: 1px; }
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .main-nav-list {
       line-height: 2.6rem; } }
   .main-nav-list li,
@@ -399,7 +401,7 @@ i {
     margin-bottom: 1.5rem; }
     .main-nav-list li:last-child {
       margin-bottom: 0; }
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       .main-nav-list li {
         width: auto;
         float: none;
@@ -412,7 +414,7 @@ i {
 .nav-weekly-reads span {
   display: none; }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav-weekly-reads span {
     display: inline; } }
 
@@ -524,6 +526,8 @@ https://github.com/manikrathee/manikrathee.com
 
 	<body id="home" class="
         light
+        
+        
         
         
         
@@ -674,6 +678,16 @@ https://github.com/manikrathee/manikrathee.com
         </p>
       </li>
       
+      <li>
+        <p class="condensed">
+          <a href="/pride-chicago-2012.html" title="Pride" itemprop="url">
+            Pride<!--
+          --></a><!--
+
+          -->
+        </p>
+      </li>
+      
       <li class="more-items">
         <a class="more-items--link" href="/photos/" title="" itemprop="url">
           More Photography
@@ -689,16 +703,16 @@ https://github.com/manikrathee/manikrathee.com
       
       <li>
         <p class="condensed">
-          <a href="/how-to-delete-a-tag-in-git.html" title="How to delete a&nbsp;Git&nbsp;tag" itemprop="url">
-            How to delete a&nbsp;Git&nbsp;tag<!--
+          <a href="/how-to-delete-a-tag-in-git.html" title="How to delete a Git tag" itemprop="url">
+            How to delete a Git tag<!--
         --></a><span>, August 2016</span>
         </p>
       </li>
       
       <li>
         <p class="condensed">
-          <a href="/text-expander-tips.html" title="How I Use: TextExpander" itemprop="url">
-            How I Use: TextExpander<!--
+          <a href="/text-expander-tips.html" title="How I Use:<br>TextExpander" itemprop="url">
+            How I Use:TextExpander<!--
         --></a><span>, March 2015</span>
         </p>
       </li>
@@ -713,8 +727,8 @@ https://github.com/manikrathee/manikrathee.com
       
       <li>
         <p class="condensed">
-          <a href="/sublime-text-preferences.html" title="Sublime Text: Customizing Your Workflow" itemprop="url">
-            Sublime Text: Customizing Your Workflow<!--
+          <a href="/sublime-text-preferences.html" title="Sublime Text:<BR>Customizing Your&nbsp;Workflow" itemprop="url">
+            Sublime Text:Customizing Your&nbsp;Workflow<!--
         --></a><span>, July 2013</span>
         </p>
       </li>
@@ -747,38 +761,51 @@ https://github.com/manikrathee/manikrathee.com
 
 <section class="row ↔️">
   <div class="row-tout recent-publications ↕️">
-    <h3 class="medium-heading">Magazines, Podcasts, etc</h3>
+    <h3 class="medium-heading">Interviews</h3>
     <ul class="row-tout-list recent-publications-list">
       <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a><span>, Something 2015</span>
-
+        <p class="condensed">
+          <a href="http://www.creativebloq.com/responsive-web-design/net-awards-2013-top-10-young-designers-3132966" title=".net Awards 2013: top 10 young designers" itemprop="url">
+            <!--
+              .net Magazine's site moved. This was the original URL:
+                http://www.netmagazine.com/features/net-awards-2013-top-10-young-designers
+             -->
+            Young Designer of the Year Nominee, .net Awards 2013
+          </a><span>, .net Magazine</span>
+        </p>
       </li>
       <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, for </span>
-        <a href="%|" class="" title="" itemprop="url">
-          LovelySunday
-        </a>
+        <p class="condensed">
+          <a href="http://www.amazon.com/Build-Your-Own-Brand-Strategies/dp/1440324557/" title="Build Your Own Brand" itemprop="url">
+            Build Your Own Brand
+          </a>
+          <span>, Robin Landa</span>
+        </p>
       </li>
       <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
+        <p class="condensed">
+          <a href="http://blog.offscreenmag.com/post/36344235407/hi-manik-give-us-a-short-introduction-about-how" title="Offscreen Magzine - An Interview with Manik Rathee" itemprop="url">
+            An Interview with Manik Rathee, a User Experience Engineer for President Barack Obama
+          </a><span>, Kai Brach, Offscreen Magazine</span>
+        </p>
       </li>
+      <!-- RIP Readmill  -->
+      <!-- <li>
+          <a href="hhttp://blog.readmill.com/post/34294256090/meet-the-readmillers-manik-rathee" title="Meet the Readmillers: Manik Rathee" itemprop="url">
+          Meet the Readmillers: Manik Rathee
+          </a><span>, Readmill (RIP)</span>
+      </li> -->
+      <!-- ----------  -->
       <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
+        <p class="condensed">
+          <a href="https://www.youtube.com/watch?v=69XQ82UK9Rs" title="Manik Rathee, Kean Graduate works for Obama Campaign" itemprop="url">
+            Kean Graduate Works For Obama
+          </a><span>, Kean University</span>
+        </p>
       </li>
       <li class="more-items">
-        <a class="more-items--link" href="%|" title="" itemprop="url">
-          More Photography
+        <a class="more-items--link" href="/about" title="More interviews and features on the About page" itemprop="url">
+          More Interviews &amp; Features
         </a>
       </li>
     </ul>
@@ -789,36 +816,16 @@ https://github.com/manikrathee/manikrathee.com
     <h3 class="medium-heading">Speaking</h3>
     <ul class="row-tout-list recent-speaking-list">
       <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
+        <p class="condensed">
+          <a href="/building-president-obama.html" title="Thinking Creatively Conference 10" itemprop="url">
+            Building Obama
+          </a><span>,  Keynote Address, Thinking Creatively Conf &mdash; April, 2013</span>
+        </p>
       </li>
       <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, for </span>
-        <a href="%|" class="" title="" itemprop="url">
-          LovelySunday
-        </a>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
-      </li>
-      <li>
-        <a href="%|" title="" itemprop="url">
-          Post title
-        </a>
-        <span>, Something 2015</span>
-      </li>
-      <li class="more-items">
-        <a class="more-items--link" href="%|" title="" itemprop="url">
-          More Photography
-        </a>
+        <p class="condensed">
+          Building Obama In CSS<span>, CSS Dev Conf &mdash; October, 2013</span>
+        </p>
       </li>
     </ul>
   </div>
@@ -898,7 +905,9 @@ https://github.com/manikrathee/manikrathee.com
       <footer id="main-footer" role="contentinfo">
 
     <!-- TODO CHange this to use a data yml file, output an image with a background position at certain breakpoints. then render out that size into css -->
-    <div class="footer-bg-photo-posts"><span></span></div>
+    <div class="footer-bg-photo-posts" itemprop="url">
+      <span></span>
+    </div>
 
     <span class="mountain-monday mountain-monday--inverse"></span>
 
@@ -943,7 +952,7 @@ https://github.com/manikrathee/manikrathee.com
 
     <section class="footer-data">
       <div id="weekly-reads-tout" class="footer-tout">
-        <a href="%|" class="invert-hover" title="" itemprop="url">
+        <a href="/weeklyreads" class="invert-hover" title="" itemprop="url">
           <i class="icon icon--weeklyreads">WeeklyReads: an email list for design and inspiration.</i>
           <span>
             WeeklyReads: an email list for design and inspiration.
@@ -952,7 +961,7 @@ https://github.com/manikrathee/manikrathee.com
       </div>
 
       <div id="photo-metadata" class="footer-tout">
-        <a href="%|" class="photo-metadata--link invert-hover" title="" itemprop="url">
+        <a class="photo-metadata--link invert-hover" title="" itemprop="url">
           <i class="icon icon--photography">Photo Information</i>
           <figcaption>
             <span class="photo-metadata--camera"></span>

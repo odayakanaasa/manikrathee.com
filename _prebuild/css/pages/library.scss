@@ -75,7 +75,7 @@
     left: -2rem;
     z-index: 2;
     background: $light-grey;
-    opacity: 0.4;
+    opacity: 0.1;
     @include size(8rem, 12rem);
 
     @include mq(500px) {

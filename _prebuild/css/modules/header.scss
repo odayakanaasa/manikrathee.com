@@ -9,6 +9,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  padding-top: 4rem; // push header down so it doesnt overlap with view mode
 
   .global-header {
     z-index: 2;
@@ -59,8 +60,6 @@
   }
 
   .view-mode--dark & {
-    border-top: $invert-border;
-    border-bottom: $invert-border;
   }
 
   .current-title {
@@ -72,6 +71,10 @@
 
   .previous-container {
     color: $dark-grey;
+
+    .view-mode--dark & {
+      color: $light-grey;
+    }
   }
 
   .previous-heading {
@@ -230,6 +233,7 @@
   [id="page-header"] {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 0;
 
     .global-header {
       width: 30%;

@@ -13,9 +13,35 @@
 
 .view-mode--icon {
   display: block;
-  height: 60px;
-  width: 60px;
+  @include size(30px, 30px);
+  cursor: pointer;
   @include ir;
+
+  &:hover {
+    svg {
+      path {
+        fill: $dark-grey;
+
+        .view-mode--dark & {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  svg {
+    display: block;
+    @include size(100%, 100%);
+
+    path {
+      fill: $grey;
+      @include transition( fill $transition );
+
+      .view-mode--dark & {
+        fill: $grey;
+      }
+    }
+  }
 }
 
 #view-mode--toggle:checked + .view-mode--toggle-label {

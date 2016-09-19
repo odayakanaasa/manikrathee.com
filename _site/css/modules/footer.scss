@@ -167,6 +167,12 @@
   }
 }
 
+#weekly-reads-tout {
+  display: block;
+  width: 230px;
+  margin: 1rem auto 0;
+  text-align: center;
+}
 
 #photo-metadata {
   opacity: 0;
@@ -290,6 +296,8 @@
 
       li {
         width: auto;
+        float: none;
+        margin-bottom: 0.45rem;
 
         &:nth-child(even) {
           margin-left: 0;
@@ -311,6 +319,18 @@
     #snapchat {
       @include size(78px, 78px);
       margin: 0 0 0 32px;
+    }
+
+    #weekly-reads-tout {
+      width: auto;
+      margin: 0;
+      text-align: left;
+
+      span {
+        display: inline-block;
+        width: 230px;
+        margin: 0 0 0 1rem;
+      }
     }
   }
 
@@ -379,3 +399,33 @@
     left: 55px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include mq(1680px) {
+  #main-footer {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
+
+
+
+
+
+
