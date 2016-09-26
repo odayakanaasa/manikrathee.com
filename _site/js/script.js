@@ -192,10 +192,9 @@ if ( $('body').attr('id') === 'home' ){
     accessToken: '262351.1677ed0.d90081329df94cbe8353f5039bac6d76',
     target: 'instagram-api-bar',
     limit: 6,
-    sortBy: 'most-liked',
     links: 1,
     resolution: 'standard_resolution',
-    template: '<li class="instagram-photo" data="{{id}}"><p><a class="instagram-link" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"><span class="instagram-location">{{location}}</span></a></p></li>',
+    template: '<li class="instagram-photo" data="{{id}}"><p><a class="instagram-link" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"></a></p></li>',
  });
 
  feed.run();

@@ -32,17 +32,22 @@ body {
   }
 
   @include mq(500px) {
-    padding: 4rem;
+    padding-top: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 0;
+    padding-left: 4rem;
   }
 
   @include mq(960px) {
     padding-top: ($spacer * 2);
     padding-right: ($spacer * 2);
-    padding-bottom: $spacer;
+    padding-bottom: 0;
     padding-left: ($spacer * 2);
   }
 
-
+  @include mq(1300px) {
+    padding-bottom: ($spacer * 2);
+  }
 }
 
 

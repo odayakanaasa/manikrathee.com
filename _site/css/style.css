@@ -992,13 +992,19 @@ body {
     color: #c7c7c7; }
   @media (min-width: 500px) {
     body {
-      padding: 4rem; } }
+      padding-top: 4rem;
+      padding-right: 4rem;
+      padding-bottom: 0;
+      padding-left: 4rem; } }
   @media (min-width: 960px) {
     body {
       padding-top: 8rem;
       padding-right: 8rem;
-      padding-bottom: 4rem;
+      padding-bottom: 0;
       padding-left: 8rem; } }
+  @media (min-width: 1300px) {
+    body {
+      padding-bottom: 8rem; } }
 
 dl, menu, ol, ul {
   margin: 0;
@@ -2229,6 +2235,20 @@ figcaption,
     position: absolute;
     top: 20px;
     right: 20px; }
+
+#instagram-api-bar {
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -ms-flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vw;
+  font-size: 0; }
+
+#instagram-api-bar li {
+  width: 33.3%;
+  transition: .8s opacity; }
 
 /*  404  */
 .fourohfour {
