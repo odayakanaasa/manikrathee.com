@@ -26,35 +26,20 @@ body {
     background $transition,
     color $transition;
 
-  &:after {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    translate: transform3d(-50%,0,0);
-    background-image: url($logo-svg-encoded);
-    background-size: 50px 50px;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    border: 1px solid yellow;
-  }
-
   &.view-mode--dark {
     background: $invert-body;
     color: $invert-copy;
   }
 
   @include mq(500px) {
-    // padding: $spacer $spacer 70px $spacer; // restore me once the mountain monday logo is added below the footer -- engraved style
-    padding: 4rem 4rem 0;
-
-    &:after {
-      opacity: 1;
-    }
+    padding: 4rem;
   }
 
-
   @include mq(960px) {
-    padding: ($spacer * 2) ($spacer * 2) 70px ($spacer * 2);
+    padding-top: ($spacer * 2);
+    padding-right: ($spacer * 2);
+    padding-bottom: $spacer;
+    padding-left: ($spacer * 2);
   }
 
 
@@ -208,6 +193,7 @@ img {
 
   .view-mode--dark & {
     background-color: $invert-container;
+    background-image: none;
   }
 
 } // main

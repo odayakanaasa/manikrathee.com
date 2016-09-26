@@ -42,13 +42,6 @@ $(function(e){
     metadataContainer.addClass('is-visible');
   }
 
-
-
-
-  console.log(arrayIndex);
-  console.log(postURL[arrayIndex]);
-  console.log(currentPost);
-
   init();
 });
 

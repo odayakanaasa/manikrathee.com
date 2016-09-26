@@ -13,6 +13,7 @@ blockqoute {
   line-height: 1.2;
   -webkit-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures;
+  @include transition( color $transition );
 }
 
 
@@ -90,7 +91,6 @@ p {
   &.condensed {
     @include font-size(15);
     margin-bottom: 1.2rem;
-    line-height: 1.3;
 
     @include mq(800px) {
       @include font-size(16);

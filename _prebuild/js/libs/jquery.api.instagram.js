@@ -8,9 +8,12 @@ if ( $('body').attr('id') === 'home' ){
     userId: 262351,
     clientId: 'f7f319ceb411486593db148972918108',
     accessToken: '262351.1677ed0.d90081329df94cbe8353f5039bac6d76',
-    target: 'instagram',
-    limit: 1,
-    template: '<div class="photo" data="{{id}}"><p><a id="instagram-link" href="{{link}}" title="View my latest Instagram Shot">{{caption}}</a></p></div>'
+    target: 'instagram-api-bar',
+    limit: 6,
+    sortBy: 'most-liked',
+    links: 1,
+    resolution: 'standard_resolution',
+    template: '<li class="instagram-photo" data="{{id}}"><p><a class="instagram-link" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"><span class="instagram-location">{{location}}</span></a></p></li>',
  });
 
  feed.run();

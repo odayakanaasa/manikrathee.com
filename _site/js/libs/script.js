@@ -10,100 +10,100 @@ LastFMStatus.init({
 
 
 
-function animatedIcons() {
-  /* Icon 11 */
-  var el11 = document.querySelector('.animated-logo'), el11span = el11.querySelector('span');
-  var opacityCurve11 = mojs.easing.path('M0,0 C0,87 27,100 40,100 L40,0 L100,0');
-  var scaleCurve11 = mojs.easing.path('M0,0c0,80,39.2,100,39.2,100L40-100c0,0-0.7,106,60,106');
-  new Animocon(el11, {
-    tweens : [
-      // ring animation
-      new mojs.Transit({
-        parent: el11,
-        duration: 1000,
-        delay: 100,
-        type: 'circle',
-        radius: {0: 95},
-        fill: 'transparent',
-        stroke: '#C0C1C3',
-        strokeWidth: {50:0},
-        opacity: 0.4,
-        x: '50%',
-        y: '50%',
-        isRunLess: true,
-        easing: mojs.easing.bezier(0, 1.6, 0.5, 1)
-      }),
-      new mojs.Transit({
-        parent: el11,
-        duration: 1100,
-        delay: 100,
-        type: 'circle',
-        radius: {0: 85},
-        fill: 'transparent',
-        stroke: '#C0C1C3',
-        strokeWidth: {50:0},
-        opacity: 0.4,
-        x: '50%',
-        y: '50%',
-        isRunLess: true,
-        easing: mojs.easing.bezier(0, 0.4, 0.5, 1)
-      }),
-      new mojs.Transit({
-        parent: el11,
-        duration: 1375,
-        delay: 90,
-        type: 'circle',
-        radius: {0: 115},
-        fill: 'transparent',
-        stroke: '#C0C1C3',
-        strokeWidth: {50:0},
-        opacity: 0.4,
-        x: '50%',
-        y: '50%',
-        isRunLess: true,
-        easing: mojs.easing.bezier(0, 1, 0.5, 1)
-      }),
-      // ring animation
-      new mojs.Transit({
-        parent: el11,
-        duration: 1800,
-        delay: 300,
-        type: 'circle',
-        radius: {0: 80},
-        fill: 'transparent',
-        stroke: '#C0C1C3',
-        strokeWidth: {40:0},
-        opacity: 0.2,
-        x: '50%',
-        y: '50%',
-        isRunLess: true,
-        easing: mojs.easing.bezier(0, 1, 0.5, 1)
-      }),
-      // icon scale animation
-      new mojs.Tween({
-        duration : 2000,
-        easing: mojs.easing.ease.out,
-        onUpdate: function(progress) {
-          var opacityProgress = opacityCurve11(progress);
-          el11span.style.opacity = opacityProgress;
+// function animatedIcons() {
+//   /* Icon 11 */
+//   var el11 = document.querySelector('.animated-logo'), el11span = el11.querySelector('span');
+//   var opacityCurve11 = mojs.easing.path('M0,0 C0,87 27,100 40,100 L40,0 L100,0');
+//   var scaleCurve11 = mojs.easing.path('M0,0c0,80,39.2,100,39.2,100L40-100c0,0-0.7,106,60,106');
+//   new Animocon(el11, {
+//     tweens : [
+//       // ring animation
+//       new mojs.Transit({
+//         parent: el11,
+//         duration: 1000,
+//         delay: 100,
+//         type: 'circle',
+//         radius: {0: 95},
+//         fill: 'transparent',
+//         stroke: '#C0C1C3',
+//         strokeWidth: {50:0},
+//         opacity: 0.4,
+//         x: '50%',
+//         y: '50%',
+//         isRunLess: true,
+//         easing: mojs.easing.bezier(0, 1.6, 0.5, 1)
+//       }),
+//       new mojs.Transit({
+//         parent: el11,
+//         duration: 1100,
+//         delay: 100,
+//         type: 'circle',
+//         radius: {0: 85},
+//         fill: 'transparent',
+//         stroke: '#C0C1C3',
+//         strokeWidth: {50:0},
+//         opacity: 0.4,
+//         x: '50%',
+//         y: '50%',
+//         isRunLess: true,
+//         easing: mojs.easing.bezier(0, 0.4, 0.5, 1)
+//       }),
+//       new mojs.Transit({
+//         parent: el11,
+//         duration: 1375,
+//         delay: 90,
+//         type: 'circle',
+//         radius: {0: 115},
+//         fill: 'transparent',
+//         stroke: '#C0C1C3',
+//         strokeWidth: {50:0},
+//         opacity: 0.4,
+//         x: '50%',
+//         y: '50%',
+//         isRunLess: true,
+//         easing: mojs.easing.bezier(0, 1, 0.5, 1)
+//       }),
+//       // ring animation
+//       new mojs.Transit({
+//         parent: el11,
+//         duration: 1800,
+//         delay: 300,
+//         type: 'circle',
+//         radius: {0: 80},
+//         fill: 'transparent',
+//         stroke: '#C0C1C3',
+//         strokeWidth: {40:0},
+//         opacity: 0.2,
+//         x: '50%',
+//         y: '50%',
+//         isRunLess: true,
+//         easing: mojs.easing.bezier(0, 1, 0.5, 1)
+//       }),
+//       // icon scale animation
+//       new mojs.Tween({
+//         duration : 2000,
+//         easing: mojs.easing.ease.out,
+//         onUpdate: function(progress) {
+//           var opacityProgress = opacityCurve11(progress);
+//           el11span.style.opacity = opacityProgress;
 
-          var scaleProgress = scaleCurve11(progress);
-          el11span.style.WebkitTransform = el11span.style.transform = 'scale3d(' + scaleProgress + ',' + scaleProgress + ',1)';
+//           var scaleProgress = scaleCurve11(progress);
+//           el11span.style.WebkitTransform = el11span.style.transform = 'scale3d(' + scaleProgress + ',' + scaleProgress + ',1)';
 
-          var colorProgress = opacityCurve11(progress);
-          el11.style.color = colorProgress >= 1 ? '#E87171' : '#C0C1C3';
-        }
-      })
-    ],
-    onUnCheck : function() {
-      el11.style.color = '#C0C1C3';
-    }
-  });
-  /* Icon 11 */
+//           var colorProgress = opacityCurve11(progress);
+//           el11.style.color = colorProgress >= 1 ? '#E87171' : '#C0C1C3';
+//         }
+//       })
+//     ],
+//     onUnCheck : function() {
+//       el11.style.color = '#C0C1C3';
+//     }
+//   });
+//   /* Icon 11 */
 
-}
+// }
 
-animatedIcons();
+// animatedIcons();
 
 
 
