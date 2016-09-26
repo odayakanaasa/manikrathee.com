@@ -42,7 +42,7 @@
   }
 
   a {
-    @include touch-hover() {
+    &:hover {
       color: $medium-grey;
       border-color: $medium-grey;
     }

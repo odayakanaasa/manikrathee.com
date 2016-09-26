@@ -10,6 +10,10 @@
     margin-top: $spacer * 2;
     padding-top: $spacer * 2;
     border-top: 1px solid darken($off-white, 10%);
+
+    @include mq(800px) {
+      border: none;
+    }
   }
 }
 
@@ -28,6 +32,7 @@
   }
 
   @include mq(800px) {
+    margin-bottom: 8rem;
     padding-top: 44px; // push heading down to top of book
   }
 

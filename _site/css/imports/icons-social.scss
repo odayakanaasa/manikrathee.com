@@ -14,7 +14,7 @@ $social-accounts:
     ;
 
 @each $account in $social-accounts {
-  .#{$account} {
+  .icon--#{$account} {
     background-image: url('../svg/#{$account}.svg');
   }
 }

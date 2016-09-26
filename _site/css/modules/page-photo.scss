@@ -35,3 +35,22 @@
   }
 }
 
+#photo-posts {
+
+}
+
+#photo-gallery {
+  list-style: none;
+  margin-top: $spacer * 3;
+}
+
+.post-gallery {
+  margin-top: 8rem;
+}
+
+.photo-metadata--cta {
+  display: inline-block;
+  margin-top: 1rem;
+  font-style: normal;
+  border-bottom: 1px solid #CBCBCB;
+}

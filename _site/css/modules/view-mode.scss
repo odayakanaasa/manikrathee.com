@@ -3,8 +3,8 @@
 
 #view-mode--container {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 2rem;
+  right: 2rem;
 
   @include mq(960px) {
     top: -5.6rem;

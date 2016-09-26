@@ -16,7 +16,7 @@
     opacity: 0.7;
     @include transition(opacity #{$transition});
 
-    @include touch-hover() {
+    &:hover {
       opacity: 1;
     }
 
