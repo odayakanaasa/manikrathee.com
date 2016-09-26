@@ -34,23 +34,24 @@
        },
        main: {
         src: [
-          '_site/js/libs/analytics.js',
-          '_site/js/libs/scrolldepth.js',
-          '_site/js/libs/mo.min.js',
-          // '_site/js/libs/animation-control.js',
-          // '_site/js/libs/jquery.withinViewport_base.js',
-          // '_site/js/libs/jquery.withinViewport.js',
-          '_site/js/libs/jquery.api.twitter.js',
-          '_site/js/libs/jquery.api.last.fm.js',
-          '_site/js/libs/jquery.api.instagram.js',
-          '_site/js/libs/lazyload.js',
-          // '_site/js/libs/konami.js',
-          // '_site/js/libs/picturefill.js',
-          '_site/js/libs/jquery.twitter.js',
-          '_site/js/libs/view-mode.js',
-          '_site/js/libs/footer.js',
-          '_site/js/libs/script.js',
-          '_site/js/sequential.js',
+          '_prebuild/js/libs/analytics.js',
+          '_prebuild/js/libs/scrolldepth.js',
+          '_prebuild/js/libs/mo.min.js',
+          // '_prebuild/js/libs/animation-control.js',
+          // '_prebuild/js/libs/jquery.withinViewport_base.js',
+          // '_prebuild/js/libs/jquery.withinViewport.js',
+          '_prebuild/js/libs/jquery.api.twitter.js',
+          '_prebuild/js/libs/jquery.api.last.fm.js',
+          '_prebuild/js/libs/jquery.api.instagram.js',
+          '_prebuild/js/libs/photo-blog.js',
+          '_prebuild/js/libs/lazyload.js',
+          // '_prebuild/js/libs/konami.js',
+          // '_prebuild/js/libs/picturefill.js',
+          '_prebuild/js/libs/jquery.twitter.js',
+          '_prebuild/js/libs/view-mode.js',
+          '_prebuild/js/libs/footer.js',
+          '_prebuild/js/libs/script.js',
+          '_prebuild/js/sequential.js',
         ],
         dest: '_site/js/script.js',
         nonull: true,
@@ -117,22 +118,6 @@
       },
     },
 
-
-    critical: {
-      options: {
-        base: './',
-        css: [
-          '_site/css/style.css',
-        ],
-        width: 320,
-        height: 800
-      },
-      src: '_site/index.html',
-      dest: '_site/index.html',
-
-    },
-
-
     cssmin: {
       options: {
         report: 'min',
@@ -164,35 +149,40 @@
 
 
     watch: {
+
       template: {
-        files: ['_prebuild/**/*.html','_prebuild/js/**/*.js'], // includes scripts because they need to be moved then concat
+        files: ['_prebuild/**/*.html'],
         tasks: ['jekyll', 'sass', 'concat'],
         options: {
-          debounceDelay: 250,
+          debounceDelay: 100,
+          livereload: {
+            host: 'manik.dev',
+            port: 4000,
+          },
         },
       },
-      // main: {
-      //   files: '_prebuild/**/*',
-      //   tasks: ['jekyll','sass','autoprefixer','concat'],
-      //   // tasks: ['sass','autoprefixer','concat'],
-      //   options: {
-      //     debounceDelay: 550,
-      //   },
-      // },
       css: {
         files: '_prebuild/css/**/*.scss',
         tasks: ['sass'],
         options: {
-          debounceDelay: 200,
+          debounceDelay: 100,
+          livereload: {
+            host: 'manik.dev',
+            port: 4000,
+          },
         },
       },
-      // scripts: {
-      //   files: '_prebuild/js/**/*.js',
-      //   tasks: ['concat'],
-      //   options: {
-      //     debounceDelay: 200,
-      //   },
-      // },
+      scripts: {
+        files: '_prebuild/js/**/*.js',
+        tasks: ['concat'],
+        options: {
+          debounceDelay: 100,
+          livereload: {
+            host: 'manik.dev',
+            port: 4000,
+          },
+        },
+      },
     },
 
     pagespeed: {
@@ -217,14 +207,10 @@
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-jekyll');
   // grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-pagespeed');
 
-  var critical = require('critical');
-
-  // TODO  fix cirtical css which isnt working right
 
 
   grunt.registerTask('default',
@@ -256,9 +242,10 @@
 
   grunt.registerTask('production',
     [
-      'jekyll','sass','autoprefixer','concat','removelogging','uglify','critical','cssmin','htmlmin','imagemin','pagespeed'
+      'jekyll','sass','autoprefixer','concat','removelogging','uglify','cssmin','htmlmin','imagemin','pagespeed'
     ]
   );
+
 };
 
 

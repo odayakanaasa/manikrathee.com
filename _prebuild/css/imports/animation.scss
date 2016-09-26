@@ -1,49 +1,26 @@
 @charset "UTF-8";
+
 /*
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license
-
-Copyright (c) 2013 Daniel Eden
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Modified version of Animate.css - http://daneden.me/animate
 */
 
 @mixin animate {
   -webkit-animation: 1s ease;
-     -moz-animation: 1s ease;
-      -ms-animation: 1s ease;
-       -o-animation: 1s ease;
           animation: 1s ease;
   -webkit-animation-fill-mode: both;
-     -moz-animation-fill-mode: both;
-      -ms-animation-fill-mode: both;
-       -o-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
 }
 
 @mixin animate-custom($time) {
   -webkit-animation: $time ease;
-     -moz-animation: $time ease;
-      -ms-animation: $time ease;
-       -o-animation: $time ease;
           animation: $time ease;
   -webkit-animation-fill-mode: both;
-     -moz-animation-fill-mode: both;
-      -ms-animation-fill-mode: both;
-       -o-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
 }
 @mixin delay-custom($time) {
   -webkit-animation-delay: $time;
   -moz-animation-delay: $time;
+  animation-delay: $time;
 }
 
 

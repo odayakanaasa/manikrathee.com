@@ -9,12 +9,10 @@ ga('send', 'pageview');
 
 function trackEvent(cat, action, label){
   if (cat && action && label) {
-    ga('send', 'event', cat, action, label);
+    try {
+        ga('send', 'event', cat, action, label);
+    } catch (e) {
+        logMyErrors(e); // pass exception object to error handler
+    }
   }
 }
-
-$('.social-api').on('hover', function(){
-  trackEvent('home','api bar','interaction: hovered [' + $(this).attr('id') + ']');
-});
-
-
