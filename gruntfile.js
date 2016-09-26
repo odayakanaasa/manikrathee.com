@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+  module.exports = function(grunt) {
 
   grunt.initConfig({
     sass: {
@@ -38,13 +38,11 @@ module.exports = function(grunt) {
           '_site/js/libs/scrolldepth.js',
           '_site/js/libs/mo.min.js',
           // '_site/js/libs/animation-control.js',
-          '_site/js/libs/jquery.withinViewport_base.js',
-          '_site/js/libs/jquery.withinViewport.js',
+          // '_site/js/libs/jquery.withinViewport_base.js',
+          // '_site/js/libs/jquery.withinViewport.js',
           '_site/js/libs/jquery.api.twitter.js',
           '_site/js/libs/jquery.api.last.fm.js',
           '_site/js/libs/jquery.api.instagram.js',
-          // '_site/js/libs/photoswipe.min.js',
-          // '_site/js/libs/photoswipe-ui-default.min.js',
           '_site/js/libs/lazyload.js',
           // '_site/js/libs/konami.js',
           // '_site/js/libs/picturefill.js',

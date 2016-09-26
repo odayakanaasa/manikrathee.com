@@ -1,8 +1,10 @@
 AddHandler php5-script .php
+
 RewriteEngine On
 RewriteBase /
 RewriteCond %{HTTP_HOST} ^manikrathee.com [NC]
-RewriteRule ^(.*)$ http://www.manikrathee.com/$1 [L,R=301]
+RewriteRule ^(.*)$ http://www.manikrathee.com/$1/ [L,R=301]
+
 Redirect /500px https://500px.com/manikrathee
 Redirect /blog http://blog.manikrathee.com
 Redirect /bot https://twitter.com/manikbot
@@ -26,11 +28,28 @@ Redirect /reading https://twitter.com/manikisreading
 Redirect /spotify https://play.spotify.com/user/manikrathee
 Redirect /tumblr http://manikrathee.tumblr.com
 Redirect /twitter http://www.twitter.com/manikrathee
+
 AddType application/x-font-woff woff
 AddType application/x-font-ttf ttf
 AddType application/vnd.ms-fontobject eot
 AddType image/svg+xml svg
 
 
+Redirect 301 /how-i-use-text-expander.html http://www.manikrathee.com/text-expander-tips.html
+Redirect 301 /why-uber-threatens-taxi-labor-groups.html http://www.manikrathee.com/uber-vs-cabs.html
+Redirect 301 /building-obama.html http://www.manikrathee.com/building-president-obama.html
+Redirect 301 /on-disconnecting.html http://www.manikrathee.com/on-disconnecting-from-tech-silicon-valley.html
+Redirect 301 /quality-in-startup-mvps.html http://www.manikrathee.com/quality-in-startup-minimum-viable-products.html
+Redirect 301 /rework.html http://www.manikrathee.com/rework-redesign-rebuild-iteration.html
+Redirect 301 /pride.html http://www.manikrathee.com/pride-chicago-2012.html
+Redirect 301 /interaction-and-innovation.html http://www.manikrathee.com/interaction-and-innovation-for-ios.html
+Redirect 301 /windy-city.html http://www.manikrathee.com/chicago-windy-city-and-obama.html
+Redirect 301 /changes-obama-for-america.html http://www.manikrathee.com/working-for-president-obama.html
+Redirect 301 /experiments-responsive-design.html http://www.manikrathee.com/responsive-design-experiments.html
 
-reading->manikisreading twitter
+
+
+Redirect 301 /oldpage2.html http://www.yoursite.com/folder/
+
+
+

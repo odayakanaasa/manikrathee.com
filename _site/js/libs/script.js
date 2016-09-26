@@ -276,7 +276,7 @@ if ( $body.hasClass('photo-blog-post') ) {
 
 
 
-
+// Within Viewport
 // $('#main-footer').withinviewport({top: -300});
 
 

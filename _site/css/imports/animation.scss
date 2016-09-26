@@ -46,55 +46,59 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -moz-animation-delay: $time;
 }
 
-@mixin bloop {
-  -webkit-animation-name: bloop;
-  -moz-animation-name: bloop;
-  -ms-animation-name: bloop;
-  -o-animation-name: bloop;
-  animation-name: bloop;
-}
 
 
 
-@-webkit-keyframes bloop {
-    0% {-webkit-transform: scale(0), opacity(0);}
-    10%, 20% {-webkit-transform: scale(0.2);}
-    30% {-webkit-transform: scale(0.8), opacity(1);}
-    40%, 50% {-webkit-transform: scale(1.05);}
-    60%{-webkit-transform: scale(1.1);}
-    70%, 80% {-webkit-transform: scale(1.05);}
-    90%, 100% {-webkit-transform: scale(1);}
-}
 
-@-moz-keyframes bloop {
-    0% {-moz-transform: scale(0), opacity(0);}
-    10%, 20% {-moz-transform: scale(0.2);}
-    30% {-moz-transform: scale(0.8), opacity(1);}
-    40%, 50% {-moz-transform: scale(1.05);}
-    60%{-moz-transform: scale(1.1);}
-    70%, 80% {-moz-transform: scale(1.05);}
-    90%, 100% {-moz-transform: scale(1);}
-}
+// @mixin bloop {
+//   -webkit-animation-name: bloop;
+//   -moz-animation-name: bloop;
+//   -ms-animation-name: bloop;
+//   -o-animation-name: bloop;
+//   animation-name: bloop;
+// }
 
-@-o-keyframes bloop {
-    0% {-o-transform: scale(0), opacity(0);}
-    10%, 20% {-o-transform: scale(0.2);}
-    30% {-o-transform: scale(0.8), opacity(1);}
-    40%, 50% {-o-transform: scale(1.05);}
-    60%{-o-transform: scale(1.1);}
-    70%, 80% {-o-transform: scale(1.05);}
-    90%, 100% {-o-transform: scale(1);}
-}
 
-@keyframes bloop {
-    0% {transform: scale(0), opacity(0);}
-    10%, 20% {transform: scale(0.2);}
-    30% {transform: scale(0.8), opacity(1);}
-    40%, 50% {transform: scale(1.05);}
-    60%{transform: scale(1.1);}
-    70%, 80% {transform: scale(1.05);}
-    90%, 100% {transform: scale(1);}
-}
+
+// @-webkit-keyframes bloop {
+//     0% {-webkit-transform: scale(0), opacity(0);}
+//     10%, 20% {-webkit-transform: scale(0.2);}
+//     30% {-webkit-transform: scale(0.8), opacity(1);}
+//     40%, 50% {-webkit-transform: scale(1.05);}
+//     60%{-webkit-transform: scale(1.1);}
+//     70%, 80% {-webkit-transform: scale(1.05);}
+//     90%, 100% {-webkit-transform: scale(1);}
+// }
+
+// @-moz-keyframes bloop {
+//     0% {-moz-transform: scale(0), opacity(0);}
+//     10%, 20% {-moz-transform: scale(0.2);}
+//     30% {-moz-transform: scale(0.8), opacity(1);}
+//     40%, 50% {-moz-transform: scale(1.05);}
+//     60%{-moz-transform: scale(1.1);}
+//     70%, 80% {-moz-transform: scale(1.05);}
+//     90%, 100% {-moz-transform: scale(1);}
+// }
+
+// @-o-keyframes bloop {
+//     0% {-o-transform: scale(0), opacity(0);}
+//     10%, 20% {-o-transform: scale(0.2);}
+//     30% {-o-transform: scale(0.8), opacity(1);}
+//     40%, 50% {-o-transform: scale(1.05);}
+//     60%{-o-transform: scale(1.1);}
+//     70%, 80% {-o-transform: scale(1.05);}
+//     90%, 100% {-o-transform: scale(1);}
+// }
+
+// @keyframes bloop {
+//     0% {transform: scale(0), opacity(0);}
+//     10%, 20% {transform: scale(0.2);}
+//     30% {transform: scale(0.8), opacity(1);}
+//     40%, 50% {transform: scale(1.05);}
+//     60%{transform: scale(1.1);}
+//     70%, 80% {transform: scale(1.05);}
+//     90%, 100% {transform: scale(1);}
+// }
 
 
 
@@ -3323,158 +3327,158 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 // }
 
 
-/*  Custom Animations  */
-  /* Rotate = Loader Animation */
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
+// /*  Custom Animations  */
+//   /* Rotate = Loader Animation */
+// @-webkit-keyframes rotate {
+//   from {
+//     -webkit-transform: rotate(0deg);
+//   }
+//   to {
+//     -webkit-transform: rotate(360deg);
+//   }
+// }
 
-@-moz-keyframes rotate {
-  from {
-    -moz-transform: rotate(0deg);
-  }
-  to {
-    -moz-transform: rotate(360deg);
-  }
-}
+// @-moz-keyframes rotate {
+//   from {
+//     -moz-transform: rotate(0deg);
+//   }
+//   to {
+//     -moz-transform: rotate(360deg);
+//   }
+// }
 
-@-o-keyframes rotate {
-  from {
-    -o-transform: rotate(0deg);
-  }
-  to {
-    -o-transform: rotate(360deg);
-  }
-}
+// @-o-keyframes rotate {
+//   from {
+//     -o-transform: rotate(0deg);
+//   }
+//   to {
+//     -o-transform: rotate(360deg);
+//   }
+// }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-@mixin rotate {
-    -webkit-animation-name: rotate;
-    -moz-animation-name: rotate;
-    -o-animation-name: rotate;
-    animation-name: rotate;
-
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    animation-timing-function: linear;
-
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
+// @keyframes rotate {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
 
 
-    -webkit-animation-duration: 0.5s;
-    -moz-animation-duration: 0.5s;
-    -o-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-}
+// @mixin rotate {
+//     -webkit-animation-name: rotate;
+//     -moz-animation-name: rotate;
+//     -o-animation-name: rotate;
+//     animation-name: rotate;
+
+//     -webkit-animation-timing-function: linear;
+//     -moz-animation-timing-function: linear;
+//     -o-animation-timing-function: linear;
+//     animation-timing-function: linear;
+
+//     -webkit-animation-iteration-count: infinite;
+//     -moz-animation-iteration-count: infinite;
+//     -o-animation-iteration-count: infinite;
+//     animation-iteration-count: infinite;
 
 
-
-
-@-webkit-keyframes slideUpLeft {
-  0% {
-    -webkit-transform: translateX(-50%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-  }
-}
-
-@-moz-keyframes slideUpLeft {
-  0% {
-    -moz-transform: translateX(-50%);
-  }
-  100% {
-    -moz-transform: translateX(-100%);
-  }
-}
-
-@-o-keyframes slideUpLeft {
-  0% {
-    -o-transform: translateX(-50%);
-  }
-  100% {
-    -o-transform: translateX(-100%);
-  }
-}
-
-@keyframes slideUpLeft {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@mixin slideUpLeft {
-  -webkit-animation-name: slideUpLeft;
-  -moz-animation-name: slideUpLeft;
-  -o-animation-name: slideUpLeft;
-  animation-name: slideUpLeft;
-}
+//     -webkit-animation-duration: 0.5s;
+//     -moz-animation-duration: 0.5s;
+//     -o-animation-duration: 0.5s;
+//     animation-duration: 0.5s;
+// }
 
 
 
 
+// @-webkit-keyframes slideUpLeft {
+//   0% {
+//     -webkit-transform: translateX(-50%);
+//   }
+//   100% {
+//     -webkit-transform: translateX(-100%);
+//   }
+// }
+
+// @-moz-keyframes slideUpLeft {
+//   0% {
+//     -moz-transform: translateX(-50%);
+//   }
+//   100% {
+//     -moz-transform: translateX(-100%);
+//   }
+// }
+
+// @-o-keyframes slideUpLeft {
+//   0% {
+//     -o-transform: translateX(-50%);
+//   }
+//   100% {
+//     -o-transform: translateX(-100%);
+//   }
+// }
+
+// @keyframes slideUpLeft {
+//   0% {
+//     transform: translateX(-50%);
+//   }
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// @mixin slideUpLeft {
+//   -webkit-animation-name: slideUpLeft;
+//   -moz-animation-name: slideUpLeft;
+//   -o-animation-name: slideUpLeft;
+//   animation-name: slideUpLeft;
+// }
 
 
-@-webkit-keyframes slideInRight {
-  0% {
-    -webkit-transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-  }
-}
 
-@-moz-keyframes slideInRight {
-  0% {
-    -moz-transform: translateX(-100%);
-  }
-  100% {
-    -moz-transform: translateX(0);
-  }
-}
 
-@-o-keyframes slideInRight {
-  0% {
-    -o-transform: translateX(-100%);
-  }
-  100% {
-    -o-transform: translateX(0);
-  }
-}
 
-@keyframes slideInRight {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 
-@mixin slideInRight {
-  -webkit-animation-name: slideInRight;
-  -moz-animation-name: slideInRight;
-  -o-animation-name: slideInRight;
-  animation-name: slideInRight;
-}
+// @-webkit-keyframes slideInRight {
+//   0% {
+//     -webkit-transform: translateX(-100%);
+//   }
+//   100% {
+//     -webkit-transform: translateX(0);
+//   }
+// }
+
+// @-moz-keyframes slideInRight {
+//   0% {
+//     -moz-transform: translateX(-100%);
+//   }
+//   100% {
+//     -moz-transform: translateX(0);
+//   }
+// }
+
+// @-o-keyframes slideInRight {
+//   0% {
+//     -o-transform: translateX(-100%);
+//   }
+//   100% {
+//     -o-transform: translateX(0);
+//   }
+// }
+
+// @keyframes slideInRight {
+//   0% {
+//     transform: translateX(-100%);
+//   }
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+// @mixin slideInRight {
+//   -webkit-animation-name: slideInRight;
+//   -moz-animation-name: slideInRight;
+//   -o-animation-name: slideInRight;
+//   animation-name: slideInRight;
+// }

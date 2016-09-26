@@ -13,7 +13,7 @@ if ( $('body').attr('id') === 'home' ){
     template: '<div class="photo" data="{{id}}"><p><a id="instagram-link" href="{{link}}" title="View my latest Instagram Shot">{{caption}}</a></p></div>'
  });
 
- // feed.run();
+ feed.run();
 
   // Set instagramActive to true so logofyAPI and activate API can fire
   // instagramActive = true;
