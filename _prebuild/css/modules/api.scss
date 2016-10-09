@@ -15,9 +15,9 @@
   height: 100vw;
   font-size: 0;
 }
-#instagram-api-bar li {
+.instagram-photo {
   width: 33.3%;
-  transition: .8s opacity;
+  list-style: none;
 }
 // #instagram-api-bar:hover img {
 //   opacity: 0.3;
