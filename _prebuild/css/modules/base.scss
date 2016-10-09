@@ -22,9 +22,7 @@ body {
   color: $dark-grey;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
-  transition:
-    background $transition,
-    color $transition;
+  transition: background $transition;
 
   &.view-mode--dark {
     background: $invert-body;
@@ -169,8 +167,7 @@ img {
   border-radius: 3px;
   transition:
     background-color $transition,
-    padding $transition,
-    color $transition;
+    padding $transition;
   @include box;
 
   @include mq(500px) {
