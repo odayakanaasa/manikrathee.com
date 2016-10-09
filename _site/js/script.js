@@ -194,7 +194,7 @@ if ( $('body').attr('id') === 'home' ){
     limit: 6,
     links: 1,
     resolution: 'standard_resolution',
-    template: '<li class="instagram-photo" data="{{id}}"><p><a class="instagram-link" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"></a></p></li>',
+    template: '<li class="instagram-photo" data="{{id}}"><a class="instagram-link" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"></a></li>',
  });
 
  feed.run();

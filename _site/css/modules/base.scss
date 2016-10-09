@@ -22,9 +22,7 @@ body {
   color: $dark-grey;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
-  transition:
-    background $transition,
-    color $transition;
+  transition: background $transition;
 
   &.view-mode--dark {
     background: $invert-body;
@@ -32,17 +30,22 @@ body {
   }
 
   @include mq(500px) {
-    padding: 4rem;
+    padding-top: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 0;
+    padding-left: 4rem;
   }
 
   @include mq(960px) {
     padding-top: ($spacer * 2);
     padding-right: ($spacer * 2);
-    padding-bottom: $spacer;
+    padding-bottom: 0;
     padding-left: ($spacer * 2);
   }
 
-
+  @include mq(1300px) {
+    padding-bottom: ($spacer * 2);
+  }
 }
 
 
@@ -164,8 +167,7 @@ img {
   border-radius: 3px;
   transition:
     background-color $transition,
-    padding $transition,
-    color $transition;
+    padding $transition;
   @include box;
 
   @include mq(500px) {

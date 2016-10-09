@@ -5,6 +5,7 @@
 $social-accounts:
     spotify spotify-dark
     fivehundredpx fivehundredpx-dark
+    instagram instagram-dark
     twitter twitter-dark
     github github-dark
     dribbble dribbble-dark
@@ -19,15 +20,20 @@ $social-accounts:
   }
 }
 
+
 // FIXME these are not correct sizes
 .icon {
   &--spotify,
   &--spotify-dark {
-    @include size(20px, 20px);
+    @include size(25px, 25px);
   }
   &--fivehundredpx,
   &--fivehundredpx-dark {
-    @include size(20px, 30px);
+    @include size(18px, 28px);
+  }
+  &--instagram,
+  &--instagram-dark {
+    @include size(30px, 22px);
   }
   &--twitter,
   &--twitter-dark {
@@ -57,6 +63,8 @@ $social-accounts:
 
 .social-list {
 // use flex here
+  display: flex;
+  justify-content: space-between;
   &--item {
 
   }

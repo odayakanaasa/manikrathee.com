@@ -43,6 +43,12 @@ a.icon {
 .icon--fivehundredpx-dark {
   background-image: url("../svg/fivehundredpx-dark.svg"); }
 
+.icon--instagram {
+  background-image: url("../svg/instagram.svg"); }
+
+.icon--instagram-dark {
+  background-image: url("../svg/instagram-dark.svg"); }
+
 .icon--twitter {
   background-image: url("../svg/twitter.svg"); }
 
@@ -80,13 +86,18 @@ a.icon {
   background-image: url("../svg/pocket-brand-dark.svg"); }
 
 .icon--spotify, .icon--spotify-dark {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 0; }
 
 .icon--fivehundredpx, .icon--fivehundredpx-dark {
-  width: 20px;
-  height: 30px;
+  width: 18px;
+  height: 28px;
+  border-radius: 0; }
+
+.icon--instagram, .icon--instagram-dark {
+  width: 30px;
+  height: 22px;
   border-radius: 0; }
 
 .icon--twitter, .icon--twitter-dark {
@@ -119,6 +130,14 @@ a.icon {
   height: 32px;
   border-radius: 0; }
 
+.social-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 /*
 Modified version of Animate.css - http://daneden.me/animate
 */
@@ -130,28 +149,14 @@ Modified version of Animate.css - http://daneden.me/animate
     -webkit-transform: perspective(400px) rotateX(0deg);
     opacity: 1; } }
 
-@-moz-keyframes flipInX {
-  0% {
-    -moz-transform: perspective(400px) rotateX(90deg);
-    opacity: 0; }
-  100% {
-    -moz-transform: perspective(400px) rotateX(0deg);
-    opacity: 1; } }
-
-@-o-keyframes flipInX {
-  0% {
-    -o-transform: perspective(400px) rotateX(90deg);
-    opacity: 0; }
-  100% {
-    -o-transform: perspective(400px) rotateX(0deg);
-    opacity: 1; } }
-
 @keyframes flipInX {
   0% {
-    transform: perspective(400px) rotateX(90deg);
+    -webkit-transform: perspective(400px) rotateX(90deg);
+            transform: perspective(400px) rotateX(90deg);
     opacity: 0; }
   100% {
-    transform: perspective(400px) rotateX(0deg);
+    -webkit-transform: perspective(400px) rotateX(0deg);
+            transform: perspective(400px) rotateX(0deg);
     opacity: 1; } }
 
 @-webkit-keyframes flipInY {
@@ -166,55 +171,23 @@ Modified version of Animate.css - http://daneden.me/animate
     -webkit-transform: perspective(400px) rotateY(0deg);
     opacity: 1; } }
 
-@-moz-keyframes flipInY {
-  0% {
-    -moz-transform: perspective(400px) rotateY(90deg);
-    opacity: 0; }
-  40% {
-    -moz-transform: perspective(400px) rotateY(-10deg); }
-  70% {
-    -moz-transform: perspective(400px) rotateY(10deg); }
-  100% {
-    -moz-transform: perspective(400px) rotateY(0deg);
-    opacity: 1; } }
-
-@-o-keyframes flipInY {
-  0% {
-    -o-transform: perspective(400px) rotateY(90deg);
-    opacity: 0; }
-  40% {
-    -o-transform: perspective(400px) rotateY(-10deg); }
-  70% {
-    -o-transform: perspective(400px) rotateY(10deg); }
-  100% {
-    -o-transform: perspective(400px) rotateY(0deg);
-    opacity: 1; } }
-
 @keyframes flipInY {
   0% {
-    transform: perspective(400px) rotateY(90deg);
+    -webkit-transform: perspective(400px) rotateY(90deg);
+            transform: perspective(400px) rotateY(90deg);
     opacity: 0; }
   40% {
-    transform: perspective(400px) rotateY(-10deg); }
+    -webkit-transform: perspective(400px) rotateY(-10deg);
+            transform: perspective(400px) rotateY(-10deg); }
   70% {
-    transform: perspective(400px) rotateY(10deg); }
+    -webkit-transform: perspective(400px) rotateY(10deg);
+            transform: perspective(400px) rotateY(10deg); }
   100% {
-    transform: perspective(400px) rotateY(0deg);
+    -webkit-transform: perspective(400px) rotateY(0deg);
+            transform: perspective(400px) rotateY(0deg);
     opacity: 1; } }
 
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@-o-keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
@@ -234,29 +207,15 @@ Modified version of Animate.css - http://daneden.me/animate
     opacity: 1;
     -webkit-transform: translateY(0); } }
 
-@-moz-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(20px); }
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0); } }
-
-@-o-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -o-transform: translateY(20px); }
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0); } }
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(20px); }
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 @-webkit-keyframes fadeInDown {
   0% {
@@ -266,29 +225,15 @@ Modified version of Animate.css - http://daneden.me/animate
     opacity: 1;
     -webkit-transform: translateY(0); } }
 
-@-moz-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(-20px); }
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0); } }
-
-@-o-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -o-transform: translateY(-20px); }
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0); } }
-
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    transform: translateY(-20px); }
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 @-webkit-keyframes fadeInLeft {
   0% {
@@ -298,29 +243,15 @@ Modified version of Animate.css - http://daneden.me/animate
     opacity: 1;
     -webkit-transform: translateX(0); } }
 
-@-moz-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(-20px); }
-  100% {
-    opacity: 1;
-    -moz-transform: translateX(0); } }
-
-@-o-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -o-transform: translateX(-20px); }
-  100% {
-    opacity: 1;
-    -o-transform: translateX(0); } }
-
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-20px); }
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
 
 @-webkit-keyframes fadeInRight {
   0% {
@@ -330,43 +261,17 @@ Modified version of Animate.css - http://daneden.me/animate
     opacity: 1;
     -webkit-transform: translateX(0); } }
 
-@-moz-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(20px); }
-  100% {
-    opacity: 1;
-    -moz-transform: translateX(0); } }
-
-@-o-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -o-transform: translateX(20px); }
-  100% {
-    opacity: 1;
-    -o-transform: translateX(0); } }
-
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(20px); }
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
 
 @-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-@-moz-keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-@-o-keyframes fadeOut {
   0% {
     opacity: 1; }
   100% {
@@ -386,29 +291,15 @@ Modified version of Animate.css - http://daneden.me/animate
     opacity: 0;
     -webkit-transform: translateY(-20px); } }
 
-@-moz-keyframes fadeOutUp {
-  0% {
-    opacity: 1;
-    -moz-transform: translateY(0); }
-  100% {
-    opacity: 0;
-    -moz-transform: translateY(-20px); } }
-
-@-o-keyframes fadeOutUp {
-  0% {
-    opacity: 1;
-    -o-transform: translateY(0); }
-  100% {
-    opacity: 0;
-    -o-transform: translateY(-20px); } }
-
 @keyframes fadeOutUp {
   0% {
     opacity: 1;
-    transform: translateY(0); }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
   100% {
     opacity: 0;
-    transform: translateY(-20px); } }
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); } }
 
 @-webkit-keyframes fadeOutDown {
   0% {
@@ -418,29 +309,15 @@ Modified version of Animate.css - http://daneden.me/animate
     opacity: 0;
     -webkit-transform: translateY(20px); } }
 
-@-moz-keyframes fadeOutDown {
-  0% {
-    opacity: 1;
-    -moz-transform: translateY(0); }
-  100% {
-    opacity: 0;
-    -moz-transform: translateY(20px); } }
-
-@-o-keyframes fadeOutDown {
-  0% {
-    opacity: 1;
-    -o-transform: translateY(0); }
-  100% {
-    opacity: 0;
-    -o-transform: translateY(20px); } }
-
 @keyframes fadeOutDown {
   0% {
     opacity: 1;
-    transform: translateY(0); }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
   100% {
     opacity: 0;
-    transform: translateY(20px); } }
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
 
 @-webkit-keyframes fadeOutLeft {
   0% {
@@ -450,29 +327,15 @@ Modified version of Animate.css - http://daneden.me/animate
     opacity: 0;
     -webkit-transform: translateX(-20px); } }
 
-@-moz-keyframes fadeOutLeft {
-  0% {
-    opacity: 1;
-    -moz-transform: translateX(0); }
-  100% {
-    opacity: 0;
-    -moz-transform: translateX(-20px); } }
-
-@-o-keyframes fadeOutLeft {
-  0% {
-    opacity: 1;
-    -o-transform: translateX(0); }
-  100% {
-    opacity: 0;
-    -o-transform: translateX(-20px); } }
-
 @keyframes fadeOutLeft {
   0% {
     opacity: 1;
-    transform: translateX(0); }
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
   100% {
     opacity: 0;
-    transform: translateX(-20px); } }
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); } }
 
 @-webkit-keyframes fadeOutRight {
   0% {
@@ -482,36 +345,23 @@ Modified version of Animate.css - http://daneden.me/animate
     opacity: 0;
     -webkit-transform: translateX(20px); } }
 
-@-moz-keyframes fadeOutRight {
-  0% {
-    opacity: 1;
-    -moz-transform: translateX(0); }
-  100% {
-    opacity: 0;
-    -moz-transform: translateX(20px); } }
-
-@-o-keyframes fadeOutRight {
-  0% {
-    opacity: 1;
-    -o-transform: translateX(0); }
-  100% {
-    opacity: 0;
-    -o-transform: translateX(20px); } }
-
 @keyframes fadeOutRight {
   0% {
     opacity: 1;
-    transform: translateX(0); }
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
   100% {
     opacity: 0;
-    transform: translateX(20px); } }
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); } }
 
 @media print {
   * {
     background: transparent !important;
     color: black !important;
     text-shadow: none !important;
-    filter: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
     -ms-filter: none !important; }
   a, a:visited {
     color: #444 !important;
@@ -919,8 +769,6 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -974,7 +822,8 @@ html {
   background-color: #364E6B;
   font-size: 62.5%;
   text-rendering: optimizelegibility;
-  font-feature-settings: "liga", "hist", "onum";
+  -webkit-font-feature-settings: "liga", "hist", "onum";
+          font-feature-settings: "liga", "hist", "onum";
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden; }
 
@@ -986,7 +835,7 @@ body {
   color: #505050;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
-  transition: background 0.35s ease-in-out, color 0.35s ease-in-out; }
+  transition: background 0.35s ease-in-out; }
   body.view-mode--dark {
     background: #1f1f1f;
     color: #c7c7c7; }
@@ -1089,7 +938,7 @@ img {
   margin-right: auto;
   padding: 3.0769230769rem;
   border-radius: 3px;
-  transition: background-color 0.35s ease-in-out, padding 0.35s ease-in-out, color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, padding 0.35s ease-in-out;
   box-sizing: border-box; }
   @media (min-width: 500px) {
     [id=main] {
@@ -1308,7 +1157,8 @@ blockquote {
   font-weight: 700;
   line-height: 1.6;
   box-shadow: 5rem 5rem 65px 5px rgba(0, 0, 0, 0.05);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   will-change: box-shadow;
   transition: box-shadow 4s ease-in-out; }
   blockquote.sans {
@@ -1410,10 +1260,18 @@ figcaption,
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODYuMiA0NDAuNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+ICA8cGF0aCBjbGFzcz0ibW91bnRhaW4tMSIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlPSIjZmZmIiBkPSJNMzc0LjEgMjIyLjhsMTIxLjcgMjEwLjctMjQzLjQuMUg5bDEyMS43LTIxMC44TDI1Mi4zIDEyeiIvPiAgPHBhdGggY2xhc3M9Im1vdW50YWluLTIiIGZpbGw9Im5vbmUiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlPSIjZmZmIiBkPSJNNTY2LjMgMjIwLjdsMTIzLjUgMjEzLjctMjQ2LjEtLjQtMjQ2LS40IDEyMi42LTIxMy40TDQ0Mi44IDYuOXoiLz48L3N2Zz4="); }
 
 [id="page-header"] {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-top: 4rem; }
   [id="page-header"] .global-header {
     z-index: 2;
@@ -1432,7 +1290,8 @@ figcaption,
   [id="site-title"] [id=name] {
     font-size: 22px;
     font-size: 2.2rem;
-    font-weight: 600; }
+    font-weight: 600;
+    transition: color 0.35s ease-in-out; }
   [id="site-title"] [id=greeting] {
     font-size: 18px;
     font-size: 1.8rem;
@@ -1453,7 +1312,8 @@ figcaption,
     font-size: 1.8rem;
     margin-bottom: 4rem; }
   [id="who-is"] .previous-container {
-    color: #505050; }
+    color: #505050;
+    transition: color 0.35s ease-in-out; }
     .view-mode--dark [id="who-is"] .previous-container {
       color: #EFF0F0; }
   [id="who-is"] .previous-heading {
@@ -1461,10 +1321,12 @@ figcaption,
     text-transform: uppercase;
     font-size: 12px;
     font-size: 1.2rem;
-    line-height: 1; }
+    line-height: 1;
+    transition: color 0.35s ease-in-out; }
   [id="who-is"] .previous-positions li {
     list-style-type: none;
-    margin-bottom: 1.2rem; }
+    margin-bottom: 1.2rem;
+    transition: color 0.35s ease-in-out; }
     [id="who-is"] .previous-positions li:last-child {
       margin-bottom: 0; }
     @media (min-width: 800px) {
@@ -1489,7 +1351,9 @@ figcaption,
     .page-title-container {
       max-width: 400px;
       padding-left: 50px;
-      align-self: flex-end; } }
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end; } }
   @media (min-width: 1200px) {
     .page-title-container {
       max-width: 100%;
@@ -1510,8 +1374,6 @@ figcaption,
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: fadeInRight;
-  -moz-animation-name: fadeInRight;
-  -o-animation-name: fadeInRight;
   animation-name: fadeInRight; }
   @media (min-width: 500px) {
     #header-bar {
@@ -1524,8 +1386,6 @@ figcaption,
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both;
       -webkit-animation-name: flipInX;
-      -moz-animation-name: flipInX;
-      -o-animation-name: flipInX;
       animation-name: flipInX; } }
   #header-bar path {
     stroke: #82e17c; }
@@ -1568,8 +1428,12 @@ figcaption,
 
 @media (min-width: 800px) {
   [id="page-header"] {
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 0; }
     [id="page-header"] .global-header {
       width: 30%;
@@ -1635,8 +1499,12 @@ figcaption,
 
 #main-footer {
   position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   background: #333;
   padding: 4rem;
@@ -1665,14 +1533,20 @@ figcaption,
     position: absolute;
     top: 30px;
     left: 50%;
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     width: 46px;
     height: 30px;
     background-size: contain; }
   #main-footer .footer-nav-container {
-    justify-content: space-around; }
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
   #main-footer .footer-data {
-    justify-content: space-around; }
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
   #main-footer .main-nav-list {
     overflow: hidden;
     margin-top: 4rem;
@@ -1697,12 +1571,16 @@ figcaption,
     will-change: mix-blend-mode, transform, opacity;
     mix-blend-mode: luminosity;
     opacity: 0;
-    backface-visibility: hidden;
-    transform: scale(1.05) translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: scale(1.05) translate3d(0, 0, 0);
+            transform: scale(1.05) translate3d(0, 0, 0);
+    transition: opacity 4s ease-in-out, -webkit-transform 2.5s ease-out, mix-blend-mode 6s ease-in-out;
     transition: opacity 4s ease-in-out, transform 2.5s ease-out, mix-blend-mode 6s ease-in-out; }
     #main-footer .footer-bg-photo-posts.is-visible {
       opacity: 1;
-      transform: scale(1) translate3d(0, 0, 0);
+      -webkit-transform: scale(1) translate3d(0, 0, 0);
+              transform: scale(1) translate3d(0, 0, 0);
       mix-blend-mode: normal; }
     #main-footer .footer-bg-photo-posts span {
       display: block;
@@ -1715,7 +1593,8 @@ figcaption,
   #main-footer .main-nav-list,
   #main-footer #snapchat {
     margin-bottom: 4rem;
-    transform: translate3d(0, 0, 0); }
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
 
 #snapchat {
   display: block;
@@ -1730,7 +1609,9 @@ figcaption,
   margin-right: auto; }
 
 .footer-tout {
-  justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   margin-top: 4.5rem; }
   .footer-tout:first-child {
@@ -1766,7 +1647,9 @@ figcaption,
   position: absolute;
   top: 160px;
   left: -40px;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   letter-spacing: 7px;
   text-transform: uppercase;
   opacity: 0.55;
@@ -1779,15 +1662,21 @@ figcaption,
 
 @media (min-width: 768px) {
   #main-footer {
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     margin-left: -40px; }
     #main-footer .mountain-monday {
       position: absolute;
       top: auto;
       left: auto;
       margin: 0;
-      transform: none;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
       width: 40px;
       height: 28px; }
     #main-footer .footer-nav-container {
@@ -1911,9 +1800,15 @@ figcaption,
 
 @media (min-width: 700px) {
   .row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start; }
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
     .row-tout {
       width: 50%;
       margin-top: 0;
@@ -1973,12 +1868,17 @@ figcaption,
         right: 0;
         bottom: 0;
         box-shadow: 0 50px 65px 5px rgba(0, 0, 0, 0.1);
-        transform: translate(0, -10%);
+        -webkit-transform: translate(0, -10%);
+            -ms-transform: translate(0, -10%);
+                transform: translate(0, -10%);
         opacity: 0;
+        transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.25s cubic-bezier(0.19, 1, 0.22, 1);
         transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1), transform 1.25s cubic-bezier(0.19, 1, 0.22, 1); }
       .post-list--link:hover:after {
         opacity: 1;
-        transform: translate(0, 0); } }
+        -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+                transform: translate(0, 0); } }
 
 .post-list--date {
   font-size: 14px;
@@ -2007,7 +1907,9 @@ figcaption,
     #work-in-progress {
       top: 46px;
       left: 50%;
-      transform: translate(-50%, 0); } }
+      -webkit-transform: translate(-50%, 0);
+          -ms-transform: translate(-50%, 0);
+              transform: translate(-50%, 0); } }
   @media (min-width: 960px) {
     #work-in-progress {
       top: 1rem; } }
@@ -2063,7 +1965,9 @@ figcaption,
   list-style-type: none; }
   @media (min-width: 800px) {
     .blockquote-list {
-      columns: 2; }
+      -webkit-columns: 2;
+         -moz-columns: 2;
+              columns: 2; }
       .blockquote-list li {
         box-sizing: border-box;
         padding-right: 1rem; }
@@ -2150,11 +2054,8 @@ figcaption,
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -o-animation-name: fadeInDown;
   animation-name: fadeInDown;
   -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
   animation-delay: 2s; }
 
 #css-award {
@@ -2240,15 +2141,20 @@ figcaption,
   display: -ms-flexbox;
   -ms-flex-direction: column;
   -ms-flex-wrap: wrap;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   height: 100vw;
   font-size: 0; }
 
-#instagram-api-bar li {
+.instagram-photo {
   width: 33.3%;
-  transition: .8s opacity; }
+  list-style: none; }
 
 /*  404  */
 .fourohfour {
@@ -2291,8 +2197,6 @@ figcaption,
   box-sizing: border-box; }
 
 .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .comparison, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .comparison {
@@ -2651,16 +2555,12 @@ figcaption,
   .resources .resource-block .left {
     float: left;
     width: 50%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 30px 0 0; }
   .resources .resource-block .right {
     float: right;
     width: 50%;
     margin-bottom: 20px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
   .resources .resource-block #hardware li {
     width: 50%;
@@ -2787,16 +2687,9 @@ figcaption,
     width: 190px;
     margin-top: 6px;
     background: #1fc5b7;
-    background: -moz-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #1fc5b7), color-stop(49%, #007de1), color-stop(100%, #a81fc5));
-    background: -webkit-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
-    background: -o-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
-    background: -ms-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
     background: linear-gradient(135deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fc5b7', endColorstr='#a81fc5',GradientType=1 ); }
   [id=subscription] #submit {
     border: none; }
     [id=subscription] #submit:hover {
       background: none; } }
-
-/*# sourceMappingURL=style.css.map */

@@ -2,3 +2,26 @@
 
 // API
 
+
+// Instagram Grid
+
+#instagram-api-bar {
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -ms-flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vw;
+  font-size: 0;
+}
+.instagram-photo {
+  width: 33.3%;
+  list-style: none;
+}
+// #instagram-api-bar:hover img {
+//   opacity: 0.3;
+// }
+// #instagram-api-bar:hover img:hover {
+//   opacity: 1;
+// }
