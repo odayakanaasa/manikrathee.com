@@ -254,14 +254,14 @@ https://github.com/manikrathee/manikrathee.com
         </li>
       
         <li>
-          <a href="https://medium.com/the-year-of-the-looking-glass/" title="Visit The Year of the Looking Glass — Julie Zhuo" itemprop="url">
-            The Year of the Looking Glass — Julie&nbsp;Zhuo
+          <a href="https://medium.com/the-year-of-the-looking-glass/" title="Visit The Year of the Looking Glass &mdash; Julie Zhuo" itemprop="url">
+            The Year of the Looking Glass &mdash; Julie&nbsp;Zhuo
           </a>
         </li>
       
         <li>
-          <a href="https://m.signalvnoise.com/" title="Visit Signal v. Noise — Basecamp" itemprop="url">
-            Signal v. Noise —&nbsp;Basecamp
+          <a href="https://m.signalvnoise.com/" title="Visit Signal v. Noise &mdash; Basecamp" itemprop="url">
+            Signal v. Noise &mdash;&nbsp;Basecamp
           </a>
         </li>
       
@@ -547,12 +547,33 @@ https://github.com/manikrathee/manikrathee.com
 
     <section class="footer-data">
       <div id="weekly-reads-tout" class="footer-tout">
-        <a href="/weeklyreads" class="invert-hover" title="" itemprop="url">
-          <i class="icon icon--weeklyreads">WeeklyReads: an email list for design and inspiration.</i>
+        <p>
+          <i class="icon icon--weeklyreads">WeeklyReads: <br>An email list for design and inspiration.</i>
           <span>
             WeeklyReads: an email list for design and inspiration.
           </span>
-        </a>
+        </p>
+
+
+          <form
+            id="footer-weekly-reads"
+            action="https://tinyletter.com/manikrathee"
+            method="post"
+            target="popupwindow"
+            onsubmit="window.open('https://tinyletter.com/manikrathee', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+            <ul class="form-fields">
+              <li>
+                <label for="tlemail">Email</label>
+                <input type="email" name="email" id="tlemail" placeholder="yourname@gmail.com" />
+              </li>
+              <li>
+                <span class="wrap">
+                  <input id="submit" type="submit" value="Subscribe" />
+                </span>
+              </li></ul>
+            </ul>
+            <input type="hidden" value="1" id="hidden" name="embed"/>
+          </form>
       </div>
 
       <div id="photo-metadata" class="footer-tout">

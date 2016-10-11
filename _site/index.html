@@ -294,22 +294,6 @@ https://github.com/manikrathee/manikrathee.com
         </p>
       </li>
       
-      <li>
-        <p class="condensed">
-          <a href="/building-president-obama.html" title="Building Obama" itemprop="url">
-            Building Obama<!--
-        --></a><span>, May 2013</span>
-        </p>
-      </li>
-      
-      <li>
-        <p class="condensed">
-          <a href="/on-disconnecting-from-tech-silicon-valley.html" title="On Disconnecting: Escaping the tech that surrounds us" itemprop="url">
-            On Disconnecting: Escaping the tech that surrounds us<!--
-        --></a><span>, April 2013</span>
-        </p>
-      </li>
-      
       <li class="more-items">
         <a class="more-items--link" href="/blog/" title="" itemprop="url">
           More Writing
@@ -331,16 +315,16 @@ https://github.com/manikrathee/manikrathee.com
               .net Magazine's site moved. This was the original URL:
                 http://www.netmagazine.com/features/net-awards-2013-top-10-young-designers
              -->
-            Young Designer of the Year Nominee, .net Awards 2013
-          </a><span>, .net Magazine</span>
+            Young Designer of the Year Nominee,
+          </a><span>.net Awards 2013, .net Magazine</span>
         </p>
       </li>
       <li>
         <p class="condensed">
           <a href="http://www.amazon.com/Build-Your-Own-Brand-Strategies/dp/1440324557/" title="Build Your Own Brand" itemprop="url">
             Build Your Own Brand
-          </a>
-          <span>, Robin Landa</span>
+          </a>,
+          <span> Robin Landa</span>
         </p>
       </li>
       <li>
@@ -380,12 +364,12 @@ https://github.com/manikrathee/manikrathee.com
         <p class="condensed">
           <a href="/building-president-obama.html" title="Thinking Creatively Conference 10" itemprop="url">
             Building Obama
-          </a><span>,  Keynote Address, Thinking Creatively Conf &mdash; April, 2013</span>
+          </a><span>,  Keynote Address, <br>Thinking Creatively Conf &mdash; April, 2013</span>
         </p>
       </li>
       <li>
         <p class="condensed">
-          Building Obama In CSS<span>, CSS Dev Conf &mdash; October, 2013</span>
+          Building Obama In CSS<span>, <br>CSS Dev Conf &mdash; October, 2013</span>
         </p>
       </li>
     </ul>
@@ -443,11 +427,21 @@ https://github.com/manikrathee/manikrathee.com
 
 
 <section class="api">
+  <div id="spotify-api-container">
+    <i class="icon icon--spotify-dark"></i>
+    <div id="spotify-api-bar"></div>
+  </div>
 
-  <div id="spotify-api-bar"></div>
-  <div id="twitter-api-bar"></div>
-  <ul id="instagram-api-bar"></ul>
 
+  <div id="twitter-api-container">
+    <i class="icon icon--twitter-dark"></i>
+    <div id="twitter-api-bar"></div>
+  </div>
+
+  <div id="instagram-api-container">
+    <i class="icon icon--instagram-dark"></i>
+    <div id="instagram-api-bar"></div>
+  </div>
 </section>
 
 
@@ -514,12 +508,33 @@ https://github.com/manikrathee/manikrathee.com
 
     <section class="footer-data">
       <div id="weekly-reads-tout" class="footer-tout">
-        <a href="/weeklyreads" class="invert-hover" title="" itemprop="url">
-          <i class="icon icon--weeklyreads">WeeklyReads: an email list for design and inspiration.</i>
+        <p>
+          <i class="icon icon--weeklyreads">WeeklyReads: <br>An email list for design and inspiration.</i>
           <span>
             WeeklyReads: an email list for design and inspiration.
           </span>
-        </a>
+        </p>
+
+
+          <form
+            id="footer-weekly-reads"
+            action="https://tinyletter.com/manikrathee"
+            method="post"
+            target="popupwindow"
+            onsubmit="window.open('https://tinyletter.com/manikrathee', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+            <ul class="form-fields">
+              <li>
+                <label for="tlemail">Email</label>
+                <input type="email" name="email" id="tlemail" placeholder="yourname@gmail.com" />
+              </li>
+              <li>
+                <span class="wrap">
+                  <input id="submit" type="submit" value="Subscribe" />
+                </span>
+              </li></ul>
+            </ul>
+            <input type="hidden" value="1" id="hidden" name="embed"/>
+          </form>
       </div>
 
       <div id="photo-metadata" class="footer-tout">

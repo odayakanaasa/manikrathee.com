@@ -6,22 +6,11 @@
 // Instagram Grid
 
 #instagram-api-bar {
-  display: -ms-flexbox;
-  -ms-flex-direction: column;
-  -ms-flex-wrap: wrap;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 100vw;
-  font-size: 0;
+  @include clearfix;
 }
 .instagram-photo {
-  width: 33.3%;
+  float: left;
+  width: 25%;
+  border: $border;
   list-style: none;
 }
-// #instagram-api-bar:hover img {
-//   opacity: 0.3;
-// }
-// #instagram-api-bar:hover img:hover {
-//   opacity: 1;
-// }
