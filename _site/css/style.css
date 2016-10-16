@@ -91,28 +91,28 @@ a.icon {
   border-radius: 0; }
 
 .icon--fivehundredpx, .icon--fivehundredpx-dark {
-  width: 18px;
-  height: 28px;
+  width: 28px;
+  height: 18px;
   border-radius: 0; }
 
 .icon--instagram, .icon--instagram-dark {
-  width: 30px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   border-radius: 0; }
 
 .icon--twitter, .icon--twitter-dark {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 0; }
 
 .icon--github, .icon--github-dark {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 0; }
 
 .icon--dribbble, .icon--dribbble-dark {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 0; }
 
 .icon--tumblr, .icon--tumblr-dark {
@@ -121,8 +121,8 @@ a.icon {
   border-radius: 0; }
 
 .icon--pocket, .icon--pocket-dark {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 25px;
   border-radius: 0; }
 
 .icon--pocket-brand {
@@ -132,7 +132,17 @@ a.icon {
 
 .social-list {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: calc(100% - 14rem);
+  margin-left: 4rem; }
+  .social-list--item {
+    flex-grow: 1; }
+  .social-list--link {
+    opacity: 0.7;
+    will-change: opacity;
+    transition: opacity 0.35s ease-in-out; }
+    .social-list--link:hover {
+      opacity: 1; }
 
 /*
 Modified version of Animate.css - http://daneden.me/animate
@@ -986,7 +996,7 @@ table {
   text-shadow: none; }
 
 html {
-  background-color: #364E6B;
+  background-color: #333;
   font-size: 62.5%;
   text-rendering: optimizelegibility;
   font-feature-settings: "liga", "hist", "onum";
@@ -1096,22 +1106,37 @@ img {
   max-width: 1280px;
   position: relative;
   background-color: #fff;
-  background-image: url("../img/bg-mobile.png");
-  background-size: 100%;
-  background-repeat: repeat;
-  background-position: center top;
   margin-left: auto;
   margin-right: auto;
   padding: 3.0769230769rem;
   border-radius: 3px;
-  transition: background 0.35s ease-in-out, padding 0.35s ease-in-out;
+  transition: background 0.35s ease-in-out;
   box-sizing: border-box; }
+  [id=main] #them-grid-lines {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image: url("../img/bg-mobile.png");
+    background-size: 100%;
+    background-repeat: repeat;
+    background-position: center top;
+    transition: opacity 0.35s ease-in-out; }
+    .view-mode--dark [id=main] #them-grid-lines {
+      opacity: 0;
+      transition-delay: 1s; }
+    @media (min-width: 960px) {
+      [id=main] #them-grid-lines {
+        background-image: url("../img/bg-desktop.png"); } }
   @media (min-width: 500px) {
     [id=main] {
       padding: 4rem; } }
   @media (min-width: 960px) {
     [id=main] {
-      background-image: url("../img/bg-desktop.png");
       padding: 8rem; } }
   [id=main]:after {
     display: block;
@@ -1127,8 +1152,7 @@ img {
     border-radius: 3px;
     box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05); }
   .view-mode--dark [id=main] {
-    background-color: #2b2b2b;
-    background-image: none; }
+    background-color: #2b2b2b; }
 
 [id=inner-container] {
   position: relative;
@@ -1277,11 +1301,7 @@ p {
   p.condensed {
     font-size: 15px;
     font-size: 1.5rem;
-    margin-bottom: 1.2rem; }
-    @media (min-width: 800px) {
-      p.condensed {
-        font-size: 16px;
-        font-size: 1.6rem; } }
+    margin-bottom: 0.8rem; }
 
 em {
   font-style: italic; }
@@ -1745,6 +1765,40 @@ figcaption,
   margin-left: auto;
   margin-right: auto; }
 
+#manikrathee {
+  display: none;
+  position: absolute;
+  top: 160px;
+  left: -40px;
+  transform: rotate(-90deg);
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  opacity: 0.55;
+  pointer-events: none; }
+
+#photo-metadata {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; }
+  #photo-metadata.is-visible {
+    opacity: 1; }
+  #photo-metadata .photo-metadata--link {
+    border: none; }
+  #photo-metadata figcaption {
+    display: inline-block;
+    width: calc(100% - 60px);
+    margin-top: 0;
+    margin-left: 10px;
+    vertical-align: top;
+    text-align: center; }
+    #photo-metadata figcaption p {
+      margin-bottom: 0.8rem;
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: opacity 0.35s ease-in-out; }
+
 .footer-tout {
   justify-content: space-between;
   position: relative;
@@ -1767,36 +1821,23 @@ figcaption,
   display: block;
   width: 230px;
   margin: 1rem auto 0;
+  margin: 0;
   text-align: center; }
+  #weekly-reads-tout i {
+    margin-bottom: 1rem; }
 
-#photo-metadata {
-  opacity: 0;
-  transition: opacity 1s ease-in-out; }
-  #photo-metadata.is-visible {
-    opacity: 1; }
-  #photo-metadata .photo-metadata--link {
-    border: none; }
+#footer-weekly-reads-signup > * {
+  box-sizing: border-box; }
 
-#manikrathee {
-  display: none;
-  position: absolute;
-  top: 160px;
-  left: -40px;
-  transform: rotate(-90deg);
-  letter-spacing: 7px;
-  text-transform: uppercase;
-  opacity: 0.55;
-  pointer-events: none; }
-
-#footer-weekly-reads li {
+#footer-weekly-reads-signup li {
   list-style: none; }
 
-#footer-weekly-reads label {
+#footer-weekly-reads-signup label {
+  display: block;
   font-size: 1.2rem;
-  text-transform: uppercase;
-  display: block; }
+  text-transform: uppercase; }
 
-#footer-weekly-reads input[type=email] {
+#footer-weekly-reads-signup input[type=email] {
   outline: none;
   background: rgba(0, 0, 0, 0.2);
   border: none;
@@ -1806,8 +1847,13 @@ figcaption,
   line-height: 30;
   height: 30px;
   padding: 0 1rem;
+  color: #fff;
   font-weight: 500;
   letter-spacing: 1px; }
+
+#footer-weekly-reads-signup #submit {
+  margin-top: 1rem;
+  width: 100%; }
 
 @media (min-width: 500px) {
   #main-footer {
@@ -1839,15 +1885,12 @@ figcaption,
       display: inline-block;
       vertical-align: top;
       transition: opacity 0.35s ease-in-out; }
-    #main-footer .footer-tout figcaption {
-      display: inline-block;
-      width: calc(100% - 60px);
-      margin-top: 0;
-      margin-left: 10px;
-      vertical-align: top;
-      text-align: left; }
     #main-footer .footer-tout a {
+      display: inline-block;
+      width: 100%;
+      min-width: 320px;
       border: none; }
+      #main-footer .footer-tout a:hover p,
       #main-footer .footer-tout a:hover .icon {
         opacity: 0.3; }
     #main-footer .main-nav-list {
@@ -1862,33 +1905,49 @@ figcaption,
         #main-footer .main-nav-list li:nth-child(odd) {
           margin-right: 0;
           text-align: left; }
-    #main-footer #manikrathee {
-      display: block; }
-    #main-footer #snapchat {
-      width: 78px;
-      height: 78px;
-      border-radius: 0;
-      margin: 0 0 0 32px; }
-    #main-footer #weekly-reads-tout {
-      width: auto;
-      margin: 0;
-      text-align: left; }
-      #main-footer #weekly-reads-tout span {
-        display: inline-block;
-        width: 230px;
-        margin: 0 0 0 1rem; } }
+  #manikrathee {
+    display: block; }
+  #snapchat {
+    width: 78px;
+    height: 78px;
+    border-radius: 0;
+    margin: 0 0 0 32px; }
+  #photo-metadata figcaption {
+    text-align: left; }
+  #weekly-reads-tout p em {
+    display: block;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 1;
+    font-style: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase; }
+  #weekly-reads-tout p span {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.2; }
+  #weekly-reads-tout label {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5px; }
+  #footer-weekly-reads-signup input[type=email],
+  #footer-weekly-reads-signup #submit {
+    width: 100%;
+    max-width: 200px; } }
 
 @media (min-width: 960px) {
   #main-footer {
     width: calc(100% + 160px);
     margin-left: -80px;
-    padding: 10rem 8rem; }
+    padding: 10rem 8rem 4rem; }
     #main-footer .mountain-monday {
       top: 50px;
       left: 50%; }
   #manikrathee {
     top: 220px;
-    left: 0;
+    left: -3px;
     opacity: 0.3; } }
 
 @media (min-width: 1300px) {
@@ -1959,7 +2018,7 @@ figcaption,
         margin-top: 0;
         padding-right: 4rem; }
       .row-tout:last-child {
-        padding-right: 4rem; } }
+        padding-left: 4rem; } }
 
 .post-list {
   list-style-type: none;
@@ -1989,6 +2048,9 @@ figcaption,
   width: 100%; }
   .post-list--item + .post-list--item {
     margin-top: 8rem; }
+  @media (min-width: 960px) {
+    .post-list--item:nth-child(odd) {
+      margin-left: -20rem; } }
   .post-list--item img {
     display: block;
     width: 100%; }
@@ -2284,8 +2346,21 @@ figcaption,
 .instagram-photo {
   float: left;
   width: 25%;
-  border: 2px solid rgba(0, 0, 0, 0.2);
   list-style: none; }
+
+.api--unit {
+  padding: 8rem 0; }
+  .api--unit:last-child {
+    padding-bottom: 0; }
+  .api--unit i {
+    display: inline-block;
+    vertical-align: top; }
+  .api--unit div {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 35px);
+    padding-left: 1rem;
+    box-sizing: border-box; }
 
 /*  404  */
 .fourohfour {
@@ -2327,64 +2402,64 @@ figcaption,
 .cross-share {
   box-sizing: border-box; }
 
-.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .comparison, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
+.blog-post.uber-vs-taxis .comparison, .blog-post.uber-vs-taxis .question, .blog-post.uber-vs-taxis .left, .blog-post.uber-vs-taxis .right {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .comparison {
+.blog-post.uber-vs-taxis .comparison {
   max-width: 100%;
   overflow: hidden;
   clear: both; }
 
-.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question {
+.blog-post.uber-vs-taxis .question {
   overflow: hidden;
   clear: both;
   padding: 75px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question:last-child {
+  .blog-post.uber-vs-taxis .question:last-child {
     margin-bottom: 0;
     border-bottom: none; }
-  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question h4 {
+  .blog-post.uber-vs-taxis .question h4 {
     font-size: 1.5em;
     width: 100%;
     margin: 0 0 10px 0;
     text-align: center; }
-  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question p {
+  .blog-post.uber-vs-taxis .question p {
     margin: 0; }
-    .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question p strong {
+    .blog-post.uber-vs-taxis .question p strong {
       margin: 1em 0 0 0;
       font-size: 1em;
       opacity: 0.7; }
 
-.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left {
+.blog-post.uber-vs-taxis .left {
   float: left;
   line-height: 1.4; }
 
-.blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
+.blog-post.uber-vs-taxis .right {
   float: right;
   line-height: 1.4;
   margin-top: 35px; }
 
 @media (min-width: 768px) {
-  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups #post-title-container {
+  .blog-post.uber-vs-taxis #post-title-container {
     margin: -300px auto 174px auto; }
-    .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups #post-title-container #post-title {
+    .blog-post.uber-vs-taxis #post-title-container #post-title {
       font-size: 80px; }
-  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question {
+  .blog-post.uber-vs-taxis .question {
     margin: 100px 0;
     padding: 0;
     border: none; }
-    .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question h4 {
+    .blog-post.uber-vs-taxis .question h4 {
       font-size: 2em; }
-    .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .question:last-child {
+    .blog-post.uber-vs-taxis .question:last-child {
       margin-bottom: 50px; }
-  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left, .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
+  .blog-post.uber-vs-taxis .left, .blog-post.uber-vs-taxis .right {
     padding: 0 20px; }
-  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .left {
+  .blog-post.uber-vs-taxis .left {
     width: 50%;
     border-right: 1px solid rgba(0, 0, 0, 0.1); }
-  .blog-post.uber-vs-taxis-why-uber-is-a-threat-to-taxi-labor-groups .right {
+  .blog-post.uber-vs-taxis .right {
     width: 50%;
     margin-top: 0; } }
 

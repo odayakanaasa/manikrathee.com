@@ -21,7 +21,7 @@ section: home
           --></a><!--
 
           -->{% if post.isForLovelySunday %}<!--
-        --><span class="for-lovely-sunday">, for
+        --><span class="for-lovely-sunday">, for&nbsp;
             <a href="{{ post.lovelySundayLink }}" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
               LovelySunday
             </a>
@@ -46,7 +46,7 @@ section: home
       <li>
         <p class="condensed">
           <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
-            {{ post.title | strip_html }}<!--
+            {{ post.title | strip_html | widont }}<!--
         --></a><span>, {{ post.date | date: '%B %Y' }}</span>
         </p>
       </li>
@@ -73,22 +73,22 @@ section: home
                 http://www.netmagazine.com/features/net-awards-2013-top-10-young-designers
              -->
             Young Designer of the Year Nominee,
-          </a><span>.net Awards 2013, .net Magazine</span>
+          </a><span>.net&nbsp;Awards</span>
         </p>
       </li>
       <li>
         <p class="condensed">
           <a href="http://www.amazon.com/Build-Your-Own-Brand-Strategies/dp/1440324557/" title="Build Your Own Brand" itemprop="url">
-            Build Your Own Brand
+            Build Your Own&nbsp;Brand
           </a>,
-          <span> Robin Landa</span>
+          <span> Robin&nbsp;Landa</span>
         </p>
       </li>
       <li>
         <p class="condensed">
           <a href="http://blog.offscreenmag.com/post/36344235407/hi-manik-give-us-a-short-introduction-about-how" title="Offscreen Magzine - An Interview with Manik Rathee" itemprop="url">
-            An Interview with Manik Rathee, a User Experience Engineer for President Barack Obama
-          </a><span>, Kai Brach, Offscreen Magazine</span>
+            An interview by Kai Brach
+          </a><span>, Offscreen&nbsp;Magazine</span>
         </p>
       </li>
       <!-- RIP Readmill  -->
@@ -97,17 +97,9 @@ section: home
           Meet the Readmillers: Manik Rathee
           </a><span>, Readmill (RIP)</span>
       </li> -->
-      <!-- ----------  -->
-      <li>
-        <p class="condensed">
-          <a href="https://www.youtube.com/watch?v=69XQ82UK9Rs" title="Manik Rathee, Kean Graduate works for Obama Campaign" itemprop="url">
-            Kean Graduate Works For Obama
-          </a><span>, Kean University</span>
-        </p>
-      </li>
       <li class="more-items">
         <a class="more-items--link" href="/about" title="More interviews and features on the About page" itemprop="url">
-          More Interviews &amp; Features
+          See More
         </a>
       </li>
     </ul>
@@ -121,12 +113,12 @@ section: home
         <p class="condensed">
           <a href="/building-president-obama.html" title="Thinking Creatively Conference 10" itemprop="url">
             Building Obama
-          </a><span>,  Keynote Address, <br>Thinking Creatively Conf &mdash; April, 2013</span>
+          </a><span>,  Keynote Address, <br>Thinking&nbsp;Creatively&nbsp;Conf</span>
         </p>
       </li>
       <li>
         <p class="condensed">
-          Building Obama In CSS<span>, <br>CSS Dev Conf &mdash; October, 2013</span>
+          Building Obama In CSS<span>, <br>CSS&nbsp;Dev&nbsp;Conf</span>
         </p>
       </li>
     </ul>
@@ -140,42 +132,42 @@ section: home
 
   <ul class="social-list">
     <li class="social-list--item">
-      <a class="icon icon--spotify-dark" href="%|" title="" itemprop="url">
+      <a class="social-list--link icon icon--spotify-dark" href="%|" title="" itemprop="url">
         Spotify
       </a>
     </li>
     <li class="social-list--item">
-      <a class="icon icon--fivehundredpx-dark" href="%|" title="" itemprop="url">
+      <a class="social-list--link icon icon--fivehundredpx-dark" href="%|" title="" itemprop="url">
         500px
       </a>
     </li>
     <li class="social-list--item">
-      <a class="icon icon--instagram-dark" href="%|" title="" itemprop="url">
+      <a class="social-list--link icon icon--instagram-dark" href="%|" title="" itemprop="url">
         Instagram
       </a>
     </li>
     <li class="social-list--item">
-      <a class="icon icon--twitter-dark" href="%|" title="" itemprop="url">
+      <a class="social-list--link icon icon--twitter-dark" href="%|" title="" itemprop="url">
         twitter
       </a>
     </li>
     <li class="social-list--item">
-      <a class="icon icon--github-dark" href="%|" title="" itemprop="url">
+      <a class="social-list--link icon icon--github-dark" href="%|" title="" itemprop="url">
         GitHub
       </a>
     </li>
     <li class="social-list--item">
-      <a class="icon icon--dribbble-dark" href="%|" title="" itemprop="url">
+      <a class="social-list--link icon icon--dribbble-dark" href="%|" title="" itemprop="url">
         dribbble
       </a>
     </li>
     <li class="social-list--item">
-      <a class="icon icon--tumblr-dark" href="%|" title="" itemprop="url">
+      <a class="social-list--link icon icon--tumblr-dark" href="%|" title="" itemprop="url">
         tumblr
       </a>
     </li>
     <li class="social-list--item">
-      <a class="icon icon--pocket-dark" href="%|" title="" itemprop="url">
+      <a class="social-list--link icon icon--pocket-dark" href="%|" title="" itemprop="url">
         pocket
       </a>
     </li>
@@ -184,18 +176,18 @@ section: home
 
 
 <section class="api">
-  <div id="spotify-api-container">
+  <div id="spotify-api-container" class="api--unit">
     <i class="icon icon--spotify-dark"></i>
     <div id="spotify-api-bar"></div>
   </div>
 
 
-  <div id="twitter-api-container">
+  <div id="twitter-api-container" class="api--unit">
     <i class="icon icon--twitter-dark"></i>
     <div id="twitter-api-bar"></div>
   </div>
 
-  <div id="instagram-api-container">
+  <div id="instagram-api-container" class="api--unit">
     <i class="icon icon--instagram-dark"></i>
     <div id="instagram-api-bar"></div>
   </div>

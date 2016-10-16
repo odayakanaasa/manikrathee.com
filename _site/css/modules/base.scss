@@ -5,7 +5,7 @@
 
 
 html {
-  background-color: $peak-color;
+  background-color: #333;
   font-size: 62.5%; // Base 10 for REM sizing
     // See: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
   text-rendering: optimizelegibility;
@@ -129,10 +129,6 @@ a,
   }
 }
 
-span {
-  @include transition( color $transition );
-}
-
 .mobile-cta {
   @include mq(768px) {
     display: none;
@@ -159,25 +155,43 @@ img {
   max-width: 1280px;
   position: relative;
   background-color: $white;
-  background-image: url('../img/bg-mobile.png');
-  background-size: 100%;
-  background-repeat: repeat;
-  background-position: center top;
   margin-left: auto;
   margin-right: auto;
   padding: $spacer / 1.3;
   border-radius: 3px;
-  transition:
-    background $transition,
-    padding $transition;
+  transition: background $transition;
   @include box;
+
+  #them-grid-lines {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image: url('../img/bg-mobile.png');
+    background-size: 100%;
+    background-repeat: repeat;
+    background-position: center top;
+    @include transition( opacity $transition );
+
+    .view-mode--dark & {
+      opacity: 0;
+      transition-delay: 1s;
+    }
+
+    @include mq(960px) {
+      background-image: url('../img/bg-desktop.png');
+    }
+  }
 
   @include mq(500px) {
     padding: $spacer;
   }
 
   @include mq(960px) {
-    background-image: url('../img/bg-desktop.png');
     padding: $spacer * 2;
   }
 
@@ -197,7 +211,6 @@ img {
 
   .view-mode--dark & {
     background-color: $invert-container;
-    background-image: none;
   }
 
 } // main

@@ -90,11 +90,7 @@ p {
 
   &.condensed {
     @include font-size(15);
-    margin-bottom: 1.2rem;
-
-    @include mq(800px) {
-      @include font-size(16);
-    }
+    margin-bottom: 0.8rem;
   }
 }
 

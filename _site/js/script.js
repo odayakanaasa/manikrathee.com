@@ -171,7 +171,7 @@ t.__super__=e.prototype,t},a={}.hasOwnProperty;i=r(23)["default"]||r(23),n=r(15)
       message  = '<strong>'+this.trackInfo.message+'</strong>';
     } else {
       status = this.trackInfo.playing ? 'Now Playing: ' : 'Last Played: ';
-      message  = '<a href="http://www.manikrathee.com/spotify/" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Spotify" itemprop="url"><div><p>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</p></div></a>';
+      message  = '<a href="http://www.manikrathee.com/spotify/" class="spotify-link no-border" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Spotify" itemprop="url">Listening to: <span>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</span></div></a>';
     }
 
     if ( $('body').attr('id') === 'home' ){
@@ -194,7 +194,7 @@ if ( $('body').attr('id') === 'home' ){
     limit: 6,
     links: 1,
     resolution: 'standard_resolution',
-    template: '<li class="instagram-photo" data="{{id}}"><a class="instagram-link" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"></a></li>',
+    template: '<li class="instagram-photo" data="{{id}}"><a class="instagram-link no-border" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"></a></li>',
  });
 
  feed.run();

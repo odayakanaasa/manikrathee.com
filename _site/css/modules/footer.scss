@@ -143,6 +143,54 @@
 }
 
 
+
+#manikrathee {
+  display: none;
+  position: absolute;
+  top: 160px;
+  left: -40px;
+  transform: rotate(-90deg);
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+
+
+
+#photo-metadata {
+  opacity: 0;
+  @include transition( opacity 1s ease-in-out );
+
+  &.is-visible {
+    opacity: 1;
+  }
+
+  .photo-metadata--link {
+    border: none;
+  }
+
+  figcaption {
+    display: inline-block;
+    width: calc(100% - 60px);
+    margin-top: 0;
+    margin-left: 10px;
+    vertical-align: top;
+    text-align: center;
+
+    p {
+      margin-bottom: 0.8rem;
+      @include font-size(12);
+      font-style: normal;
+      font-weight: 800;
+      text-transform: uppercase;
+      @include transition(opacity $transition);
+    }
+  }
+}
+
+
 .footer-tout {
   // shown in header on right side, only for homepage
   justify-content: space-between;
@@ -171,44 +219,32 @@
   display: block;
   width: 230px;
   margin: 1rem auto 0;
+  margin: 0;
   text-align: center;
+
+  i {
+    margin-bottom: 1rem;
+  }
 }
 
-#photo-metadata {
-  opacity: 0;
-  @include transition( opacity 1s ease-in-out );
 
-  &.is-visible {
-    opacity: 1;
+#footer-weekly-reads-signup {
+
+  > * {
+    @include box;
   }
 
-  .photo-metadata--link {
-    border: none;
-  }
-
-}
-
-#manikrathee {
-  display: none;
-  position: absolute;
-  top: 160px;
-  left: -40px;
-  transform: rotate(-90deg);
-  letter-spacing: 7px;
-  text-transform: uppercase;
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-#footer-weekly-reads {
   li {
     list-style: none;
   }
+
   label {
+    display: block;
     font-size: 1.2rem;
     text-transform: uppercase;
-    display: block;
   }
+
+
   input[type=email] {
     outline: none;
     background: rgba(0,0,0,0.2);
@@ -218,10 +254,18 @@
     line-height: 30;
     height: 30px;
     padding: 0 1rem;
+    color: $white;
     font-weight: 500;
     letter-spacing: 1px;
   }
+
+  #submit {
+    margin-top: 1rem;
+    width: 100%;
+
+  }
 }
+
 
 
 
@@ -282,10 +326,6 @@
 
 
     .footer-tout {
-      // shown in header on right side, only for homepage
-      // justify-content: space-between;
-      // position: relative;
-      // margin-top: $spacer*1.125; // push content to the baseline of the title
 
       .icon {
         display: inline-block;
@@ -294,25 +334,23 @@
         @include transition(opacity $transition);
       }
 
-      figcaption {
-        display: inline-block;
-        width: calc(100% - 60px);
-        margin-top: 0;
-        margin-left: 10px;
-        vertical-align: top;
-        text-align: left;
-      }
-
       a {
+        display: inline-block;
+        width: 100%;
+        min-width: 320px;
         border: none;
 
         &:hover {
+
+          p,
           .icon {
             opacity: 0.3; // mimic anchor hover color
           }
         }
+
       }
     }
+
 
     .main-nav-list {
       line-height: 2.2rem;
@@ -334,26 +372,57 @@
 
       }
     }
+  }
 
-    #manikrathee {
-      display: block;
-    }
 
-    #snapchat {
-      @include size(78px, 78px);
-      margin: 0 0 0 32px;
-    }
+  #manikrathee {
+    display: block;
+  }
 
-    #weekly-reads-tout {
-      width: auto;
-      margin: 0;
+  #snapchat {
+    @include size(78px, 78px);
+    margin: 0 0 0 32px;
+  }
+
+  #photo-metadata {
+
+    figcaption {
       text-align: left;
+    }
+  }
+
+  #weekly-reads-tout {
+    p {
+      em {
+        display: block;
+        @include font-size(22);
+        font-weight: 300;
+        line-height: 1;
+        font-style: normal;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
 
       span {
-        display: inline-block;
-        width: 230px;
-        margin: 0 0 0 1rem;
+        @include font-size(14);
+        line-height: 1.2;
       }
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      padding-left: 0.5rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+  }
+
+
+  #footer-weekly-reads-signup {
+    input[type=email],
+    #submit {
+      width: 100%;
+      max-width: 200px;
     }
   }
 
@@ -381,7 +450,7 @@
   #main-footer {
     width: calc(100% + 160px);
     margin-left: -80px;
-    padding: ($spacer * 2.5) ($spacer * 2);
+    padding: ($spacer * 2.5) ($spacer * 2) $spacer;
 
     .mountain-monday {
       top: 50px;
@@ -391,7 +460,7 @@
 
   #manikrathee {
     top: 220px;
-    left: 0;
+    left: -3px; // visually align left edge with photo icon
     opacity: 0.3;
   }
 }

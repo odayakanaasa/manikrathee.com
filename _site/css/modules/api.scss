@@ -11,6 +11,40 @@
 .instagram-photo {
   float: left;
   width: 25%;
-  border: $border;
   list-style: none;
+}
+
+
+.api--unit {
+  padding: 8rem 0;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  i {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  div {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 35px);
+    padding-left: 1rem;
+    @include box;
+  }
+
+}
+
+
+.spotify-link  {
+  span {
+
+  }
+}
+.spotify-link  {
+  span {
+
+  }
 }

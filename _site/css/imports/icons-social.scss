@@ -29,23 +29,23 @@ $social-accounts:
   }
   &--fivehundredpx,
   &--fivehundredpx-dark {
-    @include size(18px, 28px);
+    @include size(28px, 18px);
   }
   &--instagram,
   &--instagram-dark {
-    @include size(30px, 22px);
+    @include size(26px, 26px);
   }
   &--twitter,
   &--twitter-dark {
-    @include size(20px, 20px);
+    @include size(25px, 25px);
   }
   &--github,
   &--github-dark {
-    @include size(20px, 20px);
+    @include size(25px, 25px);
   }
   &--dribbble,
   &--dribbble-dark {
-    @include size(20px, 20px);
+    @include size(25px, 25px);
   }
   &--tumblr,
   &--tumblr-dark {
@@ -53,7 +53,7 @@ $social-accounts:
   }
   &--pocket,
   &--pocket-dark {
-    @include size(32px, 32px);
+    @include size(26px, 25px);
   }
   &--pocket-brand {
     @include size(32px, 32px);
@@ -62,10 +62,24 @@ $social-accounts:
 
 
 .social-list {
-// use flex here
   display: flex;
   justify-content: space-between;
-  &--item {
+  width: calc(100% - 14rem);
+  margin-left: 4rem;
 
+  &--item {
+    flex-grow: 1;
   }
+
+  &--link {
+    opacity: 0.7;
+    will-change: opacity;
+    @include transition( opacity $transition );
+
+    &:hover {
+      opacity: 1;
+      // transform: skew(2deg, -3deg) translate3d(0,0,0);
+    }
+  }
+
 }
