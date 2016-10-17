@@ -3689,7 +3689,7 @@ if (function() {
         clientId: "f7f319ceb411486593db148972918108",
         accessToken: "262351.1677ed0.d90081329df94cbe8353f5039bac6d76",
         target: "instagram-api-bar",
-        limit: 6,
+        limit: 8,
         links: 1,
         resolution: "standard_resolution",
         template: '<li class="instagram-photo" data="{{id}}"><a class="instagram-link no-border" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"></a></li>'
