@@ -59,9 +59,8 @@ if ( $('body').attr('id') === 'home' ){
 		// });
 	// });
 
-	$(document).ready(function() {
-		$('.twitter').load('OAuth/twitter-auth.php');
-		logofyAPI();
-		centerAPI();
-	});
+
+	// $(document).ready(function() {
+	// 	$('#twitter-api-bar').load('OAuth/twitter-auth.php');
+	// });
 }
