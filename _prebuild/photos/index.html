@@ -1,0 +1,54 @@
+---
+layout: default
+
+title: "Photography & Fashion"
+page-type: blog
+page-subtype: photo-index
+
+---
+
+<ol id="photo-posts" class="post-list">
+  {% for post in site.categories.photos %}
+  <li class="post-list--item">
+    <!-- <img class="post-list--photo" src="/img/{{ post.category }}{{ post.img }}" alt="{{ post.title }}"> -->
+    <a id="{{ post.slug }}" class="post-list--link no-border" href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+      <p class="post-list--date">{{ post.date | date: "%B %d, %Y" }}</p>
+      <h2 class="post-list--title">
+        {{ post.title | widont }}
+      </h2>
+      <p class="post-list-description">
+        <span class="post-list--description">
+          {{ post.content | strip_html | truncatewords:40 | widont }}
+        </span>
+      </p>
+
+      <span class="mobile-cta pseudo-link read-more">
+        Explore the post
+      </span>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+
+<div class="cross-share"></div>
+
+
+<!-- <ol id="photo-gallery">
+  <li class="photo-gallery--title">
+    <h2 class="large-heading">The Gallery</h2>
+  </li>
+  <li class="500px-image gallery--future">
+  </li>
+
+  <li class="500px-image gallery--marilyn">
+  </li>
+
+  <li class="500px-image gallery--italy-church">
+  </li>
+
+  <li class="500px-image gallery--italy-church-2">
+  </li>
+
+  <li class="500px-image gallery--st-peters">
+  </li>
+</ol> -->

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+button,
+.button {
+  display: inline-block;
+  padding: 1rem 4rem;
+  background: $dark-grey;
+  font-weight: bold;
+  color: $white;
+  @include font-size(12);
+  text-transform: uppercase;
+  border: $invert-border;
+  border-radius: 4px;
+
+  will-change:
+    background,
+    color;
+  transition:
+    background $transition,
+    color $transition;
+
+  &:hover {
+    background: darken($highlight-mint, 10%);
+  }
+
+  .view-mode--dark & {
+    background: $invert-copy;
+    color: $dark-grey;
+  }
+}
+
+
+.read-more {
+  // anchor link
+  @include font-size(16);
+  color: $black;
+}

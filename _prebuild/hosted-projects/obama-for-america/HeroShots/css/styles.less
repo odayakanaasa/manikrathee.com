@@ -1,0 +1,170 @@
+@import "/../../../bo-production-css/hydepark/css/heroshots/2x4";
+@import "original";
+
+
+.return_transition{
+	-webkit-transition:all 2s linear;
+	-moz-transition:all 2s linear;
+	-o-transition:all 2s linear;
+	transition:all 2s linear;
+}
+.cta_transition{
+	-webkit-transition:all .3s linear;
+	-moz-transition:all .3s linear;
+	-o-transition:all .3s linear;
+	transition:all .3s linear;
+}
+.linear_transition{
+	-webkit-transition:all 7s linear;
+	-moz-transition:all 7s linear;
+	-o-transition:all 7s linear;
+	transition:all 7s linear;
+}
+.box_shadow{
+	-webkit-box-shadow: inset 0px 0px 10px 5px rgba(50, 50, 50, 1);
+	-moz-box-shadow: inset 0px 0px 10px 5px rgba(50, 50, 50, 1);
+	box-shadow: inset 0px 0px 10px 5px rgba(50, 50, 50, 1);
+}
+
+.home-page {
+    .heroshot {
+		a {
+			&:hover{
+			}
+		}
+		.large-left {
+			a{
+				text-indent:0;
+				clear:both;
+				position:relative;
+				.return_transition;
+				background: url(../images/large-left.jpg) no-repeat top left;
+				background-position: 0 0;
+				&:hover{
+					.linear_transition;
+					.box_shadow;
+					background-position: -100px 0;
+					opacity:0.4;
+					span{
+						.cta_transition;
+						opacity:1;
+					}
+					p{
+						.cta_transition;
+						padding:0;
+						opacity:0.7;
+					}
+				}
+				span{
+					.cta_transition;
+					opacity:0;
+					display:block;
+					background: url(../images/red_bg.png) repeat;
+					position:absolute;
+					bottom:0;
+					width:100%;
+					padding: 10px 0;
+					max-height:50px;
+					color:#fff;
+					font-size:20px;
+					font-weight:700;
+					font-style:italic;
+					text-align:center;
+				}
+				p{
+					.cta_transition;
+					width:80%;
+					margin: 0 auto;
+					padding:35px 0 0 0;
+					text-align:center;
+					font-size:60px;
+					color:#fff;
+					text-shadow: 1px 1px 10px #000;
+					text-transform: uppercase;
+					font-weight:700;
+					letter-spacing:-1px;
+					i{
+						font-style:italic;
+						font-size:40px;
+						display:block;
+					}
+				}
+			}
+		}
+		.large-right {
+			position:relative;
+			a{
+				text-indent:0;
+				clear:both;
+				position:relative;
+				.return_transition;
+				background: url(../images/large-right.png) no-repeat top left;
+				background-position: -60px 0;
+				&:hover{
+					.linear_transition;
+					.box_shadow;
+					background-position: 70px 0;
+					opacity:0.4;
+					span{
+						.cta_transition;
+						opacity:1;
+					}
+					p{
+						.cta_transition;
+						opacity:0.7;
+					}
+					.fixed_element{
+						opacity:1;
+					}
+				}
+				
+		 		.fixed_element{
+		 	        position:absolute;
+		 	        bottom:0;
+		 	        right:0;
+					opacity:1;
+		 		}
+				span{
+					.cta_transition;
+					opacity:0;
+					display:block;
+					background: url(../images/red_bg.png) repeat;
+					position:absolute;
+					bottom:0;
+					width:100%;
+					padding: 10px 0;
+					max-height:50px;
+					color:#fff;
+					font-size:20px;
+					font-weight:700;
+					font-style:italic;
+					text-align:center;
+				}
+				p{
+					.cta_transition;
+					width:80%;
+					margin: 0 auto;
+					padding:35px 0 0 0;
+					text-align:left;
+					font-size:32px;
+					color:#fff;
+					text-shadow: 1px 1px 10px #000;
+					text-transform: uppercase;
+					font-weight:700;
+					letter-spacing:-1px;
+					i{
+						display:block;
+					}
+				}
+			}
+		}
+		.small-one {overflow:hidden;
+		}
+		.small-two {overflow:hidden;
+		}
+    	.small-three {overflow:hidden;
+		}
+		.small-four {overflow:hidden;
+		}
+    }
+}

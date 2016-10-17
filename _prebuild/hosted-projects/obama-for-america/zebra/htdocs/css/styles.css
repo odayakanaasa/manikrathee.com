@@ -1,0 +1,100 @@
+.slabtexted .slabtext{display:inline-block;white-space:nowrap}
+.slabtextinactive .slabtext{display:inline;white-space:normal}
+.slabtextdone .slabtext{display:block}
+ html,
+        body
+                {
+                background:#f8f8f8 url(../noise.png) repeat;
+                color:#444;
+				padding:0;
+				margin:0;
+                }
+        body
+                {
+                font: 16px/1.8 helvetica, verdana, arial, sans-serif;
+
+                }
+		img{max-width:100%;}
+		.header{
+			background:#00446a;
+			width:100%;
+			text-align:center;
+			color:#fff !important;
+			background: rgb(38,79,137); /* Old browsers */
+			background: -moz-linear-gradient(top,  rgba(38,79,137,1) 0%, rgba(0,68,106,1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(38,79,137,1)), color-stop(100%,rgba(0,68,106,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(38,79,137,1) 0%,rgba(0,68,106,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(38,79,137,1) 0%,rgba(0,68,106,1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(38,79,137,1) 0%,rgba(0,68,106,1) 100%); /* IE10+ */
+			background: linear-gradient(top,  rgba(38,79,137,1) 0%,rgba(0,68,106,1) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#264f89', endColorstr='#00446a',GradientType=0 ); /* IE6-9 */
+			-webkit-box-shadow: 0px 10px 10px 0px rgba(5, 5, 5, 0.2);http://www.threadneedler.com/
+			-moz-box-shadow: 0px 10px 10px 0px rgba(5, 5, 5, 0.2);
+			box-shadow: 0px 10px 10px 0px rgba(5, 5, 5, 0.2);
+		}
+		#intro{
+			text-align:center;
+			padding: 68% 0 0 0;
+		}
+		.row{padding:40px 0;
+				text-shadow:1px 2px 4px #fff !important;}
+		.header h1{
+				color:#fff;
+				text-shadow:2px 2px 0 #000 !important;
+				}
+		.red h1,h2,h3,h4{color:#e92829 !important;font-family:helvetica, sans-serif;font-weight:900;}
+		.green h1,h2,h3,h4{color:#142638 !important;font-family:helvetica, sans-serif;font-weight:900;}
+		.blue h1,h2,h3,h4{color:#00446a !important;font-family:helvetica, sans-serif;font-weight:100;}
+		.pie_graph{
+			text-align:center;
+		}
+		#second_logo{opacity:0.5;margin-top:-400px;}
+        .amp{
+			font-family:Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif;
+			font-style:italic;
+			font-weight:lighter;
+		}
+        /* Set font-sizes for the headings */
+        h1
+           {
+           text-align:left;
+           font-family:'LeagueGothicRegular', "Impact", Charcoal, Arial Black, Gadget, Sans serif;
+           text-transform: uppercase;           
+           line-height:1;   
+           color:#222;             
+           font-size: 45px;
+           /* Remember to set the correct font weight if using fontface */
+           font-weight:normal;
+           }
+		 h2
+           {
+           text-align:left;
+           font-family:'LeagueGothicRegular', "Impact", Charcoal, Arial Black, Gadget, Sans serif;
+           text-transform: uppercase;           
+           line-height:1;   
+           color:#fff !important;
+		   text-shadow:1px 1px 5px #000 !important;             
+           font-size: 45px;
+           /* Remember to set the correct font weight if using fontface */
+           font-weight:normal;
+           }
+		 h3
+           {
+           text-align:left;
+           font-family:'LeagueGothicRegular', "Impact", Charcoal, Arial Black, Gadget, Sans serif;
+           text-transform: uppercase;           
+           line-height:1;   
+           color:#fff !important;
+		   text-shadow:1px 1px 5px #666 !important;             
+           font-size: 45px;
+           /* Remember to set the correct font weight if using fontface */
+           font-weight:normal;
+           }
+       
+        /* Adjust the line-height for all headlines that have been slabtexted */
+        .slabtexted h1
+                {
+                line-height:.9;
+                }
+       
+       

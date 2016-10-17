@@ -1,170 +1,234 @@
 
-//Social API Vars
-var twitterAPI = $('#twitter');
-var instagramAPI = $('#instagram');
-var rdioAPI = $('#rdio');
-var readmillAPI = $('#readmill');
-var twitterID = twitterAPI.prop('id');
-var instagramID = instagramAPI.prop('id');
-var rdioID = instagramAPI.prop('id');
-var readmillID = readmillAPI.prop('id');
+var $body = $('body');
 
-$('#readmill').prepend('<div><p id="readmill-book">Currently Reading: Helvetica/ Objectified/ Urbanized: The Complete Interviews</p></div>');
 
 LastFMStatus.init({
     username: "mrathee"
 });
 
-// This adds the logo spans which are targetted with symbolset. It is called in api.twitter.js after twitter.html();
-function logofyAPI(){
-  setTimeout(function(){
-    if (instagramActive){
-      $(".social-api").prepend('<span class="ss-icon ss-social logo"></span>');
-      twitterAPI.find('span.logo').prepend(twitterID);
-      instagramAPI.find('span.logo').prepend(instagramID);
-      // rdioAPI.find('span.logo').prepend(rdioID);
-      readmillAPI.find('span.logo').prepend(readmillID);
-      centerAPI();
-      activateAPI();
-    }
-    else{
-    	return;
-    }
-  }, 1000);
-}
-
-// Callback function for after API js has run to display the API containers
-function activateAPI(){
-	$('.social-api').addClass("run");
-  trackEvent('home','api bar','init');
-  $(".social-api").delay(4500).queue(function(next){
-    $(this).addClass('inactive');
-    next();
-  });
-}
-
-
-function centerAPI(){
-  var socialAPI = $('.social-api');
-  if ($(window).width() > 768){
-    $(socialAPI).each(function() {
-        var center = $(this).find('div');
-        var h = center.height();
-        center.css('margin-top', + h / -2 + 'px');
-    });
-  }
-}
-
-$(window).resize(function() {
-  centerAPI();
-});
-
-centerAPI();
-
-// Nav Hover
-function checkWidth() {
-	if ($(window).width() > 769){
-		$('#portfolio').hover(function(){
-			$('#current, .copy, .dark-shade').addClass('fade');
-      trackEvent('global','portfolio sub menu','opened');
-		}, function(){
-			$('#current, .copy, .dark-shade').removeClass('fade');
-      trackEvent('global','portfolio sub menu','closed');
-		});
-	}
-	else{
-		$('.copy').removeClass('fade');
-	}
-};
-
-$(window).resize(function() {
-	checkWidth();
-});
-checkWidth();
 
 
 
-// Mobile Nav
-var navHook = $('#nav');
-var navMenu = $('#navigation');
-var body = $('body');
 
-navHook.click(function(e) {
-	e.preventDefault();
-	e.stopPropagation();
-	if (body.hasClass('nav')) {
-    body.removeClass('nav');
-    trackEvent('global','mobile menu','closed');
- 	} else {
-		body.addClass('nav');
-    trackEvent('global','mobile menu','opened');
- 	}
-});
+// function animatedIcons() {
+//   /* Icon 11 */
+//   var el11 = document.querySelector('.animated-logo'), el11span = el11.querySelector('span');
+//   var opacityCurve11 = mojs.easing.path('M0,0 C0,87 27,100 40,100 L40,0 L100,0');
+//   var scaleCurve11 = mojs.easing.path('M0,0c0,80,39.2,100,39.2,100L40-100c0,0-0.7,106,60,106');
+//   new Animocon(el11, {
+//     tweens : [
+//       // ring animation
+//       new mojs.Transit({
+//         parent: el11,
+//         duration: 1000,
+//         delay: 100,
+//         type: 'circle',
+//         radius: {0: 95},
+//         fill: 'transparent',
+//         stroke: '#C0C1C3',
+//         strokeWidth: {50:0},
+//         opacity: 0.4,
+//         x: '50%',
+//         y: '50%',
+//         isRunLess: true,
+//         easing: mojs.easing.bezier(0, 1.6, 0.5, 1)
+//       }),
+//       new mojs.Transit({
+//         parent: el11,
+//         duration: 1100,
+//         delay: 100,
+//         type: 'circle',
+//         radius: {0: 85},
+//         fill: 'transparent',
+//         stroke: '#C0C1C3',
+//         strokeWidth: {50:0},
+//         opacity: 0.4,
+//         x: '50%',
+//         y: '50%',
+//         isRunLess: true,
+//         easing: mojs.easing.bezier(0, 0.4, 0.5, 1)
+//       }),
+//       new mojs.Transit({
+//         parent: el11,
+//         duration: 1375,
+//         delay: 90,
+//         type: 'circle',
+//         radius: {0: 115},
+//         fill: 'transparent',
+//         stroke: '#C0C1C3',
+//         strokeWidth: {50:0},
+//         opacity: 0.4,
+//         x: '50%',
+//         y: '50%',
+//         isRunLess: true,
+//         easing: mojs.easing.bezier(0, 1, 0.5, 1)
+//       }),
+//       // ring animation
+//       new mojs.Transit({
+//         parent: el11,
+//         duration: 1800,
+//         delay: 300,
+//         type: 'circle',
+//         radius: {0: 80},
+//         fill: 'transparent',
+//         stroke: '#C0C1C3',
+//         strokeWidth: {40:0},
+//         opacity: 0.2,
+//         x: '50%',
+//         y: '50%',
+//         isRunLess: true,
+//         easing: mojs.easing.bezier(0, 1, 0.5, 1)
+//       }),
+//       // icon scale animation
+//       new mojs.Tween({
+//         duration : 2000,
+//         easing: mojs.easing.ease.out,
+//         onUpdate: function(progress) {
+//           var opacityProgress = opacityCurve11(progress);
+//           el11span.style.opacity = opacityProgress;
 
-navMenu.click(function(e){
-	e.stopPropagation();
-});
+//           var scaleProgress = scaleCurve11(progress);
+//           el11span.style.WebkitTransform = el11span.style.transform = 'scale3d(' + scaleProgress + ',' + scaleProgress + ',1)';
 
-$(document).click(function() {
-   if (body.hasClass('nav')){
-	   body.removeClass('nav');
-   }
-});
+//           var colorProgress = opacityCurve11(progress);
+//           el11.style.color = colorProgress >= 1 ? '#E87171' : '#C0C1C3';
+//         }
+//       })
+//     ],
+//     onUnCheck : function() {
+//       el11.style.color = '#C0C1C3';
+//     }
+//   });
+//   /* Icon 11 */
 
-
-
-// Konami Code
-// konami = new Konami()
-// konami.code = function() {
-//     $('body').addClass('konami');
 // }
-// konami.load()
 
-//Slider
-var slider = $('.flexslider');
-if (slider) {
-  $('.flexslider').flexslider();
-}
-
-// ScrollTop Function
-var toTop = $('#top');
-toTop.click(function(e) {
-	e.preventDefault();
-	$('body,html').animate({scrollTop:0},800);
-  trackEvent('global','back to top link','page: ' + location.pathname);
-});
+// animatedIcons();
 
 
-//Counter
-var countNumberValue;
-function startCount() {
-  $('.count').each(function() {
-    countNumberValue = $(this).attr('data-number');
-    $(this).countTo({
-        from: 0,
-        to: countNumberValue,
-        speed: 1400,
-        refreshInterval: 5,
-        onComplete: function(value) {
-        }
-    });
-  });
-}
-// startCount();
 
-var eventsFired = 0;
-$(window).scroll(function() {
-  var elem = $('#about-data');
-  withinViewport(elem);
-  if ($("#about-data").is(":within-viewport")){
-	  if (eventsFired == 0) {
-  		startCount();
-  		eventsFired++;
-      trackEvent('about','element watcher','stats-view');
-  	}
-  }
-});
+//  var scaleCurve = mojs.easing.path('M0,100 L25,99.9999983 C26.2328835,75.0708847 19.7847843,0 100,0');
+//   var el = document.querySelector('.animated-logo'),
+//   var interiorLogo = el.querySelector('.mountain-monday'),
+//   // mo.js timeline obj
+//   var timeline = new mojs.Timeline(),
+
+//   // tweens for the animation:
+
+//   // burst animation
+//   tween1 = new mojs.Burst({
+//     parent: el,
+//     duration: 800,
+//     delay: 200,
+//     // shape : 'circle',
+//     shape : 'star',
+//     fill : [ '#988ADE', '#DE8AA0', '#8AAEDE', '#8ADEAD', '#DEC58A', '#8AD1DE' ],
+//     x: '50%',
+//     y: '50%',
+//     opacity: 0.6,
+//     childOptions: { radius: {20:5} },
+//     radius: {40:80},
+//     count: 22,
+//     // isSwirl: true,
+//     isRunLess: true,
+//     easing: mojs.easing.bezier(.89,0,.19,1)
+//   }),
+//   // ring animation
+//   tween2 = new mojs.Transit({
+//     parent: el,
+//     duration: 800,
+//     delay: 200,
+//     type: 'circle',
+//     radius: {0: 50},
+//     fill: 'transparent',
+//     stroke: '#988ADE',
+//     strokeWidth: {5:0},
+//     opacity: 0.6,
+//     x: '50%',
+//     y: '50%',
+//     isRunLess: true,
+//     easing: mojs.easing.bezier(.89,0,.19,1)
+//   }),
+//   // icon scale animation
+//   tween3 = new mojs.Tween({
+//     duration : 1000,
+//     onUpdate: function(progress) {
+//       var scaleProgress = scaleCurve(progress);
+//       interiorLogo.style.WebkitTransform = interiorLogo.style.transform = 'scale3d(' + scaleProgress + ',' + scaleProgress + ',1)';
+//     }
+//   });
+
+//   tween1 = new mojs.Burst({
+//     parent: el,
+//     duration: 1000,
+//     shape : 'circle',
+//     fill : [ '#988ADE', '#DE8AA0', '#8AAEDE', '#8ADEAD', '#DEC58A', '#8AD1DE' ],
+//     // fill : 'white',
+//     x: '50%',
+//     y: '50%',
+//     childOptions: {
+//       radius: {12:0},
+//       type: 'line',
+//       stroke: '#988ADE',
+//       strokeWidth: 2
+//     },
+//     radius: {40:110},
+//     count: 20,
+//     isRunLess: true,
+//     easing: mojs.easing.bezier(0,0,.04,1)
+//   }),
+//   // ring animation
+//   tween2 = new mojs.Transit({
+//     parent: el,
+//     duration: 700,
+//     type: 'circle',
+//     radius: {10: 60},
+//     fill: 'transparent',
+//     // stroke: '#988ADE',
+//     stroke : [ '#988ADE', '#DE8AA0', '#8AAEDE', '#8ADEAD', '#DEC58A', '#8AD1DE' ],
+//     strokeWidth: {30:0},
+//     count: 3,
+//     x: '50%',
+//     y: '50%',
+//     isRunLess: true,
+//     easing: mojs.easing.bezier(0,0,.04,1)
+//   }),
+//   // icon scale animation
+//   tween3 = new mojs.Tween({
+//     duration : 700,
+//     easing: mojs.easing.bezier(0,0,.04,1),
+//     onUpdate: function(progress) {
+//       var scaleProgress = scaleCurve(progress);
+//       interiorLogo.style.WebkitTransform = interiorLogo.style.transform = 'scale3d(' + progress + ',' + progress + ',1)';
+//     }
+//   });
 
 
-// Twitter Button
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+// // add tweens to timeline:
+// if (el.length && interiorLogo.length) {
+//   timeline.add(tween1, tween2, tween3);
+//   timeline.start();
+// }
+
+
+
+
+
+
+
+
+// Within Viewport
+// $('#main-footer').withinviewport({top: -300});
+
+
+
+
+
+
+// // Twitter Button
+// !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
+
+
+

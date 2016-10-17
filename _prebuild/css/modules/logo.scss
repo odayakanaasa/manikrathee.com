@@ -1,0 +1,19 @@
+.logo,
+.mountain-monday {
+  display: block;
+  background-image: url($logo-svg-encoded);
+  border-bottom: none;
+  @include size(40px, 28px);
+  @include ir;
+
+  svg {
+    width: 100%;
+  }
+
+}
+
+
+
+.mountain-monday--inverse {
+  background-image: url($logo-svg-encoded-inverse);
+}

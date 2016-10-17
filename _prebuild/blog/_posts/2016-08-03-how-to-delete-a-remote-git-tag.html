@@ -1,0 +1,80 @@
+---
+layout: default
+page-type: blog
+page-subtype: blog-post
+category: ['blog']
+tags: ['engineering', 'productivity', 'git', 'settings', 'writing']
+
+date: August 3, 2016
+slug: how-to-delete-a-tag-in-git
+title: "How to delete a Git tag"
+
+
+#img:
+#script:
+
+comments: 0
+code: 0
+data: 0
+
+---
+
+<!--
+  Verbose post options
+- how to revert a git tag
+- how to revert a tag in git
+- how to delete a remote git tag
+- how to delete a local git tag
+- how to delete a local and remote tag
+- how to delete a local and remove git tag
+- how to push a deleted tag
+-->
+
+<p>If you use tags in your projects, you probably have encountered some issue (typos, perhaps) that forced you to remove the tag. Here are a few steps that will help you navigate the problems associated with local/remote tags and managing instances of each, along with a few steps help get you familiar with tags in general.</p>
+
+<p>For our code examples, let's use "<em>released/aug2016</em>" as the tag name.</p>
+
+<h3 class="medium-heading">To create your&nbsp;tag:</h3>
+<pre>
+  <code class="json">
+  git tag released/aug2016
+  </code>
+</pre>
+
+<h3 class="medium-heading">To push local tags&nbsp;to&nbsp;remote:</h3>
+<pre>
+  <code class="git">
+  git push --tags
+  </code>
+</pre>
+
+<p>Another option, <a href="http://stackoverflow.com/questions/5195859/push-a-tag-to-a-remote-repository-using-git" title="StackOverflow: Push a tag to a remote repository using Git?" itemprop="url">as noted on StackOverflow</a>, links local and remote tags:</p>
+<pre>
+  <code class="git">
+  git push --follow-tags
+  </code>
+</pre>
+
+<h3 class="medium-heading">To delete a local&nbsp;tag:</h3>
+<pre>
+  <code class="git">
+  git tag -d released/aug2016
+  </code>
+</pre>
+
+<h3 class="medium-heading">To delete a remote&nbsp;tag:</h3>
+<p><em>Delete the tag locally, like above</em></p>
+
+<pre>
+  <code class="git">
+  git tag -d released/aug2016
+
+  git push origin :refs/tags/released/aug2016
+  </code>
+</pre>
+
+<aside class="recommendation-card recommendation--a-book-apart-git-for-humans">
+  <img class="recommendation-card--image" src="/img/library/books/git-for-humans.jpg" alt="Git for Humans">
+  <h4 class="recommendation-card--title small-heading">{{ "Interested in learning more about git?" | widont }}</h4>
+  <p>Check out "<a href="https://abookapart.com/products/git-for-humans" title="Git for Humans" itemprop="url">Git for Humans</a>," by <a href="https://twitter.com/ddemaree" title="David Demaree on Twitter: @ddemaree" itemprop="url">David Demaree</a> and <a href="https://twitter.com/abookapart" title="A Book Apart on Twitter: @abookapart" itemprop="url">A&nbsp;Book&nbsp;Apart</a>.</p>
+</aside>

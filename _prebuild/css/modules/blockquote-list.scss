@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.blockquote-list {
+  list-style-type: none;
+
+  @include mq(800px) {
+    columns: 2;
+
+    li {
+      @include box;
+      padding-right: 1rem;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  li + li {
+    margin-top: $spacer;
+  }
+
+  &--item { // li
+    padding-left: ($spacer / 2);
+    border-left: 0.5rem solid $light-grey; // invisible border by default since this is on a white bg colors are set via @each loop in library.scss
+  }
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#work-in-progress {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+
+  img:first-child {
+    margin-top: 8px;
+    margin-bottom: -9px;
+  }
+
+  @include mq(500px) {
+    top: 40px;
+    left: 76px;
+  }
+
+  @include mq(800px) {
+    top: 46px;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+
+  @include mq(960px) {
+    top: 1rem;
+  }
+}
+

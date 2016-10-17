@@ -1,0 +1,148 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>#OFA - UX - Call Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style type="text/css">
+    body,p,td,div{font-family:Helvetica,Arial,sans-serif;line-height:1.4em;font-size:14px;color:#111;word-wrap:break-word}p{margin:0 0 1.7em 0}a{color:rgb(13,110,161);text-decoration:none;-webkit-transition:color .2s ease-in-out}a:hover{color:#3593d9}h1.doctitle{background:#eee;font-size:14px;font-weight:bold;color:#333;line-height:28px;margin:0;padding:0 10px;border-bottom:solid 1px #aaa;white-space:nowrap}h1,h2,h3,h4,h5{line-height:1.1em}h1{font-size:24px;color:#000;margin:12px 0 15px 0}h2{font-size:20px;color:#111;width:auto;margin:15px 0 10px 2px}h2 em{line-height:1.6em;font-size:12px;color:#111;text-shadow:0 1px 0 #FFF;padding-left:10px}h3{font-size:20px;color:#111}h4{font-size:14px;color:#111;margin-bottom:1.3em}.footnote{font-size:.8em;vertical-align:super;color:rgb(13,110,161)}#contentdiv img{max-width:100%}dt{font-weight:bold}dd{margin-bottom:1em}@media print{body{overflow:auto}#wrapper{background:#fff;position:relative}#contentdiv{position:relative;background:transparent;color:#303030;text-indent:0px;padding:10px}}@media screen{body{overflow:hidden}#wrapper{background:#fff;position:fixed;top:0;left:0;right:0;bottom:0;-webkit-box-shadow:inset 0px 0px 4px #8F8D87}#contentdiv{position:fixed;top:27px;left:5px;right:5px;bottom:5px;background:transparent;color:#303030;overflow:auto;text-indent:0px;padding:10px}#contentdiv::-webkit-scrollbar{width:6px}#contentdiv::-webkit-scrollbar:horizontal{height:6px;display:none}#contentdiv::-webkit-scrollbar-track{background:transparent;-webkit-border-radius:0;right:10px}#contentdiv::-webkit-scrollbar-track:disabled{display:none}#contentdiv::-webkit-scrollbar-thumb{border-width:0;min-height:20px;background:#777;opacity:0.4;-webkit-border-radius:5px}}li>p{margin:0 0 1em}ul ul,ul ol{margin-bottom:1em}
+  </style>
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <header>
+      <h1 class="doctitle">#OFA - UX - Call Tool</h1>
+    </header>
+    
+    <div id="contentdiv">
+      <h1 id="calltool">Call Tool</h1>
+
+<h3 id="brief">Brief</h3>
+
+<blockquote>
+  <p>Hey Dan Ryan,</p>
+
+<p>Betsy and I are meeting with tech about some call tool UX improvements we’d like to consider. We’re adding functionality, and these will have to change eventually, but since we don’t know when the next updates will be, we want to make sure that our users are getting the most out of the tool, and that it fits appropriately with Dashboard.  
+ 
+Some of what we’re thinking:</p>
+
+<p>*           “Resource page:” Although we want to give users the easiest pathway to a phone call (i.e. they get to the script page ASAP,) I think we need to develop something that they can click back to, where they can find the training videos, talking points, FAQ, etc.</p>
+
+<p>*          Menu of Calls: as we develop more and more phonebanks (these Women for Obama event recruitment calls, for example,) we’re going to have more than one state wide call campaign. (Not unlike “rooms” we had discussed.) We should have these available for all users. A women who arrives at the call tool today will not know that she has the option to make Women for Obama calls. We need to give her that option.  I envision this on the resource page.
+ 
+Scheduling this meeting for Monday at 3:30. Do you have anyone who should be there? Will include you in the calendar invite. Thank you very much.
+ 
+Bridget</p>
+</blockquote>
+
+<hr />
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+<li><p>Critical Issues With Current Flow</p>
+
+<ul><li>Login screen displays for a few seconds then disappears regardless of use input or hesitation</li>
+<li>If user tries to login at the screen, it will change regardless of whether they are successful during login</li>
+<li>BO Login broken - Facebook successful</li>
+<li>Branded login - currently, aside fro the URL, there are no visual cues that tell me I am at an official Obama site</li>
+<li>Post creation of BO account, empty page is displayed. <br />
+<img id="" src="http://cl.ly/3f1q3u1B1T0T3o2G0y0Y/Screen%20Shot%202012-02-13%20at%2011.14.45%20AM.png" alt="" title="" /></li>
+<li>If closing page and reopening, page is populated
+<img id="" src="http://cl.ly/391Z0a2n3Q3D3b0y0D10/Screen%20Shot%202012-02-13%20at%2011.22.48%20AM.png" alt="" title="" /></li></ul></li>
+<li><p>Script <em>If we want public users calling this, we can&#8217;t assume any competency in the UI or with speaking on cue with something they are not comfortable enough</em></p>
+
+<ul><li><em>Hello, can I speak with NAME</em> / This should pull the callers actual name into the script. Would keep conversation flowing - the slight pause to glance back to the call box could feel awkward.</li>
+<li>My name is, same as above - simply pull the User&#8217;s name in.</li></ul></li>
+<li><p>Core UI</p>
+
+<ul><li><p>Currently, there is only the current call. Other UI considerations should be:</p>
+
+<ul><li>Global header bar with:
+<ul><li>resources &amp; training</li>
+<li>help - if something doesn&#8217;t work, what should the user do</li>
+<li>home - not the script page, a &#8220;what is the call tool&#8221; or &#8220;how you can help OFA&#8221;
+<ul><li>Even though the user is brought to the script immediately, it should be clear that this is not the &#8220;home&#8221; page of the call tool</li></ul></li>
+<li>On the screenshot below, &#8220;Not your state&#8221; and my account info are displayed without any CTA. These should not be directly displayed on the script because they don&#8217;t have a direct influence on the current call.
+<img id="" src="http://cl.ly/1D2t3Z083e2m1n1K3u0Q/Screen%20Shot%202012-02-13%20at%2011.34.41%20AM.png" alt="" title="" /></li>
+<li>Call List
+<ul><li>A recent call list should be available to a user in case they:
+<ul><li>Skipped the page by accident</li>
+<li>Thought of another note to add on the specific call later on</li>
+<li>Lost the connection or wanted to retry in a few minutes <br />
+<ul><li>People will often say &#8220;XYZ is not here now, but she&#8217;ll be back in 20 minutes&#8221; - This is an open invite to call back and a missed opportunity with the current UI since the Caller can&#8217;t go back</li></ul></li></ul></li>
+<li>Skipping a Call displays awkward &#8220;Person skipped&#8221; box - this provides no actionable items for the user. Did they skip by mistake? Do they need to add comments for why they skipped that call? Displaying this just for the sake of showing it is not the right reason.
+<img id="" src="http://cl.ly/2M2F0S0l2E1T1X0F3u3K/Screen%20Shot%202012-02-13%20at%2011.38.15%20AM.png" alt="" title="" /> </li></ul></li>
+<li>Current Call has wasted space
+<ul><li>Why show &#8220;If no&#8221; before the user clicks No? the box would be 50% smaller if that was an accordion or an ajax pull to display the different options ONLY if the user selects &#8220;no&#8221;</li>
+<li>I was not comfortable contacting this voter isn&#8217;t a required field - I can simply &#8220;Skip this voter&#8221; without giving any reason - it should request something to be required or remove the options that could be assumed
+<img id="" src="http://cl.ly/0018451y0l1b1J120v1f/Screen%20Shot%202012-02-13%20at%2011.44.41%20AM.png" alt="" title="" />  </li></ul></li></ul></li></ul></li>
+<li><p><strong>Rooms</strong></p>
+
+<ul><li>Women For Obama or others should be displayed under the global nav
+<ul><li><em>You are currently calling the Women For Obama list.</em></li>
+<li>Immediate nav item, possibly dropdown, to quickly access other lists</li>
+<li>List order permanent or possibly ordered by use. 
+<ul><li>Enter Women for Obama room, call 4 people > Move to latinos room by mistake, call 0 > move to Undecided room, call 8 people.</li>
+<li>This user&#8217;s list would show: Undecided, then Women for Obama, then potential room matches based on their previous session, and Latinos last. We want to keep there 0-call option available in case they left the room on error. </li></ul></li></ul></li></ul></li></ul></li>
+</ul>
+
+<hr />
+
+<h2 id="wireframe">Wireframe</h2>
+
+<p><strong>Call Page</strong></p>
+
+<p><img id="" src="http://cl.ly/003v1r2K1O2K0l031D3N/1%20Call.png" alt="" title="" /></p>
+
+<hr />
+
+<p><strong>Header Menu</strong></p>
+
+<p><img id="" src="http://f.cl.ly/items/3i06472B3U1p0V2y2W0Z/2%20Header%20Menu.png" alt="" title="" /></p>
+
+<hr />
+
+<p><strong>Room Menu</strong></p>
+
+<p><img id="" src="http://cl.ly/2r0A3M1q2o1K0U281R1P/3%20Room%20Menu.png" alt="" title="" /></p>
+
+<hr />
+
+<p><strong>Skip Menu</strong></p>
+
+<p><img id="" src="http://cl.ly/0m000t1Y3B2h2Q3v3N31/4%20Skip%20Menu.png" alt="" title="" /></p>
+
+<hr />
+
+<p><strong>Succesfull Call</strong></p>
+
+<p><img id="" src="http://cl.ly/3o3O2G313l0M1K1n2K3H/5%20Successful%20Call.png" alt="" title="" /></p>
+
+<hr />
+
+<p><strong>Unsuccesfull Call</strong></p>
+
+<p><img id="" src="http://cl.ly/3M2Y1J0a3e3l40090H1s/6%20Unsuccessful%20Call.png" alt="" title="" /></p>
+
+<hr />
+
+<p><strong>Skipped Call</strong></p>
+
+<p><img id="" src="http://cl.ly/203z0V0D091t2q3c3w1B/7%20Skipped%20Call.png" alt="" title="" /></p>
+
+    </div>
+
+  </div> <!-- end of #container -->
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>    <script>(function($){$('h1,h2,h3,h4').each(function(){$(this).html($(this).text().replace(/([^\s])\s+([^\s]{1,5})\s*$/,'$1&nbsp;$2'));});$('a[href^=#]').click(function(){if(location.pathname.replace(/^\//,'')==this.pathname.replace(/^\//,'')&&location.hostname==this.hostname){var $target=$(this.hash);$target=$target.length&&$target||$('[id='+this.hash.slice(1)+']');if($target.length){var targetOffset=$target.offset().top;$('#contentdiv').animate({scrollTop:targetOffset-40},1000);return false;}}});$('#contentdiv').scroll(function(){if(this.scrollTop>150){if($('#backtotop').length==0)
+$('h1.doctitle').append($('<a href="javascript:void()" id="backtotop" />').text('Back to top').css({'float':'right','display':'none'}).click(function(){$('#contentdiv').animate({scrollTop:0},1000);}));$('#backtotop').fadeIn('slow');}else{$('#backtotop').fadeOut('slow',function(){$(this).remove();});}});})(jQuery);
+  </script>
+</body>
+</html>
