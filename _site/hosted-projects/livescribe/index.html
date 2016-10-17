@@ -1,0 +1,318 @@
+<!DOCTYPE html> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	 
+	<title>Livescribe</title> 
+	<meta name="description" content=""> 
+	<meta name="author" content=""> 
+	 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	
+	<link rel="shortcut icon" href="/favicon.ico"> 
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"> 
+	<link rel="stylesheet" href="css/style.css"> 
+	<!-- 1140px Grid styles for IE --> 
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]--> 
+	<!-- The 1140px Grid - http://cssgrid.net/ --> 
+	<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" /> 
+	<!-- Your styles --> 
+	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers--> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function() {
+      	//When you click on a link with class of poplight and the href starts with a # 
+      	$('a.poplight[href^=#]').click(function() {
+      	    var popID = $(this).attr('rel'); //Get Popup Name
+      	    var popURL = $(this).attr('href'); //Get Popup href to define size
+      	
+      	    //Pull Query & Variables from href URL
+      	    var query= popURL.split('?');
+      	    var dim= query[1].split('&');
+      	    var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+      	
+      	    //Fade in the Popup and add close button
+      	    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="pop_close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>');
+      	
+      	    //Define margin for center alignment (vertical   horizontal) - we add 80px to the height/width to accomodate for the padding  and border width defined in the css
+      	    var popMargTop = ($('#' + popID).height() + 80) / 2;
+      	    var popMargLeft = ($('#' + popID).width() + 80) / 2;
+      	
+      	    //Apply Margin to Popup
+      	    $('#' + popID).css({
+      	        'margin-top' : -popMargTop,
+      	        'margin-left' : -popMargLeft
+      	    });
+      	
+      	    //Fade in Background
+      	    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+      	    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) is used to fix the IE Bug on fading transparencies 
+      	
+      	    return false;
+      	});
+      	
+      	//Close Popups and Fade Layer
+      	$('a.pop_close, #fade').live('click', function() { //When clicking on the close or fade layer...
+      	    $('#fade , .popup_block').fadeOut(function() {
+      	        $('#fade, a.pop_close').remove();  //fade them both out
+      	    });
+      	    return false;
+      	});
+      }); 
+  </script>
+  <script src="js/plugins.js"></script> 
+  <script type="text/javascript" src="js/cssua.min.js"></script> 
+  <script src="js/jQuery-Peek/jquery.peek.js"></script> 
+  <script src="js/script.js"></script> 
+  <script type="text/javascript" src="js/scroll.js"></script> 
+  <script type="text/javascript" src="js/css3-mediaqueries.js"></script> 
+    <script type="text/javascript" src="http://use.typekit.com/tye0ksa.js"></script> 
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+
+</head> 
+<body>  
+<div id="outer_container"> 
+  <div id="page_container" class="container"> 
+       
+    <!-- SLIDE 1 START --> 
+    <div id="slide1" class="row" > 
+      <div id="stripes">&nbsp;</div> 
+      <div class="onecol"></div> 
+      <div id="headline" class="tencol resize"> 
+        <img src="images/headline.png">
+      </div> 
+      <div class="onecol last"></div> 
+      <a href="#" name="slide1_write" style="visibility:hidden;">&nbsp;</a> 
+      <div class="threecol top_fix"> 
+        <img src="images/logo_echo.png"> 
+      </div> 
+      <div class="threecol"></div> 
+      <div id="slide1_copy" class="sixcol last top_fix"> 
+        <div class="title_bigmargin"><img src="images/slide1_title.png"></div> 
+        <p>  Students can take the livescribe echo<sup>TM</sup> smartpen and take notes the same way they always have. This time, however, they are taking you, their teacher, with them. When using the echo<sup>TM</sup> smartpen,  students are simultaneously taking notes, retaining new knowledge and recording their educational surroundings, all without any extra effort. The echo<sup>TM</sup> smartpen is the tool that assures success in the classroom, day after day.</p> 
+        <a href="#" rel="record_and_playback" class="learn_more">Learn More</a> 
+        </div> 
+    </div> 
+    <!-- SLIDE 1 END --> 
+    <!-- SLIDE 2 START --> 
+    <div id="slide2" class="row" style="position:relative; z-index:5;"> 
+      <a href="#" name="slide2_review" style='visibility:hidden;'></a> 
+      <div id="slide2_copy" class="sixcol"> 
+        <div class="title"><img src="images/slide2_title.png"></div> 
+        <div class="after_title"> 
+          <p> After leaving class, students can simply tap on different areas of their notes and actually hear what was being taught in class at that exact moment! No more trying to decipher diagrams or trying to figure out what the incomplete sentence was referring to. The echo<sup>TM</sup> smartpen takes note-taking and studying to a completely new level.</p> 
+          <p>And with such a integrated design, there is no learning curve! Just pick up the pen and start learning.</p> 
+          <a href="#"  rel="review" class="learn_more">Learn More</a> 
+        </div> 
+        
+      </div> 
+      <div class="sixcol last resize"> 
+        <div class="slide_image"><img src="images/slide2_image.png"> </div>
+      </div> 
+    </div> 
+    <!-- SLIDE 2 END --> 
+    <!-- SLIDE 3 START --> 
+    <div id="slide3" class="row"> 
+      <a href="#" name="slide3_learn" style="visibility:hidden;"></a> 
+      <div class="sixcol resize"> 
+        <div class="slide_image learn_image"><img src="images/slide3_image.png"> </div>
+      </div> 
+      <div id="slide3_copy" class="sixcol last"> 
+        <div class="title slide3_title"><img src="images/slide3_title.png"></div> 
+        <div class="after_title learn"> 
+          <p> Studies have proven that writing down information as it is presented increases retention by over 65%. Taking it a step further, reviewing the same information with more audio cues extend retention by another 25%! That is over 90% retention of new information simply by reviewing notes taken with the livescribe echoTM pen. </p> 
+          <p>By simply changing the pen that your students use, you can almost guarantee that the knowledge you are passing on to them will be retained and utilized in their everyday lives!</p> 
+          <a href="#" rel="learn" class="learn_more">Learn More</a> 
+        </div> 
+      </div> 
+    </div> 
+    <!-- SLIDE 3 END --> 
+    <!-- BUY SLIDE START --> 
+    <div id="slide4" class="row"> 
+      <a href="#" name="slide4_buy"></a> 
+      <div id="slide4_copy" class="sixcol"> 
+        <div class="title_nomargin"><img src="images/slide4_orderyours.png"></div> 
+      </div> 
+      <div class="threecol">&nbsp;</div> 
+        <div id="slide4_button" class="threecol last"> 
+          <div id="slide4_button">
+            <a href="#?w=500" rel="contact_form" class="poplight buy_button_large">Buy</a> 
+          </div>
+          
+          
+        </div> 
+    </div> 
+    <!-- BUY SLIDE END --> 
+    <div id="footer_spacer" class="row">&nbsp;</div> 
+    <div id="footer" class="row"> 
+      <div class="twelvecol last"> 
+        <div id="footer_logo"> 
+          <a href="#"><img src="images/logo_livescribe.png"></a> 
+        </div> 
+        <div id="footer_links"> 
+          <ul class="footer_downloads"> 
+            <li class="bold">DOWNLOADS:</li> 
+            <li><a class="ease" href="pdf/Livescribe_Tech_Specifications.pdf" target="_blank">specs</a></li> 
+            <li><a class="ease" href="pdf/Livescribe_K12_Price_Brochure.pdf" target="_blank">pricing</a></li> 
+            <li><a class="ease" href="pdf/AugustEduPromotionOverview.pdf" target="_blank">promotions</a></li> 
+            <li><a class="ease" href="pdf/PDProgram.pdf" target="_blank">professional development</a></li>
+            <li class="last"><a class="ease" href="pdf/LSDesktopSoftwareReferenceSheet" target="_blank">desk reference</a></li>             
+          </ul> 
+        </div>
+         <div id="footer_tothetop"> 
+           <a class="ease scroll" href="#"> 
+           To The Top &nbsp; <img src="images/top_arrow.png"></a> 
+         </div> 
+      </div> 
+    </div>
+  </div> 
+  <div id="footer_bar">&nbsp;</div> 
+ <!-- SLIDE 1 DROPDOWN --> 
+  <div id="record_and_playback" class="dropdown_outer_container" style="display:none;"> 
+    <div class="dropdown_inner_container"> 
+      <div class="dropdown_left"> 
+       <h2 class="light">Record and playback</h2> 
+       <p class="bold light">watch this video and learn about the echo pen</p> 
+       <p class="light">Professors talk fast. Students zone out. No problem. Smartpens <strong>record everything you hear and write</strong> so you'll never miss a word.</p>
+       <p class="light">It's the end of feeling anxious in class – with a smartpen you can<strong> write less and listen more</strong> – knowing your smartpen will capture everything</p> 
+       <div class="button_row"><a href="#" class="close button spacer">Close</a></div>
+      </div> 
+      <div class="dropdown_right resize"> 
+        <object width="384" height="248"><param name="movie" value="http://www.youtube.com/v/THMpMdmyX9I?version=3&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name=wmode value="transparent"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/THMpMdmyX9I?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="384" height="248" allowscriptaccess="always" allowfullscreen="true"></embed></object> 
+      </div> 
+    </div>  
+  </div> 
+ <!-- SLIDE 2 DROPDOWN --> 
+  <div id="review" class="dropdown_outer_container" style="display:none;"> 
+    <div class="dropdown_inner_container"> 
+       <h2 class="light">Review</h2> 
+       <p class="light">A smartpen lets you <strong>capture words, diagrams, scribbles, symbols and audio </strong>- syncing everything you hear to what you wrote.</p> 
+       <ul class="videos">
+         <li class="under">
+           <object width="228" height="316">
+             <param name="movie" value="http://www.livescribe.com/media/swf/embedPlayer.swf"></param>
+             <param name=wmode value="transparent"></param>
+             <param name="FlashVars" value="path=http%3A//www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML%3Fxml%3D0000C0A8011700003A9806690000012ECF7A63885E734938&embedversion=1"></param>
+             <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+             <embed allowfullscreen="true" allowscriptaccess="always" type="application/x-shockwave-flash" src="http://www.livescribe.com/media/swf/pencastPlayer.swf?path=http%3A//www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML%3Fxml%3D0000C0A8011700003A9806690000012ECF7A63885E734938&embedversion=1"></embed>
+           </object>
+         </li>
+         <li class="under">
+             <object width="228" height="316">
+             <param name="movie" value="http://www.livescribe.com/media/swf/embedPlayer.swf"></param>
+             <param name=wmode value="transparent"></param>
+             <param name="FlashVars" value="path=http%3A//www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6880A0000011F8FBA4C689840072A&embedversion=1"></param>
+             <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+             <embed allowfullscreen="true" allowscriptaccess="always" type="application/x-shockwave-flash" src="http://www.livescribe.com/media/swf/pencastPlayer.swf?path=http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C6880A0000011F8FBA4C689840072A&embedversion=1"></embed>
+           </object>
+         </li>
+        <li class="under">
+          <object width="228" height="316">
+            <param name="movie" value="http://www.livescribe.com/media/swf/embedPlayer.swf"></param>
+            <param name=wmode value="transparent"></param>
+            <param name="FlashVars" value="path=http%3A//www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C64021000001220629BF7AE3638612&embedversion=1"></param>
+            <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+            <embed allowfullscreen="true" allowscriptaccess="always" type="application/x-shockwave-flash" src="http://www.livescribe.com/media/swf/pencastPlayer.swf?path=http://www.livescribe.com/cgi-bin/WebObjects/LDApp.woa/wa/flashXML?xml=0000C0A80116000009C64021000001220629BF7AE3638612&embedversion=1"></embed>
+          </object>
+        </li>
+      </ul>
+      <div class="button_row"><a href="#" class="close button spacer">Close</a> <a href="#" rel="record_and_playback" class="close back_button learn_more">Back to Record &amp; Playback</a> </div>
+    </div>  
+  </div> 
+ <!-- SLIDE 3 DROPDOWN --> 
+  <div id="learn" class="dropdown_outer_container" style="display:none;"> 
+    <div class="dropdown_inner_container"> 
+      <div class="dropdown_left"> 
+       <h2 class="light">Learn</h2> 
+       <p class="bold light">Using the pen </p> 
+       <p class="light">Don't stress about the big test. Livescribe smartpens record everything you hear and write and play it back with a tap. You notes are even organized and searchable on your computer or mobile device.</p>
+       
+       <div class="button_row"><a href="#" class="close button spacer">Close</a> <a href="#"  rel="review" class="close back_button learn_more">Back to Review</a></div>
+      </div> 
+      <div class="dropdown_right resize"> 
+       <object width="560" height="349"><param name="movie" value="http://www.youtube.com/v/Uz0JMcZR1QA?version=3&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Uz0JMcZR1QA?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="560" height="349" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+      </div> 
+    </div>  
+  </div> 
+  <!-- CONTACT FORM -->
+  <div id="contact_form" class="popup_block">
+    <div id="page-wrap">		
+    		<div id="contact-area">
+    		<p class="form_title"> To place an order, please contact us using the form below:</p>
+    			<form method="post" action="contactengine.php">
+    				<label for="Name">Name:</label>
+    				<input type="text" name="Name" id="Name" />
+    				
+    				<label for="Position">Position:</label>
+    				<input type="text" name="Position" id="Position" />
+    				
+    				<label for="School">School:</label>
+    				<input type="text" name="School" id="School" />
+    				
+    				<label for="Address">Address, City, State:</label>
+    				<input type="text" name="Address" id="Address" />
+    	
+          	<label for="Phone">Phone:</label>
+          	<input type="text" name="Phone" id="Phone" />
+    	    	
+    	      <label for="Time">Time Frame For Purchase:</label>
+    	      <input type="text" name="Time" id="Time" />
+    	
+    				<label for="Email">Email:</label>
+    				<input type="text" name="Email" id="Email" />
+    				
+    				<label for="Message">Any Other Information:</label>
+    				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+    <div style="clear: both;"></div>
+    				<div class="submit_button">
+    				  <input type="submit" name="submit" value="Submit" class="submit-button button" />
+    				</div>
+    			</form>
+    			<div style="clear: both;"></div>    		
+    		</div>
+    	</div>
+  </div>
+  <div id="header_container"> 
+    <div id="header_inner_container"> 
+      <div id="header"> 
+        <div id="header_left"> 
+          <div id="logo"> 
+            <a href="#"><img src="images/logo_livescribe.png"></a> 
+          </div> 
+          <nav> 
+            <ul class="ie_nav"> 
+            <li><a class="ease scroll" href="#slide1_write">write</a></li> 
+            <li><a class="ease scroll" href="#slide2_review">review</a></li> 
+            <li><a class="ease scroll" href="#slide3_learn">learn</a></li> 
+            <li><a class="ease scroll" href="#slide4_buy">order</a></li> 
+            </ul> 
+          </nav> 
+        </div> 
+        <div id="header_right"> 
+          <ul class="downloads"> 
+            <li class="bold">DOWNLOADS:</li> 
+            <li><a class="ease" href="pdf/Livescribe_Tech_Specifications.pdf" target="_blank">specs</a></li> 
+            <li><a class="ease" href="pdf/Livescribe_K12_Price_Brochure.pdf" target="_blank">pricing</a></li> 
+            <li><a class="ease" href="pdf/AugustEduPromotionOverview.pdf" target="_blank">promotions</a></li> 
+          </ul> 
+          <div id="buy_button"> 
+            <a href="#?w=500" rel="contact_form" class="poplight button">Buy It Now</a> 
+          </div> 
+        </div> 
+        <div class="clear"></div> 
+      </div> 
+    </div> 
+  </div> 
+</div> 
+		<!--[if lt IE 7 ]>
+	<script src="js/libs/dd_belatedpng.js"></script>
+	<script> DD_belatedPNG.fix('img, .png_bg');</script>
+	<![endif]-->
+</body> 
+</html>
+
