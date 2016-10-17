@@ -218,17 +218,37 @@
 #weekly-reads-tout {
   display: block;
   width: 230px;
-  margin: 1rem auto 0;
   margin: 0;
-  text-align: center;
 
   i {
     margin-bottom: 1rem;
+  }
+
+  .weekly-reads-title {
+    display: inline-block;
+    width: calc(100% - 5rem);
+    margin-left: 0.7rem;
+
+    span {
+      display: block;
+      @include font-size(14);
+      font-weight: 500;
+    }
+  }
+
+  @include mq(768px) {
+    .weekly-reads-title {
+      span {
+        display: block;
+      }
+
+    }
   }
 }
 
 
 #footer-weekly-reads-signup {
+  margin-left: 4.7rem;
 
   > * {
     @include box;
@@ -238,31 +258,39 @@
     list-style: none;
   }
 
-  label {
-    display: block;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-  }
-
-
   input[type=email] {
-    outline: none;
-    background: rgba(0,0,0,0.2);
-    border: none;
-    border-bottom: 4px solid #f2f2f2;
-    @include font-size(14);
-    line-height: 30;
+    background: none;
     height: 30px;
-    padding: 0 1rem;
-    color: $white;
+    margin: 0;
+    padding-right: 1rem;
+    @include font-size(14);
     font-weight: 500;
     letter-spacing: 1px;
+    line-height: 30;
+    color: $white;
+    outline: none;
+    border: none;
+    border-bottom: 4px solid #f2f2f2;
+    @include box;
+    transition: border $transition;
+
+    &:focus {
+      border-bottom: 4px solid #fff;
+    }
   }
 
   #submit {
     margin-top: 1rem;
     width: 100%;
 
+  }
+
+  @include mq(768px) {
+    input[type=email],
+    #submit {
+      width: 100%;
+      max-width: 200px;
+    }
   }
 }
 
@@ -291,7 +319,7 @@
 
 
 
-
+// TODO -- move MQs into element blocks
 @include mq(768px) {
 
   #main-footer {
@@ -388,41 +416,6 @@
 
     figcaption {
       text-align: left;
-    }
-  }
-
-  #weekly-reads-tout {
-    p {
-      em {
-        display: block;
-        @include font-size(22);
-        font-weight: 300;
-        line-height: 1;
-        font-style: normal;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-      }
-
-      span {
-        @include font-size(14);
-        line-height: 1.2;
-      }
-    }
-
-    label {
-      margin-bottom: 0.5rem;
-      padding-left: 0.5rem;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-    }
-  }
-
-
-  #footer-weekly-reads-signup {
-    input[type=email],
-    #submit {
-      width: 100%;
-      max-width: 200px;
     }
   }
 

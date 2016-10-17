@@ -162,31 +162,6 @@ img {
   transition: background $transition;
   @include box;
 
-  #them-grid-lines {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    pointer-events: none;
-    background-image: url('../img/bg-mobile.png');
-    background-size: 100%;
-    background-repeat: repeat;
-    background-position: center top;
-    @include transition( opacity $transition );
-
-    .view-mode--dark & {
-      opacity: 0;
-      transition-delay: 1s;
-    }
-
-    @include mq(960px) {
-      background-image: url('../img/bg-desktop.png');
-    }
-  }
-
   @include mq(500px) {
     padding: $spacer;
   }
@@ -194,7 +169,6 @@ img {
   @include mq(960px) {
     padding: $spacer * 2;
   }
-
 
   &:after {
     display: block;
@@ -214,6 +188,35 @@ img {
   }
 
 } // main
+
+
+
+#them-grid-lines {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 1;
+  pointer-events: none;
+  background-image: url('../img/bg-mobile.png');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-position: center top;
+  transition: opacity $transition;
+  transition-delay: 0.35s; // ensures that grid lines transition nicely from dark-mode to normal
+
+  @include mq(960px) {
+    background-image: url('../img/bg-desktop.png');
+  }
+
+  .view-mode--dark & {
+    opacity: 0;
+  transition: none;
+  }
+}
 
 
 [id=inner-container] {

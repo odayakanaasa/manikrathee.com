@@ -40,6 +40,12 @@
     margin-top: $spacer * 2;
   }
 
+  @include mq(960px) {
+    &:nth-child(even){
+      margin-left: -20rem;
+    }
+  }
+
   img {
     display: block;
     width: 100%;

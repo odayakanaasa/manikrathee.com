@@ -79,7 +79,8 @@ ul {
   }
 }
 
-p {
+p,
+.body-copy {
   @include font-size(17);
   margin-bottom: 1.8rem;
   line-height: 1.6;

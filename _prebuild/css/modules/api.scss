@@ -4,10 +4,19 @@
 
 
 // Instagram Grid
+#instagram-api-container {
+  .view-mode--dark & {
+    background: #fff;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+}
 
 #instagram-api-bar {
   @include clearfix;
+
 }
+
 .instagram-photo {
   float: left;
   width: 25%;
@@ -17,9 +26,11 @@
 
 .api--unit {
   padding: 8rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 
   &:last-child {
     padding-bottom: 0;
+    border: none;
   }
 
   i {

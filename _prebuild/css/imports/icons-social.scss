@@ -29,7 +29,7 @@ $social-accounts:
   }
   &--fivehundredpx,
   &--fivehundredpx-dark {
-    @include size(28px, 18px);
+    @include size(22px, 28px);
   }
   &--instagram,
   &--instagram-dark {
@@ -64,8 +64,11 @@ $social-accounts:
 .social-list {
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 14rem);
-  margin-left: 4rem;
+
+  @include mq(700px) {
+    width: calc(100% - 14rem);
+    margin-left: 4rem;
+  }
 
   &--item {
     flex-grow: 1;

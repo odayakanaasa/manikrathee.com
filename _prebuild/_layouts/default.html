@@ -10,7 +10,6 @@
         {% if page.category == 'photo' %}photo-blog photo-blog-post{% endif %}
         {{ page.title | slugify }}
       ">
-      <span id="them-grid-lines"></span>
 
     {% if page.wip %}
       <aside id="work-in-progress">
@@ -21,6 +20,8 @@
 
 
     <div id="main" class="container" role="main">
+
+      <span id="them-grid-lines"></span>
 
       {% include global-page-header.html %}
 

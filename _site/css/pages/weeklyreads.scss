@@ -102,7 +102,7 @@
     font-family: $sans;
     text-transform: uppercase;
     color: #fff;
-    @include transition(background 0.15s linear);
+    @include transition(background $transition);
 
     &:hover {
       background: lighten(saturate(#1fc5b7, 10%), 3%);
