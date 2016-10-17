@@ -1,0 +1,72 @@
+  <header id="page-header" role="banner">
+
+    <div class="global-header">
+
+      <a class="header-logo"
+         href="/"
+         title="manikrathee.com"
+         alt="MountainMonday 🍻"
+         itemprop="url"
+      >
+        <h2 class="animated-logo mountain-monday">
+          MountainMonday 🍻
+        </h2>
+
+        <hgroup id="site-title">
+          <h1 id="name">Manik Rathee</h1>
+          <p id="greeting">Designer, Photographer</p>
+        </hgroup>
+      </a>
+
+      {% include global-nav-list.html %}
+    </div>
+
+    {% include view-mode.html %}
+
+    {% if page.home %}
+    <div id="who-is">
+      <h3 class="current-title">
+        Prototyping &amp; Engineering
+        <i>
+          @
+          <a href="https://nest.com/" title="Nest Labs, an Alphabet Company" itemprop="url">Nest / Google</a>
+        </i>
+      </h3>
+
+      <div class="previous-container">
+        <p class="previous-heading">Previously</p>
+        <ul class="previous-positions">
+          <li>
+            User Experience Engineer
+            <i>
+              for
+              <a href="https://youtu.be/pBK2rfZt32g?t=7s" title="Barack Obama's 2012 Re-Election Campaign" itemprop="url">President Barack Obama</a>
+            </i>
+          </li>
+          <li>
+            Design Lead
+            <i>
+              for
+              <a href="https://www.continu.co/" title="Continu: Beautifully Simple Learning" itemprop="url">Continu</a>
+            </i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endif%}
+
+    {% if page.title %}
+    <div class="page-title-container">
+      {% if page.page-type == 'blog' %}
+      <svg id="header-bar" viewBox="0 0 269 419" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 402.5l236-386" stroke="#7393CA" stroke-width="24" fill="currentColor" fill-rule="evenodd" stroke-linecap="square" opacity=".2"/></svg>
+      {% endif %}
+      <h1 id="page-title">
+        {{ page.title | widont }}
+      </h1>
+    </div>
+    {% endif %}
+  </header>
+
+  {% if page.project %}
+  <p id="current">{{ page.project }}</p>
+  {% endif %}

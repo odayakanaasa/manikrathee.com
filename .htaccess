@@ -1,30 +1,59 @@
 AddHandler php5-script .php
+
 RewriteEngine On
 RewriteBase /
 RewriteCond %{HTTP_HOST} ^manikrathee.com [NC]
-RewriteRule ^(.*)$ http://www.manikrathee.com/$1 [L,R=301]
-Redirect /+ http://plus.google.com/118337203025285830553/
-Redirect /gplus http://plus.google.com/118337203025285830553/
-Redirect /googleplus http://plus.google.com/118337203025285830553/
-Redirect /tumblr http://manikrathee.tumblr.com
-Redirect /twitter http://www.twitter.com/manikrathee
-Redirect /photography http://www.manikratheephotography.com
-Redirect /facebook http://www.facebook.com/manikratheephotography
-Redirect /fb http://www.facebook.com/manikratheephotography
+RewriteRule ^(.*)$ http://www.manikrathee.com/$1/ [L,R=301]
+
+Redirect /barack-obama-contribute.html http://www.manikrathee.com/_archive/manikratheev6/barack-obama-contribute.html
+
+Redirect /500px https://500px.com/manikrathee
+Redirect /blog http://blog.manikrathee.com
+Redirect /bot https://twitter.com/manikbot
+Redirect /dribbble http://dribbble.com/manikrathee
+Redirect /exposure http://photos.manikrathee.com/
+Redirect /flickr http://www.flickr.com/photos/manikrathee
+Redirect /foursquare http://foursquare.com/manikrathee
+Redirect /gist http://gist.github.com/manikrathee
+Redirect /github http://www.github.com/manikrathee
+Redirect /instagram https://www.instagram.com/manikrathee/
+Redirect /ig https://www.instagram.com/manikrathee/
+Redirect /isreading https://twitter.com/manikisreading
 Redirect /ios http://www.manikrathee.com/catalyst
 Redirect /iOS http://www.manikrathee.com/catalyst
-Redirect /instagram http://instagrid.me/manikrathee/
-Redirect /linkedin http://www.linkedin.com/in/manikrathee
-Redirect /github http://www.github.com/manikrathee
-Redirect /gist http://gist.github.com/manikrathee
-Redirect /dribbble http://dribbble.com/manikrathee
-Redirect /blog http://blog.manikrathee.com
-Redirect /foursquare http://foursquare.com/manikrathee
-Redirect /readmill http://www.readmill.com/manikrathee
-Redirect /flickr http://www.flickr.com/photos/manikrathee
 Redirect /lastfm http://www.last.fm/user/mrathee
-Redirect /rdio http://www.rdio.com/people/manikrathee/
+Redirect /linkedin http://www.linkedin.com/in/manikrathee
+Redirect /manikbot https://twitter.com/manikbot
+Redirect /pocket https://getpocket.com/@Mrathee
+Redirect /photography http://photos.manikrathee.com/
+Redirect /photos http://photos.manikrathee.com/
+Redirect /reading https://twitter.com/manikisreading
+Redirect /readingam https://www.reading.am/ManikRathee/
+Redirect /spotify https://play.spotify.com/user/manikrathee
+Redirect /tumblr http://manikrathee.tumblr.com
+Redirect /twitter http://www.twitter.com/manikrathee
+Redirect /vsco http://vsco.co/manikrathee/
+
+Redirect /subscribe /weeklyreads/
+Redirect /weekly-reads /weeklyreads/
+
+
+
+
 AddType application/x-font-woff woff
 AddType application/x-font-ttf ttf
 AddType application/vnd.ms-fontobject eot
 AddType image/svg+xml svg
+
+
+Redirect 301 /how-i-use-text-expander.html http://www.manikrathee.com/text-expander-tips.html
+Redirect 301 /why-uber-threatens-taxi-labor-groups.html http://www.manikrathee.com/uber-vs-cabs.html
+Redirect 301 /building-obama.html http://www.manikrathee.com/building-president-obama.html
+Redirect 301 /on-disconnecting.html http://www.manikrathee.com/on-disconnecting-from-tech-silicon-valley.html
+Redirect 301 /quality-in-startup-mvps.html http://www.manikrathee.com/quality-in-startup-minimum-viable-products.html
+Redirect 301 /rework.html http://www.manikrathee.com/rework-redesign-rebuild-iteration.html
+Redirect 301 /pride.html http://www.manikrathee.com/pride-chicago-2012.html
+Redirect 301 /interaction-and-innovation.html http://www.manikrathee.com/interaction-and-innovation-for-ios.html
+Redirect 301 /windy-city.html http://www.manikrathee.com/chicago-windy-city-and-obama.html
+Redirect 301 /changes-obama-for-america.html http://www.manikrathee.com/working-for-president-obama.html
+Redirect 301 /experiments-responsive-design.html http://www.manikrathee.com/responsive-design-experiments.html

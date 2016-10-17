@@ -7,20 +7,23 @@ if ( $('body').attr('id') === 'home' ){
     get: 'user',
     userId: 262351,
     clientId: 'f7f319ceb411486593db148972918108',
-    accessToken: '262351.467ede5.32fb0226aa3c4ef88bcbbaa67ea2ded5',
-    target: 'instagram',
-    limit: 1,
-    template: '<div class="photo" data="{{id}}"><p><a id="instagram-link" href="{{link}}" title="View my latest Instagram Shot">{{caption}}</a></p></div>'
+    accessToken: '262351.1677ed0.d90081329df94cbe8353f5039bac6d76',
+    target: 'instagram-api-bar',
+    limit: 6,
+    links: 1,
+    resolution: 'standard_resolution',
+    template: '<li class="instagram-photo" data="{{id}}"><a class="instagram-link no-border" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"></a></li>',
  });
 
  feed.run();
 
   // Set instagramActive to true so logofyAPI and activate API can fire
-  instagramActive = true;
+  // instagramActive = true;
 }
 
 // To Do - add an instagram phone hook to launch the app on mobile:
-// @"instagram://location?id=1
+// This does an alert-style redirect to the app -- make sure the use-case is stable
+// @"instagram://user?username=manikrathee
 // https://instagram.com/developer/iphone-hooks/
 
 

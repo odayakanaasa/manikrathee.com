@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+
+.row {
+
+  & + .row {
+    margin-top: $spacer * 2;
+  }
+
+  &-tout {
+    margin-top: $spacer * 2;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+  }
+}
+
+.row-tout-list {
+  list-style-type: none;
+
+  li {
+
+    & + li {
+      margin-top: $base-unit * 4;
+    }
+  }
+}
+
+.more-items {
+  margin-top: $base-unit * 6;
+  @include font-size(12);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.more-items--link {
+}
+
+.social {
+
+  h3 {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &--list { // ul
+    display: inline-block;
+    color: red;
+
+    li { // li
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &--list--item { // a
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include ir;
+  }
+}
+
+
+
+
+
+
+@include mq(700px) {
+
+
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+
+    &-tout {
+      width: 50%;
+      margin-top: 0;
+      @include box;
+
+      &:first-child { // 50/50 touts on the homepage
+        margin-top: 0;
+        padding-right: $spacer;
+      }
+      &:last-child {
+        padding-left: $spacer;
+      }
+    }
+  }
+
+}

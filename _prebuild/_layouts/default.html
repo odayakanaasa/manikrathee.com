@@ -1,10 +1,66 @@
 	{% include global-header.html %}
 
-	<body {% if page.body-id %}id="{{ page.body-id }}"{% endif %} {% if page.body-class %}class="{{ page.body-class }}"{% endif %}>
+	<body{% if page.body-id %} id="{{ page.body-id }}"{% endif %}
+      class="
+        {{ page.body-class }}
+        {% if page.page-type == 'blog' %}blog{% endif %}
+        {% if page.page-subtype == 'blog-index' %}blog-index{% endif %}
+        {% if page.page-subtype == 'blog-post' %}blog-post{% endif %}
+        {% if page.page-subtype == 'photo-index' %}photo-index{% endif %}
+        {% if page.category == 'photo' %}photo-blog photo-blog-post{% endif %}
+        {{ page.title | slugify }}
+      ">
 
-	{{ content }}
+    {% if page.wip %}
+      <aside id="work-in-progress">
+        <img src="/img/wip/1.gif" alt="Under Construction Animated Gif, 1 of 2">
+        <img src="/img/wip/2.gif" alt="Under Construction Animated Gif, 2 of 2">
+      </aside>
+    {% endif %}
 
-  {% include global-footer.html %}
 
-</body>
+    <div id="main" class="container" role="main">
+
+      <span id="them-grid-lines"></span>
+
+      {% include global-page-header.html %}
+
+      <section id="inner-container" class="{{page.section}}">
+
+        {% if page.page-type == 'blog' %}
+          {% if page.img %}
+            <picture class="page-photo">
+             <source srcset="/img/{{ page.category }}{{ page.img }}" media="(min-width: 600px)">
+             <img src="/img/{{ page.category }}{{ page.img }}" alt="{{ page.title }}">
+            </picture>
+          {% endif %}
+          <article id="post-container">
+        {% endif %}
+
+
+        {{ content }}
+
+
+        {% if page.page-type == 'blog' %}
+        </article>
+          {% include blog-pagination.html %}
+
+          {% if page.share %}
+          {% include share.html %}
+          {% endif %}
+        {% endif %}
+
+      </section>
+
+    </div>
+
+    {% if false  %}
+      {% if page.page-type == 'blog' %}
+        {% include photoswipe.html %}
+      {% endif%}
+    {% endif%}
+
+    {% include global-footer.html %}
+  </body>
+
 </html>

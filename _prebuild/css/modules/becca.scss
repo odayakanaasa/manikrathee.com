@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/*!
+  // #663399Becca
+  //
+  // For Eric.
+  //
+  // Usage:
+  //    <span id="becca"></span>
+  //
+*/
+#becca {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(102,51,153,0.7); // #663399
+  &:after {
+    display: block;
+    content: '#663399Becca';
+    color: lighten(rgb(102,51,153),35%);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}

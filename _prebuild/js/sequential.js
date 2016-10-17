@@ -2,10 +2,12 @@
 //      Created By Manik Rathee on 2012-05-08
 //      Copyright 2012 Obama for America. All rights reserved.
 
+if ( $('body').hasClass('sequential') ) {
+
 // (function($, win) {
     var win = $('window');
     var current              = 1;
-    
+
     var donateForm           = $('#donate-form');
     var group1               = $('#select-amount-header, #amounts-cont');
     var group2               = $('#firstname-cont, #lastname-cont, #addr1-cont, #city-cont, #state_cd-cont, #zip-cont, #email-cont, #phone-cont');
@@ -57,7 +59,7 @@
     $(document).ready(function() {
         adjustInputTypes();
     });
-    
+
     //Set min and max if it doesnt exist or is not a number
     win.minDonationLimit = (!minDonationLimit || typeof minDonationLimit !== "number") ? 3 : win.minDonationLimit;
 
@@ -66,7 +68,7 @@
     } else {
         win.maxDonationLimit = (win.maxDonationLimit && typeof( win.maxDonationLimit ) === "number") ? win.maxDonationLimit : 2500 ;
     }
-    
+
     // Toggles .hide on current group
     function showContent(){
         $('.group' + current).toggleClass('hide');
@@ -102,7 +104,7 @@
         }
         $('[data-breadcrumb-number='+i+']').addClass('completed').addClass('current');
     }
-    
+
     //Update breadcrumbs based on Saved Payment Info
     function savePaymentBreadcrumbs(){
         if (hasSavedPayment){
@@ -119,12 +121,12 @@
         }
     }
 
-    
+
     // Serve up client-side validation errors
     function clientErrors(){
         if (!goNext){
             premature.removeClass().addClass('premature');
-            
+
             if (current === 1){
                 premature.addClass('first');
                 $('#amount-header').addClass('error');
@@ -162,7 +164,7 @@
             }
         }
     }
-    
+
 
     //Validation
     function validateForm(){
@@ -176,7 +178,7 @@
         overLimit = false;
         underLimit = false;
         var i;
-        
+
         if (!$('body').hasClass('error')) {
 
             if (current === 1){
@@ -354,12 +356,12 @@
     //             .add( $relatedFields.filter('.' + errorPair.field + '_related') )
     //                 .addClass('error');
     //     }
-        
+
     //     function errorifyForm( donateError ){
 
     //         var numErrors, i;
     //         var ofaAPI = new win.ODonateAPIWrapper('');
-            
+
     //         if ( donateError.code ) {
     //             switch ( donateError.code ) {
     //                 case ofaAPI.VALIDATION_FAILURE :
@@ -462,8 +464,8 @@
                 return false;
             }
         });
-        
-        
+
+
 
         // Restore form fields if QD info not you is clicked
         $('#personalized-content').on("click", "#qd-edit-info", function(){
@@ -483,9 +485,9 @@
             updateBreadcrumb(current);
             showContent();
         });
-        
-        
-            
+
+
+
 
         // Set active states on amount button and populate amount banner
         // Mark hidden radios active and inactive with the label
@@ -495,7 +497,7 @@
             premature.fadeOut('1200');
             $('#amount-header').removeClass('error');
             $('.amount-cont').find('input').removeClass('error');
-            
+
             if ($(this).attr('id') === 'amount-cont-8') {
                 $(this).find("input").attr('checked', true);
                 $('#other-amount-radio').attr('checked' , true);
@@ -505,7 +507,7 @@
                 }
             }
         });
-        
+
         $('.amount-cont').find('label').click(function(){
             var $this = $(this),
                 $theInput = $this.parent().find("input");
@@ -568,18 +570,18 @@
             premature.fadeOut('1200');
             $(this).removeClass('error');
         });
-        
+
         // ##BREADCRUMBS
         breadcrumbItem.click(function(){
             var index;
             var allGroups = $('.group1, .group2, .group3, .group4, .group5, .group6');
-            
+
             $('this').focus();
-            
+
             if (current < index){
                 validateForm();
             }
-            
+
             if ($(this).hasClass('completed')){
                 index = $(this).attr('data-breadcrumb-number');
 
@@ -597,7 +599,7 @@
                     replacementSubmit.hide();
                 }
             }
-            
+
             if (!goNext){
                 validateForm();
                 // revalidate just to make sure, and if go next is true, run breadcrumb actions
@@ -652,7 +654,7 @@
             next.focus();
             validateForm();
 
-           
+
             if (goNext) {
                 premature.fadeOut('1200');
                 showContent();
@@ -719,3 +721,5 @@
         });
     } // END 768 WIDTH CHECK
 // })(jQuery, window);
+
+}

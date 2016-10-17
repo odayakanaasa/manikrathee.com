@@ -1,0 +1,105 @@
+---
+layout: default
+
+title: The Library
+
+sitemap:
+  lastmod: {{ post.date }}
+  priority: 0.7
+  changefreq: monthly
+  exclude: 'no'
+---
+
+
+<section class="row ↔️">
+  <div class="row-tout magazines-container ↕️">
+    <h3 class="medium-heading">Magazines for Inspiration</h3>
+
+    <ul class="row-tout-list magazines-list">
+      {% for mag in site.data.library.magazines %}
+        <li>
+          <a href="{{ mag.url }}" title="Visit {{ mag.heading }}" itemprop="url">
+            {{ mag.heading | widont }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="row-tout publications-container ↕️">
+    <h3 class="medium-heading">Other Publications</h3>
+
+    <ul class="row-tout-list publications">
+
+      {% for pub in site.data.library.publications %}
+        <li>
+          <a href="{{ pub.url }}" title="Visit {{ pub.heading }}" itemprop="url">
+            {{ pub.heading | widont }}
+          </a>
+        </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</section>
+
+<section class="row book-excerpts">
+
+  <h3 class="medium-heading">Books &amp; Excerpts</h3>
+
+  {% for book in site.data.library.books %}
+    <div class="book book--{{ book.slug }}">
+      <header class="book--header">
+        <div class="book--cover" data-src="/img/library/books/{{ book.slug }}.jpg">
+          <span>{{ book.title }} - Book Cover</span>
+        </div>
+        <h4 class="large-heading book--title">{{ book.title | widont }}</h3>
+        {% if book.author %}
+        <p class="book--author">{{ book.author | widont }}</p>
+        {% endif %}
+        <p class="book--link">{{ book.buy | widont }}</p>
+      </header>
+
+      <ol class="blockquote-list">
+      {% for quote in book.quotes %}
+        <li class="blockquote-list--item">
+          <p>{{ quote | widont }}</p>
+        </li>
+      {% endfor %}
+      </ol>
+
+    </div>
+  {% endfor %}
+</section>
+
+
+<section class="row ↔️">
+  <div class="row-tout books-container ↕️">
+    <h3 class="medium-heading">More books</h3>
+
+    <ul class="row-tout-list magazines-list">
+      {% for book in site.data.library.more_books %}
+        <li>
+          <a href="{{ book.url }}" title="Visit {{ book.heading }}" itemprop="url">
+            {{ book.heading | widont }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="row-tout shadow-container ↕️">
+
+    <div class="shadow-tout shadow-tout--bottom-left pocket-tout">
+      <i class="icon icon--pocket-brand"></i>
+
+      <p>
+        For articles and quick-read recommendations,
+        <a href="https://getpocket.com/@Mrathee" title="Follow @mrathee on Pocket" target="_blank" rel="nofollow" itemprop="url">follow me&nbsp;on&nbsp;Pocket</a>.
+      </p>
+    </div>
+
+
+  </div>
+</section>
+

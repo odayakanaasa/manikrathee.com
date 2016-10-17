@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+
+#view-mode--container {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  @include mq(960px) {
+    top: -5.6rem;
+    right: 2rem;
+  }
+}
+
+.view-mode--toggle-label {
+
+}
+
+.view-mode--icon {
+  display: block;
+  @include size(25px, 25px);
+  cursor: pointer;
+  @include ir;
+
+  @include mq(960px) {
+    @include size(30px, 30px);
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: $dark-grey;
+
+        .view-mode--dark & {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  svg {
+    display: block;
+    @include size(100%, 100%);
+
+    path {
+      fill: $grey;
+      @include transition( fill $transition );
+
+      .view-mode--dark & {
+        // fill: $grey;
+      }
+    }
+  }
+}
+
+#view-mode--toggle { // radio input
+  position: absolute;
+  left: -9999em;
+  opacity: 0;
+  visibility: hidden;
+}

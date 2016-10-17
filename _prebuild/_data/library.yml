@@ -1,0 +1,91 @@
+magazines:
+  - heading: The Great Discontent
+    url: https://thegreatdiscontent.com/
+
+  - heading: Offscreen Magazine
+    url: https://www.offscreenmag.com/
+
+  - heading: Trouve
+    url:  https://www.trouvemag.com/
+
+  - heading: Darling
+    url: https://darlingmagazine.org/
+
+  - heading: Another Escape
+    url: https://anotherescape.com/
+
+publications:
+  - heading: A List Apart
+    url: https://alistapart.com/
+
+  - heading: California Sunday
+    url: https://www.californiasunday.com/
+
+  - heading: Google Design, on Medium
+    url: https://medium.com/google-design/
+
+  - heading: The Year of the Looking Glass &mdash; Julie Zhuo
+    url: https://medium.com/the-year-of-the-looking-glass/
+
+  - heading: Signal v. Noise &mdash; Basecamp
+    url: https://m.signalvnoise.com/
+
+  - heading: Vantage, on Medium
+    url: https://medium.com/vantage/
+
+more_books:
+  - heading: Between the World and Me
+    url: https://www.amazon.com/Between-World-Me-Ta-Nehisi-Coates/dp/0812993543
+  - heading: The New Jim Crow
+    url: http://newjimcrow.com/
+  - heading: Seven Brief Lessons on Physics
+    url: https://www.amazon.com/Seven-Brief-Lessons-Physics-Rovelli/dp/0399184414/
+  - heading: The Crossroads of Should and Must
+    url: http://choosemust.com/
+  - heading: A Book Apart series
+    url: https://abookapart.com/
+  - heading: The Shape of Design
+    url: http://shapeofdesignbook.com/
+  - heading: Draplin Design Co.
+    url: http://www.draplin.com/ddc_book/
+
+books:
+  - title: "The Design of Everyday Things"
+    author: "Don Norman"
+    buy: "Get it on <a href='https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654/' title='The Design of Everyday Things, by Don Norman on Amazon' itemprop='url'>Amazon</a> or <a href='https://itun.es/us/TwCxO.l' title='The Design of Everyday Things, by Don Norman on iTunes' itemprop='url'>iTunes</a>."
+    slug: design-of-everyday-things
+    quotes:
+      - "For designers, the most critical aspect of the behavioral level is that every action is associated with an expectation. Expect a positive outcome and the result is a positive affective response (a &ldquo;positive valence,&rdquo; in the scientific literature). Expect a negative outcome and the result is a negative affective response (a negative valence): dread and hope, anxiety and anticipation. The information in the feedback loop of evaluation confirms or disconfirms the expectations, resulting in satisfaction or relief, disappointment or frustration."
+      - "The most basic level of processing is called visceral. This is sometimes referred to as &ldquo;the lizard brain.&rdquo; All people have the same basic visceral responses. These are part of the basic protective mechanisms of the human affective system, making quick judgments about the environment: good or bad, safe or dangerous."
+      - "Cognition provides understanding: emotion provides value judgments."
+      - "Because we are only aware of the reflective level of conscious processing, we tend to believe that all human thought is conscious. But it isn’t. We also tend to believe that thought can be separated from emotion. This is also false. Cognition and emotion cannot be separated. Cognitive thoughts lead to emotions: emotions drive cognitive thoughts. The brain is structured to act upon the world, and every action carries with it expectations, and these expectations drive emotions. That is why much of language is based on physical metaphors, why the body and its interaction with the environment are essential components of human thought."
+
+  - title: "The Manual: Issue 4"
+    author: "Craig Mod, Wilson Miner, Diana Kimball, Jennifer Brook, <a href='https://themanual.org/read/issues/4' title='See the full contributor list for The Manual Issue 4' itemprop='url'>and more</a>."
+    buy: "Read more at <a href='https://themanual.org/' title='TheManual.org' itemprop='url'>themanual.org</a>."
+    slug: the-manual-issue-4
+    quotes:
+      - "With digital interfaces, there’s only so much we can do to make our products more durable. We’re limited by the ephemeral nature of our materials. And we’ve learned to work in a way that takes advantage of the fact that digital material is so easily disposable. We try things; we learn something; we erase things, and we try again."
+      - "But the process, the way we got there, has a longer lifespan. The process is the sediment, the deep root system where we store up knowledge over time. Each product we create is just what surfaces above ground, a crystallization of the sum total of everything we’ve learned up to that point."
+      - "His rule of being nothing from everywhere allowed him to shapeshift to anyone always."
+      - "This is the most interesting thing about typography: it’s a chain reaction of time and place with you as the catalyst. The intention of a text depends on its presentation, but it needs you to give it meaning through reading."
+
+  - title: "Creativity, Inc"
+    author: "Ed Catmull"
+    buy: "Read more at <a href='https://www.amazon.com/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0812993012' title='Creativity, Inc on Amazon.com' itemprop='url'>amazon.com</a>."
+    slug: creativity-inc
+    quotes:
+      - "As Trent Walton says in his essay &ldquo;Device Agnostic&rdquo;: Like cars designed to perform in extreme heat or on icy roads, websites should be built to face the reality of the web’s inherent variability"
+      - "Not every mobile browser supports the CSS we rely on, like floats, positioning, or animation. If your styles for a small-screen experience are significantly complex, you might consider broadly qualifying their application to newer, media-query-supporting browsers. Wrapping the mobile-first styles in a media query such as only all is one reliable way to do this."
+      - "Given this ever-increasing page size, we should attend to the amount of data we’re asking our users to download, rather than simply squishing down massive images to fit smaller screens. Now, to be clear: &ldquo;small screen&rdquo; does not imply &ldquo;slow connection.&rdquo; Far from it. In fact, there is no correlation between the width of a screen and the amount of bandwidth available to it."
+      - "The absence of support for @media queries is in fact the first @media query."
+
+  - title: "Responsible Responsive Design"
+    author: "Scott Jehl, forward by Ethan Marcotte"
+    buy: "Read more at <a href='https://abookapart.com/products/responsible-responsive-design' title='Responsible Responsive Design at abookapart.com' itemprop='url'>abookapart.com</a>."
+    slug: responsible-responsive-design
+    quotes:
+      - "As Trent Walton says in his essay &ldquo;Device Agnostic&rdquo;: Like cars designed to perform in extreme heat or on icy roads, websites should be built to face the reality of the web’s inherent variability"
+      - "Not every mobile browser supports the CSS we rely on, like floats, positioning, or animation. If your styles for a small-screen experience are significantly complex, you might consider broadly qualifying their application to newer, media-query-supporting browsers. Wrapping the mobile-first styles in a media query such as only all is one reliable way to do this."
+      - "Given this ever-increasing page size, we should attend to the amount of data we’re asking our users to download, rather than simply squishing down massive images to fit smaller screens. Now, to be clear: &ldquo;small screen&rdquo; does not imply &ldquo;slow connection.&rdquo; Far from it. In fact, there is no correlation between the width of a screen and the amount of bandwidth available to it."
+      - "The absence of support for @media queries is in fact the first @media query."

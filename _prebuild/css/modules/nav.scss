@@ -1,0 +1,80 @@
+.main-nav {}
+
+.main-nav-list {
+  @include font-size(16);
+  line-height: 1;
+  padding-bottom: 1px;
+
+  @include mq(800px) {
+    line-height: 2.6rem;
+  }
+
+  li,
+  a,
+  i {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  li {
+    width: 50%;
+    float: left;
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      // if nav is uneven, this works. if the nav changes and the nav items.count is divisible by 2, this has to be changed
+      margin-bottom: 0;
+    }
+
+    @include mq(800px) {
+      width: auto;
+      float: none;
+      margin-bottom: 0;
+    }
+  }
+
+  i {
+    margin-left: 10px;
+    @include font-size(13);
+    font-weight: 200;
+  }
+}
+
+.footer-nav {
+  @include clearfix;
+  // shared styles with .main-nav-list > li above
+  li {
+
+    @include mq(800px) {
+      margin-bottom: $standard-unit;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $medium-grey;
+      border-color: $medium-grey;
+    }
+  }
+}
+
+.nav-work-case-studies,
+.nav-weekly-reads {
+
+  span {
+    display: none;
+  }
+
+  @include mq(800px) {
+    span {
+      display: inline;
+    }
+  }
+
+}
+
+.footer-photo-story-link {
+  display: inline-block;
+  text-align: center;
+  line-height: 1rem;
+}

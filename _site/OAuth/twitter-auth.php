@@ -74,7 +74,7 @@
       <!-- <small><?php echo $permalink ?><?php if ($is_retweet) : ?>is retweet<?php endif; ?> -->
       <!-- <span>via <?php echo $tweet['source']?></span></small> -->
       <p><span><?php echo $entified_tweet ?></span></p>
-      <small><?php echo $permalink ?><?php if ($is_retweet) : ?>is retweet<?php endif; ?></small>
+      <small><?php echo $permalink ?><?php if ($is_retweet) : ?>Retweet<?php endif; ?></small>
     </div>
   <?php
     endforeach;
