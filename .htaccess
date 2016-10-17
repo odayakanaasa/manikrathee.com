@@ -28,9 +28,17 @@ Redirect /pocket https://getpocket.com/@Mrathee
 Redirect /photography http://photos.manikrathee.com/
 Redirect /photos http://photos.manikrathee.com/
 Redirect /reading https://twitter.com/manikisreading
+Redirect /readingam https://www.reading.am/ManikRathee/
 Redirect /spotify https://play.spotify.com/user/manikrathee
 Redirect /tumblr http://manikrathee.tumblr.com
 Redirect /twitter http://www.twitter.com/manikrathee
+Redirect /vsco http://vsco.co/manikrathee/
+
+Redirect /subscribe /weeklyreads/
+Redirect /weekly-reads /weeklyreads/
+
+
+
 
 AddType application/x-font-woff woff
 AddType application/x-font-ttf ttf

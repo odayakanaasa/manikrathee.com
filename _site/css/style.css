@@ -1795,11 +1795,14 @@ figcaption,
     border: none; }
   #photo-metadata figcaption {
     display: inline-block;
-    width: calc(100% - 60px);
-    margin-top: 0;
-    margin-left: 10px;
+    width: 100%;
     vertical-align: top;
     text-align: center; }
+    @media (min-width: 768px) {
+      #photo-metadata figcaption {
+        width: calc(100% - 60px);
+        margin-top: 0;
+        margin-left: 10px; } }
     #photo-metadata figcaption p {
       margin-bottom: 0.8rem;
       font-size: 12px;
@@ -1830,13 +1833,20 @@ figcaption,
 #weekly-reads-tout {
   display: block;
   width: 230px;
-  margin: 0; }
+  margin: 4rem auto 0; }
+  @media (min-width: 768px) {
+    #weekly-reads-tout {
+      margin: 0; } }
   #weekly-reads-tout i {
     margin-bottom: 1rem; }
   #weekly-reads-tout .weekly-reads-title {
     display: inline-block;
-    width: calc(100% - 5rem);
-    margin-left: 0.7rem; }
+    text-align: center; }
+    @media (min-width: 768px) {
+      #weekly-reads-tout .weekly-reads-title {
+        width: calc(100% - 5rem);
+        margin-left: 0.7rem;
+        text-align: left; } }
     #weekly-reads-tout .weekly-reads-title span {
       display: block;
       font-size: 14px;
@@ -1846,38 +1856,46 @@ figcaption,
     #weekly-reads-tout .weekly-reads-title span {
       display: block; } }
 
-#footer-weekly-reads-signup {
-  margin-left: 4.7rem; }
-  #footer-weekly-reads-signup > * {
-    box-sizing: border-box; }
-  #footer-weekly-reads-signup li {
-    list-style: none; }
-  #footer-weekly-reads-signup input[type=email] {
-    background: none;
-    height: 30px;
-    margin: 0;
-    padding-right: 1rem;
-    font-size: 14px;
-    font-size: 1.4rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 30;
-    color: #fff;
-    outline: none;
-    border: none;
-    border-bottom: 4px solid #f2f2f2;
-    box-sizing: border-box;
-    transition: border 0.35s ease-in-out; }
-    #footer-weekly-reads-signup input[type=email]:focus {
-      border-bottom: 4px solid #fff; }
+@media (min-width: 768px) {
+  #footer-weekly-reads-signup {
+    margin-left: 4.7rem; } }
+
+#footer-weekly-reads-signup > * {
+  box-sizing: border-box; }
+
+#footer-weekly-reads-signup li {
+  list-style: none; }
+
+#footer-weekly-reads-signup input[type=email] {
+  background: none;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding-right: 1rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 30;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-bottom: 4px solid #f2f2f2;
+  box-sizing: border-box;
+  transition: border 0.35s ease-in-out; }
+  #footer-weekly-reads-signup input[type=email]:focus {
+    border-bottom: 4px solid #fff; }
+
+#footer-weekly-reads-signup #submit {
+  margin-top: 1rem;
+  width: 100%;
+  background: none; }
+
+@media (min-width: 768px) {
+  #footer-weekly-reads-signup input[type=email],
   #footer-weekly-reads-signup #submit {
-    margin-top: 1rem;
-    width: 100%; }
-  @media (min-width: 768px) {
-    #footer-weekly-reads-signup input[type=email],
-    #footer-weekly-reads-signup #submit {
-      width: 100%;
-      max-width: 200px; } }
+    width: 100%;
+    max-width: 200px; } }
 
 @media (min-width: 500px) {
   #main-footer {
@@ -2668,23 +2686,6 @@ figcaption,
     z-index: 1; }
 
 /* Resources */
-[id=subscription] #tiny-credit {
-  display: block;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.25);
-  clear: both;
-  opacity: 0.75;
-  padding: 30px 0;
-  color: #fff;
-  font-size: 0.8em;
-  font-weight: 300;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  border: none; }
-  [id=subscription] #tiny-credit:hover {
-    opacity: 1; }
-
 [id=subscription] form {
   padding-top: 65px;
   padding-bottom: 65px;
