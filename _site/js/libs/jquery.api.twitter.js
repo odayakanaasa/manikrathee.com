@@ -1,4 +1,4 @@
-if ( $('body').attr('id') === 'home' ){
+// if ( $('body').attr('id') === 'home' ){
 	//Twitter Call
 	// $(document).ready(function() {
 		// $.getJSON('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=manikrathee&count=1', function(data) {
@@ -59,9 +59,9 @@ if ( $('body').attr('id') === 'home' ){
 		// });
 	// });
 
-	$(document).ready(function() {
-		$('#twitter-api-bar').load('OAuth/twitter-auth.php');
-		// logofyAPI();
-		// centerAPI();
-	});
-}
+
+	// $(document).ready(function() {
+	// 	$('#twitter-api-bar').load('OAuth/twitter-auth.php');
+	// });
+
+// }
