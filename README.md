@@ -1,7 +1,7 @@
 manikrathee.com
 ===============
 
-![v7-20161016](http://www.manikrathee.com/readme/2016-v7.png)
+![v7-20161016](http://www.manikrathee.com/readme/2016-v7-20161016.png)
 
 ---
 
