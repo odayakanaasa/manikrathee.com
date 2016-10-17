@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+// Icon class & base styles defined in icons.scss
+
+$social-accounts:
+    spotify spotify-dark
+    fivehundredpx fivehundredpx-dark
+    instagram instagram-dark
+    twitter twitter-dark
+    github github-dark
+    dribbble dribbble-dark
+    tumblr tumblr-dark
+    pocket pocket-dark
+    pocket-brand pocket-brand-dark
+    ;
+
+@each $account in $social-accounts {
+  .icon--#{$account} {
+    background-image: url('../svg/#{$account}.svg');
+  }
+}
+
+
+// FIXME these are not correct sizes
+.icon {
+  &--spotify,
+  &--spotify-dark {
+    @include size(25px, 25px);
+  }
+  &--fivehundredpx,
+  &--fivehundredpx-dark {
+    @include size(22px, 28px);
+  }
+  &--instagram,
+  &--instagram-dark {
+    @include size(26px, 26px);
+  }
+  &--twitter,
+  &--twitter-dark {
+    @include size(25px, 25px);
+  }
+  &--github,
+  &--github-dark {
+    @include size(25px, 25px);
+  }
+  &--dribbble,
+  &--dribbble-dark {
+    @include size(25px, 25px);
+  }
+  &--tumblr,
+  &--tumblr-dark {
+    @include size(45px, 28px);
+  }
+  &--pocket,
+  &--pocket-dark {
+    @include size(26px, 25px);
+  }
+  &--pocket-brand {
+    @include size(32px, 32px);
+  }
+}
+
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(700px) {
+    width: calc(100% - 14rem);
+    margin-left: 4rem;
+  }
+
+  &--item {
+    flex-grow: 1;
+  }
+
+  &--link {
+    opacity: 0.7;
+    will-change: opacity;
+    @include transition( opacity $transition );
+
+    &:hover {
+      opacity: 1;
+      // transform: skew(2deg, -3deg) translate3d(0,0,0);
+    }
+  }
+
+}

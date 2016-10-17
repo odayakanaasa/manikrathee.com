@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8" />
+    <title>lakeview</title> 
+    <link rel="stylesheet" href="http://origin.assets.bostatic.com/hydepark/css/grid.css">   
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="header" class="header scroll">
+		<h1 id="unpin">LAKEVIEW</h1>
+	</div>
+	<div class="wrap">
+		<div id="intro" class="row">
+			<img src="images/ofa_logo.png">
+		</div>
+		<div id="first" class="row" style="margin-top:-300px;">
+			<div class="columns twelve scroll">
+  				<h1 id="parallax1">No one built this country on their own. This nation is great because we built it together.</h1> 
+				<h3 id="parallax2">We have a huge opportunity, at this moment, to bring manufacturing back. But we have to seize it</h1> 
+				<h2 id="parallax3">president obama has created over 99 trillion jobs &amp; reversed economic decline</h1>
+				<div id="parallax_image_container" style="width:100%;">
+					<div style="width:50%;float:left;text-align:right;margin-right:-5px;">
+						<img id="parallax4" src="images/bar_left.png">
+					</div>
+					<div style="width:50%;float:left;text-align:left;">
+						<img id="parallax5" src="images/bar_right.png">
+					</div> 
+				</div>	
+				<div class="pie_graph">
+					<img id="first_pie" src="images/pie.png">
+				</div>
+				
+				<h2 id="zoom-in" style="position:relative;z-index:9999;">An economy built to last is one where we encourage the talent &amp; ingenuity of every person in this country.</h1>
+				<img id="second_logo" src="images/ofa_logo.png">
+				
+				
+				
+					
+					
+				<div style="padding-top:5000px"> bleh. I am a spacer. All I do is space. is space. is space. is space.</div>
+				
+			</div>
+<!--
+			<div class="columns four">
+  				<h1>president obama has created over 99 trillion jobs &amp; reversed economic decline</h1>  
+			</div>
+			<div class="columns eight">
+  				<h1>We have a huge opportunity, at this moment, to bring manufacturing back. But we have to seize it</h1>  
+			</div>
+		</div>
+		<div id="third" class="row">
+			<div class="columns twelve">
+  				<h1>An economy built to last is one where we encourage the talent &amp; ingenuity of every person in this country.</h1>  
+			</div>
+		</div>
+		<div id="fourth" class="row">
+			<div class="columns two">
+  				<h1>Nowhere is the promise of innovation greater than in American-made energy</h1>  
+			</div>
+			<div class="columns ten">
+  				<h1>The easiest way to save money is to save energy. The President proposed to help manufacturers eliminate energy waste in their factories and give businesses incentives to upgrade their buildings—saving $100 billion over the next decade.</h1>  
+			</div>
+		</div>
+		<div class="row">
+			<div class="columns two red">
+  				<h1>500 Jobs Created each week</h1>  
+			</div>
+			<div class="columns three green">
+  				<h1>Higher Production for Public options</h1>  
+			</div>
+			<div class="columns four blue">
+  				<h1>Stopped spending and limited congress in their sprees</h1>  
+			</div>
+			<div class="columns three">
+  				<h1>Brought trading and opened ports to increase outgoing goods.</h1>  
+			</div>
+		</div>
+		<div class="row">
+			<div class="columns two red">
+  				<h1>500 Jobs</h1>  
+				<h2>60,000 Local GDP</h2>
+			</div>
+			<div class="columns three green">
+  				<h1>Higher Production for Public options</h1>  
+			
+			</div>
+			<div class="columns four blue">
+  				<h1>Stopped congress' spending sprees</h1> 
+				<h3>division b/w corporations and gov</h3>  
+			</div>
+			<div class="columns three">
+  				<h1>Brought trading and opened ports to increase outgoing goods.</h1>  
+			</div>
+		</div>
+-->
+<!--
+		<div class="scroll">
+			<h1 id="parallax1">Stopped congressional spending sprees</h1> 
+			<h3 id="parallax2">division b/w corporations and gov</h3>
+			<h1 id="parallax3">Stopped congressional spending sprees</h1> 
+			<h3 id="parallax4">division b/w corporations and gov</h3>
+			<h1 id="parallax5">Stopped congressional spending sprees</h1> 
+			<h3 id="parallax6">division b/w corporations and gov</h3>
+			<h1 id="parallax1">Stopped congressional spending sprees</h1> 
+			<h3 id="parallax2">division b/w corporations and gov</h3>
+			<h1 id="parallax1">Stopped congressional spending sprees</h1> 
+			<h3 id="parallax2">division b/w corporations and gov</h3>  
+		</div>
+-->
+	</div>              
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="./js/jquery.slabtext.min.js"></script>
+	<script src="js/jquery.lettering-0.6.1.min.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+	<script>
+		// Function to slabtext the H1 headings
+		function slabTextHeadlines() {
+		$("h1").slabText({
+		        // Don't slabtext the headers if the viewport is under 380px
+		     //   "viewportBreakpoint":380
+		});
+		$("h2").slabText({
+		        // Don't slabtext the headers if the viewport is under 380px
+		       // "viewportBreakpoint":380
+		});
+		$("h3").slabText({
+		        // Don't slabtext the headers if the viewport is under 380px
+		       // "viewportBreakpoint":380
+		});
+		};
+		$(window).load(function() {
+		setTimeout(slabTextHeadlines, 0);
+		});
+		$(document).ready(function() {
+			
+		    var scrollorama = $.scrollorama({
+		        blocks:'.scroll'
+		    });
+			scrollorama.animate('#unpin',{ duration:170, property:'padding-top', start:0, pin:true });
+			scrollorama.animate('#parallax1',{ delay: 180, duration: 200, property:'left', start:1600, end:0 });
+			scrollorama.animate('#parallax2',{ delay: 400, duration: 200, property:'left', start:-1600, end:0 });
+			scrollorama.animate('#parallax3',{ delay: 1000, duration: 300, property:'top', start:800, end:0 });
+			scrollorama.animate('#parallax_image_container',{ delay: 1200, duration: 400, property:'bottom', start:1000, end:0 });
+			scrollorama.animate('#parallax4',{ delay: 1500, duration: 400, property:'left', start:-1000, end:0 });
+			scrollorama.animate('#parallax5',{ delay: 1500, duration: 400, property:'right', start:-1000, end:0 });
+			scrollorama.animate('#first_pie',{ delay: 2100, duration: 400, property:'opacity', start:0 });
+			scrollorama.animate('#zoom-in',{ delay: 2300, duration: 400, property:'zoom', start:0 });
+			scrollorama.animate('#second_logo',{ delay: 2400, duration: 400, property:'right', start:-2000, end:400 });
+		});
+	</script>
+</body>
+</html>

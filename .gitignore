@@ -41,4 +41,7 @@ Thumbs.db
 ##########
 deploy.rb
 capfile
-node_modules/
+
+/node_modules/
+
+*.css.map

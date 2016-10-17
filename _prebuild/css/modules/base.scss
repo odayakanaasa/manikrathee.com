@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+::-moz-selection { background: #999; color: #fff; text-shadow: none; }
+::selection  { background: #999; color: #fff; text-shadow: none; }
+
+
+html {
+  background-color: #333;
+  font-size: 62.5%; // Base 10 for REM sizing
+    // See: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+  text-rendering: optimizelegibility;
+  font-feature-settings: "liga", "hist", "onum";
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+}
+
+
+body {
+  background: $light-grey;
+  font-family: $sans;
+  @include font-size(15);
+  color: $dark-grey;
+  text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden;
+  transition: background $transition;
+
+  &.view-mode--dark {
+    background: $invert-body;
+    color: $invert-copy;
+  }
+
+  @include mq(500px) {
+    padding-top: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 0;
+    padding-left: 4rem;
+  }
+
+  @include mq(960px) {
+    padding-top: ($spacer * 2);
+    padding-right: ($spacer * 2);
+    padding-bottom: 0;
+    padding-left: ($spacer * 2);
+  }
+
+  @include mq(1300px) {
+    padding-bottom: ($spacer * 2);
+  }
+}
+
+
+
+
+dl, menu, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+
+  @include mq(1400px) {
+    width: calc(100% + 20rem);
+    margin-left: -20rem;
+    padding-top: calc(56.35% + 20rem);
+  }
+}
+
+iframe.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+a,
+.pseudo-link {
+  color: $copy;
+  padding-bottom: 0;
+  text-decoration: none;
+  border-bottom: 1px solid #CBCBCB;
+  -webkit-tap-highlight-color: rgba(255,255,255,0.35);
+  @include transition( (color $transition),(border $transition) );
+
+  &:hover {
+    color: $black;
+    border-color: $black;
+  }
+
+  .invert {
+    color: $medium-grey;
+  }
+
+  &.invert-hover  {
+    &:hover {
+      color: $white;
+      border-color: $white;
+    }
+  }
+
+  &.light {
+    color: $white;
+  }
+
+  &.light-hover  {
+    &:hover {
+      color: $light-grey;
+      border-color: $light-grey;
+    }
+  }
+
+  &.no-border {
+    border: none;
+  }
+
+  .view-mode--dark & {
+    color: $invert-copy;
+    border-color: darken($invert-copy, 15%);
+
+    &:hover {
+      color: $white;
+      border-color: $white;
+    }
+  }
+}
+
+.mobile-cta {
+  @include mq(768px) {
+    display: none;
+  }
+}
+
+
+
+img {
+  max-width: 100%;
+}
+
+
+
+// .utility
+.set--inline {
+  display: inline;
+}
+
+
+
+[id=main] { // shadow-container
+  display: block;
+  max-width: 1280px;
+  position: relative;
+  background-color: $white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $spacer / 1.3;
+  border-radius: 3px;
+  transition: background $transition;
+  @include box;
+
+  @include mq(500px) {
+    padding: $spacer;
+  }
+
+  @include mq(960px) {
+    padding: $spacer * 2;
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    @include size(100%,100%);
+    border-radius: 3px;
+    box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .view-mode--dark & {
+    background-color: $invert-container;
+  }
+
+} // main
+
+
+
+#them-grid-lines {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 1;
+  pointer-events: none;
+  background-image: url('../img/bg-mobile.png');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-position: center top;
+  transition: opacity $transition;
+  transition-delay: 0.35s; // ensures that grid lines transition nicely from dark-mode to normal
+
+  @include mq(960px) {
+    background-image: url('../img/bg-desktop.png');
+  }
+
+  .view-mode--dark & {
+    opacity: 0;
+  transition: none;
+  }
+}
+
+
+[id=inner-container] {
+  // main content container
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-bottom: $spacer;
+  @include clearfix;
+
+  @include mq(800px) {
+    padding-top: $spacer * 2;
+    padding-bottom: $spacer * 2;
+  }
+
+  .blog {
+    @include mq(800px) {
+      max-width: 600px;
+      margin-left: auto;
+    }
+  }
+}
+
+
+picture.main-photo {
+  display: block;
+  margin-bottom: 8rem;
+}
+
+
+
+
+
+
+
+
+

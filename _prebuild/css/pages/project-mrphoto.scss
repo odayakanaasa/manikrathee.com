@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+
+
+
+/* Project: Manik Rathee Photography */
+
+
+
+/*MR PHOTOGRAPHY - INTERIOR */
+.mrphoto {background:#FBFBFB}
+.mrphoto_upper {background:#192E47 url(../img/interior_upper_mrphoto.jpg) no-repeat top center;color:#fff;text-shadow:1px 1px 0 #000;height:500px;}
+.mrphoto_title {
+  display: block;
+  background: transparent url('../img/mrphoto_heading.png') no-repeat 50% 50%;
+  margin-top: 245px;
+  height: 64px;
+  width: 345px;
+  text-indent: -999em;
+  text-align: left;
+}
+.mrphoto_title .subtitle {font-size:13px;}
+.mrphoto_slides {width:98%;margin:0 auto 35px auto;}
+
+
+
+
+/*
+**********************
+***** 768
+**********************
+*/
+@include min-screen(768px) {
+
+
+
+.mrphoto_title {
+  margin-top: 400px;
+}
+
+
+
+} // 768
+
+
+
+/*
+**********************
+***** 960
+**********************
+*/
+@include min-screen(940px) {
+
+
+} // 960

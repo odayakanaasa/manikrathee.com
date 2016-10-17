@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+[id=subscription] {
+
+
+  form {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    text-align: left;
+  }
+
+  label,
+  input {
+    display: block;
+    width: auto;
+  }
+
+  label {
+    display: block;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  input {
+    display: block;
+    border: 1px solid darken(#fff, 30%);
+    @include transition(border $transition);
+
+    &:focus, &:active {
+      border-bottom: 2px solid darken(#fff, 30%);
+    }
+
+    &:focus {
+        outline: 0;
+    }
+  }
+
+  label,
+  #tlemail,
+  #submit {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-fields {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+
+    li {
+      list-style-type: none;
+      & + li {
+        margin-top: 10px;
+      }
+    }
+
+  }
+
+  #tlemail {
+    padding-top: 6px;
+  }
+
+  #hidden {
+    position: absolute;
+    top: 0;
+    left: -999em;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .wrap {
+    width: 100%;
+    margin: 15px auto 10px;
+  }
+
+  #submit {
+    background: #1fc5b7;
+    max-width: 100%;
+    width: 100%;
+    padding: 8px 0;
+    font-family: $sans;
+    text-transform: uppercase;
+    color: #fff;
+    @include transition(background $transition);
+
+    &:hover {
+      background: lighten(saturate(#1fc5b7, 10%), 3%);
+      background: #007de1;
+    }
+  }
+}
+
+
+/*
+**********************
+***** 768
+**********************
+*/
+@include min-screen(768px) {
+
+  [id=subscription] {
+
+    .form-fields {
+      overflow: hidden;
+      clear: both;
+      li {
+        width: 50%;
+        float: left;
+      }
+    }
+    label {
+    }
+    input {
+      max-width: 80%;
+      border: none;
+      border-bottom: 1px solid darken(#fff, 30%);
+    }
+    .wrap {
+      display: block;
+      width: 190px;
+      margin-top: 6px;
+      background: #1fc5b7;
+      background: -moz-linear-gradient(-45deg, #1fc5b7 0%, #007de1 49%, #a81fc5 100%);
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1fc5b7), color-stop(49%,#007de1), color-stop(100%,#a81fc5));
+      background: -webkit-linear-gradient(-45deg, #1fc5b7 0%,#007de1 49%,#a81fc5 100%);
+      background: -o-linear-gradient(-45deg, #1fc5b7 0%,#007de1 49%,#a81fc5 100%);
+      background: -ms-linear-gradient(-45deg, #1fc5b7 0%,#007de1 49%,#a81fc5 100%);
+      background: linear-gradient(135deg, #1fc5b7 0%,#007de1 49%,#a81fc5 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fc5b7', endColorstr='#a81fc5',GradientType=1 );
+    }
+    #submit {
+      border: none;
+      &:hover {
+        background: none;
+      }
+    }
+  }
+} // 768
+
+
+
+

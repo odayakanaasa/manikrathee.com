@@ -58,28 +58,24 @@ var LastFMStatus = {
   updateView: function() {
     var status, message,
     userlink = ' ( <a target="__blank" href="http://www.last.fm/user/' + this.username + '">last.fm</a> )';
-    var statusBox = document.getElementById('rdio');
+    var statusBox = document.getElementById('spotify-api-bar');
     if (!statusBox) {
       var view = document.createElement('div');
-      view.id  = "rdio";
-      document.body.appendChild(view);
-      statusBox = document.getElementById('rdio');
+      view.id  = "spotify-api-bar";
+      document.getElementById('main-footer').appendChild(view);
+      statusBox = document.getElementById('spotify-api-bar');
     }
     if (this.trackInfo.error) {
       status   = "Error: ";
       message  = '<strong>'+this.trackInfo.message+'</strong>';
     } else {
       status = this.trackInfo.playing ? 'Now Playing: ' : 'Last Played: ';
-      message  = '<a href="http://www.rdio.com/people/manikrathee/history/" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Rdio" itemprop="url"><span class="ss-icon ss-social logo">rdio</span><div><p>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</p></a></div>';
+      message  = '<a href="http://www.manikrathee.com/spotify/" class="spotify-link no-border" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Spotify" itemprop="url">Listening to: <span>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</span></div></a>';
     }
 
     if ( $('body').attr('id') === 'home' ){
-    // if ($('body').attr('id','home')){
       statusBox.innerHTML = message;
     }
 
-    // Set rdioActive to true so logofyAPI and activate API can fire
-    rdioActive = true;
-    centerAPI();
   }
 };

@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+/* Library */
+
+.book-excerpts {}
+
+.book {
+
+  & + .book {
+    margin-top: $spacer * 2;
+    padding-top: $spacer * 2;
+    border-top: 1px solid darken($off-white, 10%);
+
+    @include mq(800px) {
+      border: none;
+    }
+  }
+}
+
+.book--header {
+  background: #f7f7f7;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+
+  @include mq(500px) {
+    position: relative;
+    background: transparent;
+    margin-bottom: 5rem; // push quote below absolutely positioned book cover
+    padding: 24px 0 0 0;
+    text-align: left;
+  }
+
+  @include mq(800px) {
+    margin-bottom: 8rem;
+    padding-top: 44px; // push heading down to top of book
+  }
+
+  .view-mode--dark & {
+    background: darken($dark-grey, 20%);
+
+    @include mq(500px) {
+      background: transparent;
+    }
+  }
+}
+
+.book--cover {
+  position: relative;
+  z-index: 0;
+  background-color: $light-grey;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  @include size(5rem, 7rem);
+
+  span { // contains text for accessibility
+    @include ir;
+  }
+
+  @include mq(500px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 7rem, 10rem;
+    @include size(8rem, 12rem);
+    margin: 0;
+  }
+
+  @include mq(800px) {
+    @include size(12rem, 16rem);
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    z-index: 2;
+    background: $light-grey;
+    opacity: 0.1;
+    @include size(8rem, 12rem);
+
+    @include mq(500px) {
+      content: '';
+    }
+  }
+
+  .view-mode--dark & {
+    background-color: darken($dark-grey, 10%);
+  }
+}
+
+.book--title,
+.book--author,
+.book--link {
+  @include mq(500px) {
+    position: relative;
+    margin-left: 13rem;
+  }
+
+  @include mq(800px) {
+    margin-left: 130px;
+  }
+}
+
+.book--title {
+  @include font-size(22);
+
+  @include mq-max(500px) {
+    margin-bottom: 0;
+  }
+
+  @include mq(800px) {
+    @include font-size(26);
+
+  }
+}
+
+.book--author {
+  @include font-size(16);
+  font-weight: 300;
+}
+
+.book--link {
+  @include font-size(14);
+}
+
+
+
+
+
+
+
+// Book Covers, Titles & Colors
+$books:
+    design-of-everyday-things "#bcce0c"
+  , the-manual-issue-4 "#02B7C1"
+  , creativity-inc "#dc252d"
+  , responsible-responsive-design "#04c4b4"
+  , on-web-typography "#E86160"
+  ;
+
+@each $book in $books {
+  $book-title: nth($book, 1);
+  $book-color: nth($book, 2);
+
+  .book--#{$book-title} {
+    .book--cover {
+      background-image: url('../img/library/books/#{$book-title}.jpg');
+    }
+
+    .blockquote-list .blockquote-list--item {
+      border-color: #{$book-color};
+    }
+  }
+}
+
+
+
+
+.pocket-tout {
+  position: relative;
+  padding: 0 0 2rem 2rem; // pad the bottom left area so the directional shadow looks ok
+  text-align: right;
+  @include box;
+
+  @include mq(700px) {
+    max-width: 35rem;
+    padding: 0 5rem 4rem;
+    text-align: left;
+  }
+
+  @include mq(1000px) {
+    padding: 0 7rem 5rem;
+  }
+
+  &:after {
+    box-shadow: $shadow-bottom-left;
+
+    @include mq(700px) {
+      box-shadow: $shadow;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    background-size: 1.5rem;
+    background-position: 50% 52%;
+    background-repeat: no-repeat;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 10px;
+    border-radius: 100%;
+    border: 3px solid $pocket;
+
+    @include mq(800px) {
+      display: block;
+    }
+  }
+
+  .icon,
+  p {
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,990 @@
+	<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="p:domain_verify" content="442914185983bc4fa55ed98fd101a62f">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+  <meta name="author" itemprop="name" content="Manik Rathee">
+  <meta property="og:type" content="website">
+  <meta name="url" property="og:url" content="http://www.manikrathee.com/">
+  <meta name="twitter:creator" content="@manikrathee">
+  <meta name="twitter:site" content="@manikrathee">
+  <meta name="description" property="og:description" itemprop="description" content="Manik Rathee is a designer, developer and user-experience engineer based in California">
+  <meta itemprop="image" property="og:image" content="/img/root/apple-touch-icon.png">
+  <meta name="keyword" content="manik, rathee, manik rathee, designer, google, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
+  <meta name="robots" content="index,follow,archive">
+  
+    <meta name="twitter:title" property="og:title" content="Manik Rathee | Designer, Engineer, Photographer">
+  
+
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="//fonts.googleapis.com">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="M">
+
+  <!-- The URL of the web version of your article -->
+  <link rel="canonical" href="http://www.manikrathee.com">
+
+
+
+  <title>
+  
+    Manik Rathee — Designer, Photographer. Prototyping and Engineering at Nest.
+  
+  </title>
+
+  
+
+  <style type="text/css">
+header,
+hgroup,
+nav,
+section{
+  display: block; }
+
+
+
+html {
+  font-size: 100%;
+  
+  -webkit-text-size-adjust: 100%;
+  
+  -ms-text-size-adjust: 100%;
+   }
+
+
+html,
+input{
+  font-family: sans-serif; }
+
+
+body {
+  margin: 0; }
+
+
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+
+p{
+  margin: 1em 0; }
+ul {
+  margin: 1em 0; }
+ul {
+  padding: 0 0 0 40px; }
+
+
+nav ul{
+  list-style: none;
+  list-style-image: none; }
+input{
+  font-size: 100%;
+  
+  margin: 0;
+  
+  vertical-align: baseline;
+  
+  *vertical-align: middle;
+   }
+input {
+  line-height: normal;
+   }
+
+
+input[type="checkbox"]{
+  box-sizing: border-box;
+  
+  padding: 0;
+  
+  *height: 13px;
+  
+  *width: 13px;
+   }
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+::-moz-selection {
+  background: #999;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #999;
+  color: #fff;
+  text-shadow: none; }
+
+html {
+  background-color: #364E6B;
+  font-size: 62.5%;
+  text-rendering: optimizelegibility;
+  -webkit-font-feature-settings: "liga", "hist", "onum";
+          font-feature-settings: "liga", "hist", "onum";
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden; }
+
+body {
+  background: #EFF0F0;
+  font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  color: #505050;
+  text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden;
+  transition: background 0.35s ease-in-out, color 0.35s ease-in-out; }
+  body:after {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    translate: transform3d(-50%, 0, 0);
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMzNweCIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMzMgMjIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+TW91bnRhaW5Nb25kYXk8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoIEJldGEuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJNb3VudGFpbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIuMDAwMDAwLCAyLjAwMDAwMCkiIHN0cm9rZT0iIzUwNTA1MCI+ICAgICAgICAgICAgPGcgaWQ9Ik1vdW50YWluTW9uZGF5Ij4gICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBzdHJva2Utd2lkdGg9IjIiIHBvaW50cz0iMTYuMDQxNDcyOCA5LjYzNTE1NDU2IDIxLjMxMTE2OTMgMTguNzU2OTkxNSAxMC43NzE3NzY0IDE4Ljc2MTMyMDggMC4yMzIzODMzODMgMTguNzYxMzIwOCA1LjUwMjA3OTg3IDkuNjM1MTU0NTYgMTAuNzY3NDQ2MyAwLjUwODk4ODM2OSI+PC9wb2x5Z29uPiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIHBvaW50cz0iMjQuMzYzODY5NCA5LjU0NDIzOTI0IDI5LjcxMTUwNzIgMTguNzk1OTU1MiAxOS4wNTUyMDIzIDE4Ljc3ODYzOCA4LjQwMzIyNzQ4IDE4Ljc2MTMyMDggMTMuNzExODk0NiA5LjUyMjU5Mjc0IDE5LjAxNjIzMTcgMC4yODgxOTQwMjUiPjwvcG9seWdvbj4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=");
+    background-size: 50px 50px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    border: 1px solid yellow; }
+  @media (min-width: 500px) {
+    body {
+      padding: 4rem 4rem 0; }
+      body:after {
+        opacity: 1; } }
+  @media (min-width: 960px) {
+    body {
+      padding: 8rem 8rem 70px 8rem; } } ul {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #505050;
+  padding-bottom: 0;
+  text-decoration: none;
+  border-bottom: 1px solid #CBCBCB;
+  -webkit-tap-highlight-color: #505050;
+  transition: color 0.15s ease-in-out, border 0.15s ease-in-out; }
+
+[id=main] {
+  display: block;
+  max-width: 1280px;
+  position: relative;
+  background-color: #fff;
+  background-repeat: repeat;
+  background-position: center top;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3.0769230769rem;
+  border-radius: 3px;
+  transition: background 0.35s ease-in-out, padding 0.35s ease-in-out, color 0.35s ease-in-out;
+  box-sizing: border-box; }
+  @media (min-width: 500px) {
+    [id=main] {
+      padding: 4rem; } }
+  @media (min-width: 960px) {
+    [id=main] {
+      padding: 8rem; } }
+  [id=main]:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border-radius: 3px;
+    box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05); }
+
+[id=inner-container] {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-bottom: 4rem;
+  zoom: 1; }
+  [id=inner-container]:before, [id=inner-container]:after {
+    content: "";
+    display: table; }
+  [id=inner-container]:after {
+    clear: both; }
+  @media (min-width: 800px) {
+    [id=inner-container] {
+      padding-top: 8rem;
+      padding-bottom: 8rem; } }
+
+h1,
+h2,
+h3,
+p{
+  margin: 0 0 0.2rem 0;
+  line-height: 1.2;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures; }
+
+h1,
+h2,
+h3{
+  font-weight: 500;
+  line-height: 1.3; }
+
+h2,
+h3{
+  font-family: "Source Serif Pro", "Centaur", "Centaur MT", "Stempel Garamond", "Adobe Garamond Pro", Georgia, serif; }
+
+p {
+  font-size: 17px;
+  font-size: 1.7rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.6; }
+  @media (min-width: 800px) {
+    p {
+      font-size: 16px;
+      font-size: 1.6rem; } }
+  p.condensed {
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.3; }
+    @media (min-width: 800px) {
+      p.condensed {
+        font-size: 16px;
+        font-size: 1.6rem; } }
+
+i {
+  font-style: normal; }
+
+[class*="heading"]{
+  font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif; }
+
+.medium-heading {
+  font-size: 22px;
+  font-size: 2.2rem;
+  margin-bottom: 1.15rem; }
+.mountain-monday {
+  display: block;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMzNweCIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMzMgMjIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+TW91bnRhaW5Nb25kYXk8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoIEJldGEuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJNb3VudGFpbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIuMDAwMDAwLCAyLjAwMDAwMCkiIHN0cm9rZT0iIzUwNTA1MCI+ICAgICAgICAgICAgPGcgaWQ9Ik1vdW50YWluTW9uZGF5Ij4gICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBzdHJva2Utd2lkdGg9IjIiIHBvaW50cz0iMTYuMDQxNDcyOCA5LjYzNTE1NDU2IDIxLjMxMTE2OTMgMTguNzU2OTkxNSAxMC43NzE3NzY0IDE4Ljc2MTMyMDggMC4yMzIzODMzODMgMTguNzYxMzIwOCA1LjUwMjA3OTg3IDkuNjM1MTU0NTYgMTAuNzY3NDQ2MyAwLjUwODk4ODM2OSI+PC9wb2x5Z29uPiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIHBvaW50cz0iMjQuMzYzODY5NCA5LjU0NDIzOTI0IDI5LjcxMTUwNzIgMTguNzk1OTU1MiAxOS4wNTUyMDIzIDE4Ljc3ODYzOCA4LjQwMzIyNzQ4IDE4Ljc2MTMyMDggMTMuNzExODk0NiA5LjUyMjU5Mjc0IDE5LjAxNjIzMTcgMC4yODgxOTQwMjUiPjwvcG9seWdvbj4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=");
+  border-bottom: none;
+  width: 40px;
+  height: 28px;
+  border-radius: 0;
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+[id="page-header"] {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  [id="page-header"] .global-header {
+    z-index: 2;
+    opacity: 0.7;
+    transition: opacity 0.35s ease-in-out; }
+    #home [id="page-header"] .global-header {
+      opacity: 1; }
+
+[id="site-title"] {
+  margin-bottom: 4rem; }
+  [id="site-title"] > * {
+    display: block;
+    line-height: 1; }
+  [id="site-title"] [id=name] {
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: 600; }
+  [id="site-title"] [id=greeting] {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 300; }
+
+[id="who-is"] {
+  padding: 8rem 0;
+  line-height: 1.6; }
+  @media (min-width: 800px) {
+    [id="who-is"] {
+      margin: 4.5rem 0 0 0;
+      padding: 0;
+      border: none; } }
+  [id="who-is"] .current-title {
+    font-family: "Source Sans Pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 4rem; }
+  [id="who-is"] .previous-container {
+    color: #505050; }
+  [id="who-is"] .previous-heading {
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1; }
+  [id="who-is"] .previous-positions li {
+    list-style-type: none;
+    margin-bottom: 1.2rem; }
+    [id="who-is"] .previous-positions li:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 800px) {
+      [id="who-is"] .previous-positions li {
+        margin-bottom: 0.4rem; }
+        [id="who-is"] .previous-positions li:last-child {
+          margin-bottom: 0; } }
+  [id="who-is"] .previous-positions li,
+  [id="who-is"] .previous-positions a {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 100; }
+  [id="who-is"] i {
+    display: block; }
+    @media (min-width: 540px) {
+      [id="who-is"] i {
+        display: inline; } }
+
+@media (min-width: 800px) {
+  [id="page-header"] {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    [id="page-header"] .global-header {
+      width: 30%;
+      min-width: 200px; } }
+
+.main-nav-list {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding-bottom: 1px; }
+  @media (min-width: 800px) {
+    .main-nav-list {
+      line-height: 2.6rem; } }
+  .main-nav-list li,
+  .main-nav-list a,
+  .main-nav-list i {
+    font-size: inherit;
+    line-height: inherit; }
+  .main-nav-list li {
+    width: 50%;
+    float: left;
+    margin-bottom: 1.5rem; }
+    .main-nav-list li:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 800px) {
+      .main-nav-list li {
+        width: auto;
+        float: none;
+        margin-bottom: 0; } }
+  .main-nav-list i {
+    margin-left: 10px;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: 200; }
+.nav-weekly-reads span {
+  display: none; }
+
+@media (min-width: 800px) {
+  .nav-weekly-reads span {
+    display: inline; } }
+
+.row-tout {
+  margin-top: 8rem; }
+  .row-tout:first-child {
+    margin-top: 0; }
+
+.row-tout-list {
+  list-style-type: none; }
+  .row-tout-list li + li {
+    margin-top: 0.8rem; }
+
+.more-items {
+  margin-top: 1.2rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+@media (min-width: 700px) {
+  .row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .row-tout {
+      width: 50%;
+      margin-top: 0;
+      box-sizing: border-box; }
+      .row-tout:first-child {
+        margin-top: 0;
+        padding-right: 4rem; }
+      .row-tout:last-child {
+        padding-right: 4rem; } }
+
+#view-mode--container {
+  position: absolute;
+  right: 10px;
+  outline: 1px solid red; }
+
+.view-mode--icon {
+  display: block;
+  height: 60px;
+  width: 60px;
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+#view-mode--toggle {
+  position: absolute;
+  left: -9999em;
+  opacity: 0;
+  visibility: hidden; }
+</style>
+<script>
+(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700','/css/style.css']));
+</script>
+<noscript>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+</noscript>
+  
+
+  <script src="/js/libs/modernizr.min.js"></script>
+
+  <link rel="author" href="humans.txt">
+  <link rel="shortcut icon" href="/img/root/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="/img/root/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/root/apple-touch-icon-57x57-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/root/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/root/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/root/apple-touch-icon-144x144-precomposed.png">
+
+
+  
+</head>
+
+
+
+<!--
+    __  ___            _ __      ____        __  __
+   /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
+  / /|_/ / __ `/ __ \/ / //_/  / /_/ / __ `/ __/ __ \/ _ \/ _ \
+ / /  / / /_/ / / / / / ,\    / _, _/ /_/ / /_/ / / /  __/  __/
+/_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/
+
+The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
+https://github.com/manikrathee/manikrathee.com
+-->
+
+
+<script type="text/javascript">
+  var postURL = ["/photo-test-page.html","/wanderlust-big-sur.html","/vsco.html","/pride-chicago-2012.html"];
+  var postTitle = ["Photo Test Page For New Features","Wanderlust: Big Sur","VSCO: The world through a viewfinder","Pride"];
+  var postImage = ["/20160710/feature.jpg","/20131105/feature.jpg","/20120724/feature.jpg","/20120624/feature.jpg"];
+  var postMeta = ["LEICA Q — 25mm f1.8 200/s 200ISO","CANON 5DMKII — 24mm f16","CANON 5DMKII — 24mm f2.8 600/s","CANON 5DMKII — 50mm f1.4"];
+  var postGeo = ["Firenze, Italy","Big Sur, California, USA","16th arrondissement, Paris, France","Chicago, Illinois, USA"];
+</script>
+
+
+	<body id="home" class="
+        light
+        
+        
+        
+        
+        
+        
+      ">
+
+    <div id="main" class="container" role="main">
+
+        <header id="page-header" role="banner">
+
+    <div class="global-header">
+
+      <a class="header-logo" href="/" title="manikrathee.com" alt="MountainMonday 🍻" itemprop="url">
+        <h2 class="animated-logo mountain-monday">
+          MountainMonday 🍻
+        </h2>
+
+        <hgroup id="site-title">
+          <h1 id="name">Manik Rathee</h1>
+          <p id="greeting">Designer, Photographer</p>
+        </hgroup>
+      </a>
+
+      <nav class="main-nav" role="navigation">
+  <ul class="main-nav-list">
+    <li>
+      <a itemprop="url" href="/" title="manikrathee.com">Home</a>
+    </li>
+    <li>
+      <a itemprop="url" href="/about" title="About">About</a>
+    </li>
+    <li>
+      <a itemprop="url" href="/photos" title="Photo Stories">Photos</a>
+    </li>
+    <li>
+      <a itemprop="url" href="/blog" title="Blog">Blog</a>
+    </li>
+    <!-- <li class="nav-work-case-studies">
+      <a itemprop="url" href="/work" title="Case Studies and Projects">Work<span> &amp; Case Studies</span></a>
+    </li> -->
+    <li>
+      <a itemprop="url" href="/library" title="Library and Recommendations">Library</a>
+    </li>
+    <li class="nav-weekly-reads">
+      <a itemprop="url" href="/weeklyreads" title="WeeklyReads: An email with the best design, photography and inspiration links of the week">WeeklyReads</a><span> <i>Email Subscription</i></span>
+    </li>
+    <li>
+      <a itemprop="url" href="/resources" title="Resources">Resources</a>
+    </li>
+    <li>
+      <a itemprop="url" href="https://500px.com/search?q=manikrathee&type=market" title="Shop">Shop</a>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+
+    <div id="view-mode--container">
+  <input id="view-mode--toggle" type="checkbox">
+  <label class="view-mode--toggle-label" for="view-mode--toggle">
+    <i class="view-mode--icon">Light Mode</i>
+  </label>
+</div>
+
+
+    
+    <div id="who-is">
+      <h3 class="current-title">
+        Prototyping &amp; Engineering
+        <i>
+          @
+          <a href="https://nest.com/" title="Nest Labs, an Alphabet Company" itemprop="url">Nest / Google</a>
+        </i>
+      </h3>
+
+      <div class="previous-container">
+        <p class="previous-heading">Previously</p>
+        <ul class="previous-positions">
+          <li>
+            User Experience Engineer
+            <i>
+              for
+              <a href="http://www.manikrathee.com/barack-obama-contribute.html" title="Barack Obama's 2012 Re-Election Campaign" itemprop="url">President Barack Obama</a>
+            </i>
+          </li>
+          <li>
+            Design Lead
+            <i>
+              for
+              <a href="https://www.continu.co/" title="Continu: Beautifully Simple Learning" itemprop="url">Continu</a>
+            </i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+
+    
+  </header>
+
+  
+
+
+      <section id="inner-container" class="home">
+
+        
+
+
+        <section class="row ↔️">
+  <div class="row-tout recent-photos ↕️">
+    <h3 class="medium-heading">Photography &amp; Fashion</h3>
+
+    <ul class="row-tout-list recent-photos-list">
+      
+      <li>
+        <p class="condensed">
+          <a href="/photo-test-page.html" title="Photo Test Page For New Features" itemprop="url">
+            Photo Test Page For New Features<!--
+          --></a><!--
+
+          --><!--
+        --><span class="for-lovely-sunday">, for
+            <a href="" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+              LovelySunday
+            </a>
+          </span>
+          
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/wanderlust-big-sur.html" title="Wanderlust: Big Sur" itemprop="url">
+            Wanderlust: Big Sur<!--
+          --></a><!--
+
+          -->
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/vsco.html" title="VSCO: The world through a viewfinder" itemprop="url">
+            VSCO: The world through a viewfinder<!--
+          --></a><!--
+
+          -->
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/pride-chicago-2012.html" title="Pride" itemprop="url">
+            Pride<!--
+          --></a><!--
+
+          -->
+        </p>
+      </li>
+      
+      <li class="more-items">
+        <a class="more-items--link" href="/photos/" title="" itemprop="url">
+          More Photography
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="row-tout recent-writing ↕️">
+    <h3 class="medium-heading">Writing</h3>
+    <ul class="row-tout-list recent-writing-list">
+      
+      <li>
+        <p class="condensed">
+          <a href="/how-to-delete-a-tag-in-git.html" title="How to delete a Git tag" itemprop="url">
+            How to delete a Git tag<!--
+        --></a><span>, August 2016</span>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/text-expander-tips.html" title="How I Use:<br>TextExpander" itemprop="url">
+            How I Use:TextExpander<!--
+        --></a><span>, March 2015</span>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/uber-vs-cabs.html" title="Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups" itemprop="url">
+            Uber vs Taxis: Why @Uber is a threat to Taxi Labor Groups<!--
+        --></a><span>, July 2013</span>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/sublime-text-preferences.html" title="Sublime Text:<BR>Customizing Your&nbsp;Workflow" itemprop="url">
+            Sublime Text:Customizing Your&nbsp;Workflow<!--
+        --></a><span>, July 2013</span>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/building-president-obama.html" title="Building Obama" itemprop="url">
+            Building Obama<!--
+        --></a><span>, May 2013</span>
+        </p>
+      </li>
+      
+      <li>
+        <p class="condensed">
+          <a href="/on-disconnecting-from-tech-silicon-valley.html" title="On Disconnecting: Escaping the tech that surrounds us" itemprop="url">
+            On Disconnecting: Escaping the tech that surrounds us<!--
+        --></a><span>, April 2013</span>
+        </p>
+      </li>
+      
+      <li class="more-items">
+        <a class="more-items--link" href="/blog/" title="" itemprop="url">
+          More Writing
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="row ↔️">
+  <div class="row-tout recent-publications ↕️">
+    <h3 class="medium-heading">Interviews</h3>
+    <ul class="row-tout-list recent-publications-list">
+      <li>
+        <p class="condensed">
+          <a href="http://www.creativebloq.com/responsive-web-design/net-awards-2013-top-10-young-designers-3132966" title=".net Awards 2013: top 10 young designers" itemprop="url">
+            <!--
+              .net Magazine's site moved. This was the original URL:
+                http://www.netmagazine.com/features/net-awards-2013-top-10-young-designers
+             -->
+            Young Designer of the Year Nominee, .net Awards 2013
+          </a><span>, .net Magazine</span>
+        </p>
+      </li>
+      <li>
+        <p class="condensed">
+          <a href="http://www.amazon.com/Build-Your-Own-Brand-Strategies/dp/1440324557/" title="Build Your Own Brand" itemprop="url">
+            Build Your Own Brand
+          </a>
+          <span>, Robin Landa</span>
+        </p>
+      </li>
+      <li>
+        <p class="condensed">
+          <a href="http://blog.offscreenmag.com/post/36344235407/hi-manik-give-us-a-short-introduction-about-how" title="Offscreen Magzine - An Interview with Manik Rathee" itemprop="url">
+            An Interview with Manik Rathee, a User Experience Engineer for President Barack Obama
+          </a><span>, Kai Brach, Offscreen Magazine</span>
+        </p>
+      </li>
+      <!-- RIP Readmill  -->
+      <!-- <li>
+          <a href="hhttp://blog.readmill.com/post/34294256090/meet-the-readmillers-manik-rathee" title="Meet the Readmillers: Manik Rathee" itemprop="url">
+          Meet the Readmillers: Manik Rathee
+          </a><span>, Readmill (RIP)</span>
+      </li> -->
+      <!-- ----------  -->
+      <li>
+        <p class="condensed">
+          <a href="https://www.youtube.com/watch?v=69XQ82UK9Rs" title="Manik Rathee, Kean Graduate works for Obama Campaign" itemprop="url">
+            Kean Graduate Works For Obama
+          </a><span>, Kean University</span>
+        </p>
+      </li>
+      <li class="more-items">
+        <a class="more-items--link" href="/about" title="More interviews and features on the About page" itemprop="url">
+          More Interviews &amp; Features
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="row-tout recent-speaking  ↕️">
+    <h3 class="medium-heading">Speaking</h3>
+    <ul class="row-tout-list recent-speaking-list">
+      <li>
+        <p class="condensed">
+          <a href="/building-president-obama.html" title="Thinking Creatively Conference 10" itemprop="url">
+            Building Obama
+          </a><span>,  Keynote Address, Thinking Creatively Conf &mdash; April, 2013</span>
+        </p>
+      </li>
+      <li>
+        <p class="condensed">
+          Building Obama In CSS<span>, CSS Dev Conf &mdash; October, 2013</span>
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="row social">
+
+  <h3 class="medium-heading">Online:</h3>
+
+  <ul class="social-list">
+    <li>
+      <a class="social-list--item icon icon--spotify-dark" href="%|" title="" itemprop="url">
+        Spotify
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon icon--fivehundredpx-dark" href="%|" title="" itemprop="url">
+        500px
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon icon--instagram-dark" href="%|" title="" itemprop="url">
+        Instagram
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon icon--twitter-dark" href="%|" title="" itemprop="url">
+        twitter
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon icon--github-dark" href="%|" title="" itemprop="url">
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon icon--dribbble-dark" href="%|" title="" itemprop="url">
+        dribbble
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon icon--tumblr-dark" href="%|" title="" itemprop="url">
+        tumblr
+      </a>
+    </li>
+    <li>
+      <a class="social-list--item icon icon--pocket-dark" href="%|" title="" itemprop="url">
+        pocket
+      </a>
+    </li>
+  </ul>
+</section>
+
+
+<section class="api">
+
+  <div id="spotify-api-bar"></div>
+  <div id="twitter-api-bar"></div>
+
+</section>
+
+
+
+
+
+
+
+        
+
+      </section>
+
+    </div>
+
+    
+
+      <footer id="main-footer" role="contentinfo">
+
+    <!-- TODO CHange this to use a data yml file, output an image with a background position at certain breakpoints. then render out that size into css -->
+    <div class="footer-bg-photo-posts" itemprop="url">
+      <span></span>
+    </div>
+
+    <span class="mountain-monday mountain-monday--inverse"></span>
+
+    <section class="footer-nav-container">
+      <span id="manikrathee">Manik Rathee</span>
+      <nav class="main-nav" role="navigation">
+  <ul class="main-nav-list">
+    <li>
+      <a itemprop="url" href="/" title="manikrathee.com">Home</a>
+    </li>
+    <li>
+      <a itemprop="url" href="/about" title="About">About</a>
+    </li>
+    <li>
+      <a itemprop="url" href="/photos" title="Photo Stories">Photos</a>
+    </li>
+    <li>
+      <a itemprop="url" href="/blog" title="Blog">Blog</a>
+    </li>
+    <!-- <li class="nav-work-case-studies">
+      <a itemprop="url" href="/work" title="Case Studies and Projects">Work<span> &amp; Case Studies</span></a>
+    </li> -->
+    <li>
+      <a itemprop="url" href="/library" title="Library and Recommendations">Library</a>
+    </li>
+    <li class="nav-weekly-reads">
+      <a itemprop="url" href="/weeklyreads" title="WeeklyReads: An email with the best design, photography and inspiration links of the week">WeeklyReads</a><span> <i>Email Subscription</i></span>
+    </li>
+    <li>
+      <a itemprop="url" href="/resources" title="Resources">Resources</a>
+    </li>
+    <li>
+      <a itemprop="url" href="https://500px.com/search?q=manikrathee&type=market" title="Shop">Shop</a>
+    </li>
+  </ul>
+</nav>
+
+
+      <figure id="snapchat"></figure>
+    </section>
+
+
+    <section class="footer-data">
+      <div id="weekly-reads-tout" class="footer-tout">
+        <a href="/weeklyreads" class="invert-hover" title="" itemprop="url">
+          <i class="icon icon--weeklyreads">WeeklyReads: an email list for design and inspiration.</i>
+          <span>
+            WeeklyReads: an email list for design and inspiration.
+          </span>
+        </a>
+      </div>
+
+      <div id="photo-metadata" class="footer-tout">
+        <a class="photo-metadata--link invert-hover" title="" itemprop="url">
+          <i class="icon icon--photography">Photo Information</i>
+          <figcaption>
+            <span class="photo-metadata--camera"></span>
+            <br>
+            <span class="photo-metadata--geo"></span>
+          </figcaption>
+        </a>
+      </div>
+    </section>
+
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-2.1.1.min.js"><\/script>')</script>
+
+  
+
+  <script src="/js/script.js"></script>
+
+  
+
+
+
+  </body>
+
+</html>

@@ -1,91 +1,190 @@
 ---
 layout: default
+
 home: 1
-#title:
+
 body-class: light
 body-id: home
-#stylesheet:
-#script:
+section: home
 ---
-	<div class="container" role="main">
-  	{% include global-nav-bar.html %}
 
-		<section class="copy">
-			<header>
-				<h1 class="name">Manik Rathee</h1>
-				<h1 class="title">User Experience Engineer, <a href="https://google.com/" title="Google" itemprop="url">Google </a></h1>
-			</header>
+<section class="row ↔️">
+  <div class="row-tout recent-photos ↕️">
+    <h3 class="medium-heading">Photography &amp; Fashion</h3>
 
-			<section class="title">
-          {% include global-about-block.html %}
+    <ul class="row-tout-list recent-photos-list">
+      {% for post in site.categories.photos | limit: 4 %}
+      <li>
+        <p class="condensed">
+          <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+            {{ post.title | strip_html }}<!--
+          --></a><!--
 
-					<!--
-						// Oh, hello. This is some extra copy that I used to have here.
-						// Enjoy.
-						In my spare time, I <a itemprop="url" href="http://www.manikratheephotography.com" title="Manik Rathee Photography">photograph weddings</a> with <a itemprop="url" href="http://www.aileenandmanik.com" title="Aileen and Manik">my fianc&eacute;e</a> and <a itemprop="url" href="http://blog.manikrathee.com/" title="Blog.ManikRathee.com">I write about design and development</a>.
-					 -->
-			</section>
-
-			<section class="social">
-				<ul class="social-icons">
-					<li>
-						<a class="ss-icon ss-social-circle tooltip" href="http://www.twitter.com/manikrathee" title="Twitter">
-							Twitter
-						</a>
-					</li>
-					<li>
-						<a class="ss-icon ss-social-circle tooltip" href="http://instagram.com/manikrathee" title="Instagram" itemprop="url">
-							Instagram
-						</a>
-					</li>
-					<li>
-						<a class="ss-icon ss-social-circle tooltip" href="http://www.dribbble.com/manikrathee" title="Dribbble" itemprop="url">
-							Dribbble
-						</a>
-					</li>
-					<li>
-						<a class="ss-icon ss-social-circle tooltip" href="https://github.com/manikrathee" title="GitHub" itemprop="url">
-							Octocat
-						</a>
-					</li>
-					<li>
-						<a class="ss-icon ss-social-circle tooltip" href="http://manikrathee.tumblr.com" title="Tumblr" itemprop="url">
-							Tumblr
-						</a>
-					</li>
-					<li>
-						<a class="ss-icon ss-social-circle tooltip" href="http://www.flickr.com/photos/manikrathee/" title="Flickr" itemprop="url">
-							Flickr
-						</a>
-					</li>
-
-				<!--
-				// Yo, I heard you like social icons
-				// so I put some social icons
-				// in your social icons.
-				-->
-				<!--
-					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.500px.com/manikrathee" title="500px">fivehundredpx</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="http://www.last.fm/user/mrathee" title="lastFM">lastfm</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="https://soundcloud.com/manikrathee" title="Soundcloud">soundcloud</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="skype:mrathee?call" title="Skype">Skype</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="https://foursquare.com/manikrathee" title="Foursquare">Foursquare</a></li>
-					<li><a class="ss-icon ss-social-circle tooltip" href="https://svpply.com/manikrathee" title="Svpply">svpply</a></li>
-				-->
-
-				<!--
-				// R.I.P. Readmill
-				<li><a class="ss-icon ss-social-circle tooltip" href="http://www.readmill.com/manikrathee" title="Readmill">Readmill</a></li>
-				-->
-				</ul>
-			</section><!-- /social -->
-		</section><!-- /copy -->
-	</div> <!-- /container -->
-
-
-	<div id="twitter" class="social-api twitter"><p></p></div>
-	<div id="instagram" class="social-api instagram">
-   <div class="photo"><p><a id="instagram-link" href="https://www.instagram.com/manikrathee/" title="@manikrathee on Instagram">"The best thing about a picture is that it never changes, even when the people in it do."</a></p></div>
+          -->{% if post.isForLovelySunday %}<!--
+        --><span class="for-lovely-sunday">, for&nbsp;
+            <a href="{{ post.lovelySundayLink }}" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
+              LovelySunday
+            </a>
+          </span>
+          {% endif %}
+        </p>
+      </li>
+      {% endfor %}
+      <li class="more-items">
+        <a class="more-items--link" href="/photos/" title="" itemprop="url">
+          More Photography
+        </a>
+      </li>
+    </ul>
   </div>
-	<div id="rdio" class="social-api rdio"></div>
-	<div id="readmill" class="social-api readmill"></div>
+
+
+  <div class="row-tout recent-writing ↕️">
+    <h3 class="medium-heading">Writing</h3>
+    <ul class="row-tout-list recent-writing-list">
+      {% for post in site.categories.blog | limit: 4 %}
+      <li>
+        <p class="condensed">
+          <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+            {{ post.title | strip_html | widont }}<!--
+        --></a><span>, {{ post.date | date: '%B %Y' }}</span>
+        </p>
+      </li>
+      {% endfor %}
+      <li class="more-items">
+        <a class="more-items--link" href="/blog/" title="" itemprop="url">
+          More Writing
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="row ↔️">
+  <div class="row-tout recent-publications ↕️">
+    <h3 class="medium-heading">Interviews</h3>
+    <ul class="row-tout-list recent-publications-list">
+      <li>
+        <p class="condensed">
+          <a href="http://www.creativebloq.com/responsive-web-design/net-awards-2013-top-10-young-designers-3132966" title=".net Awards 2013: top 10 young designers" itemprop="url">
+            <!--
+              .net Magazine's site moved. This was the original URL:
+                http://www.netmagazine.com/features/net-awards-2013-top-10-young-designers
+             -->
+            Young Designer of the Year Nominee,
+          </a><span>.net&nbsp;Awards</span>
+        </p>
+      </li>
+      <li>
+        <p class="condensed">
+          <a href="http://www.amazon.com/Build-Your-Own-Brand-Strategies/dp/1440324557/" title="Build Your Own Brand" itemprop="url">
+            Build Your Own&nbsp;Brand
+          </a>,
+          <span> Robin&nbsp;Landa</span>
+        </p>
+      </li>
+      <li>
+        <p class="condensed">
+          <a href="http://blog.offscreenmag.com/post/36344235407/hi-manik-give-us-a-short-introduction-about-how" title="Offscreen Magzine - An Interview with Manik Rathee" itemprop="url">
+            An interview by Kai Brach
+          </a><span>, Offscreen&nbsp;Magazine</span>
+        </p>
+      </li>
+      <!-- RIP Readmill  -->
+      <!-- <li>
+          <a href="hhttp://blog.readmill.com/post/34294256090/meet-the-readmillers-manik-rathee" title="Meet the Readmillers: Manik Rathee" itemprop="url">
+          Meet the Readmillers: Manik Rathee
+          </a><span>, Readmill (RIP)</span>
+      </li> -->
+      <li class="more-items">
+        <a class="more-items--link" href="/about" title="More interviews and features on the About page" itemprop="url">
+          See More
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="row-tout recent-speaking  ↕️">
+    <h3 class="medium-heading">Speaking</h3>
+    <ul class="row-tout-list recent-speaking-list">
+      <li>
+        <p class="condensed">
+          <a href="/building-president-obama.html" title="Thinking Creatively Conference 10" itemprop="url">
+            Building Obama
+          </a><span>,  Keynote Address, <br>Thinking&nbsp;Creatively&nbsp;Conf</span>
+        </p>
+      </li>
+      <li>
+        <p class="condensed">
+          Building Obama In CSS<span>, <br>CSS&nbsp;Dev&nbsp;Conf</span>
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="row social">
+
+  <h3 class="medium-heading">Online</h3>
+
+  <ul class="social-list">
+    <li class="social-list--item">
+      <a class="social-list--link icon icon--instagram-dark" href="http://www.manikrathee.com/instagram" title="@manikrathee on Instagram" itemprop="url">
+        Instagram
+      </a>
+    </li>
+    <li class="social-list--item">
+      <a class="social-list--link icon icon--twitter-dark" href="http://www.manikrathee.com/twitter" title="@manikrathee on twitter" itemprop="url">
+        Twitter
+      </a>
+    </li>
+    <li class="social-list--item">
+      <a class="social-list--link icon icon--pocket-dark" href="http://www.manikrathee.com/pocket" title="@mrathee on Pocket" itemprop="url">
+        Pocket
+      </a>
+    </li>
+    <li class="social-list--item">
+      <a class="social-list--link icon icon--fivehundredpx-dark" href="http://www.manikrathee.com/500px" title="@manikrathee on 500px" itemprop="url">
+        500px
+      </a>
+    </li>
+
+    <li class="social-list--item">
+      <a class="social-list--link icon icon--spotify-dark" href="http://www.manikrathee.com/spotify" title="@manikrathee on Spotify" itemprop="url">
+        Spotify
+      </a>
+    </li>
+    <li class="social-list--item">
+      <a class="social-list--link icon icon--github-dark" href="http://www.manikrathee.com/github" title="@manikrathee on GitHub" itemprop="url">
+        GitHub
+      </a>
+    </li>
+    <li class="social-list--item">
+      <a class="social-list--link icon icon--dribbble-dark" href="http://www.manikrathee.com/dribbble" title="@manikrathee on Dribbble" itemprop="url">
+        Dribbble
+      </a>
+    </li>
+  </ul>
+</section>
+
+
+<section class="api">
+  <div id="twitter-api-container" class="api--unit">
+    <i class="icon icon--twitter-dark"></i>
+    <div id="twitter-api-bar"></div>
+  </div>
+
+  <div id="instagram-api-container" class="api--unit">
+    <i class="icon icon--instagram-dark"></i>
+    <div id="instagram-api-bar"></div>
+  </div>
+
+  <div id="spotify-api-container" class="api--unit">
+    <i class="icon icon--spotify-dark"></i>
+    <div id="spotify-api-bar"></div>
+  </div>
+</section>
+

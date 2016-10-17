@@ -1,0 +1,532 @@
+@charset "UTF-8";
+
+// Main footer
+// Shared with all pages
+
+#main-footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #333;
+  padding: $spacer;
+  color: $white;
+  @include box;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    @include size(100%,100%);
+    border-radius: 3px;
+    // box-shadow: 0px 0px 65px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 50px 65px 5px rgba(0, 0, 0, 0.175);
+
+  }
+
+  & > * {
+    // set difference on children only, so the background image remains safe
+    // mix-blend-mode: difference;
+    // mix-blend-mode: color-dodge;
+    // mix-blend-mode: multiply;
+    // mix-blend-mode: overlay;
+  }
+
+  p,
+  a {
+    color: $white;
+  }
+
+  a {
+    &:hover {
+      color: $medium-grey;
+      border-color: $medium-grey;
+    }
+  }
+
+  .mountain-monday {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 46px;
+    height: 30px;
+    background-size: contain;
+  }
+
+  .footer-nav-container {
+    justify-content: space-around;
+  }
+  .footer-data {
+    justify-content: space-around;
+  }
+
+  .main-nav-list {
+    overflow: hidden;
+    margin-top: $spacer;
+    padding-bottom: 5px;
+
+    li {
+      width: calc(50% - 20px);
+
+      &:nth-child(even) {
+        margin-left: 20px;
+        text-align: left;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+        text-align: right;
+      }
+
+    }
+  }
+
+  .footer-bg-photo-posts {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50%;
+    will-change:
+      mix-blend-mode,
+      transform,
+      opacity;
+    mix-blend-mode: luminosity;
+    opacity: 0;
+    backface-visibility: hidden;
+    transform: scale(1.05) translate3d(0,0,0);
+    @include transition(opacity 4s ease-in-out,transform 2.5s ease-out, mix-blend-mode 6s ease-in-out);
+
+    &.is-visible {
+      opacity: 1;
+      transform: scale(1) translate3d(0,0,0);
+      mix-blend-mode: normal;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+  }
+
+
+  .main-nav-list,
+  #snapchat {
+    margin-bottom: $spacer;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+#snapchat {
+  display: block;
+  background-image: url('../img/snapchat.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include size(48px, 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+#manikrathee {
+  display: none;
+  position: absolute;
+  top: 160px;
+  left: -40px;
+  transform: rotate(-90deg);
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+
+
+
+#photo-metadata {
+  opacity: 0;
+  @include transition( opacity 1s ease-in-out );
+
+  &.is-visible {
+    opacity: 1;
+  }
+
+  .photo-metadata--link {
+    border: none;
+  }
+
+  figcaption {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+
+    @include mq(768px) {
+      width: calc(100% - 60px);
+      margin-top: 0;
+      margin-left: 10px;
+    }
+
+    p {
+      margin-bottom: 0.8rem;
+      @include font-size(12);
+      font-style: normal;
+      font-weight: 800;
+      text-transform: uppercase;
+      @include transition(opacity $transition);
+    }
+  }
+}
+
+
+.footer-tout {
+  // shown in header on right side, only for homepage
+  justify-content: space-between;
+  position: relative;
+  margin-top: $spacer*1.125; // push content to the baseline of the title
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  i.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include size(40px, 40px);
+  }
+
+  figcaption {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+#weekly-reads-tout {
+  display: block;
+  width: 230px;
+  margin: 4rem auto 0;
+
+  @include mq(768px) {
+    margin: 0;
+  }
+
+  i {
+    margin-bottom: 1rem;
+  }
+
+  .weekly-reads-title {
+    display: inline-block;
+    text-align: center;
+
+    @include mq(768px) {
+      width: calc(100% - 5rem);
+      margin-left: 0.7rem;
+      text-align: left;
+    }
+
+    span {
+      display: block;
+      @include font-size(14);
+      font-weight: 500;
+    }
+  }
+
+  @include mq(768px) {
+    .weekly-reads-title {
+      span {
+        display: block;
+      }
+
+    }
+  }
+}
+
+
+#footer-weekly-reads-signup {
+  @include mq(768px) {
+    margin-left: 4.7rem;
+  }
+
+  > * {
+    @include box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  input[type=email] {
+    background: none;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    padding-right: 1rem;
+    @include font-size(14);
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 30;
+    color: $white;
+    outline: none;
+    border: none;
+    border-bottom: 4px solid #f2f2f2;
+    @include box;
+    transition: border $transition;
+
+    &:focus {
+      border-bottom: 4px solid #fff;
+    }
+  }
+
+  #submit {
+    margin-top: 1rem;
+    width: 100%;
+    background: none;
+  }
+
+  @include mq(768px) {
+    input[type=email],
+    #submit {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@include mq(500px) {
+  #main-footer {
+    width: calc(100% + 40px + 4rem);
+    margin-left: -40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// TODO -- move MQs into element blocks
+@include mq(768px) {
+
+  #main-footer {
+    flex-direction: row;
+    flex-wrap: wrap; // force photo story link to it's own line
+    margin-left: -40px;
+
+    .mountain-monday {
+      position: absolute;
+      top: auto;
+      left: auto;
+      margin: 0;
+      transform: none;
+
+      width: 40px;
+      height: 28px;
+    }
+
+    .footer-nav-container {
+      width: 50%;
+    }
+
+    nav {
+      min-width: 240px;
+      margin-left: 35px;
+    }
+
+    .footer-data {
+      width: 50%;
+      margin-top: 4rem;
+    }
+
+
+    .footer-tout {
+
+      .icon {
+        display: inline-block;
+        vertical-align: top;
+
+        @include transition(opacity $transition);
+      }
+
+      a {
+        display: inline-block;
+        width: 100%;
+        min-width: 320px;
+        border: none;
+
+        &:hover {
+
+          p,
+          .icon {
+            opacity: 0.3; // mimic anchor hover color
+          }
+        }
+
+      }
+    }
+
+
+    .main-nav-list {
+      line-height: 2.2rem;
+
+      li {
+        width: auto;
+        float: none;
+        margin-bottom: 0.45rem;
+
+        &:nth-child(even) {
+          margin-left: 0;
+          text-align: left;
+        }
+
+        &:nth-child(odd) {
+          margin-right: 0;
+          text-align: left;
+        }
+
+      }
+    }
+  }
+
+
+  #manikrathee {
+    display: block;
+  }
+
+  #snapchat {
+    @include size(78px, 78px);
+    margin: 0 0 0 32px;
+  }
+
+  #photo-metadata {
+
+    figcaption {
+      text-align: left;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include mq(960px) {
+  #main-footer {
+    width: calc(100% + 160px);
+    margin-left: -80px;
+    padding: ($spacer * 2.5) ($spacer * 2) $spacer;
+
+    .mountain-monday {
+      top: 50px;
+      left: 50%;
+    }
+  }
+
+  #manikrathee {
+    top: 220px;
+    left: -3px; // visually align left edge with photo icon
+    opacity: 0.3;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include mq(1300px) {
+  #main-footer {
+    width: calc(100% + 120px);
+    margin-left: -60px;
+    padding: ($spacer * 2.5) ($spacer * 3.5);
+  }
+
+  #manikrathee {
+    left: 55px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include mq(1680px) {
+  #main-footer {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
+
+
+
+
+
+
