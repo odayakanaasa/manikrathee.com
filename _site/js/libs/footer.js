@@ -34,8 +34,8 @@ $(function(e){
     // deliver content
     imageContainer.css('background-image', 'url(' + imgCompletePath + ')');
     linkContainer.prop('href', link).prop('title', title);
-    cameraContainer.text(cam);
-    geoContainer.text(geo);
+    cameraContainer.html(cam);
+    geoContainer.html(geo);
 
     // display
     imageContainer.addClass('is-visible');

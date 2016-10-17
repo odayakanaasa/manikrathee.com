@@ -3968,7 +3968,7 @@ viewMode.init(), $(function(a) {
     function c() {
         var a = postURL[d], b = postTitle[d], c = postImage[d], e = postMeta[d], f = postGeo[d], g = "/img/photos/" + c, h = $("#photo-metadata"), i = $(".photo-metadata--link"), j = $(".footer-bg-photo-posts"), k = $(".photo-metadata--camera"), l = $(".photo-metadata--geo");
         j.css("background-image", "url(" + g + ")"), i.prop("href", a).prop("title", b), 
-        k.text(e), l.text(f), j.addClass("is-visible"), h.addClass("is-visible");
+        k.html(e), l.html(f), j.addClass("is-visible"), h.addClass("is-visible");
     }
     var d, e = window.location.pathname;
     b();
