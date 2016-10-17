@@ -1,0 +1,248 @@
+/*
+.center {
+    text-align: center;
+}
+
+.home-page .heroshot ul {
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+.home-page .heroshot ul li {
+    list-style: none;
+    margin: 0 0 10px;
+}
+.home-page .heroshot ul li a {
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+    width: 256px;
+    margin: 0 auto;
+}
+
+.home-page .heroshot ul li form {
+    width: 256px;
+    margin: 0 auto;
+}
+.home-page .heroshot ul li form ol .email, .home-page .heroshot ul li form ol .zip {
+    margin-bottom: 10px;
+}
+
+.home-page .heroshot ul li form ol .button {
+    margin-left: 34px;
+}
+
+.home-page .heroshot ul li form ol #hero_email {
+    width: 200px;
+}
+
+.home-page .heroshot ul .hero-1 a {
+    height: 191px;
+}
+
+.home-page .heroshot ul .hero-1.with-form form {
+    height: 275px;
+}
+
+.home-page .heroshot ul .hero-2 a, .home-page .heroshot ul .hero-3 a, .home-page .heroshot ul .hero-4 a, .home-page .heroshot ul .hero-5 a, .home-page .heroshot ul .hero-6 a {
+    height: 110px;
+}
+
+@media (min-width:768px) {
+    .home-page .heroshot ul {
+    width: 680px;
+    margin: 0 auto;
+}
+.home-page .heroshot ul li {
+    float: left;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+ .home-page .heroshot ul .hero-1 a {
+    width: 413px;
+    height: 339px;
+}
+ .home-page .heroshot ul .hero-1.with-form form {
+    width: 413px;
+    height: 339px;
+}
+.home-page .heroshot ul .hero-1.with-form form ol .button {
+    display: block;
+    margin-left: auto;
+}
+ .home-page .heroshot ul .hero-2 a, .home-page .heroshot ul .hero-3 a {
+    width: 261px;
+    height: 168px;
+}
+ .home-page .heroshot ul .hero-4, .home-page .heroshot ul .hero-5 {
+    margin-right: 0;
+    width: 50%;
+}
+ .home-page .heroshot ul .hero-6 {
+    float: none;
+}
+}
+@media (min-width:960px) {
+    .home-page .heroshot ul {
+    width: 940px;
+    position: relative;
+    height: 339px;
+}
+.home-page .heroshot ul li {
+    float: none;
+    margin: 0;
+    position: absolute;
+    background: #000;
+}
+ .home-page .heroshot ul a, .home-page .heroshot ul form {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+ .home-page .heroshot ul .hero-1 {
+    top: 0;
+    left: 266px;
+}
+ .home-page .heroshot ul .hero-2 {
+    top: 0;
+    left: 0;
+}
+ .home-page .heroshot ul .hero-3 {
+    left: 0;
+    top: 171px;
+}
+ .home-page .heroshot ul .hero-4 {
+    right: 0;
+    top: 0;
+    width: auto;
+}
+ .home-page .heroshot ul .hero-5 {
+    width: auto;
+    right: 0;
+    top: 114px;
+}
+ .home-page .heroshot ul .hero-6 {
+    right: 0;
+    bottom: 0;
+}
+ .home-page .heroshot:hover a, .home-page .heroshot:hover form {
+    opacity: 0.6;
+}
+ .home-page .heroshot:hover a:hover, .home-page .heroshot:hover form:hover {
+    opacity: 1;
+}
+}
+.oldie .home-page .heroshot ul {
+    width: 940px;
+    position: relative;
+    height: 339px;
+}
+.oldie .home-page .heroshot ul li {
+    float: none;
+    margin: 0;
+    position: absolute;
+    display: inline;
+}
+
+.oldie .home-page .heroshot ul .hero-1 {
+    top: 0;
+    left: 266px;
+    width: 413px;
+    height: 339px;
+}
+.oldie .home-page .heroshot ul .hero-1 a {
+    width: 413px;
+    height: 339px;
+}
+
+.oldie .home-page .heroshot ul .hero-1.with-form form {
+    width: 413px;
+    height: 339px;
+}
+.oldie .home-page .heroshot ul .hero-1.with-form form ol .button {
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.oldie .home-page .heroshot ul .hero-2 {
+    top: 0;
+    left: 0;
+    width: 261px;
+    height: 168px;
+}
+.oldie .home-page .heroshot ul .hero-2 a {
+    width: 261px;
+    height: 168px;
+}
+
+.oldie .home-page .heroshot ul .hero-3 {
+    left: 0;
+    top: 171px;
+    width: 261px;
+    height: 168px;
+}
+.oldie .home-page .heroshot ul .hero-3 a {
+    width: 261px;
+    height: 168px;
+}
+
+.oldie .home-page .heroshot ul .hero-4 {
+    right: 0;
+    top: 0;
+    width: 256px;
+    height: 110px;
+}
+
+.oldie .home-page .heroshot ul .hero-5 {
+    right: 0;
+    top: 114px;
+    width: 256px;
+    height: 110px;
+}
+
+.oldie .home-page .heroshot ul .hero-6 {
+    left: 684px;
+    bottom: 0;
+    width: 256px;
+    height: 110px;
+}
+
+.ie7 .home-page .heroshot .with-form li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.home-page .heroshot .with-form ol li {
+    float: none;
+    position: static;
+    background: transparent;
+}
+
+.home-page .heroshot .sotu-large a {
+    background: url('../../images/heroshots/AttendHouseParty@256x191.jpg') no-repeat 50% 50%;
+}
+
+.home-page .heroshot .sopa a {
+    background: url('../../images/heroshots/SOPA_Left@256x110.jpg') no-repeat 50% 50%;
+}
+
+.home-page .heroshot .the-only-way a {
+    background: url('../../images/heroshots/Messina_Lef@256x110.jpg') no-repeat 50% 50%;
+}
+
+.home-page .heroshot .organizing-fellows a {
+    background: url('../../images/heroshots/organizing-fellows@256x110.jpg') no-repeat 50% 50%;
+}
+
+.home-page .heroshot .store a {
+    background: url('../../images/heroshots/Store_Right@256x110.jpg') no-repeat 50% 50%;
+}
+
+.home-page .heroshot .volunteer a {
+    background: url('../../images/heroshots/volunteer@256x110.jpg') no-repeat 50% 50%;
+}
+*/

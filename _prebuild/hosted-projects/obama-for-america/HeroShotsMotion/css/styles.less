@@ -1,0 +1,220 @@
+@import "/../../../bo-production-css/hydepark/css/heroshots/3x1x2";
+@import "/../../../bo-production-css/hydepark/css/heroshots/motion";
+
+/* 
+Options for Markup
+<li class="class-name hero-2">
+	<a href="#" title="">
+		<img class="fixed_element right" src="images/image-name.png"> - Fixed Image Title
+		<span> Read more </span> - CTA
+		<div class="hero_title"></div> - Type Block
+	</a>
+</li>
+ */
+
+
+.home-page {
+    .heroshot {
+		.yes-we-can {
+			a{
+				.background;
+				background: url('../images/yes-we-can-bg.png') no-repeat top left;
+				background-position: 0px 0; /* BG START POSITION */
+				&:hover{
+					.box_shadow;
+					background-position: -130px 0; /* BG END POSITION */
+					span{ /* CTA BAR:HOVER*/
+						opacity: 1;
+						bottom: 0;
+					}
+					.hero_title{
+						bottom: 40px;
+					}
+				}
+				.hero_title{
+					.cta_transition;
+					background: transparent url('../images/yes-we-can-title.png') no-repeat;
+					height:254px;
+					width:345px;
+					position:absolute;
+					top: 10px;
+					left:230px;
+				}
+				span{ /* CTA BAR */
+					.cta_transition;
+					.cta_bar;
+					background: url('../images/cta_white_bg.png') repeat;
+					color:@red;
+					font-family:"jubilat";
+					text-transform: lowercase;
+					font-size:26px;
+					font-weight:900;
+					text-align:center;
+				}
+			}
+		}
+		.fired-up {
+			a{
+				.background;
+				background: url('../images/fired-up-bg.png') no-repeat top left;
+				background-position: 0px 0; /* BG START POSITION */
+				&:hover{
+					.box_shadow;
+					background-position: 0 -130px; /* BG END POSITION */
+					span{ /* CTA BAR:HOVER*/
+						opacity: 1;
+						bottom: 0;
+					}
+					.hero_title{
+						bottom: 40px;
+					}
+				}
+				.hero_title{
+					.cta_transition;
+					background: transparent url('../images/fired-up-title.png') no-repeat;
+					height:82px;
+					width:178px;
+					position:absolute;
+					top:20%;
+					left:15%;
+				}
+				span{ /* CTA BAR */
+					.cta_transition;
+					.cta_bar;
+					background: url('../images/cta_red_bg.png') repeat;
+					color: #fff;
+					font-family:"jubilat";
+					text-transform: lowercase;
+					font-size:26px;
+					font-weight:900;
+					text-align:center;
+				}
+			}
+		}
+		.super-star {
+			a{
+				.background;
+				background: url('../images/super-star-bg.png') no-repeat top left;
+				background-position: 0 0; /* BG START POSITION */
+				&:hover{
+					.box_shadow;
+					background-position: 0 -50px; /* BG START POSITION */
+					span{ /* CTA BAR:HOVER*/
+						.cta_bar_hover;
+					}
+					.hero_title{
+						opacity:1;
+					}
+				}
+				.hero_title{
+					.cta_transition;
+					background: transparent url('../images/super-star-title.png') no-repeat;
+					height:30px;
+					width:155px;
+					position:absolute;
+					top: 20px;
+					left:20%;
+					opacity:0;
+				}
+				span{ /* CTA BAR */
+					.cta_transition;
+					.cta_bar;
+					background: url('../images/cta_blue_bg.png') repeat;
+					color: #fff;
+					font-family:"jubilat";
+					text-transform: lowercase;
+					font-size:26px;
+					font-weight:900;
+					text-align:center;
+				}
+			}
+		}
+		.donate {
+			a{
+				.background_full;
+				background: white;
+				background-position: 0 0; /* BG START POSITION */
+					z-index:999;
+				&:hover{
+					.box_shadow;
+					background-position: 0 0; /* BG START POSITION */
+					width:940px;
+					height:340px;
+					.hero_title{
+						opacity:0;
+					}
+				}
+				.hero_title{
+					.cta_transition;
+					background: transparent url('../images/donate-title.png') no-repeat;
+					height:60px;
+					width:225px;
+					position:absolute;
+					bottom: -10px;
+					left:18%;
+				}
+			}
+		}
+		.organizing-fellows {
+			a{
+				.background;
+				background: url('../images/organizing-fellows-bg.png') no-repeat top left;
+				background-position: 0 0; /* BG START POSITION */
+				&:hover{
+					.box_shadow;
+					background-position: 0 0; /* BG START POSITION */
+					span{ /* CTA FULL:HOVER*/
+						.cta_full_hover;
+						height:108px;
+						padding-top:40px;
+					}
+					.hero_title{
+						opacity:0;
+					}
+				}
+				.hero_title{
+					.cta_transition;
+					background: transparent url('../images/organizing-fellows-title.png') no-repeat;
+					height:60px;
+					width:225px;
+					position:absolute;
+					bottom: -10px;
+					left:18%;
+				}
+				span{ /* CTA FULL */
+					.cta_full_transition;
+					.cta_full;
+					background: url('../images/cta_blue_bg.png') repeat;
+					color: #fff;
+					font-family:"jubilat";
+					text-transform: lowercase;
+					font-size:26px;
+					font-weight:900;
+					text-align:center;
+				}
+			}
+		}
+		.cynics {
+			a{
+				.background;
+					background: url('../images/cynics-bg.png') no-repeat center;
+				&:hover{
+					.box_shadow;
+					background: url('../images/cynics-bg-motion.gif') no-repeat center;
+					.hero_title{
+						opacity:0;
+					}
+				}
+				.hero_title{
+					.cta_transition;
+					background: transparent url('../images/cynics-title.png') no-repeat;
+					height:68px;
+					width:89px;
+					position:absolute;
+					top: 15px;
+					left:10px;
+				}
+			}
+		}
+	}
+}
