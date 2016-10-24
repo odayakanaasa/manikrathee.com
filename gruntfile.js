@@ -97,24 +97,14 @@
           removeRedundantAttributes: true,
           useShortDoctype: true,
         },
-        files: {
-          // todo - set this to watch all main dirs, not individual files
-          '_site/barack-obama-contribute.html': '_site/barack-obama-contribute.html',
-          '_site/barack-obama.html': '_site/barack-obama.html',
-          '_site/blog-old.html': '_site/blog-old.html',
-          '_site/catalyst-iphone-theme.html': '_site/catalyst-iphone-theme.html',
-          '_site/hope-will-see-us-through.html': '_site/hope-will-see-us-through.html',
-          '_site/index.html': '_site/index.html',
-          '_site/livescribe.html': '_site/livescribe.html',
-          '_site/manik-rathee-blog.html': '_site/manik-rathee-blog.html',
-          '_site/manik-rathee-photography.html': '_site/manik-rathee-photography.html',
-          '_site/weeklyreads/index.html': '_site/weeklyreads/index.html',
-          '_site/universal-shanti.html': '_site/universal-shanti.html',
-          '_site/about/index.html': '_site/about/index.html',
-          '_site/resources/index.html': '_site/resources/index.html',
-          '_site/wrapskins.html': '_site/wrapskins.html',
-
-        },
+        files: [{
+          expand: true,     // Enable dynamic expansion.
+          cwd: '_site/',    // Src matches are relative to this path.
+          src: ['*.html'],  // Actual pattern(s) to match.
+          dest: '_site/',   // Destination path prefix.
+          ext: '.html',     // Dest filepaths will have this extension.
+          extDot: 'first'   // Extensions in filenames begin after the first dot
+        }],
       },
     },
 
