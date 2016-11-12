@@ -3974,11 +3974,13 @@ viewMode.init(), $(function(a) {
     b();
 });
 
-var $body = $("body");
+var $body = $("body"), $safetyPin = $body.find("#safety-pin-day-one");
 
 if (LastFMStatus.init({
     username: "mrathee"
-}), $("body").hasClass("sequential")) {
+}), $("body#home").length && ($body.addClass("safety-pin"), $safetyPin.on("webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend", function() {
+    $safetyPin.addClass("is-complete"), $body.removeClass("safety-pin");
+})), $("body").hasClass("sequential")) {
     var win = $("window"), current = 1, donateForm = $("#donate-form"), group1 = $("#select-amount-header, #amounts-cont"), group2 = $("#firstname-cont, #lastname-cont, #addr1-cont, #city-cont, #state_cd-cont, #zip-cont, #email-cont, #phone-cont"), group3 = $(".qd-info.cc_number_related.cc_expir_group_related, #cc-type-cont, #cc-number-cont, #cc-expiration-cont, #recurring-cont"), group4 = $("#personalized-content, .employer_related.occupation_related, #employer-cont, #occupation-cont, #employer-occupation-helper, #ovf-switch"), personalizedContent = $("#personalized-content"), next = $("#next"), replacementSubmit = $("#submit-button"), inputFields = $(":input"), amountInputs = $("#amounts input"), amountOther = $("#amount-cont-8 input"), breadcrumb = $("#breadcrumbs"), breadcrumbItem = $(".breadcrumb-item"), breadcrumbName = $("#breadcrumb-name"), breadcrumbPayment = $("#breadcrumb-payment"), breadcrumbEmployment = $("#breadcrumb-employment"), premature = $("span.premature"), goNext, overLimit, underLimit, hasSavedPayment, errorFullForm, inputTel = $("#amount-other, #phone, #zip, #cc_number"), inputEmail = $("#email"), inputChanges = $("#amount-other, #zip, #cc_number, #phone, #email"), $formContent = $("#donate-form-content"), runValidation = !0, minDonationLimit, amountOtherClean, keycode = !1;
     $("body").addClass("sequential-active"), $(window).resize(function() {
         adjustInputTypes();

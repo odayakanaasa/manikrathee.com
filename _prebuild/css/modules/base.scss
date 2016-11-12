@@ -249,6 +249,46 @@ picture.main-photo {
 
 
 
+// Safety Pin
+body.safety-pin {
+  height: 100%;
+  overflow: hidden;
+
+  #safety-pin-day-one {
+    @include animate;
+    @include fadeOut;
+    @include delay-custom(3s);
+  }
+}
+#safety-pin-day-one {
+  &.is-complete {
+    display: none;
+  }
+}
+#day-one {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+#ally {
+  position: absolute;
+  width: 100%;
+  top: 72%;
+  left: 0;
+  text-align: center;
+  border: none;
+
+  .be-an-ally {
+    display: block;
+    font-weight: bold;
+    @include font-size(18);
+    border: none;
+  }
+
+  .add-this {
+    border-bottom: 1px solid #CBCBCB;
+  }
+}
 
 
 

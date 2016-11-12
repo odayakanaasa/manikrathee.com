@@ -1,12 +1,21 @@
 
 var $body = $('body');
-
+var $safetyPin = $body.find('#safety-pin-day-one');
 
 LastFMStatus.init({
     username: "mrathee"
 });
 
 
+
+
+if ($('body#home').length) {
+  $body.addClass('safety-pin');
+  $safetyPin.on( 'webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function(){
+      $safetyPin.addClass('is-complete');
+      $body.removeClass('safety-pin');
+  });
+}
 
 
 
