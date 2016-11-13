@@ -68,7 +68,6 @@
     uglify: {
       options: {
         mangle: true,
-        beautify: true,
       },
       javascript: {
         files: {
@@ -219,7 +218,7 @@
 
   grunt.registerTask('minify',
     [
-      'sass','concat','uglify:all'
+      'sass','concat','uglify'
     ]
   );
 
