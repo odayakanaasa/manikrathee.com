@@ -26,27 +26,3 @@ body.safety-pin {
   text-align: center;
 }
 
-#ally {
-  position: absolute;
-  width: 100%;
-  top: 72%;
-  left: 0;
-  text-align: center;
-  border: none;
-
-  .be-an-ally {
-    display: block;
-    font-weight: bold;
-    @include font-size(18);
-    border: none;
-  }
-
-  .add-this {
-    border-bottom: 1px solid #CBCBCB;
-  }
-}
-
-
-
-
-
