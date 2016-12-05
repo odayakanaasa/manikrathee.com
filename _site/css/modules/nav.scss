@@ -78,3 +78,44 @@
   text-align: center;
   line-height: 1rem;
 }
+
+
+// current
+body#home {
+  .nav--home {
+    color: $black;
+    border-bottom-color: $black;
+  }
+}
+body.blog-index,
+body.blog-post {
+  .nav--blog {
+    color: $black;
+    border-bottom-color: $black;
+  }
+}
+
+
+
+body.photo-index,
+body.photo-blog-post {
+  .nav--photos {
+    color: $black;
+    border-bottom-color: $black;
+  }
+}
+
+body.resources {
+  .nav--resources {
+    color: $black;
+    border-bottom-color: $black;
+  }
+}
+
+body.the-library {
+  .nav--the-library {
+    color: $black;
+    border-bottom-color: $black;
+  }
+}
+
