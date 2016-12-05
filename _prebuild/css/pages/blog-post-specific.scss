@@ -83,10 +83,20 @@
   }
 }
 
+
 .photo-blog-post {
   &.maxi-chic {
     .page-photo {
       background-position: 50% 75%;
+    }
+  }
+}
+
+
+.photo-blog-post {
+  &.white-scallop {
+    .page-photo {
+      background-position: 50% 35%;
     }
   }
 }
