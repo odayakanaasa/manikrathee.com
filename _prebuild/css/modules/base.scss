@@ -247,11 +247,11 @@ picture.main-photo {
 }
 
 
-.half {
+.grid--half {
   width: 49.5%;
   float: left;
 
-  & + .half {
+  & + .grid--half {
     margin-left: 1%;
     @include clearfix;
   }
