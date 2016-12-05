@@ -9,15 +9,6 @@ LastFMStatus.init({
 
 
 
-if ($('body#home').length) {
-  $body.addClass('safety-pin');
-  $safetyPin.on( 'webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function(){
-      $safetyPin.addClass('is-complete');
-      $body.removeClass('safety-pin');
-  });
-}
-
-
 
 // function animatedIcons() {
 //   /* Icon 11 */
