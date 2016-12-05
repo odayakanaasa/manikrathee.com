@@ -130,7 +130,7 @@
         },
         files: [{
           expand: true,
-          src: ['_site/img/**.{png,jpg,gif}'],
+          src: ['_site/img/**/*.{png,jpg,gif}'],
           dest: '_site/img/',
         }]
       }
