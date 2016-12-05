@@ -254,5 +254,9 @@ picture.main-photo {
   & + .grid--half {
     margin-left: 1%;
     @include clearfix;
+
+    & + * {
+      @include clearfix;
+    }
   }
 }
