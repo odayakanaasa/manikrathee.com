@@ -81,12 +81,6 @@
 
 
 // current
-body#home {
-  .nav--home {
-    color: $black;
-    border-bottom-color: $black;
-  }
-}
 body.blog-index,
 body.blog-post {
   .nav--blog {
@@ -94,7 +88,6 @@ body.blog-post {
     border-bottom-color: $black;
   }
 }
-
 
 
 body.photo-index,
