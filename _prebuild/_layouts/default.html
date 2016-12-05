@@ -11,10 +11,6 @@
         {{ page.title | slugify }}
       ">
 
-    {% if page.home %}
-    {% include safety-pin.html %}
-    {% endif %}
-
     {% if page.wip %}
       <aside id="work-in-progress">
         <img src="/img/wip/1.gif" alt="Under Construction Animated Gif, 1 of 2">
