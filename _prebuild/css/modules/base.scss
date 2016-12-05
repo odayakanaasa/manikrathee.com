@@ -247,3 +247,12 @@ picture.main-photo {
 }
 
 
+.half {
+  width: 49.5%;
+  float: left;
+
+  & + .half {
+    margin-left: 1%;
+    @include clearfix;
+  }
+}

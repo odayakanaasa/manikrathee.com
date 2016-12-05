@@ -7,7 +7,7 @@
         {% if page.page-subtype == 'blog-index' %}blog-index{% endif %}
         {% if page.page-subtype == 'blog-post' %}blog-post{% endif %}
         {% if page.page-subtype == 'photo-index' %}photo-index{% endif %}
-        {% if page.category == 'photo' %}photo-blog photo-blog-post{% endif %}
+        {% if page.page-subtype == 'photo-post' %}photo-blog photo-blog-post{% endif %}
         {{ page.title | slugify }}
       ">
 
@@ -29,10 +29,7 @@
 
         {% if page.page-type == 'blog' %}
           {% if page.img %}
-            <picture class="page-photo">
-             <source srcset="/img/{{ page.category }}{{ page.img }}" media="(min-width: 600px)">
-             <img src="/img/{{ page.category }}{{ page.img }}" alt="{{ page.title }}">
-            </picture>
+            <aside class="page-photo" style="background-image: url('/img/{{ page.category }}{{ page.img }}');"></aside>
           {% endif %}
           <article id="post-container">
         {% endif %}

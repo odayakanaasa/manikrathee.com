@@ -1183,6 +1183,18 @@ picture.main-photo {
   display: block;
   margin-bottom: 8rem; }
 
+.half {
+  width: 49.5%;
+  float: left; }
+  .half + .half {
+    margin-left: 1%;
+    zoom: 1; }
+    .half + .half:before, .half + .half:after {
+      content: "";
+      display: table; }
+    .half + .half:after {
+      clear: both; }
+
 button,
 .button {
   display: inline-block;
@@ -2199,7 +2211,9 @@ figcaption,
   display: block;
   width: 100%;
   max-width: 100%;
-  margin: 0 0 6rem 0; }
+  margin: 0 0 6rem 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
   @media (min-width: 500px) {
     .page-photo {
       margin-left: -4rem;
@@ -2514,6 +2528,9 @@ body.safety-pin {
   .blog-post.uber-vs-taxis .right {
     width: 50%;
     margin-top: 0; } }
+
+.photo-blog-post.maxi-chic .page-photo {
+  background-position: 50% 75%; }
 
 .photo-stat-sidebar {
   width: 150px;

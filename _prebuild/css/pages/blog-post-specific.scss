@@ -83,3 +83,11 @@
   }
 }
 
+.photo-blog-post {
+  &.maxi-chic {
+    .page-photo {
+      background-position: 50% 75%;
+    }
+  }
+}
+
