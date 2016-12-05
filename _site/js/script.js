@@ -549,7 +549,6 @@ viewMode.init();
 
 ;
 var $body = $('body');
-var $safetyPin = $body.find('#safety-pin-day-one');
 
 LastFMStatus.init({
     username: "mrathee"
