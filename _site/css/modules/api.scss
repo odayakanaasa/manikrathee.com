@@ -18,9 +18,15 @@
 }
 
 .instagram-photo {
-  float: left;
-  width: 25%;
+  width: 100%;
   list-style: none;
+  @include box;
+
+  @include mq(500px) {
+    float: left;
+    width: 25%;
+    padding-right: 0.5rem;
+  }
 }
 
 
