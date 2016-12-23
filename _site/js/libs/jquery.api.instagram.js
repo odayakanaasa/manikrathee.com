@@ -11,7 +11,7 @@ if ( $('body').attr('id') === 'home' ){
     target: 'instagram-api-bar',
     limit: 8,
     links: 1,
-    resolution: 'standard_resolution',
+    resolution: 'low_resolution', // low_resolution or standard_resolution
     template: '<li class="instagram-photo" data="{{id}}"><a class="instagram-link no-border" href="{{link}}" title="{{caption}}"><img src="{{image}}" alt="{{caption}}"></a></li>',
  });
 
