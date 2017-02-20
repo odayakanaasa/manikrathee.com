@@ -8,8 +8,8 @@ gems:
 #timezone:    nil
 encoding       : 'utf-8'
 
-host           : manik.dev
-# host           : 127.0.0.1
+# host           : manik.dev
+host           : 127.0.0.1
 port           : 4000
 source         : _prebuild/
 # permalink    : /blog/posts/:year/:month/:day/:title.html
