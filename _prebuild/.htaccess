@@ -25,7 +25,7 @@ Redirect /iOS http://www.manikrathee.com/catalyst
 Redirect /lastfm http://www.last.fm/user/mrathee
 Redirect /linkedin http://www.linkedin.com/in/manikrathee
 Redirect /manikbot https://twitter.com/manikbot
-Redirect /pocket https://getpocket.com/@Mrathee
+Redirect /pocket https://getpocket.com/@manikrathee
 Redirect /photography /photos
 Redirect /reading https://twitter.com/manikisreading
 Redirect /readingam https://www.reading.am/ManikRathee/
