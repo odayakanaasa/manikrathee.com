@@ -219,14 +219,21 @@
 
 
 
-#spotify-api-bar {
-  display: block;
-  padding-top: 1rem;
-  font-size: 1.4rem;
-  text-align: center;
+#spotify-api-container {
+  a,
+  p {
+    @include transition(opacity 0.35s ease-in-out);
+  }
 
-  span {
+  p {
     display: block;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+
+    span {
+      display: block;
+    }
   }
 }
 
@@ -407,23 +414,20 @@
     }
 
     #spotify-api-container {
-      .icon,
-      #spotify-api-bar {
-        @include transition(opacity 0.25s ease-in-out);
+
+      p {
+        display: inline-block;
+        padding-top: 0.7rem;
+        padding-left: 1rem;
+        text-align: left;
+        width: calc(100% - 80px);
+
+        span {
+          display: inline;
+        }
       }
     }
 
-    #spotify-api-bar {
-      display: inline-block;
-      padding-top: 0.7rem;
-      padding-left: 1rem;
-      text-align: left;
-      width: calc(100% - 80px);
-
-      span {
-        display: inline;
-      }
-    }
 
     .main-nav-list {
       line-height: 2.2rem;
