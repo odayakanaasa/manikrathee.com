@@ -58,12 +58,12 @@ var LastFMStatus = {
   updateView: function() {
     var status, message,
     userlink = ' ( <a target="__blank" href="http://www.last.fm/user/' + this.username + '">last.fm</a> )';
-    var statusBox = document.getElementById('spotify-api-bar');
+    var statusBox = document.getElementById('spotify-api-container');
     if (!statusBox) {
       var view = document.createElement('div');
-      view.id  = "spotify-api-bar";
+      view.id  = "spotify-api-container";
       document.getElementById('main-footer').appendChild(view);
-      statusBox = document.getElementById('spotify-api-bar');
+      statusBox = document.getElementById('spotify-api-container');
     }
     if (this.trackInfo.error) {
       status   = "Error: ";
@@ -73,9 +73,6 @@ var LastFMStatus = {
       message  = '<a href="http://www.manikrathee.com/spotify/" class="spotify-link no-border" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Spotify" itemprop="url"><i class="icon icon--spotify-circle"></i><p>Listening to: <span>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</span></p></div></a>';
     }
 
-    if ( $('body').attr('id') === 'home' ){
-      statusBox.innerHTML = message;
-    }
-
+    statusBox.innerHTML = message; // Output onto footer
   }
 };
