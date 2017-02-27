@@ -70,7 +70,7 @@ var LastFMStatus = {
       message  = '<strong>'+this.trackInfo.message+'</strong>';
     } else {
       status = this.trackInfo.playing ? 'Now Playing: ' : 'Last Played: ';
-      message  = '<a href="http://www.manikrathee.com/spotify/" class="spotify-link no-border" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Spotify" itemprop="url">Listening to: <span>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</span></div></a>';
+      message  = '<a href="http://www.manikrathee.com/spotify/" class="spotify-link no-border" title="@ManikRathee is listening to "' + this.trackInfo.artist + ' on Spotify" itemprop="url"><i class="icon icon--spotify-circle"></i><p>Listening to: <span>' + this.trackInfo.artist + ' - ' + this.trackInfo.song + '</span></p></div></a>';
     }
 
     if ( $('body').attr('id') === 'home' ){

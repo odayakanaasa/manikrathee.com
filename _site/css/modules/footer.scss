@@ -217,6 +217,19 @@
   }
 }
 
+
+
+#spotify-api-bar {
+  display: block;
+  padding-top: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+
+  span {
+    display: block;
+  }
+}
+
 #weekly-reads-tout {
   display: block;
   width: 230px;
@@ -258,55 +271,55 @@
 }
 
 
-#footer-weekly-reads-signup {
-  @include mq(768px) {
-    margin-left: 4.7rem;
-  }
+// #footer-weekly-reads-signup {
+//   @include mq(768px) {
+//     margin-left: 4.7rem;
+//   }
 
-  > * {
-    @include box;
-  }
+//   > * {
+//     @include box;
+//   }
 
-  li {
-    list-style: none;
-  }
+//   li {
+//     list-style: none;
+//   }
 
-  input[type=email] {
-    background: none;
-    width: 100%;
-    height: 30px;
-    margin: 0;
-    padding-right: 1rem;
-    @include font-size(14);
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 30;
-    color: $white;
-    outline: none;
-    border: none;
-    border-bottom: 4px solid #f2f2f2;
-    @include box;
-    transition: border $transition;
+//   input[type=email] {
+//     background: none;
+//     width: 100%;
+//     height: 30px;
+//     margin: 0;
+//     padding-right: 1rem;
+//     @include font-size(14);
+//     font-weight: 500;
+//     letter-spacing: 1px;
+//     line-height: 30;
+//     color: $white;
+//     outline: none;
+//     border: none;
+//     border-bottom: 4px solid #f2f2f2;
+//     @include box;
+//     transition: border $transition;
 
-    &:focus {
-      border-bottom: 4px solid #fff;
-    }
-  }
+//     &:focus {
+//       border-bottom: 4px solid #fff;
+//     }
+//   }
 
-  #submit {
-    margin-top: 1rem;
-    width: 100%;
-    background: none;
-  }
+//   #submit {
+//     margin-top: 1rem;
+//     width: 100%;
+//     background: none;
+//   }
 
-  @include mq(768px) {
-    input[type=email],
-    #submit {
-      width: 100%;
-      max-width: 200px;
-    }
-  }
-}
+//   @include mq(768px) {
+//     input[type=email],
+//     #submit {
+//       width: 100%;
+//       max-width: 200px;
+//     }
+//   }
+// }
 
 
 
@@ -393,6 +406,24 @@
       }
     }
 
+    #spotify-api-container {
+      .icon,
+      #spotify-api-bar {
+        @include transition(opacity 0.25s ease-in-out);
+      }
+    }
+
+    #spotify-api-bar {
+      display: inline-block;
+      padding-top: 0.7rem;
+      padding-left: 1rem;
+      text-align: left;
+      width: calc(100% - 80px);
+
+      span {
+        display: inline;
+      }
+    }
 
     .main-nav-list {
       line-height: 2.2rem;

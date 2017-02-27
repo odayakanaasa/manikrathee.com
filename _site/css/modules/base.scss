@@ -149,7 +149,6 @@ img {
 }
 
 
-
 [id=main] { // shadow-container
   display: block;
   max-width: 1280px;
@@ -214,7 +213,7 @@ img {
 
   .view-mode--dark & {
     opacity: 0;
-  transition: none;
+    transition: none;
   }
 }
 

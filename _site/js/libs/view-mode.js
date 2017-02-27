@@ -1,9 +1,7 @@
 // View Mode Toggle
 
-var
-    viewModeContainer = $('#view-mode--container')
-  , viewModeToggle    = $('#view-mode--toggle')
-  ;
+var viewModeContainer = $('#view-mode--container');
+var viewModeToggle    = $('#view-mode--toggle');
 
 var viewMode = {
 
@@ -15,6 +13,7 @@ var viewMode = {
 
   addEventListeners: function() {
     var _this = this;
+
     viewModeToggle.on('click', function() {
       _this.eval();
     });
