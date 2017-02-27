@@ -229,7 +229,7 @@
 
   grunt.registerTask('production',
     [
-      'jekyll','sass','autoprefixer','concat','removelogging','uglify','cssmin','imagemin','pagespeed'
+      'jekyll','sass','autoprefixer','concat','removelogging','uglify','cssmin','pagespeed'
     ]
   );
 
