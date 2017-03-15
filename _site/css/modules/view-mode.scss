@@ -45,10 +45,6 @@
     path {
       fill: $grey;
       @include transition( fill $transition );
-
-      .view-mode--dark & {
-        // fill: $grey;
-      }
     }
   }
 }
