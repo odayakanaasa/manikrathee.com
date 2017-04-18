@@ -47,7 +47,11 @@ body {
   }
 }
 
-
+#main > *,
+#footer {
+  position: relative;
+  z-index: 2;
+}
 
 
 dl, menu, ol, ul {
@@ -196,7 +200,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 0;
   opacity: 1;
   pointer-events: none;
   background-image: url('../img/bg-mobile.png');

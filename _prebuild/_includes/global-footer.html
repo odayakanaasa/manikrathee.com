@@ -42,18 +42,18 @@
   </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/js/libs/jquery-2.1.1.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-2.1.1.min.js" defer><\/script>')</script>
 
   {% if page.page-type == 'blog' %}
     {% if page.data == 1 %}
-      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script src="https://d3js.org/d3.v4.min.js" defer></script>
     {% endif%}
   {% endif%}
 
-  <script src="/js/script.js"></script>
+  <script src="/js/script.js" defer></script>
 
   {% if page.script %}
-    <script src="js/blog/script.js"></script>
+    <script src="js/blog/script.js" defer></script>
   {% endif %}
 
 

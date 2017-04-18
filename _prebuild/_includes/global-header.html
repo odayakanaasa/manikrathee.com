@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
+<!--
+    __  ___            _ __      ____        __  __
+   /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
+  / /|_/ / __ `/ __ \/ / //_/  / /_/ / __ `/ __/ __ \/ _ \/ _ \
+ / /  / / /_/ / / / / / ,\    / _, _/ /_/ / /_/ / / /  __/  __/
+/_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/
+
+The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
+https://github.com/manikrathee/manikrathee.com
+-->
+
 <head>
 
   <meta charset="UTF-8">
@@ -36,15 +47,12 @@
 
   <link rel="canonical" href="http://www.manikrathee.com{{ page.url }}">
 
-  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-  <link rel="preconnect" href="//cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="//www.google-analytics.com">
-  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <link rel="prefetch" href="//cdnjs.cloudflare.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="preconnect" href="//fonts.googleapis.com">
+  <!-- dns-prefetch-->
 
   {% if site.data.build.optimizely == true %}
-    <link rel="dns-prefetch" href="//cdn.optimizely.com/js/2688330005.js">
+    <link rel="prefetch" href="//cdn.optimizely.com/js/2688330005.js">
   {% endif %}
 
 
@@ -72,8 +80,8 @@
   <script src="//cdn.optimizely.com/js/2688330005.js"></script>
   {% endif %}
 
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,300italic,400italic,700|Source+Serif+Pro:400,700" rel="stylesheet prefetch" type="text/css">
+  <link rel="stylesheet prefetch" href="/css/style.css" type="text/css">
 
   <script src="/js/libs/modernizr.js" async></script>
 
@@ -84,39 +92,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/root/apple-touch-icon-72x72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/root/apple-touch-icon-114x114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/root/apple-touch-icon-144x144-precomposed.png">
-
-
-  {% if page.page-type == 'blog' %}
-    {% if page.link-color %}
-    <style type="text/css">
-      /*#body a, .body a, footer a{
-        color: #{{ page.link-color }};
-      }
-      @media (min-width: 768px) {
-        #body:hover a, .body:hover a, footer:hover a{
-          color: #{{ page.link-color }};
-        }
-        #body:hover a:hover, .body:hover a:hover, footer:hover a:hover{
-          color: #{{ page.link-color-hover }};
-        }
-      }*/
-    </style>
-    {% endif %}
-  {% endif %}
 </head>
-
-
-
-<!--
-    __  ___            _ __      ____        __  __
-   /  |/  /___ _____  (_) /__   / __ \____ _/ /_/ /_  ___  ___
-  / /|_/ / __ `/ __ \/ / //_/  / /_/ / __ `/ __/ __ \/ _ \/ _ \
- / /  / / /_/ / / / / / ,\    / _, _/ /_/ / /_/ / / /  __/  __/
-/_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/
-
-The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
-https://github.com/manikrathee/manikrathee.com
--->
 
 
 <script type="text/javascript">
