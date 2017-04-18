@@ -82,22 +82,35 @@
 
 // current
 
-.main-nav {
 
-  body.blog-index &,
-  body.blog-post &{
+  body.blog-index,
+  body.blog-post {
     .nav--blog {
       color: $black;
       border-bottom-color: $black;
     }
   }
+  body.blog-index.view-mode--dark,
+  body.blog-post.view-mode--dark {
+    .nav--blog {
+      color: $white;
+      border-bottom-color: $white;
+    }
+  }
 
 
-  body.photo-index &,
-  body.photo-blog-post & {
+  body.photo-index,
+  body.photo-blog-post {
     .nav--photos {
       color: $black;
       border-bottom-color: $black;
+    }
+  }
+  body.photo-index.view-mode--dark,
+  body.photo-blog-post.view-mode--dark {
+    .nav--photos {
+      color: $white;
+      border-bottom-color: $white;
     }
   }
 
@@ -108,6 +121,15 @@
       border-bottom-color: $black;
     }
   }
+  body.resources.view-mode--dark {
+    .nav--resources {
+      color: $white;
+      border-bottom-color: $white;
+    }
+  }
+
+
+
 
   body.the-library {
     .nav--the-library {
@@ -115,7 +137,12 @@
       border-bottom-color: $black;
     }
   }
+  body.the-library.view-mode--dark {
+    .nav--the-library {
+      color: $white;
+      border-bottom-color: $white;
+    }
+  }
 
-}
 
 

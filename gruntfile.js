@@ -34,9 +34,8 @@
        },
        main: {
         src: [
-          '_prebuild/js/libs/analytics.js',
-          '_prebuild/js/libs/scrolldepth.js',
           '_prebuild/js/libs/mo.min.js',
+          '_prebuild/js/libs/anime.min.js',
           '_prebuild/js/libs/animation-control.js',
           // '_prebuild/js/libs/jquery.withinViewport_base.js',
           // '_prebuild/js/libs/jquery.withinViewport.js',
@@ -53,6 +52,8 @@
           '_prebuild/js/libs/footer.js',
           '_prebuild/js/libs/script.js',
           '_prebuild/js/sequential.js',
+          '_prebuild/js/libs/analytics.js',
+          '_prebuild/js/libs/scrolldepth.js',
         ],
         dest: '_site/js/script.js',
         nonull: true,

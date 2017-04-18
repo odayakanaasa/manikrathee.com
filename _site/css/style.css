@@ -1209,6 +1209,17 @@ picture.main-photo {
       .grid--half + .grid--half + *:after {
         clear: both; }
 
+.text-animator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #000;
+  pointer-events: none;
+  opacity: 0; }
+
 button,
 .button {
   display: inline-block;
@@ -1705,23 +1716,41 @@ figcaption,
   text-align: center;
   line-height: 1rem; }
 
-body.blog-index .main-nav .nav--blog,
-body.blog-post .main-nav .nav--blog {
+body.blog-index .nav--blog,
+body.blog-post .nav--blog {
   color: #000;
   border-bottom-color: #000; }
 
-body.photo-index .main-nav .nav--photos,
-body.photo-blog-post .main-nav .nav--photos {
+body.blog-index.view-mode--dark .nav--blog,
+body.blog-post.view-mode--dark .nav--blog {
+  color: #fff;
+  border-bottom-color: #fff; }
+
+body.photo-index .nav--photos,
+body.photo-blog-post .nav--photos {
   color: #000;
   border-bottom-color: #000; }
 
-.main-nav body.resources .nav--resources {
+body.photo-index.view-mode--dark .nav--photos,
+body.photo-blog-post.view-mode--dark .nav--photos {
+  color: #fff;
+  border-bottom-color: #fff; }
+
+body.resources .nav--resources {
   color: #000;
   border-bottom-color: #000; }
 
-.main-nav body.the-library .nav--the-library {
+body.resources.view-mode--dark .nav--resources {
+  color: #fff;
+  border-bottom-color: #fff; }
+
+body.the-library .nav--the-library {
   color: #000;
   border-bottom-color: #000; }
+
+body.the-library.view-mode--dark .nav--the-library {
+  color: #fff;
+  border-bottom-color: #fff; }
 
 #main-footer {
   position: relative;
@@ -2233,6 +2262,7 @@ body.photo-blog-post .main-nav .nav--photos {
   display: block;
   width: 100%;
   max-width: 100%;
+  background-size: cover;
   margin: 0 0 6rem 0;
   background-position: 50% 50%;
   background-repeat: no-repeat; }
