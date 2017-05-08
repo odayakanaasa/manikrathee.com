@@ -1,9 +1,10 @@
 name: 'Manik Rathee'
 description: ' &emdash; Designer&#007C Photographer'
-url: http://manikrathee.com/
+url: http://manikrathee.com
 
 gems:
   - jekyll-typogrify
+  - jekyll-sitemap
 
 #timezone:    nil
 encoding       : 'utf-8'
