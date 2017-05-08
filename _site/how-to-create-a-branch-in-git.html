@@ -35,11 +35,11 @@ https://github.com/manikrathee/manikrathee.com
 
   
     
-      <meta name="twitter:title"  property="og:title" content='How to delete a Git tag - a post by Manik Rathee | Designer, Engineer, Photographer' />
+      <meta name="twitter:title"  property="og:title" content='How to work with branches in git - a post by Manik Rathee | Designer, Engineer, Photographer' />
     
   
 
-  <link rel="canonical" href="http://www.manikrathee.com/how-to-delete-a-tag-in-git.html">
+  <link rel="canonical" href="http://www.manikrathee.com/how-to-create-a-branch-in-git.html">
 
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -55,7 +55,7 @@ https://github.com/manikrathee/manikrathee.com
   <title>
   
     
-      How to delete a Git tag - a post by Manik Rathee | Designer, Photographer
+      How to work with branches in git - a post by Manik Rathee | Designer, Photographer
     
   
   </title>
@@ -94,7 +94,7 @@ https://github.com/manikrathee/manikrathee.com
         blog-post
         
         
-        how-to-delete-a-git-tag
+        how-to-work-with-branches-in-git
       ">
 
     
@@ -177,7 +177,7 @@ https://github.com/manikrathee/manikrathee.com
       <svg id="header-bar" viewBox="0 0 269 419" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 402.5l236-386" stroke="#7393CA" stroke-width="24" fill="currentColor" fill-rule="evenodd" stroke-linecap="square" opacity=".2"/></svg>
       
       <h1 id="page-title">
-        How to delete a Git&nbsp;tag
+        How to work with branches in&nbsp;git
       </h1>
     </div>
     
@@ -205,54 +205,45 @@ https://github.com/manikrathee/manikrathee.com
 - how to push a deleted tag
 -->
 
-<p>If you use tags in your projects, you probably have encountered some issue (typos, perhaps) that forced you to remove the tag. Here are a few steps that will help you navigate the problems associated with local/remote tags and managing instances of each, along with a few steps help get you familiar with tags in general.</p>
+<p>When working with git, you will frequently need to create working branches to put your changes on. Here's a quick guide to get you started.</p>
 
-<p>For our code examples, let's use "<em>released/aug2016</em>" as the tag name.</p>
+<p>For our code examples, we'll follow the user/id/task pattern: "<em>u/mrathee/contact-form-fix</em>" as the branch name.</p>
 
-<h3 class="medium-heading">To create your&nbsp;tag:</h3>
+<h3 class="medium-heading">To create your&nbsp;branch:</h3>
+<p>Make sure your current branch is up to date before you create your branch.</p>
 <pre>
   <code class="json">
-  git tag released/aug2016
+  git pull --rebase
   </code>
 </pre>
+<pre>
+  <code class="json">
+  git checkout -b u/mrathee/contact-form-fix
+  </code>
+</pre>
+<p><em>Rather than running git branch then git checkout, you can pass "-b" to checkout combine the steps.</em></p>
 
-<h3 class="medium-heading">To push local tags&nbsp;to&nbsp;remote:</h3>
+<h3 class="medium-heading">To push your local branch&nbsp;to&nbsp;remote:</h3>
+<p><em>-u</em> will set your branch to track the remote. Just make sure your git config push.default value is set to upstream.</p>
 <pre>
   <code class="git">
-  git push --tags
+  git push -u origin u/mrathee/contact-form-fix
   </code>
 </pre>
 
-<p>Another option, <a href="http://stackoverflow.com/questions/5195859/push-a-tag-to-a-remote-repository-using-git" title="StackOverflow: Push a tag to a remote repository using Git?" itemprop="url">as noted on StackOverflow</a>, links local and remote tags:</p>
+<h3 class="medium-heading">To delete a local&nbsp;branch:</h3>
 <pre>
   <code class="git">
-  git push --follow-tags
+    git branch -d u/mrathee/contact-form-fix
   </code>
 </pre>
 
-<h3 class="medium-heading">To delete a local&nbsp;tag:</h3>
+<h3 class="medium-heading">To delete a remote&nbsp;branch:</h3>
 <pre>
   <code class="git">
-  git tag -d released/aug2016
+    git push origin --delete u/mrathee/contact-form-fix
   </code>
 </pre>
-
-<h3 class="medium-heading">To delete a remote&nbsp;tag:</h3>
-<p><em>Delete the tag locally, like above</em></p>
-
-<pre>
-  <code class="git">
-  git tag -d released/aug2016
-
-  git push origin :refs/tags/released/aug2016
-  </code>
-</pre>
-
-<aside class="recommendation-card recommendation--a-book-apart-git-for-humans">
-  <img class="recommendation-card--image" src="/img/library/books/git-for-humans.jpg" alt="Git for Humans">
-  <h4 class="recommendation-card--title small-heading">Interested in learning more about&nbsp;git?</h4>
-  <p>Check out "<a href="https://abookapart.com/products/git-for-humans" title="Git for Humans" itemprop="url">Git for Humans</a>," by <a href="https://twitter.com/ddemaree" title="David Demaree on Twitter: @ddemaree" itemprop="url">David Demaree</a> and <a href="https://twitter.com/abookapart" title="A Book Apart on Twitter: @abookapart" itemprop="url">A&nbsp;Book&nbsp;Apart</a>.</p>
-</aside>
 
 
 
@@ -266,11 +257,12 @@ also, add "writing" or  "photos" category to the post title in these next/previo
 -->
 <!--
 
-<p class="pre-heading">Next Post</p>
-<a href="/how-to-create-a-branch-in-git.html" title="next Post: How to create a branch in git" itemprop="url">
-  <h3>How to create a branch in git</h3>
+
+<p class="pre-heading">Previous Post</p>
+<a href="/how-to-delete-a-tag-in-git.html" title="Previous Post: How to delete a Git tag" itemprop="url">
+  <h3>How to delete a Git tag</h3>
   <p></p>
-  <p class="date">May 07 2017</p>
+  <p class="date">August 03 2016</p>
 </a>
 
 
