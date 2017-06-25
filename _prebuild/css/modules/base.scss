@@ -61,14 +61,22 @@ dl, menu, ol, ul {
 
 .video-wrapper {
   position: relative;
-  width: 100%;
-  padding-top: 56.25%;
+  max-width: none;
+  width: calc(100% + (#{$spacer-small} * 2));
+  margin-left: -$spacer-small;
+  padding-top: 65.25%;
 
-  @include mq(1400px) {
-    width: calc(100% + 20rem);
-    margin-left: -20rem;
-    padding-top: calc(56.35% + 20rem);
+  @include mq(500px) {
+    margin-left: -$spacer;
+    width: calc(100% + (#{$spacer} * 2));
   }
+
+  @include mq(960px) {
+    margin-left: -($spacer-large * 2);
+    width: calc(100% + (#{$spacer-large} * 4));
+    padding-top: 72.25%;
+  }
+
 }
 
 iframe.video {

@@ -9,36 +9,25 @@
   }
 
   &--photo {
-    @include mq(400px) {
-      // make images full width
-      width: calc(100% + 6.2rem);
-      margin-left: -3.1rem;
-    }
+    max-width: none;
+    margin-left: -$spacer-small;
+    width: calc(100% + (#{$spacer-small} * 2));
 
     @include mq(500px) {
-      width: calc(100% + 8rem);
-      margin-left: -4rem;
-    }
-
-    @include mq(768px) {
-      width: 140%;
-      margin-left: calc(40% - 73%);
-      max-width: none;
+      margin-left: -$spacer;
+      width: calc(100% + (#{$spacer} * 2));
     }
 
     @include mq(960px) {
-      width: calc(100% + 30%);
-      margin-left: -30%;
+      margin-left: -($spacer-large);
+      width: calc(100% + (#{$spacer-large} * 2));
     }
 
-    @include mq(1040px) {
-      width: calc(100% + 45%);
-      margin-left: -45%;
-    }
   }
 }
 
 .post-list--item { // li
+  // NOT PHOTOS
   display: block;
   width: 100%;
 
@@ -109,7 +98,16 @@
   display: block;
   margin-bottom: 1%;
 
+  &.extra-wide {
+    @include mq(960px) {
+      margin-left: -($spacer-large) * 2;
+      width: calc(100% + (#{$spacer-large} * 4));
+    }
+  }
+
+
   img {
     display: block;
+    width: 100%;
   }
 }

@@ -2,6 +2,7 @@
 
 	<body{% if page.body-id %} id="{{ page.body-id }}"{% endif %}
       class="
+        light
         {{ page.body-class }}
         {% if page.page-type == 'blog' %}blog{% endif %}
         {% if page.page-subtype == 'blog-index' %}blog-index{% endif %}
@@ -31,8 +32,9 @@
           {% if page.img %}
             <aside class="page-photo" style="background-image: url('/img/{{ page.category }}{{ page.img }}');"></aside>
           {% endif %}
-          <article id="post-container">
+          <article id="post-container"{% if page.page-subtype == 'photo-post' %}class="photo-post-container"{% endif %}>
         {% endif %}
+
 
 
         {{ content }}

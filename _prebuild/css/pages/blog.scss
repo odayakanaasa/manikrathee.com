@@ -2,26 +2,67 @@
 
 
 #post-container {
-  @include mq(768px) {
-    width: auto;
-    max-width: 775px;
-    margin-left: 20%;
+
+  &:not(.photo-post-container) {
+    @include mq(768px) {
+      width: auto;
+      max-width: 775px;
+      margin-left: 20%;
+    }
+    @include mq(960px) {
+      margin-left: 25%;
+    }
+
+    @include mq(1140px) {
+      margin-left: 30%;
+    }
+
+    @include mq(1240px) {
+      margin-left: 35%;
+    }
   }
 
-  @include mq(960px) {
-    margin-left: 25%;
+  &.photo-post-container {
+    & > h1,
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6,
+    & > p,
+    & > blockquote,
+    & > a {
+      @include mq(768px) {
+        margin-left: 20%;
+      }
+      @include mq(960px) {
+        margin-left: 25%;
+      }
+
+      @include mq(1140px) {
+        margin-left: 30%;
+      }
+
+      @include mq(1240px) {
+        margin-left: 35%;
+      }
+    }
   }
 
-  @include mq(1140px) {
-    margin-left: 30%;
-  }
-
-  @include mq(1240px) {
-    margin-left: 35%;
-  }
 }
 
 .cross-share {
-
   @include box;
 }
+
+
+body.vsco-the-world-through-a-viewfinder {
+  .post-gallery {
+    @include mq(600px) {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+

@@ -1046,13 +1046,19 @@ dl, menu, ol, ul {
 
 .video-wrapper {
   position: relative;
-  width: 100%;
-  padding-top: 56.25%; }
-  @media (min-width: 1400px) {
+  max-width: none;
+  width: calc(100% + (3.0769230769rem * 2));
+  margin-left: -3.0769230769rem;
+  padding-top: 65.25%; }
+  @media (min-width: 500px) {
     .video-wrapper {
-      width: calc(100% + 20rem);
-      margin-left: -20rem;
-      padding-top: calc(56.35% + 20rem); } }
+      margin-left: -4rem;
+      width: calc(100% + (4rem * 2)); } }
+  @media (min-width: 960px) {
+    .video-wrapper {
+      margin-left: -16rem;
+      width: calc(100% + (8rem * 4));
+      padding-top: 72.25%; } }
 
 iframe.video {
   position: absolute;
@@ -2088,27 +2094,18 @@ body.the-library.view-mode--dark .nav--the-library {
   @media (min-width: 1140px) {
     .post-list {
       max-width: 630px; } }
-  @media (min-width: 400px) {
-    .post-list--photo {
-      width: calc(100% + 6.2rem);
-      margin-left: -3.1rem; } }
-  @media (min-width: 500px) {
-    .post-list--photo {
-      width: calc(100% + 8rem);
-      margin-left: -4rem; } }
-  @media (min-width: 768px) {
-    .post-list--photo {
-      width: 140%;
-      margin-left: calc(40% - 73%);
-      max-width: none; } }
-  @media (min-width: 960px) {
-    .post-list--photo {
-      width: calc(100% + 30%);
-      margin-left: -30%; } }
-  @media (min-width: 1040px) {
-    .post-list--photo {
-      width: calc(100% + 45%);
-      margin-left: -45%; } }
+  .post-list--photo {
+    max-width: none;
+    margin-left: -3.0769230769rem;
+    width: calc(100% + (3.0769230769rem * 2)); }
+    @media (min-width: 500px) {
+      .post-list--photo {
+        margin-left: -4rem;
+        width: calc(100% + (4rem * 2)); } }
+    @media (min-width: 960px) {
+      .post-list--photo {
+        margin-left: -8rem;
+        width: calc(100% + (8rem * 2)); } }
 
 .post-list--item {
   display: block;
@@ -2161,8 +2158,13 @@ body.the-library.view-mode--dark .nav--the-library {
 .post-list--photo-item {
   display: block;
   margin-bottom: 1%; }
+  @media (min-width: 960px) {
+    .post-list--photo-item.extra-wide {
+      margin-left: -16rem;
+      width: calc(100% + (8rem * 4)); } }
   .post-list--photo-item img {
-    display: block; }
+    display: block;
+    width: 100%; }
 
 #work-in-progress {
   position: absolute;
@@ -2489,25 +2491,79 @@ body.safety-pin {
   color: #000; }
 
 @media (min-width: 768px) {
-  #post-container {
+  #post-container:not(.photo-post-container) {
     width: auto;
     max-width: 775px;
     margin-left: 20%; } }
 
 @media (min-width: 960px) {
-  #post-container {
+  #post-container:not(.photo-post-container) {
     margin-left: 25%; } }
 
 @media (min-width: 1140px) {
-  #post-container {
+  #post-container:not(.photo-post-container) {
     margin-left: 30%; } }
 
 @media (min-width: 1240px) {
-  #post-container {
+  #post-container:not(.photo-post-container) {
+    margin-left: 35%; } }
+
+@media (min-width: 768px) {
+  #post-container.photo-post-container > h1,
+  #post-container.photo-post-container > h2,
+  #post-container.photo-post-container > h3,
+  #post-container.photo-post-container > h4,
+  #post-container.photo-post-container > h5,
+  #post-container.photo-post-container > h6,
+  #post-container.photo-post-container > p,
+  #post-container.photo-post-container > blockquote,
+  #post-container.photo-post-container > a {
+    margin-left: 20%; } }
+
+@media (min-width: 960px) {
+  #post-container.photo-post-container > h1,
+  #post-container.photo-post-container > h2,
+  #post-container.photo-post-container > h3,
+  #post-container.photo-post-container > h4,
+  #post-container.photo-post-container > h5,
+  #post-container.photo-post-container > h6,
+  #post-container.photo-post-container > p,
+  #post-container.photo-post-container > blockquote,
+  #post-container.photo-post-container > a {
+    margin-left: 25%; } }
+
+@media (min-width: 1140px) {
+  #post-container.photo-post-container > h1,
+  #post-container.photo-post-container > h2,
+  #post-container.photo-post-container > h3,
+  #post-container.photo-post-container > h4,
+  #post-container.photo-post-container > h5,
+  #post-container.photo-post-container > h6,
+  #post-container.photo-post-container > p,
+  #post-container.photo-post-container > blockquote,
+  #post-container.photo-post-container > a {
+    margin-left: 30%; } }
+
+@media (min-width: 1240px) {
+  #post-container.photo-post-container > h1,
+  #post-container.photo-post-container > h2,
+  #post-container.photo-post-container > h3,
+  #post-container.photo-post-container > h4,
+  #post-container.photo-post-container > h5,
+  #post-container.photo-post-container > h6,
+  #post-container.photo-post-container > p,
+  #post-container.photo-post-container > blockquote,
+  #post-container.photo-post-container > a {
     margin-left: 35%; } }
 
 .cross-share {
   box-sizing: border-box; }
+
+@media (min-width: 600px) {
+  body.vsco-the-world-through-a-viewfinder .post-gallery {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; } }
 
 .blog-post.uber-vs-taxis .comparison, .blog-post.uber-vs-taxis .question, .blog-post.uber-vs-taxis .left, .blog-post.uber-vs-taxis .right {
   -moz-box-sizing: border-box;
