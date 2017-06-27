@@ -60,14 +60,14 @@
 // Shadow
 .post-list--link:not(.bare) { // a
 
-  .icon {
-    transition: stroke-dashoffset .3s ease;
-    stroke-dasharray: 95;
-    stroke-dashoffset: 95;
-    &:hover {
-      stroke-dashoffset: 0;
-    }
-  }
+  // .icon {
+  //   transition: stroke-dashoffset .3s ease;
+  //   stroke-dasharray: 95;
+  //   stroke-dashoffset: 95;
+  //   &:hover {
+  //     stroke-dashoffset: 0;
+  //   }
+  // }
 
   @include mq(768px) {
     @include transition( color #{$shadowTransition}, opacity #{$shadowTransition} );
@@ -123,15 +123,9 @@
     }
   }
 
-
   img {
     display: block;
     width: 100%;
-
-    @include mq(768px) {
-      width: 40%;
-      float: left;
-    }
   }
 }
 
@@ -156,6 +150,16 @@
       }
       .post-list--title {
         font-size: 3.5rem;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+
+        @include mq(768px) {
+          width: 40%;
+          float: left;
+        }
       }
     }
   }

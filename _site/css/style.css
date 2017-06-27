@@ -232,6 +232,36 @@ Modified version of Animate.css - http://daneden.me/animate
     transform: perspective(400px) rotateY(0deg);
     opacity: 1; } }
 
+@-webkit-keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.995); }
+  40% {
+    -webkit-transform: scale(0.995); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1); } }
+
+@-moz-keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.995); }
+  40% {
+    -moz-transform: scale(0.995); }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1); } }
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.995); }
+  40% {
+    transform: scale(0.995); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -2176,26 +2206,41 @@ body.the-library.view-mode--dark .nav--the-library {
 .post-list--index li a {
   overflow: hidden; }
 
+.post-list--index li .title {
+  text-align: center; }
+
+.post-list--index li .post-list--date {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 1.15rem; }
+
+.post-list--index li .post-list--title {
+  font-size: 2.5rem;
+  margin-top: -10px;
+  margin-bottom: 4rem; }
+
 @media (min-width: 850px) {
   .post-list--index li .title {
     width: 55%;
     float: right;
     margin-top: 4%;
     text-align: left; }
-  .post-list--index li .post-list--date {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-size: 1.15rem; }
   .post-list--index li .post-list--title {
-    font-size: 3.5rem; }
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 0; }
   .post-list--index li img {
     display: block;
-    width: 100%; } }
+    width: 100%;
+    margin-bottom: 1rem; } }
   @media (min-width: 850px) and (min-width: 768px) {
     .post-list--index li img {
       width: 40%;
       float: left; } }
+  @media (min-width: 850px) and (min-width: 850px) {
+    .post-list--index li img {
+      margin-bottom: 0; } }
 
 #work-in-progress {
   position: absolute;
@@ -2520,6 +2565,32 @@ body.safety-pin {
 
 .fourohfour a:hover {
   color: #000; }
+
+#home #page-header,
+#home #inner-container .row {
+  -webkit-animation: 0.4s ease-out;
+  animation: 0.4s ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInScale;
+  -moz-animation-name: fadeInScale;
+  -o-animation-name: fadeInScale;
+  animation-name: fadeInScale; }
+
+#home #inner-container .row:nth-child(1) {
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+  animation-delay: 0.25s; }
+
+#home #inner-container .row:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+#home #inner-container .row:nth-child(3) {
+  -webkit-animation-delay: 0.75s;
+  -moz-animation-delay: 0.75s;
+  animation-delay: 0.75s; }
 
 @media (min-width: 768px) {
   #post-container:not(.photo-post-container) {
