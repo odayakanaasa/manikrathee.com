@@ -135,6 +135,22 @@
       overflow: hidden;
     }
 
+    .title {
+      text-align: center;
+    }
+
+    .post-list--date {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 1.15rem;
+    }
+    .post-list--title {
+      font-size: 2.5rem;
+      margin-top: -10px;
+      margin-bottom: $spacer;
+    }
+
     @include mq(850px) {
       .title {
         width: 55%;
@@ -142,23 +158,27 @@
         margin-top: 4%;
         text-align: left;
       }
-      .post-list--date {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: bold;
-        font-size: 1.15rem;
-      }
+
       .post-list--title {
         font-size: 3.5rem;
+
+        margin-top: 0;
+        margin-bottom: 0;
       }
+
 
       img {
         display: block;
         width: 100%;
+        margin-bottom: 1rem;
 
         @include mq(768px) {
           width: 40%;
           float: left;
+        }
+
+        @include mq(850px) {
+          margin-bottom: 0;
         }
       }
     }
