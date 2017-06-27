@@ -79,6 +79,19 @@ module.exports = function(grunt) {
     },
 
 
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          '**/*.html': '**/*.html',
+        }
+      },
+    },
+
+
     jekyll: {
       dist: {
         options: {
@@ -231,7 +244,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('production',
     [
-      'jekyll','sass','autoprefixer','concat','removelogging','uglify','cssmin','pagespeed'
+      'jekyll','sass','autoprefixer','concat','removelogging','uglify','htmlmin','cssmin','pagespeed'
     ]
   );
 
