@@ -7,7 +7,7 @@ if ( $('body').attr('id') === 'home' ){
     get: 'user',
     userId: 262351,
     clientId: 'f7f319ceb411486593db148972918108',
-    accessToken: '262351.1677ed0.d90081329df94cbe8353f5039bac6d76',
+    accessToken: '262351.1677ed0.d17dedd8b6034aa998032e2eea99a06c',
     target: 'instagram-api-bar',
     limit: 8,
     links: 1,

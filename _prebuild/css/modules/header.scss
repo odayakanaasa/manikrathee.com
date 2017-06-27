@@ -67,8 +67,12 @@
     font-family: $sans;
     font-weight: 500;
     @include font-size(18);
-    margin-bottom: $spacer;
+    margin-bottom: 1rem;
 
+    & + .current-title {
+      @include font-size(16);
+      margin-bottom: 4rem;
+    }
   }
 
   .previous-container {

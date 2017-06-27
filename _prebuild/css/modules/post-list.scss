@@ -54,6 +54,22 @@
   @include mq(768px) {
     display: block;
     padding: $spacer;
+  }
+}
+
+// Shadow
+.post-list--link:not(.bare) { // a
+
+  // .icon {
+  //   transition: stroke-dashoffset .3s ease;
+  //   stroke-dasharray: 95;
+  //   stroke-dashoffset: 95;
+  //   &:hover {
+  //     stroke-dashoffset: 0;
+  //   }
+  // }
+
+  @include mq(768px) {
     @include transition( color #{$shadowTransition}, opacity #{$shadowTransition} );
 
     &:after {
@@ -80,6 +96,8 @@
   }
 }
 
+
+
 .post-list--date {
   @include font-size(14);
   color: $grey;
@@ -105,9 +123,44 @@
     }
   }
 
-
   img {
     display: block;
     width: 100%;
+  }
+}
+
+.post-list--index {
+  li {
+    a {
+      overflow: hidden;
+    }
+
+    @include mq(850px) {
+      .title {
+        width: 55%;
+        float: right;
+        margin-top: 4%;
+        text-align: left;
+      }
+      .post-list--date {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 1.15rem;
+      }
+      .post-list--title {
+        font-size: 3.5rem;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+
+        @include mq(768px) {
+          width: 40%;
+          float: left;
+        }
+      }
+    }
   }
 }

@@ -7,24 +7,23 @@ page-subtype: photo-index
 
 ---
 
-<ol id="photo-posts" class="post-list">
+<ol id="photo-posts" class="post-lis post-list--index">
   {% for post in site.categories.photos %}
-  <li class="post-list--item">
-    <!-- <img class="post-list--photo" src="/img/{{ post.category }}{{ post.img }}" alt="{{ post.title }}"> -->
-    <a id="{{ post.slug }}" class="post-list--link no-border" href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
-      <p class="post-list--date">{{ post.date | date: "%B %d, %Y" }}</p>
-      <h2 class="post-list--title">
-        {{ post.title | widont }}
-      </h2>
-      <p class="post-list-description">
-        <span class="post-list--description">
-          {{ post.content | strip_html | truncatewords:40 | widont }}
-        </span>
-      </p>
+  <li class="post-list--photo-item">
+    <a id="{{ post.slug }}" class="post-list--link bare no-border" href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+      <img src="/img/{{ post.category }}{{ post.img }}" alt="{{ post.title }}">
 
-      <span class="mobile-cta pseudo-link read-more">
-        Explore the post
-      </span>
+      <div class="title">
+        <p class="post-list--date">{{ post.date | date: "%B %d, %Y" }}</p>
+        <h2 class="post-list--title">
+          {{ post.title | widont }}
+        </h2>
+      </div>
+
+     <!--  svg circle
+      2 paths, 1 for animated piece, 1 for arrow -->
+
+
     </a>
   </li>
   {% endfor %}

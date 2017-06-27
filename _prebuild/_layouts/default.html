@@ -22,8 +22,6 @@
 
     <div id="main" class="container" role="main">
 
-      <span id="them-grid-lines"></span>
-
       {% include global-page-header.html %}
 
       <section id="inner-container" class="{{page.section}}">
@@ -32,7 +30,7 @@
           {% if page.img %}
             <aside class="page-photo" style="background-image: url('/img/{{ page.category }}{{ page.img }}');"></aside>
           {% endif %}
-          <article id="post-container"{% if page.page-subtype == 'photo-post' %}class="photo-post-container"{% endif %}>
+          <article id="post-container"{% if page.page-subtype == 'photo-post' or page.page-subtype == 'photo-index'  %}class="photo-post-container"{% endif %}>
         {% endif %}
 
 

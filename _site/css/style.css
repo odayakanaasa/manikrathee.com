@@ -1528,7 +1528,11 @@ figcaption,
     font-weight: 500;
     font-size: 18px;
     font-size: 1.8rem;
-    margin-bottom: 4rem; }
+    margin-bottom: 1rem; }
+    [id="who-is"] .current-title + .current-title {
+      font-size: 16px;
+      font-size: 1.6rem;
+      margin-bottom: 4rem; }
   [id="who-is"] .previous-container {
     color: #505050; }
     .view-mode--dark [id="who-is"] .previous-container {
@@ -2125,23 +2129,26 @@ body.the-library.view-mode--dark .nav--the-library {
   @media (min-width: 768px) {
     .post-list--link {
       display: block;
-      padding: 4rem;
-      transition: color 1.25s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1); }
-      .post-list--link:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        box-shadow: 0 50px 65px 5px rgba(0, 0, 0, 0.1);
-        transform: translate(0, -10%);
-        opacity: 0;
-        transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1), transform 1.25s cubic-bezier(0.19, 1, 0.22, 1); }
-      .post-list--link:hover:after {
-        opacity: 1;
-        transform: translate(0, 0); } }
+      padding: 4rem; } }
+
+@media (min-width: 768px) {
+  .post-list--link:not(.bare) {
+    transition: color 1.25s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1); }
+    .post-list--link:not(.bare):after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: 0 50px 65px 5px rgba(0, 0, 0, 0.1);
+      transform: translate(0, -10%);
+      opacity: 0;
+      transition: opacity 1.25s cubic-bezier(0.19, 1, 0.22, 1), transform 1.25s cubic-bezier(0.19, 1, 0.22, 1); }
+    .post-list--link:not(.bare):hover:after {
+      opacity: 1;
+      transform: translate(0, 0); } }
 
 .post-list--date {
   font-size: 14px;
@@ -2165,6 +2172,30 @@ body.the-library.view-mode--dark .nav--the-library {
   .post-list--photo-item img {
     display: block;
     width: 100%; }
+
+.post-list--index li a {
+  overflow: hidden; }
+
+@media (min-width: 850px) {
+  .post-list--index li .title {
+    width: 55%;
+    float: right;
+    margin-top: 4%;
+    text-align: left; }
+  .post-list--index li .post-list--date {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.15rem; }
+  .post-list--index li .post-list--title {
+    font-size: 3.5rem; }
+  .post-list--index li img {
+    display: block;
+    width: 100%; } }
+  @media (min-width: 850px) and (min-width: 768px) {
+    .post-list--index li img {
+      width: 40%;
+      float: left; } }
 
 #work-in-progress {
   position: absolute;
