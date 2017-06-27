@@ -1,3 +1,5 @@
+var $body = $('body');
+
 $(document).ready(function() {
   var $body = $('body');
 
@@ -8,9 +10,3 @@ $(document).ready(function() {
     });
   }
 });
-
-
-
-
-// if ( $body.hasClass('photo-blog-post') ) {
-// }
