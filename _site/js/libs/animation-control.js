@@ -117,4 +117,100 @@ var vmPop5 = new mojs.Burst({
 // ..........................................
 
 
+
+
+
+
+
+
+
+
+
+
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// SWOON
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+var viewModeAnimHook = document.getElementById('swoon');
+var viewModeAnimTimeline = new mojs.Timeline();
+
+viewModeAnimHook.addEventListener('click', function(){
+    viewModeAnimTimeline.add(vmPop1, vmPop2, vmPop3, vmPop4, vmPop5).replay();
+});
+
+var vmPop1 = new mojs.Burst({
+    parent:       viewModeAnimHook,
+    count:        2,
+    radius:       {0:60},
+    children: {
+        fill :      '#988ADE',
+        duration:   1500,
+        easing:     mojs.easing.bezier(0.19, 1, 0.22, 1)
+        }
+    });
+
+var vmPop2 = new mojs.Burst({
+    parent:   viewModeAnimHook,
+    count:    6,
+    radius:     {0:120},
+    children: {
+        fill:       '#DE8AA0',
+        duration:   1200,
+        delay:      50,
+        easing:     mojs.easing.bezier(0.19, 1, 0.22, 1)
+        }
+    });
+
+var vmPop3 = new mojs.Burst({
+    parent:       viewModeAnimHook,
+    count:        10,
+    radius:       {0:90},
+    children: {
+        fill:       '#8AAEDE',
+        duration:   1200,
+        delay:      100,
+        easing:     mojs.easing.bezier(0.19, 1, 0.22, 1)
+        }
+    });
+
+var vmPop4 = new mojs.Burst({
+    parent: viewModeAnimHook,
+    count:    16,
+    radius:   {0:50},
+    children: {
+        fill:       '#8ADEAD',
+        duration:   1600,
+        delay:      175,
+        easing:     mojs.easing.bezier(0.19, 1, 0.22, 1)
+        }
+    });
+
+var vmPop5 = new mojs.Burst({
+    parent:   viewModeAnimHook,
+    count:    32,
+    radius:     {0:30},
+    children: {
+        fill:       '#DEC58A',
+        duration:   1700,
+        delay:      200,
+        easing:     mojs.easing.bezier(0.19, 1, 0.22, 1)
+        }
+    });
+// ..........................................
+// ..........................................
+// ..........................................
+// END SWOON
+// ..........................................
+// ..........................................
+// ..........................................
+
+
+
+
+
 })();

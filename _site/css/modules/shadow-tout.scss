@@ -15,7 +15,7 @@
     bottom: 0;
     box-shadow: $shadow;
     opacity: 0.8;
-    @include transition( opacity #{$shadowTransition});
+    @include transition( opacity #{$shadowTransition}, box-shadow #{$shadowTransition} );
   }
 
   &:hover {

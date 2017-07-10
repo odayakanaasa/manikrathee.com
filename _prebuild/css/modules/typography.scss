@@ -115,6 +115,10 @@ i {
   font-family: $serif;
 }
 
+[class*="heavy"] {
+  font-weight: 700;
+}
+
 .large-heading {
   @include font-size(26);
   margin-bottom: 1.75rem;
@@ -247,3 +251,11 @@ figcaption,
   font-style: italic;
   @include font-size(14);
 }
+
+.type-pre-heading {
+  @include font-size(10);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+

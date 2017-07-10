@@ -117,4 +117,102 @@ var vmPop5 = new mojs.Burst({
 // ..........................................
 
 
+
+
+
+
+
+
+
+
+
+
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// SWOON
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// var swoonHook = document.getElementById('swoon');
+// var swoonTimeline = new mojs.Timeline();
+
+// if (swoonHook) {
+//   swoonHook.addEventListener('mouseover', function(){
+//       swoonTimeline.add(swoon1, swoon2, swoon3, swoon4).replay();
+//   });
+
+//   var swoon1 = new mojs.Burst({
+//       parent:       swoonHook,
+//       count:        1,
+//       radius:       {0:60},
+//       children: {
+//           fill :      '#988ADE',
+//           duration:   1500,
+//           easing:     mojs.easing.bezier(0.19, 1, 0.22, 1)
+//           }
+//       });
+
+
+//   var swoon2 = new mojs.Burst({
+//       parent:       swoonHook,
+//       count:        30,
+//       radius:       {0:90},
+//       children: {
+//           fill:       '#DE8A8A',
+//           duration:   1200,
+//           delay:      100,
+//           easing:     mojs.easing.bezier(0.19, 1, 0.22, 1)
+//           }
+//       });
+
+//   var swoon3 = new mojs.Burst({
+//       parent:   swoonHook,
+//       type: 'circle',
+//       fill: 'transparent',
+//       stroke: '#F35186',
+//       strokeWidth: {5:0},
+//       opacity: 0.4,
+//       count:    4,
+//       radius:     {0:230},
+//       x : -122,
+//       y : 33,
+//       easing: mojs.easing.sin.out,
+//       children: {
+//           fill:       '#DEC58A',
+//           duration:   1700,
+//           delay:      200,
+//           easing:     mojs.easing.bezier(0.19, 1, 0.22, 1)
+//           }
+//       });
+
+//   var swoon4 = new mojs.Burst({
+//       parent:   swoonHook,
+//       type: 'circle',
+//       radius:     {0:2},
+//       x : 22,
+//       y : -44,
+//       easing: mojs.easing.sin.out,
+//       children: {
+//           fill:       '#DEC58A',
+//           duration:   2200,
+//           delay:      300,
+//           easing:     mojs.easing.bezier(0.19, 1, 0.22, 1)
+//           }
+//       });
+// }
+// ..........................................
+// ..........................................
+// ..........................................
+// END SWOON
+// ..........................................
+// ..........................................
+// ..........................................
+
+
+
+
+
 })();

@@ -55,6 +55,27 @@
   @include box;
 }
 
+.crosspost {
+
+  margin-top: 5rem;
+  text-align: center;
+  @include box;
+
+  @include mq(800px) {
+    margin-left: -10rem;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  &.shadow-tout > * {
+    position: relative;
+    z-index: 200; // elevate contents above :affter shadow
+  }
+}
+
 
 body.vsco-the-world-through-a-viewfinder {
   .post-gallery {
@@ -75,3 +96,4 @@ body.the-tech-president-obama-s-digital-powerhouse{
     font-style: normal;
   }
 }
+

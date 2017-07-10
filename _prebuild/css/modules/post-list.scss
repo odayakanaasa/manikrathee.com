@@ -126,13 +126,14 @@
   img {
     display: block;
     width: 100%;
+    margin-bottom: 1rem;
   }
 }
 
 .post-list--index {
   li {
     a {
-      overflow: hidden;
+      @include clearfix;
     }
 
     .title {
@@ -152,6 +153,22 @@
     }
 
     @include mq(850px) {
+      &:hover {
+        img {
+          opacity: 0.75;
+          filter: blur(5px) invert(2%) hue-rotate(1deg);
+        }
+
+        .post-list--date {
+          @include font-size(13.5);
+          transform: translateX(-10%);
+        }
+        .post-list--title {
+          @include font-size(48);
+          transform: translateX(5%);
+        }
+      }
+
       .title {
         width: 55%;
         float: right;
@@ -160,26 +177,31 @@
       }
 
       .post-list--title {
-        font-size: 3.5rem;
-
+        @include font-size(27);
         margin-top: 0;
         margin-bottom: 0;
+        transition: transform 0.75s $curve-bounce,
+                    font 0.75s $curve-bounce;
+      }
+
+      .post-list--date {
+        transition: transform 0.75s $curve-bounce,
+                    font 0.75s $curve-bounce;
       }
 
 
       img {
-        display: block;
-        width: 100%;
-        margin-bottom: 1rem;
+        width: 40%;
+        float: left;
+        margin-bottom: 0;
+        transition: filter 0.25s linear,
+                    opacity 0.25s linear;
+      }
+    }
 
-        @include mq(768px) {
-          width: 40%;
-          float: left;
-        }
-
-        @include mq(850px) {
-          margin-bottom: 0;
-        }
+    @include mq(1100px) {
+      .post-list--title {
+        @include font-size(34);
       }
     }
   }

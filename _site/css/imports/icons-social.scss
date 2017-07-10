@@ -64,6 +64,7 @@ $social-accounts:
 .social-list {
   display: flex;
   justify-content: space-between;
+  list-style-type: none;
 
   @include mq(700px) {
     width: calc(100% - 14rem);
