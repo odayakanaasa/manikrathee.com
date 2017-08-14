@@ -7,7 +7,7 @@ tags: ['engineering', 'productivity', 'git', 'settings', 'writing']
 
 date: April 22, 2016
 slug: how-to-create-a-branch-in-git
-title: "How to work with branches in git"
+title: "How to delete local and remote git branches"
 
 
 #img:
@@ -19,18 +19,8 @@ data: 0
 
 ---
 
-<!--
-  Verbose post options
-- how to revert a git tag
-- how to revert a tag in git
-- how to delete a remote git tag
-- how to delete a local git tag
-- how to delete a local and remote tag
-- how to delete a local and remove git tag
-- how to push a deleted tag
--->
 
-<p>When working with git, you will frequently need to create working branches to put your changes on. Here's a quick guide to get you started.</p>
+<p>When working with git, you will frequently need to create working branches to put your changes on. Here's a quick git guide to help you create a local branch, push your local branch to a remote and delete your locale or remote branch.</p>
 
 <p>For our code examples, we'll follow the user/id/task pattern and use "<em>u/mrathee/contact-form-fix</em>" as the branch name.</p>
 
@@ -48,8 +38,8 @@ data: 0
 </pre>
 <p><em>Rather than running git branch then git checkout, you can pass "-b" to checkout combine the steps.</em></p>
 
-<h3 class="medium-heading">To push your local branch&nbsp;to&nbsp;remote:</h3>
-<p><em>-u</em> will set your branch to track the remote. Just make sure your git config push.default value is set to upstream.</p>
+<h3 class="medium-heading">To push a local git branch&nbsp;to&nbsp;remote:</h3>
+<p>The "<em>-u</em>" argument will set your branch to track the remote. Just make sure your <a href="https://git-scm.com/docs/git-config" title="Git Config Documentation" itemprop="url">git config push.default value is set to upstream</a>.</p>
 <pre>
   <code class="git">
   git push -u origin u/mrathee/contact-form-fix
