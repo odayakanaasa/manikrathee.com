@@ -9,6 +9,11 @@ Redirect /barack-obama-contribute.html http://www.manikrathee.com/_archive/manik
 Redirect /obama http://www.manikrathee.com/_archive/manikratheev6/barack-obama-contribute.html
 Redirect /contribute http://www.manikrathee.com/_archive/manikratheev6/barack-obama-contribute.html
 
+Redirect /obama-photo http://www.manikrathee.com/img/potus-hug.jpg
+
+Redirect /drone http://www.manikrathee.com/aerial-drone-photography.html
+Redirect /mavic http://www.manikrathee.com/aerial-drone-photography.html
+
 Redirect /500px https://500px.com/manikrathee
 Redirect /bot https://twitter.com/manikbot
 Redirect /dribbble http://dribbble.com/manikrathee
@@ -45,7 +50,6 @@ AddType image/svg+xml svg
 
 
 Redirect 301 /how-i-use-text-expander.html http://www.manikrathee.com/text-expander-tips.html
-Redirect 301 /why-uber-threatens-taxi-labor-groups.html http://www.manikrathee.com/uber-vs-cabs.html
 Redirect 301 /building-obama.html http://www.manikrathee.com/building-president-obama.html
 Redirect 301 /on-disconnecting.html http://www.manikrathee.com/on-disconnecting-from-tech-silicon-valley.html
 Redirect 301 /quality-in-startup-mvps.html http://www.manikrathee.com/quality-in-startup-minimum-viable-products.html

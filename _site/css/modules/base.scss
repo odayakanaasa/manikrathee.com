@@ -78,6 +78,19 @@ dl, menu, ol, ul {
     padding-top: 72.25%;
   }
 
+  @include mq(1200px) {
+    margin-left: -24rem;
+    width: calc(100% + (8rem * 6));
+    padding-top: 80.25%;
+  }
+
+  &.video-list + .video-list {
+    margin-top: 10rem;
+
+    @include mq(1200px) {
+      margin-top: 12rem;
+    }
+  }
 }
 
 iframe.video {
