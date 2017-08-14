@@ -2465,7 +2465,8 @@ body.the-library.view-mode--dark .nav--the-library {
 #view-mode--container {
   position: absolute;
   top: 2rem;
-  right: 2rem; }
+  right: 2rem;
+  z-index: 30; }
   @media (min-width: 960px) {
     #view-mode--container {
       top: -5.6rem;
