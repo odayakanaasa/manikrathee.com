@@ -5,6 +5,7 @@
   position: absolute;
   top: 2rem;
   right: 2rem;
+  z-index: 30;
 
   @include mq(960px) {
     top: -5.6rem;
@@ -12,9 +13,7 @@
   }
 }
 
-.view-mode--toggle-label {
-
-}
+.view-mode--toggle-label {}
 
 .view-mode--icon {
   display: block;
