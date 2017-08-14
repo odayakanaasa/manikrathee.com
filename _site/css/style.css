@@ -2011,7 +2011,8 @@ body.the-library.view-mode--dark .nav--the-library {
       width: 40px;
       height: 28px; }
     #main-footer .footer-nav-container {
-      width: 50%; }
+      width: 50%;
+      margin-bottom: 4rem; }
     #main-footer nav {
       min-width: 240px;
       margin-left: 35px; }
@@ -2587,6 +2588,9 @@ body.safety-pin {
     width: calc(100% - 35px);
     padding-left: 1rem;
     box-sizing: border-box; }
+
+#spotify-api-container {
+  margin-top: 20rem; }
 
 /*  404  */
 .fourohfour {
