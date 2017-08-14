@@ -2251,7 +2251,7 @@ body.the-library.view-mode--dark .nav--the-library {
 @media (min-width: 850px) {
   .post-list--index li:hover img {
     opacity: 0.75;
-    filter: blur(5px) invert(2%) hue-rotate(1deg); }
+    filter: blur(2px); }
   .post-list--index li:hover .post-list--date {
     font-size: 13.5px;
     font-size: 1.35rem;
