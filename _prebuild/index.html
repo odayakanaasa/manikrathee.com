@@ -20,7 +20,7 @@ section: home
             {{ post.title | strip_html }}<!--
           --></a><!--
 
-          -->{% if post.isForLovelySunday %}<!--
+          -->{% if post.isForLovelySunday == 1 %}<!--
         --><span class="for-lovely-sunday">, for&nbsp;
             <a href="{{ post.lovelySundayLink }}" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
               LovelySunday
