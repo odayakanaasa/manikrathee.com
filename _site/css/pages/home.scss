@@ -5,21 +5,24 @@
 
   #page-header,
   #inner-container .row {
-
-    -webkit-animation: 0.4s ease-out;
-            animation: 0.4s ease-out;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation: 0.375s ease-in;
+    animation-fill-mode: both;
     @include fadeInScale;
   }
   #inner-container .row:nth-child(1) {
-    @include delay-custom(0.25s);
+    @include delay-custom(0.05s);
   }
   #inner-container .row:nth-child(2) {
-    @include delay-custom(0.5s);
+    @include delay-custom(0.1s);
   }
   #inner-container .row:nth-child(3) {
-    @include delay-custom(0.75s);
+    @include delay-custom(0.15s);
+  }
+  #inner-container .row:nth-child(4) {
+    @include delay-custom(0.2s);
+  }
+  #inner-container .row:nth-child(5) {
+    @include delay-custom(0.25s);
   }
 
 }

@@ -155,8 +155,8 @@
     @include mq(850px) {
       &:hover {
         img {
-          opacity: 0.75;
-          filter: blur(2px);
+          opacity: 0.35;
+          filter: blur(4px);
         }
 
         .post-list--date {
@@ -165,7 +165,7 @@
         }
         .post-list--title {
           @include font-size(48);
-          transform: translateX(5%);
+          transform: translateX(-20%);
         }
       }
 
