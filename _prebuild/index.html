@@ -13,7 +13,7 @@ section: home
 
     <ul class="row-tout-list recent-photos-list">
       {% for post in site.categories.photos | limit: 4 %}
-      <li>
+      <li class="row-tout-list--item">
         <p class="condensed">
           <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
             {{ post.title | strip_html }}<!--
@@ -42,7 +42,7 @@ section: home
     <h3 class="medium-heading">Writing</h3>
     <ul class="row-tout-list recent-writing-list">
       {% for post in site.categories.blog | limit: 4 %}
-      <li>
+      <li class="row-tout-list--item">
         <p class="condensed">
           <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
             {{ post.title | strip_html | widont }}<!--
@@ -64,7 +64,7 @@ section: home
   <div class="row-tout recent-publications ↕️">
     <h3 class="medium-heading">Interviews &amp; Speaking</h3>
     <ul class="row-tout-list recent-publications-list">
-      <li>
+      <li class="row-tout-list--item">
         <p class="condensed">
           <!--
             .net Magazine's site moved. This was the original URL:
@@ -100,7 +100,7 @@ section: home
   <div class="row-tout recent-speaking  ↕️">
     <h3 class="medium-heading"></h3>
     <ul class="row-tout-list recent-speaking-list">
-      <li>
+      <li class="row-tout-list--item">
         <p class="condensed">
         </p>
       </li>

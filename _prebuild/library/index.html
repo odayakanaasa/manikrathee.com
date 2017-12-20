@@ -17,7 +17,7 @@ sitemap:
 
     <ul class="row-tout-list magazines-list">
       {% for mag in site.data.library.magazines %}
-        <li>
+        <li class="row-tout-list--item">
           <a href="{{ mag.url }}" title="Visit {{ mag.heading }}" itemprop="url">
             {{ mag.heading | widont }}
           </a>
@@ -32,7 +32,7 @@ sitemap:
     <ul class="row-tout-list publications">
 
       {% for pub in site.data.library.publications %}
-        <li>
+        <li class="row-tout-list--item">
           <a href="{{ pub.url }}" title="Visit {{ pub.heading }}" itemprop="url">
             {{ pub.heading | widont }}
           </a>
@@ -79,7 +79,7 @@ sitemap:
 
     <ul class="row-tout-list magazines-list">
       {% for book in site.data.library.more_books %}
-        <li>
+        <li class="row-tout-list--item">
           <a href="{{ book.url }}" title="Visit {{ book.heading }}" itemprop="url">
             {{ book.heading | widont }}
           </a>
@@ -91,11 +91,13 @@ sitemap:
   <div class="row-tout shadow-container ↕️">
 
     <div class="shadow-tout shadow-tout--bottom-left pocket-tout">
+      <a class="overlay-link" href="https://getpocket.com/@manikrathee" title="Follow @mrathee on Pocket" target="_blank" rel="nofollow" itemprop="url"></a>
+
       <i class="icon icon--pocket-brand"></i>
 
       <p>
         For articles and quick-read recommendations,
-        <a href="https://getpocket.com/@Mrathee" title="Follow @mrathee on Pocket" target="_blank" rel="nofollow" itemprop="url">follow me&nbsp;on&nbsp;Pocket</a>.
+        <a href="https://getpocket.com/@manikrathee" title="Follow @mrathee on Pocket" target="_blank" rel="nofollow" itemprop="url">follow me&nbsp;on&nbsp;Pocket</a>.
       </p>
     </div>
 

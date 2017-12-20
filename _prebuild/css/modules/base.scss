@@ -168,10 +168,26 @@ img {
 
 
 
+
 // .utility
 .set--inline {
   display: inline;
 }
+
+.overlay-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  text-decoration: none;
+  opacity: 0;
+}
+
+
+
+
 
 
 [id=main] { // shadow-container
