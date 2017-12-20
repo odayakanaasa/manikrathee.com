@@ -178,11 +178,15 @@ $books:
   }
 
   &:after {
-    box-shadow: $shadow-bottom-left;
+    box-shadow: $shadow-bottom-far-left;
 
     @include mq(700px) {
       box-shadow: $shadow;
     }
+  }
+
+  & > * {
+    z-index: 2;
   }
 
   .icon {
