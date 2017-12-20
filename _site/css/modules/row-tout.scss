@@ -2,9 +2,10 @@
 
 
 .row {
+  margin-top: $spacer;
 
   & + .row {
-    margin-top: $spacer * 2;
+    margin-top: $spacer * 3;
   }
 
   &-tout {
