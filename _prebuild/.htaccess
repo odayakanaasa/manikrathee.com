@@ -5,9 +5,8 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^manikrathee.com [NC]
 RewriteRule ^(.*)$ http://www.manikrathee.com/$1/ [L,R=301]
 
-Redirect /barack-obama-contribute.html http://www.manikrathee.com/_archive/manikratheev6/barack-obama-contribute.html
-Redirect /obama http://www.manikrathee.com/_archive/manikratheev6/barack-obama-contribute.html
-Redirect /contribute http://www.manikrathee.com/_archive/manikratheev6/barack-obama-contribute.html
+Redirect /obama http://www.manikrathee.com/barack-obama-contribute.html
+Redirect /contribute http://www.manikrathee.com/barack-obama-contribute.html
 
 Redirect /obama-photo http://www.manikrathee.com/img/potus-hug.jpg
 
