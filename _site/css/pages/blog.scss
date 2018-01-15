@@ -56,13 +56,20 @@
 }
 
 .crosspost {
-
   margin-top: 5rem;
   text-align: center;
   @include box;
 
   @include mq(800px) {
     margin-left: -10rem;
+  }
+
+  @include mq(960px) {
+    margin-left: -32%;
+  }
+
+  @include mq(1240px) {
+    margin-left: -54%;
   }
 
   span {
