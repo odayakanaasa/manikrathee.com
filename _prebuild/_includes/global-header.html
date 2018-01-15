@@ -8,8 +8,7 @@
  / /  / / /_/ / / / / / ,\    / _, _/ /_/ / /_/ / / /  __/  __/
 /_/  /_/\__,_/_/ /_/_/_/|_|  /_/ |_|\__,_/\__/_/ /_/\___/\___/
 
-The site is static, built with Jekyll and Grunt. Take a look inside the build on GitHub:
-https://github.com/manikrathee/manikrathee.com
+                The site is static, built with Jekyll and Grunt.
 -->
 
 <head>
@@ -22,40 +21,42 @@ https://github.com/manikrathee/manikrathee.com
 
   <meta name="p:domain_verify" content="442914185983bc4fa55ed98fd101a62f"/>
   <meta http-equiv="x-dns-prefetch-control" content="on">
+  <meta name="robots" content="index,follow,archive">
+
 
   <meta name="author" itemprop="name" content="Manik Rathee">
   <meta property="og:type" content='website' />
   <meta name="url" property="og:url" content="http://www.manikrathee.com/" />
+
   <meta name="twitter:creator" content="@manikrathee">
   <meta name="twitter:site" content="@manikrathee">
+
   <meta name="description" property="og:description" itemprop="description" content="Manik Rathee is a designer, developer and user-experience engineer based in California">
+
   <meta itemprop="image" property="og:image" content="/img/root/apple-touch-icon.png">
-  <meta name="robots" content="index,follow,archive">
 
   {% if page.home %}
-  <meta name="twitter:title"  property="og:title" content='Manik Rathee | Designer, Engineer, Photographer' />
-  <meta name="keyword" content="manik, rathee, manik rathee, designer, google, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
+  <meta name="twitter:title"  property="og:title" content='Manik Rathee | Design, UX and Engineering' />
+  <meta name="keyword" content="manik, rathee, manik rathee, designer, google, nest, nest labs, san francisco, ui, ux, startup, testing, a/b, optimization, obama, barack obama, engineering">
   {% elsif page.page-type == 'blog' %}
     {% if page.page-subtype == 'blog-index' %}
-      <meta name="twitter:title"  property="og:title" content='{{ page.title }} - Manik Rathee | Designer, Engineer, Photographer' />
-      <meta name="keyword" content="{{ page.title }}, manik, rathee, manik rathee, designer, google, san francisco, ui, ux, startup, testing, a/b, optimization, obama">
+      <meta name="twitter:title"  property="og:title" content='{{ page.title }} - Manik Rathee | Design, UX and Engineering' />
+      <meta name="keyword" content="{{ page.title }}, manik, rathee, manik rathee, designer, google, nest, nest labs, san francisco, ui, ux, startup, testing, a/b, optimization, obama, barack obama, engineering">
     {% else %}
-      <meta name="twitter:title"  property="og:title" content='{{ page.title }} - a post by Manik Rathee | Designer, Engineer, Photographer' />
+      <meta name="twitter:title"  property="og:title" content='{{ page.title }} - a post by Manik Rathee | Design, UX and Engineering' />
     {% endif%}
   {% else %}
-    <meta name="twitter:title"  property="og:title" content='{{ page.title }} | Manik Rathee, Designer, Engineer, Photographer' />
+    <meta name="twitter:title"  property="og:title" content='{{ page.title }} | Manik Rathee, Design, UX and Engineering' />
   {% endif%}
 
   <link rel="canonical" href="http://www.manikrathee.com{{ page.url }}">
 
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <!-- dns-prefetch-->
 
   {% if site.data.build.optimizely == true %}
     <link rel="dns-prefetch" href="//cdn.optimizely.com/js/2688330005.js">
   {% endif %}
-
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -63,17 +64,17 @@ https://github.com/manikrathee/manikrathee.com
 
   <title>
   {% if page.home %}
-    Manik Rathee — Designer, Photographer. Prototyping and Engineering at Nest.
+    Manik Rathee — Design, UX and Engineering | Engineering Manager at Nest / Google
   {% elsif page.page-type == 'blog' %}
     {% if page.page-subtype == 'blog-index' %}
-      Writing — Manik Rathee — Designer, Photographer.
+      Writing — Manik Rathee | Design, UX and Engineering.
     {% elsif page.page-subtype == 'photo-index' %}
-      Photos — Manik Rathee — Designer, Photographer.
+      Photos — Manik Rathee | Design, UX and Engineering.
     {% else %}
-      {{ page.title | strip_html }} - a post by Manik Rathee | Designer, Photographer
+      {{ page.title | strip_html }} - a post by Manik Rathee | Design, UX and Engineering
     {% endif%}
   {% else %}
-    {{ page.title | strip_html }} — Manik Rathee
+    {{ page.title | strip_html }} — Manik Rathee | Design, UX and Engineering
   {% endif %}
   </title>
 
