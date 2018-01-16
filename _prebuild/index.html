@@ -12,7 +12,7 @@ section: home
     <h3 class="medium-heading">Photography &amp; Fashion</h3>
 
     <ul class="row-tout-list recent-photos-list">
-      {% for post in site.categories.photos | limit: 4 %}
+      {% for post in site.categories.photos | limit: 7 %}
       <li class="row-tout-list--item">
         <p class="condensed">
 
@@ -43,7 +43,7 @@ section: home
   <div class="row-tout recent-writing ↕️">
     <h3 class="medium-heading">Writing</h3>
     <ul class="row-tout-list recent-writing-list">
-      {% for post in site.categories.blog | limit: 4 %}
+      {% for post in site.categories.blog | limit: 7 %}
       <li class="row-tout-list--item">
         <p class="condensed">
           <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
