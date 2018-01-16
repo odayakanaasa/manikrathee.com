@@ -1,0 +1,64 @@
+---
+layout: default
+page-type: blog
+page-subtype: blog-post
+category: ['blog']
+tags: ['engineering', 'git']
+
+date: January 12, 2018
+slug: how-to-reset-a-branch-to-remote-in-git
+title: "How to undo local changes in git"
+
+#img:
+#script:
+
+comments: 0
+code: 0
+data: 0
+
+---
+
+<p>Sometimes, when working with git, you end up attempting to undo local changes or reset a git branch to the remote. Here's a mini-guide to accomplish that.</p>
+
+<p>We'll begin with the following assumptions: you have a user branch that is tracking a remote/upstream, you have local edits that you want to <em>discard</em> and you want to reset local to the latest remote/upstream commit.</li>
+</ul>
+
+<h3 class="medium-heading">Confirm local changes</h3>
+<p>Make sure you know what changes you're about to lose. If you want to preserve anything for later, you can use <en>stash</en>: <a href="/how-to-stash" title="How to stash and restore an edit with git" itemprop="url">How to stash and restore an edit with git</a></p>
+<pre>
+  <code class="json">
+  git status
+  </code>
+</pre>
+
+<h3 class="medium-heading">Alternative: Clear files</h3>
+<p>Consider whether you can use a simple method to remove untracked files instead of reseting the branch. You can try git clean or checkout:</p>
+<pre>
+  <code class="json">
+  git clean -f
+  </code>
+</pre>
+<p><em>Remove all untracked files.</em></p>
+<pre>
+  <code class="json">
+  git checkout .
+  </code>
+</pre>
+<p><em>Remove all unstaged changes in my working tree.</em></p>
+
+<h3 class="medium-heading">Reset to the latest commit on remote / upstream</h3>
+<p>This will remove <strong>all</strong> local changes.</p>
+<pre>
+  <code class="git">
+  git reset --hard HEAD
+  </code>
+</pre>
+<p><em>The result is the same as re-cloning the repository.</em></p>
+
+
+<section id="more-git-posts" class="crosspost shadow-tout">
+  <span class="type-pre-heading">More reading related to git:</span>
+  <a href="/how-to-delete-a-tag-in-git.html" id="swoon" class="large-heading serif heavy " title="Working with tags in git" itemprop="url">
+    How to stash and restore changes in git
+  </a>
+</section>
