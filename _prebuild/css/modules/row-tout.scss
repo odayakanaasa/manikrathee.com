@@ -24,10 +24,16 @@
   list-style-type: none;
 }
 
-  &--item {
-    & + & {
-      margin-top: $base-unit * 4;
-    }
+
+.row-tout-list--item {
+  & + & {
+    margin-top: $base-unit * 4;
+  }
+
+  span.post-subheading {
+    display: block;
+    @include font-size(12);
+    font-style: italic;
   }
 }
 
