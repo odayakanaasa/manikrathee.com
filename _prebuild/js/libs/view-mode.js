@@ -1,14 +1,15 @@
-;(function () {
+// ;(function () {
 // View Mode Toggle
 
   var viewModeContainer = document.getElementById('view-mode--container');
   var viewModeToggle    = document.getElementById('view-mode--toggle');
-  
+
 
   var viewMode = {
     // TODO set & eval a cookie to remember this value
 
     init: function() {
+      this.onLoadCheck();
       this.addEventListeners();
     },
 
@@ -20,20 +21,34 @@
       });
     },
 
-    eval: function() {
-      var activeMode = document.getElementById('view-mode--toggle').checked;
+    onLoadCheck: function() {
+      var currentViewMode = Cookies.get('mrViewMode');
 
-      if ( activeMode === true ? this.darkMode() : this.lightMode() );
+      if (currentViewMode === 'dark') {
+        viewMode.darkMode();
+      } else {
+        viewMode.lightMode();
+      }
+    },
+
+    eval: function() {
+      var activeMode = document.body.classList.contains('view-mode--dark');
+
+      if ( activeMode === true ? this.lightMode() : this.darkMode() );
     },
 
     darkMode: function() {
       document.body.classList.add('view-mode--dark');
+      Cookies.set('mrViewMode', 'dark');
     },
 
     lightMode: function() {
       document.body.classList.remove('view-mode--dark');
+      Cookies.set('mrViewMode', 'light');
     },
   }
 
   viewMode.init();
-}());
+
+// }());
+
