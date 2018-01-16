@@ -140,8 +140,7 @@ a.icon {
   margin-top: 0.4rem; }
   @media (min-width: 700px) {
     .social-list {
-      width: calc(100% - 14rem);
-      margin-left: 4rem; } }
+      width: calc(100% - 14rem); } }
   .social-list--item {
     flex-grow: 1; }
   .social-list--link {
