@@ -6,10 +6,9 @@
 
 
   var viewMode = {
-    // TODO set & eval a cookie to remember this value
 
     init: function() {
-      this.onLoadCheck();
+      // this.onLoadCheck();
       this.addEventListeners();
     },
 
