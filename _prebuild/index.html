@@ -15,17 +15,19 @@ section: home
       {% for post in site.categories.photos | limit: 4 %}
       <li class="row-tout-list--item">
         <p class="condensed">
-          <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
-            {{ post.title | strip_html }}<!--
-          --></a><!--
 
-          -->{% if post.isForLovelySunday == 1 %}<!--
-        --><span class="for-lovely-sunday">, for&nbsp;
+          <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+            {{ post.title | strip_html }}
+          </a>
+
+          {% if post.isForLovelySunday == 1 %}
+          <span class="post-subheading for-lovely-sunday">featuring &nbsp;
             <a href="{{ post.lovelySundayLink }}" class="for-lovely-sunday--link" title="LovelySunday: Fashion &amp; Style Blog" itemprop="url">
               LovelySunday
             </a>
           </span>
           {% endif %}
+
         </p>
       </li>
       {% endfor %}
@@ -45,8 +47,8 @@ section: home
       <li class="row-tout-list--item">
         <p class="condensed">
           <a href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
-            {{ post.title | strip_html | widont }}<!--
-        --></a><span>, {{ post.date | date: '%B %Y' }}</span>
+            {{ post.title | strip_html | widont }}</a>
+            <span class="post-subheading">{{ post.date | date: '%B %Y' }}</span>
         </p>
       </li>
       {% endfor %}
@@ -99,7 +101,6 @@ section: home
   </div>
 
 
-  <div class="row-tout recent-speaking  ↕️">
   <div class="row-tout social-accounts  ↕️">
     <h3 class="medium-heading">Elsewhere</h3>
     <h3 class="medium-heading"></h3>
