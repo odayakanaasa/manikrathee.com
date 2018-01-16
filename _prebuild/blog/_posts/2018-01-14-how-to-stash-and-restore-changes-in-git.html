@@ -1,0 +1,64 @@
+---
+layout: default
+page-type: blog
+page-subtype: blog-post
+category: ['blog']
+tags: ['engineering', 'git']
+
+date: January 12, 2018
+slug: how-to-stash-and-restore-changes-in-git
+title: "How to stash and restore changes in git"
+
+#img:
+#script:
+
+comments: 0
+code: 0
+data: 0
+
+---
+
+<p>How to save a set of changes for later: a mini-guide to using Git Stash.</p>
+
+<p>If you're working on your user branch developing a feature and suddenly need to switch to a different problem without comitting incomplete code, you can use stash your changes.</p>
+
+
+<h3 class="medium-heading">How to stash changes in git:</h3>
+<p>Stashing your changes will preserve them for later.</a></p>
+<pre>
+  <code class="json">
+  git stash
+  </code>
+</pre>
+<p><em>Save all local changes.</em></p>
+<pre>
+  <code class="json">
+  git stash --patch
+  </code>
+</pre>
+<p><em>Save a specific file via interactive patch mode. Further reading <a href="https://stackoverflow.com/questions/5506339/how-can-i-git-stash-a-specific-file" title="StackOverflow: How can I git stash a specific file" itemprop="url">here</a>.</em></p>
+
+
+<h3 class="medium-heading">How to restore stashed changes:</h3>
+<p>After restoring stashed changes, you can choose to either preserve or discard the changes from the stack.</p>
+<pre>
+  <code class="git">
+  git apply
+  </code>
+</pre>
+<p><em><strong>Preserve</strong> changes in the stack.</em></p>
+<pre>
+  <code class="git">
+  git stash pop
+  </code>
+</pre>
+<p><em><strong>Discard</strong> changes from the stack.</em></p>
+
+
+<section id="more-git-posts" class="crosspost shadow-tout">
+  <span class="type-pre-heading">More reading related to git:</span>
+  <a href="/How to undo local changes in git.html" id="swoon" class="large-heading serif heavy " title="How to undo local changes in git" itemprop="url">
+    How to undo local changes in git
+  </a>
+</section>
+
