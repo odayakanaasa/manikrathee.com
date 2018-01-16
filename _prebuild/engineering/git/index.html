@@ -1,0 +1,40 @@
+---
+
+layout: default
+
+title: "Engineering Blog: Git Posts"
+page-type: blog
+page-subtype: blog-index
+
+---
+
+<ol id="blog-posts" class="post-list">
+  {% for post in site.tags.git %}
+  <li class="post-list--item">
+    <a id="{{ post.slug }}" class="post-list--link no-border" href="{{ post.url }}" title="{{ post.title }}" itemprop="url">
+      <p class="post-list--date">{{ post.date | date: "%B %d, %Y" }}</p>
+      <h2 class="post-list--title">
+        {{ post.title | widont }}
+      </h2>
+      <p class="post-list-description">
+        <span class="post-list--description">
+          {{ post.content | strip_html | truncatewords:40 | widont }}
+        </span>
+      </p>
+
+      <span class="mobile-cta pseudo-link read-more">
+        Read more
+      </span>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+
+
+
+<section id="explore-blog-posts" class="crosspost shadow-tout">
+  <span class="type-pre-heading">Explore more posts:</span>
+  <a href="/How to undo local changes in git.html" id="swoon" class="large-heading serif heavy " title="How to undo local changes in git" itemprop="url">
+    Engineering Blog
+  </a>
+</section>
