@@ -173,12 +173,21 @@
   path {
     stroke: $highlight-mint;
 
+    .photo-index & {
+      stroke: #47ccff;
+    }
+
     .building-obama & {
       stroke: #157ba2;
     }
 
     .wanderlust:-big-sur & {
       stroke: #ad901d;
+    }
+
+    .the-night-sky &,
+    .aerial & {
+      stroke: #e17c7c;
     }
 
 

@@ -173,31 +173,32 @@
   path {
     stroke: $highlight-mint;
 
+
+    .blog-index & {
+      stroke: #ff2a20;
+    }
+
+    .photo-index & {
+      stroke: #47ccff;
+    }
+
     .building-obama & {
       stroke: #157ba2;
     }
 
-    .wanderlust:-big-sur & {
-      stroke: #ad901d;
+    .the-night-sky &,
+    .aerial & {
+      stroke: #e17c7c;
     }
 
+    .the-horizon & {
+      stroke: #ffee20;
+    }
 
   }
 
-
-
 }
 
-.blog-index {
-  #header-bar path {
-    stroke: $highlight-orange;
-  }
-}
-.photo-index {
-  #header-bar path {
-    stroke: $highlight-neon-yellow;
-  }
-}
 
 
 [id="page-title"] {
