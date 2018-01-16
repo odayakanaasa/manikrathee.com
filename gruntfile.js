@@ -35,6 +35,7 @@ module.exports = function(grunt) {
        main: {
         src: [
           '_prebuild/js/libs/mo.min.js',
+          '_prebuild/js/libs/jscookie.js',
           '_prebuild/js/libs/anime.min.js',
           '_prebuild/js/libs/animation-control.js',
           // '_prebuild/js/libs/jquery.withinViewport_base.js',
