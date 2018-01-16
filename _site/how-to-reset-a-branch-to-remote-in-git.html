@@ -37,11 +37,11 @@
 
   
     
-      <meta name="twitter:title"  property="og:title" content='The Horizon - a post by Manik Rathee | Design, UX and Engineering' />
+      <meta name="twitter:title"  property="og:title" content='How to undo local changes in git - a post by Manik Rathee | Design, UX and Engineering' />
     
   
 
-  <link rel="canonical" href="http://www.manikrathee.com/horizon.html">
+  <link rel="canonical" href="http://www.manikrathee.com/how-to-reset-a-branch-to-remote-in-git.html">
 
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -55,7 +55,7 @@
   <title>
   
     
-      The Horizon - a post by Manik Rathee | Design, UX and Engineering
+      How to undo local changes in git - a post by Manik Rathee | Design, UX and Engineering
     
   
   </title>
@@ -92,10 +92,10 @@
         
         blog
         
+        blog-post
         
         
-        photo-blog photo-blog-post
-        the-horizon
+        how-to-undo-local-changes-in-git
       ">
 
     
@@ -176,7 +176,7 @@
       <svg id="header-bar" viewBox="0 0 269 419" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 402.5l236-386" stroke="#7393CA" stroke-width="24" fill="currentColor" fill-rule="evenodd" stroke-linecap="square" opacity=".2"/></svg>
       
       <h1 id="page-title">
-        The&nbsp;Horizon
+        How to undo local changes in&nbsp;git
       </h1>
     </div>
     
@@ -189,31 +189,55 @@
 
         
           
-            <aside class="page-photo" style="background-image: url('/img/photos/20150918/feature.jpg');"></aside>
-          
-          <article id="post-container"class="photo-post-container">
+          <article id="post-container">
         
 
 
 
-        <h3 class="large-heading">The Horizon</h3>
-<p class="intro">A look by LovelySunday — See more details at <a href="http://www.lovelysunday.co/#/wheat-field-sunset/" title="Summer Dress at LovelySunday.co" itemprop="url">LovelySunday.co</a>.</em></p>
+        <p>Sometimes, when working with git, you end up attempting to undo local changes or reset a git branch to the remote. Here's a mini-guide to accomplish that.</p>
 
-<ul class="progressively-loaded post-list post-list--photo post-gallery">
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00001.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00002.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item grid--half"><img data-original="/img/photos/20150918/lovelysunday-horizon-00003.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item grid--half"><img data-original="/img/photos/20150918/lovelysunday-horizon-00004.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00005.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00006.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00007.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item extra-wide"><img data-original="/img/photos/20150918/lovelysunday-horizon-00008.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00009.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item grid--half"><img data-original="/img/photos/20150918/lovelysunday-horizon-00010.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item grid--half"><img data-original="/img/photos/20150918/lovelysunday-horizon-00011.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00012.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
+<p>We'll begin with the following assumptions: you have a user branch that is tracking a remote/upstream, you have local edits that you want to <em>discard</em> and you want to reset local to the latest remote/upstream commit.</li>
 </ul>
 
+<h3 class="medium-heading">Confirm local changes</h3>
+<p>Make sure you know what changes you're about to lose. If you want to preserve anything for later, you can use <en>stash</en>: <a href="/how-to-stash" title="How to stash and restore an edit with git" itemprop="url">How to stash and restore an edit with git</a></p>
+<pre>
+  <code class="json">
+  git status
+  </code>
+</pre>
+
+<h3 class="medium-heading">Alternative: Clear files</h3>
+<p>Consider whether you can use a simple method to remove untracked files instead of reseting the branch. You can try git clean or checkout:</p>
+<pre>
+  <code class="json">
+  git clean -f
+  </code>
+</pre>
+<p><em>Remove all untracked files.</em></p>
+<pre>
+  <code class="json">
+  git checkout .
+  </code>
+</pre>
+<p><em>Remove all unstaged changes in my working tree.</em></p>
+
+<h3 class="medium-heading">Reset to the latest commit on remote / upstream</h3>
+<p>This will remove <strong>all</strong> local changes.</p>
+<pre>
+  <code class="git">
+  git reset --hard HEAD
+  </code>
+</pre>
+<p><em>The result is the same as re-cloning the repository.</em></p>
+
+
+<section id="more-git-posts" class="crosspost shadow-tout">
+  <span class="type-pre-heading">More reading related to git:</span>
+  <a href="/how-to-delete-a-tag-in-git.html" id="swoon" class="large-heading serif heavy " title="Working with tags in git" itemprop="url">
+    How to stash and restore changes in git
+  </a>
+</section>
 
 
 
@@ -228,10 +252,10 @@ also, add "writing" or  "photos" category to the post title in these next/previo
 <!--
 
 <p class="pre-heading">Next Post</p>
-<a href="/aerial-drone-photography.html" title="next Post: Aerial" itemprop="url">
-  <h3>Aerial</h3>
+<a href="/how-to-stash-and-restore-changes-in-git.html" title="next Post: How to stash and restore changes in git" itemprop="url">
+  <h3>How to stash and restore changes in git</h3>
   <p></p>
-  <p class="date">September 18 2015</p>
+  <p class="date">January 12 2018</p>
 </a>
 
 

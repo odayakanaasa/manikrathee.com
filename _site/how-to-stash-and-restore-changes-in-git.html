@@ -37,11 +37,11 @@
 
   
     
-      <meta name="twitter:title"  property="og:title" content='The Horizon - a post by Manik Rathee | Design, UX and Engineering' />
+      <meta name="twitter:title"  property="og:title" content='How to stash and restore changes in git - a post by Manik Rathee | Design, UX and Engineering' />
     
   
 
-  <link rel="canonical" href="http://www.manikrathee.com/horizon.html">
+  <link rel="canonical" href="http://www.manikrathee.com/how-to-stash-and-restore-changes-in-git.html">
 
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -55,7 +55,7 @@
   <title>
   
     
-      The Horizon - a post by Manik Rathee | Design, UX and Engineering
+      How to stash and restore changes in git - a post by Manik Rathee | Design, UX and Engineering
     
   
   </title>
@@ -92,10 +92,10 @@
         
         blog
         
+        blog-post
         
         
-        photo-blog photo-blog-post
-        the-horizon
+        how-to-stash-and-restore-changes-in-git
       ">
 
     
@@ -176,7 +176,7 @@
       <svg id="header-bar" viewBox="0 0 269 419" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 402.5l236-386" stroke="#7393CA" stroke-width="24" fill="currentColor" fill-rule="evenodd" stroke-linecap="square" opacity=".2"/></svg>
       
       <h1 id="page-title">
-        The&nbsp;Horizon
+        How to stash and restore changes in&nbsp;git
       </h1>
     </div>
     
@@ -189,30 +189,54 @@
 
         
           
-            <aside class="page-photo" style="background-image: url('/img/photos/20150918/feature.jpg');"></aside>
-          
-          <article id="post-container"class="photo-post-container">
+          <article id="post-container">
         
 
 
 
-        <h3 class="large-heading">The Horizon</h3>
-<p class="intro">A look by LovelySunday — See more details at <a href="http://www.lovelysunday.co/#/wheat-field-sunset/" title="Summer Dress at LovelySunday.co" itemprop="url">LovelySunday.co</a>.</em></p>
+        <p>How to save a set of changes for later: a mini-guide to using Git Stash.</p>
 
-<ul class="progressively-loaded post-list post-list--photo post-gallery">
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00001.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00002.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item grid--half"><img data-original="/img/photos/20150918/lovelysunday-horizon-00003.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item grid--half"><img data-original="/img/photos/20150918/lovelysunday-horizon-00004.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00005.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00006.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00007.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item extra-wide"><img data-original="/img/photos/20150918/lovelysunday-horizon-00008.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00009.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item grid--half"><img data-original="/img/photos/20150918/lovelysunday-horizon-00010.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item grid--half"><img data-original="/img/photos/20150918/lovelysunday-horizon-00011.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-  <li class="post-list--photo-item"><img data-original="/img/photos/20150918/lovelysunday-horizon-00012.jpg" src="/img/spinner.gif" alt="LovelySunday, Summer Dress"></li>
-</ul>
+<p>If you're working on your user branch developing a feature and suddenly need to switch to a different problem without comitting incomplete code, you can use stash your changes.</p>
+
+
+<h3 class="medium-heading">How to stash changes in git:</h3>
+<p>Stashing your changes will preserve them for later.</a></p>
+<pre>
+  <code class="json">
+  git stash
+  </code>
+</pre>
+<p><em>Save all local changes.</em></p>
+<pre>
+  <code class="json">
+  git stash --patch
+  </code>
+</pre>
+<p><em>Save a specific file via interactive patch mode. Further reading <a href="https://stackoverflow.com/questions/5506339/how-can-i-git-stash-a-specific-file" title="StackOverflow: How can I git stash a specific file" itemprop="url">here</a>.</em></p>
+
+
+<h3 class="medium-heading">How to restore stashed changes:</h3>
+<p>After restoring stashed changes, you can choose to either preserve or discard the changes from the stack.</p>
+<pre>
+  <code class="git">
+  git apply
+  </code>
+</pre>
+<p><em><strong>Preserve</strong> changes in the stack.</em></p>
+<pre>
+  <code class="git">
+  git stash pop
+  </code>
+</pre>
+<p><em><strong>Discard</strong> changes from the stack.</em></p>
+
+
+<section id="more-git-posts" class="crosspost shadow-tout">
+  <span class="type-pre-heading">More reading related to git:</span>
+  <a href="/How to undo local changes in git.html" id="swoon" class="large-heading serif heavy " title="How to undo local changes in git" itemprop="url">
+    How to undo local changes in git
+  </a>
+</section>
 
 
 
@@ -227,11 +251,12 @@ also, add "writing" or  "photos" category to the post title in these next/previo
 -->
 <!--
 
-<p class="pre-heading">Next Post</p>
-<a href="/aerial-drone-photography.html" title="next Post: Aerial" itemprop="url">
-  <h3>Aerial</h3>
+
+<p class="pre-heading">Previous Post</p>
+<a href="/how-to-reset-a-branch-to-remote-in-git.html" title="Previous Post: How to undo local changes in git" itemprop="url">
+  <h3>How to undo local changes in git</h3>
   <p></p>
-  <p class="date">September 18 2015</p>
+  <p class="date">January 12 2018</p>
 </a>
 
 
