@@ -5,9 +5,9 @@ page-subtype: blog-post
 category: ['blog']
 tags: ['engineering', 'git']
 
-date: August 3, 2016
+date: August 3, 2013
 slug: how-to-delete-a-tag-in-git
-title: "How to delete a Git tag"
+title: "How to delete a tag in Git"
 
 #img:
 #script:
@@ -20,12 +20,12 @@ data: 0
 
 <p>If you use tags in your projects, you probably have encountered some issue (typos, perhaps) that forced you to remove the tag. Here are a few steps that will help you navigate the problems associated with local/remote tags and managing instances of each, along with a few steps help get you familiar with tags in general.</p>
 
-<p>For the code examples, let's use "<em>released/aug2016</em>" as the tag name.</p>
+<p>For the code examples, let's use "<em>released/aug2002</em>" as the tag name.</p>
 
 <h3 class="medium-heading">To create your&nbsp;tag:</h3>
 <pre>
   <code class="json">
-  git tag released/aug2016
+  git tag released/aug2002
   </code>
 </pre>
 
@@ -46,7 +46,7 @@ data: 0
 <h3 class="medium-heading">To delete a local&nbsp;tag:</h3>
 <pre>
   <code class="git">
-  git tag -d released/aug2016
+  git tag -d released/aug2002
   </code>
 </pre>
 
@@ -55,9 +55,9 @@ data: 0
 
 <pre>
   <code class="git">
-  git tag -d released/aug2016
+  git tag -d released/aug2002
 
-  git push origin :refs/tags/released/aug2016
+  git push origin :refs/tags/released/aug2002
   </code>
 </pre>
 
