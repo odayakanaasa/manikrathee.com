@@ -7,19 +7,22 @@
   & + .row {
     margin-top: $spacer * 3;
   }
-
-  &-tout {
-    margin-top: $spacer * 3;
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-  }
 }
+
+
+.row-tout {
+  margin-top: $spacer * 3;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+}
+
 
 .row-tout-list {
   list-style-type: none;
+}
 
   &--item {
     & + & {
@@ -27,6 +30,9 @@
     }
   }
 }
+
+
+
 
 .more-items {
   margin-top: 1.15rem;
